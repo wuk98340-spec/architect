@@ -25,3 +25,5 @@ temp/
 
 # Logs
 *.log
+# Generated case packages
+case-packages/
