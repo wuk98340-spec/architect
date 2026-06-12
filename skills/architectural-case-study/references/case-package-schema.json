@@ -1,0 +1,225 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Architecture Case Package",
+  "type": "object",
+  "required": [
+    "project_name",
+    "architects",
+    "location",
+    "year",
+    "program",
+    "status",
+    "one_sentence_summary",
+    "key_facts",
+    "design_strategies",
+    "spatial_ideas",
+    "materials_structure",
+    "site_context",
+    "image_links",
+    "sources",
+    "uncertain_or_conflicting_info"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "project_name": {
+      "type": "string"
+    },
+    "architects": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "location": {
+      "type": "string"
+    },
+    "year": {
+      "type": "string"
+    },
+    "program": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "one_sentence_summary": {
+      "type": "string"
+    },
+    "key_facts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/fact"
+      }
+    },
+    "design_strategies": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "$ref": "#/$defs/strategy"
+      }
+    },
+    "spatial_ideas": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/note"
+      }
+    },
+    "materials_structure": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/note"
+      }
+    },
+    "site_context": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/note"
+      }
+    },
+    "image_links": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/imageLink"
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/source"
+      }
+    },
+    "uncertain_or_conflicting_info": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/uncertainty"
+      }
+    }
+  },
+  "$defs": {
+    "fact": {
+      "type": "object",
+      "required": ["label", "value", "source_ids"],
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        },
+        "source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "strategy": {
+      "type": "object",
+      "required": ["title", "description", "evidence", "source_ids"],
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "evidence": {
+          "type": "string",
+          "description": "Directly sourced, inferred synthesis, or mixed."
+        },
+        "source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "note": {
+      "type": "object",
+      "required": ["text", "source_ids"],
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "imageLink": {
+      "type": "object",
+      "required": ["url", "source_id", "intended_use", "copyright_note"],
+      "additionalProperties": false,
+      "properties": {
+        "url": {
+          "type": "string"
+        },
+        "source_id": {
+          "type": "string"
+        },
+        "intended_use": {
+          "type": "string"
+        },
+        "copyright_note": {
+          "type": "string"
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": ["id", "title", "url", "source_level", "publisher", "accessed_date", "notes"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "source_level": {
+          "enum": ["official", "architecture_media", "general_media", "reference_only"]
+        },
+        "publisher": {
+          "type": "string"
+        },
+        "accessed_date": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "uncertainty": {
+      "type": "object",
+      "required": ["topic", "description", "source_ids"],
+      "additionalProperties": false,
+      "properties": {
+        "topic": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

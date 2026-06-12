@@ -1,0 +1,4 @@
+interface:
+  display_name: "Architectural Case Study"
+  short_description: "Generate concise, cited architecture case research packages."
+  default_prompt: "Use $architectural-case-study to research an architecture project and create a concise case package."

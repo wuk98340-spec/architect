@@ -1,0 +1,225 @@
+{
+  "project_name": "钱学森图书馆 / Qian Xuesen Library",
+  "architects": [
+    "公开资料未充分确认",
+    "华南理工大学建筑设计研究院（待官方复核）"
+  ],
+  "location": "中国上海市徐汇区华山路1800号，上海交通大学徐汇校区",
+  "year": "2011年开馆；2010年奠基；2002年开始筹备",
+  "program": "纪念性图书馆 / 人物纪念馆 / 展陈空间 / 科学传播空间",
+  "status": "已建成并开放；2024年入选国家一级博物馆名单",
+  "one_sentence_summary": "钱学森图书馆将校友纪念、国家科技叙事、文献收藏和公众展陈结合在一座校园纪念建筑中。",
+  "key_facts": [
+    {
+      "label": "Location",
+      "value": "上海市徐汇区华山路1800号，上海交通大学徐汇校区。",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "label": "Opening",
+      "value": "公开资料记录该馆于2011年12月钱学森100周年诞辰时开馆。",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "label": "Scale",
+      "value": "公开资料记录总用地面积约8,960平方米，总建筑面积约7,960平方米，陈展面积3,000多平方米；地上三层、地下一层。",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "label": "Collection",
+      "value": "公开资料记录其收藏钱学森相关文献、手稿和书籍76000余份，珍贵图片1500余张，实物700余件。",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "label": "Museum rating",
+      "value": "第五批国家一级博物馆名单中列有钱学森图书馆（上海交通大学）。",
+      "source_ids": [
+        "s4"
+      ]
+    }
+  ],
+  "design_strategies": [
+    {
+      "title": "立面肖像作为纪念符号",
+      "description": "建筑外墙上的钱学森肖像使纪念对象在进入展厅前就被识别，立面成为叙事入口。",
+      "evidence": "Directly sourced and inferred synthesis",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "title": "以专题展厅组织人物叙事",
+      "description": "四个展厅分别围绕航天事业、科技前沿、科学家风范和战略科学家方法展开，使参观路径服务于人物贡献的主题化呈现。",
+      "evidence": "Directly sourced and inferred synthesis",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "title": "将高校场地与国家科技记忆叠合",
+      "description": "项目位于钱学森母校上海交通大学徐汇校区，使校园身份、校友纪念和国家航天叙事在同一地点重合。",
+      "evidence": "Inferred synthesis from sourced biographical and location facts",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "title": "中小体量承载高密度收藏与展陈",
+      "description": "约7,960平方米建筑面积中容纳文献、手稿、图片、实物和多主题展厅，形成信息密度较高的纪念馆式图书馆。",
+      "evidence": "Inferred synthesis from sourced scale and collection facts",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "spatial_ideas": [
+    {
+      "text": "空间叙事从外部肖像识别进入内部专题展陈，形成由人物符号到科技贡献的阅读路径。",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "text": "一、二层的四个展厅按主题组织内容，适合分析纪念馆如何用展陈序列代替传统图书馆的藏阅逻辑。",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "materials_structure": [
+    {
+      "text": "公开可读资料确认外墙可见瓷砖拼贴的钱学森肖像；主要结构体系、幕墙构造和室内材料未确认。",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "site_context": [
+    {
+      "text": "项目位于上海交通大学徐汇校区，场地意义来自钱学森与母校之间的关系。",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "text": "作为校园内的纪念性公共文化设施，它同时面对高校师生、参观公众和科学传播活动。",
+      "source_ids": [
+        "s2",
+        "s4"
+      ]
+    }
+  ],
+  "image_links": [
+    {
+      "url": "https://zh.wikipedia.org/wiki/%E9%92%B1%E5%AD%A6%E6%A3%AE%E5%9B%BE%E4%B9%A6%E9%A6%86_%28%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%29",
+      "source_id": "s2",
+      "intended_use": "外观与立面肖像参考",
+      "copyright_note": "Use as reference link only; verify Wikimedia file license before reuse."
+    },
+    {
+      "url": "http://www.qianxslib.sjtu.edu.cn/",
+      "source_id": "s1",
+      "intended_use": "官方图片与展陈资料入口",
+      "copyright_note": "Official site; rights not cleared; current text extraction unstable."
+    },
+    {
+      "url": "https://zh.wikipedia.org/wiki/%E9%92%B1%E5%AD%A6%E6%A3%AE",
+      "source_id": "s3",
+      "intended_use": "人物背景与图像线索",
+      "copyright_note": "Use as reference link only; verify image license before reuse."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "钱学森图书馆官网",
+      "url": "http://www.qianxslib.sjtu.edu.cn/",
+      "source_level": "official",
+      "publisher": "上海交通大学钱学森图书馆",
+      "accessed_date": "2026-06-11",
+      "notes": "Official source入口；当前网页读取不稳定，历史建设概况页面需要后续通过官网或网页归档复核。"
+    },
+    {
+      "id": "s2",
+      "title": "钱学森图书馆（上海交通大学）",
+      "url": "https://zh.wikipedia.org/wiki/%E9%92%B1%E5%AD%A6%E6%A3%AE%E5%9B%BE%E4%B9%A6%E9%A6%86_%28%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%29",
+      "source_level": "reference_only",
+      "publisher": "Wikipedia",
+      "accessed_date": "2026-06-11",
+      "notes": "提供地点、规模、展厅主题、馆藏和历史线索；不可作为关键事实唯一来源。"
+    },
+    {
+      "id": "s3",
+      "title": "钱学森",
+      "url": "https://zh.wikipedia.org/wiki/%E9%92%B1%E5%AD%A6%E6%A3%AE",
+      "source_level": "reference_only",
+      "publisher": "Wikipedia",
+      "accessed_date": "2026-06-11",
+      "notes": "用于人物背景、交通大学校友关系和纪念建筑语境线索。"
+    },
+    {
+      "id": "s4",
+      "title": "国家一级博物馆",
+      "url": "https://zh.wikipedia.org/wiki/%E5%9B%BD%E5%AE%B6%E4%B8%80%E7%BA%A7%E5%8D%9A%E7%89%A9%E9%A6%86",
+      "source_level": "reference_only",
+      "publisher": "Wikipedia",
+      "accessed_date": "2026-06-11",
+      "notes": "用于国家一级博物馆名单线索；应后续用中国博物馆协会或主管部门公告复核。"
+    },
+    {
+      "id": "s5",
+      "title": "华南理工大学建筑设计研究院",
+      "url": "https://zh.wikipedia.org/wiki/%E5%8D%8E%E5%8D%97%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6%E5%BB%BA%E7%AD%91%E8%AE%BE%E8%AE%A1%E7%A0%94%E7%A9%B6%E9%99%A2",
+      "source_level": "reference_only",
+      "publisher": "Wikipedia",
+      "accessed_date": "2026-06-11",
+      "notes": "将钱学森图书馆（上海交通大学）列为华南理工大学建筑设计研究院其他知名作品；需官方项目页复核。"
+    }
+  ],
+  "uncertain_or_conflicting_info": [
+    {
+      "topic": "同名对象",
+      "description": "“钱学森图书馆”可指上海交通大学钱学森图书馆或西安交通大学钱学森图书馆；本案例包默认研究上海交通大学徐汇校区馆。",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "topic": "设计单位 / 主创建筑师",
+      "description": "当前可读资料未能从官方项目页确认设计单位和主创建筑师；华南理工大学建筑设计研究院条目提供项目归属线索，但仍属于 reference_only。",
+      "source_ids": [
+        "s5"
+      ]
+    },
+    {
+      "topic": "官方资料可访问性",
+      "description": "钱学森图书馆官网及历史“建设基本概况”页面在当前访问中不稳定，需后续通过官网、网页归档或学校档案资料补证。",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "topic": "建筑技术信息",
+      "description": "结构体系、外墙构造、室内材料、展陈设计团队、施工单位、造价和图纸未在当前可读公开资料中确认。",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ]
+}

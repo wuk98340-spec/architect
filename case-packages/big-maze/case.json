@@ -1,0 +1,193 @@
+{
+  "project_name": "BIG Maze / The BIG Maze",
+  "architects": [
+    "Bjarke Ingels Group (BIG)",
+    "Bjarke Ingels"
+  ],
+  "location": "National Building Museum, Washington, D.C., United States",
+  "year": "2014",
+  "program": "Temporary installation / walk-in maze / exhibition preview",
+  "status": "Temporary exhibition; publicly reported as open July 4 through September 1, 2014",
+  "one_sentence_summary": "BIG Maze reverses the conventional maze experience by making the path clearer toward the center through gradually lowered walls and expanded visibility.",
+  "key_facts": [
+    {
+      "label": "Project type",
+      "value": "Temporary walk-in maze installation in the National Building Museum's Great Hall",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "label": "Opening and exhibition dates",
+      "value": "Architectural Digest reports opening on July 4, 2014 and display through September 1, 2014.",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "label": "Material",
+      "value": "Neutral-tone maple plywood",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "label": "Approximate size",
+      "value": "Wired reports a 60 x 60-foot wooden labyrinth; Architectural Digest reports exterior walls reaching 18 feet high.",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "design_strategies": [
+    {
+      "title": "Invert the maze experience",
+      "description": "Instead of making the route more confusing toward the center, the project increases visual understanding as visitors move inward.",
+      "evidence": "Directly sourced and synthesized",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "title": "Use wall height as an experiential gradient",
+      "description": "Tall outer walls create enclosure and uncertainty, while lower inner walls open sightlines and reduce anxiety near the center.",
+      "evidence": "Directly sourced and synthesized",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "title": "Turn the center into a point of comprehension",
+      "description": "The center acts as a vantage point where visitors can see the path they traveled and understand the maze as a whole.",
+      "evidence": "Directly sourced",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "title": "Use the museum section as part of the project",
+      "description": "The Great Hall's upper galleries allow visitors to survey the maze from above, adding an observer view to the bodily experience inside the maze.",
+      "evidence": "Directly sourced and synthesized",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "spatial_ideas": [
+    {
+      "text": "The visitor sequence shifts from narrow, high-walled enclosure to open, low-walled visibility.",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "text": "The project creates two modes of perception: immersive wandering at floor level and overview from the museum's upper floors.",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "materials_structure": [
+    {
+      "text": "The visible material is neutral-tone maple plywood; detailed structural connections and assembly method are not confirmed by the accessible sources.",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "site_context": [
+    {
+      "text": "The installation relies on the National Building Museum's Great Hall for scale, public access, and elevated viewing positions.",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "image_links": [
+    {
+      "url": "https://www.architecturaldigest.com/story/big-maze-national-building-museum-bjarke-ingels",
+      "source_id": "s2",
+      "intended_use": "Cover candidate and aerial view reference",
+      "copyright_note": "Photo courtesy of the National Building Museum; use as reference link only; rights not cleared."
+    },
+    {
+      "url": "https://www.wired.com/2014/07/a-clever-maze-that-actually-gets-less-confusing-as-you-reach-the-center",
+      "source_id": "s3",
+      "intended_use": "Spatial concept and visitor-experience reference",
+      "copyright_note": "Use as reference link only; rights not cleared."
+    },
+    {
+      "url": "https://pixel.big.dk/projects/#projects-maze",
+      "source_id": "s1",
+      "intended_use": "Official project-page visual reference",
+      "copyright_note": "Official BIG project page; image rights not cleared."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "BIG PIXEL - MAZE",
+      "url": "https://pixel.big.dk/projects/#projects-maze",
+      "source_level": "official",
+      "publisher": "Bjarke Ingels Group",
+      "accessed_date": "2026-06-11",
+      "notes": "Official single-page project reference provided by user; text extraction may require browser interaction."
+    },
+    {
+      "id": "s2",
+      "title": "Get Lost in Architect Bjarke Ingels's Soaring Maze",
+      "url": "https://www.architecturaldigest.com/story/big-maze-national-building-museum-bjarke-ingels",
+      "source_level": "general_media",
+      "publisher": "Architectural Digest",
+      "accessed_date": "2026-06-11",
+      "notes": "Provides dates, location, material, wall height, Great Hall context, and image credit."
+    },
+    {
+      "id": "s3",
+      "title": "A Clever Maze That Actually Gets Less Confusing as You Reach the Center",
+      "url": "https://www.wired.com/2014/07/a-clever-maze-that-actually-gets-less-confusing-as-you-reach-the-center",
+      "source_level": "general_media",
+      "publisher": "Wired",
+      "accessed_date": "2026-06-11",
+      "notes": "Provides the 60 x 60-foot scale, inverted-cone wall concept, and visitor-experience framing."
+    },
+    {
+      "id": "s4",
+      "title": "Bjarke Ingels Group",
+      "url": "https://en.wikipedia.org/wiki/Bjarke_Ingels_Group",
+      "source_level": "reference_only",
+      "publisher": "Wikipedia",
+      "accessed_date": "2026-06-11",
+      "notes": "Reference-only confirmation that The BIG Maze appears in BIG's 2014 exhibition/project list."
+    }
+  ],
+  "uncertain_or_conflicting_info": [
+    {
+      "topic": "Project area / footprint",
+      "description": "Architectural Digest text reports '61 square feet', while Wired reports '60 x 60-foot'. The AD figure appears inconsistent with the described 18-foot-high maze and should be checked against official archival material.",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "topic": "Official museum project page",
+      "description": "The historical National Building Museum project page linked from 2014 media coverage was not reliably accessible during validation.",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "topic": "Construction details",
+      "description": "Accessible sources identify maple plywood but do not confirm detailed structure, joints, fabrication method, budget, or contractor.",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    }
+  ]
+}
