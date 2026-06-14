@@ -39,6 +39,50 @@ Use `level_b` for architecture and design publications such as:
 
 Use Level B for project descriptions, photographs, plans, interviews, interpretation, reception, and architectural context. Prefer sources with named authors, dates, and visible image credits.
 
+### gooood Search Fallback
+
+Use this fallback before concluding that a Chinese architecture project is not on gooood.
+
+1. Try ordinary search first:
+   - `site:gooood.cn <project name>`
+   - `site:gooood.cn <project name> 建筑`
+   - `site:gooood.cn <architect/studio> <project name>`
+   - `gooood <project name>`
+   - `<project name> 谷德`
+2. Try name variants:
+   - Chinese simplified/traditional variants.
+   - English project name, if known.
+   - Architect/studio name plus city/province.
+   - Common mistranscriptions or aliases from the Disambiguation Gate.
+3. If ordinary search fails, query the gooood WordPress API directly:
+
+```text
+https://dashboard.gooood.cn/api/wp/v2/posts?search=<url-encoded keyword>&per_page=20
+```
+
+Search several keywords, starting broad and then narrowing:
+
+- Full Chinese project name.
+- Distinctive partial name.
+- Architect/studio name.
+- Province/city plus building type.
+- English project name or organization name.
+
+4. When an API result matches, use its `slug` to form the public article URL:
+
+```text
+https://www.gooood.cn/<slug>.htm
+```
+
+5. If the API JSON contains article content, extract:
+   - Title, date, slug, and public URL.
+   - Project facts near the article tail, such as project name, design office, year, area, location, client, photo credits.
+   - Image URLs from `data-src` or `src` values under `https://oss.gooood.cn/uploads/...`.
+
+6. Mark matching gooood articles as `level_b`. If the article states that content was provided by the design office, note this in `sources[].notes`; it can support higher confidence even though the publisher remains Level B.
+
+Do not treat the visible gooood `/?s=<keyword>` page as definitive. It may return a front-end shell or homepage content that does not expose search results in server-rendered HTML.
+
 ## Level C: Supplementary Chinese and Local Sources
 
 Use `level_c` for:
