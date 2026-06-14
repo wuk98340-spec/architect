@@ -9,13 +9,20 @@
     "year",
     "program",
     "status",
+    "case_type",
+    "disambiguation_status",
+    "disambiguation_candidates",
+    "information_confidence",
+    "incomplete_reason",
     "one_sentence_summary",
     "key_facts",
-    "design_strategies",
+    "design_concept",
+    "key_strategies",
     "spatial_ideas",
     "materials_structure",
     "site_context",
-    "image_links",
+    "image_metadata",
+    "download_mode",
     "sources",
     "uncertain_or_conflicting_info"
   ],
@@ -42,6 +49,35 @@
     "status": {
       "type": "string"
     },
+    "case_type": {
+      "type": "string",
+      "description": "Cultural, education, hotel, housing, commercial, renovation, rural/tourism, green building, or another explicit type."
+    },
+    "disambiguation_status": {
+      "enum": [
+        "confirmed",
+        "high_confidence",
+        "ambiguous_waiting_for_user",
+        "not_needed"
+      ]
+    },
+    "disambiguation_candidates": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/disambiguationCandidate"
+      }
+    },
+    "information_confidence": {
+      "enum": [
+        "high",
+        "medium",
+        "limited",
+        "low"
+      ]
+    },
+    "incomplete_reason": {
+      "type": "string"
+    },
     "one_sentence_summary": {
       "type": "string"
     },
@@ -51,9 +87,33 @@
         "$ref": "#/$defs/fact"
       }
     },
-    "design_strategies": {
+    "design_concept": {
+      "type": "object",
+      "required": [
+        "sourced_concept",
+        "ai_synthesis",
+        "source_ids"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "sourced_concept": {
+          "type": "string"
+        },
+        "ai_synthesis": {
+          "type": "string"
+        },
+        "source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "key_strategies": {
       "type": "array",
       "minItems": 3,
+      "maxItems": 5,
       "items": {
         "$ref": "#/$defs/strategy"
       }
@@ -76,11 +136,19 @@
         "$ref": "#/$defs/note"
       }
     },
-    "image_links": {
+    "image_metadata": {
       "type": "array",
       "items": {
-        "$ref": "#/$defs/imageLink"
+        "$ref": "#/$defs/imageMetadata"
       }
+    },
+    "download_mode": {
+      "enum": [
+        "not_requested",
+        "requested",
+        "partial",
+        "completed"
+      ]
     },
     "sources": {
       "type": "array",
@@ -97,9 +165,56 @@
     }
   },
   "$defs": {
+    "disambiguationCandidate": {
+      "type": "object",
+      "required": [
+        "candidate_project",
+        "location",
+        "architects",
+        "year",
+        "type",
+        "main_sources",
+        "confidence",
+        "question_for_user"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "candidate_project": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "architects": {
+          "type": "string"
+        },
+        "year": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "main_sources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "confidence": {
+          "type": "string"
+        },
+        "question_for_user": {
+          "type": "string"
+        }
+      }
+    },
     "fact": {
       "type": "object",
-      "required": ["label", "value", "source_ids"],
+      "required": [
+        "label",
+        "value",
+        "source_ids"
+      ],
       "additionalProperties": false,
       "properties": {
         "label": {
@@ -118,13 +233,28 @@
     },
     "strategy": {
       "type": "object",
-      "required": ["title", "description", "evidence", "source_ids"],
+      "required": [
+        "strategy_name",
+        "design_problem",
+        "specific_approach",
+        "architectural_effect",
+        "evidence",
+        "source_ids",
+        "related_image_ids",
+        "transferable_lesson"
+      ],
       "additionalProperties": false,
       "properties": {
-        "title": {
+        "strategy_name": {
           "type": "string"
         },
-        "description": {
+        "design_problem": {
+          "type": "string"
+        },
+        "specific_approach": {
+          "type": "string"
+        },
+        "architectural_effect": {
           "type": "string"
         },
         "evidence": {
@@ -136,12 +266,25 @@
           "items": {
             "type": "string"
           }
+        },
+        "related_image_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "transferable_lesson": {
+          "type": "string"
         }
       }
     },
     "note": {
       "type": "object",
-      "required": ["text", "source_ids"],
+      "required": [
+        "text",
+        "source_ids",
+        "related_image_ids"
+      ],
       "additionalProperties": false,
       "properties": {
         "text": {
@@ -152,31 +295,96 @@
           "items": {
             "type": "string"
           }
+        },
+        "related_image_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
-    "imageLink": {
+    "imageMetadata": {
       "type": "object",
-      "required": ["url", "source_id", "intended_use", "copyright_note"],
+      "required": [
+        "id",
+        "file_name",
+        "image_type",
+        "source_url",
+        "source_site",
+        "caption",
+        "copyright_note",
+        "recommended_use",
+        "related_sections",
+        "download_status",
+        "failure_reason"
+      ],
       "additionalProperties": false,
       "properties": {
-        "url": {
+        "id": {
           "type": "string"
         },
-        "source_id": {
+        "file_name": {
           "type": "string"
         },
-        "intended_use": {
+        "image_type": {
+          "enum": [
+            "01_hero",
+            "02_site",
+            "03_plan",
+            "04_section",
+            "05_elevation",
+            "06_detail",
+            "07_concept",
+            "08_interior",
+            "09_analysis"
+          ]
+        },
+        "source_url": {
+          "type": "string"
+        },
+        "source_site": {
+          "type": "string"
+        },
+        "caption": {
           "type": "string"
         },
         "copyright_note": {
+          "type": "string"
+        },
+        "recommended_use": {
+          "type": "string"
+        },
+        "related_sections": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "download_status": {
+          "enum": [
+            "not_requested",
+            "downloaded",
+            "failed",
+            "skipped"
+          ]
+        },
+        "failure_reason": {
           "type": "string"
         }
       }
     },
     "source": {
       "type": "object",
-      "required": ["id", "title", "url", "source_level", "publisher", "accessed_date", "notes"],
+      "required": [
+        "id",
+        "title",
+        "url",
+        "source_level",
+        "publisher",
+        "accessed_date",
+        "notes"
+      ],
       "additionalProperties": false,
       "properties": {
         "id": {
@@ -189,7 +397,12 @@
           "type": "string"
         },
         "source_level": {
-          "enum": ["official", "architecture_media", "general_media", "reference_only"]
+          "enum": [
+            "level_a",
+            "level_b",
+            "level_c",
+            "level_d"
+          ]
         },
         "publisher": {
           "type": "string"
@@ -204,7 +417,11 @@
     },
     "uncertainty": {
       "type": "object",
-      "required": ["topic", "description", "source_ids"],
+      "required": [
+        "topic",
+        "description",
+        "source_ids"
+      ],
       "additionalProperties": false,
       "properties": {
         "topic": {
