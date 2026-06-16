@@ -60,6 +60,16 @@ ANALYSIS_COVERAGE_VALUES = {
     "user_experience",
     "urban_relationship",
 }
+EXTENDED_TOP_LEVEL = [
+    "technical_metrics",
+    "site_information",
+    "conceptual_exploration",
+    "architectural_language_generation",
+    "construction_quality_control",
+    "design_lessons",
+]
+EVIDENCE_TYPES = {"sourced", "synthesis", "missing", "conflict"}
+METRIC_CONFIDENCE_VALUES = {"confirmed", "reported", "limited", "unknown", "conflicting"}
 
 
 def main() -> int:
@@ -137,6 +147,7 @@ def main() -> int:
         validate_notes(data.get(section), section, source_ids, image_ids, errors)
 
     validate_uncertainties(data.get("uncertain_or_conflicting_info"), source_ids, errors)
+    validate_extended_fields(data, source_ids, image_ids, errors, warnings)
 
     if data.get("disambiguation_status") == "ambiguous_waiting_for_user":
         warnings.append("disambiguation_status is ambiguous_waiting_for_user; do not treat this as a complete case package.")
@@ -456,6 +467,196 @@ def validate_uncertainties(value: Any, source_ids: set[str], errors: list[str]) 
             continue
         require_keys(item, ["topic", "description", "source_ids"], f"uncertain_or_conflicting_info[{index}]", errors)
         validate_source_refs(item.get("source_ids"), source_ids, f"uncertain_or_conflicting_info[{index}]", errors)
+
+
+def validate_extended_fields(
+    data: dict[str, Any],
+    source_ids: set[str],
+    image_ids: set[str],
+    errors: list[str],
+    warnings: list[str],
+) -> None:
+    missing = [key for key in EXTENDED_TOP_LEVEL if key not in data]
+    if missing:
+        warnings.append(
+            "case.json is missing extended concept-to-built fields: "
+            + ", ".join(missing)
+            + ". Legacy packages may omit them, but new packages should include them."
+        )
+        return
+
+    validate_technical_metrics(data.get("technical_metrics"), source_ids, image_ids, errors)
+    validate_site_information(data.get("site_information"), source_ids, image_ids, errors)
+    validate_evidence_note_groups(
+        data.get("conceptual_exploration"),
+        "conceptual_exploration",
+        ["diagnosis", "positioning", "strategy", "imagery_and_expression"],
+        source_ids,
+        image_ids,
+        errors,
+    )
+    validate_evidence_note_groups(
+        data.get("architectural_language_generation"),
+        "architectural_language_generation",
+        ["function", "layout", "composition", "place_atmosphere"],
+        source_ids,
+        image_ids,
+        errors,
+    )
+    validate_evidence_note_groups(
+        data.get("construction_quality_control"),
+        "construction_quality_control",
+        ["construction_language", "materials_and_craft", "tectonic_logic", "performance_and_construction_control"],
+        source_ids,
+        image_ids,
+        errors,
+    )
+    validate_design_lessons(data.get("design_lessons"), source_ids, image_ids, errors)
+
+
+def validate_technical_metrics(value: Any, source_ids: set[str], image_ids: set[str], errors: list[str]) -> None:
+    if not isinstance(value, dict):
+        errors.append("'technical_metrics' must be an object")
+        return
+    metric_keys = [
+        "site_area",
+        "building_area",
+        "height",
+        "floors",
+        "far",
+        "building_density",
+        "structure_system",
+        "client",
+    ]
+    required = metric_keys + ["main_materials", "photography_drawing_credits", "notes"]
+    require_keys(value, required, "technical_metrics", errors)
+    for key in metric_keys:
+        if key in value:
+            validate_metric_value(value.get(key), f"technical_metrics.{key}", source_ids, errors)
+    for key in ["main_materials", "photography_drawing_credits"]:
+        if key in value:
+            validate_evidence_note_list(value.get(key), f"technical_metrics.{key}", source_ids, image_ids, errors)
+    if "notes" in value and not isinstance(value["notes"], str):
+        errors.append("technical_metrics.notes must be a string")
+
+
+def validate_metric_value(value: Any, label: str, source_ids: set[str], errors: list[str]) -> None:
+    if not isinstance(value, dict):
+        errors.append(f"{label} must be an object")
+        return
+    require_keys(value, ["value", "unit", "confidence", "source_ids", "notes"], label, errors)
+    if "unit" in value and not isinstance(value["unit"], str):
+        errors.append(f"{label}.unit must be a string")
+    if value.get("confidence") not in METRIC_CONFIDENCE_VALUES:
+        errors.append(f"{label}.confidence must be one of {sorted(METRIC_CONFIDENCE_VALUES)}")
+    if "notes" in value and not isinstance(value["notes"], str):
+        errors.append(f"{label}.notes must be a string")
+    validate_source_refs(value.get("source_ids"), source_ids, label, errors)
+
+
+def validate_site_information(value: Any, source_ids: set[str], image_ids: set[str], errors: list[str]) -> None:
+    validate_evidence_note_groups(
+        value,
+        "site_information",
+        [
+            "location_role",
+            "natural_environment",
+            "cultural_environment",
+            "terrain_conditions",
+            "roads_and_access",
+            "surrounding_buildings",
+            "served_users",
+            "core_site_tension",
+        ],
+        source_ids,
+        image_ids,
+        errors,
+        values_are_lists=False,
+    )
+
+
+def validate_design_lessons(value: Any, source_ids: set[str], image_ids: set[str], errors: list[str]) -> None:
+    if not isinstance(value, dict):
+        errors.append("'design_lessons' must be an object")
+        return
+    require_keys(value, ["transferable_methods", "avoid_copying", "analysis_diagram_potential"], "design_lessons", errors)
+    validate_evidence_note_list(
+        value.get("transferable_methods"),
+        "design_lessons.transferable_methods",
+        source_ids,
+        image_ids,
+        errors,
+    )
+    validate_evidence_note_list(
+        value.get("avoid_copying"),
+        "design_lessons.avoid_copying",
+        source_ids,
+        image_ids,
+        errors,
+    )
+    diagrams = value.get("analysis_diagram_potential")
+    if not isinstance(diagrams, list):
+        errors.append("design_lessons.analysis_diagram_potential must be an array")
+    else:
+        for index, item in enumerate(diagrams):
+            if not isinstance(item, str):
+                errors.append(f"design_lessons.analysis_diagram_potential[{index}] must be a string")
+
+
+def validate_evidence_note_groups(
+    value: Any,
+    label: str,
+    keys: list[str],
+    source_ids: set[str],
+    image_ids: set[str],
+    errors: list[str],
+    values_are_lists: bool = True,
+) -> None:
+    if not isinstance(value, dict):
+        errors.append(f"'{label}' must be an object")
+        return
+    require_keys(value, keys, label, errors)
+    for key in keys:
+        if key not in value:
+            continue
+        item_label = f"{label}.{key}"
+        if values_are_lists:
+            validate_evidence_note_list(value.get(key), item_label, source_ids, image_ids, errors)
+        else:
+            validate_evidence_note(value.get(key), item_label, source_ids, image_ids, errors)
+
+
+def validate_evidence_note_list(
+    value: Any,
+    label: str,
+    source_ids: set[str],
+    image_ids: set[str],
+    errors: list[str],
+) -> None:
+    if not isinstance(value, list):
+        errors.append(f"{label} must be an array")
+        return
+    for index, item in enumerate(value):
+        validate_evidence_note(item, f"{label}[{index}]", source_ids, image_ids, errors)
+
+
+def validate_evidence_note(
+    value: Any,
+    label: str,
+    source_ids: set[str],
+    image_ids: set[str],
+    errors: list[str],
+) -> None:
+    if not isinstance(value, dict):
+        errors.append(f"{label} must be an object")
+        return
+    require_keys(value, ["text", "evidence_type", "source_ids", "related_image_ids"], label, errors)
+    if "text" in value and not isinstance(value["text"], str):
+        errors.append(f"{label}.text must be a string")
+    if value.get("evidence_type") not in EVIDENCE_TYPES:
+        errors.append(f"{label}.evidence_type must be one of {sorted(EVIDENCE_TYPES)}")
+    validate_source_refs(value.get("source_ids"), source_ids, label, errors)
+    validate_image_refs(value.get("related_image_ids"), image_ids, label, errors)
 
 
 def require_keys(item: dict[str, Any], keys: list[str], label: str, errors: list[str]) -> None:

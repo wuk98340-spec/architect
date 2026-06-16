@@ -166,9 +166,338 @@
       "items": {
         "$ref": "#/$defs/uncertainty"
       }
+    },
+    "technical_metrics": {
+      "$ref": "#/$defs/technicalMetrics"
+    },
+    "site_information": {
+      "$ref": "#/$defs/siteInformation"
+    },
+    "conceptual_exploration": {
+      "$ref": "#/$defs/conceptualExploration"
+    },
+    "architectural_language_generation": {
+      "$ref": "#/$defs/architecturalLanguageGeneration"
+    },
+    "construction_quality_control": {
+      "$ref": "#/$defs/constructionQualityControl"
+    },
+    "design_lessons": {
+      "$ref": "#/$defs/designLessons"
     }
   },
   "$defs": {
+    "evidenceNote": {
+      "type": "object",
+      "required": [
+        "text",
+        "evidence_type",
+        "source_ids",
+        "related_image_ids"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "evidence_type": {
+          "enum": [
+            "sourced",
+            "synthesis",
+            "missing",
+            "conflict"
+          ]
+        },
+        "source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "related_image_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "metricValue": {
+      "type": "object",
+      "required": [
+        "value",
+        "unit",
+        "confidence",
+        "source_ids",
+        "notes"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": [
+            "string",
+            "number",
+            "null"
+          ]
+        },
+        "unit": {
+          "type": "string"
+        },
+        "confidence": {
+          "enum": [
+            "confirmed",
+            "reported",
+            "limited",
+            "unknown",
+            "conflicting"
+          ]
+        },
+        "source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "technicalMetrics": {
+      "type": "object",
+      "required": [
+        "site_area",
+        "building_area",
+        "height",
+        "floors",
+        "far",
+        "building_density",
+        "structure_system",
+        "main_materials",
+        "client",
+        "photography_drawing_credits",
+        "notes"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "site_area": {
+          "$ref": "#/$defs/metricValue"
+        },
+        "building_area": {
+          "$ref": "#/$defs/metricValue"
+        },
+        "height": {
+          "$ref": "#/$defs/metricValue"
+        },
+        "floors": {
+          "$ref": "#/$defs/metricValue"
+        },
+        "far": {
+          "$ref": "#/$defs/metricValue"
+        },
+        "building_density": {
+          "$ref": "#/$defs/metricValue"
+        },
+        "structure_system": {
+          "$ref": "#/$defs/metricValue"
+        },
+        "main_materials": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidenceNote"
+          }
+        },
+        "client": {
+          "$ref": "#/$defs/metricValue"
+        },
+        "photography_drawing_credits": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidenceNote"
+          }
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "siteInformation": {
+      "type": "object",
+      "required": [
+        "location_role",
+        "natural_environment",
+        "cultural_environment",
+        "terrain_conditions",
+        "roads_and_access",
+        "surrounding_buildings",
+        "served_users",
+        "core_site_tension"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "location_role": {
+          "$ref": "#/$defs/evidenceNote"
+        },
+        "natural_environment": {
+          "$ref": "#/$defs/evidenceNote"
+        },
+        "cultural_environment": {
+          "$ref": "#/$defs/evidenceNote"
+        },
+        "terrain_conditions": {
+          "$ref": "#/$defs/evidenceNote"
+        },
+        "roads_and_access": {
+          "$ref": "#/$defs/evidenceNote"
+        },
+        "surrounding_buildings": {
+          "$ref": "#/$defs/evidenceNote"
+        },
+        "served_users": {
+          "$ref": "#/$defs/evidenceNote"
+        },
+        "core_site_tension": {
+          "$ref": "#/$defs/evidenceNote"
+        }
+      }
+    },
+    "conceptualExploration": {
+      "type": "object",
+      "required": [
+        "diagnosis",
+        "positioning",
+        "strategy",
+        "imagery_and_expression"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "diagnosis": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidenceNote"
+          }
+        },
+        "positioning": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidenceNote"
+          }
+        },
+        "strategy": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidenceNote"
+          }
+        },
+        "imagery_and_expression": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidenceNote"
+          }
+        }
+      }
+    },
+    "architecturalLanguageGeneration": {
+      "type": "object",
+      "required": [
+        "function",
+        "layout",
+        "composition",
+        "place_atmosphere"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "function": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidenceNote"
+          }
+        },
+        "layout": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidenceNote"
+          }
+        },
+        "composition": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidenceNote"
+          }
+        },
+        "place_atmosphere": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidenceNote"
+          }
+        }
+      }
+    },
+    "constructionQualityControl": {
+      "type": "object",
+      "required": [
+        "construction_language",
+        "materials_and_craft",
+        "tectonic_logic",
+        "performance_and_construction_control"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "construction_language": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidenceNote"
+          }
+        },
+        "materials_and_craft": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidenceNote"
+          }
+        },
+        "tectonic_logic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidenceNote"
+          }
+        },
+        "performance_and_construction_control": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidenceNote"
+          }
+        }
+      }
+    },
+    "designLessons": {
+      "type": "object",
+      "required": [
+        "transferable_methods",
+        "avoid_copying",
+        "analysis_diagram_potential"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "transferable_methods": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidenceNote"
+          }
+        },
+        "avoid_copying": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidenceNote"
+          }
+        },
+        "analysis_diagram_potential": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
     "sourceQuality": {
       "type": "object",
       "required": [

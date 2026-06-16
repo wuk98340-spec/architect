@@ -1,4 +1,4 @@
 interface:
   display_name: "Architectural Case Study"
-  short_description: "Generate cited professional architecture case research packages."
-  default_prompt: "Use $architectural-case-study to research an architecture project, resolve ambiguity, and create a cited case package with downloaded, locally embedded analysis-relevant images."
+  short_description: "Generate cited concept-to-built architecture case studies."
+  default_prompt: "Use $architectural-case-study to research an architecture project, resolve ambiguity, and create a cited case package that analyzes site, concept, spatial language, drawings, materials, tectonics, and built quality with locally embedded analysis-relevant images."

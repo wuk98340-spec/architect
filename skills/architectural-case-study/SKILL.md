@@ -1,6 +1,6 @@
 ---
 name: architectural-case-study
-description: Generate cited professional architecture case research packages from public web sources. Use when the user asks to research, organize, analyze, summarize, compare, or prepare a case study for an architecture project, architect, studio, building type, design strategy, static case-library website, course study, locally embedded image case archive, or future architecture knowledge base/RAG workflow.
+description: Generate cited professional architecture case research packages from public web sources, with concept-to-built analysis covering site, concept, spatial language, drawings, materials, tectonics, and built quality. Use when the user asks to research, organize, analyze, summarize, compare, or prepare a case study for an architecture project, architect, studio, building type, design strategy, course study, locally embedded image case archive, static case-library website, or future architecture knowledge base/RAG workflow.
 ---
 
 # Architectural Case Study
@@ -9,7 +9,9 @@ description: Generate cited professional architecture case research packages fro
 
 Use this skill to create a reusable architecture case research package in Chinese, preserving English project names, studio names, awards, and precise architectural terms where useful.
 
-The default package contains `case.md` for reading and website copy, plus `case.json` for case-library or RAG ingestion. Treat the output as architecture case research, not a generic encyclopedia summary.
+Treat the output as architecture case research, not a generic encyclopedia summary. The writing goal is a professional "from concept to built work" study: trace how a project moves from diagnosis and positioning, through spatial/formal language, into material, tectonic, and built-quality decisions when reliable public evidence allows.
+
+The default package contains `case.md` for reading and study notes, plus `case.json` for structured reuse. Prioritize the professional quality of `case.md` unless the user explicitly asks for website or RAG schema work.
 
 ## Workflow
 
@@ -19,12 +21,13 @@ The default package contains `case.md` for reading and website copy, plus `case.
 4. For professional architecture media, run the source-specific handling for gooood, ArchDaily / ArchDaily China, and Archiposition / 有方 before concluding that no Level B source exists.
 5. For supplementary Chinese commentary, use Sogou WeChat and Sogou Zhihu handling in `references/source-quality.md`; treat them as supporting sources, not substitutes for official or professional media. If no Level B professional architecture media is retained, this WeChat / Zhihu fallback is mandatory before generating the package.
 6. Run the Source Sufficiency Gate in `references/source-quality.md` after searching, then choose formal generation, cautious generation, preliminary generation, or Disambiguation Gate.
-7. Identify `case_type` before analysis, then choose the strongest 3-5 architectural strategies using `references/architecture-analysis-taxonomy.md`.
-8. Read `references/case-package-template.md` before writing `case.md`.
-9. Read `references/case-package-schema.json` before writing `case.json`. Follow field names exactly.
-10. Create `images/` by default and download publicly accessible, analysis-relevant images and drawings when lawful and technically possible.
-11. Run the quality self-check below before finishing.
-12. Run `scripts/validate_case_package.py <case-folder>` when a `case.json` exists.
+7. During source collection, actively look beyond concept descriptions: site plans, floor plans, sections, elevations, diagrams, material notes, structure, construction process, detail drawings, climate response, and technical metrics. Do not stop at media introductions when drawings or construction-relevant evidence may exist.
+8. Identify `case_type` before analysis, then use `references/architecture-analysis-taxonomy.md` to frame the project through three layers: Conceptual Exploration, Architectural Language Generation, and Construction Quality Control. Choose the strongest 3-5 evidence-backed strategies within those layers.
+9. Read `references/case-package-template.md` before writing `case.md`.
+10. Read `references/case-package-schema.json` before writing `case.json`. Follow field names exactly. Do not invent new schema fields unless the user explicitly asks for schema evolution.
+11. Create `images/` by default and download publicly accessible, analysis-relevant images and drawings when lawful and technically possible.
+12. Run the quality self-check below before finishing.
+13. Run `scripts/validate_case_package.py <case-folder>` when a `case.json` exists.
 
 ## Disambiguation Gate
 
@@ -82,6 +85,16 @@ Set `case_type` before analysis. Use it to adjust emphasis:
 
 Do not force every case into the same headings or strategy set.
 
+## Concept-To-Built Research Frame
+
+Use the complete frame as a research compass, not a mandatory table to fill. `case.md` should expand only the parts supported by reliable sources, drawings, images, or clear project evidence. When public evidence is thin, merge weak subsections into a concise missing-information note instead of repeating `未检索到可靠资料` line by line.
+
+- Conceptual Exploration: diagnosis, positioning, guiding strategies, imagery or diagrams, naming and expression.
+- Architectural Language Generation: function, layout, circulation, massing, spatial sequence, envelope, openings, roof/base organization, place, atmosphere, light, material perception, and user experience.
+- Construction Quality Control: structure, envelope, roof, platform, materials, craft, tectonic logic, physical performance, construction process, mockups, and quality-control measures.
+
+Do not infer construction details, economic/technical metrics, structural systems, or construction procedures from generic architectural common sense. If no reliable source confirms them, state the limitation briefly.
+
 ## Image Workflow
 
 Default mode: create `images/` inside the case package, download strongly relevant images when lawful and technically possible, and embed them in `case.md` with local relative paths such as `![caption](images/01_hero_exterior.jpg)`.
@@ -110,6 +123,14 @@ Do not download images from Pinterest, unsourced galleries, AI aggregation sites
 
 Write compact, case-library friendly Chinese. Keep claims close to citations in `case.md`, and preserve all source URLs in `case.json`.
 
+In `case.md`, distinguish evidence levels in the writing:
+
+- `来源明确`: facts, intentions, drawings, or technical details stated by official sources, architects, awards, or professional media.
+- `基于资料的归纳判断`: synthesis from plans, sections, photographs, and multiple descriptions.
+- `未检索到可靠资料`: high-precision topics such as FAR, building density, structure, construction detail, or construction process that cannot be confirmed.
+
+Do not write every possible subsection when evidence is weak. The professional quality comes from accurate selection, evidence discipline, and clear relationships between concept, space, and built result, not from longer headings.
+
 In `case.md`, embed downloaded images near the strategy, space, facade, or construction analysis they support, not only in the image index. Use local relative paths under `images/`; fall back to the original URL only when download failed or was skipped.
 
 In `case.json`, use empty strings or empty arrays only when information was searched for but not found. Explain important gaps in `uncertain_or_conflicting_info` and `incomplete_reason`.
@@ -125,9 +146,11 @@ Before finishing, verify:
 - Missing Level A sources are not treated as automatic failure.
 - Core facts do not rely only on Level D.
 - Facts, source quotes/paraphrases, and AI synthesis are clearly separated.
-- The case has 3-5 real architectural strategies, each with evidence/source.
-- The most valuable learning point is stated.
+- The case explains the strongest available concept-to-built chain: diagnosis/positioning, spatial/formal language, and construction/material quality when sources allow.
+- The case has 3-5 real architectural strategies or methods, each with evidence/source.
+- The design lessons are written as transferable design methods, not generic inspiration.
 - Missing, uncertain, or conflicting information is recorded.
+- Missing technical metrics, construction details, or construction process information are not guessed.
 - Image links have source, type, use, and copyright notes when relevant.
 - Missing Level A/B is explained instead of treated as automatic failure.
 - Only Level D sources trigger low confidence and preliminary wording.
