@@ -33,8 +33,9 @@ When no Level B professional architecture media source is retained, WeChat and Z
    - The retained-result quota is met.
    - 3 consecutive opened results add no new facts, analysis, image leads, design interpretation, or public/user-experience viewpoint.
    - Access is blocked by login, CAPTCHA, paywall, deleted article, or unavailable content.
-5. If no valid WeChat or Zhihu result is retained, explicitly record why in `source_quality.manual_review_needed` and `uncertain_or_conflicting_info`.
-6. Keep `source_sufficiency_status` as `insufficient` unless the mandatory fallback finds enough independent, substantive Level C sources to support identity and at least 3 analysis topics. Even then, confidence should usually be `medium` or `limited`, not `high`.
+5. If Sogou result snippets contain enough visible information to judge a WeChat or Zhihu result as valid, use that visible content directly in `case.md` and `case.json`. Include the account/author, title, visible snippet, and Sogou search URL or stable target URL when available.
+6. If no valid WeChat or Zhihu result is retained, explicitly record why in `source_quality.manual_review_needed` and `uncertain_or_conflicting_info`.
+7. Keep `source_sufficiency_status` as `insufficient` unless the mandatory fallback finds enough independent, substantive Level C sources to support identity and at least 3 analysis topics. Even then, confidence should usually be `medium` or `limited`, not `high`.
 
 This fallback improves coverage; it does not upgrade WeChat or Zhihu to Level B. Do not use them alone for hard facts such as year, area, structure, material, architect/studio, or completion status unless corroborated by Level A or another reliable independent source.
 
@@ -276,7 +277,8 @@ Use Sogou WeChat (`https://weixin.sogou.com/`) for supplementary Chinese public-
    - `site:mp.weixin.qq.com <architect/studio> <project name>`
    - `site:mp.weixin.qq.com <project name> 案例分析`
    - `site:mp.weixin.qq.com <project name> 设计理念`
-8. When no Level B source is retained, do not leave `wechat_valid_result_count` at 0 unless all required fallback paths were tried or access was blocked. Explain the result in `manual_review_needed`.
+8. When a WeChat result is judged valid from the Sogou result page, add its visible content directly to the generated Markdown. Do not describe it only as a "lead"; summarize what it contributes, such as project-team confirmation, concept wording, status/opening timing, site relationship, public reception, or design interpretation.
+9. When no Level B source is retained, do not leave `wechat_valid_result_count` at 0 unless all required fallback paths were tried or access was blocked. Explain the result in `manual_review_needed`.
 
 WeChat can support interpretation and provide leads, but it should not carry core identity facts unless corroborated by at least one Level A/B source or another independent reliable source.
 
@@ -305,7 +307,8 @@ Use Sogou Zhihu (`https://zhihu.sogou.com/`) for supplementary Chinese discussio
    - Design-study viewpoints.
    - Leads to official, media, or publication sources.
    - Critical questions that may guide `uncertain_or_conflicting_info`.
-6. Do not use Zhihu alone to confirm year, area, structure, material, architect/studio, or completion status.
+6. When a Zhihu result is judged valid from the Sogou result page, add its visible content directly to the generated Markdown. Do not describe it only as a "lead"; summarize what it contributes, such as learning viewpoint, public reception, design analogy, or a conflict to review.
+7. Do not use Zhihu alone to confirm year, area, structure, material, architect/studio, or completion status.
 
 Stop searching Zhihu after the retained-result quota is met, or earlier if 3 consecutive valid-looking results add no new facts, viewpoints, or leads.
 
