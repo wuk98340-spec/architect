@@ -36,7 +36,7 @@ For each selected strategy, write:
 - Specific approach: what the project does spatially, tectonically, formally, or operationally.
 - Architectural effect: what the strategy changes in use, experience, performance, or urban relation.
 - Evidence source: source IDs, source links, drawings, image IDs, or clear notes that the claim is AI synthesis.
-- Related image or drawing link: include when a plan, section, facade, diagram, or photo directly supports the claim.
+- Related image or drawing: embed the downloaded local image in `case.md` when a plan, section, facade, diagram, or photo directly supports the claim; keep the source URL in `case.json`.
 - Transferable lesson: what can be learned without copying the project literally.
 
 ## Evidence Discipline

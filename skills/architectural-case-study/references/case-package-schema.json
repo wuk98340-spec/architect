@@ -450,7 +450,41 @@
         "failure_reason": {
           "type": "string"
         }
-      }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "download_status": {
+                "const": "downloaded"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "file_name": {
+                "minLength": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "download_status": {
+                "const": "failed"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "failure_reason": {
+                "minLength": 1
+              }
+            }
+          }
+        }
+      ]
     },
     "source": {
       "type": "object",

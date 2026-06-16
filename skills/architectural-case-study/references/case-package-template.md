@@ -61,7 +61,9 @@ Use this template for `case.md`. Keep the writing concise, cited, and suitable f
 - 具体做法：
 - 建筑效果：
 - 证据来源：
-- 相关图片 / 图纸链接：
+- 相关图片 / 图纸：
+  ![图片说明](images/03_plan_example.jpg)
+  下载失败或跳过下载时写：[图片 / 图纸来源](URL)（下载状态：failed/skipped；原因：<原因>）
 - 可借鉴点：
 
 ### 策略 2：<策略名称>
@@ -70,30 +72,40 @@ Use this template for `case.md`. Keep the writing concise, cited, and suitable f
 - 具体做法：
 - 建筑效果：
 - 证据来源：
-- 相关图片 / 图纸链接：
+- 相关图片 / 图纸：
+  ![图片说明](images/04_section_example.jpg)
+  下载失败或跳过下载时写：[图片 / 图纸来源](URL)（下载状态：failed/skipped；原因：<原因>）
 - 可借鉴点：
 
 ## 07 空间与流线
 
-分析功能组织、公共空间、竖向 / 水平交通、使用体验。若平面、剖面、流线图或空间照片直接支撑判断，在段落后附链接。
+分析功能组织、公共空间、竖向 / 水平交通、使用体验。若平面、剖面、流线图或空间照片直接支撑判断，在段落后嵌入本地图片。
+
+![平面 / 流线图说明](images/03_plan_circulation.jpg)
+
+下载失败或跳过下载时写：[平面 / 流线图来源](URL)（下载状态：failed/skipped；原因：<原因>）
 
 ## 08 形体、立面与建构
 
-分析体量、表皮、材料、结构、构造逻辑。没有可靠资料时明确写 `公开资料未确认`。若立面、构造、材料或节点图片直接支撑判断，在段落后附链接。
+分析体量、表皮、材料、结构、构造逻辑。没有可靠资料时明确写 `公开资料未确认`。若立面、构造、材料或节点图片直接支撑判断，在段落后嵌入本地图片。
+
+![立面 / 构造图片说明](images/05_elevation_or_06_detail.jpg)
+
+下载失败或跳过下载时写：[立面 / 构造图片来源](URL)（下载状态：failed/skipped；原因：<原因>）
 
 ## 09 图纸与图片索引
 
-| 图片类型 | 推荐用途 | 图片或页面链接 | 来源 | 版权 / 备注 |
-| --- | --- | --- | --- | --- |
-| 01_hero | 封面 / 外观识别 |  |  |  |
-| 02_site | 场地关系分析 |  |  |  |
-| 03_plan | 平面 / 功能组织分析 |  |  |  |
-| 04_section | 剖面 / 空间关系分析 |  |  |  |
-| 05_elevation | 立面分析 |  |  |  |
-| 06_detail | 构造 / 材料分析 |  |  |  |
-| 07_concept | 概念 / 生成逻辑 |  |  |  |
-| 08_interior | 室内体验 |  |  |  |
-| 09_analysis | 二次分析图素材 |  |  |  |
+| 图片类型 | 推荐用途 | 本地图片 / 来源页面 | 来源 | 下载状态 | 版权 / 备注 |
+| --- | --- | --- | --- | --- | --- |
+| 01_hero | 封面 / 外观识别 | `images/01_hero_exterior.jpg` / [来源](URL) |  | downloaded |  |
+| 02_site | 场地关系分析 | `images/02_site_context.jpg` / [来源](URL) |  | downloaded |  |
+| 03_plan | 平面 / 功能组织分析 | `images/03_plan_ground_floor.jpg` / [来源](URL) |  | downloaded |  |
+| 04_section | 剖面 / 空间关系分析 | `images/04_section_longitudinal.jpg` / [来源](URL) |  | downloaded |  |
+| 05_elevation | 立面分析 | `images/05_elevation_main.jpg` / [来源](URL) |  | downloaded |  |
+| 06_detail | 构造 / 材料分析 | `images/06_detail_material.jpg` / [来源](URL) |  | downloaded |  |
+| 07_concept | 概念 / 生成逻辑 | `images/07_concept_diagram.jpg` / [来源](URL) |  | downloaded |  |
+| 08_interior | 室内体验 | `images/08_interior_public_space.jpg` / [来源](URL) |  | downloaded |  |
+| 09_analysis | 二次分析图素材 | `images/09_analysis_reference.jpg` / [来源](URL) |  | downloaded |  |
 
 ## 10 对我的设计启发
 

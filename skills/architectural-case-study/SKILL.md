@@ -1,6 +1,6 @@
 ---
 name: architectural-case-study
-description: Generate cited professional architecture case research packages from public web sources. Use when the user asks to research, organize, analyze, summarize, compare, or prepare a case study for an architecture project, architect, studio, building type, design strategy, static case-library website, course study, image-linked case archive, or future architecture knowledge base/RAG workflow.
+description: Generate cited professional architecture case research packages from public web sources. Use when the user asks to research, organize, analyze, summarize, compare, or prepare a case study for an architecture project, architect, studio, building type, design strategy, static case-library website, course study, locally embedded image case archive, or future architecture knowledge base/RAG workflow.
 ---
 
 # Architectural Case Study
@@ -22,7 +22,7 @@ The default package contains `case.md` for reading and website copy, plus `case.
 7. Identify `case_type` before analysis, then choose the strongest 3-5 architectural strategies using `references/architecture-analysis-taxonomy.md`.
 8. Read `references/case-package-template.md` before writing `case.md`.
 9. Read `references/case-package-schema.json` before writing `case.json`. Follow field names exactly.
-10. Collect image links by default when images or drawings directly support the written analysis. Download images only when the user explicitly asks.
+10. Create `images/` by default and download publicly accessible, analysis-relevant images and drawings when lawful and technically possible.
 11. Run the quality self-check below before finishing.
 12. Run `scripts/validate_case_package.py <case-folder>` when a `case.json` exists.
 
@@ -84,9 +84,13 @@ Do not force every case into the same headings or strategy set.
 
 ## Image Workflow
 
-Default mode: do not download images. Still collect image links when they strongly support text analysis, especially for site, plan, section, massing, facade, structure, material detail, concept, and circulation claims.
+Default mode: create `images/` inside the case package, download strongly relevant images when lawful and technically possible, and embed them in `case.md` with local relative paths such as `![caption](images/01_hero_exterior.jpg)`.
 
-Enhanced mode: if the user explicitly asks to download images or organize an image package, create `images/` and download publicly accessible images when lawful and technically possible.
+Select images only when they directly support the written analysis. Prioritize site, plan, section, circulation, massing, facade, structure, material detail, concept-generation, and user-experience claims over generic atmosphere images.
+
+If an image cannot be downloaded, keep the original URL in `case.md` and `case.json`, set `download_status` to `failed`, and explain the failure in `failure_reason`. If an image is useful but should not be downloaded because of source quality, copyright ambiguity, or technical access limits, set `download_status` to `skipped` and keep the source URL.
+
+Set `download_mode` to `completed` when all selected images are downloaded, `partial` when at least one selected image is failed or skipped, and `not_requested` only for legacy packages or when the user explicitly asks for link-only output.
 
 Use these image types:
 
@@ -100,13 +104,13 @@ Use these image types:
 - `08_interior`: interior space.
 - `09_analysis`: images useful for secondary analysis.
 
-Do not download images from Pinterest, unsourced galleries, AI aggregation sites, or pages without usable image links. Do not describe unclear copyright as commercial permission. If download fails, keep the URL and failure reason.
+Do not download images from Pinterest, unsourced galleries, AI aggregation sites, or pages without usable image links. Do not describe unclear copyright as commercial permission. Downloading images is research organization, not commercial rights clearance.
 
 ## Output Rules
 
 Write compact, case-library friendly Chinese. Keep claims close to citations in `case.md`, and preserve all source URLs in `case.json`.
 
-In `case.md`, include relevant image links near the strategy, space, facade, or construction analysis they support, not only in the image index.
+In `case.md`, embed downloaded images near the strategy, space, facade, or construction analysis they support, not only in the image index. Use local relative paths under `images/`; fall back to the original URL only when download failed or was skipped.
 
 In `case.json`, use empty strings or empty arrays only when information was searched for but not found. Explain important gaps in `uncertain_or_conflicting_info` and `incomplete_reason`.
 

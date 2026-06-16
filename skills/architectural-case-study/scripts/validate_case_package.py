@@ -125,7 +125,7 @@ def main() -> int:
 
     sources = validate_sources(data.get("sources"), errors, warnings, strong_warnings)
     source_ids = {source["id"] for source in sources if isinstance(source.get("id"), str)}
-    image_ids = validate_images(data.get("image_metadata"), errors, warnings)
+    image_ids = validate_images(data.get("image_metadata"), data.get("download_mode"), errors, warnings)
 
     validate_source_quality(data, source_ids, errors, warnings)
     validate_design_concept(data.get("design_concept"), source_ids, errors)
@@ -389,7 +389,7 @@ def validate_notes(
         validate_image_refs(item.get("related_image_ids"), image_ids, f"{label}[{index}]", errors)
 
 
-def validate_images(value: Any, errors: list[str], warnings: list[str]) -> set[str]:
+def validate_images(value: Any, download_mode: Any, errors: list[str], warnings: list[str]) -> set[str]:
     if not isinstance(value, list):
         errors.append("'image_metadata' must be an array")
         return set()
@@ -428,6 +428,12 @@ def validate_images(value: Any, errors: list[str], warnings: list[str]) -> set[s
             errors.append(f"image_metadata[{index}].download_status must be one of {sorted(DOWNLOAD_STATUSES)}")
         if image.get("download_status") == "failed" and not str(image.get("failure_reason", "")).strip():
             errors.append(f"image_metadata[{index}] download failed but failure_reason is empty")
+        if image.get("download_status") == "downloaded" and not str(image.get("file_name", "")).strip():
+            errors.append(f"image_metadata[{index}] is downloaded but file_name is empty")
+        if download_mode in {"completed", "partial"} and image.get("download_status") == "not_requested":
+            warnings.append(
+                f"image_metadata[{index}] is not_requested while download_mode is {download_mode}; use downloaded, failed, or skipped."
+            )
         if not str(image.get("source_url", "")).strip():
             errors.append(f"image_metadata[{index}].source_url must not be empty")
         if not str(image.get("source_site", "")).strip():

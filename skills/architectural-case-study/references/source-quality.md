@@ -367,13 +367,15 @@ Use this form:
 
 If a field is not found after reasonable searching, leave it empty in JSON or write `公开资料未确认` in Markdown, then add a note to `uncertain_or_conflicting_info`.
 
-## Image Link Rules
+## Image Download and Embedding Rules
 
-Do not download images unless the user explicitly asks. Still provide image links when they strongly support the written analysis.
+Download and embed strongly relevant images by default. Create `images/` in the case package and use local relative paths in `case.md`, for example `![caption](images/03_plan_ground_floor.jpg)`.
+
+Still keep the original source URL for every image or drawing. If download fails or should be skipped, keep the URL near the relevant analysis in `case.md` and record the reason in `case.json`.
 
 For each useful image or drawing, record:
 
-- `file_name`: local file name if downloaded, otherwise empty.
+- `file_name`: local file name under `images/` if downloaded, otherwise empty.
 - `image_type`: one of the project image categories in `SKILL.md`.
 - `source_url`: page URL or direct image URL.
 - `source_site`: publisher or website.
