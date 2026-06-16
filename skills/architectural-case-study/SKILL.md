@@ -15,15 +15,16 @@ The default package contains `case.md` for reading and website copy, plus `case.
 
 1. Create a folder under `case-packages/<slug>/` unless the user gives another location.
 2. Run the Disambiguation Gate before writing a full package.
-3. Search sources by the Level A-D priority in `references/source-quality.md`.
-4. For Chinese architecture projects, run the gooood fallback in `references/source-quality.md` before concluding that no Level B source exists.
-5. Run the Source Sufficiency Gate in `references/source-quality.md` after searching, then choose formal generation, cautious generation, preliminary generation, or Disambiguation Gate.
-6. Identify `case_type` before analysis, then choose the strongest 3-5 architectural strategies using `references/architecture-analysis-taxonomy.md`.
-7. Read `references/case-package-template.md` before writing `case.md`.
-8. Read `references/case-package-schema.json` before writing `case.json`. Follow field names exactly.
-9. Collect image links by default when images or drawings directly support the written analysis. Download images only when the user explicitly asks.
-10. Run the quality self-check below before finishing.
-11. Run `scripts/validate_case_package.py <case-folder>` when a `case.json` exists.
+3. Search sources by the Level A-D priority and Source Handling Order in `references/source-quality.md`.
+4. For professional architecture media, run the source-specific handling for gooood, ArchDaily / ArchDaily China, and Archiposition / 有方 before concluding that no Level B source exists.
+5. For supplementary Chinese commentary, use Sogou WeChat and Sogou Zhihu handling in `references/source-quality.md`; treat them as supporting sources, not substitutes for official or professional media. If no Level B professional architecture media is retained, this WeChat / Zhihu fallback is mandatory before generating the package.
+6. Run the Source Sufficiency Gate in `references/source-quality.md` after searching, then choose formal generation, cautious generation, preliminary generation, or Disambiguation Gate.
+7. Identify `case_type` before analysis, then choose the strongest 3-5 architectural strategies using `references/architecture-analysis-taxonomy.md`.
+8. Read `references/case-package-template.md` before writing `case.md`.
+9. Read `references/case-package-schema.json` before writing `case.json`. Follow field names exactly.
+10. Collect image links by default when images or drawings directly support the written analysis. Download images only when the user explicitly asks.
+11. Run the quality self-check below before finishing.
+12. Run `scripts/validate_case_package.py <case-folder>` when a `case.json` exists.
 
 ## Disambiguation Gate
 
@@ -61,7 +62,7 @@ Level A/B sources are preferred, but they are not a hard pass/fail requirement. 
 
 Missing Level A sources alone must not make a case insufficient. Treat Level A as the preferred identity calibration source, then use the Source Sufficiency Gate to evaluate identity confirmation, independent source count, analysis coverage, and secondary-source risk. Record the result in `case.json.source_quality`.
 
-For gooood specifically, do not rely only on ordinary web search or the visible `?s=` search page. If `site:gooood.cn` searches do not find a likely article, use the gooood API fallback in `references/source-quality.md` before marking the project as missing from gooood.
+For source handling, do not rely only on ordinary web search or the first visible search page. For gooood, use the API fallback in `references/source-quality.md` before marking the project as missing from gooood. For ArchDaily, 有方, WeChat, and Zhihu, use the source-specific query patterns, retention quotas, and confidence rules in `references/source-quality.md`. When no Level B source is retained, record the mandatory WeChat / Zhihu fallback outcome in `source_quality`, `manual_review_needed`, and `uncertain_or_conflicting_info`.
 
 Do not invent area, year, status, structure, material, collaborators, or design intent. Record conflicts in `uncertain_or_conflicting_info`.
 
