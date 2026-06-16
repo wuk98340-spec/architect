@@ -23,6 +23,7 @@
     "site_context",
     "image_metadata",
     "download_mode",
+    "source_quality",
     "sources",
     "uncertain_or_conflicting_info"
   ],
@@ -150,6 +151,9 @@
         "completed"
       ]
     },
+    "source_quality": {
+      "$ref": "#/$defs/sourceQuality"
+    },
     "sources": {
       "type": "array",
       "minItems": 1,
@@ -165,6 +169,80 @@
     }
   },
   "$defs": {
+    "sourceQuality": {
+      "type": "object",
+      "required": [
+        "has_primary_sources",
+        "primary_sources_used_for_identity",
+        "architecture_media_count",
+        "wechat_valid_result_count",
+        "zhihu_valid_result_count",
+        "source_sufficiency_status",
+        "secondary_source_heavy",
+        "manual_review_needed",
+        "identity_confirming_source_ids",
+        "analysis_coverage"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "has_primary_sources": {
+          "type": "boolean"
+        },
+        "primary_sources_used_for_identity": {
+          "type": "boolean"
+        },
+        "architecture_media_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "wechat_valid_result_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "zhihu_valid_result_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "source_sufficiency_status": {
+          "enum": [
+            "sufficient",
+            "partial",
+            "insufficient",
+            "ambiguous"
+          ]
+        },
+        "secondary_source_heavy": {
+          "type": "boolean"
+        },
+        "manual_review_needed": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "identity_confirming_source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "analysis_coverage": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "concept",
+              "context",
+              "program",
+              "circulation",
+              "facade_material",
+              "structure_construction",
+              "user_experience",
+              "urban_relationship"
+            ]
+          }
+        }
+      }
+    },
     "disambiguationCandidate": {
       "type": "object",
       "required": [

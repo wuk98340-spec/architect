@@ -5,7 +5,7 @@ Use this template for `case.md`. Keep the writing concise, cited, and suitable f
 ```markdown
 # <项目名称> / <English Project Name>
 
-> 不完整原因：<仅当资料不足、身份未完全确认、缺少 Level A/B、或只有 Level D 来源时填写；否则删除本行。>
+> 不完整原因：<仅当资料不足、身份未完全确认、缺少 Level A/B、或只有 Level D 来源时填写；否则删除本行。资料不足且二手资料偏重时，必须写明“资料以二手资料为主，项目事实和设计解读需要人工复核”。>
 
 ## 01 基本信息
 
@@ -20,15 +20,28 @@ Use this template for `case.md`. Keep the writing concise, cited, and suitable f
 - 信息可信度：
 - 主要依据来源：
 
-## 02 一句话判断
+## 02 资料质量
+
+- 资料状态：<sufficient / partial / insufficient / ambiguous>
+- 是否有一级资料：<是 / 否>
+- 一级资料是否用于身份确认：<是 / 否>
+- 建筑专业媒体数量：
+- 微信有效结果数量：
+- 知乎有效结果数量：
+- 是否二手资料偏重：<是 / 否>
+- 身份确认来源：
+- 已覆盖分析项：<concept / context / program / circulation / facade_material / structure_construction / user_experience / urban_relationship>
+- 需要人工复核：
+
+## 03 一句话判断
 
 用 1-2 句话说明这个案例最值得学习的地方。不要写成营销口号。
 
-## 03 项目背景
+## 04 项目背景
 
 说明场地、业主、城市、功能需求或建造背景。不写空泛背景。重要事实后标注来源。
 
-## 04 设计理念
+## 05 设计理念
 
 ### 来源明确的设计理念
 
@@ -38,7 +51,7 @@ Use this template for `case.md`. Keep the writing concise, cited, and suitable f
 
 在证据允许的范围内，说明从场地、空间、图纸、材料或使用方式中综合判断出的设计逻辑。必须标明这是综合判断。
 
-## 05 核心建筑策略
+## 06 核心建筑策略
 
 根据案例特色选择 3-5 个策略展开。每个策略使用以下结构：
 
@@ -60,15 +73,15 @@ Use this template for `case.md`. Keep the writing concise, cited, and suitable f
 - 相关图片 / 图纸链接：
 - 可借鉴点：
 
-## 06 空间与流线
+## 07 空间与流线
 
 分析功能组织、公共空间、竖向 / 水平交通、使用体验。若平面、剖面、流线图或空间照片直接支撑判断，在段落后附链接。
 
-## 07 形体、立面与建构
+## 08 形体、立面与建构
 
 分析体量、表皮、材料、结构、构造逻辑。没有可靠资料时明确写 `公开资料未确认`。若立面、构造、材料或节点图片直接支撑判断，在段落后附链接。
 
-## 08 图纸与图片索引
+## 09 图纸与图片索引
 
 | 图片类型 | 推荐用途 | 图片或页面链接 | 来源 | 版权 / 备注 |
 | --- | --- | --- | --- | --- |
@@ -82,20 +95,20 @@ Use this template for `case.md`. Keep the writing concise, cited, and suitable f
 | 08_interior | 室内体验 |  |  |  |
 | 09_analysis | 二次分析图素材 |  |  |  |
 
-## 09 对我的设计启发
+## 10 对我的设计启发
 
 - 可以学什么：
 - 不适合直接照搬什么：
 - 适合用于哪类设计任务：
 - 可转化成哪些分析图：
 
-## 10 信息缺口与冲突
+## 11 信息缺口与冲突
 
 - 记录没有找到、仍存疑、或不同来源冲突的信息。
 - 若缺少 Level A/B 来源，说明资料限制。
 - 若只有 Level D 来源，明确标记为低可信、初步资料包。
 
-## 11 来源列表
+## 12 来源列表
 
 ### Level A：官方与一手来源
 

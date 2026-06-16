@@ -30,6 +30,7 @@ REQUIRED_TOP_LEVEL = [
     "site_context",
     "image_metadata",
     "download_mode",
+    "source_quality",
     "sources",
     "uncertain_or_conflicting_info",
 ]
@@ -48,6 +49,17 @@ IMAGE_TYPES = {
     "09_analysis",
 }
 DOWNLOAD_STATUSES = {"not_requested", "downloaded", "failed", "skipped"}
+SOURCE_SUFFICIENCY_STATUSES = {"sufficient", "partial", "insufficient", "ambiguous"}
+ANALYSIS_COVERAGE_VALUES = {
+    "concept",
+    "context",
+    "program",
+    "circulation",
+    "facade_material",
+    "structure_construction",
+    "user_experience",
+    "urban_relationship",
+}
 
 
 def main() -> int:
@@ -115,6 +127,7 @@ def main() -> int:
     source_ids = {source["id"] for source in sources if isinstance(source.get("id"), str)}
     image_ids = validate_images(data.get("image_metadata"), errors, warnings)
 
+    validate_source_quality(data, source_ids, errors, warnings)
     validate_design_concept(data.get("design_concept"), source_ids, errors)
     validate_disambiguation_candidates(data.get("disambiguation_candidates"), errors)
     validate_key_facts(data.get("key_facts"), source_ids, errors, warnings)
@@ -216,6 +229,103 @@ def validate_disambiguation_candidates(value: Any, errors: list[str]) -> None:
         require_keys(candidate, required, f"disambiguation_candidates[{index}]", errors)
         if "main_sources" in candidate and not isinstance(candidate["main_sources"], list):
             errors.append(f"disambiguation_candidates[{index}].main_sources must be an array")
+
+
+def validate_source_quality(
+    data: dict[str, Any],
+    source_ids: set[str],
+    errors: list[str],
+    warnings: list[str],
+) -> None:
+    value = data.get("source_quality")
+    if not isinstance(value, dict):
+        errors.append("'source_quality' must be an object")
+        return
+
+    required = [
+        "has_primary_sources",
+        "primary_sources_used_for_identity",
+        "architecture_media_count",
+        "wechat_valid_result_count",
+        "zhihu_valid_result_count",
+        "source_sufficiency_status",
+        "secondary_source_heavy",
+        "manual_review_needed",
+        "identity_confirming_source_ids",
+        "analysis_coverage",
+    ]
+    require_keys(value, required, "source_quality", errors)
+
+    for key in ["has_primary_sources", "primary_sources_used_for_identity", "secondary_source_heavy"]:
+        if key in value and type(value[key]) is not bool:
+            errors.append(f"source_quality.{key} must be a boolean")
+
+    for key in ["architecture_media_count", "wechat_valid_result_count", "zhihu_valid_result_count"]:
+        if key not in value:
+            continue
+        if type(value[key]) is not int or value[key] < 0:
+            errors.append(f"source_quality.{key} must be a non-negative integer")
+
+    status = value.get("source_sufficiency_status")
+    if status not in SOURCE_SUFFICIENCY_STATUSES:
+        errors.append(f"source_quality.source_sufficiency_status must be one of {sorted(SOURCE_SUFFICIENCY_STATUSES)}")
+
+    if "manual_review_needed" in value and not isinstance(value["manual_review_needed"], list):
+        errors.append("source_quality.manual_review_needed must be an array")
+    elif isinstance(value.get("manual_review_needed"), list):
+        for index, item in enumerate(value["manual_review_needed"]):
+            if not isinstance(item, str):
+                errors.append(f"source_quality.manual_review_needed[{index}] must be a string")
+
+    identity_refs = value.get("identity_confirming_source_ids")
+    if not isinstance(identity_refs, list):
+        errors.append("source_quality.identity_confirming_source_ids must be an array")
+        identity_count = 0
+    else:
+        identity_count = 0
+        for index, source_id in enumerate(identity_refs):
+            if source_id not in source_ids:
+                errors.append(
+                    f"source_quality.identity_confirming_source_ids[{index}] references unknown source id '{source_id}'"
+                )
+            else:
+                identity_count += 1
+
+    coverage = value.get("analysis_coverage")
+    if not isinstance(coverage, list):
+        errors.append("source_quality.analysis_coverage must be an array")
+        coverage_count = 0
+    else:
+        coverage_count = len(coverage)
+        seen_coverage: set[str] = set()
+        for index, item in enumerate(coverage):
+            if item not in ANALYSIS_COVERAGE_VALUES:
+                errors.append(
+                    f"source_quality.analysis_coverage[{index}] must be one of {sorted(ANALYSIS_COVERAGE_VALUES)}"
+                )
+            elif item in seen_coverage:
+                warnings.append(f"source_quality.analysis_coverage contains duplicate value '{item}'")
+            else:
+                seen_coverage.add(item)
+
+    if status == "insufficient":
+        if value.get("secondary_source_heavy") is not True:
+            errors.append("source_quality.secondary_source_heavy must be true when source_sufficiency_status is insufficient")
+        if not str(data.get("incomplete_reason", "")).strip():
+            errors.append("incomplete_reason must not be empty when source_sufficiency_status is insufficient")
+
+    if status == "ambiguous" and data.get("disambiguation_status") != "ambiguous_waiting_for_user":
+        errors.append(
+            "disambiguation_status must be ambiguous_waiting_for_user when source_sufficiency_status is ambiguous"
+        )
+
+    if status == "sufficient":
+        if coverage_count < 3:
+            errors.append("source_quality.analysis_coverage must contain at least 3 items when status is sufficient")
+        if identity_count < 2:
+            errors.append(
+                "source_quality.identity_confirming_source_ids must reference at least 2 sources when status is sufficient"
+            )
 
 
 def validate_key_facts(value: Any, source_ids: set[str], errors: list[str], warnings: list[str]) -> None:

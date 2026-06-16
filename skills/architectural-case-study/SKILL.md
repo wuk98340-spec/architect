@@ -17,12 +17,13 @@ The default package contains `case.md` for reading and website copy, plus `case.
 2. Run the Disambiguation Gate before writing a full package.
 3. Search sources by the Level A-D priority in `references/source-quality.md`.
 4. For Chinese architecture projects, run the gooood fallback in `references/source-quality.md` before concluding that no Level B source exists.
-5. Identify `case_type` before analysis, then choose the strongest 3-5 architectural strategies using `references/architecture-analysis-taxonomy.md`.
-6. Read `references/case-package-template.md` before writing `case.md`.
-7. Read `references/case-package-schema.json` before writing `case.json`. Follow field names exactly.
-8. Collect image links by default when images or drawings directly support the written analysis. Download images only when the user explicitly asks.
-9. Run the quality self-check below before finishing.
-10. Run `scripts/validate_case_package.py <case-folder>` when a `case.json` exists.
+5. Run the Source Sufficiency Gate in `references/source-quality.md` after searching, then choose formal generation, cautious generation, preliminary generation, or Disambiguation Gate.
+6. Identify `case_type` before analysis, then choose the strongest 3-5 architectural strategies using `references/architecture-analysis-taxonomy.md`.
+7. Read `references/case-package-template.md` before writing `case.md`.
+8. Read `references/case-package-schema.json` before writing `case.json`. Follow field names exactly.
+9. Collect image links by default when images or drawings directly support the written analysis. Download images only when the user explicitly asks.
+10. Run the quality self-check below before finishing.
+11. Run `scripts/validate_case_package.py <case-folder>` when a `case.json` exists.
 
 ## Disambiguation Gate
 
@@ -57,6 +58,8 @@ Level A/B sources are preferred, but they are not a hard pass/fail requirement. 
 - If Level A/B exists, use it for project identity, core facts, design intent, drawings, and image sources.
 - If no Level A/B exists but several Level C sources corroborate one another, generate the package with medium or limited confidence and explain the limitation.
 - If mainly Level D exists, generate only a preliminary package, mark low confidence, state the incomplete reason at the top, and avoid over-professionalized strategy claims.
+
+Missing Level A sources alone must not make a case insufficient. Treat Level A as the preferred identity calibration source, then use the Source Sufficiency Gate to evaluate identity confirmation, independent source count, analysis coverage, and secondary-source risk. Record the result in `case.json.source_quality`.
 
 For gooood specifically, do not rely only on ordinary web search or the visible `?s=` search page. If `site:gooood.cn` searches do not find a likely article, use the gooood API fallback in `references/source-quality.md` before marking the project as missing from gooood.
 
@@ -112,7 +115,9 @@ Before finishing, verify:
 
 - Project identity is confirmed or ambiguity has been handled.
 - `disambiguation_status`, `case_type`, and `information_confidence` are present.
+- `source_quality` is present, and its sufficiency status matches the source mix and analysis coverage.
 - Sources have Level A-D labels.
+- Missing Level A sources are not treated as automatic failure.
 - Core facts do not rely only on Level D.
 - Facts, source quotes/paraphrases, and AI synthesis are clearly separated.
 - The case has 3-5 real architectural strategies, each with evidence/source.
