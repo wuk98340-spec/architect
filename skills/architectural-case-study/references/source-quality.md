@@ -369,9 +369,9 @@ If a field is not found after reasonable searching, leave it empty in JSON or wr
 
 ## Image Download and Embedding Rules
 
-Download and embed strongly relevant images by default. Create `images/` in the case package and use local relative paths in `case.md`, for example `![caption](images/03_plan_ground_floor.jpg)`.
+Download and embed strongly relevant images by default. Create `images/` in the case package and use local relative paths in `case.md`, for example `![caption](images/03_plan_ground_floor.jpg)`. Select an image only when it directly supports a claim in the written analysis, such as site relationship, plan organization, section logic, circulation, massing, facade, structure, material detail, concept-generation, or user experience.
 
-Still keep the original source URL for every image or drawing. If download fails or should be skipped, keep the URL near the relevant analysis in `case.md` and record the reason in `case.json`.
+Downloaded images must be embedded near the claim they support in `case.md`; do not leave them only in the image index and do not write only placeholders such as `img1`, `img2`, or `相关图片：img1、img2`. Still keep the original source URL for every image or drawing. If download fails or should be skipped, keep the URL near the relevant analysis in `case.md` and record the reason in `case.json`.
 
 For each useful image or drawing, record:
 
@@ -382,6 +382,7 @@ For each useful image or drawing, record:
 - `caption`: concise description.
 - `copyright_note`: credit if visible, or `Reference link only; rights not cleared.`
 - `recommended_use`: cover, plan analysis, section analysis, facade analysis, material detail, circulation reference, etc.
+- `relevance_reason`: the specific written claim or analysis point this image supports.
 - `related_sections`: section names or strategy IDs where the image is useful.
 - `download_status`: `not_requested`, `downloaded`, `failed`, or `skipped`.
 - `failure_reason`: required when `download_status` is `failed`.

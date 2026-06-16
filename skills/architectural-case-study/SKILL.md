@@ -25,7 +25,7 @@ The default package contains `case.md` for reading and study notes, plus `case.j
 8. Identify `case_type` before analysis, then use `references/architecture-analysis-taxonomy.md` to frame the project through three layers: Conceptual Exploration, Architectural Language Generation, and Construction Quality Control. Choose the strongest 3-5 evidence-backed strategies within those layers.
 9. Read `references/case-package-template.md` before writing `case.md`.
 10. Read `references/case-package-schema.json` before writing `case.json`. Follow field names exactly. Do not invent new schema fields unless the user explicitly asks for schema evolution.
-11. Create `images/` by default and download publicly accessible, analysis-relevant images and drawings when lawful and technically possible.
+11. Create `images/` by default and download publicly accessible, analysis-relevant images and drawings when lawful and technically possible. Before selecting each image, judge whether it directly supports a written analysis claim; do not include images that are only decorative, generic, or weakly related.
 12. Run the quality self-check below before finishing.
 13. Run `scripts/validate_case_package.py <case-folder>` when a `case.json` exists.
 
@@ -99,9 +99,11 @@ Do not infer construction details, economic/technical metrics, structural system
 
 Default mode: create `images/` inside the case package, download strongly relevant images when lawful and technically possible, and embed them in `case.md` with local relative paths such as `![caption](images/01_hero_exterior.jpg)`.
 
-Select images only when they directly support the written analysis. Prioritize site, plan, section, circulation, massing, facade, structure, material detail, concept-generation, and user-experience claims over generic atmosphere images.
+Select images only when they directly support the written analysis. Prioritize site, plan, section, circulation, massing, facade, structure, material detail, concept-generation, and user-experience claims over generic atmosphere images. For every selected image, write a `relevance_reason` in `case.json.image_metadata[]` that explains the exact claim or analysis move the image supports, for example: `用于验证屋顶平台与公共流线关系`.
 
-If an image cannot be downloaded, keep the original URL in `case.md` and `case.json`, set `download_status` to `failed`, and explain the failure in `failure_reason`. If an image is useful but should not be downloaded because of source quality, copyright ambiguity, or technical access limits, set `download_status` to `skipped` and keep the source URL.
+Downloaded images must appear as Markdown image embeds near the relevant paragraph, strategy, or section in `case.md`. Do not leave downloaded images only in the image index, and do not replace them with placeholders such as `img1`, `img2`, or `相关图片：img1、img2`.
+
+If an image cannot be downloaded, keep the original URL in `case.md` and `case.json`, set `download_status` to `failed`, and explain the failure in `failure_reason`. If an image is useful but should not be downloaded because of source quality, copyright ambiguity, or technical access limits, set `download_status` to `skipped` and keep the source URL. Failed or skipped image links must still appear near the analysis they support, with the failure or skip reason; do not hide them only in the image index.
 
 Set `download_mode` to `completed` when all selected images are downloaded, `partial` when at least one selected image is failed or skipped, and `not_requested` only for legacy packages or when the user explicitly asks for link-only output.
 
@@ -131,7 +133,7 @@ In `case.md`, distinguish evidence levels in the writing:
 
 Do not write every possible subsection when evidence is weak. The professional quality comes from accurate selection, evidence discipline, and clear relationships between concept, space, and built result, not from longer headings.
 
-In `case.md`, embed downloaded images near the strategy, space, facade, or construction analysis they support, not only in the image index. Use local relative paths under `images/`; fall back to the original URL only when download failed or was skipped.
+In `case.md`, embed downloaded images near the strategy, space, facade, or construction analysis they support, not only in the image index. Use local relative paths under `images/`; fall back to the original URL only when download failed or was skipped. Never write only image IDs such as `相关图片：img1、img2`; convert every related downloaded image into `![说明](images/...)`.
 
 In `case.json`, use empty strings or empty arrays only when information was searched for but not found. Explain important gaps in `uncertain_or_conflicting_info` and `incomplete_reason`.
 
@@ -151,6 +153,9 @@ Before finishing, verify:
 - The design lessons are written as transferable design methods, not generic inspiration.
 - Missing, uncertain, or conflicting information is recorded.
 - Missing technical metrics, construction details, or construction process information are not guessed.
+- Image metadata includes `relevance_reason` for every selected image.
+- Downloaded images exist under `images/` and are embedded in `case.md` with Markdown image syntax near the relevant analysis.
+- Failed or skipped images appear near the relevant analysis as source links with status and reason.
 - Image links have source, type, use, and copyright notes when relevant.
 - Missing Level A/B is explained instead of treated as automatic failure.
 - Only Level D sources trigger low confidence and preliminary wording.

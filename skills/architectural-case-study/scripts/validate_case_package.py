@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
 from typing import Any
@@ -100,6 +101,12 @@ def main() -> int:
         errors.append(f"Invalid JSON in {json_path}: {exc}")
         return finish(errors, warnings, strong_warnings)
 
+    try:
+        md_text = md_path.read_text(encoding="utf-8")
+    except UnicodeDecodeError as exc:
+        errors.append(f"Invalid UTF-8 in {md_path}: {exc}")
+        return finish(errors, warnings, strong_warnings)
+
     if not isinstance(data, dict):
         errors.append("case.json must contain a JSON object")
         return finish(errors, warnings, strong_warnings)
@@ -108,10 +115,7 @@ def main() -> int:
         if key not in data:
             errors.append(f"case.json is missing top-level field '{key}'")
 
-    if errors:
-        return finish(errors, warnings, strong_warnings)
-
-    if not isinstance(data["architects"], list):
+    if not isinstance(data.get("architects"), list):
         errors.append("'architects' must be an array")
 
     validate_enum(
@@ -146,6 +150,15 @@ def main() -> int:
     for section in ["spatial_ideas", "materials_structure", "site_context"]:
         validate_notes(data.get(section), section, source_ids, image_ids, errors)
 
+    validate_markdown_image_usage(
+        data.get("image_metadata"),
+        data.get("download_mode"),
+        md_text,
+        folder,
+        errors,
+        warnings,
+        strong_warnings,
+    )
     validate_uncertainties(data.get("uncertain_or_conflicting_info"), source_ids, errors)
     validate_extended_fields(data, source_ids, image_ids, errors, warnings)
 
@@ -439,6 +452,8 @@ def validate_images(value: Any, download_mode: Any, errors: list[str], warnings:
             errors.append(f"image_metadata[{index}].download_status must be one of {sorted(DOWNLOAD_STATUSES)}")
         if image.get("download_status") == "failed" and not str(image.get("failure_reason", "")).strip():
             errors.append(f"image_metadata[{index}] download failed but failure_reason is empty")
+        if image.get("download_status") == "skipped" and not str(image.get("failure_reason", "")).strip():
+            errors.append(f"image_metadata[{index}] download skipped but failure_reason is empty")
         if image.get("download_status") == "downloaded" and not str(image.get("file_name", "")).strip():
             errors.append(f"image_metadata[{index}] is downloaded but file_name is empty")
         if download_mode in {"completed", "partial"} and image.get("download_status") == "not_requested":
@@ -451,10 +466,73 @@ def validate_images(value: Any, download_mode: Any, errors: list[str], warnings:
             errors.append(f"image_metadata[{index}].source_site must not be empty")
         if not str(image.get("copyright_note", "")).strip():
             warnings.append(f"image_metadata[{index}].copyright_note is empty")
+        if not str(image.get("relevance_reason", "")).strip():
+            warnings.append(
+                f"image_metadata[{index}].relevance_reason is empty; new packages should explain the exact text-image relationship."
+            )
         if "related_sections" in image and not isinstance(image["related_sections"], list):
             errors.append(f"image_metadata[{index}].related_sections must be an array")
 
     return image_ids
+
+
+def validate_markdown_image_usage(
+    value: Any,
+    download_mode: Any,
+    md_text: str,
+    folder: Path,
+    errors: list[str],
+    warnings: list[str],
+    strong_warnings: list[str],
+) -> None:
+    if not isinstance(value, list):
+        return
+
+    placeholder_pattern = re.compile(r"相关(?:图片|图纸|图片\s*/\s*图纸)[^。\n|]*img\d+", re.IGNORECASE)
+    for match in placeholder_pattern.finditer(md_text):
+        errors.append(
+            "case.md uses image-id placeholders instead of embedded images or source links near the analysis: "
+            + match.group(0)[:80]
+        )
+
+    direct_image_url_pattern = re.compile(r"https?://[^\s)\]|]+?\.(?:jpe?g|png|gif|webp)(?:\?[^\s)\]|]*)?", re.IGNORECASE)
+    for line_number, line in enumerate(md_text.splitlines(), start=1):
+        if line.lstrip().startswith("|") and direct_image_url_pattern.search(line) and "](" not in line:
+            strong_warnings.append(
+                f"case.md line {line_number} has a raw image URL in a table; embed downloaded images in the body or explain failed/skipped status near the analysis."
+            )
+
+    for index, image in enumerate(value):
+        if not isinstance(image, dict):
+            continue
+
+        image_id = str(image.get("id", f"image_metadata[{index}]"))
+        status = image.get("download_status")
+        source_url = str(image.get("source_url", "")).strip()
+        file_name = str(image.get("file_name", "")).strip().replace("\\", "/")
+
+        if status == "downloaded":
+            if not file_name:
+                continue
+
+            local_path = folder / file_name
+            if not local_path.exists():
+                errors.append(f"{image_id} is marked downloaded but file does not exist: {file_name}")
+
+            image_embed_pattern = re.compile(r"!\[[^\]]*\]\(" + re.escape(file_name) + r"\)")
+            if not image_embed_pattern.search(md_text):
+                errors.append(
+                    f"{image_id} is marked downloaded but case.md does not embed it with Markdown image syntax: {file_name}"
+                )
+
+        if status in {"failed", "skipped"}:
+            if source_url and source_url not in md_text:
+                strong_warnings.append(
+                    f"{image_id} is {status} but its source URL does not appear in case.md near the relevant analysis."
+                )
+
+    if download_mode in {"completed", "partial"} and "![" not in md_text:
+        errors.append("download_mode indicates images were handled, but case.md contains no Markdown image embeds.")
 
 
 def validate_uncertainties(value: Any, source_ids: set[str], errors: list[str]) -> None:

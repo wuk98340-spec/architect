@@ -4,6 +4,8 @@ Use this template for `case.md`. Write concise, professional Chinese suitable fo
 
 The full frame guides searching and analysis; it is not a mandatory directory. Expand sections only when reliable sources, drawings, images, or clear project evidence support them. If a subsection has little evidence, merge it into a short limitation note instead of filling it with generic language.
 
+Image rule: embed downloaded images directly in the relevant body section with Markdown image syntax. Do not write only `img1/img2` IDs or leave useful images only in the index. If an image cannot be downloaded or should be skipped, keep its source link near the relevant paragraph with status and reason.
+
 ```markdown
 # <项目名称> / <English Project Name>
 
@@ -95,6 +97,7 @@ The full frame guides searching and analysis; it is not a mandatory directory. E
 记录草图、概念图示、原型意象、命名、叙事或关键词。没有图示资料时，只概括公开资料中能确认的形象意图。
 
 ![概念图 / 草图说明](images/07_concept_example.jpg)
+图文相关性：这张图用于说明<它支撑的概念生成、意象来源或形体判断>。
 
 ## 06 建筑语言生成 Architectural Language Generation
 
@@ -107,12 +110,14 @@ The full frame guides searching and analysis; it is not a mandatory directory. E
 分析总平面关系、平面组织、垂直组织、出入口与流线，以及建筑如何回应道路、景观、城市界面和外部限制。
 
 ![总平面 / 平面 / 流线图说明](images/03_plan_example.jpg)
+图文相关性：这张图用于说明<它支撑的场地、功能、流线或平面判断>。
 
 ### 6.3 形式构成 Composition
 
 分析体量生成、空间序列、界面处理、结构骨架与空间形式的关系、服务空间整合、表皮 / 开口 / 屋顶 / 地台的组织方式。
 
 ![剖面 / 立面 / 形体分析图说明](images/04_section_example.jpg)
+图文相关性：这张图用于说明<它支撑的剖面、立面、体量或构造判断>。
 
 ### 6.4 场所与氛围 Place & Atmosphere
 
@@ -152,22 +157,23 @@ The full frame guides searching and analysis; it is not a mandatory directory. E
 - 证据来源：
 - 相关图片 / 图纸：
   ![图片说明](images/03_plan_example.jpg)
+  图文相关性：用于验证<该方法中的具体空间、构造、材料、流线或体验判断>。
   下载失败或跳过下载时写：[图片 / 图纸来源](URL)（下载状态：failed/skipped；原因：<原因>）
 - 可迁移方法：
 
 ## 09 图纸与图片索引
 
-| 图片类型 | 推荐用途 | 本地图片 / 来源页面 | 来源 | 下载状态 | 版权 / 备注 |
-| --- | --- | --- | --- | --- | --- |
-| 01_hero | 封面 / 外观识别 | `images/01_hero_exterior.jpg` / [来源](URL) |  | downloaded |  |
-| 02_site | 场地关系分析 | `images/02_site_context.jpg` / [来源](URL) |  | downloaded |  |
-| 03_plan | 平面 / 功能组织分析 | `images/03_plan_ground_floor.jpg` / [来源](URL) |  | downloaded |  |
-| 04_section | 剖面 / 空间关系分析 | `images/04_section_longitudinal.jpg` / [来源](URL) |  | downloaded |  |
-| 05_elevation | 立面分析 | `images/05_elevation_main.jpg` / [来源](URL) |  | downloaded |  |
-| 06_detail | 构造 / 材料分析 | `images/06_detail_material.jpg` / [来源](URL) |  | downloaded |  |
-| 07_concept | 概念 / 生成逻辑 | `images/07_concept_diagram.jpg` / [来源](URL) |  | downloaded |  |
-| 08_interior | 室内体验 | `images/08_interior_public_space.jpg` / [来源](URL) |  | downloaded |  |
-| 09_analysis | 二次分析图素材 | `images/09_analysis_reference.jpg` / [来源](URL) |  | downloaded |  |
+| 图片类型 | 推荐用途 | 正文嵌入状态 / 本地图片 / 来源页面 | 来源 | 下载状态 | 图文相关性 | 版权 / 备注 |
+| --- | --- | --- | --- | --- | --- | --- |
+| 01_hero | 封面 / 外观识别 | 已在正文嵌入：`images/01_hero_exterior.jpg` / [来源](URL) |  | downloaded | 用于说明整体外观识别与体量关系 |  |
+| 02_site | 场地关系分析 | 已在正文嵌入：`images/02_site_context.jpg` / [来源](URL) |  | downloaded | 用于说明场地边界、道路或周边关系 |  |
+| 03_plan | 平面 / 功能组织分析 | 已在正文嵌入：`images/03_plan_ground_floor.jpg` / [来源](URL) |  | downloaded | 用于说明功能、入口或流线组织 |  |
+| 04_section | 剖面 / 空间关系分析 | 已在正文嵌入：`images/04_section_longitudinal.jpg` / [来源](URL) |  | downloaded | 用于说明剖面高差、空间序列或结构关系 |  |
+| 05_elevation | 立面分析 | 已在正文嵌入：`images/05_elevation_main.jpg` / [来源](URL) |  | downloaded | 用于说明立面秩序、开口或表皮策略 |  |
+| 06_detail | 构造 / 材料分析 | 已在正文嵌入：`images/06_detail_material.jpg` / [来源](URL) |  | downloaded | 用于说明材料、节点或构造逻辑 |  |
+| 07_concept | 概念 / 生成逻辑 | 已在正文嵌入：`images/07_concept_diagram.jpg` / [来源](URL) |  | downloaded | 用于说明概念来源或生成过程 |  |
+| 08_interior | 室内体验 | 已在正文嵌入：`images/08_interior_public_space.jpg` / [来源](URL) |  | downloaded | 用于说明室内体验、光线或公共性 |  |
+| 09_analysis | 二次分析图素材 | 已在正文嵌入：`images/09_analysis_reference.jpg` / [来源](URL) |  | downloaded | 用于支撑二次分析判断 |  |
 
 ## 10 对我的设计启发
 

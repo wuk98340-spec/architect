@@ -722,6 +722,7 @@
         "caption",
         "copyright_note",
         "recommended_use",
+        "relevance_reason",
         "related_sections",
         "download_status",
         "failure_reason"
@@ -761,6 +762,11 @@
         },
         "recommended_use": {
           "type": "string"
+        },
+        "relevance_reason": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The specific written claim or analysis point this image supports."
         },
         "related_sections": {
           "type": "array",
