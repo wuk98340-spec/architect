@@ -9,6 +9,35 @@ Use these values in `case.json.sources[].source_level`:
 
 Source quality determines confidence and wording. It does not by itself determine whether a case package can be generated. Do not treat missing Level A sources as an automatic failure; use Level A as the preferred identity calibration source.
 
+## Source Handling Order
+
+Use this order before assigning the final sufficiency status:
+
+1. Search Level A official and primary sources for identity, project facts, design intent, drawings, and image credits.
+2. Search Level B professional architecture media, including gooood, ArchDaily / ArchDaily China, Archiposition / 有方, Dezeen, Designboom, and comparable publications.
+3. For Chinese projects, always run the source-specific handling for gooood, ArchDaily / ArchDaily China, and Archiposition / 有方 before concluding that no mainstream architecture media source exists.
+4. If at least one Level B source is retained, use Sogou WeChat and Sogou Zhihu as Level C supplementary searches for Chinese commentary, spatial readings, user experience, and additional leads.
+5. If no Level B source is retained (`architecture_media_count = 0`), run the Mandatory WeChat / Zhihu Fallback before generating the package.
+6. Use Level D sources only for orientation or weak background leads; do not use them as the sole basis for key facts.
+
+Do not treat a search engine results page as a source. Only retain a result after opening or otherwise inspecting the target page enough to confirm that it discusses the intended building case.
+
+### Mandatory WeChat / Zhihu Fallback When Level B Is Missing
+
+When no Level B professional architecture media source is retained, WeChat and Zhihu are no longer optional. Before generating the package:
+
+1. Run Sogou WeChat searches using the Sogou WeChat Search Handling rules below, plus ordinary web fallback queries if Sogou blocks access.
+2. Run Sogou Zhihu searches using the Sogou Zhihu Search Handling rules below, plus ordinary web fallback queries if Sogou blocks access.
+3. Try to retain up to the `insufficient` quota: 9 valid WeChat results and 3 valid Zhihu results.
+4. Stop early only when any of these is true:
+   - The retained-result quota is met.
+   - 3 consecutive opened results add no new facts, analysis, image leads, design interpretation, or public/user-experience viewpoint.
+   - Access is blocked by login, CAPTCHA, paywall, deleted article, or unavailable content.
+5. If no valid WeChat or Zhihu result is retained, explicitly record why in `source_quality.manual_review_needed` and `uncertain_or_conflicting_info`.
+6. Keep `source_sufficiency_status` as `insufficient` unless the mandatory fallback finds enough independent, substantive Level C sources to support identity and at least 3 analysis topics. Even then, confidence should usually be `medium` or `limited`, not `high`.
+
+This fallback improves coverage; it does not upgrade WeChat or Zhihu to Level B. Do not use them alone for hard facts such as year, area, structure, material, architect/studio, or completion status unless corroborated by Level A or another reliable independent source.
+
 ## Source Sufficiency Gate
 
 After searching Level A-D sources, assign `case.json.source_quality.source_sufficiency_status` before writing the final package.
@@ -102,6 +131,58 @@ Use `level_b` for architecture and design publications such as:
 
 Use Level B for project descriptions, photographs, plans, interviews, interpretation, reception, and architectural context. Prefer sources with named authors, dates, and visible image credits.
 
+### ArchDaily / ArchDaily China Search Handling
+
+Use this handling before concluding that a project is absent from ArchDaily.
+
+1. Search English and international pages:
+   - `site:archdaily.com <project name>`
+   - `site:archdaily.com <architect/studio> <project name>`
+   - `ArchDaily <project name>`
+   - `ArchDaily <architect/studio> <project name>`
+2. Search Chinese pages and translated names when the project may have Chinese coverage:
+   - `site:archdaily.cn <project name>`
+   - `site:archdaily.cn <architect/studio> <project name>`
+   - `ArchDaily 中国 <project name>`
+   - `<project name> 建筑 ArchDaily`
+3. Try name variants:
+   - English project name.
+   - Chinese project name.
+   - Architect/studio name plus city/country.
+   - Common shortened names from the Disambiguation Gate.
+4. Retain ArchDaily project pages, interviews, feature articles, and pages with substantial project description as `level_b`.
+5. Use ArchDaily primarily for:
+   - English project name and title variants.
+   - Architect/studio, location, year, program, area, and status when stated.
+   - Design concept, plans, sections, photographs, and credits when visible.
+6. Treat short news posts, roundups, and award-list mentions as supplementary only. They may stay `level_b` if published by ArchDaily, but note in `sources[].notes` that they do not independently support detailed analysis.
+
+Do not assume the English and Chinese ArchDaily pages are independent if they are translations of the same article. Count translated or mirrored versions as one source for identity confirmation.
+
+### Archiposition / 有方 Search Handling
+
+Use this handling before concluding that a Chinese architecture project is absent from 有方.
+
+1. Search targeted site and brand queries:
+   - `site:archiposition.com <project name>`
+   - `site:archiposition.com/items <project name>`
+   - `<project name> 有方`
+   - `<architect/studio> <project name> 有方`
+   - `<project name> 建筑 有方`
+2. Try Chinese and English variants:
+   - Full Chinese project name.
+   - Distinctive partial Chinese name.
+   - English project name.
+   - Architect/studio name plus city/province.
+3. Retain 有方 project reports, interviews, research articles, and substantial design analysis as `level_b`.
+4. Use 有方 for:
+   - Chinese project naming, architect/studio, site context, and design description.
+   - Professional interpretation, diagrams, photographs, and project background.
+   - Leads to official or original sources mentioned in the article.
+5. Treat events, lectures, awards roundups, directory listings, and brief mentions as supplementary only. Note the limited evidence value in `sources[].notes`.
+
+Do not count reposts of the same 有方 article as independent sources. If the article states that content or images were provided by the architect/studio, note that provenance in `sources[].notes`.
+
 ### gooood Search Fallback
 
 Use this fallback before concluding that a Chinese architecture project is not on gooood.
@@ -156,7 +237,81 @@ Use `level_c` for:
 - School, institution, developer, or local news posts that are not official project pages.
 - Zhihu columns or answers only when they provide substantial architectural analysis with clear attribution; use them as supplementary analysis sources by default.
 
-For WeChat or Chinese search, include architecture-specific terms:
+### Sogou WeChat Search Handling
+
+Use Sogou WeChat (`https://weixin.sogou.com/`) for supplementary Chinese public-account results. Use it after Level A/B searches or when searching for Chinese commentary and additional leads.
+
+1. Search with architecture-specific terms:
+   - `<project name> 建筑设计`
+   - `<project name> 建筑`
+   - `<project name> 设计解析`
+   - `<project name> 事务所`
+   - `<architect/studio> <project name>`
+   - `<project name> 平面图`
+   - `<project name> 剖面图`
+   - `<project name> 构造`
+2. Use brand-specific lead queries when Level B sources may exist:
+   - `<project name> 谷德`
+   - `<project name> 有方`
+   - `<project name> ArchDaily`
+3. When no Level B source is retained, add fallback-intent terms:
+   - `<project name> 案例分析`
+   - `<project name> 建筑赏析`
+   - `<project name> 空间分析`
+   - `<project name> 设计理念`
+   - `<project name> 设计亮点`
+   - `<project name> 建筑师`
+   - `<project name> 竣工`
+   - `<project name> 开放`
+4. Retain only WeChat articles that clearly discuss the target building case and add at least one of:
+   - Project facts.
+   - Design concept or spatial analysis.
+   - Site relationship.
+   - Material, structure, or construction information.
+   - Critical viewpoint, user experience, or professional commentary.
+5. Exclude marketing posts, one-sentence mentions, unrelated same-name projects, pure image reposts, unsourced AI rewrites, and duplicate reposts of the same original article.
+6. Mark retained WeChat public-account articles as `level_c` by default. If the article is merely a weak repost or lacks clear attribution, mark it as `level_d`.
+7. If Sogou blocks access, shows CAPTCHA, or cannot expose article content, do not attempt to bypass it. Record the limitation in `manual_review_needed` or `uncertain_or_conflicting_info`, then try ordinary web queries such as:
+   - `site:mp.weixin.qq.com <project name> 建筑设计`
+   - `site:mp.weixin.qq.com <architect/studio> <project name>`
+   - `site:mp.weixin.qq.com <project name> 案例分析`
+   - `site:mp.weixin.qq.com <project name> 设计理念`
+8. When no Level B source is retained, do not leave `wechat_valid_result_count` at 0 unless all required fallback paths were tried or access was blocked. Explain the result in `manual_review_needed`.
+
+WeChat can support interpretation and provide leads, but it should not carry core identity facts unless corroborated by at least one Level A/B source or another independent reliable source.
+
+### Sogou Zhihu Search Handling
+
+Use Sogou Zhihu (`https://zhihu.sogou.com/`) for supplementary Chinese discussion and learning-oriented perspectives. Use it after Level A/B searches or when looking for user experience, commentary, or design-study interpretations.
+
+1. Search with architecture-specific terms:
+   - `<project name> 建筑设计`
+   - `<project name> 建筑`
+   - `<project name> 空间`
+   - `<project name> 设计解析`
+   - `<architect/studio> 建筑`
+   - `<architect/studio> <project name>`
+2. When no Level B source is retained, add fallback-intent terms:
+   - `<project name> 案例分析`
+   - `<project name> 空间分析`
+   - `<project name> 建筑赏析`
+   - `<project name> 设计理念`
+   - `<project name> 值得学习`
+   - `<project name> 怎么样`
+3. Retain Zhihu columns or answers as `level_c` only when they provide substantial architectural analysis, clear attribution, and concrete evidence or references.
+4. Mark generic answers, unsourced opinions, weak reposts, schoolwork uploads, and low-substance discussion as `level_d`.
+5. Use Zhihu mainly for:
+   - User experience and public reception.
+   - Design-study viewpoints.
+   - Leads to official, media, or publication sources.
+   - Critical questions that may guide `uncertain_or_conflicting_info`.
+6. Do not use Zhihu alone to confirm year, area, structure, material, architect/studio, or completion status.
+
+Stop searching Zhihu after the retained-result quota is met, or earlier if 3 consecutive valid-looking results add no new facts, viewpoints, or leads.
+
+### General Chinese Search Terms
+
+For Chinese search beyond the specific Sogou engines, include architecture-specific terms:
 
 - `<project name> 建筑设计`
 - `<project name> 设计解析`
