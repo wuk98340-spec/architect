@@ -140,6 +140,7 @@ def main() -> int:
     sources = validate_sources(data.get("sources"), errors, warnings, strong_warnings)
     source_ids = {source["id"] for source in sources if isinstance(source.get("id"), str)}
     image_ids = validate_images(data.get("image_metadata"), data.get("download_mode"), errors, warnings)
+    validate_image_completion_policy(data, errors, warnings)
 
     validate_source_quality(data, source_ids, errors, warnings)
     validate_design_concept(data.get("design_concept"), source_ids, errors)
@@ -474,6 +475,65 @@ def validate_images(value: Any, download_mode: Any, errors: list[str], warnings:
             errors.append(f"image_metadata[{index}].related_sections must be an array")
 
     return image_ids
+
+
+def validate_image_completion_policy(data: dict[str, Any], errors: list[str], warnings: list[str]) -> None:
+    download_mode = data.get("download_mode")
+    images = data.get("image_metadata")
+    incomplete_reason = str(data.get("incomplete_reason", "")).lower()
+    explicit_no_image_markers = [
+        "link-only",
+        "no-image",
+        "no image",
+        "without images",
+        "不要图片",
+        "不下载图片",
+        "只要链接",
+        "仅链接",
+        "用户明确要求",
+    ]
+    explicit_no_image = any(marker in incomplete_reason for marker in explicit_no_image_markers)
+
+    if download_mode == "not_requested" and not explicit_no_image:
+        errors.append(
+            "download_mode is not_requested. New case packages must handle images by default; "
+            "use completed or partial unless the user explicitly asked for link-only/no-image output "
+            "and record that request in incomplete_reason."
+        )
+
+    if download_mode in {"completed", "partial"} and isinstance(images, list) and not images:
+        gap_text = incomplete_reason + " " + json.dumps(
+            data.get("uncertain_or_conflicting_info", []),
+            ensure_ascii=False,
+        ).lower()
+        image_gap_markers = [
+            "no reliable image",
+            "no reliable drawing",
+            "未找到可靠图片",
+            "未检索到可靠图片",
+            "未找到可靠图纸",
+            "未检索到可靠图纸",
+            "图片来源不足",
+            "图纸来源不足",
+        ]
+        if not any(marker in gap_text for marker in image_gap_markers):
+            errors.append(
+                "download_mode indicates image handling, but image_metadata is empty. "
+                "Download at least one analysis-relevant image/drawing, record failed/skipped image sources, "
+                "or explain the lack of reliable image sources in incomplete_reason and uncertain_or_conflicting_info."
+            )
+
+    if download_mode == "completed" and isinstance(images, list):
+        not_downloaded = [
+            str(image.get("id", index))
+            for index, image in enumerate(images)
+            if isinstance(image, dict) and image.get("download_status") != "downloaded"
+        ]
+        if not_downloaded:
+            errors.append(
+                "download_mode is completed, but these images are not marked downloaded: "
+                + ", ".join(not_downloaded)
+            )
 
 
 def validate_markdown_image_usage(

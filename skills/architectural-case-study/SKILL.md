@@ -1,6 +1,6 @@
 ---
 name: architectural-case-study
-description: Generate cited professional architecture case research packages from public web sources, with concept-to-built analysis covering site, concept, spatial language, drawings, materials, tectonics, and built quality. Use when the user asks to research, organize, analyze, summarize, compare, or prepare a case study for an architecture project, architect, studio, building type, design strategy, course study, locally embedded image case archive, static case-library website, or future architecture knowledge base/RAG workflow.
+description: Generate cited professional architecture case research packages from public web sources, with concept-to-built analysis covering site, concept, spatial language, drawings, materials, tectonics, and built quality. Use when the user asks to search for, collect, research, organize, analyze, summarize, compare, or prepare architecture case studies, including Chinese requests such as 搜集建筑案例, 收集建筑案例, 整理建筑案例, 建筑案例分析, 案例调研, 建筑项目资料整理, or case packages for an architecture project, architect, studio, building type, design strategy, course study, locally embedded image case archive, static case-library website, or future architecture knowledge base/RAG workflow.
 ---
 
 # Architectural Case Study
@@ -26,8 +26,9 @@ The default package contains `case.md` for reading and study notes, plus `case.j
 9. Read `references/case-package-template.md` before writing `case.md`.
 10. Read `references/case-package-schema.json` before writing `case.json`. Follow field names exactly. Do not invent new schema fields unless the user explicitly asks for schema evolution.
 11. Create `images/` by default and download publicly accessible, analysis-relevant images and drawings when lawful and technically possible. Before selecting each image, judge whether it directly supports a written analysis claim; do not include images that are only decorative, generic, or weakly related.
-12. Run the quality self-check below before finishing.
-13. Run `scripts/validate_case_package.py <case-folder>` when a `case.json` exists.
+12. Run the Image Completion Gate below before finishing.
+13. Run the quality self-check below before finishing.
+14. Run `scripts/validate_case_package.py <case-folder>` when a `case.json` exists.
 
 ## Disambiguation Gate
 
@@ -121,6 +122,16 @@ Use these image types:
 
 Do not download images from Pinterest, unsourced galleries, AI aggregation sites, or pages without usable image links. Do not describe unclear copyright as commercial permission. Downloading images is research organization, not commercial rights clearance.
 
+## Image Completion Gate
+
+Before writing the final response, verify the case package has handled images.
+
+- If the user did not explicitly ask for link-only or no-image output, do not set `download_mode` to `not_requested`.
+- If reliable image sources exist, download at least one analysis-relevant image or drawing, record it in `case.json.image_metadata[]`, and embed it near the relevant analysis in `case.md`.
+- If useful image sources exist but every download fails or should be skipped, set `download_mode` to `partial`, record each image as `failed` or `skipped`, keep the original source links near the relevant analysis in `case.md`, and explain the reason.
+- If no reliable image or drawing source can be found after source-specific searching, set `download_mode` to `partial`, keep `image_metadata` empty, and state the image-source gap in both `incomplete_reason` and `uncertain_or_conflicting_info`.
+- Treat a package with `download_mode: not_requested` as incomplete unless the user explicitly requested link-only or no-image output.
+
 ## Output Rules
 
 Write compact, case-library friendly Chinese. Keep claims close to citations in `case.md`, and preserve all source URLs in `case.json`.
@@ -156,6 +167,7 @@ Before finishing, verify:
 - Image metadata includes `relevance_reason` for every selected image.
 - Downloaded images exist under `images/` and are embedded in `case.md` with Markdown image syntax near the relevant analysis.
 - Failed or skipped images appear near the relevant analysis as source links with status and reason.
+- `download_mode` is not `not_requested` unless the user explicitly requested link-only or no-image output.
 - Image links have source, type, use, and copyright notes when relevant.
 - Missing Level A/B is explained instead of treated as automatic failure.
 - Only Level D sources trigger low confidence and preliminary wording.

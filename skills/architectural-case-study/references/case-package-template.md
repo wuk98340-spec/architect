@@ -4,7 +4,7 @@ Use this template for `case.md`. Write concise, professional Chinese suitable fo
 
 The full frame guides searching and analysis; it is not a mandatory directory. Expand sections only when reliable sources, drawings, images, or clear project evidence support them. If a subsection has little evidence, merge it into a short limitation note instead of filling it with generic language.
 
-Image rule: embed downloaded images directly in the relevant body section with Markdown image syntax. Do not write only `img1/img2` IDs or leave useful images only in the index. If an image cannot be downloaded or should be skipped, keep its source link near the relevant paragraph with status and reason.
+Image rule: image handling is required by default. Embed downloaded images directly in the relevant body section with Markdown image syntax. Do not write only `img1/img2` IDs or leave useful images only in the index. If an image cannot be downloaded or should be skipped, keep its source link near the relevant paragraph with status and reason. Use `download_mode: not_requested` only when the user explicitly asks for link-only or no-image output; otherwise use `completed` or `partial`.
 
 ```markdown
 # <项目名称> / <English Project Name>
@@ -43,6 +43,7 @@ Image rule: embed downloaded images directly in the relevant body section with M
 - 是否有一级资料：<是 / 否>
 - 一级资料是否用于身份确认：<是 / 否>
 - 建筑专业媒体数量：
+- 图片处理状态：<completed / partial；只有用户明确要求不要图片时才写 not_requested>
 - 已覆盖分析项：<concept / context / program / circulation / facade_material / structure_construction / user_experience / urban_relationship>
 - 资料最充分的方向：
 - 资料明显不足的方向：
