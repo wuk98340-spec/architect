@@ -16,14 +16,31 @@ The default package contains `case.md` for reading and study notes, plus `case.j
 ## Mode Selection
 
 - Use the full generation workflow when the user asks for a new case package or a substantially regenerated package.
+- Use PDF Source Mode when the user provides one or more PDF files as the case-study evidence base. PDF Source Mode changes only the source collection method; keep the same `case.md` chapter structure, `case.json` field family, image rules, source quality discipline, and concept-to-built analysis frame.
 - Use Local Repair Mode when an existing case package already has `case.md` and `case.json`, and the user asks to change only part of it, such as a chapter, positioning, diagnosis, strategy, design lesson, information gap, image caption, image metadata, or a single image.
 - If the user asks for local repair but does not identify the target case package or target section/image, inspect available case packages when possible; otherwise ask for the missing path or target before editing.
+
+## PDF Source Mode
+
+Use this mode when the user supplies PDFs and wants the case package generated from those PDFs instead of public web collection.
+
+PDF Source Mode is a source mode, not a new output format:
+
+- Keep the existing `case.md` organization and the existing `case.json` structure for facts, concept, strategies, spatial ideas, materials, site context, images, source quality, uncertainties, and extended concept-to-built fields.
+- Default to offline PDF-first work. Do not search the web unless the user explicitly asks for web supplementation, identity calibration, stronger sources, or extra images.
+- Copy user PDFs into `case-packages/<slug>/sources/` when creating a package. Record each PDF in `case.json.sources[]` with `source_kind`, `file_path`, and `page_count` when available.
+- Set `case.json.source_mode` to `pdf` for PDF-only packages and `mixed` only when PDF and web/local non-PDF sources are both used. Legacy or normal web packages may omit `source_mode` or use `web`.
+- Preserve page evidence in `case.json.evidence_spans[]`. Each span should identify the PDF source, page range, evidence type, a short quote-or-summary, and the fact, strategy, image, or analysis point it supports.
+- Keep page evidence close to claims in `case.md`, for example `来源明确：PDF《xxx》，p.12` or `基于资料的归纳判断：PDF《xxx》，pp.18-19`.
+- Do not convert the output into a PDF summary or page-by-page reading note. Write the same professional architecture case analysis required by this skill.
+- If PDF evidence is thin, conflicting, scanned without readable text, or missing drawings/technical details, record the gap in `incomplete_reason`, `uncertain_or_conflicting_info`, and the relevant Markdown section. Do not guess.
+- For images or drawings extracted from PDF pages, save them under `images/`, embed them near the relevant analysis, and record the PDF page in `image_metadata.source_url` or `image_metadata.relevance_reason` such as `PDF p.24`.
 
 ## Workflow
 
 1. Create a folder under `case-packages/<slug>/` unless the user gives another location.
 2. Run the Disambiguation Gate before writing a full package.
-3. Search sources by the Level A-D priority and Source Handling Order in `references/source-quality.md`.
+3. If the user provided PDFs, follow PDF Source Mode and the PDF evidence handling in `references/source-quality.md`; otherwise search sources by the Level A-D priority and Source Handling Order in `references/source-quality.md`.
 4. For professional architecture media, run the source-specific handling for gooood, ArchDaily / ArchDaily China, and Archiposition / 有方 before concluding that no Level B source exists.
 5. For supplementary Chinese commentary, use Sogou WeChat and Sogou Zhihu handling in `references/source-quality.md`; treat them as supporting sources, not substitutes for official or professional media. If no Level B professional architecture media is retained, this WeChat / Zhihu fallback is mandatory before generating the package.
 6. Run the Source Sufficiency Gate in `references/source-quality.md` after searching, then choose formal generation, cautious generation, preliminary generation, or Disambiguation Gate.
@@ -176,6 +193,8 @@ Before finishing, verify:
 - `disambiguation_status`, `case_type`, and `information_confidence` are present.
 - `source_quality` is present, and its sufficiency status matches the source mix and analysis coverage.
 - Sources have Level A-D labels.
+- PDF-only or mixed packages have `source_mode` set to `pdf` or `mixed`, PDF sources recorded in `sources[]`, and page evidence recorded in `evidence_spans[]`.
+- In PDF Source Mode, key facts, sourced concepts, strategies, drawings/images, and technical claims cite PDF page numbers whenever the PDF supports them.
 - Missing Level A sources are not treated as automatic failure.
 - Core facts do not rely only on Level D.
 - Facts, source quotes/paraphrases, and AI synthesis are clearly separated.

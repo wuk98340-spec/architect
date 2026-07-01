@@ -9,6 +9,44 @@ Use these values in `case.json.sources[].source_level`:
 
 Source quality determines confidence and wording. It does not by itself determine whether a case package can be generated. Do not treat missing Level A sources as an automatic failure; use Level A as the preferred identity calibration source.
 
+## PDF Source Mode
+
+Use PDF Source Mode when the user provides one or more PDFs and asks to generate the case from those files. This changes only source collection and evidence tracking. It does not change the `case.md` chapter structure, the concept-to-built analysis frame, or the main `case.json` fields.
+
+Default behavior:
+
+1. Work offline from the supplied PDFs unless the user explicitly requests web supplementation.
+2. Copy PDFs into `case-packages/<slug>/sources/` and record them in `case.json.sources[]`.
+3. Set `case.json.source_mode` to `pdf` for PDF-only packages, `mixed` when PDF and web/local non-PDF sources are both used, or `web` for normal web packages.
+4. Preserve page-level evidence in `case.json.evidence_spans[]`.
+5. Cite PDF pages close to claims in `case.md`, for example `PDF《source title》，p.12` or `pp.18-19`.
+
+PDF source level is determined by the PDF's provenance, not by the file format:
+
+- Use `level_a` for official, architect/studio, client, award, institution, press-kit, catalogue, or publication PDFs that function as primary sources.
+- Use `level_b` for PDFs from high-quality architecture media, journals, magazines, or professional publications.
+- Use `level_c` for course packets, school materials, local research compilations, or clearly attributed secondary PDFs that are useful but not primary/professional media.
+- Use `level_d` for unattributed uploads, document-sharing mirrors, AI summaries, unsourced slide decks, or weak compilations.
+
+For each PDF source, add optional `sources[]` fields when known:
+
+- `source_kind`: `user_pdf`.
+- `file_path`: path relative to the case package, usually `sources/<file>.pdf`.
+- `page_count`: positive integer page count.
+- `bibliographic_note`: publication, author, edition, course, or file provenance note.
+
+For every important fact, strategy, drawing/image interpretation, or technical claim supported by PDF evidence, add an `evidence_spans[]` item with:
+
+- `source_id`
+- `page_start`
+- `page_end`
+- `evidence_type`: `sourced`, `synthesis`, `missing`, or `conflict`
+- `quote_or_summary`: short excerpt or paraphrased evidence summary
+- `supports`: target labels such as `key_facts.project_name`, `key_strategies.1`, `image_metadata.img03`, or `technical_metrics.building_area`
+- `notes`
+
+If the PDF is scanned, has unreadable pages, lacks drawings, or omits technical information, record the limitation in `incomplete_reason`, `source_quality.manual_review_needed`, and `uncertain_or_conflicting_info`. Do not infer missing area, year, status, structure, materials, collaborators, or design intent from general knowledge.
+
 ## Source Handling Order
 
 Use this order before assigning the final sufficiency status:

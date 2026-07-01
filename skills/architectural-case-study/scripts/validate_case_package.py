@@ -38,6 +38,9 @@ REQUIRED_TOP_LEVEL = [
 
 SOURCE_LEVELS = {"level_a", "level_b", "level_c", "level_d"}
 HIGH_TRUST_LEVELS = {"level_a", "level_b"}
+SOURCE_MODES = {"web", "pdf", "mixed"}
+SOURCE_KINDS = {"web", "user_pdf", "local_pdf", "local_file"}
+PDF_SOURCE_KINDS = {"user_pdf", "local_pdf"}
 IMAGE_TYPES = {
     "01_hero",
     "02_site",
@@ -136,6 +139,8 @@ def main() -> int:
         "download_mode",
         errors,
     )
+    if "source_mode" in data:
+        validate_enum(data.get("source_mode"), SOURCE_MODES, "source_mode", errors)
 
     sources = validate_sources(data.get("sources"), errors, warnings, strong_warnings)
     source_ids = {source["id"] for source in sources if isinstance(source.get("id"), str)}
@@ -162,6 +167,7 @@ def main() -> int:
     )
     validate_uncertainties(data.get("uncertain_or_conflicting_info"), source_ids, errors)
     validate_extended_fields(data, source_ids, image_ids, errors, warnings)
+    validate_pdf_source_mode(data, sources, source_ids, folder, errors, warnings)
 
     if data.get("disambiguation_status") == "ambiguous_waiting_for_user":
         warnings.append("disambiguation_status is ambiguous_waiting_for_user; do not treat this as a complete case package.")
@@ -212,6 +218,19 @@ def validate_sources(
         else:
             levels.append(level)
 
+        source_kind = source.get("source_kind")
+        if source_kind is not None and source_kind not in SOURCE_KINDS:
+            errors.append(f"sources[{index}].source_kind must be one of {sorted(SOURCE_KINDS)}")
+
+        if "file_path" in source and not isinstance(source["file_path"], str):
+            errors.append(f"sources[{index}].file_path must be a string")
+
+        if "page_count" in source and (type(source["page_count"]) is not int or source["page_count"] < 1):
+            errors.append(f"sources[{index}].page_count must be a positive integer")
+
+        if "bibliographic_note" in source and not isinstance(source["bibliographic_note"], str):
+            errors.append(f"sources[{index}].bibliographic_note must be a string")
+
         valid_sources.append(source)
 
     if levels:
@@ -231,6 +250,174 @@ def validate_design_concept(value: Any, source_ids: set[str], errors: list[str])
         return
     require_keys(value, ["sourced_concept", "ai_synthesis", "source_ids"], "design_concept", errors)
     validate_source_refs(value.get("source_ids"), source_ids, "design_concept", errors)
+
+
+def validate_pdf_source_mode(
+    data: dict[str, Any],
+    sources: list[dict[str, Any]],
+    source_ids: set[str],
+    folder: Path,
+    errors: list[str],
+    warnings: list[str],
+) -> None:
+    source_mode = data.get("source_mode", "web")
+    pdf_sources = [source for source in sources if is_pdf_source(source)]
+    pdf_source_ids = {
+        str(source.get("id"))
+        for source in pdf_sources
+        if isinstance(source.get("id"), str) and source.get("id")
+    }
+
+    if source_mode == "pdf" and not pdf_sources:
+        errors.append("source_mode is pdf, but sources[] contains no PDF source.")
+    if source_mode == "mixed" and not pdf_sources:
+        errors.append("source_mode is mixed, but sources[] contains no PDF source.")
+    if source_mode == "mixed" and pdf_sources and len(pdf_sources) == len(sources):
+        warnings.append("source_mode is mixed, but all sources appear to be PDFs; use pdf unless web/local non-PDF sources are used.")
+    if source_mode == "pdf" and pdf_sources and len(pdf_sources) != len(sources):
+        warnings.append("source_mode is pdf, but sources[] includes non-PDF sources; use mixed if those sources support the package.")
+
+    for index, source in enumerate(pdf_sources):
+        label = f"sources[{sources.index(source)}]"
+        file_path = source.get("file_path")
+        if not isinstance(file_path, str) or not file_path.strip():
+            errors.append(f"{label}.file_path is required for PDF sources.")
+            continue
+        if not file_path.lower().endswith(".pdf"):
+            warnings.append(f"{label}.file_path does not end with .pdf: {file_path}")
+        source_path = (folder / file_path).resolve()
+        folder_path = folder.resolve()
+        try:
+            source_path.relative_to(folder_path)
+        except ValueError:
+            errors.append(f"{label}.file_path must stay inside the case package folder: {file_path}")
+            continue
+        if source_mode in {"pdf", "mixed"} and not source_path.exists():
+            errors.append(f"{label}.file_path does not exist: {file_path}")
+
+        if type(source.get("page_count")) is not int or source.get("page_count", 0) < 1:
+            errors.append(f"{label}.page_count is required as a positive integer for PDF sources.")
+
+    evidence_spans = data.get("evidence_spans")
+    if evidence_spans is None:
+        if source_mode in {"pdf", "mixed"}:
+            errors.append("evidence_spans is required when source_mode is pdf or mixed.")
+        return
+
+    valid_spans = validate_evidence_spans(evidence_spans, source_ids, pdf_source_ids, sources, source_mode, errors)
+    if source_mode not in {"pdf", "mixed"}:
+        return
+
+    if not valid_spans:
+        errors.append("PDF source mode requires at least one valid evidence_spans[] item.")
+        return
+
+    supported_targets = {
+        support
+        for span in valid_spans
+        for support in span.get("supports", [])
+        if isinstance(support, str)
+    }
+    if not any(target.startswith("key_facts") for target in supported_targets):
+        errors.append("PDF source mode requires page evidence supporting key_facts.")
+    if not any(target.startswith("design_concept") for target in supported_targets):
+        errors.append("PDF source mode requires page evidence supporting design_concept.")
+
+    strategy_support_count = len(
+        {
+            target
+            for target in supported_targets
+            if target.startswith("key_strategies")
+        }
+    )
+    strategy_count = len(data.get("key_strategies", [])) if isinstance(data.get("key_strategies"), list) else 0
+    required_strategy_support = min(3, strategy_count)
+    if strategy_support_count < required_strategy_support:
+        errors.append(
+            "PDF source mode requires page evidence for at least "
+            f"{required_strategy_support} key_strategies items."
+        )
+
+
+def validate_evidence_spans(
+    value: Any,
+    source_ids: set[str],
+    pdf_source_ids: set[str],
+    sources: list[dict[str, Any]],
+    source_mode: Any,
+    errors: list[str],
+) -> list[dict[str, Any]]:
+    if not isinstance(value, list):
+        errors.append("evidence_spans must be an array")
+        return []
+
+    source_by_id = {
+        source.get("id"): source
+        for source in sources
+        if isinstance(source.get("id"), str)
+    }
+    span_ids: set[str] = set()
+    valid_spans: list[dict[str, Any]] = []
+    required = ["id", "source_id", "page_start", "page_end", "evidence_type", "quote_or_summary", "supports", "notes"]
+
+    for index, span in enumerate(value):
+        if not isinstance(span, dict):
+            errors.append(f"evidence_spans[{index}] must be an object")
+            continue
+        require_keys(span, required, f"evidence_spans[{index}]", errors)
+
+        span_id = span.get("id")
+        if not isinstance(span_id, str) or not span_id.strip():
+            errors.append(f"evidence_spans[{index}].id must be a non-empty string")
+        elif span_id in span_ids:
+            errors.append(f"Duplicate evidence span id '{span_id}'")
+        else:
+            span_ids.add(span_id)
+
+        source_id = span.get("source_id")
+        if source_id not in source_ids:
+            errors.append(f"evidence_spans[{index}] references unknown source id '{source_id}'")
+        elif source_mode in {"pdf", "mixed"} and source_id not in pdf_source_ids:
+            errors.append(f"evidence_spans[{index}].source_id must reference a PDF source in PDF source mode")
+
+        for key in ["page_start", "page_end"]:
+            if type(span.get(key)) is not int or span.get(key) < 1:
+                errors.append(f"evidence_spans[{index}].{key} must be a positive integer")
+
+        page_start = span.get("page_start")
+        page_end = span.get("page_end")
+        if type(page_start) is int and type(page_end) is int and page_end < page_start:
+            errors.append(f"evidence_spans[{index}].page_end must be greater than or equal to page_start")
+
+        source = source_by_id.get(source_id)
+        page_count = source.get("page_count") if isinstance(source, dict) else None
+        if type(page_count) is int and type(page_end) is int and page_end > page_count:
+            errors.append(
+                f"evidence_spans[{index}].page_end exceeds page_count for source '{source_id}'"
+            )
+
+        if span.get("evidence_type") not in EVIDENCE_TYPES:
+            errors.append(f"evidence_spans[{index}].evidence_type must be one of {sorted(EVIDENCE_TYPES)}")
+        if not isinstance(span.get("quote_or_summary"), str) or not span.get("quote_or_summary", "").strip():
+            errors.append(f"evidence_spans[{index}].quote_or_summary must be a non-empty string")
+        if not isinstance(span.get("notes"), str):
+            errors.append(f"evidence_spans[{index}].notes must be a string")
+        supports = span.get("supports")
+        if not isinstance(supports, list) or not supports:
+            errors.append(f"evidence_spans[{index}].supports must be a non-empty array")
+        elif any(not isinstance(item, str) or not item.strip() for item in supports):
+            errors.append(f"evidence_spans[{index}].supports items must be non-empty strings")
+
+        valid_spans.append(span)
+
+    return valid_spans
+
+
+def is_pdf_source(source: dict[str, Any]) -> bool:
+    source_kind = source.get("source_kind")
+    file_path = str(source.get("file_path") or "")
+    url = str(source.get("url") or "")
+    return source_kind in PDF_SOURCE_KINDS or file_path.lower().endswith(".pdf") or url.lower().endswith(".pdf")
 
 
 def validate_disambiguation_candidates(value: Any, errors: list[str]) -> None:

@@ -32,6 +32,14 @@
     "project_name": {
       "type": "string"
     },
+    "source_mode": {
+      "enum": [
+        "web",
+        "pdf",
+        "mixed"
+      ],
+      "description": "Optional source collection mode. Omit for legacy web packages."
+    },
     "architects": {
       "type": "array",
       "items": {
@@ -160,6 +168,13 @@
       "items": {
         "$ref": "#/$defs/source"
       }
+    },
+    "evidence_spans": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/evidenceSpan"
+      },
+      "description": "Optional page-level or location-level evidence records, required by validator for PDF source mode."
     },
     "uncertain_or_conflicting_info": {
       "type": "array",
@@ -856,6 +871,76 @@
         },
         "accessed_date": {
           "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "source_kind": {
+          "enum": [
+            "web",
+            "user_pdf",
+            "local_pdf",
+            "local_file"
+          ],
+          "description": "Optional source type. Use user_pdf/local_pdf for PDF Source Mode."
+        },
+        "file_path": {
+          "type": "string",
+          "description": "Optional path relative to the case package, such as sources/example.pdf."
+        },
+        "page_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "bibliographic_note": {
+          "type": "string"
+        }
+      }
+    },
+    "evidenceSpan": {
+      "type": "object",
+      "required": [
+        "id",
+        "source_id",
+        "page_start",
+        "page_end",
+        "evidence_type",
+        "quote_or_summary",
+        "supports",
+        "notes"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "source_id": {
+          "type": "string"
+        },
+        "page_start": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "page_end": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "evidence_type": {
+          "enum": [
+            "sourced",
+            "synthesis",
+            "missing",
+            "conflict"
+          ]
+        },
+        "quote_or_summary": {
+          "type": "string"
+        },
+        "supports": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "notes": {
           "type": "string"

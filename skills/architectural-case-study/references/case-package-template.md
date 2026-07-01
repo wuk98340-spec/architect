@@ -6,6 +6,8 @@ The full frame guides searching and analysis; it is not a mandatory directory. E
 
 Image rule: image handling is required by default. Embed downloaded images directly in the relevant body section with Markdown image syntax. Do not write only `img1/img2` IDs or leave useful images only in the index. If an image cannot be downloaded or should be skipped, keep its source link near the relevant paragraph with status and reason. Use `download_mode: not_requested` only when the user explicitly asks for link-only or no-image output; otherwise use `completed` or `partial`.
 
+PDF source rule: when using PDF Source Mode, keep this same chapter structure and write a professional case analysis rather than a page-by-page PDF summary. Place page evidence near the relevant claim, using concise forms such as `来源明确：PDF《source title》，p.12` or `基于资料的归纳判断：PDF《source title》，pp.18-19`. If an image or drawing is extracted from a PDF page, embed it near the analysis and identify the PDF page in the caption, relevance note, or source list.
+
 ```markdown
 # <项目名称> / <English Project Name>
 
