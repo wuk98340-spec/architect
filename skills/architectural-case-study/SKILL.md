@@ -1,6 +1,6 @@
 ---
 name: architectural-case-study
-description: Generate cited professional architecture case research packages from public web sources, with concept-to-built analysis covering site, concept, spatial language, drawings, materials, tectonics, and built quality. Use when the user asks to search for, collect, research, organize, analyze, summarize, compare, or prepare architecture case studies, including Chinese requests such as 搜集建筑案例, 收集建筑案例, 整理建筑案例, 建筑案例分析, 案例调研, 建筑项目资料整理, or case packages for an architecture project, architect, studio, building type, design strategy, course study, locally embedded image case archive, static case-library website, or future architecture knowledge base/RAG workflow.
+description: Generate or locally refine cited professional architecture case research packages from public web sources, with concept-to-built analysis covering site, concept, spatial language, drawings, materials, tectonics, and built quality. Use when the user asks to search for, collect, research, organize, analyze, summarize, compare, prepare, revise, partially repair, or locally optimize architecture case studies, including Chinese requests such as 搜集建筑案例, 收集建筑案例, 整理建筑案例, 建筑案例分析, 案例调研, 建筑项目资料整理, 修改已生成案例, 局部优化章节, 重写策略, 重写定位, 替换单张图片, or case packages for an architecture project, architect, studio, building type, design strategy, course study, locally embedded image case archive, or structured reuse in a future architecture knowledge base/RAG workflow.
 ---
 
 # Architectural Case Study
@@ -11,7 +11,13 @@ Use this skill to create a reusable architecture case research package in Chines
 
 Treat the output as architecture case research, not a generic encyclopedia summary. The writing goal is a professional "from concept to built work" study: trace how a project moves from diagnosis and positioning, through spatial/formal language, into material, tectonic, and built-quality decisions when reliable public evidence allows.
 
-The default package contains `case.md` for reading and study notes, plus `case.json` for structured reuse. Prioritize the professional quality of `case.md` unless the user explicitly asks for website or RAG schema work.
+The default package contains `case.md` for reading and study notes, plus `case.json` for structured reuse. Prioritize the professional quality of `case.md` and keep this skill focused on case-package generation and local case-package refinement.
+
+## Mode Selection
+
+- Use the full generation workflow when the user asks for a new case package or a substantially regenerated package.
+- Use Local Repair Mode when an existing case package already has `case.md` and `case.json`, and the user asks to change only part of it, such as a chapter, positioning, diagnosis, strategy, design lesson, information gap, image caption, image metadata, or a single image.
+- If the user asks for local repair but does not identify the target case package or target section/image, inspect available case packages when possible; otherwise ask for the missing path or target before editing.
 
 ## Workflow
 
@@ -29,6 +35,20 @@ The default package contains `case.md` for reading and study notes, plus `case.j
 12. Run the Image Completion Gate below before finishing.
 13. Run the quality self-check below before finishing.
 14. Run `scripts/validate_case_package.py <case-folder>` when a `case.json` exists.
+
+## Local Repair Mode
+
+Read `references/local-repair-workflow.md` before changing an existing case package.
+
+When repairing locally:
+
+1. Read the existing `case.md`, `case.json`, `images/`, and the user-specified unsatisfactory section, strategy, field, or image.
+2. Before editing, run `scripts/backup_case_package.py <case-folder> --label <repair-label>`; include `--image <relative-or-absolute-image-path>` for any image that may be replaced.
+3. Change only the requested scope. Do not rewrite the whole case or unrelated chapters unless the user explicitly asks.
+4. Keep `case.md` and `case.json` synchronized. Update source IDs, image IDs, captions, relevance reasons, related sections, and image index rows when affected.
+5. Reuse existing sources when they are sufficient. Search the web only when adding new factual claims, replacing an image, resolving a user-identified evidence weakness, or when the user explicitly requests stronger sources.
+6. For image replacement, prefer Level A/B image sources, download the replacement into `images/`, keep the old image in the backup, and update Markdown embeds plus `case.json.image_metadata[]`.
+7. Run `scripts/validate_case_package.py <case-folder>` after the repair. If validation fails, fix the repaired scope and any consistency errors caused by the repair.
 
 ## Disambiguation Gate
 
