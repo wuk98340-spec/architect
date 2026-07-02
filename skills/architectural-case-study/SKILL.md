@@ -5,233 +5,104 @@ description: Generate or locally refine cited professional architecture case res
 
 # Architectural Case Study
 
-## Overview
+## Core Intent
 
-Use this skill to create a reusable architecture case research package in Chinese, preserving English project names, studio names, awards, and precise architectural terms where useful.
+Create or locally refine reusable architecture case research packages in Chinese, while preserving English project names, studio names, awards, and precise architectural terms where useful.
 
-Treat the output as architecture case research, not a generic encyclopedia summary. The writing goal is a professional "from concept to built work" study: trace how a project moves from diagnosis and positioning, through spatial/formal language, into material, tectonic, and built-quality decisions when reliable public evidence allows.
+Treat the output as professional architecture case research, not an encyclopedia summary. The main argument should trace a project from diagnosis and positioning, through spatial/formal language, into material, tectonic, and built-quality decisions when reliable evidence allows.
 
-The default package contains `case.md` for reading and study notes, plus `case.json` for structured reuse. Prioritize the professional quality of `case.md` and keep this skill focused on case-package generation and local case-package refinement.
+The default package contains `case.md` for reading and study notes plus `case.json` for structured reuse. Prioritize the quality and evidence discipline of `case.md`, and keep `case.md`, `case.json`, sources, and images synchronized.
 
-## Mode Selection
+## Modes
 
-- Use the full generation workflow when the user asks for a new case package or a substantially regenerated package.
-- Use PDF Source Mode when the user provides one or more PDF files as the case-study evidence base. PDF Source Mode changes only the source collection method; keep the same `case.md` chapter structure, `case.json` field family, image rules, source quality discipline, and concept-to-built analysis frame.
-- Use Local Repair Mode when an existing case package already has `case.md` and `case.json`, and the user asks to change only part of it, such as a chapter, positioning, diagnosis, strategy, design lesson, information gap, image caption, image metadata, or a single image.
-- If the user asks for local repair but does not identify the target case package or target section/image, inspect available case packages when possible; otherwise ask for the missing path or target before editing.
+- Use Full Generation for a new case package or substantial regeneration.
+- Use PDF Source Mode when user-supplied PDFs are the evidence base. This changes source collection only; keep the same package structure, analysis frame, image rules, and validation requirements.
+- Use Local Repair Mode when an existing package has `case.md` and `case.json` and the user asks to change only a chapter, strategy, field, evidence gap, image, caption, or metadata item.
+- If the requested package, section, or image is unclear, inspect available case packages first; ask only when the target cannot be inferred.
+
+## Required References
+
+Load only the references needed for the active mode:
+
+- Always read `references/source-quality.md` before collecting, classifying, or citing sources. It defines Level A-D sources, source sufficiency, PDF evidence handling, gooood / ArchDaily / 有方 handling, WeChat / Zhihu fallback, confidence wording, and image source rules.
+- Always read `references/architecture-analysis-taxonomy.md` before analysis. Use it to identify `case_type`, choose the strongest 3-5 evidence-backed strategies, and frame the three-layer chain: Conceptual Exploration, Architectural Language Generation, and Construction Quality Control.
+- Read `references/case-package-template.md` before writing or substantially rewriting `case.md`.
+- Read `references/case-package-schema.json` before writing or substantially changing `case.json`. Follow field names exactly and do not invent schema fields unless the user explicitly asks for schema evolution.
+- In Local Repair Mode, read `references/local-repair-workflow.md` before editing.
+
+## Full Generation Workflow
+
+1. Create `case-packages/<slug>/` unless the user gives another location.
+2. Run the Disambiguation Gate before writing a full package.
+3. Collect sources using `references/source-quality.md`; for PDF mode, work offline from PDFs unless the user asks for web supplementation.
+4. Look beyond concept blurbs: search for site plans, floor plans, sections, elevations, diagrams, material notes, structure, construction process, detail drawings, climate response, and technical metrics.
+5. Decide source sufficiency and confidence before drafting. Missing Level A is not automatic failure; weak or Level D-heavy evidence requires cautious or preliminary wording.
+6. Identify `case_type`, then analyze the strongest evidence-backed concept-to-built chain rather than mechanically filling every possible subsection.
+7. Write `case.md` from the template and `case.json` from the schema.
+8. Create `images/` by default. Download or record analysis-relevant images/drawings when lawful and technically possible, and embed each useful downloaded image near the claim it supports.
+9. Run validation and quality scoring before finishing.
 
 ## PDF Source Mode
 
-Use this mode when the user supplies PDFs and wants the case package generated from those PDFs instead of public web collection.
+Use PDF Source Mode when the user supplies PDFs and wants the package generated from them.
 
-PDF Source Mode is a source mode, not a new output format:
+- Copy PDFs into `case-packages/<slug>/sources/` when creating a package.
+- Record PDF sources with `source_kind`, `file_path`, and `page_count` when available.
+- Set `source_mode` to `pdf` for PDF-only packages and `mixed` only when PDF and web/local non-PDF sources both support the package.
+- Preserve page evidence in `evidence_spans[]` and cite pages close to claims in `case.md`, such as `来源明确：PDF《title》，p.12`.
+- Do not turn the output into a PDF summary or page-by-page reading note.
+- If PDF text, drawings, or technical evidence is thin, record the gap in `incomplete_reason`, `uncertain_or_conflicting_info`, and the relevant Markdown section.
+- On Windows, avoid passing garbled non-ASCII PDF paths through shell commands; use Python `Path` discovery or copy to an ASCII path first.
 
-- Keep the existing `case.md` organization and the existing `case.json` structure for facts, concept, strategies, spatial ideas, materials, site context, images, source quality, uncertainties, and extended concept-to-built fields.
-- Default to offline PDF-first work. Do not search the web unless the user explicitly asks for web supplementation, identity calibration, stronger sources, or extra images.
-- Copy user PDFs into `case-packages/<slug>/sources/` when creating a package. Record each PDF in `case.json.sources[]` with `source_kind`, `file_path`, and `page_count` when available.
-- Set `case.json.source_mode` to `pdf` for PDF-only packages and `mixed` only when PDF and web/local non-PDF sources are both used. Legacy or normal web packages may omit `source_mode` or use `web`.
-- Preserve page evidence in `case.json.evidence_spans[]`. Each span should identify the PDF source, page range, evidence type, a short quote-or-summary, and the fact, strategy, image, or analysis point it supports.
-- Keep page evidence close to claims in `case.md`, for example `来源明确：PDF《xxx》，p.12` or `基于资料的归纳判断：PDF《xxx》，pp.18-19`.
-- Do not convert the output into a PDF summary or page-by-page reading note. Write the same professional architecture case analysis required by this skill.
-- If PDF evidence is thin, conflicting, scanned without readable text, or missing drawings/technical details, record the gap in `incomplete_reason`, `uncertain_or_conflicting_info`, and the relevant Markdown section. Do not guess.
-- For images or drawings extracted from PDF pages, save them under `images/`, embed them near the relevant analysis, and record the PDF page in `image_metadata.source_url` or `image_metadata.relevance_reason` such as `PDF p.24`.
+## Local Repair Workflow
 
-### PDF Source Mode Operational Notes
+In Local Repair Mode:
 
-Use these notes to avoid repeat friction when generating from local PDFs, especially on Windows:
-
-- Prefer the bundled Python runtime with `pdfplumber`/`pypdf` for page count and text extraction. If the PDF path contains Chinese or other non-ASCII characters and the shell garbles the path, let Python locate the file with `Path.home() / "Desktop"` plus a filename substring or glob instead of passing the full path through PowerShell.
-- In PowerShell, do not use Bash heredoc syntax such as `python - <<'PY'`. For multi-line Python, create a temporary `.py` script, run it, then remove it.
-- When Poppler wrapper scripts fail, call the real executable directly if available, for example `dependencies/native/poppler/Library/bin/pdftoppm.exe`. Missing-font warnings can be acceptable if PNG pages are generated and visually readable.
-- Render the PDF pages that carry plans, diagrams, sections, facade details, or photo evidence into PNGs under the case package `images/` folder. Page-level screenshots from the user PDF can satisfy the image workflow when they directly support the written analysis.
-- Use PDF page order for `page_start`/`page_end` unless the user asks for printed page numbers. If the printed page number differs from PDF page order, mention that difference in `evidence_spans[].notes`.
-- Store useful extracted page text under `evidence/pdf_text/` when it helps future review. This is supporting evidence only; keep `case.md` as a professional case analysis, not a page-by-page PDF summary.
-- In `case.md`, never refer to images only by metadata IDs such as `img01` or `img03`. Embed the image near the claim with Markdown image syntax, and when referring back to it in method text, use a human-readable caption such as `相关图页见“户型单元、楼梯间通风与公共-私密梯度”`.
-- After writing `case.md` and `case.json`, run `scripts/validate_case_package.py <case-folder>` before rebuilding the site. If validation complains about image-id placeholders, replace the ID-only text with embedded images or caption-based references.
-
-## Workflow
-
-1. Create a folder under `case-packages/<slug>/` unless the user gives another location.
-2. Run the Disambiguation Gate before writing a full package.
-3. If the user provided PDFs, follow PDF Source Mode and the PDF evidence handling in `references/source-quality.md`; otherwise search sources by the Level A-D priority and Source Handling Order in `references/source-quality.md`.
-4. For professional architecture media, run the source-specific handling for gooood, ArchDaily / ArchDaily China, and Archiposition / 有方 before concluding that no Level B source exists.
-5. For supplementary Chinese commentary, use Sogou WeChat and Sogou Zhihu handling in `references/source-quality.md`; treat them as supporting sources, not substitutes for official or professional media. If no Level B professional architecture media is retained, this WeChat / Zhihu fallback is mandatory before generating the package.
-6. Run the Source Sufficiency Gate in `references/source-quality.md` after searching, then choose formal generation, cautious generation, preliminary generation, or Disambiguation Gate.
-7. During source collection, actively look beyond concept descriptions: site plans, floor plans, sections, elevations, diagrams, material notes, structure, construction process, detail drawings, climate response, and technical metrics. Do not stop at media introductions when drawings or construction-relevant evidence may exist.
-8. Identify `case_type` before analysis, then use `references/architecture-analysis-taxonomy.md` to frame the project through three layers: Conceptual Exploration, Architectural Language Generation, and Construction Quality Control. Choose the strongest 3-5 evidence-backed strategies within those layers.
-9. Read `references/case-package-template.md` before writing `case.md`.
-10. Read `references/case-package-schema.json` before writing `case.json`. Follow field names exactly. Do not invent new schema fields unless the user explicitly asks for schema evolution.
-11. Create `images/` by default and download publicly accessible, analysis-relevant images and drawings when lawful and technically possible. Before selecting each image, judge whether it directly supports a written analysis claim; do not include images that are only decorative, generic, or weakly related.
-12. Run the Image Completion Gate below before finishing.
-13. Run the quality self-check below before finishing.
-14. Run `scripts/validate_case_package.py <case-folder>` when a `case.json` exists.
-
-## Local Repair Mode
-
-Read `references/local-repair-workflow.md` before changing an existing case package.
-
-When repairing locally:
-
-1. Read the existing `case.md`, `case.json`, `images/`, and the user-specified unsatisfactory section, strategy, field, or image.
-2. Before editing, run `scripts/backup_case_package.py <case-folder> --label <repair-label>`; include `--image <relative-or-absolute-image-path>` for any image that may be replaced.
-3. Change only the requested scope. Do not rewrite the whole case or unrelated chapters unless the user explicitly asks.
-4. Keep `case.md` and `case.json` synchronized. Update source IDs, image IDs, captions, relevance reasons, related sections, and image index rows when affected.
-5. Reuse existing sources when they are sufficient. Search the web only when adding new factual claims, replacing an image, resolving a user-identified evidence weakness, or when the user explicitly requests stronger sources.
-6. For image replacement, prefer Level A/B image sources, download the replacement into `images/`, keep the old image in the backup, and update Markdown embeds plus `case.json.image_metadata[]`.
-7. Run `scripts/validate_case_package.py <case-folder>` after the repair. If validation fails, fix the repaired scope and any consistency errors caused by the repair.
+1. Inspect the existing `case.md`, `case.json`, images, and the requested target.
+2. Run `scripts/backup_case_package.py <case-folder> --label <repair-label>` before editing; include `--image <path>` when replacing an image.
+3. Change only the requested scope, keeping Markdown, JSON, source IDs, image IDs, captions, relevance reasons, related sections, and image index rows synchronized.
+4. Reuse existing sources when sufficient. Search only for new factual claims, image replacement, evidence weaknesses, or explicit stronger-source requests.
+5. Validate after repair and report the validation result plus any quality-score change when available.
 
 ## Disambiguation Gate
 
-Before generating a full case package, determine whether the project identity is clear.
+Before full generation, decide whether the project identity is clear. Treat the target as ambiguous when names, phases, locations, translations, architects, completion status, or similar projects could point to multiple cases.
 
-Treat the target as ambiguous when any of these apply:
+If ambiguous, do not generate the full package. Output a candidate table with project, location, architect/studio, year, type, main sources, confidence, and the question for the user. Continue only when one candidate is high confidence or the user confirms the target. Record the outcome in `case.json.disambiguation_status`.
 
-- Same or similar project names exist in different cities or countries.
-- The project has phases, an extension, renovation, competition proposal, unbuilt version, or completed version.
-- Chinese name, English name, and media translations differ.
-- The same architect or studio has several similar projects.
-- The user provides only a building name without architect/studio, location, year, or type.
+## Writing And Evidence Rules
 
-If ambiguity exists, do not generate the full package yet. Output a candidate table and ask the user to confirm:
+- Write compact, case-library friendly Chinese.
+- Keep claims close to citations and preserve source URLs in `case.json`.
+- Separate `来源明确`, `基于资料的归纳判断`, and `未检索到可靠资料`.
+- Do not invent area, year, status, structure, materials, collaborators, design intent, construction details, technical metrics, or construction procedures.
+- Do not force every case into the same headings or strategy set.
+- If public evidence is thin, merge weak subsections into concise missing-information notes instead of repeating empty headings.
+- Write design lessons as transferable methods, not generic inspiration.
 
-| Candidate project | Location | Architect / studio | Year | Type | Main sources | Confidence | Question for user |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+## Image Rules
 
-Continue only when one candidate has high confidence or the user confirms the target. Record the result in `case.json.disambiguation_status`.
-
-## Source Standards
-
-Read `references/source-quality.md` before assigning source levels. Use:
-
-- `level_a`: official and primary sources.
-- `level_b`: high-quality architecture media.
-- `level_c`: supplementary Chinese or local sources.
-- `level_d`: reference-only sources.
-
-Level A/B sources are preferred, but they are not a hard pass/fail requirement. Source quality controls confidence and wording:
-
-- If Level A/B exists, use it for project identity, core facts, design intent, drawings, and image sources.
-- If no Level A/B exists but several Level C sources corroborate one another, generate the package with medium or limited confidence and explain the limitation.
-- If mainly Level D exists, generate only a preliminary package, mark low confidence, state the incomplete reason at the top, and avoid over-professionalized strategy claims.
-
-Missing Level A sources alone must not make a case insufficient. Treat Level A as the preferred identity calibration source, then use the Source Sufficiency Gate to evaluate identity confirmation, independent source count, analysis coverage, and secondary-source risk. Record the result in `case.json.source_quality`.
-
-For source handling, do not rely only on ordinary web search or the first visible search page. For gooood, use the API fallback in `references/source-quality.md` before marking the project as missing from gooood. For ArchDaily, 有方, WeChat, and Zhihu, use the source-specific query patterns, retention quotas, and confidence rules in `references/source-quality.md`. When no Level B source is retained, record the mandatory WeChat / Zhihu fallback outcome in `source_quality`, `manual_review_needed`, and `uncertain_or_conflicting_info`.
-
-Do not invent area, year, status, structure, material, collaborators, or design intent. Record conflicts in `uncertain_or_conflicting_info`.
-
-## Case Type Recognition
-
-Set `case_type` before analysis. Use it to adjust emphasis:
-
-- Cultural: publicness, urban interface, exhibition route, symbolic form.
-- Education: learning spaces, open exchange, campus relation, flexible use.
-- Hotel: arrival sequence, views, guestroom module, public areas, facade identity.
-- Housing / apartment: unit logic, view, privacy, amenities, facade order.
-- Commercial complex: circulation, tenant mix, interface, entrances, vertical transport, consumer path.
-- Renovation: old-new relation, retained structure, material dialogue, historical memory.
-- Rural / cultural tourism: local material, village fabric, operation, low-cost construction.
-- Green building: climate response, energy, construction details, ecological systems.
-- Other: identify the relevant dominant type and state why.
-
-Do not force every case into the same headings or strategy set.
-
-## Concept-To-Built Research Frame
-
-Use the complete frame as a research compass, not a mandatory table to fill. `case.md` should expand only the parts supported by reliable sources, drawings, images, or clear project evidence. When public evidence is thin, merge weak subsections into a concise missing-information note instead of repeating `未检索到可靠资料` line by line.
-
-- Conceptual Exploration: diagnosis, positioning, guiding strategies, imagery or diagrams, naming and expression.
-- Architectural Language Generation: function, layout, circulation, massing, spatial sequence, envelope, openings, roof/base organization, place, atmosphere, light, material perception, and user experience.
-- Construction Quality Control: structure, envelope, roof, platform, materials, craft, tectonic logic, physical performance, construction process, mockups, and quality-control measures.
-
-Do not infer construction details, economic/technical metrics, structural systems, or construction procedures from generic architectural common sense. If no reliable source confirms them, state the limitation briefly.
-
-## Image Workflow
-
-Default mode: create `images/` inside the case package, download strongly relevant images when lawful and technically possible, and embed them in `case.md` with local relative paths such as `![caption](images/01_hero_exterior.jpg)`.
-
-Select images only when they directly support the written analysis. Prioritize site, plan, section, circulation, massing, facade, structure, material detail, concept-generation, and user-experience claims over generic atmosphere images. For every selected image, write a `relevance_reason` in `case.json.image_metadata[]` that explains the exact claim or analysis move the image supports, for example: `用于验证屋顶平台与公共流线关系`.
-
-Downloaded images must appear as Markdown image embeds near the relevant paragraph, strategy, or section in `case.md`. Do not leave downloaded images only in the image index, and do not replace them with placeholders such as `img1`, `img2`, or `相关图片：img1、img2`.
-
-If an image cannot be downloaded, keep the original URL in `case.md` and `case.json`, set `download_status` to `failed`, and explain the failure in `failure_reason`. If an image is useful but should not be downloaded because of source quality, copyright ambiguity, or technical access limits, set `download_status` to `skipped` and keep the source URL. Failed or skipped image links must still appear near the analysis they support, with the failure or skip reason; do not hide them only in the image index.
-
-Set `download_mode` to `completed` when all selected images are downloaded, `partial` when at least one selected image is failed or skipped, and `not_requested` only for legacy packages or when the user explicitly asks for link-only output.
-
-Use these image types:
-
-- `01_hero`: main view, aerial, exterior.
-- `02_site`: location, master plan, site relation.
-- `03_plan`: plan.
-- `04_section`: section.
-- `05_elevation`: elevation.
-- `06_detail`: construction, detail, material.
-- `07_concept`: concept diagram, generation logic.
-- `08_interior`: interior space.
-- `09_analysis`: images useful for secondary analysis.
-
-Do not download images from Pinterest, unsourced galleries, AI aggregation sites, or pages without usable image links. Do not describe unclear copyright as commercial permission. Downloading images is research organization, not commercial rights clearance.
-
-## Image Completion Gate
-
-Before writing the final response, verify the case package has handled images.
-
-- If the user did not explicitly ask for link-only or no-image output, do not set `download_mode` to `not_requested`.
-- If reliable image sources exist, download at least one analysis-relevant image or drawing, record it in `case.json.image_metadata[]`, and embed it near the relevant analysis in `case.md`.
-- If useful image sources exist but every download fails or should be skipped, set `download_mode` to `partial`, record each image as `failed` or `skipped`, keep the original source links near the relevant analysis in `case.md`, and explain the reason.
-- If no reliable image or drawing source can be found after source-specific searching, set `download_mode` to `partial`, keep `image_metadata` empty, and state the image-source gap in both `incomplete_reason` and `uncertain_or_conflicting_info`.
-- Treat a package with `download_mode: not_requested` as incomplete unless the user explicitly requested link-only or no-image output.
-
-## Output Rules
-
-Write compact, case-library friendly Chinese. Keep claims close to citations in `case.md`, and preserve all source URLs in `case.json`.
-
-In `case.md`, distinguish evidence levels in the writing:
-
-- `来源明确`: facts, intentions, drawings, or technical details stated by official sources, architects, awards, or professional media.
-- `基于资料的归纳判断`: synthesis from plans, sections, photographs, and multiple descriptions.
-- `未检索到可靠资料`: high-precision topics such as FAR, building density, structure, construction detail, or construction process that cannot be confirmed.
-
-Do not write every possible subsection when evidence is weak. The professional quality comes from accurate selection, evidence discipline, and clear relationships between concept, space, and built result, not from longer headings.
-
-In `case.md`, embed downloaded images near the strategy, space, facade, or construction analysis they support, not only in the image index. Use local relative paths under `images/`; fall back to the original URL only when download failed or was skipped. Never write only image IDs such as `相关图片：img1、img2`; convert every related downloaded image into `![说明](images/...)`.
-
-In `case.json`, use empty strings or empty arrays only when information was searched for but not found. Explain important gaps in `uncertain_or_conflicting_info` and `incomplete_reason`.
-
-## Quality Self-Check
-
-Before finishing, verify:
-
-- Project identity is confirmed or ambiguity has been handled.
-- `disambiguation_status`, `case_type`, and `information_confidence` are present.
-- `source_quality` is present, and its sufficiency status matches the source mix and analysis coverage.
-- Sources have Level A-D labels.
-- PDF-only or mixed packages have `source_mode` set to `pdf` or `mixed`, PDF sources recorded in `sources[]`, and page evidence recorded in `evidence_spans[]`.
-- In PDF Source Mode, key facts, sourced concepts, strategies, drawings/images, and technical claims cite PDF page numbers whenever the PDF supports them.
-- Missing Level A sources are not treated as automatic failure.
-- Core facts do not rely only on Level D.
-- Facts, source quotes/paraphrases, and AI synthesis are clearly separated.
-- The case explains the strongest available concept-to-built chain: diagnosis/positioning, spatial/formal language, and construction/material quality when sources allow.
-- The case has 3-5 real architectural strategies or methods, each with evidence/source.
-- The design lessons are written as transferable design methods, not generic inspiration.
-- Missing, uncertain, or conflicting information is recorded.
-- Missing technical metrics, construction details, or construction process information are not guessed.
-- Image metadata includes `relevance_reason` for every selected image.
-- Downloaded images exist under `images/` and are embedded in `case.md` with Markdown image syntax near the relevant analysis.
-- Failed or skipped images appear near the relevant analysis as source links with status and reason.
-- `download_mode` is not `not_requested` unless the user explicitly requested link-only or no-image output.
-- Image links have source, type, use, and copyright notes when relevant.
-- Missing Level A/B is explained instead of treated as automatic failure.
-- Only Level D sources trigger low confidence and preliminary wording.
-
-If the self-check fails, state the incomplete reason at the start of the output and keep the package appropriately cautious.
+- Images are required by default unless the user explicitly asks for link-only or no-image output.
+- Select images only when they support a written analysis claim; prioritize site, plan, section, circulation, massing, facade, structure, material detail, concept-generation, and user-experience evidence.
+- Embed downloaded images in `case.md` near the relevant paragraph, strategy, or section using local relative paths such as `![caption](images/03_plan.jpg)`.
+- Never leave downloaded images only in the image index, and never use prose placeholders such as `img1`, `img2`, or `相关图片：img1、img2`.
+- If an image fails or should be skipped, keep the original URL near the relevant analysis, set `download_status` to `failed` or `skipped`, and explain `failure_reason`.
+- Do not download from Pinterest, unsourced galleries, AI aggregation sites, or pages without usable image links. Treat downloads as research organization, not commercial rights clearance.
 
 ## Validation
 
-Run:
+Run validation whenever a `case.json` exists:
 
 ```bash
-python scripts/validate_case_package.py case-packages/<slug>
+python skills/architectural-case-study/scripts/validate_case_package.py case-packages/<slug>
 ```
 
-If the system has no `python` command, use the available Python executable directly.
+Prefer the bundled wrapper when available because it runs validation and the repository quality scorer together:
+
+```bash
+python skills/architectural-case-study/scripts/check_case_package.py case-packages/<slug> --output quality-reports/<slug>-quality-report.md
+```
+
+If `scripts/review_case_quality.py` reports `BLOCKED` or a score below 70, fix structural, source, strategy, image, or writing-depth issues before finishing unless the user explicitly asked for a rough draft.
+
+Report validation status, quality score, main deductions, and any remaining evidence limits in the final response.
