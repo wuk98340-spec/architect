@@ -47,6 +47,16 @@ For every important fact, strategy, drawing/image interpretation, or technical c
 
 If the PDF is scanned, has unreadable pages, lacks drawings, or omits technical information, record the limitation in `incomplete_reason`, `source_quality.manual_review_needed`, and `uncertain_or_conflicting_info`. Do not infer missing area, year, status, structure, materials, collaborators, or design intent from general knowledge.
 
+### PDF Extraction And Evidence Hygiene
+
+- On Windows, avoid passing non-ASCII PDF paths directly through shell commands when they appear garbled. Use Python `Path` discovery or copy the PDF into `case-packages/<slug>/sources/` with an ASCII filename before extraction.
+- For multi-line extraction scripts in PowerShell, write and execute a temporary `.py` file instead of using Bash heredoc syntax.
+- For page images, render only evidence-bearing pages and rename outputs by use and page, for example `03_unit_public_private_gradient_pdf_p05.png`. Full-page renders are acceptable when the page itself contains the relevant plans, diagrams, captions, or photos.
+- When recording `image_metadata.source_url` for PDF-derived images, use a stable local reference such as `sources/<file>.pdf#page=5`; keep `source_site` as `用户提供PDF`.
+- `evidence_spans[].supports` should point to real structured targets, for example `key_facts.project_name`, `design_concept.sourced_concept`, `key_strategies.0`, `image_metadata.img03`, or `construction_quality_control.materials_and_craft`.
+- Do not write image metadata IDs as prose placeholders in `case.md`. The Markdown body must embed the image path near the claim or refer to the image by its visible caption.
+- Run the validator before site rebuild. Then rebuild `site/` only after the case package passes, so generated site diffs do not mask case-package errors.
+
 ## Source Handling Order
 
 Use this order before assigning the final sufficiency status:

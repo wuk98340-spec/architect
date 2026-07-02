@@ -36,6 +36,19 @@ PDF Source Mode is a source mode, not a new output format:
 - If PDF evidence is thin, conflicting, scanned without readable text, or missing drawings/technical details, record the gap in `incomplete_reason`, `uncertain_or_conflicting_info`, and the relevant Markdown section. Do not guess.
 - For images or drawings extracted from PDF pages, save them under `images/`, embed them near the relevant analysis, and record the PDF page in `image_metadata.source_url` or `image_metadata.relevance_reason` such as `PDF p.24`.
 
+### PDF Source Mode Operational Notes
+
+Use these notes to avoid repeat friction when generating from local PDFs, especially on Windows:
+
+- Prefer the bundled Python runtime with `pdfplumber`/`pypdf` for page count and text extraction. If the PDF path contains Chinese or other non-ASCII characters and the shell garbles the path, let Python locate the file with `Path.home() / "Desktop"` plus a filename substring or glob instead of passing the full path through PowerShell.
+- In PowerShell, do not use Bash heredoc syntax such as `python - <<'PY'`. For multi-line Python, create a temporary `.py` script, run it, then remove it.
+- When Poppler wrapper scripts fail, call the real executable directly if available, for example `dependencies/native/poppler/Library/bin/pdftoppm.exe`. Missing-font warnings can be acceptable if PNG pages are generated and visually readable.
+- Render the PDF pages that carry plans, diagrams, sections, facade details, or photo evidence into PNGs under the case package `images/` folder. Page-level screenshots from the user PDF can satisfy the image workflow when they directly support the written analysis.
+- Use PDF page order for `page_start`/`page_end` unless the user asks for printed page numbers. If the printed page number differs from PDF page order, mention that difference in `evidence_spans[].notes`.
+- Store useful extracted page text under `evidence/pdf_text/` when it helps future review. This is supporting evidence only; keep `case.md` as a professional case analysis, not a page-by-page PDF summary.
+- In `case.md`, never refer to images only by metadata IDs such as `img01` or `img03`. Embed the image near the claim with Markdown image syntax, and when referring back to it in method text, use a human-readable caption such as `相关图页见“户型单元、楼梯间通风与公共-私密梯度”`.
+- After writing `case.md` and `case.json`, run `scripts/validate_case_package.py <case-folder>` before rebuilding the site. If validation complains about image-id placeholders, replace the ID-only text with embedded images or caption-based references.
+
 ## Workflow
 
 1. Create a folder under `case-packages/<slug>/` unless the user gives another location.
