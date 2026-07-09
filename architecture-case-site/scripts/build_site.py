@@ -100,6 +100,7 @@ def load_cases() -> list[dict[str, Any]]:
             {
                 "slug": slug,
                 "folder": folder,
+                "md_path": md_path,
                 "data": data,
                 "title": title,
                 "architects": architects,
@@ -155,52 +156,321 @@ def build_case_page(case: dict[str, Any]) -> None:
     if image_dir.exists():
         shutil.copytree(image_dir, out_dir / "images", dirs_exist_ok=True)
 
-    hero_media = render_detail_hero_media(case)
-    quality_html = render_quality_panel(case["data"].get("source_quality"), case["data"].get("incomplete_reason"))
-    facts = [
-        ("建筑师", case["architects_text"]),
-        ("地点", case["location"]),
-        ("年份", case["year_text"]),
-        ("类型", case["type"]),
-        ("面积", case["area"] or "未确认"),
-        ("资料可信度", case["confidence"]),
-    ]
-    fact_html = "".join(f"<div><dt>{esc(label)}</dt><dd>{esc(value)}</dd></div>" for label, value in facts)
-
-    sections = build_structured_case_sections(case)
-    nav_html = "".join(f'<a href="#{esc(item["id"])}">{esc(item["label"])}</a>' for item in sections)
-    sections_html = "".join(item["html"] for item in sections)
+    slides = build_case_deck_slides(case)
+    slides_html = "".join(slide["html"] for slide in slides)
+    progress_html = "".join(
+        f'<button type="button" data-slide-target="{index}" aria-label="Slide {index + 1}" title="{esc(slide["label"])}"><span>{index + 1:02d}</span></button>'
+        for index, slide in enumerate(slides)
+    )
 
     body = f"""
     <header class="site-header detail-header">
       <a class="brand" href="../../index.html"><span>ARCHIVE</span><strong>建筑案例研究</strong></a>
       <nav><a href="../../index.html#cases">案例库</a><a href="../../index.html#about">关于</a></nav>
     </header>
-    <main class="detail">
-      <section class="detail-hero">
-        <div class="detail-title">
-          <a class="back-link" href="../../index.html#cases">返回案例库</a>
-          <p class="eyebrow">CASE STUDY NOTE</p>
-          <h1>{esc(case["title"])}</h1>
-          <p>{esc(case["summary"])}</p>
-          <div class="detail-tags">{tag_html(case["keywords"][:5])}</div>
-          {quality_html}
-        </div>
-        {hero_media}
+    <main class="detail case-deck" data-case-deck>
+      <section class="deck-stage" aria-live="polite">
+        {slides_html}
       </section>
-      <section class="fact-strip">{fact_html}</section>
-      <section class="reading-layout">
-        <aside class="research-nav">
-          <p>研究索引</p>
-          {nav_html}
-        </aside>
-        <article class="research-note">
-          {sections_html}
-        </article>
-      </section>
+      <footer class="deck-controls">
+        <button class="deck-arrow" type="button" data-slide-prev aria-label="上一页">&lsaquo;</button>
+        <div class="deck-progress" role="tablist">{progress_html}</div>
+        <button class="deck-arrow" type="button" data-slide-next aria-label="下一页">&rsaquo;</button>
+      </footer>
     </main>
     """
     (out_dir / "index.html").write_text(page_shell(case["title"], body, 2), encoding="utf-8")
+
+
+
+def build_case_deck_slides(case: dict[str, Any]) -> list[dict[str, str]]:
+    chunks = markdown_deck_chunks(Path(case["md_path"]))
+    slides: list[dict[str, str]] = []
+
+    def add(label: str, title: str, body: str, media: str = "", variant: str = "") -> None:
+        if not body.strip() and not media.strip():
+            return
+        number = f"{len(slides) + 1:02d}"
+        class_name = "deck-slide" + (f" {variant}" if variant else "")
+        slides.append(
+            {
+                "label": label,
+                "html": f"""
+                <article class="{class_name}" data-slide data-screen-label="{number} {esc(label)}">
+                  <div class="slide-grid">
+                    <div class="slide-copy">
+                      <a class="back-link" href="../../index.html#cases">返回案例库</a>
+                      <p class="section-number">{number}</p>
+                      <p class="eyebrow">CASE.MD DECK</p>
+                      <h1>{esc(title)}</h1>
+                      {body}
+                    </div>
+                    {media}
+                  </div>
+                </article>
+                """,
+            }
+        )
+
+    add(
+        "封面",
+        case["title"],
+        f'<p class="slide-lead">{esc(case["summary"])}</p><div class="detail-tags">{tag_html(case["keywords"][:5])}</div>',
+        render_slide_media(case, 0, hero=True),
+        "is-cover",
+    )
+
+    for index, chunk in enumerate(chunks, 1):
+        if should_skip_markdown_chunk(chunk["title"]):
+            continue
+        text_only = is_text_only_slide(chunk["title"])
+        body, media, has_table = render_markdown_slide_content(case, chunk["lines"], index, text_only)
+        variants = []
+        if has_table or len("".join(chunk["lines"])) > 1100:
+            variants.append("is-scrollable")
+        if text_only:
+            variants.append("is-text-only")
+        add(
+            chunk["label"],
+            display_slide_title(chunk["title"]),
+            body,
+            "" if text_only else media or render_slide_media(case, index),
+            " ".join(variants),
+        )
+
+    compact_sources = render_compact_sources(case["sources"])
+    if compact_sources:
+        add("资料", "参考资料", compact_sources, "", "is-appendix is-text-only")
+
+    return slides
+
+
+def markdown_deck_chunks(path: Path) -> list[dict[str, Any]]:
+    text = path.read_text(encoding="utf-8")
+    lines = text.splitlines()
+    chunks: list[dict[str, Any]] = []
+    current_h2 = ""
+    current_lines: list[str] = []
+    current_title = ""
+    current_label = ""
+
+    def flush() -> None:
+        nonlocal current_lines, current_title, current_label
+        if current_title and any(line.strip() for line in current_lines):
+            chunks.append({"label": current_label or current_title, "title": current_title, "lines": current_lines})
+        current_lines = []
+
+    for line in lines:
+        if line.startswith("# "):
+            continue
+        if line.startswith("## "):
+            flush()
+            current_h2 = line[3:].strip()
+            current_title = current_h2
+            current_label = compact_slide_label(current_h2)
+            continue
+        if line.startswith("### "):
+            flush()
+            subtitle = line[4:].strip()
+            current_title = subtitle
+            current_label = compact_slide_label(subtitle or current_h2)
+            continue
+        if current_title:
+            current_lines.append(line)
+
+    flush()
+    return chunks
+
+
+def compact_slide_label(title: str) -> str:
+    title = re.sub(r"^\d+(?:\.\d+)?\s*", "", title).strip()
+    title = re.sub(r"\s+[A-Za-z][A-Za-z &/,-]*$", "", title).strip()
+    return short(title, 10)
+
+
+def display_slide_title(title: str) -> str:
+    title = re.sub(r"^\d+(?:\.\d+)?\s*", "", title).strip()
+    title = re.sub(r"\s+[A-Za-z][A-Za-z &/,-]*$", "", title).strip()
+    return title
+
+
+def should_skip_markdown_chunk(title: str) -> bool:
+    normalized = re.sub(r"\s+", "", title).lower()
+    skip_keywords = [
+        "资料质量",
+        "证据密度",
+        "图纸与图片索引",
+        "图片索引",
+        "信息缺口",
+        "冲突",
+        "来源列表",
+        "levela",
+        "levelb",
+        "levelc",
+        "leveld",
+    ]
+    return any(keyword.lower() in normalized for keyword in skip_keywords)
+
+
+def is_text_only_slide(title: str) -> bool:
+    normalized = re.sub(r"\s+", "", title).lower()
+    text_only_keywords = [
+        "基本信息",
+        "经济技术指标",
+        "场地信息表",
+        "对我的设计启发",
+        "设计启发",
+        "参考资料",
+        "来源",
+    ]
+    return any(keyword.lower() in normalized for keyword in text_only_keywords)
+
+
+def render_compact_sources(sources: list[dict[str, Any]]) -> str:
+    if not sources:
+        return ""
+    items = []
+    for source in sources[:5]:
+        title = clean(source.get("title")) or clean(source.get("url"))
+        url = clean(source.get("url"))
+        publisher = clean(source.get("publisher"))
+        if not title:
+            continue
+        link = f'<a href="{esc(url)}">{esc(title)}</a>' if url else esc(title)
+        meta = f'<span>{esc(publisher)}</span>' if publisher else ""
+        items.append(f"<li>{link}{meta}</li>")
+    if not items:
+        return ""
+    return '<p class="slide-lead source-lead">资料来源仅作为附录保留，主线以案例分析内容为准。</p><ul class="compact-source-list">' + "".join(items) + "</ul>"
+
+
+def render_markdown_slide_content(case: dict[str, Any], lines: list[str], fallback_index: int, text_only: bool = False) -> tuple[str, str, bool]:
+    image_line, remaining = extract_first_markdown_image(lines)
+    media = "" if text_only else render_markdown_image_media(case, image_line) if image_line else ""
+    body, has_table = render_markdown_fragment(remaining)
+    return body, media, has_table
+
+
+def extract_first_markdown_image(lines: list[str]) -> tuple[str, list[str]]:
+    for index, line in enumerate(lines):
+        if re.match(r"\s*!\[[^\]]*\]\([^)]+\)", line):
+            return line, lines[:index] + lines[index + 1 :]
+    return "", lines
+
+
+def render_markdown_image_media(case: dict[str, Any], line: str) -> str:
+    match = re.match(r"\s*!\[([^\]]*)\]\(([^)]+)\)", line)
+    if not match:
+        return ""
+    alt = clean(match.group(1)) or "case image"
+    src = clean(match.group(2))
+    file_name = Path(src).name
+    for image in case["gallery"]:
+        if Path(clean(image.get("src"))).name == file_name:
+            return f'<figure class="slide-media">{image_tag(image, "")}<figcaption>{esc(alt)}</figcaption></figure>'
+    return f'<figure class="slide-media"><img src="{esc(src)}" alt="{esc(alt)}" loading="lazy" /><figcaption>{esc(alt)}</figcaption></figure>'
+
+
+def render_markdown_fragment(lines: list[str]) -> tuple[str, bool]:
+    html_parts: list[str] = []
+    paragraph: list[str] = []
+    list_items: list[str] = []
+    table_rows: list[str] = []
+    has_table = False
+
+    def flush_paragraph() -> None:
+        nonlocal paragraph
+        if paragraph:
+            html_parts.append(f'<p>{" ".join(esc(item) for item in paragraph)}</p>')
+            paragraph = []
+
+    def flush_list() -> None:
+        nonlocal list_items
+        if list_items:
+            html_parts.append('<ul class="slide-list">' + "".join(f"<li>{esc(item)}</li>" for item in list_items) + "</ul>")
+            list_items = []
+
+    def flush_table() -> None:
+        nonlocal table_rows, has_table
+        if not table_rows:
+            return
+        parsed = [[cell.strip() for cell in row.strip().strip("|").split("|")] for row in table_rows]
+        if len(parsed) >= 2 and all(re.fullmatch(r":?-{3,}:?", cell) for cell in parsed[1]):
+            head = parsed[0]
+            body_rows = parsed[2:]
+        else:
+            head = []
+            body_rows = parsed
+        thead = "<thead><tr>" + "".join(f"<th>{esc(cell)}</th>" for cell in head) + "</tr></thead>" if head else ""
+        tbody = "<tbody>" + "".join("<tr>" + "".join(f"<td>{esc(cell)}</td>" for cell in row) + "</tr>" for row in body_rows) + "</tbody>"
+        html_parts.append(f'<div class="table-wrap markdown-table"><table class="data-table">{thead}{tbody}</table></div>')
+        has_table = True
+        table_rows = []
+
+    for raw in lines:
+        line = raw.rstrip()
+        if not line.strip():
+            flush_paragraph()
+            flush_list()
+            flush_table()
+            continue
+        if line.lstrip().startswith("|"):
+            flush_paragraph()
+            flush_list()
+            table_rows.append(line)
+            continue
+        flush_table()
+        if line.startswith(">"):
+            flush_paragraph()
+            flush_list()
+            html_parts.append(f'<blockquote>{esc(line.lstrip("> ").strip())}</blockquote>')
+        elif line.startswith("- "):
+            flush_paragraph()
+            list_items.append(line[2:].strip())
+        elif line.startswith("#### "):
+            flush_paragraph()
+            flush_list()
+            html_parts.append(f"<h3>{esc(line[5:].strip())}</h3>")
+        elif re.match(r"\s*!\[[^\]]*\]\([^)]+\)", line):
+            flush_paragraph()
+            flush_list()
+            match = re.match(r"\s*!\[([^\]]*)\]\(([^)]+)\)", line)
+            if match:
+                html_parts.append(f'<figure class="inline-md-image"><img src="{esc(match.group(2))}" alt="{esc(match.group(1))}" loading="lazy" /></figure>')
+        else:
+            paragraph.append(line.strip())
+
+    flush_paragraph()
+    flush_list()
+    flush_table()
+    return "".join(html_parts), has_table
+
+
+
+def render_slide_media(case: dict[str, Any], fallback_index: int, item: dict[str, Any] | None = None, hero: bool = False) -> str:
+    image = related_slide_image(case, item) if item else None
+    local_gallery = [img for img in case["gallery"] if img.get("status") == "local" and img.get("src")]
+    if image is None and local_gallery:
+        image = local_gallery[min(fallback_index, len(local_gallery) - 1)]
+    if image is None:
+        return '<figure class="slide-media text-media"><span>图片资料待补充</span></figure>'
+    caption = clean(image.get("caption")) or clean(image.get("image_type")) or "案例图片"
+    classes = "slide-media" + (" hero-media" if hero else "")
+    return f'<figure class="{classes}">{image_tag(image, "")}<figcaption>{esc(caption)}</figcaption></figure>'
+
+
+
+def related_slide_image(case: dict[str, Any], item: dict[str, Any] | None) -> dict[str, Any] | None:
+    if not item:
+        return None
+    ids = item.get("related_image_ids")
+    if not isinstance(ids, list):
+        return None
+    wanted = {clean(image_id) for image_id in ids if clean(image_id)}
+    for image in case["gallery"]:
+        if clean(image.get("id")) in wanted and image.get("status") == "local" and image.get("src"):
+            return image
+    return None
 
 
 def build_structured_case_sections(case: dict[str, Any]) -> list[dict[str, str]]:
@@ -1662,6 +1932,300 @@ dd { margin: 0; }
   letter-spacing: .12em;
 }
 
+
+/* Case deck presentation mode */
+.case-deck {
+  width: min(1440px, 100%);
+  height: calc(100vh - 68px);
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 10px;
+  padding: clamp(16px, 2.4vw, 34px) clamp(14px, 3vw, 40px) 18px;
+  overflow: hidden;
+}
+
+.deck-stage {
+  position: relative;
+  min-height: 0;
+  height: 100%;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--line) 38%, transparent) 1px, transparent 1px),
+    linear-gradient(0deg, color-mix(in srgb, var(--line) 30%, transparent) 1px, transparent 1px),
+    color-mix(in srgb, var(--paper) 82%, var(--bg));
+  background-size: 110px 110px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.deck-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(18px) scale(.992);
+  transition: opacity .28s ease, transform .32s ease;
+  overflow: hidden;
+}
+
+.deck-slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0) scale(1);
+}
+
+.slide-grid {
+  display: grid;
+  grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+  gap: clamp(22px, 4vw, 62px);
+  align-items: stretch;
+  height: 100%;
+  padding: clamp(26px, 4vw, 58px);
+  min-height: 0;
+  overflow: hidden;
+}
+
+.slide-copy {
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  overflow: auto;
+  padding-right: 6px;
+}
+
+.slide-copy .back-link {
+  width: fit-content;
+  margin-bottom: clamp(14px, 3vh, 36px);
+}
+
+.slide-copy h1 {
+  margin: 0;
+  font-size: clamp(34px, 4.2vw, 66px);
+  line-height: .98;
+  overflow-wrap: anywhere;
+}
+
+.deck-slide:not(.is-cover) .slide-copy {
+  justify-content: start;
+}
+
+.slide-lead {
+  max-width: 780px;
+  margin: 0;
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.7vw, 36px);
+  line-height: 1.42;
+}
+
+.slide-note,
+.slide-points p {
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.slide-note h3 {
+  margin: 0 0 6px;
+  color: var(--accent);
+  font-size: 14px;
+  letter-spacing: .08em;
+}
+
+.slide-note p,
+.slide-points p {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(16px, 1.35vw, 20px);
+  line-height: 1.68;
+}
+
+.slide-points {
+  display: grid;
+  gap: 14px;
+}
+
+.slide-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin: 0;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.slide-facts div {
+  min-height: 112px;
+  padding: 16px;
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+}
+
+.slide-facts dt {
+  margin-bottom: 8px;
+}
+
+.slide-facts dd {
+  font-family: var(--serif);
+  font-size: clamp(18px, 1.8vw, 26px);
+  line-height: 1.28;
+}
+
+.slide-media {
+  position: relative;
+  min-height: 0;
+  height: 100%;
+  margin: 0;
+  border: 1px solid var(--line);
+  background: var(--soft);
+  overflow: hidden;
+}
+
+.slide-media img {
+  filter: saturate(.92) contrast(1.02);
+}
+
+.slide-media figcaption {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  left: 12px;
+  padding: 9px 11px;
+  background: color-mix(in srgb, var(--paper) 78%, transparent);
+  backdrop-filter: blur(14px);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.is-cover .slide-grid {
+  grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
+}
+
+.is-cover .hero-media {
+  min-height: 0;
+}
+
+.is-scrollable .slide-grid {
+  grid-template-columns: minmax(260px, .34fr) minmax(0, 1fr);
+}
+
+.is-scrollable .slide-copy {
+  justify-content: start;
+  overflow: auto;
+  padding-right: 6px;
+}
+
+.is-scrollable .gallery-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: start;
+}
+
+.is-scrollable .source-list {
+  margin: 0;
+}
+
+.is-text-only .slide-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.is-text-only .slide-copy {
+  width: min(980px, 100%);
+  justify-self: start;
+}
+
+.is-text-only .slide-copy h1 {
+  max-width: 780px;
+}
+
+.is-text-only .markdown-table {
+  max-width: 860px;
+}
+
+.is-appendix .compact-source-list {
+  display: grid;
+  gap: 12px;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.compact-source-list li {
+  display: grid;
+  gap: 4px;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.compact-source-list a {
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+.compact-source-list span,
+.source-lead {
+  color: var(--muted);
+}
+
+.deck-controls {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) 42px;
+  gap: 10px;
+  align-items: center;
+  margin-top: 0;
+}
+
+.deck-arrow {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  min-height: 38px;
+  padding: 0;
+  border-color: var(--line);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 28px;
+  line-height: 1;
+}
+
+.deck-progress {
+  display: flex;
+  gap: 4px;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.deck-progress button {
+  display: grid;
+  flex: 1 0 28px;
+  place-items: center;
+  min-width: 0;
+  max-width: 46px;
+  min-height: 38px;
+  border-color: var(--line);
+  padding: 0 6px;
+  background: var(--paper);
+  color: var(--muted);
+  text-align: center;
+}
+
+.deck-progress span {
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.deck-progress button.is-active {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.deck-progress button.is-active span {
+  color: var(--paper);
+}
+
 [hidden] { display: none !important; }
 
 @media (max-width: 1040px) {
@@ -1688,6 +2252,21 @@ dd { margin: 0; }
   .research-nav {
     position: static;
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .slide-grid,
+  .is-cover .slide-grid,
+  .is-scrollable .slide-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    overflow: auto;
+  }
+
+  .slide-media,
+  .is-cover .hero-media {
+    height: auto;
+    aspect-ratio: 16 / 9;
+    min-height: 280px;
   }
 }
 
@@ -1724,6 +2303,31 @@ dd { margin: 0; }
 
   .source-list li {
     grid-template-columns: 1fr;
+  }
+
+  .case-deck {
+    padding-inline: 10px;
+  }
+
+  .slide-grid {
+    padding: 18px;
+  }
+
+  .slide-copy h1 {
+    font-size: clamp(28px, 9vw, 42px);
+  }
+
+  .slide-lead {
+    font-size: 20px;
+  }
+
+  .deck-controls {
+    grid-template-columns: 38px minmax(0, 1fr) 38px;
+    gap: 8px;
+  }
+
+  .deck-progress button {
+    flex-basis: 30px;
   }
 }
 """
@@ -1814,6 +2418,55 @@ SCRIPT = r"""
   if (search) search.addEventListener('input', () => { state.q = search.value; apply(); });
   if (sortSelect) sortSelect.addEventListener('change', () => { state.sort = sortSelect.value; apply(); });
   if (cards.length) apply();
+})();
+
+(function () {
+  const deck = document.querySelector('[data-case-deck]');
+  if (!deck) return;
+
+  const slides = Array.from(deck.querySelectorAll('[data-slide]'));
+  const dots = Array.from(deck.querySelectorAll('[data-slide-target]'));
+  const prev = deck.querySelector('[data-slide-prev]');
+  const next = deck.querySelector('[data-slide-next]');
+  const storageKey = 'caseDeck:' + window.location.pathname;
+  let index = Number(window.localStorage.getItem(storageKey) || 0);
+
+  function clamp(value) {
+    return Math.max(0, Math.min(slides.length - 1, value));
+  }
+
+  function show(nextIndex) {
+    index = clamp(nextIndex);
+    slides.forEach((slide, slideIndex) => {
+      slide.classList.toggle('is-active', slideIndex === index);
+      slide.setAttribute('aria-hidden', slideIndex === index ? 'false' : 'true');
+    });
+    dots.forEach((dot, dotIndex) => {
+      dot.classList.toggle('is-active', dotIndex === index);
+      dot.setAttribute('aria-selected', dotIndex === index ? 'true' : 'false');
+    });
+    if (prev) prev.disabled = index === 0;
+    if (next) next.disabled = index === slides.length - 1;
+    window.localStorage.setItem(storageKey, String(index));
+  }
+
+  dots.forEach((dot) => {
+    dot.addEventListener('click', () => show(Number(dot.dataset.slideTarget)));
+  });
+  if (prev) prev.addEventListener('click', () => show(index - 1));
+  if (next) next.addEventListener('click', () => show(index + 1));
+  window.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowRight' || event.key === ' ') {
+      event.preventDefault();
+      show(index + 1);
+    }
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      show(index - 1);
+    }
+  });
+
+  show(index);
 })();
 """
 

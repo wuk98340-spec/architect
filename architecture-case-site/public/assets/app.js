@@ -84,3 +84,52 @@
   if (sortSelect) sortSelect.addEventListener('change', () => { state.sort = sortSelect.value; apply(); });
   if (cards.length) apply();
 })();
+
+(function () {
+  const deck = document.querySelector('[data-case-deck]');
+  if (!deck) return;
+
+  const slides = Array.from(deck.querySelectorAll('[data-slide]'));
+  const dots = Array.from(deck.querySelectorAll('[data-slide-target]'));
+  const prev = deck.querySelector('[data-slide-prev]');
+  const next = deck.querySelector('[data-slide-next]');
+  const storageKey = 'caseDeck:' + window.location.pathname;
+  let index = Number(window.localStorage.getItem(storageKey) || 0);
+
+  function clamp(value) {
+    return Math.max(0, Math.min(slides.length - 1, value));
+  }
+
+  function show(nextIndex) {
+    index = clamp(nextIndex);
+    slides.forEach((slide, slideIndex) => {
+      slide.classList.toggle('is-active', slideIndex === index);
+      slide.setAttribute('aria-hidden', slideIndex === index ? 'false' : 'true');
+    });
+    dots.forEach((dot, dotIndex) => {
+      dot.classList.toggle('is-active', dotIndex === index);
+      dot.setAttribute('aria-selected', dotIndex === index ? 'true' : 'false');
+    });
+    if (prev) prev.disabled = index === 0;
+    if (next) next.disabled = index === slides.length - 1;
+    window.localStorage.setItem(storageKey, String(index));
+  }
+
+  dots.forEach((dot) => {
+    dot.addEventListener('click', () => show(Number(dot.dataset.slideTarget)));
+  });
+  if (prev) prev.addEventListener('click', () => show(index - 1));
+  if (next) next.addEventListener('click', () => show(index + 1));
+  window.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowRight' || event.key === ' ') {
+      event.preventDefault();
+      show(index + 1);
+    }
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      show(index - 1);
+    }
+  });
+
+  show(index);
+})();
