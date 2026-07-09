@@ -1,0 +1,718 @@
+{
+  "project_name": "安徽省博物院新馆 / 安徽省博物馆新馆",
+  "architects": [
+    "华南理工大学建筑设计研究院",
+    "何镜堂",
+    "刘宇波",
+    "张振辉",
+    "梁玮健"
+  ],
+  "location": "中国安徽省合肥市政务文化新区，省文化博物园区",
+  "year": "设计 2006-2009；竣工 2011（需以《建筑学报》原文复核）",
+  "program": "省级博物馆 / 文化建筑",
+  "status": "建成",
+  "case_type": "Cultural",
+  "disambiguation_status": "high_confidence",
+  "disambiguation_candidates": [
+    {
+      "candidate_project": "安徽省博物院新馆 / 安徽省博物馆新馆",
+      "location": "安徽省合肥市政务文化新区",
+      "architects": "华南理工大学建筑设计研究院；何镜堂、刘宇波等",
+      "year": "2006-2011",
+      "type": "博物馆 / 文化建筑",
+      "main_sources": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "confidence": "high",
+      "question_for_user": "已按安徽省博物院新馆继续生成；若你指的是老馆或其他阶段，请确认。"
+    }
+  ],
+  "information_confidence": "medium",
+  "incomplete_reason": "未检索到华工院当前官网项目页、gooood / ArchDaily / 有方完整项目页；完整图纸、结构体系、构造节点和施工过程资料不足。",
+  "one_sentence_summary": "该项目把“四水归堂”的院落原型转译为开放中庭、片墙和垂直游线系统，以回应省级博物馆的公共性与安徽地域文化表达。",
+  "key_facts": [
+    {
+      "label": "项目身份",
+      "value": "安徽省博物院新馆 / 安徽省博物馆新馆，位于合肥市政务文化新区省文化博物园区",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "label": "设计单位",
+      "value": "华南理工大学建筑设计研究院",
+      "source_ids": [
+        "s2",
+        "s5",
+        "s6"
+      ]
+    },
+    {
+      "label": "设计概念",
+      "value": "四水归堂、五方相连",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "label": "材料意向",
+      "value": "外表面青铜纹理，内表面木质衬里",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "design_concept": {
+    "sourced_concept": "以“四水归堂、五方相连”为设计构思意象，核心部位形成向天开敞的公共大厅，片墙和“窄巷”组织公共空间与垂直交通。",
+    "ai_synthesis": "项目将传统院落原型转化为省级博物馆的公共空间机制，而非停留在徽派视觉符号上。",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ]
+  },
+  "key_strategies": [
+    {
+      "strategy_name": "地域文化扩容",
+      "design_problem": "安徽文化容易被单一化理解为徽州白墙黑瓦。",
+      "specific_approach": "从安徽承东启西、连南接北的区位和多元文化构成出发，提炼雄浑敦厚与温文秀雅并存的建筑气质。",
+      "architectural_effect": "建筑形象转向端庄厚重、方正平直、雅致通透的综合表达。",
+      "evidence": "建筑学院转载文本明确描述地域文化判断，建筑效果为 AI synthesis。",
+      "source_ids": [
+        "s3"
+      ],
+      "related_image_ids": [
+        "img1"
+      ],
+      "transferable_lesson": "地域建筑应先扩展文化样本，再选择空间原型和材料语言。"
+    },
+    {
+      "strategy_name": "四水归堂转译为公共中庭",
+      "design_problem": "博物馆需要集散、导向、公共性和标志性空间。",
+      "specific_approach": "在建筑核心形成向天开敞的公共大厅，并以转折、勾连、错动、交叠的通高片墙限定空间。",
+      "architectural_effect": "传统院落被转化为现代博物馆公共大厅，形成聚合性和空间识别。",
+      "evidence": "建筑学院文本与建筑学报题名线索互相印证。",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "related_image_ids": [
+        "img4"
+      ],
+      "transferable_lesson": "传统原型可转化为空间组织机制，而不是复制外观符号。"
+    },
+    {
+      "strategy_name": "片墙夹持的垂直游线",
+      "design_problem": "多层博物馆交通容易成为单纯效率设施。",
+      "specific_approach": "自动扶梯布置在片墙夹持、天光引导的“窄巷”中，环绕盘旋抵达各层。",
+      "architectural_effect": "交通过程成为参观体验的一部分，形成类似村落巷道的身体经验。",
+      "evidence": "建筑学院转载文本明确描述。",
+      "source_ids": [
+        "s3"
+      ],
+      "related_image_ids": [
+        "img4"
+      ],
+      "transferable_lesson": "把交通系统纳入空间叙事，可提升公共建筑的可感知秩序。"
+    },
+    {
+      "strategy_name": "内外材料分层表达",
+      "design_problem": "博物馆需要同时表达历史厚度与公众可亲近性。",
+      "specific_approach": "外表面采用青铜纹理，内表面采用木质衬里。",
+      "architectural_effect": "外部强调历史和纪念性，内部强化温润的身体尺度与公共停留感。",
+      "evidence": "景观中国明确提到材料配置；空间效果为 AI synthesis。",
+      "source_ids": [
+        "s2"
+      ],
+      "related_image_ids": [
+        "img1"
+      ],
+      "transferable_lesson": "公共文化建筑可通过内外材料分层平衡城市形象与使用体验。"
+    }
+  ],
+  "spatial_ideas": [
+    {
+      "text": "公共大厅是设计叙事的核心，承担集散、导向、垂直交通和地域原型转译。",
+      "source_ids": [
+        "s3"
+      ],
+      "related_image_ids": [
+        "img4"
+      ]
+    },
+    {
+      "text": "入口引桥连接竹林、水面、广场，强化中轴线空间序列。",
+      "source_ids": [
+        "s2"
+      ],
+      "related_image_ids": [
+        "img2"
+      ]
+    }
+  ],
+  "materials_structure": [
+    {
+      "text": "外表面为青铜纹理，内表面为木质衬里；结构体系未检索到可靠公开资料。",
+      "source_ids": [
+        "s2"
+      ],
+      "related_image_ids": [
+        "img1"
+      ]
+    }
+  ],
+  "site_context": [
+    {
+      "text": "新馆位于省文化博物园区中部，与古生物化石博物馆、美术馆呈品字形布局。",
+      "source_ids": [
+        "s3"
+      ],
+      "related_image_ids": []
+    }
+  ],
+  "image_metadata": [
+    {
+      "id": "img1",
+      "file_name": "images/01_hero_exterior.jpg",
+      "image_type": "01_hero",
+      "source_url": "https://www.archcollege.com/37338.html",
+      "source_site": "建筑学院",
+      "caption": "安徽省博物院新馆外观识别图",
+      "copyright_note": "Source page credits 张广源; research organization only, rights not cleared.",
+      "recommended_use": "cover, exterior identity, massing reference",
+      "relevance_reason": "支撑对方整体量、厚重表皮和文化园区中心形象的分析。",
+      "related_sections": [
+        "05 概念创意探索",
+        "08 核心方法提炼"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img2",
+      "file_name": "",
+      "image_type": "03_plan",
+      "source_url": "http://qn.cutt.com/170927191855242.750.353.0.2654",
+      "source_site": "建筑学院旧图源",
+      "caption": "平面 / 布局参考图源",
+      "copyright_note": "Reference link only; rights not cleared.",
+      "recommended_use": "plan analysis",
+      "relevance_reason": "原拟用于验证入口序列、平面组织或流线判断。",
+      "related_sections": [
+        "06.2 布局逻辑"
+      ],
+      "download_status": "failed",
+      "failure_reason": "旧 qn.cutt.com 直链返回 404。"
+    },
+    {
+      "id": "img3",
+      "file_name": "",
+      "image_type": "04_section",
+      "source_url": "http://qn.cutt.com/170927191856009.750.356.0.2654",
+      "source_site": "建筑学院旧图源",
+      "caption": "剖面 / 空间关系参考图源",
+      "copyright_note": "Reference link only; rights not cleared.",
+      "recommended_use": "section analysis",
+      "relevance_reason": "原拟用于验证中庭、竖向空间和展厅关系。",
+      "related_sections": [
+        "06.3 形式构成"
+      ],
+      "download_status": "failed",
+      "failure_reason": "旧 qn.cutt.com 直链返回 404。"
+    },
+    {
+      "id": "img4",
+      "file_name": "",
+      "image_type": "08_interior",
+      "source_url": "http://qn.cutt.com/170927191804590.750.471.0.2654",
+      "source_site": "建筑学院旧图源",
+      "caption": "公共大厅与片墙空间参考图源",
+      "copyright_note": "Reference link only; rights not cleared.",
+      "recommended_use": "interior and circulation reference",
+      "relevance_reason": "原拟用于说明公共大厅、片墙夹持和天光引导的垂直交通体验。",
+      "related_sections": [
+        "06.4 场所与氛围",
+        "08 核心方法提炼"
+      ],
+      "download_status": "failed",
+      "failure_reason": "旧 qn.cutt.com 直链返回 404。"
+    }
+  ],
+  "download_mode": "partial",
+  "source_quality": {
+    "has_primary_sources": true,
+    "primary_sources_used_for_identity": true,
+    "architecture_media_count": 2,
+    "wechat_valid_result_count": 0,
+    "zhihu_valid_result_count": 0,
+    "source_sufficiency_status": "partial",
+    "secondary_source_heavy": true,
+    "manual_review_needed": [
+      "建议查阅《建筑学报》2011年第12期原文，以复核面积、设计团队、图纸和构造信息。",
+      "未检索到华工院当前官网项目页。",
+      "Sogou WeChat / Zhihu 未保留有效结果；普通搜索仅发现搜狐转载线索。"
+    ],
+    "identity_confirming_source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "analysis_coverage": [
+      "concept",
+      "context",
+      "program",
+      "circulation",
+      "facade_material",
+      "user_experience",
+      "urban_relationship"
+    ]
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "四水归堂五方相连——安徽省博物馆新馆创作构思",
+      "url": "https://www.zhangqiaokeyan.com/academic-journal-cn_architectural-journal_thesis/0201210418354.html",
+      "source_level": "level_a",
+      "publisher": "掌桥科研 / 建筑学报论文数据库页",
+      "accessed_date": "2026-07-02",
+      "notes": "数据库摘要页；题名、作者和摘要可作为一手设计文章线索，完整正文需人工获取。"
+    },
+    {
+      "id": "s2",
+      "title": "安徽省博物馆新馆建筑设计/何镜堂",
+      "url": "http://www.landscape.cn/architecture/9248.html",
+      "source_level": "level_b",
+      "publisher": "景观中国",
+      "accessed_date": "2026-07-02",
+      "notes": "项目条目，包含设计公司、奖项、材料意向和概念摘要；注明转载自在库言库。"
+    },
+    {
+      "id": "s3",
+      "title": "国庆专题 | 博物馆——安徽省博物院新馆 / 何镜堂",
+      "url": "https://www.archcollege.com/37338.html",
+      "source_level": "level_b",
+      "publisher": "建筑学院",
+      "accessed_date": "2026-07-02",
+      "notes": "页面内容较完整，搜狐转载页可见其注明由华南理工大学建筑设计研究院授权建筑学院编辑发布。"
+    },
+    {
+      "id": "s4",
+      "title": "国庆余额不足 | 博物馆——安徽省博物馆新馆 / 何镜堂",
+      "url": "https://www.sohu.com/a/196733785_656721",
+      "source_level": "level_c",
+      "publisher": "搜狐",
+      "accessed_date": "2026-07-02",
+      "notes": "建筑学院内容转载线索；搜索结果可见摄影与华工院授权说明。"
+    },
+    {
+      "id": "s5",
+      "title": "安徽省博物馆_何镜堂_刘宇波_张振辉_梁玮健...",
+      "url": "https://wenku.baidu.com/view/20135eb902d276a200292e5d.html",
+      "source_level": "level_d",
+      "publisher": "百度文库",
+      "accessed_date": "2026-07-02",
+      "notes": "仅用搜索结果可见摘要辅助指标线索，不作为高可信依据。"
+    },
+    {
+      "id": "s6",
+      "title": "安徽省博物馆新馆",
+      "url": "https://wenku.baidu.com/view/99145d74647d27284b7351fe.html",
+      "source_level": "level_d",
+      "publisher": "百度文库",
+      "accessed_date": "2026-07-02",
+      "notes": "仅用搜索结果可见摘要辅助设计时间、竣工时间和团队线索，不作为高可信依据。"
+    }
+  ],
+  "uncertain_or_conflicting_info": [
+    {
+      "topic": "官方项目页",
+      "description": "未检索到华南理工大学建筑设计研究院当前官网项目页；需人工复核是否有旧版或档案页面。",
+      "source_ids": []
+    },
+    {
+      "topic": "技术指标",
+      "description": "用地面积、总建筑面积、建设单位、设计团队完整名单主要来自搜索结果可见摘要或文库线索，需以《建筑学报》原文或官方资料复核。",
+      "source_ids": [
+        "s5",
+        "s6"
+      ]
+    },
+    {
+      "topic": "图纸与图片",
+      "description": "建筑学院页面旧 qn.cutt.com 图源多次返回 404，仅下载到封面外观图。",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "topic": "结构与构造",
+      "description": "未检索到结构体系、幕墙节点、材料构造和施工过程的可靠公开资料。",
+      "source_ids": []
+    }
+  ],
+  "technical_metrics": {
+    "site_area": {
+      "value": 55500,
+      "unit": "m2",
+      "confidence": "limited",
+      "source_ids": [
+        "s5"
+      ],
+      "notes": "来自搜索结果可见摘要，需复核。"
+    },
+    "building_area": {
+      "value": 41380,
+      "unit": "m2",
+      "confidence": "limited",
+      "source_ids": [
+        "s5"
+      ],
+      "notes": "来自搜索结果可见摘要，需复核。"
+    },
+    "height": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到可靠资料。"
+    },
+    "floors": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到可靠资料。"
+    },
+    "far": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到可靠资料。"
+    },
+    "building_density": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到可靠资料。"
+    },
+    "structure_system": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到可靠资料。"
+    },
+    "main_materials": [
+      {
+        "text": "外表面青铜纹理，内表面木质衬里。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s2"
+        ],
+        "related_image_ids": [
+          "img1"
+        ]
+      }
+    ],
+    "client": {
+      "value": "安徽省公益性项目建设管理中心",
+      "unit": "",
+      "confidence": "limited",
+      "source_ids": [
+        "s6"
+      ],
+      "notes": "来自搜索结果可见摘要，需复核。"
+    },
+    "photography_drawing_credits": [
+      {
+        "text": "摄影线索：张广源。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s2",
+          "s4"
+        ],
+        "related_image_ids": [
+          "img1"
+        ]
+      }
+    ],
+    "notes": "高精度技术指标需人工查阅《建筑学报》2011年第12期原文或官方项目资料。"
+  },
+  "site_information": {
+    "location_role": {
+      "text": "位于合肥市政务文化新区内的省文化博物园区，居于三个文化建筑的中心位置。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s3"
+      ],
+      "related_image_ids": []
+    },
+    "natural_environment": {
+      "text": "基地东北面有一座小山坡。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s3"
+      ],
+      "related_image_ids": []
+    },
+    "cultural_environment": {
+      "text": "安徽地域文化多元，既包括徽风皖韵，也包括建安风骨、老庄哲学、江南风光、黄梅戏曲和革命老区等线索。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s3"
+      ],
+      "related_image_ids": []
+    },
+    "terrain_conditions": {
+      "text": "除东北面小山坡外，未检索到完整地形资料。",
+      "evidence_type": "missing",
+      "source_ids": [
+        "s3"
+      ],
+      "related_image_ids": []
+    },
+    "roads_and_access": {
+      "text": "主入口朝东；入口引桥连接竹林、水面、广场，强化中轴线空间序列。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "related_image_ids": [
+        "img2"
+      ]
+    },
+    "surrounding_buildings": {
+      "text": "与古生物化石博物馆、美术馆呈品字形布局。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s3"
+      ],
+      "related_image_ids": []
+    },
+    "served_users": {
+      "text": "省级博物馆公众参观者与文化展示活动人群；具体运营人群数据未检索到。",
+      "evidence_type": "synthesis",
+      "source_ids": [
+        "s3"
+      ],
+      "related_image_ids": []
+    },
+    "core_site_tension": {
+      "text": "作为新区文化园区中心建筑，需要建立标志性，同时回应安徽多元地域文化。",
+      "evidence_type": "synthesis",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "related_image_ids": [
+        "img1"
+      ]
+    }
+  },
+  "conceptual_exploration": {
+    "diagnosis": [
+      {
+        "text": "设计团队认为以徽州白墙黑瓦概括安徽文化过于局部，需面对更广阔的地域文化构成。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s3"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "positioning": [
+      {
+        "text": "新馆应呈现端庄厚重、方正平直而又雅致通透、内涵丰富的标志性形象。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s3"
+        ],
+        "related_image_ids": [
+          "img1"
+        ]
+      }
+    ],
+    "strategy": [
+      {
+        "text": "以“四水归堂、五方相连”为构思意象，将院落、中庭、片墙和流线组织成公共空间系统。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ],
+        "related_image_ids": [
+          "img4"
+        ]
+      }
+    ],
+    "imagery_and_expression": [
+      {
+        "text": "方正体量、青铜纹理和木质衬里共同形成历史厚度与雅致通透的材料叙事。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s2",
+          "s3"
+        ],
+        "related_image_ids": [
+          "img1"
+        ]
+      }
+    ]
+  },
+  "architectural_language_generation": {
+    "function": [
+      {
+        "text": "公共大厅承担入口集散、垂直交通与展览路径组织的核心角色。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s3"
+        ],
+        "related_image_ids": [
+          "img4"
+        ]
+      }
+    ],
+    "layout": [
+      {
+        "text": "主入口朝东，场地以入口引桥串联竹林、水面、广场。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s2",
+          "s3"
+        ],
+        "related_image_ids": [
+          "img2"
+        ]
+      }
+    ],
+    "composition": [
+      {
+        "text": "方正建筑形体由连续转折的实体体量与穿插其中的透明空间立体构成。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s2"
+        ],
+        "related_image_ids": [
+          "img1",
+          "img3"
+        ]
+      }
+    ],
+    "place_atmosphere": [
+      {
+        "text": "通高片墙与“窄巷”式自动扶梯把中庭组织成具有村落游走感的公共空间。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s3"
+        ],
+        "related_image_ids": [
+          "img4"
+        ]
+      }
+    ]
+  },
+  "construction_quality_control": {
+    "construction_language": [
+      {
+        "text": "实体体量与透明空间的穿插关系可确认；结构体系未检索到可靠资料。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s2"
+        ],
+        "related_image_ids": [
+          "img1"
+        ]
+      }
+    ],
+    "materials_and_craft": [
+      {
+        "text": "外表面青铜纹理、内表面木质衬里的材料分层可确认。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s2"
+        ],
+        "related_image_ids": [
+          "img1"
+        ]
+      }
+    ],
+    "tectonic_logic": [
+      {
+        "text": "未检索到幕墙系统、节点连接或施工工艺资料。",
+        "evidence_type": "missing",
+        "source_ids": [],
+        "related_image_ids": []
+      }
+    ],
+    "performance_and_construction_control": [
+      {
+        "text": "未检索到遮阳、通风、保温、防雨、施工难点或质量控制资料。",
+        "evidence_type": "missing",
+        "source_ids": [],
+        "related_image_ids": []
+      }
+    ]
+  },
+  "design_lessons": {
+    "transferable_methods": [
+      {
+        "text": "从地域文化多样性出发定义建筑气质，而不是直接复制地方符号。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s3"
+        ],
+        "related_image_ids": []
+      },
+      {
+        "text": "将传统院落原型转译为现代公共建筑的中庭、流线和集散系统。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s3"
+        ],
+        "related_image_ids": [
+          "img4"
+        ]
+      },
+      {
+        "text": "通过内外材料分层平衡文化纪念性与身体尺度。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s2"
+        ],
+        "related_image_ids": [
+          "img1"
+        ]
+      }
+    ],
+    "avoid_copying": [
+      {
+        "text": "青铜纹理、片墙和徽州村落意象不宜脱离安徽文化与博物馆类型直接照搬。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s2",
+          "s3"
+        ],
+        "related_image_ids": [
+          "img1"
+        ]
+      }
+    ],
+    "analysis_diagram_potential": [
+      "地域文化扩容图",
+      "文化园区品字形布局图",
+      "入口引桥-竹林-水面-广场序列图",
+      "中庭-片墙-自动扶梯剖面示意图",
+      "外青铜纹理 / 内木质衬里材料分层图"
+    ]
+  }
+}

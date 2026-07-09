@@ -1,0 +1,498 @@
+{
+  "project_name": "孤独图书馆 / 海边图书馆 / Seashore Library",
+  "architects": [
+    "Vector Architects",
+    "直向建筑",
+    "Gong Dong / 董功"
+  ],
+  "location": "中国河北秦皇岛，南戴河 / 北戴河新区阿那亚海岸社区一带",
+  "year": "2015",
+  "program": "文化建筑；图书馆；社区公共文化设施",
+  "status": "建成",
+  "case_type": "Cultural",
+  "disambiguation_status": "high_confidence",
+  "disambiguation_candidates": [
+    {
+      "candidate_project": "孤独图书馆 / 海边图书馆 / Seashore Library",
+      "location": "中国河北秦皇岛，南戴河 / 北戴河新区阿那亚海岸社区一带",
+      "architects": "Vector Architects / 直向建筑",
+      "year": "2015",
+      "type": "文化建筑，图书馆",
+      "main_sources": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "confidence": "high",
+      "question_for_user": "用户只提供“海边图书馆”，但公开建筑案例语境中该名称高概率指向直向建筑的 Seashore Library，因此直接生成高置信案例包。"
+    }
+  ],
+  "information_confidence": "high",
+  "incomplete_reason": "",
+  "one_sentence_summary": "这个案例最值得学习的不是海边建筑如何取景，而是如何把剖面、身体移动、光、风和材料共同组织成一种可被公众持续使用的精神性空间。",
+  "key_facts": [
+    {
+      "label": "Architect",
+      "value": "Vector Architects / 直向建筑；主持建筑师董功",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "label": "Location",
+      "value": "中国河北秦皇岛，南戴河 / 北戴河新区海岸社区一带",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "label": "Year",
+      "value": "2015",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s6"
+      ]
+    },
+    {
+      "label": "Area",
+      "value": "450 m2",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "label": "Program",
+      "value": "阅读空间、冥想空间、活动室、水吧和休息区",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s5"
+      ]
+    }
+  ],
+  "design_concept": {
+    "sourced_concept": "直向建筑官方说明将设计重点概括为空间边界、身体移动、光氛围、空气流通与海景之间的共存关系；设计从剖面开始，依据不同空间功能建立各自与海、光、风的关系。",
+    "ai_synthesis": "从资料和图纸综合判断，项目把海景拆分为一组不同的身体经验：阅读大厅直接观看海，冥想空间听海但弱化视觉，活动室和屋顶平台通过光线、平台和高差形成转场。",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s5"
+    ]
+  },
+  "key_strategies": [
+    {
+      "strategy_name": "以剖面生成空间关系",
+      "design_problem": "海边场地过于开阔，单纯正面对景容易把空间简化为观景盒子。",
+      "specific_approach": "从剖面组织阅读、冥想、活动、水吧和休息空间，用屋面弧线、看台平台和高差定义人与海的不同关系。",
+      "architectural_effect": "不同空间获得不同的海景、光线、通风和尺度，形成连续但差异明确的体验序列。",
+      "evidence": "直接来源与图纸证据混合。",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s5"
+      ],
+      "related_image_ids": [
+        "img_04_section_longitudinal"
+      ],
+      "transferable_lesson": "先定义人与景观发生关系的剖面方式，再组织平面功能。"
+    },
+    {
+      "strategy_name": "阅读大厅作为面海看台",
+      "design_problem": "阅读空间既要安静，也要回应海景带来的公共性。",
+      "specific_approach": "设置逐级升起的平台、可开启玻璃旋转门和横向海景窗，让不同位置的人都能看到海。",
+      "architectural_effect": "阅读空间同时成为图书馆、剧场和观景平台，海成为被共同观看的自然舞台。",
+      "evidence": "直接来源与图纸证据混合。",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s6"
+      ],
+      "related_image_ids": [
+        "img_03_plan_first_floor",
+        "img_08_interior_reading_hall"
+      ],
+      "transferable_lesson": "公共阅读空间可以通过台阶、视线和开口组织共同观看，而不只靠书架定义。"
+    },
+    {
+      "strategy_name": "用光和风细分空间性格",
+      "design_problem": "小型公共建筑需要容纳明亮开放和安静内向两类体验。",
+      "specific_approach": "阅读空间使用横向窗、可开启玻璃墙、玻璃砖和屋面通风井；冥想空间使用水平与垂直窄缝；活动室使用天窗和高侧窗。",
+      "architectural_effect": "光与风从环境性能转化为空间气质，阅读厅开放均质，冥想空间内向幽暗。",
+      "evidence": "直接来源。",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s5"
+      ],
+      "related_image_ids": [
+        "img_04_section_stairs",
+        "img_03_plan_second_floor"
+      ],
+      "transferable_lesson": "通过开口尺度、方向和可开启构件塑造空间性格。"
+    },
+    {
+      "strategy_name": "材料把场地时间转译为建构表情",
+      "design_problem": "海边建筑需要厚重耐久，但不能失去人的触感和记忆。",
+      "specific_approach": "使用木纹清水混凝土回应沙地上的风痕、脚印和车辙；用手工玻璃砖弱化钢桁架和墙体的硬度。",
+      "architectural_effect": "外部像风化石块，内部通过玻璃砖和木纹混凝土获得更温暖、可感知的光和质地。",
+      "evidence": "直接来源。",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s5"
+      ],
+      "related_image_ids": [
+        "img_07_concept_sketch"
+      ],
+      "transferable_lesson": "材料表达应从场地经验和施工过程里生长，而不是作为装饰符号贴附。"
+    },
+    {
+      "strategy_name": "从图书馆演变为社区 Freespace",
+      "design_problem": "度假社区文化设施容易被消费化或限定为单一功能。",
+      "specific_approach": "在季节性开放基础上，空间被公众持续重新使用，除读书外容纳音乐、剧场、舞蹈、会议和拍摄等活动。",
+      "architectural_effect": "建筑成为连接社区居民、游客和公共文化活动的开放场所。",
+      "evidence": "访谈来源。",
+      "source_ids": [
+        "s1",
+        "s7"
+      ],
+      "related_image_ids": [
+        "img_02_site_plan"
+      ],
+      "transferable_lesson": "公共建筑的弹性价值来自可被重新定义的空间质量，而不只是功能表。"
+    }
+  ],
+  "spatial_ideas": [
+    {
+      "text": "首层以阅读大厅为核心，辅以冥想、水吧、休息和活动空间；阅读平台向后升起，形成观看海面的剖面秩序。",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "related_image_ids": [
+        "img_03_plan_first_floor",
+        "img_04_section_longitudinal"
+      ]
+    },
+    {
+      "text": "活动室与阅读空间通过户外平台区隔，以减少声音干扰并形成流线中的室外转场。",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "related_image_ids": [
+        "img_03_plan_second_floor"
+      ]
+    }
+  ],
+  "materials_structure": [
+    {
+      "text": "屋顶荷载通过海景窗上方钢桁架承担，以避免结构杆件打断主要观海视窗。",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "related_image_ids": [
+        "img_04_section_longitudinal"
+      ]
+    },
+    {
+      "text": "木纹混凝土来自沙地风痕、脚印和车辙的场地记忆；施工前进行样墙实验以控制纹理与颜色。",
+      "source_ids": [
+        "s3"
+      ],
+      "related_image_ids": [
+        "img_01_hero"
+      ]
+    }
+  ],
+  "site_context": [
+    {
+      "text": "图书馆位于渤海湾海岸线上的度假社区，作为社区文化与休闲设施之一，东侧直接面向大海。",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "related_image_ids": [
+        "img_02_site_plan",
+        "img_01_hero"
+      ]
+    },
+    {
+      "text": "项目在春、夏、秋三季服务社区居民并向社会公众开放，具备社区公共文化节点属性。",
+      "source_ids": [
+        "s1",
+        "s7"
+      ],
+      "related_image_ids": [
+        "img_02_site_plan"
+      ]
+    }
+  ],
+  "image_metadata": [
+    {
+      "id": "img_01_hero",
+      "file_name": "images/01_hero_exterior.jpg",
+      "image_type": "01_hero",
+      "source_url": "https://images.adsttc.com/media/images/556d/2666/e58e/ce95/6600/0115/large_jpg/1a_(29).jpg?1433216600",
+      "source_site": "ArchDaily",
+      "caption": "面向海岸的图书馆外观",
+      "copyright_note": "ArchDaily 页面可见摄影署名包括 He Bin, Shengliang Su, Sun Dongping；研究引用，商业使用需另行清权。",
+      "recommended_use": "封面、场地与形体识别",
+      "related_sections": [
+        "04 项目背景",
+        "08 形体、立面与建构"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_02_site_plan",
+      "file_name": "images/02_site_plan.jpg",
+      "image_type": "02_site",
+      "source_url": "https://images.adsttc.com/media/images/556d/2a2e/e58e/ceec/9100/014d/large_jpg/Site_Plan.jpg?1433217567",
+      "source_site": "ArchDaily",
+      "caption": "场地总图",
+      "copyright_note": "图纸来源页面：ArchDaily；研究引用，商业使用需另行清权。",
+      "recommended_use": "场地关系、海岸与社区关系分析",
+      "related_sections": [
+        "06 策略 5",
+        "07 空间与流线"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_03_plan_first_floor",
+      "file_name": "images/03_plan_first_floor.jpg",
+      "image_type": "03_plan",
+      "source_url": "https://images.adsttc.com/media/images/556d/2956/e58e/ce95/6600/0128/large_jpg/First_Floor_Plan.jpg?1433217355",
+      "source_site": "ArchDaily",
+      "caption": "一层平面图",
+      "copyright_note": "图纸来源页面：ArchDaily；研究引用，商业使用需另行清权。",
+      "recommended_use": "功能组织、阅读大厅与辅助空间分析",
+      "related_sections": [
+        "06 策略 2",
+        "07 空间与流线"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_03_plan_second_floor",
+      "file_name": "images/03_plan_second_floor.jpg",
+      "image_type": "03_plan",
+      "source_url": "https://images.adsttc.com/media/images/556d/29b5/e58e/ce95/6600/012b/large_jpg/Second_Floor_Plan.jpg?1433217452",
+      "source_site": "ArchDaily",
+      "caption": "二层平面图",
+      "copyright_note": "图纸来源页面：ArchDaily；研究引用，商业使用需另行清权。",
+      "recommended_use": "屋顶平台、活动室与辅助空间关系分析",
+      "related_sections": [
+        "06 策略 3",
+        "07 空间与流线"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_04_section_longitudinal",
+      "file_name": "images/04_section_longitudinal.jpg",
+      "image_type": "04_section",
+      "source_url": "https://images.adsttc.com/media/images/556d/29c5/e58e/ce95/6600/012c/large_jpg/section_1.jpg?1433217467",
+      "source_site": "ArchDaily",
+      "caption": "纵向剖面图",
+      "copyright_note": "图纸来源页面：ArchDaily；研究引用，商业使用需另行清权。",
+      "recommended_use": "剖面生成、阅读看台和结构关系分析",
+      "related_sections": [
+        "06 策略 1",
+        "08 形体、立面与建构"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_04_section_stairs",
+      "file_name": "images/04_section_stairs.jpg",
+      "image_type": "04_section",
+      "source_url": "https://images.adsttc.com/media/images/556d/29d4/e58e/ceec/9100/0149/large_jpg/section_2.jpg?1433217482",
+      "source_site": "ArchDaily",
+      "caption": "楼梯与局部剖面图",
+      "copyright_note": "图纸来源页面：ArchDaily；研究引用，商业使用需另行清权。",
+      "recommended_use": "冥想空间、楼梯与高差关系分析",
+      "related_sections": [
+        "06 策略 3",
+        "07 空间与流线"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_08_interior_reading_hall",
+      "file_name": "images/08_interior_reading_hall.jpg",
+      "image_type": "08_interior",
+      "source_url": "https://images.adsttc.com/media/images/556d/259e/e58e/ce95/6600/0110/large_jpg/1a_(5).jpg?1433216400",
+      "source_site": "ArchDaily",
+      "caption": "阅读大厅面向海景的室内空间",
+      "copyright_note": "ArchDaily 页面可见摄影署名包括 He Bin, Shengliang Su, Sun Dongping；研究引用，商业使用需另行清权。",
+      "recommended_use": "阅读大厅、视线和公共体验分析",
+      "related_sections": [
+        "06 策略 2",
+        "07 空间与流线"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_07_concept_sketch",
+      "file_name": "images/07_concept_sketch.jpg",
+      "image_type": "07_concept",
+      "source_url": "https://images.adsttc.com/media/images/556d/2a45/e58e/ceec/9100/014e/large_jpg/sketch_01.jpg?1433217589",
+      "source_site": "ArchDaily",
+      "caption": "概念草图",
+      "copyright_note": "图纸来源页面：ArchDaily；研究引用，商业使用需另行清权。",
+      "recommended_use": "概念生成、体量与海景关系分析",
+      "related_sections": [
+        "05 设计理念",
+        "06 策略 4"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    }
+  ],
+  "download_mode": "completed",
+  "source_quality": {
+    "has_primary_sources": true,
+    "primary_sources_used_for_identity": true,
+    "architecture_media_count": 5,
+    "wechat_valid_result_count": 0,
+    "zhihu_valid_result_count": 1,
+    "source_sufficiency_status": "sufficient",
+    "secondary_source_heavy": false,
+    "manual_review_needed": [
+      "图片版权只可作为研究整理引用，不代表商业使用授权。",
+      "知乎补充源正文访问受限，仅使用搜索摘要判断其为学习线索，不用于核心事实确认。"
+    ],
+    "identity_confirming_source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "analysis_coverage": [
+      "concept",
+      "context",
+      "program",
+      "circulation",
+      "facade_material",
+      "structure_construction",
+      "user_experience",
+      "urban_relationship"
+    ]
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "2015 孤独图书馆 / Project-Social & Cultural 2015 Seashore Library",
+      "url": "https://www.vectorarchitects.com/projects/31",
+      "source_level": "level_a",
+      "publisher": "Vector Architects / 直向建筑",
+      "accessed_date": "2026-06-16",
+      "notes": "官方项目页，用于确认项目身份、设计理念、功能构成、开放方式、剖面和材料逻辑。英文页：https://www.vectorarchitects.com/en/projects/31"
+    },
+    {
+      "id": "s2",
+      "title": "海边图书馆 / 直向建筑 Vector Architects",
+      "url": "https://www.archdaily.cn/cn/768089/hai-bian-tu-shu-guan-zhi-xiang-jian-zhu-vector-architects",
+      "source_level": "level_b",
+      "publisher": "ArchDaily 中国",
+      "accessed_date": "2026-06-16",
+      "notes": "专业建筑媒体项目页，包含面积、年份、团队、摄影、中文项目叙述、图纸和图库。"
+    },
+    {
+      "id": "s3",
+      "title": "Seashore Library / Vector Architects",
+      "url": "https://www.archdaily.com/638390/seashore-library-vector-architects",
+      "source_level": "level_b",
+      "publisher": "ArchDaily",
+      "accessed_date": "2026-06-16",
+      "notes": "专业建筑媒体英文项目页；与中文页内容高度对应，不作为完全独立的第二媒体来源计数。"
+    },
+    {
+      "id": "s4",
+      "title": "Seashore Library, Bei Daihe, China by Vector Architects",
+      "url": "https://www.gooood.cn/seashore-library-by-vector.htm",
+      "source_level": "level_b",
+      "publisher": "gooood",
+      "accessed_date": "2026-06-16",
+      "notes": "gooood 深度报道 / 访谈入口，标题显示为三联海边图书馆十二问直向建筑主持建筑师董功；用于补充中文专业媒体语境。"
+    },
+    {
+      "id": "s5",
+      "title": "Vector Architects, Xia Zhi, Su Shengliang · Seashore Library",
+      "url": "https://divisare.com/projects/290488-vector-architects-xia-zhi-su-shengliang-seashore-library",
+      "source_level": "level_b",
+      "publisher": "Divisare",
+      "accessed_date": "2026-06-16",
+      "notes": "专业建筑图库与文本资料，提供英文项目叙述、空间与材料说明。"
+    },
+    {
+      "id": "s6",
+      "title": "Seashore Library, Beidaihe",
+      "url": "https://arquitecturaviva.com/works/biblioteca-en-la-costa-beidaihe-10",
+      "source_level": "level_b",
+      "publisher": "Arquitectura Viva",
+      "accessed_date": "2026-06-16",
+      "notes": "专业建筑媒体项目页，记录类型、材料、时间、城市，并提供剖面、空间序列和渗透性分析。"
+    },
+    {
+      "id": "s7",
+      "title": "董功：直向建筑在威双 | 有方专访",
+      "url": "https://www.archiposition.com/items/20180723163531",
+      "source_level": "level_b",
+      "publisher": "有方 / Archiposition",
+      "accessed_date": "2026-06-16",
+      "notes": "专业建筑媒体访谈，提到直向在威尼斯建筑双年展选择海边图书馆作为主展项目，并讨论其与 Freespace、社区公共空间和后续多功能使用的关系。"
+    },
+    {
+      "id": "s8",
+      "title": "【东大建筑考研.建筑案例分析01】三联海边图书馆——并置罗列的空间结构",
+      "url": "https://zhuanlan.zhihu.com/p/112988140",
+      "source_level": "level_c",
+      "publisher": "知乎专栏",
+      "accessed_date": "2026-06-16",
+      "notes": "搜索结果摘要显示为建筑考研案例分析，正文访问受限；仅作为学习型补充线索，不用于确认核心事实。"
+    }
+  ],
+  "uncertain_or_conflicting_info": [
+    {
+      "topic": "Project naming",
+      "description": "官方中文页使用“孤独图书馆”，ArchDaily 中文标题使用“海边图书馆”，中文媒体和学习资料常称“三联海边图书馆”；本包并列记录这些名称。",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4",
+        "s8"
+      ]
+    },
+    {
+      "topic": "Image rights",
+      "description": "图片已下载用于研究包本地阅读，但公开发布、商业使用或出版前需要另行确认摄影师、媒体平台或权利方授权。",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "topic": "Supplementary Chinese discussion",
+      "description": "知乎补充源正文访问受限，不能作为项目事实依据；普通网页搜索未保留可稳定访问的微信正文来源。",
+      "source_ids": [
+        "s8"
+      ]
+    }
+  ]
+}

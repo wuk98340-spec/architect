@@ -1,0 +1,778 @@
+{
+  "project_name": "泰州科学发展观展示馆 / 泰州（中国）科学发展观展示中心",
+  "architects": [
+    "何镜堂",
+    "华南理工大学建筑设计研究院"
+  ],
+  "location": "中国江苏省泰州市，稻河历史文化街区南面，西到青年路，东到稻河，南到东进西路",
+  "year": "2010 年 3 月投资建设；2011 年 8 月 12 日竣工开馆",
+  "program": "科学发展观主题展示馆 / 纪念展示建筑 / 绿色公共建筑",
+  "status": "已建成并开馆",
+  "case_type": "Cultural",
+  "disambiguation_status": "high_confidence",
+  "disambiguation_candidates": [
+    {
+      "candidate_project": "泰州科学发展观展示馆 / 泰州（中国）科学发展观展示中心",
+      "location": "江苏省泰州市稻河历史文化街区南侧",
+      "architects": "何镜堂；华南理工大学建筑设计研究院",
+      "year": "2011 年竣工开馆",
+      "type": "展示馆 / 纪念展示建筑",
+      "main_sources": [
+        "s1",
+        "s2"
+      ],
+      "confidence": "high",
+      "question_for_user": "名称存在展示馆 / 展示中心变体，但位置、设计方和项目描述一致，已按同一项目处理。"
+    }
+  ],
+  "information_confidence": "medium",
+  "incomplete_reason": "项目身份、位置、面积、层数、竣工开馆时间、设计方、空间序列、地域材料转译和绿色技术有一手资料支撑；但未检索到 gooood、ArchDaily、有方等专业建筑媒体项目页，也未找到可靠公开平面、剖面、节点图和结构体系资料。图片来自南京大学建筑学生参观记录，适合作研究参考，不代表商业使用授权。",
+  "one_sentence_summary": "泰州科学发展观展示馆把主题展示、稻河历史街区、多儿巷一号故居、中央水庭和绿色技术整合成一条有起承转合的参观叙事。",
+  "key_facts": [
+    {
+      "label": "Location",
+      "value": "位于泰州稻河历史文化街区南面，西到青年路，东到稻河，南到东进西路。",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "label": "Architect",
+      "value": "设计方案由何镜堂担纲，华南理工大学建筑设计研究院承担设计任务。",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "label": "Area and floors",
+      "value": "总建筑面积 2 万多平方米；地上两层，地下一层。",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "label": "Completion",
+      "value": "2010 年 3 月投资建设，2011 年 8 月 12 日竣工开馆。",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "label": "Green building",
+      "value": "官方资料记录自然采光、下沉绿化庭院、雨水收集、太阳能利用、双层中空玻璃等策略；南京大学参观记录称其达到绿色建筑三星级标准。",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    }
+  ],
+  "design_concept": {
+    "sourced_concept": "同济大学博物馆资料称项目基地确立了“和谐与发展”的总体设计定位，因时就地，建立大气整体、主轴统领、重点突出的总体格局；泰州市住建局资料强调空间序列因势就地，形成主题明确、起承转合、一气呵成的建筑叙事篇章。",
+    "ai_synthesis": "项目将政治主题展示、旧城历史街区、多儿巷一号故居、中央水庭和绿色技术组织为同一条参观叙事，使建筑本体成为“科学发展”主题的空间化表达。",
+    "source_ids": [
+      "s1",
+      "s2"
+    ]
+  },
+  "key_strategies": [
+    {
+      "strategy_name": "用参观序列整合主题展示与历史节点",
+      "design_problem": "科学发展观主题展示容易停留在室内文本陈列，历史故居也容易成为孤立景点。",
+      "specific_approach": "以序厅、水庭、滨水玻璃长廊、室外展示区、多儿巷一号和民居群组织逐层递进的参观路径。",
+      "architectural_effect": "参观者在移动中经历由展馆到故居、由现代展示到历史现场的转换，形成明确的叙事高潮。",
+      "evidence": "Directly sourced and AI synthesis",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img_01",
+        "img_02"
+      ],
+      "transferable_lesson": "纪念展示建筑可以把真实历史资源作为参观高潮，而不是只依赖室内展陈完成叙事。"
+    },
+    {
+      "strategy_name": "中央水庭作为尺度转换和空间锚点",
+      "design_problem": "基地夹在历史街区与城市道路之间，旧城小尺度和公共建筑大尺度存在冲突。",
+      "specific_approach": "以南北两组宅院交融的展厅建筑凸显长达百米的中央水庭，并通过滨水玻璃长廊导引参观。",
+      "architectural_effect": "水庭成为对景、缓冲、导览和旧城尺度转换的复合空间。",
+      "evidence": "Directly sourced and image-supported synthesis",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "related_image_ids": [
+        "img_01"
+      ],
+      "transferable_lesson": "旧城边界公共建筑可用水院、庭院或长廊消解体量，并建立慢行体验。"
+    },
+    {
+      "strategy_name": "民居构件的现代建筑语法转译",
+      "design_problem": "地方性表达容易退化为仿古屋顶或表面装饰。",
+      "specific_approach": "将黛瓦灰墙青砖色调、左右逢源、灰砖尺度、堆瓦窗花和淮脊空隙分别转译为色彩、钢构架、7.5 公分横向肌理、几何钢架和屋脊长条空隙。",
+      "architectural_effect": "建筑保持现代展示馆构成，同时获得泰州传统民居的尺度和文化意味。",
+      "evidence": "Directly sourced",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img_01",
+        "img_02"
+      ],
+      "transferable_lesson": "地域转译应同时处理色调、尺度、构件关系和空间组织，而不是复制符号。"
+    },
+    {
+      "strategy_name": "绿色技术嵌入主题表达",
+      "design_problem": "科学发展主题若只靠展板表达，建筑本体的说服力不足。",
+      "specific_approach": "采用自然采光、下沉绿化庭院、雨水收集、太阳能利用、屋面遮阳板与光伏结合、双层中空玻璃等策略；补充资料还提到地源热泵、绿色照明和透水地面。",
+      "architectural_effect": "建筑的环境技术与展示主题形成互证，使可持续理念可以通过空间和运行策略被感知。",
+      "evidence": "Directly sourced with supplementary source",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "related_image_ids": [
+        "img_01"
+      ],
+      "transferable_lesson": "主题展示建筑的技术系统应尽量和庭院、采光、屋面、雨水景观等可感知空间结合。"
+    }
+  ],
+  "spatial_ideas": [
+    {
+      "text": "空间序列以序厅和谐厅、多儿巷一号对景、滨水玻璃长廊、室外展示区和展示民居群构成起承转合的参观路径。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img_01",
+        "img_02"
+      ]
+    },
+    {
+      "text": "南北两组宅院交融的展厅建筑与中央水庭共同建立水、园、宅相依的空间格局。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img_01"
+      ]
+    }
+  ],
+  "materials_structure": [
+    {
+      "text": "公开资料强调黛瓦、灰墙、青砖色调的现代转译，以及深灰色钢构架、7.5 公分横向肌理、几何构成钢架和屋脊长条空隙等表皮与构件语言。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img_01"
+      ]
+    },
+    {
+      "text": "未检索到可靠结构体系和节点构造资料，不能推断承重体系、幕墙节点或施工工艺。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": []
+    }
+  ],
+  "site_context": [
+    {
+      "text": "项目位于稻河历史文化街区南侧，处在旧与新、小机理与大尺度、历史街区与城市道路之间。",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "related_image_ids": [
+        "img_02"
+      ]
+    },
+    {
+      "text": "多儿巷一号作为参观序列的重要对景和高潮，使建筑叙事与真实历史节点发生关系。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img_02"
+      ]
+    }
+  ],
+  "image_metadata": [
+    {
+      "id": "img_01",
+      "file_name": "images/01_hero_exterior.jpg",
+      "image_type": "01_hero",
+      "source_url": "https://tuanwei.nju.edu.cn/4c/b6/c24473a412854/page.htm",
+      "source_site": "南京大学团委",
+      "caption": "中央水庭与滨水玻璃长廊参观照片",
+      "copyright_note": "Reference link only; rights not cleared.",
+      "recommended_use": "site and circulation analysis",
+      "relevance_reason": "用于支撑中央水庭、南北展厅和滨水玻璃长廊共同组织参观序列的分析。",
+      "related_sections": [
+        "04 场地信息表",
+        "06.2 布局逻辑",
+        "08 核心方法提炼"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_02",
+      "file_name": "images/02_historic_residence_context.jpg",
+      "image_type": "02_site",
+      "source_url": "https://tuanwei.nju.edu.cn/4c/b6/c24473a412854/page.htm",
+      "source_site": "南京大学团委",
+      "caption": "旧有历史建筑与新建展馆并置的参观照片",
+      "copyright_note": "Reference link only; rights not cleared.",
+      "recommended_use": "historic context analysis",
+      "relevance_reason": "用于说明项目处在历史街区与现代展示馆之间，并与多儿巷一号等历史资源形成叙事关系。",
+      "related_sections": [
+        "05 概念创意探索",
+        "08 核心方法提炼"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_03",
+      "file_name": "images/08_interior_exhibition_01.jpg",
+      "image_type": "08_interior",
+      "source_url": "https://tuanwei.nju.edu.cn/4c/b6/c24473a412854/page.htm",
+      "source_site": "南京大学团委",
+      "caption": "序厅 / 前言空间参观照片",
+      "copyright_note": "Reference link only; rights not cleared.",
+      "recommended_use": "interior exhibition analysis",
+      "relevance_reason": "用于说明展馆作为思想展示与公众教育空间的室内展陈特征。",
+      "related_sections": [
+        "06.1 功能梳理"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_04",
+      "file_name": "images/08_interior_exhibition_02.jpg",
+      "image_type": "08_interior",
+      "source_url": "https://tuanwei.nju.edu.cn/4c/b6/c24473a412854/page.htm",
+      "source_site": "南京大学团委",
+      "caption": "展厅入口与视频展示参观照片",
+      "copyright_note": "Reference link only; rights not cleared.",
+      "recommended_use": "interior user experience",
+      "relevance_reason": "用于说明室内展陈采用现代图文和视频媒介，与外部传统宅院式语言形成对照。",
+      "related_sections": [
+        "06.4 场所与氛围"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_05",
+      "file_name": "images/08_interior_video_hall.jpg",
+      "image_type": "08_interior",
+      "source_url": "https://tuanwei.nju.edu.cn/4c/b6/c24473a412854/page.htm",
+      "source_site": "南京大学团委",
+      "caption": "视频展示厅参观照片",
+      "copyright_note": "Reference link only; rights not cleared.",
+      "recommended_use": "interior exhibition reference",
+      "relevance_reason": "用于补充视频观看作为展馆参观节点的空间证据。",
+      "related_sections": [
+        "06.1 功能梳理"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_06",
+      "file_name": "images/08_visit_route.jpg",
+      "image_type": "08_interior",
+      "source_url": "https://tuanwei.nju.edu.cn/4c/b6/c24473a412854/page.htm",
+      "source_site": "南京大学团委",
+      "caption": "互动展陈空间参观照片",
+      "copyright_note": "Reference link only; rights not cleared.",
+      "recommended_use": "visitor route and experience reference",
+      "relevance_reason": "用于补充展馆包含可停留、观看和互动的参观节点。",
+      "related_sections": [
+        "06.4 场所与氛围"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    }
+  ],
+  "download_mode": "completed",
+  "source_quality": {
+    "has_primary_sources": true,
+    "primary_sources_used_for_identity": true,
+    "architecture_media_count": 0,
+    "wechat_valid_result_count": 0,
+    "zhihu_valid_result_count": 0,
+    "source_sufficiency_status": "partial",
+    "secondary_source_heavy": false,
+    "manual_review_needed": [
+      "No gooood, ArchDaily, ArchDaily China, Archiposition / 有方 or comparable professional architecture media project page was retained.",
+      "No reliable public plans, sections, structural drawings or construction details were found.",
+      "Nanjing University visit photos are useful for study reference but rights are not cleared for publication or commercial use.",
+      "If used for formal publication, verify green building star rating and technical systems against official certification documents."
+    ],
+    "identity_confirming_source_ids": [
+      "s1",
+      "s2"
+    ],
+    "analysis_coverage": [
+      "concept",
+      "context",
+      "program",
+      "circulation",
+      "facade_material",
+      "structure_construction",
+      "user_experience",
+      "urban_relationship"
+    ]
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "泰州科学发展观展示馆",
+      "url": "https://jsj.taizhou.gov.cn/cjtz/art/2012/art_d8281181ea554a22bd48b51c12730e3f.html",
+      "source_level": "level_a",
+      "publisher": "泰州市住房和城乡建设局",
+      "accessed_date": "2026-06-22",
+      "notes": "Official local government page; used for identity, location, architect, area, floors, completion, spatial sequence, material translation, green strategies and construction participants."
+    },
+    {
+      "id": "s2",
+      "title": "【云展览】展览回顾“向大师致敬”系列之一 “地域性、文化性、时代性——何镜堂：为激变的中国而设计”展览",
+      "url": "https://www.lib.tongji.edu.cn/index.php?classid=12413&newsid=32754&t=show",
+      "source_level": "level_a",
+      "publisher": "同济大学博物馆",
+      "accessed_date": "2026-06-22",
+      "notes": "Institutional museum exhibition page; text states it is based on references and material provided by Architectural Design and Research Institute of SCUT. Used for He Jingtang theory, project name variant and positioning."
+    },
+    {
+      "id": "s3",
+      "title": "【建城】科学发展铸辉煌--记13建筑支部泰州科学发展观展示馆之行",
+      "url": "https://tuanwei.nju.edu.cn/4c/b6/c24473a412854/page.htm",
+      "source_level": "level_c",
+      "publisher": "南京大学团委 / 建筑与城市规划学院学生参观记录",
+      "accessed_date": "2026-06-22",
+      "notes": "Supplementary visit report by architecture students; used for green-building clues, user experience and downloaded reference photos."
+    }
+  ],
+  "uncertain_or_conflicting_info": [
+    {
+      "topic": "Professional architecture media",
+      "description": "Targeted searches did not retain a gooood, ArchDaily, ArchDaily China, Archiposition / 有方 or comparable professional architecture media project report.",
+      "source_ids": []
+    },
+    {
+      "topic": "Project name variant",
+      "description": "The Taizhou government page uses '泰州科学发展观展示馆', while the Tongji University Museum exhibition page uses '泰州（中国）科学发展观展示中心'. They are treated as the same project because location, architect and project description align.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "topic": "Green building star rating",
+      "description": "The government page describes green and intelligent building goals and lists sustainability measures. The Nanjing University visit report states it reached national green building three-star standard, but no certification document was retained.",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "topic": "Structure and construction detail",
+      "description": "Public sources do not provide reliable structural system, drawings, facade details, construction process or post-occupancy performance data.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "technical_metrics": {
+    "site_area": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到可靠资料"
+    },
+    "building_area": {
+      "value": "2 万多",
+      "unit": "平方米",
+      "confidence": "reported",
+      "source_ids": [
+        "s1"
+      ],
+      "notes": "泰州市住建局页面表述为总建筑面积 2 万多平方米"
+    },
+    "height": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到可靠资料"
+    },
+    "floors": {
+      "value": "地上两层，地下一层",
+      "unit": "",
+      "confidence": "reported",
+      "source_ids": [
+        "s1"
+      ],
+      "notes": ""
+    },
+    "far": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到可靠资料"
+    },
+    "building_density": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到可靠资料"
+    },
+    "structure_system": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到可靠结构体系资料"
+    },
+    "main_materials": [
+      {
+        "text": "灰色墙体、黑色屋顶、深灰色钢构架、玻璃长廊、双层中空玻璃等公开资料可确认的材料 / 构件语言。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img_01"
+        ]
+      }
+    ],
+    "client": {
+      "value": "泰州市稻河古街区建设有限公司",
+      "unit": "",
+      "confidence": "reported",
+      "source_ids": [
+        "s1"
+      ],
+      "notes": "投资建设单位"
+    },
+    "photography_drawing_credits": [
+      {
+        "text": "本包下载图片来自南京大学团委参观记录，原文标注文、图 / 建筑与城市规划学院 13 级建筑班支部。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s3"
+        ],
+        "related_image_ids": [
+          "img_01",
+          "img_02",
+          "img_03",
+          "img_04",
+          "img_05",
+          "img_06"
+        ]
+      }
+    ],
+    "notes": "高精度经济技术指标和结构构造资料不足。"
+  },
+  "site_information": {
+    "location_role": {
+      "text": "项目位于稻河历史文化街区南面，是旧城历史资源与现代公共展示功能交汇的位置。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "related_image_ids": [
+        "img_02"
+      ]
+    },
+    "natural_environment": {
+      "text": "未检索到除稻河和中央水庭之外的可靠自然环境资料。",
+      "evidence_type": "missing",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": []
+    },
+    "cultural_environment": {
+      "text": "项目与多儿巷一号、展示民居群和稻河历史文化街区相关，文化环境是设计叙事的核心资源。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img_02"
+      ]
+    },
+    "terrain_conditions": {
+      "text": "未检索到可靠地形高差资料；可确认有地下层和下沉绿化庭院。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": []
+    },
+    "roads_and_access": {
+      "text": "基地西到青年路，南到东进西路，东到稻河。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": []
+    },
+    "surrounding_buildings": {
+      "text": "周边包含稻河历史文化街区、多儿巷一号和展示民居群。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img_02"
+      ]
+    },
+    "served_users": {
+      "text": "服务公众参观、主题教育、城市展示和建筑学习参访。",
+      "evidence_type": "synthesis",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "related_image_ids": [
+        "img_03",
+        "img_04",
+        "img_06"
+      ]
+    },
+    "core_site_tension": {
+      "text": "基地处在旧与新、小机理与大尺度、历史街区与城市道路之间，既要整体大气又要尊重地方肌理。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s2"
+      ],
+      "related_image_ids": [
+        "img_01",
+        "img_02"
+      ]
+    }
+  },
+  "conceptual_exploration": {
+    "diagnosis": [
+      {
+        "text": "项目面对旧城历史街区、现代城市道路、科学发展观展示主题和多儿巷一号历史节点的叠合条件。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "related_image_ids": [
+          "img_02"
+        ]
+      }
+    ],
+    "positioning": [
+      {
+        "text": "项目确立“和谐与发展”的总体设计定位，并指向国家绿色建筑和智能建筑目标。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "strategy": [
+      {
+        "text": "通过大气整体、主轴统领、重点突出的总体格局，将基地资源整合为可参观的空间叙事。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s2"
+        ],
+        "related_image_ids": [
+          "img_01"
+        ]
+      }
+    ],
+    "imagery_and_expression": [
+      {
+        "text": "以泰州民居中的黛瓦、灰墙、青砖、窗花和屋脊意象进行现代转译，形成水、园、宅相依的建筑群像。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img_01",
+          "img_02"
+        ]
+      }
+    ]
+  },
+  "architectural_language_generation": {
+    "function": [
+      {
+        "text": "展馆承担主题展示、视频观看、规划资料展示、室外展示和历史故居参观等复合功能。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s3"
+        ],
+        "related_image_ids": [
+          "img_03",
+          "img_04",
+          "img_05",
+          "img_06"
+        ]
+      }
+    ],
+    "layout": [
+      {
+        "text": "主体自东向西展开，南北两组宅院交融的展厅建筑凸显中央水庭，滨水玻璃长廊引导观众走向室外展示区和多儿巷一号。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img_01",
+          "img_02"
+        ]
+      }
+    ],
+    "composition": [
+      {
+        "text": "结构化单元、环环相扣的墙体和众多小院落形成连续完整且富有韵律的建筑群像。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img_01"
+        ]
+      }
+    ],
+    "place_atmosphere": [
+      {
+        "text": "外部水庭、长廊、灰墙黑顶与内部现代展陈共同形成传统街区语境中的现代展示体验。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s3"
+        ],
+        "related_image_ids": [
+          "img_01",
+          "img_03",
+          "img_04",
+          "img_06"
+        ]
+      }
+    ]
+  },
+  "construction_quality_control": {
+    "construction_language": [
+      {
+        "text": "未检索到可靠结构体系资料；可确认建筑以宅院式单元、墙体、水庭和长廊组织空间。",
+        "evidence_type": "missing",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img_01"
+        ]
+      }
+    ],
+    "materials_and_craft": [
+      {
+        "text": "项目把传统民居色调和构件转译为灰墙、黑顶、深灰钢构架、7.5 公分横向肌理、几何钢架和屋脊空隙。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img_01"
+        ]
+      }
+    ],
+    "tectonic_logic": [
+      {
+        "text": "公开资料未提供节点图或构造详图，不能进一步分析墙身、屋脊、玻璃廊或光伏遮阳板构造。",
+        "evidence_type": "missing",
+        "source_ids": [],
+        "related_image_ids": []
+      }
+    ],
+    "performance_and_construction_control": [
+      {
+        "text": "官方资料确认自然采光、绿化庭院、下沉庭院、雨水收集、太阳能利用、双层中空玻璃等绿色策略；补充资料提到三星级绿色建筑、地源热泵、绿色照明和透水地面，但需证书或技术文件复核。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s3"
+        ],
+        "related_image_ids": [
+          "img_01"
+        ]
+      }
+    ]
+  },
+  "design_lessons": {
+    "transferable_methods": [
+      {
+        "text": "先确定真实历史节点，再组织展馆流线和叙事高潮，适合纪念展示类项目。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img_02"
+        ]
+      },
+      {
+        "text": "地域性表达应从色调、肌理、尺度、院落、路径和构件逻辑同时展开。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img_01"
+        ]
+      },
+      {
+        "text": "绿色技术可以通过自然采光、庭院、雨水景观和屋面系统成为可体验的主题表达。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s3"
+        ],
+        "related_image_ids": [
+          "img_01"
+        ]
+      }
+    ],
+    "avoid_copying": [
+      {
+        "text": "不要脱离泰州稻河街区、多儿巷一号和科学发展观主题，直接复制灰墙黑顶或水庭形式。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "related_image_ids": [
+          "img_01",
+          "img_02"
+        ]
+      }
+    ],
+    "analysis_diagram_potential": [
+      "旧城边界关系图",
+      "参观序列图",
+      "中央水庭空间组织图",
+      "民居要素现代转译图",
+      "绿色技术叠合图"
+    ]
+  }
+}

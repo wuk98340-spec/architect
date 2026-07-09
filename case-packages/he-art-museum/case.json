@@ -1,0 +1,861 @@
+{
+  "project_name": "和美术馆 / He Art Museum",
+  "architects": [
+    "Tadao Ando Architect & Associates",
+    "安藤忠雄建筑研究所"
+  ],
+  "location": "中国广东佛山顺德",
+  "year": "2020",
+  "program": "文化建筑 / 美术馆 / 当代艺术与岭南文化展示空间",
+  "status": "建成；2020 年 10 月 1 日对公众开放",
+  "case_type": "Cultural",
+  "disambiguation_status": "high_confidence",
+  "disambiguation_candidates": [
+    {
+      "candidate_project": "和美术馆 / He Art Museum / HEM",
+      "location": "中国广东佛山顺德",
+      "architects": "Tadao Ando Architect & Associates / 安藤忠雄建筑研究所",
+      "year": "2020",
+      "type": "美术馆 / 文化建筑",
+      "main_sources": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "confidence": "high",
+      "question_for_user": "用户提出“安藤的和美术馆”，公开建筑语境中高置信指向佛山顺德 He Art Museum。"
+    }
+  ],
+  "information_confidence": "high",
+  "incomplete_reason": "",
+  "one_sentence_summary": "和美术馆将“和”的语义、岭南水庭与南越圆形观念，转译为圆形叠层、中央天井、双螺旋楼梯、水面和遮阳界面共同组织的美术馆空间系统。",
+  "key_facts": [
+    {
+      "label": "Architect",
+      "value": "Tadao Ando Architect & Associates / 安藤忠雄建筑研究所",
+      "source_ids": [
+        "s2",
+        "s4",
+        "s5"
+      ]
+    },
+    {
+      "label": "Location",
+      "value": "中国广东佛山顺德",
+      "source_ids": [
+        "s2",
+        "s4",
+        "s5"
+      ]
+    },
+    {
+      "label": "Opening",
+      "value": "2020 年 10 月 1 日对公众开放，原定 2020 年 3 月开放后因疫情推迟。",
+      "source_ids": [
+        "s2",
+        "s4"
+      ]
+    },
+    {
+      "label": "Area",
+      "value": "Architectural Record 记录为 176,000 sq ft，约 16,350 m2；Wallpaper 记录约 16,000 m2。",
+      "source_ids": [
+        "s4",
+        "s5"
+      ]
+    },
+    {
+      "label": "Founder and collection",
+      "value": "由何剑锋创办，馆藏包括国际当代艺术、中国现代艺术、中国当代艺术及岭南相关艺术。",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5"
+      ]
+    }
+  ],
+  "design_concept": {
+    "sourced_concept": "公开资料将项目概念与“和”的语义、南越文化中圆的象征、岭南水榭、自然光、中央 sky well 和双螺旋楼梯联系起来。",
+    "ai_synthesis": "项目把文化概念落实为空间规则：圆形叠层定义主要展厅，中央天井建立方向感和光环境，双螺旋楼梯把垂直动线转化为空间事件，水面与景墙把城市抵达转译为文化过渡。",
+    "source_ids": [
+      "s2",
+      "s4",
+      "s5"
+    ]
+  },
+  "key_strategies": [
+    {
+      "strategy_name": "把“和”转译为空间秩序",
+      "design_problem": "项目名称和地方文化如果只停留在符号层面，容易变成抽象口号。",
+      "specific_approach": "以圆形叠层、中央天井、双螺旋楼梯、水面和景观墙共同组织建筑的平面、剖面和入口秩序。",
+      "architectural_effect": "观众从入馆到展厅持续经历圆、光、水、混凝土和路径的叠加，概念被转化为可行走的空间系统。",
+      "evidence": "Directly sourced and synthesis from ArchDaily, Architectural Record, and Wallpaper.",
+      "source_ids": [
+        "s2",
+        "s4",
+        "s5"
+      ],
+      "related_image_ids": [
+        "img_01_hero",
+        "img_04_atrium"
+      ],
+      "transferable_lesson": "文化项目的关键词应转化为平面、剖面、动线和材料控制规则，而不是停留在标志或立面姿态。"
+    },
+    {
+      "strategy_name": "以中央天井和双螺旋楼梯建立方向感",
+      "design_problem": "圆形或环形展厅容易造成路径重复和方向感弱。",
+      "specific_approach": "设置贯通楼层的 skylit atrium，并用现浇混凝土双螺旋楼梯组织垂直交通。",
+      "architectural_effect": "中央空洞成为建筑的精神和动线核心，访客在上下移动时不断重新感知展厅、光线和曲面空间。",
+      "evidence": "Architectural Record describes the central void as the soul of the architecture and records the double-helix stair construction logic.",
+      "source_ids": [
+        "s4",
+        "s2"
+      ],
+      "related_image_ids": [
+        "img_04_atrium"
+      ],
+      "transferable_lesson": "复杂曲线平面需要清晰的剖面核心，帮助建立身体记忆和空间定位。"
+    },
+    {
+      "strategy_name": "用圆与方平衡象征性和展陈效率",
+      "design_problem": "纯圆形空间具有强烈象征性，但不一定适合所有现代艺术展陈。",
+      "specific_approach": "主楼采用圆形叠层，东北侧附加方形高展厅，用于现代艺术和大尺度作品展示。",
+      "architectural_effect": "建筑同时保留地方文化和“和”的形式表达，并提供更中性、更高净空的展陈条件。",
+      "evidence": "Architectural Record and Wallpaper both describe circular exhibition spaces and the square or rectilinear exhibition component.",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "related_image_ids": [
+        "img_03_plan"
+      ],
+      "transferable_lesson": "当概念形式与专业功能冲突时，可以用互补体量分别承接象征表达和高效使用。"
+    },
+    {
+      "strategy_name": "把入口序列作为城市缓冲器",
+      "design_problem": "场地连接商业办公区和公共公园，直接进入会削弱美术馆的文化转换感。",
+      "specific_approach": "通过水面、放射路径、景观与独立混凝土墙组织抵达，形成渐进式入馆体验。",
+      "architectural_effect": "城市喧闹被转化为更安静的文化场域，入口本身成为从商业环境到艺术体验的过渡。",
+      "evidence": "Architectural Record describes the site context, concrete walls, water and approach sequence.",
+      "source_ids": [
+        "s4"
+      ],
+      "related_image_ids": [
+        "img_01_hero"
+      ],
+      "transferable_lesson": "文化建筑的公共性不只在室内展厅，也在从城市到入口的心理过渡中。"
+    },
+    {
+      "strategy_name": "让气候控制参与形式表达",
+      "design_problem": "珠三角亚热带气候需要遮阳和热环境控制。",
+      "specific_approach": "以上层圆柱外挑形成深檐，外围设置固定竖向百叶，并用地面反射水池改善微气候。",
+      "architectural_effect": "遮阳、界面和水景同时服务性能和形式识别，气候策略成为建筑语言的一部分。",
+      "evidence": "Architectural Record records deep eaves, fixed vertical louvers, reflecting pools and reduced solar loads.",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "related_image_ids": [
+        "img_05_facade"
+      ],
+      "transferable_lesson": "气候策略应尽量进入建筑语言，而不是事后附加为技术构件。"
+    }
+  ],
+  "spatial_ideas": [
+    {
+      "text": "中央天井和双螺旋楼梯共同形成垂直空间核心，帮助圆形展厅建立方向感。",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "related_image_ids": [
+        "img_04_atrium"
+      ]
+    },
+    {
+      "text": "圆形展厅楼层直径逐层扩大，楼板偏心错动，使参观路径具有微妙的动态关系。",
+      "source_ids": [
+        "s4"
+      ],
+      "related_image_ids": [
+        "img_03_plan"
+      ]
+    },
+    {
+      "text": "方形或矩形高展厅作为圆形主楼的补充，为现代艺术和大尺度作品提供更中性的空间。",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "related_image_ids": [
+        "img_03_plan"
+      ]
+    }
+  ],
+  "materials_structure": [
+    {
+      "text": "公开资料确认清水混凝土、玻璃、竖向铝合金百叶、水景与景观共同构成建筑表达。",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "related_image_ids": [
+        "img_05_facade",
+        "img_01_hero"
+      ]
+    },
+    {
+      "text": "Architectural Record 记录双螺旋楼梯为现浇清水混凝土构件，从周边墙体悬挑，并作为建筑的结构核心之一。",
+      "source_ids": [
+        "s4"
+      ],
+      "related_image_ids": [
+        "img_04_atrium"
+      ]
+    },
+    {
+      "text": "完整结构图、幕墙节点、防水构造、混凝土模板工艺和施工组织未在公开资料中确认。",
+      "source_ids": [
+        "s4"
+      ],
+      "related_image_ids": []
+    }
+  ],
+  "site_context": [
+    {
+      "text": "项目位于佛山顺德，处于珠三角 / 大湾区文化建设语境中。",
+      "source_ids": [
+        "s2",
+        "s4",
+        "s5"
+      ],
+      "related_image_ids": [
+        "img_01_hero"
+      ]
+    },
+    {
+      "text": "场地一侧接近商业办公区，另一侧靠近公共公园，入口序列需要过滤商业环境并建立文化过渡。",
+      "source_ids": [
+        "s4"
+      ],
+      "related_image_ids": [
+        "img_01_hero"
+      ]
+    },
+    {
+      "text": "设计引用岭南水榭、南越文化圆形象征以及“和”的和平与和谐语义。",
+      "source_ids": [
+        "s2",
+        "s4",
+        "s5"
+      ],
+      "related_image_ids": [
+        "img_01_hero"
+      ]
+    }
+  ],
+  "image_metadata": [
+    {
+      "id": "img_01_hero",
+      "file_name": "images/01_hero_exterior.jpg",
+      "image_type": "01_hero",
+      "source_url": "https://images.adsttc.com/media/images/5f61/ccc1/63c0/179b/5800/0228/large_jpg/1.jpg?1600244881",
+      "source_site": "ArchDaily / HEM",
+      "caption": "和美术馆外部圆形体量与水景",
+      "copyright_note": "Image courtesy of HEM on ArchDaily; research reference only, rights not cleared.",
+      "recommended_use": "外观、场地、水景与圆形体量分析",
+      "relevance_reason": "用于验证圆形体量、水面和入口景观共同建立“和”的场地识别。",
+      "related_sections": [
+        "03 一句话判断",
+        "08 核心方法提炼"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_04_atrium",
+      "file_name": "images/04_section_stair_atrium.jpg",
+      "image_type": "04_section",
+      "source_url": "https://images.adsttc.com/media/images/5f61/d3d7/63c0/179b/5800/023f/medium_jpg/05.jpg?1600246645",
+      "source_site": "ArchDaily / HEM",
+      "caption": "中央天井与双螺旋楼梯",
+      "copyright_note": "Image courtesy of HEM on ArchDaily; research reference only, rights not cleared.",
+      "recommended_use": "剖面核心、垂直动线和结构性楼梯分析",
+      "relevance_reason": "用于验证中央空洞与双螺旋楼梯是建筑的空间核心。",
+      "related_sections": [
+        "05 概念创意探索",
+        "07 建造品质控制",
+        "08 核心方法提炼"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_03_plan",
+      "file_name": "images/03_plan_gallery.jpg",
+      "image_type": "03_plan",
+      "source_url": "https://images.adsttc.com/media/images/5f61/ce54/63c0/179b/5800/0230/medium_jpg/7.jpg?1600245286",
+      "source_site": "ArchDaily / HEM",
+      "caption": "圆形展厅与中央交通组织",
+      "copyright_note": "Image courtesy of HEM on ArchDaily; research reference only, rights not cleared.",
+      "recommended_use": "平面组织、展厅与中央核心分析",
+      "relevance_reason": "用于说明圆形展厅通过中央天井与环形路径组织展览。",
+      "related_sections": [
+        "06 建筑语言生成",
+        "08 核心方法提炼"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_05_facade",
+      "file_name": "images/05_facade_louvers.jpg",
+      "image_type": "05_elevation",
+      "source_url": "https://www.architecturalrecord.com/ext/resources/Issues/2020/12-December/He-Art-Museum-01-B.jpg?height=635&t=1606861254&width=1200",
+      "source_site": "Architectural Record / HEM",
+      "caption": "曲面外墙、玻璃与竖向百叶",
+      "copyright_note": "Photo © HEM via Architectural Record; research reference only, rights not cleared.",
+      "recommended_use": "立面、遮阳、界面与气候策略分析",
+      "relevance_reason": "用于验证外围界面由深檐、曲面边界和竖向百叶共同控制光和热。",
+      "related_sections": [
+        "07 建造品质控制",
+        "08 核心方法提炼"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    }
+  ],
+  "download_mode": "completed",
+  "source_quality": {
+    "has_primary_sources": true,
+    "primary_sources_used_for_identity": true,
+    "architecture_media_count": 5,
+    "wechat_valid_result_count": 0,
+    "zhihu_valid_result_count": 0,
+    "source_sufficiency_status": "sufficient",
+    "secondary_source_heavy": false,
+    "manual_review_needed": [
+      "HEM 官方站更偏向馆方与展览信息，未检索到完整建筑项目页；建筑事实主要由专业媒体与馆方公开信息交叉确认。",
+      "微信公众号和知乎结果未用于核心事实确认。",
+      "图片仅用于本地研究整理；公开发布或商业使用需另行清权。"
+    ],
+    "identity_confirming_source_ids": [
+      "s1",
+      "s2",
+      "s4"
+    ],
+    "analysis_coverage": [
+      "concept",
+      "context",
+      "program",
+      "circulation",
+      "facade_material",
+      "structure_construction",
+      "user_experience",
+      "urban_relationship"
+    ]
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "He Art Museum official website",
+      "url": "https://www.hem.org",
+      "source_level": "level_a",
+      "publisher": "He Art Museum",
+      "accessed_date": "2026-06-18",
+      "notes": "Official museum website used for identity, institutional positioning and public-facing museum context; complete architecture project facts are mainly cross-checked with professional media."
+    },
+    {
+      "id": "s2",
+      "title": "Tadao Ando Completes the He Art Museum in China",
+      "url": "https://www.archdaily.com/947876/tadao-ando-completes-the-he-art-museum-in-china",
+      "source_level": "level_b",
+      "publisher": "ArchDaily",
+      "accessed_date": "2026-06-18",
+      "notes": "Professional architecture media article used for opening date, founder, collection focus, concept, sky well, double-helix stair, circular exhibition spaces and image sources."
+    },
+    {
+      "id": "s3",
+      "title": "安藤忠雄“和美术馆”将于国庆开放：岭南文化与空间融合",
+      "url": "https://www.archdaily.cn/cn/947894/an-teng-zhong-xiong-he-mei-zhu-guan-jiang-yu-guo-qing-kai-fang-ling-nan-wen-hua-yu-kong-jian-rong-he",
+      "source_level": "level_b",
+      "publisher": "ArchDaily 中国",
+      "accessed_date": "2026-06-18",
+      "notes": "Chinese ArchDaily version useful for Chinese naming and Chinese-language context; treated as translated/corresponding source rather than fully independent identity confirmation."
+    },
+    {
+      "id": "s4",
+      "title": "He Art Museum by Tadao Ando",
+      "url": "https://www.architecturalrecord.com/articles/14900-he-art-museum-by-tadao-ando",
+      "source_level": "level_b",
+      "publisher": "Architectural Record",
+      "accessed_date": "2026-06-18",
+      "notes": "High-quality professional article with detailed site, geometry, structure, environmental and credit information; key source for analysis."
+    },
+    {
+      "id": "s5",
+      "title": "Tadao Ando’s He Art Museum draws on local Chinese vernacular",
+      "url": "https://www.wallpaper.com/architecture/hem-museum-tadao-ando-china",
+      "source_level": "level_b",
+      "publisher": "Wallpaper",
+      "accessed_date": "2026-06-18",
+      "notes": "Professional design media article used for local vernacular, program, 16,000 m2 area reference, interior organization, and cultural positioning."
+    },
+    {
+      "id": "s6",
+      "title": "和美术馆，安藤忠雄建筑研究所",
+      "url": "https://www.gooood.cn/he-art-museum-china-by-taodao-ando-architects.htm",
+      "source_level": "level_b",
+      "publisher": "gooood",
+      "accessed_date": "2026-06-18",
+      "notes": "Chinese professional architecture media source retained for Chinese project context and image/reporting lead. Direct extraction timed out in this run, so it is not used for unique technical claims."
+    }
+  ],
+  "uncertain_or_conflicting_info": [
+    {
+      "topic": "Building area",
+      "description": "Architectural Record lists 176,000 sq ft, while Wallpaper lists approximately 16,000 m2. The values are close but should be normalized before database publication.",
+      "source_ids": [
+        "s4",
+        "s5"
+      ]
+    },
+    {
+      "topic": "Construction details",
+      "description": "Public sources confirm concrete frame, V-shaped columns, central double-helix stair, louvers, deep eaves and water features, but do not provide full structural drawings, waterproofing build-up, facade nodes, concrete formwork details or construction management records.",
+      "source_ids": [
+        "s4",
+        "s5"
+      ]
+    },
+    {
+      "topic": "Image rights",
+      "description": "Images are downloaded for local research organization only. Public website use, publication or commercial use requires separate rights clearance from HEM, photographers or media platforms.",
+      "source_ids": [
+        "s2",
+        "s4"
+      ]
+    }
+  ],
+  "technical_metrics": {
+    "site_area": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "Not confirmed in reviewed public sources."
+    },
+    "building_area": {
+      "value": "176,000 sq ft / approximately 16,000-16,350 m2",
+      "unit": "sq ft / m2",
+      "confidence": "reported",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "notes": "Architectural Record uses 176,000 sq ft; Wallpaper uses approximately 16,000 m2."
+    },
+    "height": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "Overall building height not confirmed in reviewed public sources."
+    },
+    "floors": {
+      "value": "four main ascending storeys plus smaller fifth floor for mechanical and maintenance space",
+      "unit": "",
+      "confidence": "reported",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "notes": "Reported by Architectural Record and supported by Wallpaper's description of four storeys."
+    },
+    "far": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "Not confirmed in reviewed public sources."
+    },
+    "building_density": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "Not confirmed in reviewed public sources."
+    },
+    "structure_system": {
+      "value": "Concrete-frame building with central poured-concrete double-helix stair and V-shaped concrete columns near gallery perimeter.",
+      "unit": "",
+      "confidence": "reported",
+      "source_ids": [
+        "s4"
+      ],
+      "notes": "Detailed structural drawings and calculations are not available in reviewed sources."
+    },
+    "main_materials": [
+      {
+        "text": "清水混凝土、玻璃、铝合金竖向百叶、水面与景观共同构成建筑表达。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s4",
+          "s5"
+        ],
+        "related_image_ids": [
+          "img_05_facade",
+          "img_01_hero"
+        ]
+      }
+    ],
+    "client": {
+      "value": "He Art Museum; founded by He Jianfeng",
+      "unit": "",
+      "confidence": "confirmed",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "notes": "Architectural Record lists Client: He Art Museum; ArchDaily records founder He Jianfeng."
+    },
+    "photography_drawing_credits": [
+      {
+        "text": "ArchDaily images are credited Courtesy of HEM; Architectural Record photos are credited © HEM.",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s2",
+          "s4"
+        ],
+        "related_image_ids": [
+          "img_01_hero",
+          "img_04_atrium",
+          "img_03_plan",
+          "img_05_facade"
+        ]
+      }
+    ],
+    "notes": "High-precision planning, construction and envelope metrics require further primary documents."
+  },
+  "site_information": {
+    "location_role": {
+      "text": "顺德位于珠三角 / 大湾区语境中，项目被定位为连接本地文化与国际艺术的公共文化机构。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5"
+      ],
+      "related_image_ids": [
+        "img_01_hero"
+      ]
+    },
+    "natural_environment": {
+      "text": "水面、深檐和竖向百叶与亚热带气候下的遮阳和微气候调节有关。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "related_image_ids": [
+        "img_05_facade",
+        "img_01_hero"
+      ]
+    },
+    "cultural_environment": {
+      "text": "项目引用岭南水榭、南越文化圆形象征以及“和”的和平与和谐语义。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s2",
+        "s4",
+        "s5"
+      ],
+      "related_image_ids": [
+        "img_01_hero"
+      ]
+    },
+    "terrain_conditions": {
+      "text": "公开资料未确认特殊地形限制，主要场地问题来自商业办公区与公共公园之间的城市关系。",
+      "evidence_type": "synthesis",
+      "source_ids": [
+        "s4"
+      ],
+      "related_image_ids": []
+    },
+    "roads_and_access": {
+      "text": "入口通过水面、路径和景观墙建立渐进抵达，缓冲商业区与美术馆之间的体验转换。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s4"
+      ],
+      "related_image_ids": [
+        "img_01_hero"
+      ]
+    },
+    "surrounding_buildings": {
+      "text": "Architectural Record 记录场地北侧/附近有商业办公环境，南侧邻近公共公园，两者性格差异明显。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s4"
+      ],
+      "related_image_ids": []
+    },
+    "served_users": {
+      "text": "项目服务本地居民、大湾区访客、国际观众、艺术观众及公共项目参与者。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "related_image_ids": []
+    },
+    "core_site_tension": {
+      "text": "核心张力是如何在私人收藏背景、商业区边界和公共文化使命之间建立开放而有仪式感的美术馆场所。",
+      "evidence_type": "synthesis",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "related_image_ids": [
+        "img_01_hero"
+      ]
+    }
+  },
+  "conceptual_exploration": {
+    "diagnosis": [
+      {
+        "text": "项目需要把家族收藏、地方文化、商业区边界和公共艺术体验整合为一个区域文化场所。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s4"
+        ],
+        "related_image_ids": [
+          "img_01_hero"
+        ]
+      }
+    ],
+    "positioning": [
+      {
+        "text": "HEM 被定位为植根顺德并连接大湾区的公共文化机构，同时展示国际与中国艺术。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s5"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "strategy": [
+      {
+        "text": "以圆形叠层、中央天井、双螺旋楼梯和水面组织“和”的空间秩序。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s2",
+          "s4",
+          "s5"
+        ],
+        "related_image_ids": [
+          "img_01_hero",
+          "img_04_atrium"
+        ]
+      }
+    ],
+    "imagery_and_expression": [
+      {
+        "text": "圆形体量、水面和清水混凝土共同把南越圆形象征、岭南水榭和安藤式几何抽象连接起来。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s2",
+          "s4",
+          "s5"
+        ],
+        "related_image_ids": [
+          "img_01_hero"
+        ]
+      }
+    ]
+  },
+  "architectural_language_generation": {
+    "function": [
+      {
+        "text": "项目包含圆形展厅、现代艺术特别展厅、公共入口、书店、咖啡及公共活动相关空间。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s4",
+          "s5"
+        ],
+        "related_image_ids": [
+          "img_03_plan"
+        ]
+      }
+    ],
+    "layout": [
+      {
+        "text": "圆形楼层围绕中央 sky well 展开，楼板偏心错动，形成逐层展开的展览路径。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s4"
+        ],
+        "related_image_ids": [
+          "img_03_plan",
+          "img_04_atrium"
+        ]
+      }
+    ],
+    "composition": [
+      {
+        "text": "主圆形体量与东北侧方形高展厅形成圆与方的互补关系。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s4",
+          "s5"
+        ],
+        "related_image_ids": [
+          "img_03_plan"
+        ]
+      }
+    ],
+    "place_atmosphere": [
+      {
+        "text": "自然光从中央天井进入展厅，清水混凝土和曲面空间共同形成克制、静默、具有身体路径感的氛围。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s2",
+          "s4",
+          "s5"
+        ],
+        "related_image_ids": [
+          "img_04_atrium"
+        ]
+      }
+    ]
+  },
+  "construction_quality_control": {
+    "construction_language": [
+      {
+        "text": "双螺旋楼梯为现浇清水混凝土构件，并与中央空洞和结构核心相结合。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s4"
+        ],
+        "related_image_ids": [
+          "img_04_atrium"
+        ]
+      }
+    ],
+    "materials_and_craft": [
+      {
+        "text": "公开图像和文字确认清水混凝土、玻璃、竖向百叶和水面构成建筑主要表达。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s4",
+          "s5"
+        ],
+        "related_image_ids": [
+          "img_05_facade",
+          "img_01_hero"
+        ]
+      }
+    ],
+    "tectonic_logic": [
+      {
+        "text": "上层圆柱外挑形成深檐，固定竖向百叶控制日照，V 形混凝土柱使展厅保持灵活。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s4"
+        ],
+        "related_image_ids": [
+          "img_05_facade"
+        ]
+      }
+    ],
+    "performance_and_construction_control": [
+      {
+        "text": "可靠资料支持遮阳、百叶、水面降温和双螺旋楼梯施工难度的判断；完整防水、机电、消防和施工组织资料未检索到。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s4"
+        ],
+        "related_image_ids": [
+          "img_05_facade",
+          "img_04_atrium"
+        ]
+      }
+    ]
+  },
+  "design_lessons": {
+    "transferable_methods": [
+      {
+        "text": "把文化关键词转译为平面、剖面、路径和材料规则。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s2",
+          "s4",
+          "s5"
+        ],
+        "related_image_ids": [
+          "img_01_hero",
+          "img_04_atrium"
+        ]
+      },
+      {
+        "text": "用中央剖面核心解决圆形或环形平面的方向感问题。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s4"
+        ],
+        "related_image_ids": [
+          "img_04_atrium"
+        ]
+      },
+      {
+        "text": "用互补体量处理概念形式与专业展陈条件之间的矛盾。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s4",
+          "s5"
+        ],
+        "related_image_ids": [
+          "img_03_plan"
+        ]
+      },
+      {
+        "text": "让遮阳、水面和界面控制参与形式生成。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s4"
+        ],
+        "related_image_ids": [
+          "img_05_facade"
+        ]
+      }
+    ],
+    "avoid_copying": [
+      {
+        "text": "不应脱离地方文化语义、展陈路径和施工能力直接复制圆形体量、清水混凝土或双螺旋楼梯。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s2",
+          "s4",
+          "s5"
+        ],
+        "related_image_ids": [
+          "img_01_hero",
+          "img_04_atrium"
+        ]
+      }
+    ],
+    "analysis_diagram_potential": [
+      "圆/方体量关系图",
+      "入口缓冲序列图",
+      "中央天井剖面图",
+      "环形展厅路径图",
+      "遮阳与水面微气候图"
+    ]
+  }
+}

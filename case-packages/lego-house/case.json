@@ -1,0 +1,797 @@
+{
+  "project_name": "LEGO House / LEGO Brand House",
+  "architects": [
+    "BIG - Bjarke Ingels Group"
+  ],
+  "location": "Billund, Denmark",
+  "year": "2017",
+  "program": "Cultural experience center / brand house / family learning and play space",
+  "status": "Completed / open to public",
+  "case_type": "Cultural / education / brand experience",
+  "disambiguation_status": "high_confidence",
+  "disambiguation_candidates": [
+    {
+      "candidate_project": "LEGO House / LEGO Brand House",
+      "location": "Billund, Denmark",
+      "architects": "BIG - Bjarke Ingels Group",
+      "year": "2017",
+      "type": "Cultural experience center / brand house",
+      "main_sources": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "confidence": "high",
+      "question_for_user": ""
+    }
+  ],
+  "information_confidence": "high",
+  "incomplete_reason": "",
+  "one_sentence_summary": "LEGO House translates the logic of LEGO bricks into stacked public volumes, playable roof terraces, and color-coded interior learning experiences.",
+  "key_facts": [
+    {
+      "label": "Project identity",
+      "value": "LEGO House / LEGO Brand House in Billund, Denmark, designed by BIG.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "label": "Year",
+      "value": "2017.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "label": "Area",
+      "value": "BIG lists 11,960 m2; ArchDaily lists approximately 12,000 m2.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "label": "Concept",
+      "value": "The architecture applies the ratio and combinatory logic of the LEGO brick to a public experience building.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "label": "Public role",
+      "value": "The project combines paid experience functions with public urban interfaces, including plaza-like and roof-terrace spaces.",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "design_concept": {
+    "sourced_concept": "BIG states that the project applies the ratio of the LEGO brick throughout the architecture and embodies LEGO culture and values.",
+    "ai_synthesis": "The project turns the LEGO system into an architectural rule: stacked volumes, accessible roof surfaces, color-coded experiences, and a ground-level public interface.",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ]
+  },
+  "key_strategies": [
+    {
+      "strategy_name": "Translate brand logic into spatial rules",
+      "design_problem": "A brand building can become a superficial icon if the symbol remains only on the facade.",
+      "specific_approach": "Use LEGO brick ratio, stacking, color, and combinatory logic to organize massing, facade order, roof terraces, and interior zones.",
+      "architectural_effect": "The brand is experienced through space and movement rather than only through signage or imagery.",
+      "evidence": "BIG describes the use of LEGO brick ratio; ArchDaily photos and drawings show stacked white volumes and color-coded roof and interior spaces.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "related_image_ids": [
+        "img1",
+        "img7"
+      ],
+      "transferable_lesson": "When a project has a strong cultural or brand motif, translate it into proportion, organization, circulation, or tectonic rules."
+    },
+    {
+      "strategy_name": "Turn the roof into a playable public terrain",
+      "design_problem": "Experience buildings often become inward-facing, ticketed destinations with weak urban publicness.",
+      "specific_approach": "Stack volumes to create accessible roof terraces and outdoor play surfaces.",
+      "architectural_effect": "The building becomes something to climb, inhabit, and use, not only something to enter and view.",
+      "evidence": "ArchDaily photos and section drawings show roof terraces as part of the architectural experience.",
+      "source_ids": [
+        "s2"
+      ],
+      "related_image_ids": [
+        "img2",
+        "img6"
+      ],
+      "transferable_lesson": "Cultural and commercial public buildings can use roof, steps, terraces, and platforms as public interfaces."
+    },
+    {
+      "strategy_name": "Organize learning through color-coded experiential zones",
+      "design_problem": "A family learning space needs active participation rather than passive exhibition viewing.",
+      "specific_approach": "Arrange different experience areas through themed zones, color, and paths inside the stacked building.",
+      "architectural_effect": "The visitor route becomes a sequence of making, playing, pausing, and discovering.",
+      "evidence": "LEGO House official materials emphasize play and experience; ArchDaily interior photos and plans show activity-based spaces.",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "related_image_ids": [
+        "img3",
+        "img5"
+      ],
+      "transferable_lesson": "Educational and cultural projects should translate learning goals into spatial types, not only exhibition content."
+    },
+    {
+      "strategy_name": "Use section to connect interior experience and exterior public space",
+      "design_problem": "Exterior form, interior exhibitions, and roof activities can become separate gestures.",
+      "specific_approach": "Connect stacked volumes, floor heights, interior zones, and roof terraces through a continuous sectional organization.",
+      "architectural_effect": "The building works as a continuous public terrain from ground to roof, rather than a closed exhibition box.",
+      "evidence": "ArchDaily section drawing shows the relationship between stacked volumes, interior spaces, and roof platforms.",
+      "source_ids": [
+        "s2"
+      ],
+      "related_image_ids": [
+        "img6"
+      ],
+      "transferable_lesson": "Use sections to test whether arrival, movement, interior activities, and roof use form one coherent experience."
+    }
+  ],
+  "spatial_ideas": [
+    {
+      "text": "The ground floor works as a public threshold where city access, arrival, gathering, and exhibition entry are combined.",
+      "source_ids": [
+        "s2"
+      ],
+      "related_image_ids": [
+        "img4"
+      ]
+    },
+    {
+      "text": "The upper floors distribute experience areas through stacked volumes rather than a single neutral exhibition plate.",
+      "source_ids": [
+        "s2"
+      ],
+      "related_image_ids": [
+        "img5"
+      ]
+    },
+    {
+      "text": "Roof terraces extend the play experience outside and make the building partly accessible as urban topography.",
+      "source_ids": [
+        "s2"
+      ],
+      "related_image_ids": [
+        "img2",
+        "img6"
+      ]
+    }
+  ],
+  "materials_structure": [
+    {
+      "text": "Public images and drawings confirm white block-like exterior volumes and colored roof and interior zones, but do not provide construction-level facade or roof detail.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "related_image_ids": [
+        "img1",
+        "img2",
+        "img7"
+      ]
+    },
+    {
+      "text": "The structural system, waterproofing build-up, facade assembly, and construction process were not confirmed in reliable public sources reviewed for this package.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "related_image_ids": []
+    }
+  ],
+  "site_context": [
+    {
+      "text": "The project is located in Billund, Denmark, the city associated with LEGO's origin and brand identity.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "related_image_ids": [
+        "img1"
+      ]
+    },
+    {
+      "text": "The project operates as a public-facing destination rather than only an internal brand exhibition.",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "related_image_ids": [
+        "img2",
+        "img4"
+      ]
+    }
+  ],
+  "technical_metrics": {
+    "site_area": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "Public sources reviewed here did not confirm site area."
+    },
+    "building_area": {
+      "value": "11,960 to 12,000",
+      "unit": "m2",
+      "confidence": "reported",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "notes": "BIG lists 11,960 m2; ArchDaily lists approximately 12,000 m2."
+    },
+    "height": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "Public sources reviewed here did not confirm building height."
+    },
+    "floors": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "Plans and sections show multiple levels, but a precise floor count is not recorded here as a confirmed metric."
+    },
+    "far": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "Not found in reviewed public sources."
+    },
+    "building_density": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "Not found in reviewed public sources."
+    },
+    "structure_system": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "Reliable public sources reviewed here did not confirm structural system."
+    },
+    "main_materials": [
+      {
+        "text": "White block-like exterior volumes and colored roof/interior zones are visible and described, but construction-level material assemblies are not confirmed.",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "related_image_ids": [
+          "img1",
+          "img2",
+          "img7"
+        ]
+      }
+    ],
+    "client": {
+      "value": "KIRKBI / LEGO related client",
+      "unit": "",
+      "confidence": "reported",
+      "source_ids": [
+        "s1"
+      ],
+      "notes": "BIG lists Kirkbi as client."
+    },
+    "photography_drawing_credits": [
+      {
+        "text": "Drawings are credited to BIG on the ArchDaily drawing pages; image rights require checking the original source page before reuse beyond research reference.",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s2"
+        ],
+        "related_image_ids": [
+          "img4",
+          "img5",
+          "img6",
+          "img7"
+        ]
+      }
+    ],
+    "notes": "High-precision construction metrics remain limited in public sources."
+  },
+  "site_information": {
+    "location_role": {
+      "text": "Billund is central to LEGO's brand origin, making the project a destination tied to place and corporate culture.",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "related_image_ids": [
+        "img1"
+      ]
+    },
+    "natural_environment": {
+      "text": "No substantial natural-environment design constraint was confirmed in reviewed sources.",
+      "evidence_type": "missing",
+      "source_ids": [],
+      "related_image_ids": []
+    },
+    "cultural_environment": {
+      "text": "The cultural context is dominated by LEGO's brand history and play-based learning identity.",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "related_image_ids": [
+        "img3"
+      ]
+    },
+    "terrain_conditions": {
+      "text": "Public sources reviewed here did not confirm special terrain constraints.",
+      "evidence_type": "missing",
+      "source_ids": [],
+      "related_image_ids": []
+    },
+    "roads_and_access": {
+      "text": "The ground floor plan supports a public arrival and gathering reading, but detailed traffic organization is not confirmed.",
+      "evidence_type": "synthesis",
+      "source_ids": [
+        "s2"
+      ],
+      "related_image_ids": [
+        "img4"
+      ]
+    },
+    "surrounding_buildings": {
+      "text": "Reviewed sources do not provide enough surrounding-building evidence for a detailed urban fabric analysis.",
+      "evidence_type": "missing",
+      "source_ids": [],
+      "related_image_ids": []
+    },
+    "served_users": {
+      "text": "The project serves families, children, tourists, LEGO fans, and public visitors seeking play-based experiences.",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s3"
+      ],
+      "related_image_ids": [
+        "img3"
+      ]
+    },
+    "core_site_tension": {
+      "text": "The key tension is between a ticketed brand experience and a public-facing city destination.",
+      "evidence_type": "synthesis",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "related_image_ids": [
+        "img2",
+        "img4"
+      ]
+    }
+  },
+  "conceptual_exploration": {
+    "diagnosis": [
+      {
+        "text": "The project reframes a brand house as an inhabitable LEGO logic rather than a symbolic shell.",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "related_image_ids": [
+          "img1"
+        ]
+      }
+    ],
+    "positioning": [
+      {
+        "text": "The project sits between cultural building, brand destination, and learning-through-play environment.",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s3"
+        ],
+        "related_image_ids": [
+          "img3"
+        ]
+      }
+    ],
+    "strategy": [
+      {
+        "text": "Apply LEGO brick ratio, stacking, color, and combinatory logic across massing, circulation, and experience zones.",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "related_image_ids": [
+          "img1",
+          "img5",
+          "img6"
+        ]
+      }
+    ],
+    "imagery_and_expression": [
+      {
+        "text": "White stacked volumes and colored terraces translate toy-scale identity into architectural scale.",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "related_image_ids": [
+          "img1",
+          "img2",
+          "img7"
+        ]
+      }
+    ]
+  },
+  "architectural_language_generation": {
+    "function": [
+      {
+        "text": "The building combines experience zones, public arrival, roof play, retail, and visitor amenities.",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s2",
+          "s3"
+        ],
+        "related_image_ids": [
+          "img3",
+          "img4"
+        ]
+      }
+    ],
+    "layout": [
+      {
+        "text": "Ground and upper-floor plans show public entry organization and experience-zone distribution through stacked plan logic.",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s2"
+        ],
+        "related_image_ids": [
+          "img4",
+          "img5"
+        ]
+      }
+    ],
+    "composition": [
+      {
+        "text": "Massing is composed as a stack of block-like volumes whose roof surfaces become usable terraces.",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "related_image_ids": [
+          "img1",
+          "img2",
+          "img6"
+        ]
+      }
+    ],
+    "place_atmosphere": [
+      {
+        "text": "The atmosphere is playful and participatory, supported by color, scale shifts, roof play, and activity-based interiors.",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ],
+        "related_image_ids": [
+          "img2",
+          "img3"
+        ]
+      }
+    ]
+  },
+  "construction_quality_control": {
+    "construction_language": [
+      {
+        "text": "Public evidence supports analysis of the block-like exterior language and sectional stacking, but not structural-system specifics.",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s2"
+        ],
+        "related_image_ids": [
+          "img6",
+          "img7"
+        ]
+      }
+    ],
+    "materials_and_craft": [
+      {
+        "text": "Public photos confirm white exterior expression and colored surfaces; detailed material build-ups are not confirmed.",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s2"
+        ],
+        "related_image_ids": [
+          "img1",
+          "img2",
+          "img7"
+        ]
+      }
+    ],
+    "tectonic_logic": [
+      {
+        "text": "The tectonic reading available from public material is primarily proportional and sectional, not node-level.",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "related_image_ids": [
+          "img6",
+          "img7"
+        ]
+      }
+    ],
+    "performance_and_construction_control": [
+      {
+        "text": "Roof terrace performance, waterproofing, envelope performance, and construction control measures were not confirmed in reliable public sources.",
+        "evidence_type": "missing",
+        "source_ids": [],
+        "related_image_ids": []
+      }
+    ]
+  },
+  "design_lessons": {
+    "transferable_methods": [
+      {
+        "text": "Translate strong symbols into spatial systems: proportion, plan, section, route, and public interface.",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "related_image_ids": [
+          "img1",
+          "img6"
+        ]
+      },
+      {
+        "text": "Use roofs and terraces to make experience buildings more public and city-facing.",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s2"
+        ],
+        "related_image_ids": [
+          "img2"
+        ]
+      }
+    ],
+    "avoid_copying": [
+      {
+        "text": "Do not copy the colored block aesthetic without an equivalent cultural or programmatic reason.",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "related_image_ids": [
+          "img1",
+          "img2"
+        ]
+      }
+    ],
+    "analysis_diagram_potential": [
+      "Brick-ratio-to-massing diagram",
+      "Stacked volume and roof terrace diagram",
+      "Ground-floor publicness diagram",
+      "Experience-zone plan diagram",
+      "Sectional route from city ground to roof play diagram"
+    ]
+  },
+  "image_metadata": [
+    {
+      "id": "img1",
+      "file_name": "images/01_hero_exterior.jpg",
+      "image_type": "01_hero",
+      "source_url": "https://images.adsttc.com/media/images/59d3/9ad2/b22e/38e5/3e00/022c/large_jpg/LEGO_House_BIG_0253.jpg?1507039933",
+      "source_site": "ArchDaily",
+      "caption": "Exterior view showing stacked white LEGO-like volumes and colored roof surfaces.",
+      "copyright_note": "Image from ArchDaily project page; research reference only, rights not cleared.",
+      "recommended_use": "Exterior identity and massing analysis.",
+      "relevance_reason": "用于验证白色积木体量与彩色屋顶共同形成建筑识别。",
+      "related_sections": [
+        "03 一句话判断",
+        "08 核心方法提炼"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img2",
+      "file_name": "images/02_roof_terraces.jpg",
+      "image_type": "02_site",
+      "source_url": "https://images.adsttc.com/media/images/59d3/9c9a/b22e/38e5/3e00/0231/large_jpg/LEGO_House_BIG_1047.jpg?1507040389",
+      "source_site": "ArchDaily",
+      "caption": "Roof terraces and outdoor playable surfaces.",
+      "copyright_note": "Image from ArchDaily project page; research reference only, rights not cleared.",
+      "recommended_use": "Urban publicness and roof terrain analysis.",
+      "relevance_reason": "用于验证屋顶平台是可使用的公共地形。",
+      "related_sections": [
+        "04 场地信息表",
+        "08 核心方法提炼"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img3",
+      "file_name": "images/08_interior_experience_zone.jpg",
+      "image_type": "08_interior",
+      "source_url": "https://images.adsttc.com/media/images/59d3/9dd7/b22e/38ef/b100/0103/large_jpg/LEGO_House_BIG_2096.jpg?1507040709",
+      "source_site": "ArchDaily",
+      "caption": "Interior experience area with activity-based spatial organization.",
+      "copyright_note": "Image from ArchDaily project page; research reference only, rights not cleared.",
+      "recommended_use": "Interior user experience and learning-through-play analysis.",
+      "relevance_reason": "用于验证室内展陈以互动体验区组织，而不是静态观看。",
+      "related_sections": [
+        "06.1 功能梳理",
+        "08 核心方法提炼"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img4",
+      "file_name": "images/03_ground_floor_plan.jpg",
+      "image_type": "03_plan",
+      "source_url": "https://images.adsttc.com/media/images/59d3/9f22/b22e/38ef/b100/0109/large_jpg/BIG_LEGO_HOUSE_H1_N20_-_Ground_Floor_Plan_-_Drawing_by_BIG.jpg?1507041004",
+      "source_site": "ArchDaily",
+      "caption": "Ground floor plan by BIG.",
+      "copyright_note": "Drawing from ArchDaily project page; research reference only, rights not cleared.",
+      "recommended_use": "Ground-floor public access and layout analysis.",
+      "relevance_reason": "用于验证首层承担公共进入、聚集和展陈转换。",
+      "related_sections": [
+        "06.2 布局逻辑"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img5",
+      "file_name": "images/03_second_floor_plan.jpg",
+      "image_type": "03_plan",
+      "source_url": "https://images.adsttc.com/media/images/59d3/9faa/b22e/38ef/b100/010b/large_jpg/BIG_LEGO_HOUSE_H1_N22_-_Second_Floor_Plan_-_Drawing_by_BIG.jpg?1507041143",
+      "source_site": "ArchDaily",
+      "caption": "Second floor plan by BIG.",
+      "copyright_note": "Drawing from ArchDaily project page; research reference only, rights not cleared.",
+      "recommended_use": "Experience-zone and upper-floor organization analysis.",
+      "relevance_reason": "用于验证体验区随积木式体量分区展开。",
+      "related_sections": [
+        "06.2 布局逻辑",
+        "08 核心方法提炼"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img6",
+      "file_name": "images/04_section_jj.jpg",
+      "image_type": "04_section",
+      "source_url": "https://images.adsttc.com/media/images/59d3/a20f/b22e/38e5/3e00/0260/large_jpg/BIG_LEGO_HOUSE_H3_N10_-_Section_JJ_-_Drawing_by_BIG.jpg?1507041770",
+      "source_site": "ArchDaily",
+      "caption": "Section JJ by BIG.",
+      "copyright_note": "Drawing from ArchDaily project page; research reference only, rights not cleared.",
+      "recommended_use": "Sectional relationship between interior, stacked volumes, and roof terraces.",
+      "relevance_reason": "用于验证室内空间、体量堆叠与屋顶平台在剖面上连续。",
+      "related_sections": [
+        "06.3 形式构成",
+        "08 核心方法提炼"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img7",
+      "file_name": "images/05_east_facade_elevation.jpg",
+      "image_type": "05_elevation",
+      "source_url": "https://images.adsttc.com/media/images/59d3/9fb9/b22e/38e5/3e00/025c/large_jpg/BIG_LEGO_HOUSE_H2_N01_-_East_Facade_Elevation_-_Drawing_by_BIG.jpg?1507041198",
+      "source_site": "ArchDaily",
+      "caption": "East facade elevation by BIG.",
+      "copyright_note": "Drawing from ArchDaily project page; research reference only, rights not cleared.",
+      "recommended_use": "Facade proportion and opening-order analysis.",
+      "relevance_reason": "用于验证立面识别来自体量比例和开口秩序。",
+      "related_sections": [
+        "06.4 立面与城市识别",
+        "08 核心方法提炼"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    }
+  ],
+  "download_mode": "completed",
+  "source_quality": {
+    "has_primary_sources": true,
+    "primary_sources_used_for_identity": true,
+    "architecture_media_count": 1,
+    "wechat_valid_result_count": 0,
+    "zhihu_valid_result_count": 0,
+    "source_sufficiency_status": "sufficient",
+    "secondary_source_heavy": false,
+    "manual_review_needed": [],
+    "identity_confirming_source_ids": [
+      "s1",
+      "s2"
+    ],
+    "analysis_coverage": [
+      "concept",
+      "context",
+      "program",
+      "circulation",
+      "facade_material",
+      "structure_construction",
+      "user_experience",
+      "urban_relationship"
+    ]
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "LEGO Brand House - BIG",
+      "url": "https://big.dk/projects/lego-brand-house-2740",
+      "source_level": "level_a",
+      "publisher": "BIG - Bjarke Ingels Group",
+      "accessed_date": "2026-06-16",
+      "notes": "Official architect project page used for identity, location, year, area, client, concept, and awards."
+    },
+    {
+      "id": "s2",
+      "title": "LEGO House / BIG",
+      "url": "https://www.archdaily.com/880900/lego-house-big",
+      "source_level": "level_b",
+      "publisher": "ArchDaily",
+      "accessed_date": "2026-06-16",
+      "notes": "Professional architecture media source used for project facts, photographs, floor plans, elevation, section, and design description."
+    },
+    {
+      "id": "s3",
+      "title": "LEGO House official website",
+      "url": "https://www.legohouse.com/",
+      "source_level": "level_a",
+      "publisher": "LEGO House",
+      "accessed_date": "2026-06-16",
+      "notes": "Official visitor and institutional source used for public role, experience positioning, and learning-through-play interpretation."
+    }
+  ],
+  "uncertain_or_conflicting_info": [
+    {
+      "topic": "Area",
+      "description": "BIG lists 11,960 m2 while ArchDaily lists approximately 12,000 m2; this appears to be a minor rounding or reporting difference.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "topic": "Construction details",
+      "description": "Reliable public sources reviewed here do not confirm the structural system, facade assembly, roof waterproofing build-up, or construction process in detail.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ]
+}

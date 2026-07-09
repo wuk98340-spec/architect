@@ -1,0 +1,914 @@
+{
+  "project_name": "泰州民俗文化展示中心 / 泰州科学发展观展示馆",
+  "architects": [
+    "何镜堂",
+    "郭卫宏",
+    "张振辉",
+    "黄瑜",
+    "何炽立",
+    "华南理工大学建筑设计研究院"
+  ],
+  "location": "江苏省泰州市，坡子街、稻河头、五巷传统街区相关城市节点",
+  "year": "2009 设计启动；2014 建成",
+  "program": "文化展示建筑、民俗文化展示、城市更新体验区、公共活动空间",
+  "status": "建成",
+  "case_type": "Cultural / urban regeneration",
+  "disambiguation_status": "confirmed",
+  "disambiguation_candidates": [
+    {
+      "candidate_project": "泰州民俗文化展示中心 / 泰州科学发展观展示馆",
+      "location": "江苏泰州",
+      "architects": "何镜堂等 / 华南理工大学建筑设计研究院",
+      "year": "2009-2014",
+      "type": "文化展示建筑",
+      "main_sources": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "confidence": "high",
+      "question_for_user": "已按用户提供 PDF 对应项目生成；公开资料中的科学发展观展示馆视为同一项目别名。"
+    }
+  ],
+  "information_confidence": "medium",
+  "incomplete_reason": "项目身份、设计团队、场地策略和建造控制资料较充分；但项目名称和建筑面积存在公开口径差异，完整结构体系、高度、容积率、建筑密度、运维后评估等资料未完整确认。",
+  "one_sentence_summary": "项目通过东西向轴带重新组织稻河头、五巷街区、名人旧居、高层背景和新展馆，并以石材百叶幕墙、灰调模数和消隐化绿色技术形成当代泰州建筑品相。",
+  "key_facts": [
+    {
+      "label": "项目类型",
+      "value": "文化展示建筑与城市更新触媒",
+      "source_ids": [
+        "s1",
+        "s4"
+      ]
+    },
+    {
+      "label": "设计团队",
+      "value": "何镜堂、郭卫宏、张振辉、黄瑜、何炽立 / 华南理工大学建筑设计研究院",
+      "source_ids": [
+        "s4"
+      ]
+    },
+    {
+      "label": "设计与建成",
+      "value": "2009 年启动设计，2014 年建成",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "label": "绿色目标",
+      "value": "国家绿色三星建筑",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "label": "奖项线索",
+      "value": "2016 WA 中国建筑奖 WA 城市贡献奖入围项目",
+      "source_ids": [
+        "s4"
+      ]
+    }
+  ],
+  "design_concept": {
+    "sourced_concept": "和谐与发展；传承创新、和谐发展、科技人文、绿色三星。",
+    "ai_synthesis": "项目把展馆单体转化为城市空间整合工具，用东西向轴带、中央水院、南北体量差异和现代材料转译来桥接历史街区与现代城市尺度。",
+    "source_ids": [
+      "s1"
+    ]
+  },
+  "key_strategies": [
+    {
+      "strategy_name": "东西向叙事轴重组城市节点",
+      "design_problem": "名人旧居、五巷街区、稻河头、商业中心和百米高层尺度冲突。",
+      "specific_approach": "从东侧进入场地，沿东西向轴带组织稻河头广场、展示馆、名人旧居和高层背景。",
+      "architectural_effect": "高层由干扰物转为背景，历史水线索与参观序列被重新组织。",
+      "evidence": "sourced + synthesis",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img02",
+        "img03"
+      ],
+      "transferable_lesson": "复杂旧城更新可先寻找能重新解释矛盾要素的组织线索。"
+    },
+    {
+      "strategy_name": "南北体量差异缝合大小肌理",
+      "design_problem": "北侧传统街区小尺度与南侧现代商业大尺度并置。",
+      "specific_approach": "中央水院分割南北体量，北侧小体量衔接街区，南侧较大体量回应城市界面。",
+      "architectural_effect": "新建筑获得公共性，同时降低对历史街区的压迫。",
+      "evidence": "sourced + synthesis",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img04"
+      ],
+      "transferable_lesson": "新旧交界可通过体量梯度、院落和水体完成尺度翻译。"
+    },
+    {
+      "strategy_name": "传统气质的当代构造转译",
+      "design_problem": "项目需要传承泰州传统建筑，但直接仿古不适合当代公共建筑。",
+      "specific_approach": "将灰砖、花窗、屋脊、转角转译为石材百叶、金属花格窗、亮脊、玻璃长廊和 75mm 模数肌理。",
+      "architectural_effect": "形成灰调、平正、低调、质朴、内敛、敦厚的新泰州建筑品相。",
+      "evidence": "sourced",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img05",
+        "img08",
+        "img09",
+        "img10"
+      ],
+      "transferable_lesson": "地域表达应提炼材料尺度、色调和构造节奏，而非拼贴符号。"
+    },
+    {
+      "strategy_name": "足尺试版驱动材料决策",
+      "design_problem": "传统青砖小块材和人工砌筑难以满足较大体量新建筑的完整性和外墙品质。",
+      "specific_approach": "比较定制灰砖外墙试版和石材百叶幕墙试版，并通过多轮看样控制材料组合。",
+      "architectural_effect": "材料选择从概念判断转向现场验证，最终转向现代石材幕墙系统。",
+      "evidence": "sourced",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img08",
+        "img09"
+      ],
+      "transferable_lesson": "地方材料转译应尽早进行足尺样板测试。"
+    },
+    {
+      "strategy_name": "绿色技术消隐进建筑本体",
+      "design_problem": "绿色三星目标可能与文化建筑的低调氛围冲突。",
+      "specific_approach": "把雨水、风廊庭院、地下采光通风、坡顶、外墙、开窗、光伏和地源热泵整合为非炫示系统。",
+      "architectural_effect": "绿色技术服务于空间品质和人文表达。",
+      "evidence": "sourced + synthesis",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "related_image_ids": [
+        "img06"
+      ],
+      "transferable_lesson": "文化建筑的绿色策略可转化为水、风、光、围护和运维机制。"
+    }
+  ],
+  "spatial_ideas": [
+    {
+      "text": "展馆被处理为半开放的小系统，嵌入坡子街-稻河头-五巷历史传统街区体验片区。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img04"
+      ]
+    },
+    {
+      "text": "中心水院延续稻河头水线索，兼具体量分割、参观组织和场所塑造作用。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img03",
+        "img04"
+      ]
+    },
+    {
+      "text": "视线分析用于反推檐高、树木遮挡、节点提示和周边建筑改造范围。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": []
+    }
+  ],
+  "materials_structure": [
+    {
+      "text": "基面石材采用锯齿状表面和 75mm 模数，形成细密光影肌理。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img05",
+        "img10"
+      ]
+    },
+    {
+      "text": "石材百叶幕墙替代传统青砖砌筑，兼顾连续界面、透气感和建造完整性。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img08",
+        "img09"
+      ]
+    },
+    {
+      "text": "PDF 将建造体系拆解为骨架、围合与地台，并要求结构、围护和完成面相互匹配。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img07"
+      ]
+    }
+  ],
+  "site_context": [
+    {
+      "text": "基地位于长江流域与淮河流域衔接地带，稻河头承载水运翻坝记忆。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img02"
+      ]
+    },
+    {
+      "text": "北邻五巷传统街区，南对坡子街现代商业中心，西侧有名人旧居和约 100 米高层。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img02"
+      ]
+    }
+  ],
+  "image_metadata": [
+    {
+      "id": "img01",
+      "file_name": "images/01_hero_views_pdf_p93.png",
+      "image_type": "01_hero",
+      "source_url": "C:/Users/dell/Desktop/泰州民俗文化展示中心.pdf",
+      "source_site": "User-provided PDF",
+      "caption": "从城市看建筑、序厅到长廊、中心水院等建成场景",
+      "copyright_note": "Research use from user-provided PDF; credits in PDF include 姚力 photography.",
+      "recommended_use": "cover / built atmosphere",
+      "relevance_reason": "支持对建成整体氛围、中心水院和长廊体验的分析。",
+      "related_sections": [
+        "03 一句话判断",
+        "06 建筑语言生成"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img02",
+      "file_name": "images/02_site_context_pdf_p88.png",
+      "image_type": "02_site",
+      "source_url": "C:/Users/dell/Desktop/泰州民俗文化展示中心.pdf",
+      "source_site": "User-provided PDF",
+      "caption": "基地位于区域节点部位及场地矛盾说明",
+      "copyright_note": "Research use from user-provided PDF.",
+      "recommended_use": "site analysis",
+      "relevance_reason": "支持基地区位、稻河头历史线索、名人旧居与高层冲突的分析。",
+      "related_sections": [
+        "04 场地信息表",
+        "08 方法 1"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img03",
+      "file_name": "images/07_concept_layout_generation_pdf_p89.png",
+      "image_type": "07_concept",
+      "source_url": "C:/Users/dell/Desktop/泰州民俗文化展示中心.pdf",
+      "source_site": "User-provided PDF",
+      "caption": "总体设计生成分析",
+      "copyright_note": "Research use from user-provided PDF.",
+      "recommended_use": "concept generation",
+      "relevance_reason": "支持东西向轴带、三段式总体布局和水线索延展的分析。",
+      "related_sections": [
+        "05 概念创意探索",
+        "08 方法 1"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img04",
+      "file_name": "images/03_plan_sequence_pdf_p90.png",
+      "image_type": "03_plan",
+      "source_url": "C:/Users/dell/Desktop/泰州民俗文化展示中心.pdf",
+      "source_site": "User-provided PDF",
+      "caption": "总平面、首层平面、鸟瞰中心水院、新旧融合视角",
+      "copyright_note": "Research use from user-provided PDF; credits in PDF include 姚力 photography.",
+      "recommended_use": "plan / sequence analysis",
+      "relevance_reason": "支持总平面、首层平面、中心水院和新旧融合关系的分析。",
+      "related_sections": [
+        "06.2 布局逻辑",
+        "08 方法 2"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img05",
+      "file_name": "images/06_facade_stone_louver_pdf_p91.png",
+      "image_type": "06_detail",
+      "source_url": "C:/Users/dell/Desktop/泰州民俗文化展示中心.pdf",
+      "source_site": "User-provided PDF",
+      "caption": "建筑外观、石材百叶幕墙、转角花窗、入口门架、夹院局部",
+      "copyright_note": "Research use from user-provided PDF; credits in PDF include 姚力 photography.",
+      "recommended_use": "facade / material analysis",
+      "relevance_reason": "支持石材百叶、转角花窗、入口门架和灰调外墙的材料表达分析。",
+      "related_sections": [
+        "07.2 材料与工艺",
+        "08 方法 3"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img06",
+      "file_name": "images/09_green_technology_pdf_p92.png",
+      "image_type": "09_analysis",
+      "source_url": "C:/Users/dell/Desktop/泰州民俗文化展示中心.pdf",
+      "source_site": "User-provided PDF",
+      "caption": "绿色建筑技术集成与融入建筑本体",
+      "copyright_note": "Research use from user-provided PDF.",
+      "recommended_use": "green technology analysis",
+      "relevance_reason": "支持绿色技术消隐进建筑本体和场地系统的分析。",
+      "related_sections": [
+        "07.4 性能与施工控制",
+        "08 方法 5"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img07",
+      "file_name": "images/06_construction_system_pdf_p248.png",
+      "image_type": "06_detail",
+      "source_url": "C:/Users/dell/Desktop/泰州民俗文化展示中心.pdf",
+      "source_site": "User-provided PDF",
+      "caption": "骨架、围合与地台的建造体系说明",
+      "copyright_note": "Research use from user-provided PDF.",
+      "recommended_use": "construction system analysis",
+      "relevance_reason": "支持骨架、围合与地台体系如何对应形式控制的分析。",
+      "related_sections": [
+        "07.1 建造语言"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img08",
+      "file_name": "images/06_mockup_material_pdf_p249.png",
+      "image_type": "06_detail",
+      "source_url": "C:/Users/dell/Desktop/泰州民俗文化展示中心.pdf",
+      "source_site": "User-provided PDF",
+      "caption": "定制灰砖外墙试版与石材百叶幕墙试版",
+      "copyright_note": "Research use from user-provided PDF.",
+      "recommended_use": "mockup / material decision",
+      "relevance_reason": "支持材料选择经过足尺试版比较的分析。",
+      "related_sections": [
+        "07.2 材料与工艺",
+        "08 方法 4"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img09",
+      "file_name": "images/06_stone_louver_detail_pdf_p250.png",
+      "image_type": "06_detail",
+      "source_url": "C:/Users/dell/Desktop/泰州民俗文化展示中心.pdf",
+      "source_site": "User-provided PDF",
+      "caption": "石材百叶幕墙与现代建造技术转译传统建筑特质",
+      "copyright_note": "Research use from user-provided PDF.",
+      "recommended_use": "facade tectonic analysis",
+      "relevance_reason": "支持石材百叶、花格窗、亮脊与玻璃长廊等系列化外墙工法分析。",
+      "related_sections": [
+        "07.3 构造逻辑",
+        "08 方法 3"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img10",
+      "file_name": "images/06_material_module_pdf_p251.png",
+      "image_type": "06_detail",
+      "source_url": "C:/Users/dell/Desktop/泰州民俗文化展示中心.pdf",
+      "source_site": "User-provided PDF",
+      "caption": "建筑面材在长宽高三个维度的划分",
+      "copyright_note": "Research use from user-provided PDF.",
+      "recommended_use": "module / facade setting-out",
+      "relevance_reason": "支持面材划分、模数、交圈对缝和转角处理对整体品相的影响分析。",
+      "related_sections": [
+        "07.3 构造逻辑"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img11",
+      "file_name": "images/06_waterproof_detail_pdf_p252.png",
+      "image_type": "06_detail",
+      "source_url": "C:/Users/dell/Desktop/泰州民俗文化展示中心.pdf",
+      "source_site": "User-provided PDF",
+      "caption": "不同材料交接与抵御水的构造节点",
+      "copyright_note": "Research use from user-provided PDF.",
+      "recommended_use": "waterproof / detail analysis",
+      "relevance_reason": "支持防水、防尘、玻璃长廊维护和复杂材料交接的建造控制分析。",
+      "related_sections": [
+        "07.4 性能与施工控制"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    }
+  ],
+  "download_mode": "completed",
+  "source_quality": {
+    "has_primary_sources": true,
+    "primary_sources_used_for_identity": true,
+    "architecture_media_count": 2,
+    "wechat_valid_result_count": 0,
+    "zhihu_valid_result_count": 0,
+    "source_sufficiency_status": "partial",
+    "secondary_source_heavy": false,
+    "manual_review_needed": [
+      "正式引用前需复核项目最终命名口径。",
+      "建筑面积 12000 平方米与 10306 平方米的统计口径需复核。",
+      "未保留独立有效的微信或知乎补充源；当前资料已由 PDF、住建局、WA 和展览页支撑。"
+    ],
+    "identity_confirming_source_ids": [
+      "s1",
+      "s2",
+      "s4"
+    ],
+    "analysis_coverage": [
+      "concept",
+      "context",
+      "program",
+      "circulation",
+      "facade_material",
+      "structure_construction",
+      "user_experience",
+      "urban_relationship"
+    ]
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "泰州民俗文化展示中心.pdf",
+      "url": "C:/Users/dell/Desktop/泰州民俗文化展示中心.pdf",
+      "source_level": "level_a",
+      "publisher": "用户提供 PDF / 博士论文项目实践章节",
+      "accessed_date": "2026-07-02",
+      "notes": "主要项目资料，包含场地、总体布局、材料、绿色技术、建造控制和图片图纸。"
+    },
+    {
+      "id": "s2",
+      "title": "【2012】新技术应用示范工程：泰州市科学发展观展示馆",
+      "url": "https://jsj.taizhou.gov.cn/cjtz/art/2012/art_d8281181ea554a22bd48b51c12730e3f.html",
+      "source_level": "level_a",
+      "publisher": "泰州市住房和城乡建设局",
+      "accessed_date": "2026-07-02",
+      "notes": "地方主管部门来源，用于交叉确认项目名称、建设地点、绿色技术和部分指标。"
+    },
+    {
+      "id": "s3",
+      "title": "中国院士馆巡展第二站：何镜堂院士建筑创作展",
+      "url": "https://tuanwei.nju.edu.cn/4c/b6/c24473a412854/page.htm",
+      "source_level": "level_a",
+      "publisher": "同济大学相关展览页面",
+      "accessed_date": "2026-07-02",
+      "notes": "用于补充何镜堂建筑创作与项目列表线索。"
+    },
+    {
+      "id": "s4",
+      "title": "2016 WA 中国建筑奖揭晓",
+      "url": "https://www.wamp.com.cn/award/year/2016",
+      "source_level": "level_b",
+      "publisher": "WA / 世界建筑",
+      "accessed_date": "2026-07-02",
+      "notes": "确认泰州民俗文化展示中心为 WA 城市贡献奖入围项目，并列出设计团队。"
+    },
+    {
+      "id": "s5",
+      "title": "gooood Interview NO.17 – He Jingtang",
+      "url": "https://www.gooood.cn/gooood-interview-hejingtang.htm",
+      "source_level": "level_b",
+      "publisher": "gooood",
+      "accessed_date": "2026-07-02",
+      "notes": "何镜堂访谈页，含项目图片线索和华南理工大学建筑设计研究院信息；非完整项目报道。"
+    }
+  ],
+  "uncertain_or_conflicting_info": [
+    {
+      "topic": "Project name",
+      "description": "用户 PDF 使用“泰州民俗文化展示中心”，住建局与部分公开资料使用“泰州科学发展观展示馆 / 展示中心”，英文资料使用 Exhibition Center of Scientific Outlook；判断为同一项目的不同命名口径。",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5"
+      ]
+    },
+    {
+      "topic": "Area",
+      "description": "WA 和展览资料显示约 12000 平方米，住建局页面显示 10306 平方米，可能因统计范围不同导致。",
+      "source_ids": [
+        "s2",
+        "s4"
+      ]
+    },
+    {
+      "topic": "Technical metrics",
+      "description": "高度、容积率、建筑密度、完整结构系统、造价明细和运维评价未在当前资料中完整确认。",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "technical_metrics": {
+    "site_area": {
+      "value": "",
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到稳定公开资料。"
+    },
+    "building_area": {
+      "value": "12000 / 10306",
+      "unit": "平方米",
+      "confidence": "conflicting",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "notes": "不同来源面积口径不一致，可能对应总建筑面积、展馆建筑面积或统计范围差异。"
+    },
+    "height": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到可靠高度。"
+    },
+    "floors": {
+      "value": "地上 3 层、地下 1 层",
+      "unit": "",
+      "confidence": "reported",
+      "source_ids": [
+        "s2"
+      ],
+      "notes": "住建局页面提供。"
+    },
+    "far": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到可靠资料。"
+    },
+    "building_density": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到可靠资料。"
+    },
+    "structure_system": {
+      "value": "",
+      "unit": "",
+      "confidence": "limited",
+      "source_ids": [
+        "s1"
+      ],
+      "notes": "PDF 说明骨架、围合与地台体系匹配，并提到钢结构参与屋脊等关键部位，但未披露完整结构体系。"
+    },
+    "main_materials": [
+      {
+        "text": "浅灰石材、石材百叶幕墙、金属构架花格窗、玻璃长廊、金属遮阳百叶、超白玻璃双银 LOW-E 玻璃。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img05",
+          "img09",
+          "img10"
+        ]
+      }
+    ],
+    "client": {
+      "value": "",
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "PDF 称建设单位邀请委托，但当前资料未稳定披露业主全称。"
+    },
+    "photography_drawing_credits": [
+      {
+        "text": "PDF 中图注包含项目资料、设计文件、姚力摄影、马明华摄影等。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img01",
+          "img04",
+          "img05"
+        ]
+      }
+    ],
+    "notes": "高精度经济技术指标缺失处均保持 unknown 或 limited，不作推测。"
+  },
+  "site_information": {
+    "location_role": {
+      "text": "基地位于稻河头、五巷传统街区、坡子街商业中心与名人旧居交汇的城市节点。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img02"
+      ]
+    },
+    "natural_environment": {
+      "text": "稻河头水系是场地的历史水运线索，设计将其转化为广场和中心水院的景观线索。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img03",
+        "img04"
+      ]
+    },
+    "cultural_environment": {
+      "text": "泰州传统建筑具有灰调、平正、质朴、敦厚等特质，项目将其转译为新泰州建筑品相。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img05",
+        "img09"
+      ]
+    },
+    "terrain_conditions": {
+      "text": "公开资料主要强调水系和街区结构，地形高程资料不足。",
+      "evidence_type": "missing",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": []
+    },
+    "roads_and_access": {
+      "text": "设计放弃从南侧直接进入旧居的思路，转而由东侧进入并沿东西向轴带组织参观。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img03"
+      ]
+    },
+    "surrounding_buildings": {
+      "text": "北侧五巷传统街区、南侧现代商业中心、西侧名人旧居及约 100 米高层共同构成设计约束。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img02"
+      ]
+    },
+    "served_users": {
+      "text": "服务展馆参观者、游客、市民公共活动和历史街区体验人群。",
+      "evidence_type": "synthesis",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img01",
+        "img04"
+      ]
+    },
+    "core_site_tension": {
+      "text": "核心矛盾是百米高层与单层名人旧居、历史小肌理与现代城市大尺度之间的冲突。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img02"
+      ]
+    }
+  },
+  "conceptual_exploration": {
+    "diagnosis": [
+      {
+        "text": "项目真实问题是重组被商业建筑、道路和高层开发割裂的历史城市节点。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img02"
+        ]
+      }
+    ],
+    "positioning": [
+      {
+        "text": "总体定位为“和谐与发展”，并以“传承创新、和谐发展、科技人文、绿色三星”为主轴。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "strategy": [
+      {
+        "text": "通过东西向轴带组织场地，把高层转化为名人旧居的背景或屏风。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img03"
+        ]
+      }
+    ],
+    "imagery_and_expression": [
+      {
+        "text": "以灰调、平正、低调、质朴、内敛、敦厚的“新泰州建筑”品相回应地方建筑气质。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img05",
+          "img09"
+        ]
+      }
+    ]
+  },
+  "architectural_language_generation": {
+    "function": [
+      {
+        "text": "功能需求分为展馆本体、片区体验区和社区公共空间三层。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img04"
+        ]
+      }
+    ],
+    "layout": [
+      {
+        "text": "总体布局由东至西为稻河头城市广场、新建展示馆主体、名人旧居展示区。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img03",
+          "img04"
+        ]
+      }
+    ],
+    "composition": [
+      {
+        "text": "中央水院分隔南北体量，北侧小体量衔接传统街区，南侧较大体量回应现代城市尺度。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img04"
+        ]
+      }
+    ],
+    "place_atmosphere": [
+      {
+        "text": "视线分析用于确定檐高、树木遮挡、节点提示和周边建筑立面改造内容。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img01"
+        ]
+      }
+    ]
+  },
+  "construction_quality_control": {
+    "construction_language": [
+      {
+        "text": "建造体系被拆解为骨架、围合和地台，并要求结构面、完成面和关键出型部位匹配。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img07"
+        ]
+      }
+    ],
+    "materials_and_craft": [
+      {
+        "text": "传统青砖试版未满足新建筑体量和外墙品质要求，最终转向石材百叶幕墙系统。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img08",
+          "img09"
+        ]
+      }
+    ],
+    "tectonic_logic": [
+      {
+        "text": "基面石材 75mm 模数、石材百叶、花格窗、亮脊和玻璃长廊形成系列化外墙工法。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img09",
+          "img10"
+        ]
+      }
+    ],
+    "performance_and_construction_control": [
+      {
+        "text": "防水策略包括顶面排水、边沿沟滴水、交接设防水和地台阻潮气；绿色技术以消隐方式融入建筑本体。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "related_image_ids": [
+          "img06",
+          "img11"
+        ]
+      }
+    ]
+  },
+  "design_lessons": {
+    "transferable_methods": [
+      {
+        "text": "以一条清晰的场地叙事轴重新组织复杂城市更新要素。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img03"
+        ]
+      },
+      {
+        "text": "从地方建筑的气质、尺度和构造节奏提炼当代表达，而非复制样式。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img05",
+          "img09"
+        ]
+      },
+      {
+        "text": "用足尺试版验证材料选择和外墙系统，而不是只依赖效果图判断。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img08"
+        ]
+      }
+    ],
+    "avoid_copying": [
+      {
+        "text": "石材百叶、灰调立面和花窗意象依赖泰州地方文脉与项目条件，不宜脱离场地直接套用。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img05"
+        ]
+      }
+    ],
+    "analysis_diagram_potential": [
+      "东西向叙事轴图",
+      "南北尺度梯度图",
+      "传统特征到现代构造转译图",
+      "骨架-围合-地台体系图",
+      "绿色技术消隐图"
+    ]
+  }
+}

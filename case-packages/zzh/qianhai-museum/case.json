@@ -1,0 +1,426 @@
+{
+  "project_name": "前海博物馆 / Qianhai Museum",
+  "architects": [
+    "何镜堂",
+    "华南理工大学建筑设计研究院",
+    "何镜堂创作院"
+  ],
+  "location": "中国广东省深圳市前海合作区前湾片区",
+  "year": "主体结构2024年12月封顶；预计2026年竣工 / 2026年10月开馆试运行",
+  "program": "博物馆 / 复合型公共文化建筑",
+  "status": "在建",
+  "case_type": "Cultural",
+  "disambiguation_status": "confirmed",
+  "disambiguation_candidates": [
+    {
+      "candidate_project": "前海博物馆，深圳，何镜堂团队最终实施方案",
+      "location": "深圳前海合作区前湾片区",
+      "architects": "何镜堂 / 华南理工大学建筑设计研究院何镜堂创作院",
+      "year": "2024主体封顶；预计2026竣工 / 开馆试运行",
+      "type": "博物馆 / 公共文化建筑",
+      "main_sources": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "confidence": "high",
+      "question_for_user": "User clarified this is the Shenzhen project by He Jingtang."
+    },
+    {
+      "candidate_project": "国深博物馆竞赛阶段其他方案，例如 URBANUS 提案",
+      "location": "深圳前海",
+      "architects": "URBANUS / 其他竞赛团队",
+      "year": "竞赛阶段",
+      "type": "竞赛提案",
+      "main_sources": [],
+      "confidence": "excluded",
+      "question_for_user": "Excluded because user specified He Jingtang's Shenzhen Qianhai Museum."
+    }
+  ],
+  "information_confidence": "limited",
+  "incomplete_reason": "身份和核心项目信息已由官方/政府来源确认，但缺少针对最终实施方案的 ArchDaily、gooood、有方等 Level B 建筑专业媒体项目报道；已按强制 fallback 检索搜狗微信和搜狗知乎，并将6条有效微信结果的可见内容纳入资料包。设计分析主要依据官方报道、建设报道、地方媒体和微信补充资料。",
+  "one_sentence_summary": "前海博物馆以“文明之树、时代明灯”为理念，将前海山海城格局、国家级文化设施的纪念性和开放型公共文化空间整合为一个高强度博物馆综合体。",
+  "key_facts": [
+    {
+      "label": "Architect / lead designer",
+      "value": "中国工程院院士何镜堂主持设计",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s7"
+      ]
+    },
+    {
+      "label": "Location",
+      "value": "深圳前海合作区前湾片区",
+      "source_ids": [
+        "s4",
+        "s6"
+      ]
+    },
+    {
+      "label": "Area",
+      "value": "占地面积约3.24万平方米，总建筑面积约12.6万平方米",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ]
+    },
+    {
+      "label": "Status",
+      "value": "主体结构2024年12月封顶；2026年1月报道称幕墙工程基本完工，预计2026年10月开馆试运行",
+      "source_ids": [
+        "s2",
+        "s5"
+      ]
+    },
+    {
+      "label": "Design concept",
+      "value": "文明之树、时代明灯；融合前海山海城特色",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s7"
+      ]
+    }
+  ],
+  "design_concept": {
+    "sourced_concept": "官方和媒体资料均称项目以“文明之树、时代明灯”为设计理念，并融合前海“山海城”特色，目标为国家级、综合性、开放型、智慧型、国际化博物馆。",
+    "ai_synthesis": "项目以强纪念性体量、重檐层级、中庭公共空间和高位山海剧场，把传统文化意象、湾区地理景观和复合型文化功能叠合起来。",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s4",
+      "s5",
+      "s7"
+    ]
+  },
+  "key_strategies": [
+    {
+      "strategy_name": "文明之树、时代明灯的纪念性形象",
+      "design_problem": "前海需要一个能承载新区文化身份和城市展示功能的大型公共文化地标。",
+      "specific_approach": "通过五层重檐、逐层出挑和灯笼式展开的形象塑造高识别度。",
+      "architectural_effect": "建筑在前海湾区天际线中形成强地标性，并将传统文化意象转译为当代公共建筑形象。",
+      "evidence": "Directly sourced and AI synthesis",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s5",
+        "s6"
+      ],
+      "related_image_ids": [
+        "img_hero"
+      ],
+      "transferable_lesson": "大型文化建筑可以用抽象化传统空间原型建立城市识别，但需用真实空间和结构支撑。"
+    },
+    {
+      "strategy_name": "城市会客厅作为开放型公共文化中庭",
+      "design_problem": "博物馆若只服务展陈，容易与日常城市生活脱节。",
+      "specific_approach": "设置约40米净高、贯通四层的城市会客厅，以负形手法重构传统楼阁意象。",
+      "architectural_effect": "中庭兼具到达、集散、仪式和公共文化活动功能。",
+      "evidence": "Directly sourced",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s6"
+      ],
+      "related_image_ids": [
+        "img_interior"
+      ],
+      "transferable_lesson": "博物馆公共大厅可以成为城市公共事件和展示技术的复合载体。"
+    },
+    {
+      "strategy_name": "无柱山海剧场连接观景与文化活动",
+      "design_problem": "前海项目面对大小南山与前海湾，需要把自然景观转化为建筑体验。",
+      "specific_approach": "在五层平台设置近百米跨度无柱山海剧场，南北两侧分别面向山、海景观。",
+      "architectural_effect": "高位平台把观景、观演、公共活动和城市地标体验叠合起来。",
+      "evidence": "Directly sourced",
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "related_image_ids": [
+        "img_stage"
+      ],
+      "transferable_lesson": "有强自然景观资源的文化建筑，可把观景组织为展陈之外的公共节目。"
+    },
+    {
+      "strategy_name": "大跨度结构支撑高位开放空间",
+      "design_problem": "大型博物馆需要同时容纳展陈、公共活动和地标形象，结构难度高。",
+      "specific_approach": "使用倾斜巨柱、核心筒和桥梁工程拱结构，支撑高位大跨度无柱空间。",
+      "architectural_effect": "结构不仅解决跨度，也参与形成逐层升腾的外观和高位公共平台。",
+      "evidence": "Directly sourced",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s5"
+      ],
+      "related_image_ids": [
+        "img_stage"
+      ],
+      "transferable_lesson": "大型公共文化建筑的结构策略应同时服务空间自由度、形象表达和公共体验。"
+    }
+  ],
+  "spatial_ideas": [
+    {
+      "text": "公开资料显示项目包含城市会客厅、五层平台、螺旋楼梯、无柱山海剧场和屋面可达路径，空间组织具有从地面公共大厅向高位观景平台上升的特征。",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "related_image_ids": [
+        "img_interior",
+        "img_stage"
+      ]
+    }
+  ],
+  "materials_structure": [
+    {
+      "text": "深圳政府在线记录项目用钢量约2.8万吨，结构包括12根倾斜巨柱和8个核心筒；前海管理局和21财经记录山海剧场两座圆拱高度22.75米、跨度94.34米。",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s5"
+      ],
+      "related_image_ids": [
+        "img_stage"
+      ]
+    }
+  ],
+  "site_context": [
+    {
+      "text": "项目位于前海合作区前湾片区，设计叙述强调融合前海山海城特色；报道中提到可眺望前海湾和大小南山。",
+      "source_ids": [
+        "s2",
+        "s4",
+        "s5"
+      ],
+      "related_image_ids": [
+        "img_site"
+      ]
+    }
+  ],
+  "image_metadata": [
+    {
+      "id": "img_hero",
+      "file_name": "",
+      "image_type": "01_hero",
+      "source_url": "https://qh.sz.gov.cn/sygnan/qhzx/dtzx/content/post_12134217.html",
+      "source_site": "深圳前海",
+      "caption": "前海博物馆项目效果图和内部效果图页面。",
+      "copyright_note": "Reference link only; rights not cleared.",
+      "recommended_use": "cover, massing analysis",
+      "related_sections": [
+        "03 一句话判断",
+        "06 核心建筑策略"
+      ],
+      "download_status": "not_requested",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_site",
+      "file_name": "",
+      "image_type": "02_site",
+      "source_url": "https://www.21jingji.com/article/20250418/herald/3e40828cac2d9263969dacd4530abb28.html",
+      "source_site": "21财经",
+      "caption": "前海博物馆俯瞰图 / 受访方供图。",
+      "copyright_note": "Reference link only; rights not cleared.",
+      "recommended_use": "site relationship reference",
+      "related_sections": [
+        "04 项目背景",
+        "07 空间与流线"
+      ],
+      "download_status": "not_requested",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_interior",
+      "file_name": "",
+      "image_type": "08_interior",
+      "source_url": "https://qh.sz.gov.cn/sygnan/qhzx/dtzx/content/post_12134217.html",
+      "source_site": "深圳前海",
+      "caption": "城市会客厅与内部效果图。",
+      "copyright_note": "Reference link only; rights not cleared.",
+      "recommended_use": "interior public space reference",
+      "related_sections": [
+        "05 设计理念",
+        "06 核心建筑策略",
+        "07 空间与流线"
+      ],
+      "download_status": "not_requested",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_stage",
+      "file_name": "",
+      "image_type": "09_analysis",
+      "source_url": "https://qh.sz.gov.cn/sygnan/qhzx/dtzx/content/post_12134217.html",
+      "source_site": "深圳前海",
+      "caption": "无柱山海剧场与五层平台相关报道入口。",
+      "copyright_note": "Reference link only; rights not cleared.",
+      "recommended_use": "span, structure, public platform analysis",
+      "related_sections": [
+        "06 核心建筑策略",
+        "08 形体、立面与建构"
+      ],
+      "download_status": "not_requested",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_concept",
+      "file_name": "",
+      "image_type": "07_concept",
+      "source_url": "https://mobile.shenzhenmuseum.com/qian-hai/detail?resId=021f251b6d9f40abb609ab3302334048&type=0",
+      "source_site": "深圳博物馆",
+      "caption": "前海博物馆概念介绍入口。",
+      "copyright_note": "Reference link only; rights not cleared.",
+      "recommended_use": "concept reference",
+      "related_sections": [
+        "05 设计理念"
+      ],
+      "download_status": "not_requested",
+      "failure_reason": ""
+    }
+  ],
+  "download_mode": "not_requested",
+  "source_quality": {
+    "has_primary_sources": true,
+    "primary_sources_used_for_identity": true,
+    "architecture_media_count": 0,
+    "wechat_valid_result_count": 6,
+    "zhihu_valid_result_count": 0,
+    "source_sufficiency_status": "insufficient",
+    "secondary_source_heavy": true,
+    "manual_review_needed": [
+      "No Level B professional architecture media project report for the final He Jingtang implementation scheme was retained.",
+      "Mandatory WeChat fallback was run. Six Sogou WeChat result entries were judged valid and their visible content was added to the package.",
+      "Mandatory Zhihu fallback was run. Results mainly concerned He Jingtang's other works, generic museum design topics, or competition/learning material, so no project-specific Zhihu article was retained.",
+      "Do not confuse this project with earlier National Shenzhen Museum / 国深博物馆 competition proposals by other teams.",
+      "Opening / completion timing should be checked again near publication because 2025 and 2026 reports use different wording."
+    ],
+    "identity_confirming_source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "analysis_coverage": [
+      "concept",
+      "context",
+      "program",
+      "circulation",
+      "structure_construction",
+      "user_experience",
+      "urban_relationship"
+    ]
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "深圳博物馆：这座承载着深圳新时代文化使命的建筑揭开神秘面纱",
+      "url": "https://mobile.shenzhenmuseum.com/qian-hai/detail?resId=021f251b6d9f40abb609ab3302334048&type=0",
+      "source_level": "level_a",
+      "publisher": "深圳博物馆",
+      "accessed_date": "2026-06-16",
+      "notes": "Institutional museum page; used for identity and design concept."
+    },
+    {
+      "id": "s2",
+      "title": "前海博物馆内景首次“曝光”，预计明年竣工投用",
+      "url": "https://qh.sz.gov.cn/sygnan/qhzx/dtzx/content/post_12134217.html",
+      "source_level": "level_a",
+      "publisher": "深圳前海 / 前海管理局",
+      "accessed_date": "2026-06-16",
+      "notes": "Government project update; used for identity, concept, area, program, interior public spaces, and structure."
+    },
+    {
+      "id": "s3",
+      "title": "前海博物馆预计明年投用",
+      "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/zwdt/content/post_12133065.html",
+      "source_level": "level_a",
+      "publisher": "深圳政府在线",
+      "accessed_date": "2026-06-16",
+      "notes": "Municipal government portal reposting Shenzhen Special Zone Daily; used for status, structure, area, and public-space information."
+    },
+    {
+      "id": "s4",
+      "title": "视频丨2026年竣工投用！南财记者实探“文明之树”前海博物馆",
+      "url": "https://www.21jingji.com/article/20250418/herald/3e40828cac2d9263969dacd4530abb28.html",
+      "source_level": "level_c",
+      "publisher": "21财经",
+      "accessed_date": "2026-06-16",
+      "notes": "Local media reporting with interview attribution to Zhang Zhenhui, deputy chief architect for Qianhai Museum."
+    },
+    {
+      "id": "s5",
+      "title": "深圳再迎新地标 前海博物馆预计10月开馆试运行",
+      "url": "https://www.21jingji.com/article/20260109/herald/3465c1124c399f02ec92280c057511c5.html",
+      "source_level": "level_c",
+      "publisher": "21财经",
+      "accessed_date": "2026-06-16",
+      "notes": "Recent local media update; used for 2026 opening-trial timing and mountain/sea theater description."
+    },
+    {
+      "id": "s6",
+      "title": "相当于4个埃菲尔铁塔重量！前海博物馆内部首次曝光",
+      "url": "https://pub-zhtb.hizh.cn/s/202504/18/AP680202e3e4b00a07bbcab86a.html",
+      "source_level": "level_c",
+      "publisher": "珠海网",
+      "accessed_date": "2026-06-16",
+      "notes": "Reposted local-media style report; retained for Zhang Zhenhui quote about five-layer eaves and lantern-like form."
+    },
+    {
+      "id": "s7",
+      "title": "搜狗微信：前海博物馆 何镜堂 建筑设计",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E5%89%8D%E6%B5%B7%E5%8D%9A%E7%89%A9%E9%A6%86%20%E4%BD%95%E9%95%9C%E5%A0%82%20%E5%BB%BA%E7%AD%91%E8%AE%BE%E8%AE%A1",
+      "source_level": "level_c",
+      "publisher": "Sogou WeChat / multiple WeChat public accounts",
+      "accessed_date": "2026-06-16",
+      "notes": "Mandatory fallback result page. Six retained visible entries: 绿变变, 设计时讯, 美筑D, GA环球建筑, 设计时讯, 前海控股. Used for public-account supplementary content including design-team confirmation, concept repetition, opening/status wording, public reception, and construction progress."
+    }
+  ],
+  "uncertain_or_conflicting_info": [
+    {
+      "topic": "Level B professional architecture media",
+      "description": "Targeted searches for gooood, ArchDaily / ArchDaily China, and Archiposition / 有方 did not retain a final-scheme project report for He Jingtang's Qianhai Museum.",
+      "source_ids": []
+    },
+    {
+      "topic": "Project disambiguation",
+      "description": "The earlier 国深博物馆 / National Shenzhen Museum competition stage includes other published proposals, including URBANUS. Those are not treated as the user's target after clarification.",
+      "source_ids": []
+    },
+    {
+      "topic": "Completion / opening timing",
+      "description": "2025 official/government reports say the project is expected to be completed and put into use in 2026; a 2026 local media update says it is expected to open for trial operation in October 2026.",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s5"
+      ]
+    },
+    {
+      "topic": "Detailed drawings and envelope construction",
+      "description": "Publicly retained sources do not provide full plans, sections, facade system, or detailed material and construction information.",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "topic": "WeChat and Zhihu supplementary results",
+      "description": "Mandatory fallback was executed. Sogou WeChat returned about 114 results for '前海博物馆 何镜堂 建筑设计'; six result entries were judged valid because they clearly discuss the target project and add identity, concept, opening/status, public reception, or project-team information. Sogou Zhihu did not return a project-specific, substantive Qianhai Museum analysis article; its useful results were mainly about He Jingtang's other works or generic museum design topics.",
+      "source_ids": [
+        "s7"
+      ]
+    }
+  ]
+}

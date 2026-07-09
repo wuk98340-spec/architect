@@ -1,0 +1,894 @@
+{
+  "project_name": "苏州博物馆新馆 / Suzhou Museum",
+  "architects": [
+    "I. M. Pei Architect",
+    "Pei Partnership Architects"
+  ],
+  "location": "江苏省苏州市姑苏区东北街与齐门路交汇处，邻近忠王府、拙政园与狮子林",
+  "year": "2006",
+  "program": "文化建筑 / 博物馆",
+  "status": "completed; opened to the public in October 2006",
+  "case_type": "Cultural",
+  "disambiguation_status": "confirmed",
+  "disambiguation_candidates": [
+    {
+      "candidate_project": "苏州博物馆新馆 / Suzhou Museum",
+      "location": "Suzhou, Jiangsu, China",
+      "architects": "I. M. Pei Architect; Pei Partnership Architects",
+      "year": "2006",
+      "type": "Cultural / Museum",
+      "main_sources": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "confidence": "high",
+      "question_for_user": "用户指定“苏州博物馆新馆”且提供贝聿铭作品 PDF，项目身份清晰，无需进一步确认。"
+    }
+  ],
+  "information_confidence": "high",
+  "incomplete_reason": "核心身份、场地、设计意图、材料和空间策略资料充分；完整结构体系、容积率、建筑密度、施工过程、节点详图和面积统计口径仍需人工复核。",
+  "one_sentence_summary": "苏州博物馆新馆以低矮院落化布局、黑白灰材料转译、几何屋面和自然光，把苏州传统园林与民居语汇转化为现代公共文化建筑语言。",
+  "key_facts": [
+    {
+      "label": "建筑师",
+      "value": "I. M. Pei Architect; Pei Partnership Architects",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s5"
+      ]
+    },
+    {
+      "label": "地点",
+      "value": "苏州东北街和齐门路相汇处，邻近忠王府、拙政园与狮子林",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ]
+    },
+    {
+      "label": "建成 / 开放",
+      "value": "2006 年 10 月竣工开馆；2006 年 10 月 6 日对外开放",
+      "source_ids": [
+        "s1",
+        "s5",
+        "s7"
+      ]
+    },
+    {
+      "label": "新馆面积",
+      "value": "官方口径为建筑面积 19,000 余平方米；不同专业媒体存在 15,000-17,000 平方米左右的口径差异",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s5"
+      ]
+    },
+    {
+      "label": "设计原则",
+      "value": "中而新、苏而新；不高不大不突出",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "design_concept": {
+    "sourced_concept": "官方资料将设计概括为“中而新、苏而新”和“不高不大不突出”，并强调传统与现代、传承与创新；PEI Architects 说明设计从苏州白墙、深灰屋顶和园林建筑语汇中取意。",
+    "ai_synthesis": "项目通过控制尺度、分块院落、几何坡顶、现代材料和光线组织，在不复制古典园林的前提下延续苏州古城的空间秩序与文化记忆。",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4"
+    ]
+  },
+  "key_strategies": [
+    {
+      "strategy_name": "历史街区中的低矮分块尺度",
+      "design_problem": "新馆位于拙政园、狮子林、忠王府等高敏感历史环境中，现代公共建筑容易破坏古城尺度。",
+      "specific_approach": "主体以地下一层、地面一层为主，局部二层；建筑群分为中、西、东三路并组织庭院。",
+      "architectural_effect": "在满足博物馆容量的同时，使新馆作为古城文化长廊的一部分，而不是压倒周边古建的纪念物。",
+      "evidence": "Directly sourced and synthesis from official description and PDF plan/section page.",
+      "source_ids": [
+        "s1",
+        "s6"
+      ],
+      "related_image_ids": [
+        "img_plan_pdf_p6"
+      ],
+      "transferable_lesson": "历史街区的新公共建筑应先控制高度、檐口、分块和院落边界，再展开造型设计。"
+    },
+    {
+      "strategy_name": "传统符号的现代材料转译",
+      "design_problem": "直接仿古会削弱现代性，完全现代又可能脱离苏州语境。",
+      "specific_approach": "延续粉墙黛瓦的黑白灰关系，用“中国黑”花岗石、玻璃天窗和开放式钢结构重构屋面与立面。",
+      "architectural_effect": "建筑保留苏州传统色彩记忆，同时具备现代构造、耐久性和清晰几何秩序。",
+      "evidence": "Directly sourced from official museum page, Google Arts & Culture and Architectural Record.",
+      "source_ids": [
+        "s1",
+        "s4",
+        "s5"
+      ],
+      "related_image_ids": [
+        "img_detail_pdf_p8"
+      ],
+      "transferable_lesson": "地域性可以通过比例、颜色、轮廓和性能要求被现代材料重组，而不必原样复制构件。"
+    },
+    {
+      "strategy_name": "院落与水景作为建筑和园林的中介",
+      "design_problem": "新馆邻近拙政园，但不能简单打开边界或模拟古典园林。",
+      "specific_approach": "以主庭院和若干小内庭院组织建筑，使用池塘、片石假山、桥、亭和竹林形成现代山水园。",
+      "architectural_effect": "参观体验具有园林式的停顿、转折和观看节奏，并与拙政园形成意象上的连续。",
+      "evidence": "Directly sourced from official museum page, Google Arts & Culture and Architizer.",
+      "source_ids": [
+        "s1",
+        "s4",
+        "s7"
+      ],
+      "related_image_ids": [
+        "img_language_pdf_p7"
+      ],
+      "transferable_lesson": "面对强历史景观时，可以用庭院、水、墙和路径构造间接连续，而非追求直接复制或视觉打通。"
+    },
+    {
+      "strategy_name": "自然光作为空间组织材料",
+      "design_problem": "博物馆既需要控制展品光环境，也需要让公共空间具有开放感和方向感。",
+      "specific_approach": "通过玻璃天窗、几何屋顶、遮光条和斜角窗导入并调节自然光。",
+      "architectural_effect": "光线成为路径识别、空间氛围和展览体验的一部分。",
+      "evidence": "Directly sourced from official museum page and Google Arts & Culture.",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "related_image_ids": [
+        "img_detail_pdf_p8"
+      ],
+      "transferable_lesson": "文化建筑的采光策略应同时处理展品保护、路径识别和空间氛围。"
+    },
+    {
+      "strategy_name": "从街道到门庭的公共性过渡",
+      "design_problem": "传统深宅大院的封闭感与现代博物馆的公共开放性存在张力。",
+      "specific_approach": "入口采用玻璃重檐和金属梁架，并建议将临馆东北街改为步行街、以金山石铺地。",
+      "architectural_effect": "公共性从城市街道、入口前庭、中央大厅到展览空间逐层展开。",
+      "evidence": "Directly sourced from official museum page.",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img_plan_pdf_p6"
+      ],
+      "transferable_lesson": "公共文化建筑应把街道、入口门庭和室内大厅作为连续系统设计。"
+    }
+  ],
+  "spatial_ideas": [
+    {
+      "text": "建筑群以中部入口、中央大厅和主庭院为核心，西部为主展区，东部为辅展区和行政办公区。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img_plan_pdf_p6"
+      ]
+    },
+    {
+      "text": "入口八角大厅承担转向和分流作用，展厅沿通道展开，形成介于博物馆展览路径和园林游线之间的体验。",
+      "source_ids": [
+        "s5"
+      ],
+      "related_image_ids": [
+        "img_plan_pdf_p6"
+      ]
+    },
+    {
+      "text": "主庭院以水、片石假山、桥、亭和竹林建立现代山水园，并与拙政园形成意象连续。",
+      "source_ids": [
+        "s1",
+        "s4",
+        "s7"
+      ],
+      "related_image_ids": [
+        "img_language_pdf_p7"
+      ]
+    }
+  ],
+  "materials_structure": [
+    {
+      "text": "屋面使用深灰色“中国黑”花岗石替代传统小青瓦，兼顾色彩记忆、耐久、维护和平整度。",
+      "source_ids": [
+        "s1",
+        "s4",
+        "s5"
+      ],
+      "related_image_ids": [
+        "img_detail_pdf_p8"
+      ]
+    },
+    {
+      "text": "开放式钢结构、玻璃天窗和遮光条让自然光进入大厅和展区，替代传统木构屋顶中的封闭采光方式。",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "related_image_ids": [
+        "img_detail_pdf_p8"
+      ]
+    },
+    {
+      "text": "完整结构体系、柱网、基础和节点详图未检索到可靠公开资料。",
+      "source_ids": [],
+      "related_image_ids": []
+    }
+  ],
+  "site_context": [
+    {
+      "text": "项目位于苏州古城历史街区，邻近忠王府和拙政园。",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5"
+      ],
+      "related_image_ids": [
+        "img_plan_pdf_p6"
+      ]
+    },
+    {
+      "text": "周边粉墙黛瓦、低矮尺度、园林和历史建筑共同构成设计必须回应的文脉。",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "related_image_ids": [
+        "img_language_pdf_p7"
+      ]
+    },
+    {
+      "text": "东北街步行化和金山石铺地把博物馆公共性延伸到城市界面。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": []
+    }
+  ],
+  "image_metadata": [
+    {
+      "id": "img_plan_pdf_p6",
+      "file_name": "images/03_plan_and_section_pdf_p6.png",
+      "image_type": "03_plan",
+      "source_url": "C:/Users/dell/Desktop/贝聿铭作品.pdf",
+      "source_site": "User-provided PDF",
+      "caption": "PDF 第 6 页：苏州博物馆新馆平面与剖面图参考",
+      "copyright_note": "User-provided PDF for research organization; rights not cleared.",
+      "recommended_use": "plan and section analysis",
+      "relevance_reason": "用于支撑三路布局、院落组织、局部高度和剖面关系的分析。",
+      "related_sections": [
+        "05 概念创意探索",
+        "06 建筑语言生成",
+        "08 核心方法提炼"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_language_pdf_p7",
+      "file_name": "images/07_spatial_language_pdf_p7.png",
+      "image_type": "07_concept",
+      "source_url": "C:/Users/dell/Desktop/贝聿铭作品.pdf",
+      "source_site": "User-provided PDF",
+      "caption": "PDF 第 7 页：苏州博物馆新馆空间语言与传统语汇转译参考",
+      "copyright_note": "User-provided PDF for research organization; rights not cleared.",
+      "recommended_use": "concept and spatial language analysis",
+      "relevance_reason": "用于支撑传统民居、园林语汇被几何化、抽象化、现代化的判断。",
+      "related_sections": [
+        "05 概念创意探索",
+        "06 建筑语言生成",
+        "08 核心方法提炼"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_detail_pdf_p8",
+      "file_name": "images/06_material_detail_pdf_p8.png",
+      "image_type": "06_detail",
+      "source_url": "C:/Users/dell/Desktop/贝聿铭作品.pdf",
+      "source_site": "User-provided PDF",
+      "caption": "PDF 第 8 页：墙面、窗洞与石材 / 玻璃构造表达参考",
+      "copyright_note": "User-provided PDF for research organization; rights not cleared.",
+      "recommended_use": "material and tectonic analysis",
+      "relevance_reason": "用于支撑墙面、屋面、玻璃和石材的构造表达分析。",
+      "related_sections": [
+        "07 建造品质控制",
+        "08 核心方法提炼"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    }
+  ],
+  "download_mode": "completed",
+  "source_mode": "mixed",
+  "evidence_spans": [
+    {
+      "id": "pdf_p6_plan_section",
+      "source_id": "s6",
+      "page_start": 6,
+      "page_end": 6,
+      "evidence_type": "sourced",
+      "quote_or_summary": "第 6 页包含苏州博物馆新馆平面图和剖面图参考，可用于识别三路布局、展区分布、院落组织和局部高度关系。",
+      "supports": [
+        "key_facts[4]",
+        "design_concept",
+        "key_strategies[0]",
+        "key_strategies[4]",
+        "spatial_ideas[0]",
+        "architectural_language_generation.layout"
+      ],
+      "notes": "PDF 文本层乱码，因此以渲染页图和可见图注作为证据。"
+    },
+    {
+      "id": "pdf_p7_spatial_language",
+      "source_id": "s6",
+      "page_start": 7,
+      "page_end": 7,
+      "evidence_type": "sourced",
+      "quote_or_summary": "第 7 页讨论并展示苏州博物馆新馆对传统民居、园林语汇、空间气氛和整体建筑品格的转译。",
+      "supports": [
+        "design_concept",
+        "key_strategies[2]",
+        "conceptual_exploration.imagery_and_expression",
+        "architectural_language_generation.place_atmosphere",
+        "design_lessons.transferable_methods[2]"
+      ],
+      "notes": "PDF 文本层乱码，因此以渲染页图和可见图注作为证据。"
+    },
+    {
+      "id": "pdf_p8_material_detail",
+      "source_id": "s6",
+      "page_start": 8,
+      "page_end": 8,
+      "evidence_type": "sourced",
+      "quote_or_summary": "第 8 页包含墙面、窗洞、石材屋面、玻璃构造等图片参考，用于支持材料转译与建造品质控制分析。",
+      "supports": [
+        "key_strategies[1]",
+        "key_strategies[3]",
+        "materials_structure[0]",
+        "construction_quality_control.materials_and_craft",
+        "construction_quality_control.tectonic_logic"
+      ],
+      "notes": "PDF 文本层乱码，因此以渲染页图和可见图注作为证据。"
+    }
+  ],
+  "source_quality": {
+    "has_primary_sources": true,
+    "primary_sources_used_for_identity": true,
+    "architecture_media_count": 3,
+    "wechat_valid_result_count": 0,
+    "zhihu_valid_result_count": 0,
+    "source_sufficiency_status": "sufficient",
+    "secondary_source_heavy": false,
+    "manual_review_needed": [
+      "面积口径存在差异，正式发表前需按统计范围复核。",
+      "PDF 文本层乱码，本文仅使用其页图作为本地参考。"
+    ],
+    "identity_confirming_source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s4",
+      "s5"
+    ],
+    "analysis_coverage": [
+      "concept",
+      "context",
+      "program",
+      "circulation",
+      "facade_material",
+      "structure_construction",
+      "user_experience",
+      "urban_relationship"
+    ]
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "苏博建筑",
+      "url": "https://dx.szmuseum.com/views/NewsDetails.aspx?guid=349a54de-f3f5-41bc-b86d-7c3488d3c0d6",
+      "source_level": "level_a",
+      "publisher": "苏州博物馆",
+      "accessed_date": "2026-07-02",
+      "notes": "官方页面；用于身份、场地、面积、布局、高度、材料、光线、庭院和步行街等核心事实。"
+    },
+    {
+      "id": "s2",
+      "title": "Suzhou Museum",
+      "url": "https://pei-architects.com/projects/suzhou-museum/",
+      "source_level": "level_a",
+      "publisher": "PEI Architects",
+      "accessed_date": "2026-07-02",
+      "notes": "建筑师事务所项目页；用于确认位置、业主、面积、完成时间、功能和设计语汇。"
+    },
+    {
+      "id": "s3",
+      "title": "AD经典：苏州博物馆 / 贝聿铭 + 贝氏建筑事务所",
+      "url": "https://www.archdaily.cn/cn/943933/adjing-dian-su-zhou-bo-wu-guan-bei-yu-ming-plus-bei-shi-jian-zhu-shi-wu-suo",
+      "source_level": "level_b",
+      "publisher": "ArchDaily China",
+      "accessed_date": "2026-07-02",
+      "notes": "专业建筑媒体；用于建筑师、面积、项目年份、摄影和项目综述。"
+    },
+    {
+      "id": "s4",
+      "title": "苏州博物馆：贝聿铭建筑大作",
+      "url": "https://artsandculture.google.com/story/hgXxr9NyQc6tKA?hl=zh-CN",
+      "source_level": "level_a",
+      "publisher": "Google Arts & Culture / 苏州博物馆",
+      "accessed_date": "2026-07-02",
+      "notes": "苏州博物馆提供的专题页面；用于设计挑战、植物、水景、材料、光线和室内体验说明。"
+    },
+    {
+      "id": "s5",
+      "title": "Suzhou Museum by I. M. Pei",
+      "url": "https://www.architecturalrecord.com/articles/8019-suzhou-museum-by-i-m-pei",
+      "source_level": "level_b",
+      "publisher": "Architectural Record",
+      "accessed_date": "2026-07-02",
+      "notes": "专业建筑媒体；用于平面组织、展厅关系、花岗石屋面、团队和顾问信息。"
+    },
+    {
+      "id": "s6",
+      "title": "贝聿铭作品.pdf",
+      "url": "references/bei-yuming-works.pdf",
+      "source_level": "level_a",
+      "publisher": "User-provided PDF",
+      "accessed_date": "2026-07-02",
+      "notes": "用户提供本地 PDF；文本层乱码，已渲染第 6-8 页作为平面、剖面、空间语言和材料构造参考。",
+      "source_kind": "user_pdf",
+      "file_path": "references/bei-yuming-works.pdf",
+      "page_count": 8,
+      "bibliographic_note": "本地文件原路径：C:/Users/dell/Desktop/贝聿铭作品.pdf；已复制进案例包 references/。"
+    },
+    {
+      "id": "s7",
+      "title": "Suzhou Museum",
+      "url": "https://architizer.com/projects/suzhou-museum/",
+      "source_level": "level_b",
+      "publisher": "Architizer",
+      "accessed_date": "2026-07-02",
+      "notes": "专业建筑项目媒体；用于补充场地、设计语汇、庭院水景和开放时间。"
+    }
+  ],
+  "uncertain_or_conflicting_info": [
+    {
+      "topic": "Area",
+      "description": "苏州博物馆官方页面记录新馆建筑面积 19000 余平方米、总建筑面积 26500 平方米；PEI Architects 记录 15390 平方米；ArchDaily China 记录 15000 平方米；Architectural Record 记录 183000 sq.ft.。可能来自统计范围不同，需人工复核。",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s5"
+      ]
+    },
+    {
+      "topic": "Structure system",
+      "description": "公开资料确认开放式钢结构、玻璃天窗、局部混凝土墙体和结构工程顾问，但未检索到完整结构体系、柱网、基础和节点详图。",
+      "source_ids": [
+        "s1",
+        "s5"
+      ]
+    },
+    {
+      "topic": "PDF extraction",
+      "description": "用户提供 PDF 的文本层存在乱码，本文使用其第 6-8 页渲染图作为图像证据，未逐字引用 PDF 文本。",
+      "source_ids": [
+        "s6"
+      ]
+    }
+  ],
+  "technical_metrics": {
+    "site_area": {
+      "value": "约10700",
+      "unit": "平方米",
+      "confidence": "reported",
+      "source_ids": [
+        "s1"
+      ],
+      "notes": "另有官方页面出现约10750平方米口径。"
+    },
+    "building_area": {
+      "value": "新馆约19000余",
+      "unit": "平方米",
+      "confidence": "conflicting",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s5"
+      ],
+      "notes": "不同来源面积口径存在差异。"
+    },
+    "height": {
+      "value": "檐口6米内；局部二层16米",
+      "unit": "米",
+      "confidence": "reported",
+      "source_ids": [
+        "s1"
+      ],
+      "notes": "官方页面提供高度控制说明。"
+    },
+    "floors": {
+      "value": "地下一层、地面一层为主，局部二层",
+      "unit": "",
+      "confidence": "reported",
+      "source_ids": [
+        "s1"
+      ],
+      "notes": ""
+    },
+    "far": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到可靠资料。"
+    },
+    "building_density": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到可靠资料。"
+    },
+    "structure_system": {
+      "value": "开放式钢结构、玻璃天窗、局部混凝土墙体；完整结构体系未确认",
+      "unit": "",
+      "confidence": "limited",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "notes": "Architectural Record 记录结构工程顾问为 Leslie E. Robertson & Associates。"
+    },
+    "main_materials": [
+      {
+        "text": "白墙、深灰色“中国黑”花岗石屋面与压顶、玻璃天窗、开放式钢结构、金山石铺地。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s4",
+          "s5"
+        ],
+        "related_image_ids": [
+          "img_detail_pdf_p8"
+        ]
+      }
+    ],
+    "client": {
+      "value": "Suzhou Municipal Administration of Culture, Radio and Television",
+      "unit": "",
+      "confidence": "confirmed",
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "notes": "英文来源记录的业主名称。"
+    },
+    "photography_drawing_credits": [
+      {
+        "text": "ArchDaily China 摄影为 Chenxing Mi；Architectural Record 摄影为 Kerun Ip；本包图像主要来自用户提供 PDF 渲染。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s3",
+          "s5",
+          "s6"
+        ],
+        "related_image_ids": [
+          "img_plan_pdf_p6",
+          "img_language_pdf_p7",
+          "img_detail_pdf_p8"
+        ]
+      }
+    ],
+    "notes": "高精度工程指标仍需正式图纸或业主资料复核。"
+  },
+  "site_information": {
+    "location_role": {
+      "text": "项目位于苏州古城历史街区，是连接忠王府、拙政园、狮子林等文化资源的公共文化节点。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "related_image_ids": []
+    },
+    "natural_environment": {
+      "text": "庭院、水景、竹林和树木被纳入博物馆体验，形成现代山水园。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "related_image_ids": [
+        "img_language_pdf_p7"
+      ]
+    },
+    "cultural_environment": {
+      "text": "周边传统建筑和园林以粉墙黛瓦、院落和低矮尺度构成主要文脉。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "related_image_ids": [
+        "img_language_pdf_p7"
+      ]
+    },
+    "terrain_conditions": {
+      "text": "未检索到复杂地形资料，公开资料主要强调历史街区与相邻园林关系。",
+      "evidence_type": "missing",
+      "source_ids": [],
+      "related_image_ids": []
+    },
+    "roads_and_access": {
+      "text": "官方资料记录贝聿铭建议将临馆东北街改为步行街，并使用金山石铺地。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": []
+    },
+    "surrounding_buildings": {
+      "text": "毗邻忠王府、拙政园和狮子林，周边历史建筑和传统园林对体量、高度和风貌形成强约束。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "related_image_ids": [
+        "img_plan_pdf_p6"
+      ]
+    },
+    "served_users": {
+      "text": "服务公众参观者、文化教育使用者、展览和研究人员；功能包括展厅、档案、咖啡、商店和行政办公。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s5"
+      ],
+      "related_image_ids": []
+    },
+    "core_site_tension": {
+      "text": "现代博物馆的容量、公共性和技术需求必须与古城历史尺度、传统园林和文保建筑相协调。",
+      "evidence_type": "synthesis",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "related_image_ids": [
+        "img_plan_pdf_p6"
+      ]
+    }
+  },
+  "conceptual_exploration": {
+    "diagnosis": [
+      {
+        "text": "项目核心问题是在古城历史风貌和现代博物馆功能之间取得平衡。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s4"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "positioning": [
+      {
+        "text": "官方定位强调“中而新、苏而新”和“不高不大不突出”，说明建筑目标是作为苏州古城公共文化建筑而非孤立地标。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "strategy": [
+      {
+        "text": "通过低矮分块、三路布局、院落和现代材料转译来回应历史街区。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s6"
+        ],
+        "related_image_ids": [
+          "img_plan_pdf_p6"
+        ]
+      }
+    ],
+    "imagery_and_expression": [
+      {
+        "text": "黑白灰色调、几何坡顶、花岗石屋面、玻璃天窗和创意山水园共同构成现代苏州意象。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s4",
+          "s5"
+        ],
+        "related_image_ids": [
+          "img_language_pdf_p7",
+          "img_detail_pdf_p8"
+        ]
+      }
+    ]
+  },
+  "architectural_language_generation": {
+    "function": [
+      {
+        "text": "建筑包含展厅、档案、咖啡、礼品店、辅展和行政办公等功能，并通过中央大厅和通道组织参观。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s2",
+          "s5"
+        ],
+        "related_image_ids": [
+          "img_plan_pdf_p6"
+        ]
+      }
+    ],
+    "layout": [
+      {
+        "text": "中部入口、大厅和主庭院，西部主展区，东部辅展和行政办公区构成与忠王府呼应的三路布局。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img_plan_pdf_p6"
+        ]
+      }
+    ],
+    "composition": [
+      {
+        "text": "坡屋顶被几何化为三角形、菱形和矩形构成的现代屋面系统，玻璃天窗与钢结构共同塑造空间。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s4",
+          "s5"
+        ],
+        "related_image_ids": [
+          "img_detail_pdf_p8"
+        ]
+      }
+    ],
+    "place_atmosphere": [
+      {
+        "text": "庭院、水面、光影和材料让参观路线具有园林式的转折、停顿和观看节奏。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s4",
+          "s7"
+        ],
+        "related_image_ids": [
+          "img_language_pdf_p7"
+        ]
+      }
+    ]
+  },
+  "construction_quality_control": {
+    "construction_language": [
+      {
+        "text": "公开资料确认开放式钢结构、玻璃天窗和现代材料替代传统木构屋面；完整结构体系未确认。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s5"
+        ],
+        "related_image_ids": [
+          "img_detail_pdf_p8"
+        ]
+      }
+    ],
+    "materials_and_craft": [
+      {
+        "text": "深灰色“中国黑”花岗石替代小青瓦，解决维护、漏水和平整度问题，并保留黛瓦色彩意象。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s4",
+          "s5"
+        ],
+        "related_image_ids": [
+          "img_detail_pdf_p8"
+        ]
+      }
+    ],
+    "tectonic_logic": [
+      {
+        "text": "构造逻辑可概括为传统轮廓、现代骨架和可控光线的整合。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s4"
+        ],
+        "related_image_ids": [
+          "img_detail_pdf_p8"
+        ]
+      }
+    ],
+    "performance_and_construction_control": [
+      {
+        "text": "可确认的性能控制集中在自然采光、遮光调节、屋面耐久和维护；施工过程、样板和完整防水细节未检索到可靠资料。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s4"
+        ],
+        "related_image_ids": []
+      }
+    ]
+  },
+  "design_lessons": {
+    "transferable_methods": [
+      {
+        "text": "历史街区新公共建筑应先处理高度、檐口、分块和院落边界，再处理立面风格。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s6"
+        ],
+        "related_image_ids": [
+          "img_plan_pdf_p6"
+        ]
+      },
+      {
+        "text": "传统转译可以从颜色、轮廓、材料性能和构造秩序入手，而不是复制符号。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s4",
+          "s5"
+        ],
+        "related_image_ids": [
+          "img_detail_pdf_p8"
+        ]
+      },
+      {
+        "text": "园林式体验可以转化为入口、廊道、庭院、展厅和休憩节点的路径组织。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s7"
+        ],
+        "related_image_ids": [
+          "img_language_pdf_p7"
+        ]
+      }
+    ],
+    "avoid_copying": [
+      {
+        "text": "黑白灰、坡屋顶和片石假山若脱离苏州古城语境，容易变成表面风格；应学习其语境诊断与构造转译方法。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s4"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "analysis_diagram_potential": [
+      "场地敏感性图",
+      "三路布局图",
+      "入口到庭院流线图",
+      "屋面几何与天光分析图",
+      "黑白灰材料转译图",
+      "庭院与拙政园间接连续图"
+    ]
+  }
+}

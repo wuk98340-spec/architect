@@ -1,0 +1,820 @@
+{
+  "project_name": "青岛国际会议中心（2018 上合组织青岛峰会主会场）",
+  "architects": [
+    "华南理工大学建筑设计研究院",
+    "何镜堂院士团队"
+  ],
+  "location": "中国山东青岛奥帆广场 / 奥帆中心核心区",
+  "year": "2018",
+  "program": "国际会议中心 / 主场外交会议建筑",
+  "status": "建成并投入使用",
+  "case_type": "Cultural / civic conference building",
+  "disambiguation_status": "confirmed",
+  "disambiguation_candidates": [
+    {
+      "candidate_project": "青岛国际会议中心（2018 上合组织青岛峰会主会场）",
+      "location": "青岛奥帆广场 / 奥帆中心核心区",
+      "architects": "华南理工大学建筑设计研究院；何镜堂院士团队",
+      "year": "2018",
+      "type": "国际会议中心",
+      "main_sources": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "confidence": "high",
+      "question_for_user": "用户已确认目标为华南理工大学做的青岛国际会议中心。"
+    }
+  ],
+  "information_confidence": "high",
+  "incomplete_reason": "项目身份、设计单位、场地、概念和主要建造事实已由 Level A/B/C 多源确认；但完整平面、剖面、幕墙节点、施工样板和部分经济技术指标未检索到可靠公开资料，楼层与高度信息存在来源冲突。",
+  "one_sentence_summary": "该案例把国家级会议功能、青岛山海港城格局、快速建造压力和后续城市公共使用，整合为一个兼具主场外交仪式性与海滨城市公共性的会议中心。",
+  "key_facts": [
+    {
+      "label": "设计单位",
+      "value": "华南理工大学建筑设计研究院；何镜堂院士团队",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "label": "位置",
+      "value": "青岛奥帆广场 / 奥帆中心核心区",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s7"
+      ]
+    },
+    {
+      "label": "建筑面积",
+      "value": "约 5.4 万平方米",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s7"
+      ]
+    },
+    {
+      "label": "承建",
+      "value": "中国建筑集团有限公司承建",
+      "source_ids": [
+        "s2",
+        "s7"
+      ]
+    },
+    {
+      "label": "建造周期",
+      "value": "公开报道称约 6 个月完成工程建设 / 197 天完成建设",
+      "source_ids": [
+        "s2",
+        "s7",
+        "s4"
+      ]
+    }
+  ],
+  "design_concept": {
+    "sourced_concept": "项目定位为“世界水准、中国气派、山东风格、青岛特色”，呼应“山水一体、海天一色”，提出“腾飞逐梦、扬帆领航”的设计构思。",
+    "ai_synthesis": "设计将青岛奥帆中心的海港场地、主场外交的礼仪尺度和峰会后公共运营要求，转化为水平展开的屋盖、柱廊、中心门廊和暖色金属表皮。",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s4",
+      "s5"
+    ]
+  },
+  "key_strategies": [
+    {
+      "strategy_name": "用场地大关系生成外交建筑的整体形象",
+      "design_problem": "国家级会议建筑需要庄重识别度，同时不能脱离青岛海滨和奥帆中心语境。",
+      "specific_approach": "强化山海轴线和港湾界面，以水平展开体量、起翘屋面和帆影柱廊回应海港环境。",
+      "architectural_effect": "建筑形成可被远观识别的海滨城市地标，并与水面、帆船、港湾形成连续视觉关系。",
+      "evidence": "mixed: source description plus synthesis from exterior images",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s7"
+      ],
+      "related_image_ids": [
+        "img1"
+      ],
+      "transferable_lesson": "大型公共建筑可先锁定城市级视线、轴线和地景关系，再决定体量姿态。"
+    },
+    {
+      "strategy_name": "把宏大叙事压缩到可建造的构件语言",
+      "design_problem": "多重定位容易停留在口号层面，难以转化为可控制的建筑表达。",
+      "specific_approach": "通过中轴门廊、柱廊、屋面边缘和金属表皮，把文化与礼仪定位转化为少量高控制度构件。",
+      "architectural_effect": "建筑兼具仪式感、现代会议中心的清晰性和青岛海滨识别度。",
+      "evidence": "mixed: sourced concept and synthesis from image evidence",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "related_image_ids": [
+        "img4"
+      ],
+      "transferable_lesson": "面对多重价值要求时，应优先把关键词落到少量关键构件与材料控制点上。"
+    },
+    {
+      "strategy_name": "为一次性峰会预设长期运营身份",
+      "design_problem": "重大活动建筑可能在活动后失去公共性和日常使用价值。",
+      "specific_approach": "将国事活动、旅游景点、会展会议、市民客厅等目标并置，并将建筑面向港湾展开。",
+      "architectural_effect": "峰会后建筑继续作为城市名片、会议场所和公众目的地运营。",
+      "evidence": "sourced",
+      "source_ids": [
+        "s3",
+        "s5"
+      ],
+      "related_image_ids": [
+        "img3"
+      ],
+      "transferable_lesson": "事件型公共建筑应同步设计活动期间秩序和活动后日常使用。"
+    },
+    {
+      "strategy_name": "在快速建造中保留材料现场校准",
+      "design_problem": "工期紧张时，外立面材料容易被标准化采购和快速施工主导。",
+      "specific_approach": "对“青岛金”金属板进行现场多角度比选，控制颜色与反射效果。",
+      "architectural_effect": "材料色彩服务于庄重、温暖和海滨光照下不过度反光的整体形象。",
+      "evidence": "sourced",
+      "source_ids": [
+        "s5",
+        "s8"
+      ],
+      "related_image_ids": [
+        "img5"
+      ],
+      "transferable_lesson": "快速项目仍应保留少数关键材料的现场样板和光照校验。"
+    }
+  ],
+  "spatial_ideas": [
+    {
+      "text": "项目通过水平三段式布局与山海轴线回应奥帆中心场地格局。",
+      "source_ids": [
+        "s3"
+      ],
+      "related_image_ids": [
+        "img1"
+      ]
+    },
+    {
+      "text": "主会议厅承担国际峰会核心会议功能，空间尺度和装饰表达强调礼仪性。",
+      "source_ids": [
+        "s3"
+      ],
+      "related_image_ids": [
+        "img2"
+      ]
+    },
+    {
+      "text": "建筑面向海港展开，水面倒影与帆船背景参与建筑形象的生成。",
+      "source_ids": [
+        "s3",
+        "s7"
+      ],
+      "related_image_ids": [
+        "img1"
+      ]
+    }
+  ],
+  "materials_structure": [
+    {
+      "text": "公开报道确认地上主体约 1.1 万吨钢结构，但未公开完整结构体系和节点资料。",
+      "source_ids": [
+        "s2",
+        "s7"
+      ],
+      "related_image_ids": []
+    },
+    {
+      "text": "外墙金属板色彩被报道为团队反复推敲的“青岛金”，用于协调庄重性、海滨光照和城市形象。",
+      "source_ids": [
+        "s5",
+        "s8"
+      ],
+      "related_image_ids": [
+        "img4",
+        "img5"
+      ]
+    }
+  ],
+  "site_context": [
+    {
+      "text": "项目位于青岛奥帆基地，场地依山面海，汇集山、海、城、港的城市特征。",
+      "source_ids": [
+        "s3",
+        "s7"
+      ],
+      "related_image_ids": [
+        "img1"
+      ]
+    },
+    {
+      "text": "场地承接 2008 奥运帆船比赛城市记忆，并在 2018 年承担上合峰会主场外交功能。",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "related_image_ids": []
+    }
+  ],
+  "image_metadata": [
+    {
+      "id": "img1",
+      "file_name": "images/01_hero_exterior.jpg",
+      "image_type": "01_hero",
+      "source_url": "https://www.archina.com/index.php?a=show&g=works&id=6017&m=index",
+      "source_site": "ARCHINA",
+      "caption": "青岛国际会议中心海港夜景",
+      "copyright_note": "Reference use only; rights not cleared.",
+      "recommended_use": "cover / site and massing analysis",
+      "relevance_reason": "用于验证建筑与奥帆港湾、水面、帆船意象和水平展开体量之间的关系。",
+      "related_sections": [
+        "03 一句话判断",
+        "08 方法 1"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img2",
+      "file_name": "images/08_interior_main_hall.jpg",
+      "image_type": "08_interior",
+      "source_url": "https://www.archina.com/index.php?a=show&g=works&id=6017&m=index",
+      "source_site": "ARCHINA",
+      "caption": "主会议厅",
+      "copyright_note": "Reference use only; rights not cleared.",
+      "recommended_use": "main hall and program analysis",
+      "relevance_reason": "用于说明项目首先要满足国际重大会议的主厅尺度、礼仪性与会议功能。",
+      "related_sections": [
+        "06.1 功能梳理"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img3",
+      "file_name": "images/09_sequence_reference.jpg",
+      "image_type": "09_analysis",
+      "source_url": "https://www.archina.com/index.php?a=show&g=works&id=6017&m=index",
+      "source_site": "ARCHINA",
+      "caption": "建筑场景序列参考",
+      "copyright_note": "Reference use only; rights not cleared.",
+      "recommended_use": "sequence and user experience analysis",
+      "relevance_reason": "用于支持外部到内部的礼仪性场景序列分析。",
+      "related_sections": [
+        "06.3 形式构成",
+        "08 方法 3"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img4",
+      "file_name": "images/05_facade_reference.jpg",
+      "image_type": "05_elevation",
+      "source_url": "https://www.archina.com/index.php?a=show&g=works&id=6017&m=index",
+      "source_site": "ARCHINA",
+      "caption": "立面与表皮参考",
+      "copyright_note": "Reference use only; rights not cleared.",
+      "recommended_use": "facade and envelope analysis",
+      "relevance_reason": "用于支持柱廊、金属表皮和水平屋盖共同塑造城市界面的判断。",
+      "related_sections": [
+        "06.4 场所与氛围",
+        "08 方法 2"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img5",
+      "file_name": "images/08_interior_sequence.jpg",
+      "image_type": "08_interior",
+      "source_url": "https://www.archina.com/index.php?a=show&g=works&id=6017&m=index",
+      "source_site": "ARCHINA",
+      "caption": "室内与表皮氛围参考",
+      "copyright_note": "Reference use only; rights not cleared.",
+      "recommended_use": "material and atmosphere analysis",
+      "relevance_reason": "用于支持材料、光照和礼仪性氛围判断。",
+      "related_sections": [
+        "08 方法 4"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    }
+  ],
+  "download_mode": "completed",
+  "source_quality": {
+    "has_primary_sources": true,
+    "primary_sources_used_for_identity": true,
+    "architecture_media_count": 1,
+    "wechat_valid_result_count": 0,
+    "zhihu_valid_result_count": 0,
+    "source_sufficiency_status": "sufficient",
+    "secondary_source_heavy": false,
+    "manual_review_needed": [
+      "楼层数、高度、完整专业负责人名单和构造节点需要人工复核。"
+    ],
+    "identity_confirming_source_ids": [
+      "s1",
+      "s3",
+      "s4"
+    ],
+    "analysis_coverage": [
+      "concept",
+      "context",
+      "program",
+      "circulation",
+      "facade_material",
+      "structure_construction",
+      "user_experience",
+      "urban_relationship"
+    ]
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "上合峰会主会场惊艳登场，“华工设计”再引媒体关注",
+      "url": "https://www2.scut.edu.cn/scutcm/2018/0614/c23940a344024/page.htm",
+      "source_level": "level_a",
+      "publisher": "华南理工大学",
+      "accessed_date": "2026-07-01",
+      "notes": "官方高校来源，用于确认华工设计与何镜堂团队线索。"
+    },
+    {
+      "id": "s2",
+      "title": "上合组织青岛峰会在中国建筑承建的青岛国际会议中心召开",
+      "url": "https://www.cscec.com/xwzx_new/gsyw_new/201806/2883553.html",
+      "source_level": "level_a",
+      "publisher": "中国建筑",
+      "accessed_date": "2026-07-01",
+      "notes": "承建方官方来源，用于建造规模、工期、钢结构和施工专业范围；不是设计单位来源。"
+    },
+    {
+      "id": "s3",
+      "title": "青岛国际会议中心（2018上合组织青岛峰会主会场） | 华南理工大学建筑设计研究院",
+      "url": "https://www.archina.com/index.php?a=show&g=works&id=6017&m=index",
+      "source_level": "level_b",
+      "publisher": "ARCHINA",
+      "accessed_date": "2026-07-01",
+      "notes": "建筑专业媒体项目页，用于设计概念、场地、指标、获奖和图片。"
+    },
+    {
+      "id": "s4",
+      "title": "上合峰会主会场建设创造“青岛速度”",
+      "url": "https://cn.chinadaily.com.cn/2018-06/12/content_36375086.htm",
+      "source_level": "level_c",
+      "publisher": "中国日报网",
+      "accessed_date": "2026-07-01",
+      "notes": "中文媒体采访报道，用于何镜堂团队、建造周期和设计定位补充。"
+    },
+    {
+      "id": "s5",
+      "title": "华工团队设计上合组织青岛峰会主会场，何镜堂院士为您揭开会场背后的故事",
+      "url": "https://wap.ycwb.com/2018-06/12/content_30028538.htm",
+      "source_level": "level_c",
+      "publisher": "金羊网 / 羊城晚报",
+      "accessed_date": "2026-07-01",
+      "notes": "采访报道，用于设计团队、材料色彩和后续公共使用线索。"
+    },
+    {
+      "id": "s6",
+      "title": "【中国梦·践行者】华工团队设计上合组织青岛峰会主会场",
+      "url": "https://china.chinadaily.com.cn/2018-06/14/content_36387848.htm",
+      "source_level": "level_c",
+      "publisher": "中国日报中国频道",
+      "accessed_date": "2026-07-01",
+      "notes": "中文媒体报道，用于设计团队与何镜堂访谈线索补充。"
+    },
+    {
+      "id": "s7",
+      "title": "探究上合组织青岛峰会背后的中国建筑",
+      "url": "https://www.xinhuanet.com/world/2018-06/10/c_1122964981.htm",
+      "source_level": "level_c",
+      "publisher": "新华网",
+      "accessed_date": "2026-07-01",
+      "notes": "媒体报道，用于承建、面积、钢结构和快速建造事实。"
+    },
+    {
+      "id": "s8",
+      "title": "8旬院士打造上合青岛峰会主场馆设计到完工7个月",
+      "url": "https://news.sina.cn/2018-06-14/detail-ihcwpcmq6511031.d.html?vt=4",
+      "source_level": "level_d",
+      "publisher": "新浪新闻转载",
+      "accessed_date": "2026-07-01",
+      "notes": "转载线索，仅作为材料色彩访谈内容的辅助参考。"
+    }
+  ],
+  "uncertain_or_conflicting_info": [
+    {
+      "topic": "Floors",
+      "description": "ARCHINA lists above-ground 4 floors and 1 basement; China Construction describes the building as two above-ground floors.",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "topic": "Height",
+      "description": "ARCHINA lists building height as 23.99 m; China Construction reports 22.6 m building height and 28 m at the raised roof edge.",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "topic": "Drawings and details",
+      "description": "No reliable public floor plans, sections, facade nodes, material specifications, or construction mockup records were found during this search.",
+      "source_ids": [
+        "s3"
+      ]
+    }
+  ],
+  "technical_metrics": {
+    "site_area": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到可靠公开资料。"
+    },
+    "building_area": {
+      "value": "约 5.4 万",
+      "unit": "m2",
+      "confidence": "reported",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s7"
+      ],
+      "notes": "多源报道一致。"
+    },
+    "height": {
+      "value": "23.99 / 22.6 / 28",
+      "unit": "m",
+      "confidence": "conflicting",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "notes": "来源对建筑高度、屋面起翘最高点表述不同。"
+    },
+    "floors": {
+      "value": "地上4层地下1层 / 地上2层",
+      "unit": "",
+      "confidence": "conflicting",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "notes": "楼层信息存在冲突。"
+    },
+    "far": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到可靠公开资料。"
+    },
+    "building_density": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到可靠公开资料。"
+    },
+    "structure_system": {
+      "value": "地上主体约 1.1 万吨钢结构",
+      "unit": "",
+      "confidence": "reported",
+      "source_ids": [
+        "s2",
+        "s7"
+      ],
+      "notes": "仅确认钢结构用量，完整体系未公开。"
+    },
+    "main_materials": [
+      {
+        "text": "暖色金属板，媒体报道称“青岛金”。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s5",
+          "s8"
+        ],
+        "related_image_ids": [
+          "img4"
+        ]
+      }
+    ],
+    "client": {
+      "value": "",
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到可靠公开业主字段。"
+    },
+    "photography_drawing_credits": [
+      {
+        "text": "ARCHINA 页面图片可见“马浩摄影”水印或图片来源痕迹，完整版权授权未确认。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s3"
+        ],
+        "related_image_ids": [
+          "img1",
+          "img2",
+          "img3",
+          "img4",
+          "img5"
+        ]
+      }
+    ],
+    "notes": "高精度指标、结构体系与构造节点需要人工复核。"
+  },
+  "site_information": {
+    "location_role": {
+      "text": "项目位于青岛奥帆基地核心区，承担 2018 上合峰会主会场功能。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "related_image_ids": [
+        "img1"
+      ]
+    },
+    "natural_environment": {
+      "text": "场地依山面海，具有山、海、城、港复合景观。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s3",
+        "s7"
+      ],
+      "related_image_ids": [
+        "img1"
+      ]
+    },
+    "cultural_environment": {
+      "text": "场地延续 2008 奥帆赛事城市记忆，并被赋予上合峰会主场外交象征。",
+      "evidence_type": "synthesis",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "related_image_ids": []
+    },
+    "terrain_conditions": {
+      "text": "未检索到可靠地形测绘或场地高差信息。",
+      "evidence_type": "missing",
+      "source_ids": [],
+      "related_image_ids": []
+    },
+    "roads_and_access": {
+      "text": "未检索到可靠交通组织图或入口流线图。",
+      "evidence_type": "missing",
+      "source_ids": [],
+      "related_image_ids": []
+    },
+    "surrounding_buildings": {
+      "text": "公开资料强调奥帆中心、港湾和城市景观关系，但未提供完整周边建筑分析。",
+      "evidence_type": "synthesis",
+      "source_ids": [
+        "s3"
+      ],
+      "related_image_ids": [
+        "img1"
+      ]
+    },
+    "served_users": {
+      "text": "服务峰会代表团、会议会展人群，并在后续面向游客和市民。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s3",
+        "s5"
+      ],
+      "related_image_ids": []
+    },
+    "core_site_tension": {
+      "text": "主场外交的礼仪秩序需要与海滨开放性和长期公共运营并存。",
+      "evidence_type": "synthesis",
+      "source_ids": [
+        "s3",
+        "s5"
+      ],
+      "related_image_ids": [
+        "img1"
+      ]
+    }
+  },
+  "conceptual_exploration": {
+    "diagnosis": [
+      {
+        "text": "项目面对主场外交、快速建造、海滨地标和长期运营的复合问题。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s2",
+          "s3",
+          "s4",
+          "s5"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "positioning": [
+      {
+        "text": "项目定位为世界水准、中国气派、山东风格、青岛特色。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s3",
+          "s4"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "strategy": [
+      {
+        "text": "强化山海轴线，采用水平三段布局和海鸥、帆影意象。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s3"
+        ],
+        "related_image_ids": [
+          "img1",
+          "img4"
+        ]
+      }
+    ],
+    "imagery_and_expression": [
+      {
+        "text": "设计构思为“腾飞逐梦、扬帆领航”，建筑柱廊被描述为帆影出海。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s3"
+        ],
+        "related_image_ids": [
+          "img4"
+        ]
+      }
+    ]
+  },
+  "architectural_language_generation": {
+    "function": [
+      {
+        "text": "建筑承担国际峰会主会场功能，并兼顾会展会议、旅游景点与市民客厅。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s3",
+          "s5"
+        ],
+        "related_image_ids": [
+          "img2"
+        ]
+      }
+    ],
+    "layout": [
+      {
+        "text": "公开资料确认水平三段布局和山海轴线；完整平面与交通组织未公开。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s3"
+        ],
+        "related_image_ids": [
+          "img1"
+        ]
+      }
+    ],
+    "composition": [
+      {
+        "text": "屋面、柱廊、中轴门廊和金属表皮共同形成庄重且具有青岛海港意象的外观。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s3",
+          "s5"
+        ],
+        "related_image_ids": [
+          "img4"
+        ]
+      }
+    ],
+    "place_atmosphere": [
+      {
+        "text": "建筑与水面、港湾和夜景照明共同构成城市公共景观。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s3",
+          "s7"
+        ],
+        "related_image_ids": [
+          "img1"
+        ]
+      }
+    ]
+  },
+  "construction_quality_control": {
+    "construction_language": [
+      {
+        "text": "公开资料确认地上主体约 1.1 万吨钢结构；具体结构体系和节点未公开。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s2",
+          "s7"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "materials_and_craft": [
+      {
+        "text": "金属板色彩以“青岛金”为关键控制项，媒体报道提到现场多角度比选。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s5",
+          "s8"
+        ],
+        "related_image_ids": [
+          "img4",
+          "img5"
+        ]
+      }
+    ],
+    "tectonic_logic": [
+      {
+        "text": "未检索到可靠幕墙节点、屋面节点或构件模数资料。",
+        "evidence_type": "missing",
+        "source_ids": [],
+        "related_image_ids": []
+      }
+    ],
+    "performance_and_construction_control": [
+      {
+        "text": "多源报道确认快速建造周期，但防水、防腐、抗风、样板和验收细则未公开。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s2",
+          "s4",
+          "s7"
+        ],
+        "related_image_ids": []
+      }
+    ]
+  },
+  "design_lessons": {
+    "transferable_methods": [
+      {
+        "text": "大型公共建筑可以先从城市级场地关系组织体量，而不是先从形象符号出发。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s3"
+        ],
+        "related_image_ids": [
+          "img1"
+        ]
+      },
+      {
+        "text": "宏大价值定位应落到少数高控制度构件和材料节点上。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s3",
+          "s5"
+        ],
+        "related_image_ids": [
+          "img4"
+        ]
+      },
+      {
+        "text": "事件型建筑需要同步设计活动后运营身份。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s3",
+          "s5"
+        ],
+        "related_image_ids": [
+          "img3"
+        ]
+      }
+    ],
+    "avoid_copying": [
+      {
+        "text": "海鸥、帆影和金色金属板是高度场地化与事件化表达，不宜脱离青岛奥帆中心语境直接复制。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s3",
+          "s5"
+        ],
+        "related_image_ids": [
+          "img1",
+          "img4"
+        ]
+      }
+    ],
+    "analysis_diagram_potential": [
+      "山海轴线图",
+      "水平三段体量图",
+      "外交礼仪流线图",
+      "事件使用 / 日常使用转换图",
+      "金属表皮光照校准图"
+    ]
+  }
+}

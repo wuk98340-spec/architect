@@ -1,0 +1,668 @@
+{
+  "project_name": "深圳国际交流中心 / Shenzhen International Communication Center",
+  "architects": [
+    "公开资料未确认总建筑师或建筑设计单位"
+  ],
+  "location": "中国广东省深圳市福田区香蜜湖北区 / 香蜜湖西岸",
+  "year": "2019 年项目公司成立；2023-03-21 一期会议中心钢结构首吊；2025 年中一期会议中心预计建成；2026 年底配套酒店预计建成",
+  "program": "国际会议中心、配套酒店、花园会议区；服务元首峰会、国际会议、大型企业活动、精品展览、餐饮、住宿与休闲",
+  "status": "under construction / phased development",
+  "case_type": "Conference center / Commercial public complex",
+  "disambiguation_status": "high_confidence",
+  "disambiguation_candidates": [
+    {
+      "candidate_project": "深圳国际交流中心 / Shenzhen International Communication Center",
+      "location": "深圳福田香蜜湖北区 / 香蜜湖西岸",
+      "architects": "公开资料未确认总建筑师或建筑设计单位；何镜堂、何昉等仅确认为“岭南庭院”景观设计咨询专家评审会专家",
+      "year": "2019-2026 分期推进",
+      "type": "国际会议与交流中心",
+      "main_sources": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "confidence": "high",
+      "question_for_user": "已按公开资料中与“香蜜湖国际中心”最匹配的“深圳国际交流中心”生成案例包。"
+    }
+  ],
+  "information_confidence": "limited",
+  "incomplete_reason": "项目身份、区位、规模、功能、结构施工与进度有官方来源支持；但未检索到可靠专业建筑媒体案例页、总建筑师确认、完整图纸、立面材料、室内空间和建成后体验资料，建筑语言分析需人工复核。",
+  "one_sentence_summary": "深圳国际交流中心把深圳“城市会客厅”的外交、会议、酒店、花园与运营需求，转译为大跨度会议综合体、岭南庭院体验和数字化钢结构建造协同。",
+  "key_facts": [
+    {
+      "label": "项目身份",
+      "value": "深圳国际交流中心是深圳市重大项目，由深圳香蜜湖国际交流中心发展有限公司承担开发建设任务。",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "label": "建设主体",
+      "value": "深圳香蜜湖国际交流中心发展有限公司成立于 2019 年 12 月，注册资本 20 亿元，是深圳市投资控股有限公司全资子公司。",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "label": "区位",
+      "value": "项目位于香蜜湖北区 / 香蜜湖西岸，2024 年政府报道将其与深圳金融文化中心并列描述为香蜜湖片区正在成形的重要公共项目。",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "label": "规模",
+      "value": "项目总建筑面积 40 余万平方米；一期会议中心总建筑面积 21.6 万平方米。",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "label": "结构",
+      "value": "一期会议中心采用钢管混凝土柱 - 钢梁框架 - 钢筋混凝土剪力墙结构体系，最大跨度 68.4m，最大悬挑 18m。",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "label": "施工控制",
+      "value": "会议中心钢结构用钢量约 3.5 万吨，吊装约 1.5 万次；项目使用 BIM、5G、物联网、云计算等技术进行智慧建造。",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "design_concept": {
+    "sourced_concept": "官方提出“世界眼光、国际标准、中国特色、高点定位”，目标是建设国际一流、多功能国际交流中心和深圳“城市会客厅”；景观设计咨询报道提出“世界眼光、中国气派、岭南风格、深圳特色”和“岭南庭院”。",
+    "ai_synthesis": "项目的设计逻辑可理解为：以城市外交和国际会议为核心，以酒店、展览、餐饮、休闲和花园会议补全事件链条，再用岭南庭院和数字化大跨度建造将高规格公共活动转化为空间体验和工程能力。",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4"
+    ]
+  },
+  "key_strategies": [
+    {
+      "strategy_name": "城市会客厅定位驱动功能组织",
+      "design_problem": "国际会议中心需要同时承担城市外交展示、产业交流和高规格公共活动运营。",
+      "specific_approach": "以“城市会客厅 / 城市名片”为定位，将峰会、国际会议、企业活动、精品展览、餐饮、住宿和休闲纳入复合功能体系。",
+      "architectural_effect": "建筑从单一会议场馆转化为城市级接待、展示和交流平台。",
+      "evidence": "官方招聘公告和政府报道均明确项目的城市会客厅、国际会议和重大项目定位。",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "related_image_ids": [
+        "img_01_project_site"
+      ],
+      "transferable_lesson": "大型公共建筑应先定义城市角色和活动链条，再推导空间和配套。"
+    },
+    {
+      "strategy_name": "会议中心 + 酒店 + 花园会议区的复合配套",
+      "design_problem": "高级别会议需要会前接待、会中会议、会后餐饮住宿和非正式交流空间。",
+      "specific_approach": "项目包含国际会议中心、配套酒店和花园会议区，并分期建设。",
+      "architectural_effect": "建筑支持完整事件生命周期，而不只是提供会场面积。",
+      "evidence": "官方资料明确列出国际会议中心、配套酒店、花园会议区等功能。",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "related_image_ids": [],
+      "transferable_lesson": "会议类建筑可用事件生命周期图分析功能复合，而不只做房间清单。"
+    },
+    {
+      "strategy_name": "岭南庭院作为地域与气候媒介",
+      "design_problem": "国际会议中心需要庄重形象，同时避免成为封闭、缺少地方感的巨型会场。",
+      "specific_approach": "景观设计咨询围绕“岭南庭院”展开，强调山水交融、内外渗透、移步换景、高低错落和 360 度可看可游的景观中庭。",
+      "architectural_effect": "庭院承担礼仪空间、气候缓冲、视线组织和地域表达。",
+      "evidence": "深圳新闻网 / 深圳晚报报道了“岭南庭院”设计咨询专家评审会及相关设计目标。",
+      "source_ids": [
+        "s4"
+      ],
+      "related_image_ids": [],
+      "transferable_lesson": "地域性可以通过庭院、廊道、微气候和行走体验表达，而不只依赖立面符号。"
+    },
+    {
+      "strategy_name": "大跨度结构与数字建造支撑公共事件空间",
+      "design_problem": "大型会议空间需要大跨度、悬挑与复杂吊装，施工协同难度高。",
+      "specific_approach": "采用钢管混凝土柱 - 钢梁框架 - 钢筋混凝土剪力墙结构体系，并用 BIM 构件身份、5G、物联网和云计算进行全过程可视化管控。",
+      "architectural_effect": "结构体系和数字化建造共同保障高标准会议空间的实现。",
+      "evidence": "深圳政府在线披露了一期会议中心钢结构首吊、跨度、用钢量、吊装次数和 BIM 智慧建造措施。",
+      "source_ids": [
+        "s2"
+      ],
+      "related_image_ids": [],
+      "transferable_lesson": "分析大跨度公共建筑时，应把结构跨度、构件物流、吊装和数字建造纳入设计方法。"
+    }
+  ],
+  "spatial_ideas": [
+    {
+      "text": "会议中心、酒店和花园会议区共同支撑大型活动从抵达、接待、会议、展示到住宿休闲的连续空间链条。",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "related_image_ids": []
+    },
+    {
+      "text": "“岭南庭院”强调山水、渗透、移步换景和可游览景观中庭，是目前公开资料中最明确的空间气氛线索。",
+      "source_ids": [
+        "s4"
+      ],
+      "related_image_ids": []
+    },
+    {
+      "text": "缺少总平面与剖面资料，入口、安检、贵宾流线、后勤流线、酒店动线等具体空间组织需后续复核。",
+      "source_ids": [],
+      "related_image_ids": []
+    }
+  ],
+  "materials_structure": [
+    {
+      "text": "一期会议中心采用钢管混凝土柱 - 钢梁框架 - 钢筋混凝土剪力墙结构体系，最大跨度 68.4m，最大悬挑 18m。",
+      "source_ids": [
+        "s2"
+      ],
+      "related_image_ids": []
+    },
+    {
+      "text": "钢结构用钢量约 3.5 万吨，吊装约 1.5 万次，施工难点集中在大跨度构件、复杂节点、吊装顺序和现场协同。",
+      "source_ids": [
+        "s2"
+      ],
+      "related_image_ids": []
+    },
+    {
+      "text": "幕墙、屋面、室内材料和细部构造未检索到可靠资料。",
+      "source_ids": [],
+      "related_image_ids": []
+    }
+  ],
+  "site_context": [
+    {
+      "text": "项目位于深圳福田香蜜湖北区 / 香蜜湖西岸，是深圳重要城市片区中的国际交流与城市展示节点。",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "related_image_ids": [
+        "img_01_project_site"
+      ]
+    },
+    {
+      "text": "深圳政府在线 2024 年报道将深圳国际交流中心与深圳金融文化中心并列呈现，显示香蜜湖片区同时承载国际交流、金融文化展示与城市更新形象。",
+      "source_ids": [
+        "s3"
+      ],
+      "related_image_ids": [
+        "img_01_project_site"
+      ]
+    }
+  ],
+  "image_metadata": [
+    {
+      "id": "img_01_project_site",
+      "file_name": "images/01_project_site_2024.jpg",
+      "image_type": "01_hero",
+      "source_url": "https://www.sz.gov.cn/img/4/4184/4184128/11473532.jpg",
+      "source_site": "深圳政府在线",
+      "caption": "深圳国际交流中心与深圳金融文化中心建设现场，来源为深圳政府在线图片新闻。",
+      "copyright_note": "政府公开页面图片，仅作学习研究引用；未取得再出版授权。",
+      "recommended_use": "construction status / urban context reference",
+      "relevance_reason": "用于说明项目在香蜜湖片区的建设状态，以及其与金融文化中心共同构成城市公共项目组团的关系。",
+      "related_sections": [
+        "01 基本信息与经济技术指标",
+        "04 场地信息表",
+        "09 图纸与图片索引"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    }
+  ],
+  "download_mode": "partial",
+  "source_quality": {
+    "has_primary_sources": true,
+    "primary_sources_used_for_identity": true,
+    "architecture_media_count": 0,
+    "wechat_valid_result_count": 2,
+    "zhihu_valid_result_count": 0,
+    "source_sufficiency_status": "insufficient",
+    "secondary_source_heavy": true,
+    "manual_review_needed": [
+      "检索并确认建筑设计单位、总建筑师和设计竞赛 / 中标公告。",
+      "补充总平面、剖面、立面、幕墙、室内和建成摄影资料。",
+      "复核“香蜜湖国际中心”是否为用户指定的另一个正式项目名。"
+    ],
+    "identity_confirming_source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "analysis_coverage": [
+      "concept",
+      "context",
+      "program",
+      "structure_construction",
+      "user_experience",
+      "urban_relationship"
+    ]
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "深圳香蜜湖国际交流中心发展有限公司公开招聘公告",
+      "url": "https://gzw.sz.gov.cn/zwgk/qt/tzgg/content/post_8802945.html",
+      "source_level": "level_a",
+      "publisher": "深圳市人民政府国有资产监督管理委员会",
+      "accessed_date": "2026-06-20",
+      "notes": "确认项目公司、建设主体、重大项目身份、香蜜湖北区位置、40 余万平方米规模、会议中心 / 酒店 / 花园会议区功能和城市会客厅定位。"
+    },
+    {
+      "id": "s2",
+      "title": "深圳国际交流中心项目钢结构首吊成功",
+      "url": "https://www.sz.gov.cn/szzt2010/wgkzl/glgk/jgxxgk/gyqyyy/content/post_10502067.html",
+      "source_level": "level_a",
+      "publisher": "深圳政府在线 / 深圳市国资委",
+      "accessed_date": "2026-06-20",
+      "notes": "确认 2023-03-21 钢结构首吊、一期会议中心 21.6 万平方米、结构体系、最大跨度、最大悬挑、用钢量、吊装次数和智慧建造措施。"
+    },
+    {
+      "id": "s3",
+      "title": "深圳国际交流中心雏形已现",
+      "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/tpxw/content/post_11473532.html",
+      "source_level": "level_a",
+      "publisher": "深圳政府在线 / 深圳特区报",
+      "accessed_date": "2026-06-20",
+      "notes": "确认项目位于福田香蜜湖片区、与深圳金融文化中心共同成形、分两期建设、一期会议中心与配套酒店预计完成时间，并提供现场图片。"
+    },
+    {
+      "id": "s4",
+      "title": "香蜜湖畔崛起世界一流的城市会客厅 深圳国际交流中心高标准打造“岭南庭院”",
+      "url": "https://www.sznews.com/news/content/2023-06/13/content_30270698.htm",
+      "source_level": "level_c",
+      "publisher": "深圳新闻网 / 深圳晚报",
+      "accessed_date": "2026-06-20",
+      "notes": "补充“岭南庭院”景观设计咨询、专家评审、四家景观团队、山水交融、内外渗透、移步换景和景观中庭等线索。"
+    },
+    {
+      "id": "s5",
+      "title": "Sogou 微信结果：深圳国际交流中心 岭南庭院",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E9%A6%99%E8%9C%9C%E6%B9%96%E5%9B%BD%E9%99%85%E4%BA%A4%E6%B5%81%E4%B8%AD%E5%BF%83%20%E5%B2%AD%E5%8D%97%E5%BA%AD%E9%99%A2",
+      "source_level": "level_c",
+      "publisher": "Sogou 微信搜索可见摘要",
+      "accessed_date": "2026-06-20",
+      "notes": "可见摘要补充深圳国资和深圳国际交流中心公众号对“岭南庭院”与香蜜湖西岸位置的线索；未作为核心事实唯一依据。"
+    }
+  ],
+  "uncertain_or_conflicting_info": [
+    {
+      "topic": "Project name",
+      "description": "用户输入“香蜜湖国际中心”，公开可靠来源主要使用“深圳国际交流中心”；本案例按高可信匹配对象整理。",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "topic": "Architect / design team",
+      "description": "公开来源未确认总建筑师或建筑设计单位。何镜堂、何昉等被报道为“岭南庭院”景观设计咨询专家评审会专家，不能据此写成建筑主创。",
+      "source_ids": [
+        "s4"
+      ]
+    },
+    {
+      "topic": "Architecture media gap",
+      "description": "未检索到 gooood、ArchDaily、有方等专业建筑媒体完整案例页，建筑语言分析属于基于官方事实和地方报道的谨慎归纳。",
+      "source_ids": []
+    },
+    {
+      "topic": "Drawings and details",
+      "description": "未检索到总平面、剖面、立面、幕墙节点、室内照片和建成后运营评价资料。",
+      "source_ids": []
+    }
+  ],
+  "technical_metrics": {
+    "site_area": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到可靠用地面积。"
+    },
+    "building_area": {
+      "value": "项目总建筑面积 40 余万平方米；一期会议中心 21.6 万平方米",
+      "unit": "平方米",
+      "confidence": "reported",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "notes": "两个数值统计口径不同：一个为项目总体，一个为一期会议中心。"
+    },
+    "height": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到可靠建筑高度。"
+    },
+    "floors": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到可靠层数。"
+    },
+    "far": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到可靠容积率。"
+    },
+    "building_density": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到可靠建筑密度。"
+    },
+    "structure_system": {
+      "value": "钢管混凝土柱 - 钢梁框架 - 钢筋混凝土剪力墙结构体系",
+      "unit": "",
+      "confidence": "reported",
+      "source_ids": [
+        "s2"
+      ],
+      "notes": "来源为深圳政府在线钢结构首吊报道。"
+    },
+    "main_materials": [
+      {
+        "text": "公开资料重点披露钢结构；幕墙、室内与节点材料未检索到可靠资料。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s2"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "client": {
+      "value": "深圳香蜜湖国际交流中心发展有限公司 / 深圳市投资控股有限公司",
+      "unit": "",
+      "confidence": "reported",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "notes": "深圳香蜜湖国际交流中心发展有限公司为深投控全资子公司。"
+    },
+    "photography_drawing_credits": [
+      {
+        "text": "已下载图片来自深圳政府在线图片新闻；图纸资料未检索到可靠来源。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s3"
+        ],
+        "related_image_ids": [
+          "img_01_project_site"
+        ]
+      }
+    ],
+    "notes": "技术指标以官方公开报道为准，缺失项不做推测。"
+  },
+  "site_information": {
+    "location_role": {
+      "text": "香蜜湖北区 / 香蜜湖西岸的国际交流与城市展示节点。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "related_image_ids": [
+        "img_01_project_site"
+      ]
+    },
+    "natural_environment": {
+      "text": "公开资料强调“岭南庭院”和山水交融，但未提供详细自然环境数据。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s4"
+      ],
+      "related_image_ids": []
+    },
+    "cultural_environment": {
+      "text": "项目以国际交流、城市会客厅、岭南风格和深圳特色为文化定位。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "related_image_ids": []
+    },
+    "terrain_conditions": {
+      "text": "未检索到可靠地形资料。",
+      "evidence_type": "missing",
+      "source_ids": [],
+      "related_image_ids": []
+    },
+    "roads_and_access": {
+      "text": "未检索到可靠道路与出入口资料。",
+      "evidence_type": "missing",
+      "source_ids": [],
+      "related_image_ids": []
+    },
+    "surrounding_buildings": {
+      "text": "深圳政府在线将其与深圳金融文化中心并列报道，显示片区公共项目组团正在成形。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s3"
+      ],
+      "related_image_ids": [
+        "img_01_project_site"
+      ]
+    },
+    "served_users": {
+      "text": "服务元首峰会、国际会议、大型企业商业活动、精品展览、餐饮、住宿、休闲等使用者。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": []
+    },
+    "core_site_tension": {
+      "text": "高规格礼仪、安全运营、大规模集散、酒店配套、花园会议和城市开放形象需要被同时组织。",
+      "evidence_type": "synthesis",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "related_image_ids": []
+    }
+  },
+  "conceptual_exploration": {
+    "diagnosis": [
+      {
+        "text": "项目面对的是城市外交、国际会议、企业活动与复合运营叠加的公共建筑任务。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "positioning": [
+      {
+        "text": "官方定位为国际一流、多功能的国际交流中心和深圳城市会客厅。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "strategy": [
+      {
+        "text": "通过会议中心、酒店、花园会议区和智慧建造，把城市定位转化为复合功能与工程实施。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s4"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "imagery_and_expression": [
+      {
+        "text": "已确认关键词包括城市会客厅、城市名片、岭南庭院、山水交融、内外渗透和移步换景。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s4"
+        ],
+        "related_image_ids": []
+      }
+    ]
+  },
+  "architectural_language_generation": {
+    "function": [
+      {
+        "text": "功能以国际会议中心为核心，配套酒店、花园会议区、展览、餐饮和休闲。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s3"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "layout": [
+      {
+        "text": "公开资料只确认分两期建设和一期会议中心 / 配套酒店，未提供可复核平面流线。",
+        "evidence_type": "missing",
+        "source_ids": [
+          "s3"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "composition": [
+      {
+        "text": "大跨度会议中心与庭院景观共同构成庄重公共事件空间和可游览地域体验；具体形体生成需图纸复核。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s2",
+          "s4"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "place_atmosphere": [
+      {
+        "text": "岭南庭院通过山水、渗透、移步换景和景观中庭组织场所氛围。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s4"
+        ],
+        "related_image_ids": []
+      }
+    ]
+  },
+  "construction_quality_control": {
+    "construction_language": [
+      {
+        "text": "结构体系为钢管混凝土柱 - 钢梁框架 - 钢筋混凝土剪力墙，支撑最大 68.4m 跨度和 18m 悬挑。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s2"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "materials_and_craft": [
+      {
+        "text": "公开资料确认钢结构用钢量约 3.5 万吨、吊装约 1.5 万次；其余材料与工艺资料不足。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s2"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "tectonic_logic": [
+      {
+        "text": "大跨度会议空间通过钢 - 混凝土复合结构体系实现；柱网与节点未公开。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s2"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "performance_and_construction_control": [
+      {
+        "text": "项目用 BIM 构件身份、5G、物联网、云计算等进行钢结构设计、加工、运输、安装全过程可视化管控。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s2"
+        ],
+        "related_image_ids": []
+      }
+    ]
+  },
+  "design_lessons": {
+    "transferable_methods": [
+      {
+        "text": "先定义城市角色与活动链条，再推导会议中心功能、配套和流线。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s3"
+        ],
+        "related_image_ids": []
+      },
+      {
+        "text": "把地域性落实到庭院、微气候、渗透和行走体验，而不只依赖表皮符号。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s4"
+        ],
+        "related_image_ids": []
+      },
+      {
+        "text": "分析大跨度公共建筑时，应同时分析结构跨度、吊装组织和数字化构件管控。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s2"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "avoid_copying": [
+      {
+        "text": "城市会客厅和高级别外交会议中心高度依赖城市等级、运营主体和财政条件，不适合简单套用到普通公共建筑。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "analysis_diagram_potential": [
+      "城市角色图",
+      "事件生命周期图",
+      "会议中心 + 酒店 + 花园会议区复合功能图",
+      "岭南庭院体验图",
+      "大跨度结构与数字建造流程图"
+    ]
+  }
+}

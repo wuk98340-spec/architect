@@ -1,36 +1,93 @@
 # Architectural Case Study Automation
 
-This repository contains a project-local Codex skill for architecture case-study automation and generated case research packages.
+This repository is a local workspace for architecture case-study research automation. It contains a project-local Codex skill, generated case packages, quality reports, and source data for the case-library website.
 
-## Contents
+## Website Repository
 
-- `skills/architectural-case-study/`: Codex skill for creating concise, cited architecture case packages from public web sources.
-- `case-packages/`: Generated case-study outputs. Each case folder contains:
-  - `case.md`: human-readable Chinese case study notes.
-  - `case.json`: structured data for future static-site or RAG ingestion.
+The case-library website has been split into its own sibling Git repository:
+
+```text
+C:\Users\dell\Desktop\architecture-case-site
+```
+
+Use that repository for website layout, interaction, static-site generation, and `public/` output. This `ARCHITECT` repository remains the source workspace for the skill and case data.
+
+The website reads this repository's case data through configuration:
+
+```json
+{
+  "casePackagesDir": "C:/Users/dell/Desktop/ARCHITECT/case-packages",
+  "outputDir": "public"
+}
+```
+
+Do not manually edit `ARCHITECT/site` for future website work. Treat the sibling website repository as the maintained website project.
+
+## Project Structure
+
+- `skills/architectural-case-study/`: Codex skill and references for creating cited architecture case-study packages.
+- `case-packages/`: Source case packages. Each case folder should contain `case.md`, `case.json`, and optional local images, drawings, references, evidence, or revision backups.
+- `scripts/`: Project utilities, including legacy static-site generation and quality review.
+- `quality-reports/`: Markdown quality reports generated from case packages.
+- `site/`: Legacy generated static case-library site. The maintained website now lives in `..\architecture-case-site`.
+- `output/`: Exported final artifacts such as PDFs.
+- `docs/`: Workflow notes and project documentation.
+- `tmp/` and `tmp-validation-case/`: Temporary extraction, rendering, and validation scratch space. These can be cleaned when no active task depends on them.
 
 ## Current Case Packages
 
-- `big-maze`
-- `qian-xuesen-library-sjtu`
-- `baiyun-international-hall`
+- `anhui-museum-new-building-hgad`
+- `baiyun-international-convention-center-phase-ii`
+- `guangzhou-jiefang-middle-road-old-city-renewal`
+- `hangzhou-national-version-museum-wenrun-ge`
+- `he-art-museum`
+- `jining-library`
+- `lego-house`
+- `qianhai-museum`
+- `qingdao-international-conference-center`
+- `raleigh-guizhou-big-project-activity-camp`
+- `seashore-library`
+- `shanghai-expo-china-pavilion`
+- `shenzhen-international-communication-center`
+- `suzhou-museum-new`
+- `taizhou-folk-culture-exhibition-center`
+- `taizhou-scientific-outlook-exhibition-hall`
+- `west-village-basis-yard`
 
-## Validate A Case Package
+## Common Commands
 
-Use the bundled validator:
+Validate a case package:
 
 ```powershell
-& "C:\Users\dell\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" `
-  "C:\Users\dell\Desktop\ARCHITECT\skills\architectural-case-study\scripts\validate_case_package.py" `
-  "C:\Users\dell\Desktop\ARCHITECT\case-packages\big-maze"
+python "C:\Users\dell\Desktop\ARCHITECT\skills\architectural-case-study\scripts\validate_case_package.py" `
+  "C:\Users\dell\Desktop\ARCHITECT\case-packages\<slug>"
 ```
 
-## Skill Usage
+Review case quality:
 
-Ask Codex:
-
-```text
-Use C:\Users\dell\Desktop\ARCHITECT\skills\architectural-case-study to research <project name> and generate a case package.
+```powershell
+python "C:\Users\dell\Desktop\ARCHITECT\scripts\review_case_quality.py" `
+  "C:\Users\dell\Desktop\ARCHITECT\case-packages\<slug>" `
+  --output "C:\Users\dell\Desktop\ARCHITECT\quality-reports\<slug>-quality-report.md"
 ```
 
-The skill prefers official sources first, then architecture media, then general media, and marks uncertain or conflicting information instead of inventing missing facts.
+Rebuild the maintained website from the sibling repository:
+
+```powershell
+cd "C:\Users\dell\Desktop\architecture-case-site"
+python ".\scripts\build_site.py" --config ".\config.local.json"
+```
+
+Preview the generated site:
+
+```powershell
+python -m http.server 8765 --bind 127.0.0.1 -d public
+```
+
+## Organization Notes
+
+- The canonical source for a case is `case-packages/<slug>/`; website output is generated in the sibling website repository.
+- Images may exist in both `case-packages/` and the website repository's `public/` output because the build copies them for browser use. Do not manually merge those copies unless the build process is changed.
+- Keep temporary PDF page renders, extracted text, and one-off helper scripts in `tmp/`.
+- Keep reusable workflow guidance in `docs/`, not in `tmp/`.
+- Clean Python `__pycache__/` folders freely; they are regenerated automatically.

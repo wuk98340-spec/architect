@@ -1,0 +1,468 @@
+{
+  "project_name": "济宁市图书馆 / Jining Library",
+  "architects": [
+    "何镜堂",
+    "华南理工大学建筑设计研究院有限公司"
+  ],
+  "location": "中国山东省济宁市太白湖新区，济宁市文化中心内",
+  "year": "设计时间2014-2017；竣工2018年12月；试运行2019-02-01；正式开放2019-05-01",
+  "program": "市级综合图书馆；借阅、展示、研究、教育、休闲、文化服务、公共活动与数字阅读",
+  "status": "built / open",
+  "case_type": "Cultural",
+  "disambiguation_status": "confirmed",
+  "disambiguation_candidates": [
+    {
+      "candidate_project": "济宁市图书馆 / Jining Library",
+      "location": "山东济宁太白湖新区，济宁市文化中心",
+      "architects": "何镜堂；华南理工大学建筑设计研究院有限公司",
+      "year": "2018竣工，2019开放",
+      "type": "文化建筑 / 图书馆",
+      "main_sources": [
+        "s1",
+        "s3"
+      ],
+      "confidence": "high",
+      "question_for_user": "已按济宁市文化中心内何镜堂设计的济宁市图书馆生成案例包。"
+    }
+  ],
+  "information_confidence": "medium",
+  "incomplete_reason": "项目身份、概念、功能、场地关系和主要空间策略证据较充分；结构详图、节点构造、施工过程、节能指标和运营后评价资料有限。ARCHINA 图纸图片直接下载返回 403，已保留来源链接。",
+  "one_sentence_summary": "济宁市图书馆把孔孟文化中的学宫、辟雍、明堂与杏坛意象，转译为九宫格结构秩序、剧场化中庭和半透陶棍界面，形成兼具城市客厅与知识圣地属性的当代公共图书馆。",
+  "key_facts": [
+    {
+      "label": "位置",
+      "value": "济宁市太白湖新区，济宁市文化中心内；政府页地址为运河路138号。",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "label": "设计单位",
+      "value": "何镜堂；华南理工大学建筑设计研究院有限公司。",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "label": "开放时间",
+      "value": "2019年2月1日试运行，2019年5月1日正式开放。",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "label": "面积",
+      "value": "ARCHINA 记载总建筑面积29316㎡、用地面积6787㎡；政府页另称新馆面积发展至40856㎡。",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "label": "层数高度",
+      "value": "地上5层，其中2、3层设夹层；檐口34.2m，屋顶36.2m。",
+      "source_ids": [
+        "s3"
+      ]
+    }
+  ],
+  "design_concept": {
+    "sourced_concept": "政府页称项目以“学宫、辟雍”为设计理念；ARCHINA 称设计以“孔孟之乡、礼制书传”为主题，以明堂辟雍为原型，并通过文化性结构、剧场化空间和像素化材质界面形成当代公共文化体验。",
+    "ai_synthesis": "项目的核心不是复古造型，而是将儒家教育礼制原型转换为结构网格、中庭秩序、活动平台和半透表皮的连续设计系统。",
+    "source_ids": [
+      "s1",
+      "s3"
+    ]
+  },
+  "key_strategies": [
+    {
+      "strategy_name": "文化原型转译为结构秩序",
+      "design_problem": "孔孟文化背景容易被简化为装饰符号，难以进入空间和建造层面。",
+      "specific_approach": "以明堂辟雍和九宫格图式组织核心筒、剪力墙、正交立柱与斜向立柱，形成承托阅览大厅的空间骨架。",
+      "architectural_effect": "结构本体成为文化叙事、空间秩序和公共体验的共同基础。",
+      "evidence": "ARCHINA 明确描述九宫格骨架、四个L型核心筒、八榀剪力墙、八根正交立柱和四角斜向立柱。",
+      "source_ids": [
+        "s3"
+      ],
+      "related_image_ids": [
+        "img_section_archina_failed"
+      ],
+      "transferable_lesson": "地域文化建筑应优先寻找空间原型和秩序原型，而不只复制图案。"
+    },
+    {
+      "strategy_name": "双首层连接高台与湖区地景",
+      "design_problem": "建筑同时面对东侧文化高台/商业综合体和西侧太白湖/公园绿坡。",
+      "specific_approach": "设置东侧二层主入口与西侧首层次入口，首层容纳文化中心共享公共服务功能。",
+      "architectural_effect": "图书馆成为城市平台、共享廊道和湖区地景之间的公共转换节点。",
+      "evidence": "ARCHINA 对双首层、东西两侧界面和文化中心共享功能有明确描述；gooood/LLA 说明三期高地公园整合文化建筑群。",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "related_image_ids": [
+        "img_site_archina_failed"
+      ],
+      "transferable_lesson": "多标高公共建筑可用复合首层回应不同城市界面。"
+    },
+    {
+      "strategy_name": "剧场化中庭组织公共阅读",
+      "design_problem": "大型图书馆容易变成封闭楼层叠加，缺少清晰的公共中心和动静梯度。",
+      "specific_approach": "三至五层设置退台式中庭阅览大厅，西侧台阶阅览空间朝太白湖打开，二层平台承载学术、展览、交流活动。",
+      "architectural_effect": "阅读、交流、观看和停留被整合为共享文化氛围，形成城市客厅式图书馆体验。",
+      "evidence": "政府页描述由动到静、逐渐打开的十字对称中庭；ARCHINA 描述退台式中庭、台阶阅览和杏坛平台。",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "related_image_ids": [
+        "img_gov_2",
+        "img_gov_3"
+      ],
+      "transferable_lesson": "图书馆中庭应同时承担导向、活动、观看、采光和公共性组织。"
+    },
+    {
+      "strategy_name": "陶棍百叶作为性能与文化界面",
+      "design_problem": "阅览空间需要自然光、观景、遮阳和文化识别之间的平衡。",
+      "specific_approach": "玻璃幕墙外覆暖灰色陶棍百叶，通过旋转渐变形成像素化半透界面，以7:2:1微差间色隐喻竹简。",
+      "architectural_effect": "表皮同时过滤光线、调节视线、建立竹简联想，并形成沉静的阅读氛围。",
+      "evidence": "ARCHINA 对陶棍百叶、旋转渐变、遮阳采光观景和竹简隐喻有明确描述。",
+      "source_ids": [
+        "s3"
+      ],
+      "related_image_ids": [
+        "img_facade_archina_failed"
+      ],
+      "transferable_lesson": "立面参数应同时服务性能、体验和文化叙事。"
+    }
+  ],
+  "spatial_ideas": [
+    {
+      "text": "双首层回应东侧文化高台和西侧公园湖景，形成多方向到达。",
+      "source_ids": [
+        "s3"
+      ],
+      "related_image_ids": [
+        "img_site_archina_failed"
+      ]
+    },
+    {
+      "text": "三至五层为主要阅览空间，核心为退台式中庭阅览大厅。",
+      "source_ids": [
+        "s3"
+      ],
+      "related_image_ids": [
+        "img_section_archina_failed"
+      ]
+    },
+    {
+      "text": "二层中部平台以孔子杏坛讲学为场景意向，承担学术、展览、交流活动。",
+      "source_ids": [
+        "s3",
+        "s1"
+      ],
+      "related_image_ids": []
+    }
+  ],
+  "materials_structure": [
+    {
+      "text": "九宫格骨架、L型核心筒、剪力墙与立柱共同组织阅览大厅体量；公开资料未确认详细结构体系。",
+      "source_ids": [
+        "s3"
+      ],
+      "related_image_ids": [
+        "img_section_archina_failed"
+      ]
+    },
+    {
+      "text": "玻璃幕墙外覆陶棍百叶，旋转渐变调节遮阳、采光与观景，并隐喻竹简。",
+      "source_ids": [
+        "s3"
+      ],
+      "related_image_ids": [
+        "img_facade_archina_failed"
+      ]
+    },
+    {
+      "text": "室内采用转印木纹铝板书架与半透格栅分隔空间。",
+      "source_ids": [
+        "s3"
+      ],
+      "related_image_ids": []
+    }
+  ],
+  "site_context": [
+    {
+      "text": "项目位于济宁市文化中心中部，西接太白湖公园绿坡，东连文化高台与商业综合体，南北邻近群艺馆、博物馆等文化建筑。",
+      "source_ids": [
+        "s3"
+      ],
+      "related_image_ids": [
+        "img_site_archina_failed"
+      ]
+    },
+    {
+      "text": "文化中心三期的高地公园与商业综合体进一步整合图书馆、博物馆、美术馆等文化建筑群。",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "related_image_ids": []
+    }
+  ],
+  "image_metadata": [
+    {
+      "id": "img_gov_1",
+      "file_name": "images/01_gov_library_1.jpg",
+      "image_type": "01_hero",
+      "source_url": "https://www.jining.gov.cn/picture/0/e9c65267b5e644f19b51f6a7beb51592.jpg",
+      "source_site": "济宁市人民政府",
+      "caption": "济宁市图书馆政府页照片",
+      "copyright_note": "Government public page; reference use only; rights not cleared for publication.",
+      "recommended_use": "cover / identity reference",
+      "relevance_reason": "用于识别项目作为济宁市文化中心公共文化场馆的外观与形象。",
+      "related_sections": [
+        "01 基本信息与经济技术指标"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_gov_2",
+      "file_name": "images/08_gov_library_2.jpg",
+      "image_type": "08_interior",
+      "source_url": "https://www.jining.gov.cn/picture/0/7bb3ee058ef143858613b36b7a884dd7.jpg",
+      "source_site": "济宁市人民政府",
+      "caption": "济宁市图书馆室内/服务空间照片",
+      "copyright_note": "Government public page; reference use only; rights not cleared for publication.",
+      "recommended_use": "interior and public service reference",
+      "relevance_reason": "用于支撑图书馆开放阅览与公共服务属性的分析。",
+      "related_sections": [
+        "06 建筑语言生成",
+        "08 核心方法提炼"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_gov_3",
+      "file_name": "images/08_gov_library_3.jpg",
+      "image_type": "08_interior",
+      "source_url": "https://www.jining.gov.cn/picture/0/082f2e6b2a8749f2a3fe5bc3711cc77b.jpg",
+      "source_site": "济宁市人民政府",
+      "caption": "济宁市图书馆室内/读者空间照片",
+      "copyright_note": "Government public page; reference use only; rights not cleared for publication.",
+      "recommended_use": "user experience reference",
+      "relevance_reason": "用于支撑城市大书房、读者活动与公共阅读氛围分析。",
+      "related_sections": [
+        "06 建筑语言生成"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_gov_4",
+      "file_name": "images/08_gov_library_4.jpg",
+      "image_type": "08_interior",
+      "source_url": "https://www.jining.gov.cn/picture/0/6b3534992e664685ad5c1b3a113d5397.jpg",
+      "source_site": "济宁市人民政府",
+      "caption": "济宁市图书馆政府页照片",
+      "copyright_note": "Government public page; reference use only; rights not cleared for publication.",
+      "recommended_use": "supplementary interior/service reference",
+      "relevance_reason": "作为政府页补充图片，用于后续人工复核读者空间与运营状态。",
+      "related_sections": [
+        "09 图纸与图片索引"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_site_archina_failed",
+      "file_name": "",
+      "image_type": "03_plan",
+      "source_url": "http://cdn.archina.com/ueditor/20210726/60fe85504e8c0upfile.png",
+      "source_site": "ARCHINA",
+      "caption": "总平面图 / 场地关系图",
+      "copyright_note": "Reference link only; rights not cleared.",
+      "recommended_use": "site and plan analysis",
+      "relevance_reason": "用于验证文化中心、太白湖、公园绿坡、文化高台与图书馆之间的场地关系。",
+      "related_sections": [
+        "04 场地信息表",
+        "06.2 布局逻辑"
+      ],
+      "download_status": "failed",
+      "failure_reason": "ARCHINA CDN returned HTTP 403 for direct download."
+    },
+    {
+      "id": "img_section_archina_failed",
+      "file_name": "",
+      "image_type": "04_section",
+      "source_url": "http://cdn.archina.com/ueditor/20210726/60fe856fdab87upfile.png",
+      "source_site": "ARCHINA",
+      "caption": "剖面图",
+      "copyright_note": "Reference link only; rights not cleared.",
+      "recommended_use": "section and atrium analysis",
+      "relevance_reason": "用于支撑退台式中庭、架空阅览大厅和竖向动静梯度分析。",
+      "related_sections": [
+        "06.4 场所与氛围",
+        "08 核心方法提炼"
+      ],
+      "download_status": "failed",
+      "failure_reason": "ARCHINA CDN returned HTTP 403 for direct download."
+    },
+    {
+      "id": "img_facade_archina_failed",
+      "file_name": "",
+      "image_type": "05_elevation",
+      "source_url": "http://cdn.archina.com/ueditor/20210726/60fe857fc2de6upfile.jpg",
+      "source_site": "ARCHINA",
+      "caption": "外观与立面材料照片",
+      "copyright_note": "Reference link only; rights not cleared.",
+      "recommended_use": "facade and material analysis",
+      "relevance_reason": "用于说明飞檐、方正体量、玻璃幕墙和陶棍百叶界面。",
+      "related_sections": [
+        "07.2 材料与工艺",
+        "08 核心方法提炼"
+      ],
+      "download_status": "failed",
+      "failure_reason": "ARCHINA CDN returned HTTP 403 for direct download."
+    }
+  ],
+  "download_mode": "partial",
+  "source_quality": {
+    "has_primary_sources": true,
+    "primary_sources_used_for_identity": true,
+    "architecture_media_count": 3,
+    "wechat_valid_result_count": 3,
+    "zhihu_valid_result_count": 0,
+    "source_sufficiency_status": "partial",
+    "secondary_source_heavy": false,
+    "manual_review_needed": [
+      "确认建筑面积29316㎡与政府页40856㎡的统计口径差异。",
+      "复核结构体系、幕墙节点、陶棍安装和顶部采光器构造。",
+      "ARCHINA 图纸图片下载失败，需人工打开来源页面复核图纸。"
+    ],
+    "identity_confirming_source_ids": [
+      "s1",
+      "s3",
+      "s6"
+    ],
+    "analysis_coverage": [
+      "concept",
+      "context",
+      "program",
+      "circulation",
+      "facade_material",
+      "structure_construction",
+      "user_experience",
+      "urban_relationship"
+    ]
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "济宁市图书馆",
+      "url": "https://www.jining.gov.cn/art/2021/1/5/art_65759_2896131.html",
+      "source_level": "level_a",
+      "publisher": "济宁市人民政府 / 济宁市文化和旅游局",
+      "accessed_date": "2026-06-20",
+      "notes": "官方页，确认地址、开放时间、何镜堂设计、学宫/辟雍概念、服务容量与功能。"
+    },
+    {
+      "id": "s2",
+      "title": "Jining Cultural Center",
+      "url": "https://www.laguardalow.com/zh-hans/jining-cultural-center/",
+      "source_level": "level_a",
+      "publisher": "LLA (Laguarda.Low Architects)",
+      "accessed_date": "2026-06-20",
+      "notes": "三期设计方项目页，用于文化中心总体关系和高地公园背景。"
+    },
+    {
+      "id": "s3",
+      "title": "济宁市图书馆 | 华南理工大学建筑设计研究院",
+      "url": "https://www.archina.com/index.php?a=show&g=works&id=9525&m=index",
+      "source_level": "level_b",
+      "publisher": "ARCHINA",
+      "accessed_date": "2026-06-20",
+      "notes": "单体建筑案例页，提供指标、功能、概念、结构性描述、材料与图纸目录；内容可能由第三方提供，仍需人工复核。"
+    },
+    {
+      "id": "s4",
+      "title": "Jining Cultural Industry Park (Jining Cultural Center Phase III) by LLA",
+      "url": "https://www.gooood.cn/jining-cultural-industry-park-by-laguarda-low-architects-lla.htm",
+      "source_level": "level_b",
+      "publisher": "gooood",
+      "accessed_date": "2026-06-20",
+      "notes": "专业媒体，主要用于文化中心三期与高地公园如何整合文化建筑群。"
+    },
+    {
+      "id": "s5",
+      "title": "济宁市文化产业园（济宁市文化中心三期）",
+      "url": "https://www.archdaily.cn/cn/993938/ji-zhu-shi-wen-hua-chan-ye-yuan-ji-zhu-shi-wen-hua-zhong-xin-san-qi-llajian-zhu-she-ji-gong-si",
+      "source_level": "level_b",
+      "publisher": "ArchDaily China",
+      "accessed_date": "2026-06-20",
+      "notes": "专业媒体，非图书馆单体页，但确认文化中心三期总体关系。"
+    },
+    {
+      "id": "s6",
+      "title": "济宁市文化中心项目图书馆开馆试运行",
+      "url": "https://www.cscec.com/zgjz_new/xwzx_new/zqydt_new/201902/2910949.html",
+      "source_level": "level_c",
+      "publisher": "中国建筑",
+      "accessed_date": "2026-06-20",
+      "notes": "承建/企业新闻，用于开馆试运行、约3万㎡、地上五层、分区功能等辅助确认。"
+    },
+    {
+      "id": "s7",
+      "title": "Sogou 微信结果：创新创优 | 何镜堂：济宁市图书馆（建筑设计一等奖）",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E6%B5%8E%E5%AE%81%E5%B8%82%E5%9B%BE%E4%B9%A6%E9%A6%86%20%E5%BB%BA%E7%AD%91%E8%AE%BE%E8%AE%A1",
+      "source_level": "level_c",
+      "publisher": "中设协建筑设计分会（Sogou 可见摘要）",
+      "accessed_date": "2026-06-20",
+      "notes": "Sogou 可见摘要补充建筑设计一等奖、檐口高度、主题与原型等线索；未作为核心事实唯一依据。"
+    },
+    {
+      "id": "s8",
+      "title": "Sogou 微信结果：SCAD新闻 | 华南理工大学建筑设计研究院获奖信息",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E6%B5%8E%E5%AE%81%E5%B8%82%E5%9B%BE%E4%B9%A6%E9%A6%86%20%E5%BB%BA%E7%AD%91%E8%AE%BE%E8%AE%A1",
+      "source_level": "level_c",
+      "publisher": "华南理工大学建筑设计研究院（Sogou 可见摘要）",
+      "accessed_date": "2026-06-20",
+      "notes": "Sogou 可见摘要补充2021年度教育部优秀勘察设计奖和项目位置线索。"
+    }
+  ],
+  "uncertain_or_conflicting_info": [
+    {
+      "topic": "Building area",
+      "description": "ARCHINA 记载总建筑面积29316㎡；济宁市政府页称新馆面积发展至40856㎡；中国建筑报道称图书馆总建筑面积约3万㎡。可能为设计建筑面积、馆舍运营面积或统计口径差异。",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s6"
+      ]
+    },
+    {
+      "topic": "Structure and construction details",
+      "description": "公开资料只说明九宫格骨架、核心筒、剪力墙和立柱等空间结构线索，未检索到结构施工图、节点、幕墙连接、施工过程或性能测试资料。",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "topic": "Image downloads",
+      "description": "ARCHINA 图纸与部分建筑照片可在页面中看到来源链接，但 CDN 直接下载返回 HTTP 403；案例包仅下载政府页公开图片，并记录 ARCHINA 图纸为 failed。",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "topic": "Zhihu supplemental search",
+      "description": "Sogou Zhihu 搜索未保留到对目标建筑有实质分析价值的结果，未纳入证据。",
+      "source_ids": []
+    }
+  ]
+}

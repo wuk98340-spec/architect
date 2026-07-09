@@ -1,0 +1,909 @@
+{
+  "project_name": "杭州国家版本馆（文润阁） / Hangzhou National Archives of Publications and Culture",
+  "source_mode": "web",
+  "architects": [
+    "王澍",
+    "陆文宇",
+    "业余建筑工作室"
+  ],
+  "location": "中国浙江杭州良渚一带",
+  "year": "2022年7月23日正式落成",
+  "program": "版本收藏、保护、展示、研究与交流综合文化建筑",
+  "status": "建成",
+  "case_type": "Cultural building",
+  "disambiguation_status": "confirmed",
+  "disambiguation_candidates": [],
+  "information_confidence": "medium",
+  "incomplete_reason": "身份、落成时间、面积、核心设计概念和主要建造策略由新华社、有方、Architectural Record、Domus 等来源交叉支持；但未检索到建筑师事务所或馆方一手项目页，建筑高度、层数、容积率、建筑密度、完整结构体系和机电环境控制资料仍需人工复核。",
+  "one_sentence_summary": "杭州国家版本馆把废弃矿坑、良渚遗址限高、国家藏书楼功能和龙泉青瓷工艺整合成一套现代宋韵的当代山水建筑语言。",
+  "key_facts": [
+    {
+      "label": "项目别名",
+      "value": "杭州国家版本馆又名文润阁。",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "label": "落成时间",
+      "value": "2022年7月23日正式落成。",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "label": "建筑面积",
+      "value": "总建筑面积10.31万平方米。",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "label": "设计团队",
+      "value": "由王澍、陆文宇及业余建筑工作室设计。",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "label": "文化体系角色",
+      "value": "承担中华版本保藏“一总三分”体系中的重要功能，也是中央总馆异地灾备库、江南特色版本库和华东地区版本资源集聚中心。",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "label": "主要材料系统",
+      "value": "项目使用龙泉青瓷屏扇/瓷板，结合铜扣件、钢骨架及可开启系统。",
+      "source_ids": [
+        "s2",
+        "s4"
+      ]
+    }
+  ],
+  "design_concept": {
+    "sourced_concept": "项目以“现代宋韵”为核心定位，围绕宋代园林神韵的当代藏书建筑展开，并将南园北馆、掩映之美、平远/深远、龙泉青瓷等转化为空间和建造语言。",
+    "ai_synthesis": "其关键不是仿古，而是在良渚遗址限高和废弃矿坑地形中，以低矮展开、曲折游线、可开启青瓷屏扇和可拆卸构造建立当代山水建筑。",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s4",
+      "s5"
+    ]
+  },
+  "key_strategies": [
+    {
+      "strategy_name": "限高条件下的平远展开",
+      "design_problem": "国家级版本馆需要较大保藏和展示面积，但基地邻近良渚遗址并受到低限高和视觉保护约束。",
+      "specific_approach": "采用低矮、横向展开的建筑群和南园北馆疏密布局，以层层递进的体量、廊道和山水关系替代高耸纪念性。",
+      "architectural_effect": "建筑通过路径深度和山水层次获得公共性和庄重感，同时降低对遗址周边视觉环境的冲击。",
+      "evidence": "有方专访记录15米限高、南园北馆和平远法；新华社确认项目位置、面积和落成时间；Architectural Record 说明建筑群规模、13个 pavilion 和山体嵌入关系。",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "related_image_ids": [
+        "img02"
+      ],
+      "transferable_lesson": "在限高或景观敏感场地中，可把地标表达从高度转向路径、遮挡和横向层次。"
+    },
+    {
+      "strategy_name": "南园北馆的开放/封闭分区",
+      "design_problem": "版本馆同时需要高安全保藏功能和面向公众的展示、游览与文化体验。",
+      "specific_approach": "将南侧处理为疏朗园林和公共游览空间，将北侧处理为较密集的藏书与展陈馆区，并以桥、廊和漂浮系统联系。",
+      "architectural_effect": "公众体验获得曲折游园和探索感，而保藏功能仍能保持较高控制性。",
+      "evidence": "有方专访明确“南园北馆”“大疏大密”和漂浮系统；有方摄影漫游记录南园北馆、游园迷失感和山水补位。",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "related_image_ids": [
+        "img04"
+      ],
+      "transferable_lesson": "文化建筑可用景观和游线作为功能缓冲，而不是把开放与封闭简单二分。"
+    },
+    {
+      "strategy_name": "非正轴入口与掩映之美",
+      "design_problem": "国家级文化建筑通常倾向正中轴入口，但场地山体和宋画意境更适合曲折进入。",
+      "specific_approach": "南大门不居中，通过山体、门洞和路径遮挡形成局部显露的进入经验。",
+      "architectural_effect": "入口从纪念性门厅转化为山水游观的开端，强化进入过程的时间性。",
+      "evidence": "有方专访中建筑师说明南大门不在中轴线上，并将其解释为典型宋画掩映意境；新华社也记录项目借鉴宋代绘画“掩映之美”。",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "related_image_ids": [
+        "img03"
+      ],
+      "transferable_lesson": "入口设计可以通过偏移、遮挡和转折建立文化叙事，不必总依赖对称正面。"
+    },
+    {
+      "strategy_name": "青瓷屏扇的工艺系统化",
+      "design_problem": "龙泉青瓷具有地方文化和手工变化，但直接贴附容易沦为符号且难以维护。",
+      "specific_approach": "以多釉色青瓷片、铜扣件、统一钢骨架和可开启系统组织屏扇，并通过样板和颜色控制处理手工不均质。",
+      "architectural_effect": "青瓷从装饰材料变成可开启、可拆卸、可替换的当代表皮系统。",
+      "evidence": "有方专访提到7万片青瓷和铜扣件；Architectural Record 记录12种釉色、约100,000平方英尺陶瓷砖、钢骨架和可替换安装系统。",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "related_image_ids": [
+        "img05",
+        "img06"
+      ],
+      "transferable_lesson": "地方材料进入大型公共建筑时，必须同步设计材料叙事、误差管理、安装方式和维护机制。"
+    },
+    {
+      "strategy_name": "双廊作为山体保护与游观装置",
+      "design_problem": "废弃矿坑山体既是场地记忆和山水意象，也有安全风险和保护边界。",
+      "specific_approach": "用混凝土挡土墙和带顶游廊隔开山体，让公众近距离游观，同时保护山体原真性和游人安全。",
+      "architectural_effect": "防护构筑物被转化为游线和空间叙事装置，使保护、安全和体验合为一体。",
+      "evidence": "有方专访明确双廊主体是混凝土挡土墙并承担安全功能；Domus 将项目理解为山与水的互补结构。",
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "related_image_ids": [
+        "img06"
+      ],
+      "transferable_lesson": "面对危险或脆弱自然遗存时，可把工程防护转译为可体验的建筑路径。"
+    }
+  ],
+  "spatial_ideas": [
+    {
+      "text": "南园北馆形成疏密对照：南边以园林和水面提供开放游观，北边以密集建筑承载核心保藏和展示功能。",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "related_image_ids": [
+        "img02",
+        "img04"
+      ]
+    },
+    {
+      "text": "南大门偏离中轴并被山体局部遮挡，把进入过程转化为宋画式的掩映经验。",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "related_image_ids": [
+        "img03"
+      ]
+    },
+    {
+      "text": "漂浮系统在北馆中建立可游路径，使封闭书库和公共展览之间出现过渡层。",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "related_image_ids": [
+        "img04"
+      ]
+    }
+  ],
+  "materials_structure": [
+    {
+      "text": "龙泉青瓷被发展为建筑尺度的屏扇系统，依靠铜扣件、钢骨架、釉色控制和样板流程进入大体量公共建筑。",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "related_image_ids": [
+        "img05"
+      ]
+    },
+    {
+      "text": "双廊的混凝土挡土墙承担山体安全隔离，同时成为游园路径的一部分。",
+      "source_ids": [
+        "s2"
+      ],
+      "related_image_ids": [
+        "img06"
+      ]
+    },
+    {
+      "text": "Architectural Record 记录项目存在木-钢大跨雨棚、钢骨架青瓷屏扇和局部夯土/混凝土做法，但完整结构体系仍缺少一手资料。",
+      "source_ids": [
+        "s4"
+      ],
+      "related_image_ids": [
+        "img06"
+      ]
+    }
+  ],
+  "site_context": [
+    {
+      "text": "项目坐落于良渚一带，公共叙事与五千年文明史、国家版本保藏体系和江南文脉相连。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img01"
+      ]
+    },
+    {
+      "text": "基地原为废弃矿坑，建筑师将残破山体理解为可转译为山水画结构的场地资源。",
+      "source_ids": [
+        "s2"
+      ],
+      "related_image_ids": [
+        "img02"
+      ]
+    },
+    {
+      "text": "良渚遗址周边的视觉保护和限高要求迫使建筑采取低矮、横向和层层展开的策略。",
+      "source_ids": [
+        "s2"
+      ],
+      "related_image_ids": [
+        "img02"
+      ]
+    }
+  ],
+  "image_metadata": [
+    {
+      "id": "img01",
+      "file_name": "images/01_hero_exterior.jpg",
+      "image_type": "01_hero",
+      "source_url": "https://www.archiposition.com/items/92fdafd42c",
+      "source_site": "有方",
+      "caption": "杭州国家版本馆整体外观，山体、水面与北馆体量形成山水互文。",
+      "copyright_note": "Photo by 孔锦权 via 有方; reference link only; rights not cleared.",
+      "recommended_use": "封面与整体外观识别",
+      "relevance_reason": "用于说明项目以山、水、书库和游廊共同组织，而非孤立纪念性单体。",
+      "related_sections": [
+        "01 基本信息与经济技术指标",
+        "04 场地信息表"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img02",
+      "file_name": "images/02_site_aerial.jpg",
+      "image_type": "02_site",
+      "source_url": "https://www.archiposition.com/items/20220725050615",
+      "source_site": "有方",
+      "caption": "场地鸟瞰，废弃矿坑、山体与建筑群互相嵌合。",
+      "copyright_note": "Image via 有方; reference link only; rights not cleared.",
+      "recommended_use": "场地关系与南园北馆分析",
+      "relevance_reason": "用于说明南园北馆和山水互补由场地地形与建筑布置共同生成。",
+      "related_sections": [
+        "04 场地信息表",
+        "08 方法 1"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img03",
+      "file_name": "images/03_south_gate.jpg",
+      "image_type": "05_elevation",
+      "source_url": "https://www.archiposition.com/items/20220725050615",
+      "source_site": "有方",
+      "caption": "南大门被山体和建筑边界局部遮挡，形成非正轴进入经验。",
+      "copyright_note": "Image via 有方; reference link only; rights not cleared.",
+      "recommended_use": "入口与掩映关系分析",
+      "relevance_reason": "用于说明项目通过偏移和遮挡处理入口，而不是采用正中轴纪念门厅。",
+      "related_sections": [
+        "06.2 布局逻辑",
+        "08 方法 3"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img04",
+      "file_name": "images/04_floating_system.jpg",
+      "image_type": "09_analysis",
+      "source_url": "https://www.archiposition.com/items/92fdafd42c",
+      "source_site": "有方",
+      "caption": "北馆与漂浮系统，曲折路径调和封闭书库和公共游览。",
+      "copyright_note": "Photo by 孔锦权 via 有方; reference link only; rights not cleared.",
+      "recommended_use": "漂浮系统与公共路径分析",
+      "relevance_reason": "用于验证封闭保藏功能和公共游园体验之间通过漂浮系统产生过渡。",
+      "related_sections": [
+        "06.3 形式构成",
+        "08 方法 2"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img05",
+      "file_name": "images/05_small-material-large-span.gif",
+      "image_type": "06_detail",
+      "source_url": "https://www.archiposition.com/items/20220725050615",
+      "source_site": "有方",
+      "caption": "青瓷屏扇从手工材料变成建筑尺度的可开启界面。",
+      "copyright_note": "Image via 有方; reference link only; rights not cleared.",
+      "recommended_use": "青瓷屏扇与构造策略分析",
+      "relevance_reason": "用于说明龙泉青瓷、屏扇、铜扣件和钢骨架被组织成可维护的建筑系统。",
+      "related_sections": [
+        "07.2 材料与工艺",
+        "08 方法 4"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img06",
+      "file_name": "images/06_bamboo-concrete.gif",
+      "image_type": "06_detail",
+      "source_url": "https://www.archiposition.com/items/20220725050615",
+      "source_site": "有方",
+      "caption": "竹模混凝土与材料肌理，粗粝混凝土和青瓷共同构成当代宋韵的材料对照。",
+      "copyright_note": "Image via 有方; reference link only; rights not cleared.",
+      "recommended_use": "材料肌理、混凝土与双廊策略分析",
+      "relevance_reason": "用于说明传统工艺与混凝土、钢、木等现代建造系统形成对照。",
+      "related_sections": [
+        "07.3 构造逻辑",
+        "08 方法 5"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    }
+  ],
+  "download_mode": "completed",
+  "source_quality": {
+    "has_primary_sources": false,
+    "primary_sources_used_for_identity": false,
+    "architecture_media_count": 4,
+    "wechat_valid_result_count": 0,
+    "zhihu_valid_result_count": 0,
+    "source_sufficiency_status": "partial",
+    "secondary_source_heavy": false,
+    "manual_review_needed": [
+      "未检索到可稳定访问的建筑师事务所或馆方一手项目页。",
+      "建筑高度、层数、容积率、建筑密度、完整结构体系和机电环境控制资料需要人工复核。",
+      "未专门保留 WeChat / Zhihu 结果，因为已取得多个 Level B 建筑专业媒体来源。"
+    ],
+    "identity_confirming_source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "analysis_coverage": [
+      "concept",
+      "context",
+      "program",
+      "circulation",
+      "facade_material",
+      "structure_construction",
+      "user_experience",
+      "urban_relationship"
+    ]
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "杭州国家版本馆：宋韵悠长，文“润”江南",
+      "url": "https://www.news.cn/local/2023-06/10/c_1129683711.htm",
+      "source_level": "level_c",
+      "publisher": "新华社 / 新华网",
+      "accessed_date": "2026-07-02",
+      "notes": "权威中文新闻来源，用于确认项目别名、落成时间、建筑面积、良渚区位和公共功能角色；非建筑专业媒体或建筑师一手来源。"
+    },
+    {
+      "id": "s2",
+      "title": "王澍+陆文宇：杭州国家版本馆，现代宋韵｜有方专访",
+      "url": "https://www.archiposition.com/items/20220725050615",
+      "source_level": "level_b",
+      "publisher": "有方",
+      "accessed_date": "2026-07-02",
+      "notes": "建筑专业媒体深度访谈，核心来源；用于设计意图、场地约束、南园北馆、漂浮系统、青瓷构造和材料策略。"
+    },
+    {
+      "id": "s3",
+      "title": "在杭州国家版本馆里，来一场“空间漫游”",
+      "url": "https://www.archiposition.com/items/92fdafd42c",
+      "source_level": "level_b",
+      "publisher": "有方",
+      "accessed_date": "2026-07-02",
+      "notes": "建筑专业媒体摄影漫游，提供项目设计、坐标、摄影来源和游园体验描述；与 s2 同属有方，身份确认不完全独立。"
+    },
+    {
+      "id": "s4",
+      "title": "Amateur Architecture Studio Clads a Chinese Archive with Thousands of Celadon Tiles",
+      "url": "https://www.architecturalrecord.com/articles/16842-amateur-architecture-studio-clads-a-chinese-archive-with-thousands-of-celadon-tiles",
+      "source_level": "level_b",
+      "publisher": "Architectural Record",
+      "accessed_date": "2026-07-02",
+      "notes": "建筑专业媒体英文案例文章，用于确认建筑群规模、13个 pavilion、青瓷屏扇、钢骨架、扣件、样板和材料/施工信息。"
+    },
+    {
+      "id": "s5",
+      "title": "Hanzhou National Archives, an alternation of hills and bodies of water",
+      "url": "https://www.domusweb.it/en/architecture/2022/10/24/amateur-architecture-hanzhou-national-archives-an-alternation-of-hills-and-bodies-of-water.html",
+      "source_level": "level_b",
+      "publisher": "Domus",
+      "accessed_date": "2026-07-02",
+      "notes": "建筑专业媒体英文评论，用于山水关系、场地解释和项目整体质量判断；页面标题存在 Hanzhou 拼写。"
+    },
+    {
+      "id": "s6",
+      "title": "七大工艺创新助力现代“宋韵”方案落地",
+      "url": "https://dzb.jzsbs.com/epaper/jzsb/pc/content/202212/05/content_18886.html",
+      "source_level": "level_c",
+      "publisher": "建筑时报",
+      "accessed_date": "2026-07-02",
+      "notes": "建筑行业报纸来源，搜索摘要显示施工图及施工建造、占地150亩等信息；网页打开时返回异常，作为待复核补充源使用。"
+    },
+    {
+      "id": "s7",
+      "title": "杭州国家版本馆又叫文润阁？",
+      "url": "https://hz.bendibao.com/news/2022726/125485.shtm",
+      "source_level": "level_d",
+      "publisher": "杭州本地宝",
+      "accessed_date": "2026-07-02",
+      "notes": "参考性地方信息聚合页面，仅用于辅助核对公众表述，不用于核心事实或策略判断。"
+    }
+  ],
+  "uncertain_or_conflicting_info": [
+    {
+      "topic": "Primary source",
+      "description": "未检索到可稳定访问的建筑师事务所或馆方一手项目页；核心设计判断主要依赖有方访谈和建筑专业媒体。",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ]
+    },
+    {
+      "topic": "Technical metrics",
+      "description": "建筑高度、层数、容积率、建筑密度、完整结构体系和机电/环境控制系统未检索到可靠资料。",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ]
+    },
+    {
+      "topic": "Scale wording",
+      "description": "新华社使用总建筑面积10.31万平方米，Architectural Record 使用 approximately 1.1 million square feet，量级接近；本包以新华社中文面积作为主字段。",
+      "source_ids": [
+        "s1",
+        "s4"
+      ]
+    },
+    {
+      "topic": "English title",
+      "description": "英文资料中存在 National Archives、National Archives of Publications and Culture、Wenrun Pavilion 等不同表述；本包保留中文正式名和常见英文描述。",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s5"
+      ]
+    }
+  ],
+  "technical_metrics": {
+    "site_area": {
+      "value": "150",
+      "unit": "亩",
+      "confidence": "limited",
+      "source_ids": [
+        "s6"
+      ],
+      "notes": "建筑时报搜索摘要显示占地150亩，但原页面打开异常，需复核。"
+    },
+    "building_area": {
+      "value": "10.31",
+      "unit": "万平方米",
+      "confidence": "confirmed",
+      "source_ids": [
+        "s1"
+      ],
+      "notes": "新华社确认总建筑面积10.31万平方米。"
+    },
+    "height": {
+      "value": "",
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到建筑实际高度；有方专访提及15米限高约束。"
+    },
+    "floors": {
+      "value": "",
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到可靠资料。"
+    },
+    "far": {
+      "value": "",
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到可靠资料。"
+    },
+    "building_density": {
+      "value": "",
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到可靠资料。"
+    },
+    "structure_system": {
+      "value": "局部钢骨架、混凝土挡土墙、木-钢雨棚和混凝土主体结构证据；完整结构体系未确认",
+      "unit": "",
+      "confidence": "limited",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "notes": "仅记录公开资料中可确认的局部建造系统。"
+    },
+    "main_materials": [
+      {
+        "text": "龙泉青瓷屏扇/瓷板、铜扣件、钢骨架、混凝土、木与钢。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s2",
+          "s4"
+        ],
+        "related_image_ids": [
+          "img05",
+          "img06"
+        ]
+      }
+    ],
+    "client": {
+      "value": "中国国家版本馆杭州分馆相关建设主体",
+      "unit": "",
+      "confidence": "limited",
+      "source_ids": [
+        "s1"
+      ],
+      "notes": "公开来源确认馆方角色，但未检索到合同意义上的业主字段。"
+    },
+    "photography_drawing_credits": [
+      {
+        "text": "有方摄影漫游标注摄影为孔锦权；Architectural Record 图片标注 Iwan Baan；Domus 图片标注 Ji Yun。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s3",
+          "s4",
+          "s5"
+        ],
+        "related_image_ids": [
+          "img01",
+          "img04"
+        ]
+      }
+    ],
+    "notes": "本包仅记录公开资料可确认指标；高精度经济技术指标需以馆方、施工图或竣工资料复核。"
+  },
+  "site_information": {
+    "location_role": {
+      "text": "项目位于良渚一带，承担中华版本保藏体系的江南特色版本库和华东地区版本资源集聚中心角色。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img01"
+      ]
+    },
+    "natural_environment": {
+      "text": "基地为废弃矿坑，山体残破但被建筑师转化为山水画式场地结构。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "related_image_ids": [
+        "img02"
+      ]
+    },
+    "cultural_environment": {
+      "text": "项目叙事连接良渚文明、宋韵、国家版本保藏和龙泉青瓷。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "related_image_ids": [
+        "img05"
+      ]
+    },
+    "terrain_conditions": {
+      "text": "公开访谈提到矿坑比外部道路平均高出约5米，并受15米限高影响。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s2"
+      ],
+      "related_image_ids": [
+        "img02"
+      ]
+    },
+    "roads_and_access": {
+      "text": "整体交通资料不足；南大门入口位置和非中轴进入是公开资料中最明确的通行策略。",
+      "evidence_type": "synthesis",
+      "source_ids": [
+        "s2"
+      ],
+      "related_image_ids": [
+        "img03"
+      ]
+    },
+    "surrounding_buildings": {
+      "text": "公开资料重点不是周边城市街区，而是良渚遗址、山体和水面关系。",
+      "evidence_type": "synthesis",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5"
+      ],
+      "related_image_ids": [
+        "img01",
+        "img02"
+      ]
+    },
+    "served_users": {
+      "text": "服务版本收藏、保护、研究、展示、交流及公共参观人群。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": []
+    },
+    "core_site_tension": {
+      "text": "核心矛盾是在遗址保护、限高、废弃矿坑和国家级保藏功能之间建立当代山水秩序。",
+      "evidence_type": "synthesis",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "related_image_ids": [
+        "img02",
+        "img04"
+      ]
+    }
+  },
+  "conceptual_exploration": {
+    "diagnosis": [
+      {
+        "text": "项目面对国家级藏书楼功能、宋代园林命题、良渚遗址保护、废弃矿坑和低限高的叠加约束。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "related_image_ids": [
+          "img02"
+        ]
+      }
+    ],
+    "positioning": [
+      {
+        "text": "项目以现代宋韵为核心定位，作为国家当代藏书楼与江南特色版本库出现。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "related_image_ids": [
+          "img01"
+        ]
+      }
+    ],
+    "strategy": [
+      {
+        "text": "用南园北馆、大疏大密、入口掩映、漂浮系统和青瓷屏扇把文化命题转化为空间与建造策略。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s2",
+          "s3",
+          "s4"
+        ],
+        "related_image_ids": [
+          "img03",
+          "img04",
+          "img05"
+        ]
+      }
+    ],
+    "imagery_and_expression": [
+      {
+        "text": "宋画中的平远、深远、掩映和山水互补被转译为低矮展开、曲折路径和局部显露。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s5"
+        ],
+        "related_image_ids": [
+          "img01",
+          "img03"
+        ]
+      }
+    ]
+  },
+  "architectural_language_generation": {
+    "function": [
+      {
+        "text": "保藏、展示、研究、交流和公共参观功能被分配到南园、北馆、山体库房与过渡路径中。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s4"
+        ],
+        "related_image_ids": [
+          "img04"
+        ]
+      }
+    ],
+    "layout": [
+      {
+        "text": "整体采用坐北朝南、南园北馆、南疏北密的布局，回应藏书楼原型和场地山体。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s2",
+          "s3"
+        ],
+        "related_image_ids": [
+          "img02"
+        ]
+      }
+    ],
+    "composition": [
+      {
+        "text": "限高下的低矮体量、连续北馆、漂浮系统和可开启青瓷屏扇共同形成层层展开的建筑构成。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s2",
+          "s4"
+        ],
+        "related_image_ids": [
+          "img04",
+          "img05"
+        ]
+      }
+    ],
+    "place_atmosphere": [
+      {
+        "text": "场所体验强调遮挡、转折、曲径通幽和游园迷失感，而非一眼看尽的纪念性正面。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3",
+          "s5"
+        ],
+        "related_image_ids": [
+          "img03",
+          "img04"
+        ]
+      }
+    ]
+  },
+  "construction_quality_control": {
+    "construction_language": [
+      {
+        "text": "公开资料确认青瓷屏扇背后有统一钢骨架，局部有混凝土挡土墙、柱撑漂浮系统和木-钢大跨雨棚；完整结构体系仍缺一手资料。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s2",
+          "s4"
+        ],
+        "related_image_ids": [
+          "img04",
+          "img06"
+        ]
+      }
+    ],
+    "materials_and_craft": [
+      {
+        "text": "龙泉青瓷通过釉色选择、样板确认和安装控制被转化为建筑尺度材料系统。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s2",
+          "s4"
+        ],
+        "related_image_ids": [
+          "img05"
+        ]
+      }
+    ],
+    "tectonic_logic": [
+      {
+        "text": "青瓷片通过铜扣件装配到钢骨架，可完整取下或替换，使材料传世叙事获得构造支撑。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s2",
+          "s4"
+        ],
+        "related_image_ids": [
+          "img05"
+        ]
+      }
+    ],
+    "performance_and_construction_control": [
+      {
+        "text": "公开资料可确认全尺寸样板、颜色控制、夯土做法示范和双廊安全防护；文物库房环境控制、消防和机电策略未检索到可靠资料。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s2",
+          "s4"
+        ],
+        "related_image_ids": [
+          "img05",
+          "img06"
+        ]
+      }
+    ]
+  },
+  "design_lessons": {
+    "transferable_methods": [
+      {
+        "text": "强文化命题应先落到场地、功能、路径和构造问题，再生成形式叙事。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s4"
+        ],
+        "related_image_ids": [
+          "img02",
+          "img05"
+        ]
+      },
+      {
+        "text": "限高文化建筑可通过低矮展开、层层遮挡和游观路径获得深度，而非依靠高度表达。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s2",
+          "s5"
+        ],
+        "related_image_ids": [
+          "img02",
+          "img03"
+        ]
+      },
+      {
+        "text": "地方材料进入大型公共建筑时，需要同步设计误差管理、装配方式和维护机制。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s2",
+          "s4"
+        ],
+        "related_image_ids": [
+          "img05"
+        ]
+      }
+    ],
+    "avoid_copying": [
+      {
+        "text": "宋韵、青瓷和山水布局高度依赖杭州、良渚、龙泉青瓷和建筑师长期方法，不宜脱离场地与工艺条件直接复制。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s2",
+          "s4",
+          "s5"
+        ],
+        "related_image_ids": [
+          "img01",
+          "img05"
+        ]
+      }
+    ],
+    "analysis_diagram_potential": [
+      "南园北馆疏密关系图",
+      "入口掩映视线与路径图",
+      "青瓷屏扇构造层级图",
+      "双廊安全/游观复合剖面图",
+      "限高下平远展开图"
+    ]
+  }
+}
