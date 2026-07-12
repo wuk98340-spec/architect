@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a local static architecture case library from case-packages."""
+"""Legacy generator retained for reference; use architecture-case-site/scripts/build_site.py."""
 
 from __future__ import annotations
 

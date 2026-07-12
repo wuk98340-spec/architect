@@ -19,6 +19,7 @@ architecture-case-site/
   config.example.json
   config.local.json        # local machine config, ignored by Git
   scripts/build_site.py    # static site generator
+  src/                     # canonical CSS, JavaScript, and HTML shell template
   public/                  # generated website output
   docs/
 ```
@@ -28,6 +29,8 @@ architecture-case-site/
 ```powershell
 python .\scripts\build_site.py --config .\config.local.json
 ```
+
+Edit source assets under `src/`. Do not hand-edit matching files under `public/`; the next build replaces them.
 
 If `config.local.json` is missing, the build falls back to `config.example.json`.
 
