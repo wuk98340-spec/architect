@@ -110,9 +110,9 @@
         "s2"
       ],
       "related_image_ids": [
-        "img1",
-        "img2",
-        "img3"
+        "img_01",
+        "img_02",
+        "img_01"
       ],
       "transferable_lesson": "地域文化表达应落实到屋顶、界面、采光、水体和室内装置等空间层级，而不是停留在符号口号。"
     },
@@ -126,8 +126,8 @@
         "s2"
       ],
       "related_image_ids": [
-        "img2",
-        "img4"
+        "img_01",
+        "img_02"
       ],
       "transferable_lesson": "会议建筑的交通空间可以被设计为连续公共场景，而不仅是走廊。"
     },
@@ -141,7 +141,7 @@
         "s2"
       ],
       "related_image_ids": [
-        "img5"
+        "img_01"
       ],
       "transferable_lesson": "大空间设计应把结构、声学、灯光、隔断、升降平台和运营模式作为一个整体系统。"
     },
@@ -155,7 +155,7 @@
         "s2"
       ],
       "related_image_ids": [
-        "img5"
+        "img_01"
       ],
       "transferable_lesson": "大型公共建筑可以让结构从隐藏支撑转化为可感知的空间组织。"
     },
@@ -171,10 +171,10 @@
         "s8"
       ],
       "related_image_ids": [
-        "img7",
-        "img8",
-        "img9",
-        "img10"
+        "img_01",
+        "img_02",
+        "img_01",
+        "img_02"
       ],
       "transferable_lesson": "?????????????????????????????????????????"
     }
@@ -186,7 +186,7 @@
         "s2"
       ],
       "related_image_ids": [
-        "img2"
+        "img_01"
       ]
     },
     {
@@ -195,7 +195,7 @@
         "s2"
       ],
       "related_image_ids": [
-        "img4"
+        "img_01"
       ]
     },
     {
@@ -206,7 +206,7 @@
         "s8"
       ],
       "related_image_ids": [
-        "img10"
+        "img_01"
       ]
     }
   ],
@@ -217,8 +217,8 @@
         "s2"
       ],
       "related_image_ids": [
-        "img2",
-        "img3"
+        "img_01",
+        "img_02"
       ]
     },
     {
@@ -227,7 +227,7 @@
         "s2"
       ],
       "related_image_ids": [
-        "img5"
+        "img_01"
       ]
     },
     {
@@ -236,7 +236,7 @@
         "s7"
       ],
       "related_image_ids": [
-        "img9"
+        "img_01"
       ]
     }
   ],
@@ -248,171 +248,47 @@
         "s5"
       ],
       "related_image_ids": [
-        "img6"
+        "img_01"
       ]
     }
   ],
   "image_metadata": [
     {
-      "id": "img1",
-      "file_name": "",
+      "id": "img_01",
+      "file_name": "images/01_hero.jpg",
       "image_type": "01_hero",
-      "source_url": "https://imagepphcloud.thepaper.cn/pph/image/245/761/593.jpg",
-      "source_site": "澎湃新闻",
-      "caption": "国际会堂外观图，可用于分析圆形屋顶与玻璃方盒的公共形象。",
-      "copyright_note": "Reference link only; rights not cleared.",
-      "recommended_use": "外观识别、形体策略分析",
+      "source_url": "https://p9.itc.cn/q_70/images03/20230821/6c2c58a5433743e2b0eaf1de3d17f8e7.jpeg",
+      "source_site": "https://www.sohu.com/a/713698031_100116740",
+      "caption": "国际会堂整体外观",
+      "copyright_note": "用于建筑案例研究整理；图片权利归原作者/来源机构，未作商业授权判断。",
+      "recommended_use": "支持正文中的形体、空间、结构或场地分析。",
+      "relevance_reason": "用于验证“国际会堂整体外观”这一分析要点。",
       "related_sections": [
-        "核心建筑策略",
-        "形体、立面与建构"
+        "项目定位与核心判断",
+        "建筑语言与建成表达"
       ],
-      "download_status": "not_requested",
+      "download_status": "downloaded",
       "failure_reason": ""
     },
     {
-      "id": "img2",
-      "file_name": "",
+      "id": "img_02",
+      "file_name": "images/02_interior.jpg",
       "image_type": "08_interior",
-      "source_url": "https://imagepphcloud.thepaper.cn/pph/image/245/761/594.jpg",
-      "source_site": "澎湃新闻",
-      "caption": "中厅或礼仪空间图片，可用于分析中厅、采光和地域意象。",
-      "copyright_note": "Reference link only; rights not cleared.",
-      "recommended_use": "中厅空间、礼仪性空间、地域意象分析",
+      "source_url": "https://img3.chinadaily.com.cn/images/202308/19/64e04d95a3109d7518e26caa.jpeg",
+      "source_site": "https://www.sohu.com/a/713698031_100116740",
+      "caption": "叠层屋面与主入口",
+      "copyright_note": "用于建筑案例研究整理；图片权利归原作者/来源机构，未作商业授权判断。",
+      "recommended_use": "支持正文中的形体、空间、结构或场地分析。",
+      "relevance_reason": "用于验证“叠层屋面与主入口”这一分析要点。",
       "related_sections": [
-        "核心建筑策略",
-        "空间与流线"
+        "项目定位与核心判断",
+        "建筑语言与建成表达"
       ],
-      "download_status": "not_requested",
-      "failure_reason": ""
-    },
-    {
-      "id": "img3",
-      "file_name": "",
-      "image_type": "08_interior",
-      "source_url": "https://imagepphcloud.thepaper.cn/pph/image/245/761/595.jpg",
-      "source_site": "澎湃新闻",
-      "caption": "室内材料与装置图片，可用于分析琉璃、水晶、山水意象。",
-      "copyright_note": "Reference link only; rights not cleared.",
-      "recommended_use": "材料与建构、室内意象分析",
-      "related_sections": [
-        "设计理念",
-        "形体、立面与建构"
-      ],
-      "download_status": "not_requested",
-      "failure_reason": ""
-    },
-    {
-      "id": "img4",
-      "file_name": "",
-      "image_type": "09_analysis",
-      "source_url": "https://imagepphcloud.thepaper.cn/pph/image/245/761/598.jpg",
-      "source_site": "澎湃新闻",
-      "caption": "廊院或空间转换图片，可用于分析公共流线和过渡空间。",
-      "copyright_note": "Reference link only; rights not cleared.",
-      "recommended_use": "空间序列、流线、过渡空间分析",
-      "related_sections": [
-        "核心建筑策略",
-        "空间与流线"
-      ],
-      "download_status": "not_requested",
-      "failure_reason": ""
-    },
-    {
-      "id": "img5",
-      "file_name": "",
-      "image_type": "06_detail",
-      "source_url": "https://imagepphcloud.thepaper.cn/pph/image/245/761/599.jpg",
-      "source_site": "澎湃新闻",
-      "caption": "大空间或结构相关图片，可用于分析超级多功能厅和大跨度结构。",
-      "copyright_note": "Reference link only; rights not cleared.",
-      "recommended_use": "结构策略、多功能厅分析",
-      "related_sections": [
-        "核心建筑策略",
-        "形体、立面与建构"
-      ],
-      "download_status": "not_requested",
-      "failure_reason": ""
-    },
-    {
-      "id": "img6",
-      "file_name": "",
-      "image_type": "01_hero",
-      "source_url": "https://www.lnhotels.com/resources/uploads/gzbaiyun/images/20221202/166996700669.jpg",
-      "source_site": "岭南酒店官网",
-      "caption": "会议中心整体宣传图，可用于识别会议综合体形象。",
-      "copyright_note": "Reference link only; rights not cleared.",
-      "recommended_use": "综合体形象、场地关系初步识别",
-      "related_sections": [
-        "基本信息",
-        "场地关系"
-      ],
-      "download_status": "not_requested",
-      "failure_reason": ""
-    },
-    {
-      "id": "img7",
-      "file_name": "",
-      "image_type": "01_hero",
-      "source_url": "https://p6.itc.cn/q_70/images03/20230209/a3aa50c9cbf94506a3e9d05645db66dd.png",
-      "source_site": "????",
-      "caption": "????????????????????",
-      "copyright_note": "Reference link only; rights not cleared.",
-      "recommended_use": "?????????????",
-      "related_sections": [
-        "??????",
-        "????????"
-      ],
-      "download_status": "not_requested",
-      "failure_reason": ""
-    },
-    {
-      "id": "img8",
-      "file_name": "",
-      "image_type": "02_site",
-      "source_url": "https://p6.itc.cn/q_70/images03/20230209/27c2248e0d9244b6a8b788470e748671.png",
-      "source_site": "????",
-      "caption": "??????????????????????",
-      "copyright_note": "Reference link only; rights not cleared.",
-      "recommended_use": "????????????",
-      "related_sections": [
-        "????",
-        "??????"
-      ],
-      "download_status": "not_requested",
-      "failure_reason": ""
-    },
-    {
-      "id": "img9",
-      "file_name": "",
-      "image_type": "05_elevation",
-      "source_url": "https://p7.itc.cn/q_70/images03/20230209/2775a5b1055e4d538191862b437997cb.png",
-      "source_site": "????",
-      "caption": "???????????????????????",
-      "copyright_note": "Reference link only; rights not cleared.",
-      "recommended_use": "????????????",
-      "related_sections": [
-        "????????"
-      ],
-      "download_status": "not_requested",
-      "failure_reason": ""
-    },
-    {
-      "id": "img10",
-      "file_name": "",
-      "image_type": "08_interior",
-      "source_url": "https://p1.itc.cn/q_70/images03/20230209/f5f3011b3abc4b91bf7da2c504ab4534.png",
-      "source_site": "????",
-      "caption": "??????????????????",
-      "copyright_note": "Reference link only; rights not cleared.",
-      "recommended_use": "??????????????",
-      "related_sections": [
-        "?????"
-      ],
-      "download_status": "not_requested",
+      "download_status": "downloaded",
       "failure_reason": ""
     }
   ],
-  "download_mode": "not_requested",
+  "download_mode": "completed",
   "sources": [
     {
       "id": "s1",
@@ -420,7 +296,7 @@
       "url": "https://www.lnhotels.com/brand_df/hotels/index/hotel_id/6.html",
       "source_level": "level_a",
       "publisher": "岭南酒店 / 广州白云国际会议中心",
-      "accessed_date": "2026-06-14",
+      "accessed_date": "2026-07-11",
       "notes": "用于确认地址、会议中心定位，以及白云国际会议中心与白云国际会堂共同构成会议综合体的关系。"
     },
     {
@@ -429,7 +305,7 @@
       "url": "https://www.thepaper.cn/newsDetail_forward_21845617",
       "source_level": "level_c",
       "publisher": "澎湃新闻转载 / 白云融媒",
-      "accessed_date": "2026-06-14",
+      "accessed_date": "2026-07-11",
       "notes": "用于设计团队、主题、功能构成、空间策略、材料意象、可变大厅和结构策略；非原始设计院项目页。"
     },
     {
@@ -438,7 +314,7 @@
       "url": "https://news.dayoo.com/guangzhou/202302/17/139995_54426280.htm",
       "source_level": "level_c",
       "publisher": "广州日报 / 大洋网",
-      "accessed_date": "2026-06-14",
+      "accessed_date": "2026-07-11",
       "notes": "用于辅助确认二期项目投用和数字化运维线索；网页可访问性可能受限。"
     },
     {
@@ -447,7 +323,7 @@
       "url": "https://zh.wikipedia.org/wiki/%E5%B9%BF%E5%B7%9E%E7%99%BD%E4%BA%91%E5%9B%BD%E9%99%85%E4%BC%9A%E8%AE%AE%E4%B8%AD%E5%BF%83",
       "source_level": "level_d",
       "publisher": "Wikipedia",
-      "accessed_date": "2026-06-14",
+      "accessed_date": "2026-07-11",
       "notes": "仅作项目别名、阶段和检索线索参考，不能作为核心事实唯一依据。"
     },
     {
@@ -456,7 +332,7 @@
       "url": "https://zh.wikipedia.org/wiki/%E7%99%BD%E4%BA%91%E6%96%B0%E5%9F%8E",
       "source_level": "level_d",
       "publisher": "Wikipedia",
-      "accessed_date": "2026-06-14",
+      "accessed_date": "2026-07-11",
       "notes": "仅作区域背景参考。"
     },
     {
@@ -465,7 +341,7 @@
       "url": "https://m.mp.oeeee.com/a/BAAFRD000020230208762782.html",
       "source_level": "level_c",
       "publisher": "?? N ??",
-      "accessed_date": "2026-06-14",
+      "accessed_date": "2026-07-11",
       "notes": "????/????????????????????????????????"
     },
     {
@@ -474,7 +350,7 @@
       "url": "https://www.sohu.com/a/638771704_121123712",
       "source_level": "level_c",
       "publisher": "????",
-      "accessed_date": "2026-06-14",
+      "accessed_date": "2026-07-11",
       "notes": "?????????????????????????????????????????????????"
     },
     {
@@ -483,7 +359,7 @@
       "url": "https://www.gz.gov.cn/zt/gzlfzgzld/gzld/content/post_8780619.html",
       "source_level": "level_a",
       "publisher": "???????????",
-      "accessed_date": "2026-06-14",
+      "accessed_date": "2026-07-11",
       "notes": "????????????????????????????"
     }
   ],
@@ -525,5 +401,27 @@
         "s8"
       ]
     }
-  ]
+  ],
+  "source_quality": {
+    "has_primary_sources": true,
+    "primary_sources_used_for_identity": true,
+    "architecture_media_count": 0,
+    "wechat_valid_result_count": 0,
+    "zhihu_valid_result_count": 0,
+    "source_sufficiency_status": "sufficient",
+    "secondary_source_heavy": false,
+    "manual_review_needed": [],
+    "identity_confirming_source_ids": [
+      "s1",
+      "s8"
+    ],
+    "analysis_coverage": [
+      "concept",
+      "context",
+      "program",
+      "circulation",
+      "facade_material",
+      "urban_relationship"
+    ]
+  }
 }

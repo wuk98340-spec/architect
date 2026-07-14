@@ -9,8 +9,14 @@ import hashlib
 import json
 import re
 import shutil
+import sys
 from pathlib import Path
 from typing import Any
+
+PIPELINE_DIR = Path(__file__).resolve().parents[2] / "ARCHITECT_skill" / "scripts"
+if str(PIPELINE_DIR) not in sys.path:
+    sys.path.insert(0, str(PIPELINE_DIR))
+from image_pipeline import image_dimensions, phash, select_display_images, sha256_file  # noqa: E402
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -154,6 +160,24 @@ def load_cases() -> list[dict[str, Any]]:
             ]
         ).lower()
 
+    candidates = [
+        {**image,
+         "local_path": str(item["folder"] / image["src"]),
+         "case_slug": item["slug"],
+         "sha256": sha256_file(item["folder"] / image["src"]),
+         "phash": phash(item["folder"] / image["src"]),
+         "width": image_dimensions(item["folder"] / image["src"])[0],
+         "height": image_dimensions(item["folder"] / image["src"])[1]}
+        for item in items
+        for image in item["gallery"]
+    ]
+    selected = select_display_images(candidates)
+    for item in items:
+        allowed = {clean(image.get("asset_id")) for image in selected.get(item["slug"], [])}
+        item["gallery"] = [image for image in item["gallery"] if clean(image.get("asset_id")) in allowed]
+        item["cover"] = pick_cover(item["gallery"])
+        item["image_count"] = len(item["gallery"])
+
     return sorted(items, key=lambda c: (c["sort_year"] or 0, c["title"]), reverse=True)
 
 
@@ -191,6 +215,7 @@ def build_case_page(case: dict[str, Any]) -> None:
 
 
 def build_case_deck_slides(case: dict[str, Any]) -> list[dict[str, str]]:
+    case["_used_slide_image_ids"] = set()
     chunks = markdown_deck_chunks(Path(case["md_path"]))
     slides: list[dict[str, str]] = []
 
@@ -387,8 +412,13 @@ def render_markdown_image_media(case: dict[str, Any], line: str) -> str:
     file_name = Path(src).name
     for image in case["gallery"]:
         if Path(clean(image.get("src"))).name == file_name:
-            return f'<figure class="slide-media">{image_tag(image, "")}<figcaption>{esc(alt)}</figcaption></figure>'
-    return f'<figure class="slide-media"><img src="{esc(src)}" alt="{esc(alt)}" loading="lazy" /><figcaption>{esc(alt)}</figcaption></figure>'
+            image_key = clean(image.get("id")) or clean(image.get("src"))
+            used = case.setdefault("_used_slide_image_ids", set())
+            if image_key in used:
+                return ""
+            used.add(image_key)
+            return f'<figure class="slide-media">{image_tag(image, "")}</figure>'
+    return f'<figure class="slide-media"><img src="{esc(src)}" alt="{esc(alt)}" loading="lazy" /></figure>'
 
 
 def render_markdown_fragment(lines: list[str]) -> tuple[str, bool]:
@@ -542,13 +572,21 @@ def render_markdown_fragment(lines: list[str]) -> tuple[str, bool]:
 def render_slide_media(case: dict[str, Any], fallback_index: int, item: dict[str, Any] | None = None, hero: bool = False) -> str:
     image = related_slide_image(case, item) if item else None
     local_gallery = [img for img in case["gallery"] if img.get("status") == "local" and img.get("src")]
+    used = case.setdefault("_used_slide_image_ids", set())
+    if image is not None:
+        image_key = clean(image.get("id")) or clean(image.get("src"))
+        if image_key in used:
+            image = None
     if image is None and local_gallery:
-        image = local_gallery[min(fallback_index, len(local_gallery) - 1)]
+        available = [candidate for candidate in local_gallery
+                     if (clean(candidate.get("id")) or clean(candidate.get("src"))) not in used]
+        if available:
+            image = available[min(fallback_index, len(available) - 1)]
     if image is None:
         return '<figure class="slide-media text-media"><span>图片资料待补充</span></figure>'
-    caption = clean(image.get("caption")) or clean(image.get("image_type")) or "案例图片"
+    used.add(clean(image.get("id")) or clean(image.get("src")))
     classes = "slide-media" + (" hero-media" if hero else "")
-    return f'<figure class="{classes}">{image_tag(image, "")}<figcaption>{esc(caption)}</figcaption></figure>'
+    return f'<figure class="{classes}">{image_tag(image, "")}</figure>'
 
 
 
@@ -560,7 +598,10 @@ def related_slide_image(case: dict[str, Any], item: dict[str, Any] | None) -> di
         return None
     wanted = {clean(image_id) for image_id in ids if clean(image_id)}
     for image in case["gallery"]:
-        if clean(image.get("id")) in wanted and image.get("status") == "local" and image.get("src"):
+        image_key = clean(image.get("id")) or clean(image.get("src"))
+        if (clean(image.get("id")) in wanted
+                and image_key not in case.setdefault("_used_slide_image_ids", set())
+                and image.get("status") == "local" and image.get("src")):
             return image
     return None
 
@@ -586,15 +627,15 @@ def write_index(cases: list[dict[str, Any]]) -> None:
     year_span = f"{min(year_values)}-{max(year_values)}" if year_values else "待整理"
 
     body = f"""
-    <header class="site-header">
-      <a class="brand" href="#"><span>ARCHIVE</span><strong>建筑案例研究</strong></a>
-      <nav><a href="#featured">精选</a><a href="#cases">案例库</a></nav>
+    <header class="site-header home-header">
+      <a class="brand" href="#"><span>ARCHIVE</span><strong>ARCHITECTURE CASE RESEARCH</strong></a>
+      <button class="menu-toggle" type="button" data-library-menu-toggle aria-expanded="false" aria-controls="libraryPanel" aria-label="打开搜索与案例筛选"><span></span><span></span><span></span></button>
     </header>
     <main>
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">ARCHITECTURE CASE RESEARCH</p>
-          <h1>建筑案例研究库</h1>
+      <section class="hero hero--cover">
+        <div class="hero-backdrop" aria-hidden="true"></div>
+        <div class="hero-copy hero-cover-copy">
+          <h1><span>案例分析研究库</span></h1>
         </div>
         <div class="hero-panel" aria-label="资料概览">
           <div><strong>{len(cases)}</strong><span>案例包</span></div>
@@ -619,7 +660,9 @@ def write_index(cases: list[dict[str, Any]]) -> None:
             <h2>案例列表</h2>
           </div>
         </div>
-        <div class="library-toolbar">
+        <div id="libraryPanel" class="library-panel" hidden>
+          <div class="library-panel-head"><p>SEARCH &amp; FILTER</p><button type="button" data-library-menu-close aria-label="关闭搜索与筛选">×</button></div>
+          <div class="library-toolbar">
           <input id="caseSearch" type="search" aria-label="搜索案例" placeholder="搜索项目、建筑师、地点、年份、类型或设计策略" />
           <label class="sort-control">排序
             <select id="sortSelect">
@@ -633,6 +676,7 @@ def write_index(cases: list[dict[str, Any]]) -> None:
         <div class="filter-panel">
           <div class="filter-group"><h3>建筑类型</h3><div class="chip-row">{"".join(type_buttons)}</div></div>
           <div class="filter-group"><h3>国家 / 地区</h3><div class="chip-row">{"".join(region_buttons)}</div></div>
+        </div>
         </div>
         <div id="activeFilters" class="active-filters"></div>
         <div id="caseGrid" class="case-grid">{case_cards}</div>
@@ -648,6 +692,7 @@ def write_index(cases: list[dict[str, Any]]) -> None:
 
 def render_case_card(case: dict[str, Any], variant: str = "standard") -> str:
     cover = case["cover"]
+    card_title = clean(case["title"]).split(" / ", 1)[0].strip()
     media = image_tag(cover, f"cases/{case['slug']}/") if cover else ""
     is_standard = variant == "standard"
     classes = "project-card project-card--standard case-card" if is_standard else "project-card project-card--featured featured-card"
@@ -665,7 +710,7 @@ def render_case_card(case: dict[str, Any], variant: str = "standard") -> str:
         {media}
         <div class="project-card-body case-card-body">
           <div class="card-meta"><span>{esc(case["year_text"])}</span><span>{esc(case["region"])}</span></div>
-          <h3 class="project-card-title">{esc(case["title"])}</h3>
+          <h3 class="project-card-title">{esc(card_title)}</h3>
           <p class="project-card-summary">{esc(case["summary"])}</p>
           <dl class="project-card-facts">
             <div class="project-card-fact"><dt>建筑师</dt><dd>{esc(case["architects_text"])}</dd></div>
@@ -681,6 +726,9 @@ def render_case_card(case: dict[str, Any], variant: str = "standard") -> str:
 def write_assets() -> None:
     shutil.copy2(SOURCE_DIR / "styles.css", ASSET_DIR / "styles.css")
     shutil.copy2(SOURCE_DIR / "app.js", ASSET_DIR / "app.js")
+    source_images = SOURCE_DIR / "assets"
+    if source_images.exists():
+        shutil.copytree(source_images, ASSET_DIR / "images", dirs_exist_ok=True)
 
 
 def page_shell(title: str, body: str, depth: int) -> str:
@@ -709,6 +757,7 @@ def image_items(data: dict[str, Any], folder: Path) -> list[dict[str, Any]]:
             {
                 "src": file_name if copied else "",
                 "id": clean(item.get("id")),
+                "asset_id": clean(item.get("asset_id")) or clean(item.get("id")) or file_name,
                 "caption": clean(item.get("caption")),
                 "image_type": clean(item.get("image_type")),
                 "recommended_use": clean(item.get("recommended_use")),

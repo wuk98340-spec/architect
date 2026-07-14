@@ -57,7 +57,7 @@
 | 建筑服务人群 | 回迁居民、沿街商业使用者与旧城公共生活使用者 | PDF pp.3-5 |
 | 场地核心矛盾 | 回迁住宅量、规范间距、旧城紧密街巷尺度、保留建筑可见性之间的平衡 | PDF pp.4-6 |
 
-![总体布局延续原有街巷结构，PDF p.3](images/02_site_street_structure_pdf_p03.png)
+![原有街巷结构与更新总体布局关系](images/02_site_street_structure_crop.jpg)
 
 图文相关性：用于验证项目以原有街巷结构为总体布局线索，并把旧城改造目标与政府试点要求绑定。来源明确：PDF《从概念到建成》，p.3。
 
@@ -83,7 +83,7 @@
 
 策略三：以“品相对等”而非仿古作为新旧关系。新建筑不复制老建筑，而通过灰白住宅体量、钢玻璃木百叶商业体量、细部窗框和构造材料，与民国红砖建筑建立品质层面的对话。PDF pp.6-8。
 
-![从投标方案到定稿方案的体量调整，PDF p.4](images/09_massing_revision_pdf_p04.png)
+![投标方案与定稿方案的体量、街巷和户型对比](images/09_massing_revision_crop.jpg)
 
 图文相关性：用于说明在增加住宅量时，设计仍围绕街巷结构和保留建筑可见性进行取舍。来源明确：PDF《从概念到建成》，p.4。
 
@@ -107,7 +107,7 @@ PDF 没有给出独立的概念口号或命名意象，但清楚呈现了两个�
 
 住宅从内廊式、外廊式研究转向一梯两户模式后，设计没有放弃梳状布局，而是用标准户型单元排列成条型体量，灵活嵌入基地肌理或组合成新组团。楼梯间前后通风改善小气候，入户阳台把邻里交往从街道或共享平台引向每层住户门口，实现公共到私密的梯度。来源明确：PDF p.5。
 
-![户型单元、楼梯间通风与公共-私密梯度，PDF p.5](images/03_unit_public_private_gradient_pdf_p05.png)
+![户型单元、楼梯间通风与公共—私密梯度](images/03_unit_public_private_gradient_crop.jpg)
 
 图文相关性：用于验证标准户型单元、服务模块、前后通风和公共性到私密性的分层渐变。来源明确：PDF《从概念到建成》，p.5。
 
@@ -125,7 +125,7 @@ PDF 未提供结构体系或施工流程资料，但提供了建筑语言层面�
 
 设计没有选用当时流行的大玻璃落地窗，而是具体安排窗洞、阳台、小挑台和空调机位，并设计窗框、栏杆、檐口滴水勾边等细节。材料做法包括水刷石灰色窗框、剁斧石墙基与平台护栏、深灰色金属栏杆和窗框、依据趟拢门意象定制的入户铁门、深灰色檐口滴水勾边和灰白色墙面。来源明确：PDF p.7。
 
-![立面、户型平面与构造细部，PDF p.7](images/05_facade_detail_pdf_p07.png)
+![立面开口、材料与构造细部](images/05_facade_detail_crop.jpg)
 
 图文相关性：用于验证“品相对等”的立面和构造逻辑，即新建筑通过窗洞、阳台、材料和细部与保留建筑建立关系。来源明确：PDF《从概念到建成》，p.7。
 
@@ -165,7 +165,7 @@ PDF 未提供结构体系或施工流程资料，但提供了建筑语言层面�
 - 证据来源：PDF p.6；相关图页见“规范约束下的体量调整与新旧融合场景”。
 - 可迁移方法：规范约束不只是限制，也可以成为深化体量、户型和界面关系的设计工具。
 
-![规范约束下的体量调整与新旧融合场景，PDF p.6](images/09_regulation_massing_pdf_p06.png)
+![规范约束下的退台、错动与新旧融合场景](images/09_regulation_massing_crop.jpg)
 
 图文相关性：用于验证退台、错动、防火墙等策略如何在规范约束中维护街巷肌理和规划结构。来源明确：PDF《从概念到建成》，p.6。
 
@@ -177,7 +177,7 @@ PDF 未提供结构体系或施工流程资料，但提供了建筑语言层面�
 - 证据来源：PDF pp.7-8；相关图页见“立面、户型平面与构造细部”和“新建筑融入传统城市肌理”。
 - 可迁移方法：历史环境中的新建筑可以追求“品质对等”和“尺度默契”，而不是只在形式上选择仿古或对比。
 
-![新建筑融入传统城市肌理，PDF p.8](images/08_life_scene_pdf_p08.png)
+![新住宅、保留建筑与传统街巷共同形成的生活场景](images/01_hero_old_new_city_context.jpg)
 
 图文相关性：用于说明最终建成生活场景中，新住宅、保留建筑和街巷环境的融合效果。来源明确：PDF《从概念到建成》，p.8。
 
@@ -185,12 +185,12 @@ PDF 未提供结构体系或施工流程资料，但提供了建筑语言层面�
 
 | 图片类型 | 推荐用途 | 正文嵌入状态 / 本地图片 / 来源页面 | 来源 | 下载状态 | 图文相关性 | 版权 / 备注 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 02_site | 场地与街巷结构 | 已在正文嵌入：`images/02_site_street_structure_pdf_p03.png` / sources/concept-to-built-zhang-zhenhui.pdf#page=3 | 用户提供 PDF | downloaded | 验证总体布局延续原有街巷结构 | 研究引用；商业或公开发布需另行清权 |
-| 09_analysis | 体量调整与保留建筑可见性 | 已在正文嵌入：`images/09_massing_revision_pdf_p04.png` / sources/concept-to-built-zhang-zhenhui.pdf#page=4 | 用户提供 PDF | downloaded | 验证投标方案到定稿方案中的体量取舍 | 研究引用；商业或公开发布需另行清权 |
-| 03_plan | 户型与公共-私密梯度 | 已在正文嵌入：`images/03_unit_public_private_gradient_pdf_p05.png` / sources/concept-to-built-zhang-zhenhui.pdf#page=5 | 用户提供 PDF | downloaded | 验证标准户型、通风和邻里交往空间 | 研究引用；商业或公开发布需另行清权 |
-| 09_analysis | 规范约束与体量策略 | 已在正文嵌入：`images/09_regulation_massing_pdf_p06.png` / sources/concept-to-built-zhang-zhenhui.pdf#page=6 | 用户提供 PDF | downloaded | 验证退台、错动和防火墙等综合策略 | 研究引用；商业或公开发布需另行清权 |
-| 05_elevation | 立面与构造细部 | 已在正文嵌入：`images/05_facade_detail_pdf_p07.png` / sources/concept-to-built-zhang-zhenhui.pdf#page=7 | 用户提供 PDF | downloaded | 验证品相对等、窗洞与细部建造逻辑 | 研究引用；商业或公开发布需另行清权 |
-| 08_interior | 生活场景与街巷融合 | 已在正文嵌入：`images/08_life_scene_pdf_p08.png` / sources/concept-to-built-zhang-zhenhui.pdf#page=8 | 用户提供 PDF | downloaded | 验证新旧建筑共同组成新的生活场景 | 研究引用；商业或公开发布需另行清权 |
+| 02_site | 场地与街巷结构 | 已在正文嵌入：`images/02_site_street_structure_crop.jpg` / sources/concept-to-built-zhang-zhenhui.pdf#page=3 | 用户提供 PDF | downloaded | 验证总体布局延续原有街巷结构 | 研究引用；商业或公开发布需另行清权 |
+| 09_analysis | 体量调整与保留建筑可见性 | 已在正文嵌入：`images/09_massing_revision_crop.jpg` / sources/concept-to-built-zhang-zhenhui.pdf#page=4 | 用户提供 PDF | downloaded | 验证投标方案到定稿方案中的体量取舍 | 研究引用；商业或公开发布需另行清权 |
+| 03_plan | 户型与公共-私密梯度 | 已在正文嵌入：`images/03_unit_public_private_gradient_crop.jpg` / sources/concept-to-built-zhang-zhenhui.pdf#page=5 | 用户提供 PDF | downloaded | 验证标准户型、通风和邻里交往空间 | 研究引用；商业或公开发布需另行清权 |
+| 09_analysis | 规范约束与体量策略 | 已在正文嵌入：`images/09_regulation_massing_crop.jpg` / sources/concept-to-built-zhang-zhenhui.pdf#page=6 | 用户提供 PDF | downloaded | 验证退台、错动和防火墙等综合策略 | 研究引用；商业或公开发布需另行清权 |
+| 05_elevation | 立面与构造细部 | 已在正文嵌入：`images/05_facade_detail_crop.jpg` / sources/concept-to-built-zhang-zhenhui.pdf#page=7 | 用户提供 PDF | downloaded | 验证品相对等、窗洞与细部建造逻辑 | 研究引用；商业或公开发布需另行清权 |
+| 01_hero | 生活场景与街巷融合 | 已在正文嵌入：`images/01_hero_old_new_city_context.jpg` / sources/concept-to-built-zhang-zhenhui.pdf#page=8 | 用户提供 PDF | downloaded | 验证新旧建筑共同组成新的生活场景 | 研究引用；商业或公开发布需另行清权 |
 
 ## 10 对我的设计启发
 

@@ -1,0 +1,563 @@
+{
+  "project_name": "雷励贵州大项目活动营地 / Raleigh Campsite in Guizhou",
+  "architects": [
+    "华南理工大学建筑设计研究院",
+    "主创：张振辉、陈玮璐"
+  ],
+  "location": "贵州省黔西南布依族苗族自治州贞丰县者相镇平桥村",
+  "year": "设计 2013.11；一期 2016.08；二期 2018.05",
+  "program": "青少年公益营地、乡村活动营地、乡村图书馆、活动场地、服务设施",
+  "status": "已建成并投入使用",
+  "case_type": "乡建 / 青少年活动营地 / 公益公共建筑",
+  "disambiguation_status": "confirmed",
+  "disambiguation_candidates": [
+    {
+      "candidate_project": "雷励贵州大项目活动营地 / Raleigh Campsite in Guizhou",
+      "location": "贵州省黔西南布依族苗族自治州贞丰县者相镇平桥村",
+      "architects": "华南理工大学建筑设计研究院",
+      "year": "设计 2013.11；一期 2016.08；二期 2018.05",
+      "type": "青少年公益营地 / 乡村活动营地",
+      "main_sources": [
+        "s1"
+      ],
+      "confidence": "high",
+      "question_for_user": "已确认该项目为谷德报道中的 Raleigh Campsite in Guizhou。"
+    }
+  ],
+  "information_confidence": "high",
+  "incomplete_reason": "",
+  "one_sentence_summary": "雷励贵州大项目活动营地把废弃乡村小学改造、轻量加建、本地材料工艺和青少年公益运营整合成一个持续服务乡村的营地系统。",
+  "key_facts": [
+    {
+      "label": "项目名称",
+      "value": "雷励贵州大项目活动营地 / Raleigh Campsite in Guizhou - Youth Development Campsite in Mountain Village。",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "label": "设计单位",
+      "value": "华南理工大学建筑设计研究院，主创张振辉、陈玮璐。",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "label": "地点",
+      "value": "贵州省黔西南布依族苗族自治州贞丰县者相镇平桥村。",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "label": "年份",
+      "value": "设计 2013.11；一期 2016.08；二期 2018.05。",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "label": "面积",
+      "value": "新建部分 1007 平方米，改造部分 423 平方米，营区面积 3679 平方米。",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "label": "客户与捐赠",
+      "value": "客户为上海杨浦区雷励青年公益发展中心（雷励中国），捐赠人为盛业集团。",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "design_concept": {
+    "sourced_concept": "项目是驻点乡村的青少年公益营地，旨在探索青少年活动营地与乡村建设的结合模式；通过改造原教学楼并加建多功能通用空间、活动场地、服务体和乡村图书馆，持续服务青少年成长和乡村发展。",
+    "ai_synthesis": "项目的核心策略是以旧校为锚点，用轻量工业化体系承担高弹性活动空间，用毛石、竹界面和竹模板混凝土建立地方建构关系，并通过面向村庄开放的图书馆把营地活动转化为长期社区资源。",
+    "source_ids": [
+      "s1"
+    ]
+  },
+  "key_strategies": [
+    {
+      "strategy_name": "以废弃乡村小学作为场地锚点",
+      "design_problem": "场地狭长、用地紧张，同时已有废弃三层教学楼，完全新建会浪费既有资源并削弱场地记忆。",
+      "specific_approach": "保留并改造原教学楼，以其作为场地锚固点，在南侧加建多功能通用空间、户外活动场地和服务设施。",
+      "architectural_effect": "新旧空间形成连续营区，降低建设成本，也让营地与村庄原有教育记忆产生联系。",
+      "evidence": "谷德项目报道说明场地原为撤点乡村小学，并描述改造原教学楼与加建空间的集约布局。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img1",
+        "img2",
+        "img3",
+        "img8"
+      ],
+      "transferable_lesson": "乡建项目可以先寻找可被重新激活的既有公共资产，而不是从零开始做形式。"
+    },
+    {
+      "strategy_name": "用轻量海帕膜屋面构建连续共享空间",
+      "design_problem": "贵州气候温和多雨，营地需要遮雨、通风和可承载活动、培训、宿营、用餐的复合空间。",
+      "specific_approach": "核心多功能通用空间采用连续起伏的半透明海帕膜屋面；平面非正交划分，开间向山和村庄打开，二层平台形成微高差错动。",
+      "architectural_effect": "屋面提供连续遮雨界面，半透明与开放边界让使用者感知同伴活动和山村风景，形成开放、互动、共享的营地氛围。",
+      "evidence": "谷德项目报道直接描述半透明海帕膜屋面、非正交平面、二层平台微高差和开放共享氛围。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img4",
+        "img5",
+        "img6",
+        "img9"
+      ],
+      "transferable_lesson": "营地的大空间可以通过轻量屋面、半室外平台和开放界面组织弹性活动。"
+    },
+    {
+      "strategy_name": "以毛石、竹界面和竹模板混凝土建立地方建构关系",
+      "design_problem": "公益营地需要控制成本并便于本地施工，同时不能与乡村环境脱节。",
+      "specific_approach": "场地以小碎石铺底利于排水；活动区采用当地毛石砌筑；多功能空间使用像素化竹界面；图书馆、厨房、盥洗区等服务体采用竹模板现浇混凝土和本地砌石工艺。",
+      "architectural_effect": "轻量工业化构件与乡土材料工艺形成对照，使营地既具有现代活动空间的效率，也保留本地材料和工匠参与的痕迹。",
+      "evidence": "谷德项目报道描述小碎石排水、毛石砌筑、像素化竹界面、竹模板混凝土和本地砌石工艺。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img7",
+        "img10",
+        "img11",
+        "img12"
+      ],
+      "transferable_lesson": "低成本乡建要把材料、排水、工艺和维护放在同一套建构逻辑里。"
+    },
+    {
+      "strategy_name": "将乡村图书馆作为营地与村庄的公共接口",
+      "design_problem": "如果营地只服务外来志愿者或短期活动，容易与村庄日常生活割裂。",
+      "specific_approach": "在营地入口与村路交接处设置乡村图书馆，由接待区和面向村庄道路的阅览室组成；两个错落半层的三角形开放框体通过小楼梯连接村道和营地两个标高。",
+      "architectural_effect": "图书馆长期向社区开放，透明界面向村庄展示内部活动，成为当地孩子阅读、玩耍和询问功课的场所。",
+      "evidence": "谷德项目报道直接描述图书馆的位置、组成、错层框体、儿童尺度家具和长期社区开放。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img13",
+        "img14",
+        "img15",
+        "img16"
+      ],
+      "transferable_lesson": "公益营地应设计面向社区的长期开放界面，让项目价值超出活动周期。"
+    },
+    {
+      "strategy_name": "用山坡剧场和砂砾场地支持分组与集体活动",
+      "design_problem": "青少年营地需要不同尺度的活动空间，既有集中集合，也有小组交流和户外停留。",
+      "specific_approach": "南侧设置圆形砂砾集中活动场地；西侧山体设置毛石砌筑的半圆形台阶小剧场，收住延伸入场地的山坡。",
+      "architectural_effect": "集中场地和山间小剧场共同构成灵活活动系统，适应营会、交流、表演、休息和小组任务。",
+      "evidence": "谷德项目报道描述圆形砂砾活动场地、山间小剧场和半圆形台阶如何组织小组活动。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img10",
+        "img17",
+        "img18"
+      ],
+      "transferable_lesson": "营地设计要同时考虑全体集合和小组活动，两者的尺度和边界应不同。"
+    }
+  ],
+  "spatial_ideas": [
+    {
+      "text": "营地以保留教学楼为北侧锚点，向南组织多功能通用空间、户外活动场地和服务体，形成聚落式活动系统。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img2",
+        "img8"
+      ]
+    },
+    {
+      "text": "乡村图书馆位于营地入口与村路交接处，同时服务营地接待和村庄儿童阅读，连接两个标高。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img13",
+        "img14"
+      ]
+    }
+  ],
+  "materials_structure": [
+    {
+      "text": "多功能空间采用连续起伏的半透明海帕膜屋面和像素化竹界面，形成轻量、通风、半开放的核心活动空间。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img4",
+        "img6",
+        "img7"
+      ]
+    },
+    {
+      "text": "服务体和图书馆采用竹模板现浇混凝土与本地砌石工艺，与多功能空间的轻量构件组装方式形成互文关系。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img11",
+        "img12",
+        "img15"
+      ]
+    }
+  ],
+  "site_context": [
+    {
+      "text": "项目位于平桥村县道与村路交接处的狭长山地台地，远景群山连绵，原址为撤点乡村小学。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img1",
+        "img3"
+      ]
+    }
+  ],
+  "image_metadata": [
+    {
+      "id": "img1",
+      "file_name": "",
+      "image_type": "01_hero",
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/001-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x617.jpg",
+      "source_site": "gooood",
+      "caption": "项目鸟瞰图。",
+      "copyright_note": "©姚力；reference link only, rights not cleared.",
+      "recommended_use": "项目整体识别、场地关系分析",
+      "related_sections": [
+        "基本信息",
+        "场地策略"
+      ],
+      "download_status": "not_requested",
+      "failure_reason": ""
+    },
+    {
+      "id": "img2",
+      "file_name": "",
+      "image_type": "09_analysis",
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/002-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x560.jpg",
+      "source_site": "gooood",
+      "caption": "营区轴测图。",
+      "copyright_note": "Reference link only; rights not cleared.",
+      "recommended_use": "功能聚落和空间组织分析",
+      "related_sections": [
+        "空间与流线"
+      ],
+      "download_status": "not_requested",
+      "failure_reason": ""
+    },
+    {
+      "id": "img3",
+      "file_name": "",
+      "image_type": "04_section",
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/003-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x272.jpg",
+      "source_site": "gooood",
+      "caption": "剖透视，建筑融入山村。",
+      "copyright_note": "Reference link only; rights not cleared.",
+      "recommended_use": "地形和山村关系分析",
+      "related_sections": [
+        "场地策略"
+      ],
+      "download_status": "not_requested",
+      "failure_reason": ""
+    },
+    {
+      "id": "img4",
+      "file_name": "",
+      "image_type": "04_section",
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/006-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x311.jpg",
+      "source_site": "gooood",
+      "caption": "多功能通用空间剖透视。",
+      "copyright_note": "Reference link only; rights not cleared.",
+      "recommended_use": "海帕膜屋面和共享空间分析",
+      "related_sections": [
+        "核心建筑策略",
+        "形体、立面与建构"
+      ],
+      "download_status": "not_requested",
+      "failure_reason": ""
+    },
+    {
+      "id": "img5",
+      "file_name": "",
+      "image_type": "01_hero",
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/005-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x641.jpg",
+      "source_site": "gooood",
+      "caption": "营地核心多功能通用空间。",
+      "copyright_note": "©姚力；reference link only, rights not cleared.",
+      "recommended_use": "多功能空间和屋面策略分析",
+      "related_sections": [
+        "核心建筑策略"
+      ],
+      "download_status": "not_requested",
+      "failure_reason": ""
+    },
+    {
+      "id": "img6",
+      "file_name": "",
+      "image_type": "08_interior",
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/007-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x407.jpg",
+      "source_site": "gooood",
+      "caption": "开放共享的多功能空间及二层平台。",
+      "copyright_note": "©姚力；reference link only, rights not cleared.",
+      "recommended_use": "活动空间与平台高差分析",
+      "related_sections": [
+        "空间与流线"
+      ],
+      "download_status": "not_requested",
+      "failure_reason": ""
+    },
+    {
+      "id": "img7",
+      "file_name": "",
+      "image_type": "06_detail",
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/013-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x1115.jpg",
+      "source_site": "gooood",
+      "caption": "像素化竹界面。",
+      "copyright_note": "©姚力；reference link only, rights not cleared.",
+      "recommended_use": "竹界面与半透明边界分析",
+      "related_sections": [
+        "材料与建构"
+      ],
+      "download_status": "not_requested",
+      "failure_reason": ""
+    },
+    {
+      "id": "img8",
+      "file_name": "",
+      "image_type": "03_plan",
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/017-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x124.jpg",
+      "source_site": "gooood",
+      "caption": "总平面图。",
+      "copyright_note": "Reference link only; rights not cleared.",
+      "recommended_use": "总平面和场地组织分析",
+      "related_sections": [
+        "空间与流线",
+        "图纸与图片索引"
+      ],
+      "download_status": "not_requested",
+      "failure_reason": ""
+    },
+    {
+      "id": "img9",
+      "file_name": "",
+      "image_type": "03_plan",
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/019-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x328.jpg",
+      "source_site": "gooood",
+      "caption": "营区一层平面图。",
+      "copyright_note": "Reference link only; rights not cleared.",
+      "recommended_use": "功能组织和流线分析",
+      "related_sections": [
+        "空间与流线"
+      ],
+      "download_status": "not_requested",
+      "failure_reason": ""
+    },
+    {
+      "id": "img10",
+      "file_name": "",
+      "image_type": "09_analysis",
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/014-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x666.jpg",
+      "source_site": "gooood",
+      "caption": "山间小剧场和碎石排水场地。",
+      "copyright_note": "©孙启杰 / 姚力；reference link only, rights not cleared.",
+      "recommended_use": "户外活动场地和排水策略分析",
+      "related_sections": [
+        "核心建筑策略"
+      ],
+      "download_status": "not_requested",
+      "failure_reason": ""
+    },
+    {
+      "id": "img11",
+      "file_name": "",
+      "image_type": "06_detail",
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/025-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x831.jpg",
+      "source_site": "gooood",
+      "caption": "厨房建造节点轴测。",
+      "copyright_note": "Reference link only; rights not cleared.",
+      "recommended_use": "地方材料和建造节点分析",
+      "related_sections": [
+        "材料与建构"
+      ],
+      "download_status": "not_requested",
+      "failure_reason": ""
+    },
+    {
+      "id": "img12",
+      "file_name": "",
+      "image_type": "06_detail",
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/027-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-1.jpg",
+      "source_site": "gooood",
+      "caption": "轻量工业化体系与乡土材料工艺的结合。",
+      "copyright_note": "©姚力 / 杨晓波；reference link only, rights not cleared.",
+      "recommended_use": "轻量构件与地方工艺对比分析",
+      "related_sections": [
+        "材料与建构"
+      ],
+      "download_status": "not_requested",
+      "failure_reason": ""
+    },
+    {
+      "id": "img13",
+      "file_name": "",
+      "image_type": "07_concept",
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/016-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x975.jpg",
+      "source_site": "gooood",
+      "caption": "乡村图书馆生成图。",
+      "copyright_note": "Reference link only; rights not cleared.",
+      "recommended_use": "图书馆生成逻辑分析",
+      "related_sections": [
+        "核心建筑策略"
+      ],
+      "download_status": "not_requested",
+      "failure_reason": ""
+    },
+    {
+      "id": "img14",
+      "file_name": "",
+      "image_type": "08_interior",
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/018-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x937.jpg",
+      "source_site": "gooood",
+      "caption": "乡村图书馆接待区。",
+      "copyright_note": "©张振辉 / 姚力；reference link only, rights not cleared.",
+      "recommended_use": "入口接待和标高转换分析",
+      "related_sections": [
+        "空间与流线"
+      ],
+      "download_status": "not_requested",
+      "failure_reason": ""
+    },
+    {
+      "id": "img15",
+      "file_name": "",
+      "image_type": "08_interior",
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/015-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x1920.jpg",
+      "source_site": "gooood",
+      "caption": "乡村图书馆阅览室。",
+      "copyright_note": "©姚力 / 孙启杰 / 陶秋艳；reference link only, rights not cleared.",
+      "recommended_use": "儿童尺度和社区开放界面分析",
+      "related_sections": [
+        "核心建筑策略",
+        "材料与建构"
+      ],
+      "download_status": "not_requested",
+      "failure_reason": ""
+    },
+    {
+      "id": "img16",
+      "file_name": "",
+      "image_type": "04_section",
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/028-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x188.jpg",
+      "source_site": "gooood",
+      "caption": "图书馆剖面图。",
+      "copyright_note": "Reference link only; rights not cleared.",
+      "recommended_use": "图书馆标高与空间关系分析",
+      "related_sections": [
+        "图纸与图片索引"
+      ],
+      "download_status": "not_requested",
+      "failure_reason": ""
+    },
+    {
+      "id": "img17",
+      "file_name": "",
+      "image_type": "09_analysis",
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/012-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x557.jpg",
+      "source_site": "gooood",
+      "caption": "圆形砂砾集中活动场地。",
+      "copyright_note": "©姚力；reference link only, rights not cleared.",
+      "recommended_use": "集中活动场地分析",
+      "related_sections": [
+        "核心建筑策略"
+      ],
+      "download_status": "not_requested",
+      "failure_reason": ""
+    },
+    {
+      "id": "img18",
+      "file_name": "",
+      "image_type": "09_analysis",
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/011-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x1045.jpg",
+      "source_site": "gooood",
+      "caption": "山间小剧场。",
+      "copyright_note": "©姚力；reference link only, rights not cleared.",
+      "recommended_use": "分组活动空间分析",
+      "related_sections": [
+        "核心建筑策略"
+      ],
+      "download_status": "not_requested",
+      "failure_reason": ""
+    }
+  ],
+  "download_mode": "not_requested",
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Raleigh Campsite in Guizhou by Architectural Design and Research Institute of SCUT",
+      "url": "https://www.gooood.cn/raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut.htm",
+      "source_level": "level_b",
+      "publisher": "gooood / 谷德设计网",
+      "accessed_date": "2026-06-14",
+      "notes": "核心项目来源；文章注明内容由华南理工大学建筑设计研究院提供，包含设计说明、图纸、照片和完整项目信息。"
+    },
+    {
+      "id": "s2",
+      "title": "Raleigh Hong Kong 官方网站",
+      "url": "https://www.raleigh.org.hk/",
+      "source_level": "level_a",
+      "publisher": "Raleigh Hong Kong",
+      "accessed_date": "2026-06-14",
+      "notes": "用于辅助确认 Raleigh 组织背景，不作为项目建筑事实核心来源。"
+    },
+    {
+      "id": "s3",
+      "title": "Raleigh International 官方网站",
+      "url": "https://raleighinternational.org/",
+      "source_level": "level_a",
+      "publisher": "Raleigh International",
+      "accessed_date": "2026-06-14",
+      "notes": "用于辅助确认 Raleigh 组织背景，不作为项目建筑事实核心来源。"
+    },
+    {
+      "id": "s4",
+      "title": "Raleigh International - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Raleigh_International",
+      "source_level": "level_d",
+      "publisher": "Wikipedia",
+      "accessed_date": "2026-06-14",
+      "notes": "仅作组织背景参考。"
+    }
+  ],
+  "uncertain_or_conflicting_info": [
+    {
+      "topic": "来源补充",
+      "description": "当前核心建筑资料来自谷德项目报道，报道注明内容由华南理工大学建筑设计研究院提供；仍可继续补充设计院官网或 Raleigh China 原始项目页。",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "topic": "长期运营反馈",
+      "description": "谷德文章提供启用不到一年的活动数据，但未提供多年运营、维护和材料老化评估。",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "topic": "结构团队名单",
+      "description": "文章中文项目信息中的结构团队名单包含姚荣康；英文摘要片段未显示该姓名。本包以中文项目信息为主。",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ]
+}

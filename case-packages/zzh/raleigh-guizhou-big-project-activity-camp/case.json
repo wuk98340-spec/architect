@@ -225,7 +225,7 @@
   "image_metadata": [
     {
       "id": "img1",
-      "file_name": "",
+      "file_name": "images/01_hero_aerial.jpg",
       "image_type": "01_hero",
       "source_url": "https://oss.gooood.cn/uploads/2019/01/001-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x617.jpg",
       "source_site": "gooood",
@@ -236,12 +236,12 @@
         "基本信息",
         "场地策略"
       ],
-      "download_status": "not_requested",
+      "download_status": "downloaded",
       "failure_reason": ""
     },
     {
       "id": "img2",
-      "file_name": "",
+      "file_name": "images/02_camp_axis.jpg",
       "image_type": "09_analysis",
       "source_url": "https://oss.gooood.cn/uploads/2019/01/002-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x560.jpg",
       "source_site": "gooood",
@@ -251,12 +251,12 @@
       "related_sections": [
         "空间与流线"
       ],
-      "download_status": "not_requested",
+      "download_status": "downloaded",
       "failure_reason": ""
     },
     {
       "id": "img3",
-      "file_name": "",
+      "file_name": "images/03_site_section.jpg",
       "image_type": "04_section",
       "source_url": "https://oss.gooood.cn/uploads/2019/01/003-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x272.jpg",
       "source_site": "gooood",
@@ -266,12 +266,12 @@
       "related_sections": [
         "场地策略"
       ],
-      "download_status": "not_requested",
+      "download_status": "downloaded",
       "failure_reason": ""
     },
     {
       "id": "img4",
-      "file_name": "",
+      "file_name": "images/04_multiuse_section.jpg",
       "image_type": "04_section",
       "source_url": "https://oss.gooood.cn/uploads/2019/01/006-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x311.jpg",
       "source_site": "gooood",
@@ -282,12 +282,12 @@
         "核心建筑策略",
         "形体、立面与建构"
       ],
-      "download_status": "not_requested",
+      "download_status": "downloaded",
       "failure_reason": ""
     },
     {
       "id": "img5",
-      "file_name": "",
+      "file_name": "images/05_multiuse_hall.jpg",
       "image_type": "01_hero",
       "source_url": "https://oss.gooood.cn/uploads/2019/01/005-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x641.jpg",
       "source_site": "gooood",
@@ -297,12 +297,12 @@
       "related_sections": [
         "核心建筑策略"
       ],
-      "download_status": "not_requested",
+      "download_status": "downloaded",
       "failure_reason": ""
     },
     {
       "id": "img6",
-      "file_name": "",
+      "file_name": "images/06_shared_platform.jpg",
       "image_type": "08_interior",
       "source_url": "https://oss.gooood.cn/uploads/2019/01/007-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x407.jpg",
       "source_site": "gooood",
@@ -312,12 +312,12 @@
       "related_sections": [
         "空间与流线"
       ],
-      "download_status": "not_requested",
+      "download_status": "downloaded",
       "failure_reason": ""
     },
     {
       "id": "img7",
-      "file_name": "",
+      "file_name": "images/07_bamboo_interface.jpg",
       "image_type": "06_detail",
       "source_url": "https://oss.gooood.cn/uploads/2019/01/013-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x1115.jpg",
       "source_site": "gooood",
@@ -327,12 +327,12 @@
       "related_sections": [
         "材料与建构"
       ],
-      "download_status": "not_requested",
+      "download_status": "downloaded",
       "failure_reason": ""
     },
     {
       "id": "img8",
-      "file_name": "",
+      "file_name": "images/08_master_plan.jpg",
       "image_type": "03_plan",
       "source_url": "https://oss.gooood.cn/uploads/2019/01/017-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x124.jpg",
       "source_site": "gooood",
@@ -343,12 +343,12 @@
         "空间与流线",
         "图纸与图片索引"
       ],
-      "download_status": "not_requested",
+      "download_status": "downloaded",
       "failure_reason": ""
     },
     {
       "id": "img9",
-      "file_name": "",
+      "file_name": "images/09_ground_plan.jpg",
       "image_type": "03_plan",
       "source_url": "https://oss.gooood.cn/uploads/2019/01/019-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x328.jpg",
       "source_site": "gooood",
@@ -358,12 +358,12 @@
       "related_sections": [
         "空间与流线"
       ],
-      "download_status": "not_requested",
+      "download_status": "downloaded",
       "failure_reason": ""
     },
     {
       "id": "img10",
-      "file_name": "",
+      "file_name": "images/10_rock_theater.jpg",
       "image_type": "09_analysis",
       "source_url": "https://oss.gooood.cn/uploads/2019/01/014-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x666.jpg",
       "source_site": "gooood",
@@ -373,12 +373,12 @@
       "related_sections": [
         "核心建筑策略"
       ],
-      "download_status": "not_requested",
+      "download_status": "downloaded",
       "failure_reason": ""
     },
     {
       "id": "img11",
-      "file_name": "",
+      "file_name": "images/11_kitchen_detail.jpg",
       "image_type": "06_detail",
       "source_url": "https://oss.gooood.cn/uploads/2019/01/025-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x831.jpg",
       "source_site": "gooood",
@@ -388,12 +388,12 @@
       "related_sections": [
         "材料与建构"
       ],
-      "download_status": "not_requested",
+      "download_status": "downloaded",
       "failure_reason": ""
     },
     {
       "id": "img12",
-      "file_name": "",
+      "file_name": "images/12_material_assembly.jpg",
       "image_type": "06_detail",
       "source_url": "https://oss.gooood.cn/uploads/2019/01/027-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-1.jpg",
       "source_site": "gooood",
@@ -403,12 +403,12 @@
       "related_sections": [
         "材料与建构"
       ],
-      "download_status": "not_requested",
+      "download_status": "downloaded",
       "failure_reason": ""
     },
     {
       "id": "img13",
-      "file_name": "",
+      "file_name": "images/13_library_concept.jpg",
       "image_type": "07_concept",
       "source_url": "https://oss.gooood.cn/uploads/2019/01/016-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x975.jpg",
       "source_site": "gooood",
@@ -418,12 +418,12 @@
       "related_sections": [
         "核心建筑策略"
       ],
-      "download_status": "not_requested",
+      "download_status": "downloaded",
       "failure_reason": ""
     },
     {
       "id": "img14",
-      "file_name": "",
+      "file_name": "images/14_library_entry.jpg",
       "image_type": "08_interior",
       "source_url": "https://oss.gooood.cn/uploads/2019/01/018-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x937.jpg",
       "source_site": "gooood",
@@ -433,12 +433,12 @@
       "related_sections": [
         "空间与流线"
       ],
-      "download_status": "not_requested",
+      "download_status": "downloaded",
       "failure_reason": ""
     },
     {
       "id": "img15",
-      "file_name": "",
+      "file_name": "images/15_library_reading.jpg",
       "image_type": "08_interior",
       "source_url": "https://oss.gooood.cn/uploads/2019/01/015-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x1920.jpg",
       "source_site": "gooood",
@@ -449,12 +449,12 @@
         "核心建筑策略",
         "材料与建构"
       ],
-      "download_status": "not_requested",
+      "download_status": "downloaded",
       "failure_reason": ""
     },
     {
       "id": "img16",
-      "file_name": "",
+      "file_name": "images/16_library_section.jpg",
       "image_type": "04_section",
       "source_url": "https://oss.gooood.cn/uploads/2019/01/028-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x188.jpg",
       "source_site": "gooood",
@@ -464,12 +464,12 @@
       "related_sections": [
         "图纸与图片索引"
       ],
-      "download_status": "not_requested",
+      "download_status": "downloaded",
       "failure_reason": ""
     },
     {
       "id": "img17",
-      "file_name": "",
+      "file_name": "images/17_sandpit_activity.jpg",
       "image_type": "09_analysis",
       "source_url": "https://oss.gooood.cn/uploads/2019/01/012-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x557.jpg",
       "source_site": "gooood",
@@ -479,12 +479,12 @@
       "related_sections": [
         "核心建筑策略"
       ],
-      "download_status": "not_requested",
+      "download_status": "downloaded",
       "failure_reason": ""
     },
     {
       "id": "img18",
-      "file_name": "",
+      "file_name": "images/18_mountain_theater.jpg",
       "image_type": "09_analysis",
       "source_url": "https://oss.gooood.cn/uploads/2019/01/011-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x1045.jpg",
       "source_site": "gooood",
@@ -494,11 +494,11 @@
       "related_sections": [
         "核心建筑策略"
       ],
-      "download_status": "not_requested",
+      "download_status": "downloaded",
       "failure_reason": ""
     }
   ],
-  "download_mode": "not_requested",
+  "download_mode": "completed",
   "sources": [
     {
       "id": "s1",
@@ -559,5 +559,34 @@
         "s1"
       ]
     }
-  ]
+  ],
+  "source_quality": {
+    "has_primary_sources": true,
+    "primary_sources_used_for_identity": true,
+    "architecture_media_count": 1,
+    "wechat_valid_result_count": 0,
+    "zhihu_valid_result_count": 0,
+    "source_sufficiency_status": "partial",
+    "secondary_source_heavy": false,
+    "manual_review_needed": [
+      "Gooood is the retained image and project-report source; verify final publication rights before public/commercial reuse.",
+      "Official design-studio drawings and long-term operation records were not found in the current package.",
+      "Confirm the project team naming and completion/operation timeline against first-party records."
+    ],
+    "identity_confirming_source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "analysis_coverage": [
+      "concept",
+      "context",
+      "program",
+      "circulation",
+      "facade_material",
+      "structure_construction",
+      "user_experience",
+      "urban_relationship"
+    ]
+  }
 }

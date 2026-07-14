@@ -1,4 +1,10 @@
 {
   "casePackagesDir": "../case-packages",
-  "outputDir": "public"
+  "outputDir": "public",
+  "featuredSlugs": [
+    "guangzhou-jiefang-middle-road-old-city-renewal",
+    "shanghai-expo-china-pavilion",
+    "taizhou-folk-culture-exhibition-center",
+    "suzhou-museum-new"
+  ]
 }

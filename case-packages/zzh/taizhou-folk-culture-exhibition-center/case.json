@@ -239,7 +239,7 @@
   "image_metadata": [
     {
       "id": "img01",
-      "file_name": "images/01_hero_views_pdf_p93.png",
+      "file_name": "images/01_hero_built_views_crop.jpg",
       "image_type": "01_hero",
       "source_url": "C:/Users/dell/Desktop/泰州民俗文化展示中心.pdf",
       "source_site": "User-provided PDF",
@@ -256,7 +256,7 @@
     },
     {
       "id": "img02",
-      "file_name": "images/02_site_context_pdf_p88.png",
+      "file_name": "images/02_site_context_crop.jpg",
       "image_type": "02_site",
       "source_url": "C:/Users/dell/Desktop/泰州民俗文化展示中心.pdf",
       "source_site": "User-provided PDF",
@@ -273,7 +273,7 @@
     },
     {
       "id": "img03",
-      "file_name": "images/07_concept_layout_generation_pdf_p89.png",
+      "file_name": "images/07_concept_layout_generation_crop.jpg",
       "image_type": "07_concept",
       "source_url": "C:/Users/dell/Desktop/泰州民俗文化展示中心.pdf",
       "source_site": "User-provided PDF",
@@ -290,7 +290,7 @@
     },
     {
       "id": "img04",
-      "file_name": "images/03_plan_sequence_pdf_p90.png",
+      "file_name": "images/03_plan_sequence_crop.jpg",
       "image_type": "03_plan",
       "source_url": "C:/Users/dell/Desktop/泰州民俗文化展示中心.pdf",
       "source_site": "User-provided PDF",
@@ -307,7 +307,7 @@
     },
     {
       "id": "img05",
-      "file_name": "images/06_facade_stone_louver_pdf_p91.png",
+      "file_name": "images/06_facade_stone_louver_crop.jpg",
       "image_type": "06_detail",
       "source_url": "C:/Users/dell/Desktop/泰州民俗文化展示中心.pdf",
       "source_site": "User-provided PDF",
@@ -324,7 +324,7 @@
     },
     {
       "id": "img06",
-      "file_name": "images/09_green_technology_pdf_p92.png",
+      "file_name": "images/09_green_technology_crop.jpg",
       "image_type": "09_analysis",
       "source_url": "C:/Users/dell/Desktop/泰州民俗文化展示中心.pdf",
       "source_site": "User-provided PDF",
@@ -341,7 +341,7 @@
     },
     {
       "id": "img07",
-      "file_name": "images/06_construction_system_pdf_p248.png",
+      "file_name": "images/06_construction_system_crop.jpg",
       "image_type": "06_detail",
       "source_url": "C:/Users/dell/Desktop/泰州民俗文化展示中心.pdf",
       "source_site": "User-provided PDF",
@@ -357,7 +357,7 @@
     },
     {
       "id": "img08",
-      "file_name": "images/06_mockup_material_pdf_p249.png",
+      "file_name": "images/06_mockup_material_crop.jpg",
       "image_type": "06_detail",
       "source_url": "C:/Users/dell/Desktop/泰州民俗文化展示中心.pdf",
       "source_site": "User-provided PDF",
@@ -374,7 +374,7 @@
     },
     {
       "id": "img09",
-      "file_name": "images/06_stone_louver_detail_pdf_p250.png",
+      "file_name": "images/06_stone_louver_detail_crop.jpg",
       "image_type": "06_detail",
       "source_url": "C:/Users/dell/Desktop/泰州民俗文化展示中心.pdf",
       "source_site": "User-provided PDF",
@@ -391,7 +391,7 @@
     },
     {
       "id": "img10",
-      "file_name": "images/06_material_module_pdf_p251.png",
+      "file_name": "images/06_material_module_crop.jpg",
       "image_type": "06_detail",
       "source_url": "C:/Users/dell/Desktop/泰州民俗文化展示中心.pdf",
       "source_site": "User-provided PDF",
@@ -407,7 +407,7 @@
     },
     {
       "id": "img11",
-      "file_name": "images/06_waterproof_detail_pdf_p252.png",
+      "file_name": "images/06_waterproof_detail_crop.jpg",
       "image_type": "06_detail",
       "source_url": "C:/Users/dell/Desktop/泰州民俗文化展示中心.pdf",
       "source_site": "User-provided PDF",
@@ -457,6 +457,8 @@
       "id": "s1",
       "title": "泰州民俗文化展示中心.pdf",
       "url": "C:/Users/dell/Desktop/泰州民俗文化展示中心.pdf",
+      "file_path": "sources/taizhou-folk-culture-exhibition-center.pdf",
+      "page_count": 33,
       "source_level": "level_a",
       "publisher": "用户提供 PDF / 博士论文项目实践章节",
       "accessed_date": "2026-07-02",

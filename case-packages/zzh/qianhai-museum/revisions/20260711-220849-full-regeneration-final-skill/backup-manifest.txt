@@ -1,0 +1,5 @@
+created_at: 20260711-220849
+label: full-regeneration-final-skill
+files:
+- case.md
+- case.json

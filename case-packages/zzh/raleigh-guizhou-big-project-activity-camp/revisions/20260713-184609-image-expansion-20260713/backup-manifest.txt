@@ -1,0 +1,5 @@
+created_at: 20260713-184609
+label: image-expansion-20260713
+files:
+- case.md
+- case.json

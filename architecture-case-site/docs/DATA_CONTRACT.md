@@ -37,3 +37,9 @@ Detail pages render additional structured fields when present, including `key_fa
 ## Images
 
 Only local files referenced by `image_metadata.file_name` are rendered. Missing remote images, undownloaded images, and empty filenames are skipped instead of generating broken placeholders.
+
+The maintained site applies a non-destructive global image policy at build time:
+SHA-256 exact duplicates and pHash near-duplicates are excluded from the
+display gallery, each case is capped at eight selected images with type quotas,
+and slide media does not reuse an image already shown in the same case. Source
+`case.json` files are not rewritten by the site generator.

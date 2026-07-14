@@ -232,7 +232,7 @@
   "image_metadata": [
     {
       "id": "img01",
-      "file_name": "images/01_hero_built_views_pdf_p81.png",
+      "file_name": "images/01_hero_built_views_crop.jpg",
       "image_type": "01_hero",
       "source_url": "C:/Users/dell/Desktop/上海世博会中国馆.pdf",
       "source_site": "User-provided PDF",
@@ -249,7 +249,7 @@
     },
     {
       "id": "img02",
-      "file_name": "images/07_competition_china_qi_pdf_p75.png",
+      "file_name": "images/07_competition_china_qi_crop.jpg",
       "image_type": "07_concept",
       "source_url": "C:/Users/dell/Desktop/上海世博会中国馆.pdf",
       "source_site": "User-provided PDF",
@@ -266,7 +266,7 @@
     },
     {
       "id": "img03",
-      "file_name": "images/07_concept_eastern_crown_pdf_p76.png",
+      "file_name": "images/07_concept_eastern_crown_crop.jpg",
       "image_type": "07_concept",
       "source_url": "C:/Users/dell/Desktop/上海世博会中国馆.pdf",
       "source_site": "User-provided PDF",
@@ -283,7 +283,7 @@
     },
     {
       "id": "img04",
-      "file_name": "images/04_section_exhibition_adjustment_pdf_p77.png",
+      "file_name": "images/04_section_exhibition_adjustment_crop.jpg",
       "image_type": "04_section",
       "source_url": "C:/Users/dell/Desktop/上海世博会中国馆.pdf",
       "source_site": "User-provided PDF",
@@ -300,7 +300,7 @@
     },
     {
       "id": "img05",
-      "file_name": "images/02_roof_garden_new_jiuzhou_pdf_p78.png",
+      "file_name": "images/02_roof_garden_new_jiuzhou_crop.jpg",
       "image_type": "02_site",
       "source_url": "C:/Users/dell/Desktop/上海世博会中国馆.pdf",
       "source_site": "User-provided PDF",
@@ -317,7 +317,7 @@
     },
     {
       "id": "img06",
-      "file_name": "images/06_china_red_facade_mockup_pdf_p79.png",
+      "file_name": "images/06_china_red_facade_mockup_crop.jpg",
       "image_type": "06_detail",
       "source_url": "C:/Users/dell/Desktop/上海世博会中国馆.pdf",
       "source_site": "User-provided PDF",
@@ -334,7 +334,7 @@
     },
     {
       "id": "img07",
-      "file_name": "images/03_site_plan_green_tech_pdf_p80.png",
+      "file_name": "images/03_site_plan_green_tech_crop.jpg",
       "image_type": "03_plan",
       "source_url": "C:/Users/dell/Desktop/上海世博会中国馆.pdf",
       "source_site": "User-provided PDF",
@@ -385,6 +385,8 @@
       "id": "s1",
       "title": "上海世博会中国馆.pdf",
       "url": "C:/Users/dell/Desktop/上海世博会中国馆.pdf",
+      "file_path": "sources/shanghai-expo-china-pavilion.pdf",
+      "page_count": 9,
       "source_level": "level_a",
       "publisher": "用户提供 PDF / 博士论文项目实践章节",
       "accessed_date": "2026-07-02",

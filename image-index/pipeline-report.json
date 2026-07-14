@@ -1,0 +1,8 @@
+{
+  "candidate_images": 106,
+  "selected_images": 83,
+  "deduplicated": 23,
+  "cases": 17,
+  "max_per_case": 8,
+  "phash_threshold": 6
+}

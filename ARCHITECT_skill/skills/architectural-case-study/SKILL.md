@@ -89,6 +89,15 @@ If ambiguous, do not generate the full package. Output a candidate table with pr
 - If an image fails or should be skipped, keep the original URL near the relevant analysis, set `download_status` to `failed` or `skipped`, and explain `failure_reason`.
 - Do not download from Pinterest, unsourced galleries, AI aggregation sites, or pages without usable image links. Treat downloads as research organization, not commercial rights clearance.
 
+Use `ARCHITECT_skill/scripts/image_pipeline.py` for local image indexing and
+Gooood candidate extraction. The pipeline computes SHA-256 and pHash values,
+keeps source files intact, and writes a global `image-index/` audit index. The
+maintained site applies the same policy at build time: eight selected images per
+case by default, type quotas, and no exact or near-duplicate display asset
+across cases. Do not use Xiaohongshu as a default source; if a user supplies a
+confirmed note URL, treat its images as supplementary, retain author/source
+metadata, and respect platform access and copyright constraints.
+
 ## Validation
 
 Run validation whenever a `case.json` exists:

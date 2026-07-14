@@ -42,7 +42,7 @@
 - 具体做法：保留并改造原教学楼，以其作为场地锚固点，在南侧加建多功能通用空间、户外活动场地和服务设施。
 - 建筑效果：新旧空间形成连续营区，既降低建设成本，也让营地与村庄原有教育记忆产生联系。
 - 证据来源：s1。
-- 相关图片 / 图纸链接：img1、img2、img3、img8。
+- 相关图片 / 图纸链接：images/01_hero_aerial.jpg、images/02_camp_axis.jpg、images/03_site_section.jpg、images/08_master_plan.jpg。
 - 可借鉴点：乡建项目可以先寻找“可被重新激活的既有公共资产”，而不是从零开始做形式。
 
 ### 策略 2：用轻量海帕膜屋面构建连续共享空间
@@ -51,7 +51,7 @@
 - 具体做法：核心多功能通用空间采用连续起伏的半透明海帕膜屋面；平面非正交划分，开间向山和村庄打开，二层平台形成微高差错动。
 - 建筑效果：屋面提供连续遮雨界面，半透明与开放边界让使用者感知同伴活动和山村风景，形成开放、互动、共享的营地氛围。
 - 证据来源：s1。
-- 相关图片 / 图纸链接：img4、img5、img6、img9。
+- 相关图片 / 图纸链接：images/04_multiuse_section.jpg、images/05_multiuse_hall.jpg、images/06_shared_platform.jpg、images/09_ground_plan.jpg。
 - 可借鉴点：营地的“大空间”不一定要封闭，可以通过轻量屋面、半室外平台和开放界面组织弹性活动。
 
 ### 策略 3：以毛石、竹界面和竹模板混凝土建立地方建构关系
@@ -60,7 +60,7 @@
 - 具体做法：场地以小碎石铺底利于排水；活动区采用当地毛石砌筑；多功能空间使用像素化竹界面；图书馆、厨房、盥洗区等服务体采用竹模板现浇混凝土和本地砌石工艺。
 - 建筑效果：轻量工业化构件与乡土材料工艺形成对照，使营地既具有现代活动空间的效率，也保留本地材料和工匠参与的痕迹。
 - 证据来源：s1。
-- 相关图片 / 图纸链接：img7、img10、img11、img12。
+- 相关图片 / 图纸链接：images/07_bamboo_interface.jpg、images/01_hero_aerial.jpg0、images/01_hero_aerial.jpg1、images/01_hero_aerial.jpg2。
 - 可借鉴点：低成本乡建不等于“粗糙”，关键是把材料、排水、工艺和维护放在同一套建构逻辑里。
 
 ### 策略 4：将乡村图书馆作为营地与村庄的公共接口
@@ -69,7 +69,7 @@
 - 具体做法：在营地入口与村路交接处设置乡村图书馆，由接待区和面向村庄道路的阅览室组成；两个错落半层的三角形开放框体通过小楼梯连接村道和营地两个标高。
 - 建筑效果：图书馆长期向社区开放，透明界面向村庄展示内部活动，成为当地孩子阅读、玩耍和询问功课的场所。
 - 证据来源：s1。
-- 相关图片 / 图纸链接：img13、img14、img15、img16。
+- 相关图片 / 图纸链接：images/01_hero_aerial.jpg3、images/01_hero_aerial.jpg4、images/01_hero_aerial.jpg5、images/01_hero_aerial.jpg6。
 - 可借鉴点：公益营地应设计一个面向社区的“长期开放界面”，让项目价值超出活动周期。
 
 ### 策略 5：用山坡剧场和砂砾场地支持分组与集体活动
@@ -78,35 +78,83 @@
 - 具体做法：南侧设置圆形砂砾集中活动场地；西侧山体设置毛石砌筑的半圆形台阶小剧场，收住延伸入场地的山坡。
 - 建筑效果：集中场地和山间小剧场共同构成灵活活动系统，适应营会、交流、表演、休息和小组任务。
 - 证据来源：s1。
-- 相关图片 / 图纸链接：img10、img17、img18。
+- 相关图片 / 图纸链接：images/01_hero_aerial.jpg0、images/01_hero_aerial.jpg7、images/01_hero_aerial.jpg8。
 - 可借鉴点：营地设计要同时考虑“所有人一起”的场地和“小组活动”的场地，两者的尺度和边界应不同。
 
 ## 06 空间与流线
 
-营地以保留教学楼作为北侧锚点，向南加建多功能通用空间和活动场地，服务体围绕主要活动区布置。入口处的乡村图书馆同时面对营地入口和村庄道路，承担接待、社区开放和标高转换作用。相关图纸：img2、img8、img9。
+营地以保留教学楼作为北侧锚点，向南加建多功能通用空间和活动场地，服务体围绕主要活动区布置。入口处的乡村图书馆同时面对营地入口和村庄道路，承担接待、社区开放和标高转换作用。相关图纸：images/02_camp_axis.jpg、images/08_master_plan.jpg、images/09_ground_plan.jpg。
 
 空间体验上，营区不是单一轴线，而是由旧教学楼、多功能棚、圆形砂砾场、山坡剧场、服务体和图书馆组成的聚落式系统。其核心流线可以理解为：村路/县道到达 - 图书馆入口界面 - 营地活动核心 - 宿营/培训/用餐复合空间 - 山坡与户外活动场地。
 
 ## 07 形体、立面与建构
 
-多功能通用空间采用连续起伏的半透明海帕膜屋面，与像素化竹界面共同形成轻量、通风、半开放的营地核心。它和保留教学楼之间不是风格复制关系，而是通过“轻量加建”与“既有建筑”形成新旧并置。相关图片：img4、img5、img6。
+多功能通用空间采用连续起伏的半透明海帕膜屋面，与像素化竹界面共同形成轻量、通风、半开放的营地核心。它和保留教学楼之间不是风格复制关系，而是通过“轻量加建”与“既有建筑”形成新旧并置。相关图片：images/04_multiuse_section.jpg、images/05_multiuse_hall.jpg、images/06_shared_platform.jpg。
 
-服务体和乡村图书馆则使用竹模板现浇混凝土与本地砌石工艺，体量与保留建筑、通用空间和营区边界形成动态关系。图书馆的透明界面和儿童尺度家具，把建筑从营地服务设施转化为村庄儿童的日常公共空间。相关图片：img13、img14、img15。
+服务体和乡村图书馆则使用竹模板现浇混凝土与本地砌石工艺，体量与保留建筑、通用空间和营区边界形成动态关系。图书馆的透明界面和儿童尺度家具，把建筑从营地服务设施转化为村庄儿童的日常公共空间。相关图片：images/01_hero_aerial.jpg3、images/01_hero_aerial.jpg4、images/01_hero_aerial.jpg5。
+
+## 08 补充图片证据
+
+以下图片已下载为案例包本地资产，并按“场地—公共空间—材料构造—图书馆—活动场地”的证据链组织。详情页会依据全站图片配额和相似度规则选择展示，不会把同一张图片重复渲染。
+
+### 场地与总体关系
+
+![雷励营地鸟瞰与山地场地关系](images/01_hero_aerial.jpg)
+
+![营地公共空间轴线](images/02_camp_axis.jpg)
+
+![营地场地剖面](images/03_site_section.jpg)
+
+![营地总平面图](images/08_master_plan.jpg)
+
+![营地一层平面图](images/09_ground_plan.jpg)
+
+### 多功能空间与轻型屋面
+
+![多功能空间剖面](images/04_multiuse_section.jpg)
+
+![多功能公共大厅](images/05_multiuse_hall.jpg)
+
+![共享平台与半室外界面](images/06_shared_platform.jpg)
+
+### 材料、构造与活动场地
+
+![竹界面与半透明围护](images/07_bamboo_interface.jpg)
+
+![山地剧场](images/10_rock_theater.jpg)
+
+![厨房服务空间细部](images/11_kitchen_detail.jpg)
+
+![材料与构造组合](images/12_material_assembly.jpg)
+
+![沙坑活动场地](images/17_sandpit_activity.jpg)
+
+![山坡活动剧场](images/18_mountain_theater.jpg)
+
+### 乡村图书馆与社区接口
+
+![乡村图书馆概念图](images/13_library_concept.jpg)
+
+![乡村图书馆入口](images/14_library_entry.jpg)
+
+![乡村图书馆阅读空间](images/15_library_reading.jpg)
+
+![乡村图书馆剖面](images/16_library_section.jpg)
 
 ## 08 图纸与图片索引
 
 | 图片类型 | 推荐用途 | 图片或页面链接 | 来源 | 版权 / 备注 |
 | --- | --- | --- | --- | --- |
-| 01_hero | 鸟瞰 / 场地整体识别 | https://oss.gooood.cn/uploads/2019/01/001-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x617.jpg | gooood | ©姚力，研究链接 |
-| 09_analysis | 营区轴测 | https://oss.gooood.cn/uploads/2019/01/002-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x560.jpg | gooood | 研究链接 |
-| 04_section | 剖透视 / 建筑融入山村 | https://oss.gooood.cn/uploads/2019/01/003-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x272.jpg | gooood | 研究链接 |
-| 02_site | 建筑与场地关系 | https://oss.gooood.cn/uploads/2019/01/004-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x870.jpg | gooood | ©姚力，研究链接 |
-| 04_section | 多功能空间剖透视 | https://oss.gooood.cn/uploads/2019/01/006-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x311.jpg | gooood | 研究链接 |
-| 01_hero | 多功能通用空间 | https://oss.gooood.cn/uploads/2019/01/005-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x641.jpg | gooood | ©姚力，研究链接 |
-| 06_detail | 竹界面 / 半透明界面 | https://oss.gooood.cn/uploads/2019/01/013-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x1115.jpg | gooood | ©姚力，研究链接 |
-| 03_plan | 总平面图 | https://oss.gooood.cn/uploads/2019/01/017-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x124.jpg | gooood | 研究链接 |
-| 03_plan | 一层平面图 | https://oss.gooood.cn/uploads/2019/01/019-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x328.jpg | gooood | 研究链接 |
-| 04_section | 营区剖面图 | https://oss.gooood.cn/uploads/2019/01/023-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x151.jpg | gooood | 研究链接 |
+| 01_hero | 鸟瞰 / 场地整体识别 | images/01_hero_aerial.jpg | gooood | ©姚力，研究链接 |
+| 09_analysis | 营区轴测 | images/02_camp_axis.jpg | gooood | 研究链接 |
+| 04_section | 剖透视 / 建筑融入山村 | images/03_site_section.jpg | gooood | 研究链接 |
+| 02_site | 建筑与场地关系 | images/04_multiuse_section.jpg | gooood | ©姚力，研究链接 |
+| 04_section | 多功能空间剖透视 | images/05_multiuse_hall.jpg | gooood | 研究链接 |
+| 01_hero | 多功能通用空间 | images/06_shared_platform.jpg | gooood | ©姚力，研究链接 |
+| 06_detail | 竹界面 / 半透明界面 | images/07_bamboo_interface.jpg | gooood | ©姚力，研究链接 |
+| 03_plan | 总平面图 | images/08_master_plan.jpg | gooood | 研究链接 |
+| 03_plan | 一层平面图 | images/09_ground_plan.jpg | gooood | 研究链接 |
+| 04_section | 营区剖面图 | images/10_rock_theater.jpg | gooood | 研究链接 |
 
 ## 09 对我的设计启发
 

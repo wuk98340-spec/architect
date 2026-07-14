@@ -117,7 +117,7 @@
         "s6"
       ],
       "related_image_ids": [
-        "img_hero"
+        "img_01"
       ],
       "transferable_lesson": "大型文化建筑可以用抽象化传统空间原型建立城市识别，但需用真实空间和结构支撑。"
     },
@@ -133,7 +133,7 @@
         "s6"
       ],
       "related_image_ids": [
-        "img_interior"
+        "img_01"
       ],
       "transferable_lesson": "博物馆公共大厅可以成为城市公共事件和展示技术的复合载体。"
     },
@@ -148,7 +148,7 @@
         "s5"
       ],
       "related_image_ids": [
-        "img_stage"
+        "img_01"
       ],
       "transferable_lesson": "有强自然景观资源的文化建筑，可把观景组织为展陈之外的公共节目。"
     },
@@ -164,7 +164,7 @@
         "s5"
       ],
       "related_image_ids": [
-        "img_stage"
+        "img_01"
       ],
       "transferable_lesson": "大型公共文化建筑的结构策略应同时服务空间自由度、形象表达和公共体验。"
     }
@@ -177,8 +177,8 @@
         "s3"
       ],
       "related_image_ids": [
-        "img_interior",
-        "img_stage"
+        "img_01",
+        "img_02"
       ]
     }
   ],
@@ -191,7 +191,7 @@
         "s5"
       ],
       "related_image_ids": [
-        "img_stage"
+        "img_01"
       ]
     }
   ],
@@ -204,93 +204,81 @@
         "s5"
       ],
       "related_image_ids": [
-        "img_site"
+        "img_01"
       ]
     }
   ],
   "image_metadata": [
     {
-      "id": "img_hero",
-      "file_name": "",
+      "id": "img_01",
+      "file_name": "images/01_hero.jpg",
       "image_type": "01_hero",
-      "source_url": "https://qh.sz.gov.cn/sygnan/qhzx/dtzx/content/post_12134217.html",
-      "source_site": "深圳前海",
-      "caption": "前海博物馆项目效果图和内部效果图页面。",
-      "copyright_note": "Reference link only; rights not cleared.",
-      "recommended_use": "cover, massing analysis",
+      "source_url": "https://pub-static.hizh.cn/images/202504/18/680202e21057656cf094127f.jpeg",
+      "source_site": "https://pub-static.hizh.cn/a/202504/18/AP680202e3e4b00a07bbcab86a.html",
+      "caption": "建筑外观与五层重檐",
+      "copyright_note": "用于建筑案例研究整理；图片权利归原作者/来源机构，未作商业授权判断。",
+      "recommended_use": "支持正文中的形体、空间、结构或场地分析。",
+      "relevance_reason": "用于验证“建筑外观与五层重檐”这一分析要点。",
       "related_sections": [
-        "03 一句话判断",
-        "06 核心建筑策略"
+        "项目定位与核心判断",
+        "建筑语言与建成表达"
       ],
-      "download_status": "not_requested",
+      "download_status": "downloaded",
       "failure_reason": ""
     },
     {
-      "id": "img_site",
-      "file_name": "",
-      "image_type": "02_site",
-      "source_url": "https://www.21jingji.com/article/20250418/herald/3e40828cac2d9263969dacd4530abb28.html",
-      "source_site": "21财经",
-      "caption": "前海博物馆俯瞰图 / 受访方供图。",
-      "copyright_note": "Reference link only; rights not cleared.",
-      "recommended_use": "site relationship reference",
-      "related_sections": [
-        "04 项目背景",
-        "07 空间与流线"
-      ],
-      "download_status": "not_requested",
-      "failure_reason": ""
-    },
-    {
-      "id": "img_interior",
-      "file_name": "",
+      "id": "img_02",
+      "file_name": "images/02_interior.jpg",
       "image_type": "08_interior",
-      "source_url": "https://qh.sz.gov.cn/sygnan/qhzx/dtzx/content/post_12134217.html",
-      "source_site": "深圳前海",
-      "caption": "城市会客厅与内部效果图。",
-      "copyright_note": "Reference link only; rights not cleared.",
-      "recommended_use": "interior public space reference",
+      "source_url": "https://media.nfnews.com/nfplus/ossfs/pic/xy/202504/18/2883a793-0087-479e-9c29-051ba32ae168.jpg",
+      "source_site": "https://pub-static.hizh.cn/a/202504/18/AP680202e3e4b00a07bbcab86a.html",
+      "caption": "城市会客厅中庭施工现场",
+      "copyright_note": "用于建筑案例研究整理；图片权利归原作者/来源机构，未作商业授权判断。",
+      "recommended_use": "支持正文中的形体、空间、结构或场地分析。",
+      "relevance_reason": "用于验证“城市会客厅中庭施工现场”这一分析要点。",
       "related_sections": [
-        "05 设计理念",
-        "06 核心建筑策略",
-        "07 空间与流线"
+        "项目定位与核心判断",
+        "建筑语言与建成表达"
       ],
-      "download_status": "not_requested",
+      "download_status": "downloaded",
       "failure_reason": ""
     },
     {
-      "id": "img_stage",
-      "file_name": "",
+      "id": "img_03",
+      "file_name": "images/03_analysis.jpg",
       "image_type": "09_analysis",
-      "source_url": "https://qh.sz.gov.cn/sygnan/qhzx/dtzx/content/post_12134217.html",
-      "source_site": "深圳前海",
-      "caption": "无柱山海剧场与五层平台相关报道入口。",
-      "copyright_note": "Reference link only; rights not cleared.",
-      "recommended_use": "span, structure, public platform analysis",
+      "source_url": "https://pub-static.hizh.cn/images/202504/18/680202e31057656cf0941284.jpeg",
+      "source_site": "https://pub-static.hizh.cn/a/202504/18/AP680202e3e4b00a07bbcab86a.html",
+      "caption": "高位无柱山海剧场",
+      "copyright_note": "用于建筑案例研究整理；图片权利归原作者/来源机构，未作商业授权判断。",
+      "recommended_use": "支持正文中的形体、空间、结构或场地分析。",
+      "relevance_reason": "用于验证“高位无柱山海剧场”这一分析要点。",
       "related_sections": [
-        "06 核心建筑策略",
-        "08 形体、立面与建构"
+        "项目定位与核心判断",
+        "建筑语言与建成表达"
       ],
-      "download_status": "not_requested",
+      "download_status": "downloaded",
       "failure_reason": ""
     },
     {
-      "id": "img_concept",
-      "file_name": "",
-      "image_type": "07_concept",
-      "source_url": "https://mobile.shenzhenmuseum.com/qian-hai/detail?resId=021f251b6d9f40abb609ab3302334048&type=0",
-      "source_site": "深圳博物馆",
-      "caption": "前海博物馆概念介绍入口。",
-      "copyright_note": "Reference link only; rights not cleared.",
-      "recommended_use": "concept reference",
+      "id": "img_04",
+      "file_name": "images/04_plan.jpg",
+      "image_type": "03_plan",
+      "source_url": "https://media.nfnews.com/nfplus/ossfs/pic/xy/202504/18/fda7a8de-8f96-489d-a851-05a7adac172c.jpg",
+      "source_site": "https://pub-static.hizh.cn/a/202504/18/AP680202e3e4b00a07bbcab86a.html",
+      "caption": "巨型圆拱与结构施工",
+      "copyright_note": "用于建筑案例研究整理；图片权利归原作者/来源机构，未作商业授权判断。",
+      "recommended_use": "支持正文中的形体、空间、结构或场地分析。",
+      "relevance_reason": "用于验证“巨型圆拱与结构施工”这一分析要点。",
       "related_sections": [
-        "05 设计理念"
+        "项目定位与核心判断",
+        "建筑语言与建成表达"
       ],
-      "download_status": "not_requested",
+      "download_status": "downloaded",
       "failure_reason": ""
     }
   ],
-  "download_mode": "not_requested",
+  "download_mode": "completed",
   "source_quality": {
     "has_primary_sources": true,
     "primary_sources_used_for_identity": true,
@@ -328,7 +316,7 @@
       "url": "https://mobile.shenzhenmuseum.com/qian-hai/detail?resId=021f251b6d9f40abb609ab3302334048&type=0",
       "source_level": "level_a",
       "publisher": "深圳博物馆",
-      "accessed_date": "2026-06-16",
+      "accessed_date": "2026-07-11",
       "notes": "Institutional museum page; used for identity and design concept."
     },
     {
@@ -337,7 +325,7 @@
       "url": "https://qh.sz.gov.cn/sygnan/qhzx/dtzx/content/post_12134217.html",
       "source_level": "level_a",
       "publisher": "深圳前海 / 前海管理局",
-      "accessed_date": "2026-06-16",
+      "accessed_date": "2026-07-11",
       "notes": "Government project update; used for identity, concept, area, program, interior public spaces, and structure."
     },
     {
@@ -346,7 +334,7 @@
       "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/zwdt/content/post_12133065.html",
       "source_level": "level_a",
       "publisher": "深圳政府在线",
-      "accessed_date": "2026-06-16",
+      "accessed_date": "2026-07-11",
       "notes": "Municipal government portal reposting Shenzhen Special Zone Daily; used for status, structure, area, and public-space information."
     },
     {
@@ -355,7 +343,7 @@
       "url": "https://www.21jingji.com/article/20250418/herald/3e40828cac2d9263969dacd4530abb28.html",
       "source_level": "level_c",
       "publisher": "21财经",
-      "accessed_date": "2026-06-16",
+      "accessed_date": "2026-07-11",
       "notes": "Local media reporting with interview attribution to Zhang Zhenhui, deputy chief architect for Qianhai Museum."
     },
     {
@@ -364,7 +352,7 @@
       "url": "https://www.21jingji.com/article/20260109/herald/3465c1124c399f02ec92280c057511c5.html",
       "source_level": "level_c",
       "publisher": "21财经",
-      "accessed_date": "2026-06-16",
+      "accessed_date": "2026-07-11",
       "notes": "Recent local media update; used for 2026 opening-trial timing and mountain/sea theater description."
     },
     {
@@ -373,7 +361,7 @@
       "url": "https://pub-zhtb.hizh.cn/s/202504/18/AP680202e3e4b00a07bbcab86a.html",
       "source_level": "level_c",
       "publisher": "珠海网",
-      "accessed_date": "2026-06-16",
+      "accessed_date": "2026-07-11",
       "notes": "Reposted local-media style report; retained for Zhang Zhenhui quote about five-layer eaves and lantern-like form."
     },
     {
@@ -382,7 +370,7 @@
       "url": "https://weixin.sogou.com/weixin?type=2&query=%E5%89%8D%E6%B5%B7%E5%8D%9A%E7%89%A9%E9%A6%86%20%E4%BD%95%E9%95%9C%E5%A0%82%20%E5%BB%BA%E7%AD%91%E8%AE%BE%E8%AE%A1",
       "source_level": "level_c",
       "publisher": "Sogou WeChat / multiple WeChat public accounts",
-      "accessed_date": "2026-06-16",
+      "accessed_date": "2026-07-11",
       "notes": "Mandatory fallback result page. Six retained visible entries: 绿变变, 设计时讯, 美筑D, GA环球建筑, 设计时讯, 前海控股. Used for public-account supplementary content including design-team confirmation, concept repetition, opening/status wording, public reception, and construction progress."
     }
   ],

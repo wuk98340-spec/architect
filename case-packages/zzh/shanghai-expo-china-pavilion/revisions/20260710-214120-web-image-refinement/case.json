@@ -1,0 +1,855 @@
+{
+  "project_name": "上海世博会中国馆 / 中国2010年上海世博会中国国家馆",
+  "architects": [
+    "何镜堂团队",
+    "清华大学团队",
+    "上海民用建筑设计院",
+    "联合设计团队"
+  ],
+  "location": "中国上海，上海世博园区，浦东上南路 205 号一带",
+  "year": "2007 竞赛与开工；2010 世博会使用；2012 改作中华艺术宫开放",
+  "program": "国家展馆、地区馆、文化展示、世博后再利用美术馆",
+  "status": "建成；世博会后保留并改作中华艺术宫",
+  "case_type": "Cultural / exposition pavilion / adaptive reuse",
+  "disambiguation_status": "confirmed",
+  "disambiguation_candidates": [
+    {
+      "candidate_project": "上海世博会中国馆 / China Pavilion for Expo 2010 Shanghai",
+      "location": "上海世博园区",
+      "architects": "何镜堂团队、清华大学团队、上海民用建筑设计院等联合设计团队",
+      "year": "2007-2010；2012 改作中华艺术宫",
+      "type": "国家展馆 / 文化建筑",
+      "main_sources": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "confidence": "high",
+      "question_for_user": "已按用户提供 PDF 对应的 2010 年上海世博会中国馆生成。"
+    }
+  ],
+  "information_confidence": "high",
+  "incomplete_reason": "项目身份、设计过程、概念整合、外墙材料、屋顶园林、地铁下穿与绿色技术资料较充分；高度、完整结构体系、施工节点详图、造价和后续改造细节仍需专项资料。",
+  "one_sentence_summary": "中国馆把国家象征、世博大客流、展陈平层需求、屋顶园林、红色幕墙试板和地铁下穿约束组织成从概念到建造连续桥接的文化展示建筑。",
+  "key_facts": [
+    {
+      "label": "核心主题",
+      "value": "东方之冠、鼎盛中华",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "label": "竞赛背景",
+      "value": "2007 年全球华人方案征集，收到 344 个参赛方案。",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "label": "建筑面积",
+      "value": "约 160,126 平方米。",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "label": "后续使用",
+      "value": "世博会后保留并改作中华艺术宫。",
+      "source_ids": [
+        "s2",
+        "s6"
+      ]
+    },
+    {
+      "label": "外墙材料",
+      "value": "国家馆使用红色铝板，中国红外墙经多轮 1:1 挂板试验；地区馆使用浅灰铝合金方管叠篆百叶。",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "design_concept": {
+    "sourced_concept": "中国元素、时代精神；东方之冠、鼎盛中华。",
+    "ai_synthesis": "项目从“中国器”的器物原型转向“东方之冠”的国家礼仪表达，并通过南入口、大台阶、平层展厅、观景坡道、屋顶园林和幕墙试板把象征图像转化为完整建筑系统。",
+    "source_ids": [
+      "s1"
+    ]
+  },
+  "key_strategies": [
+    {
+      "strategy_name": "公众事件中的方案整合",
+      "design_problem": "国家级世博展馆承载高社会期待，单一方案难以覆盖象征、功能和公共共识。",
+      "specific_approach": "通过竞赛、并列第一、联合设计和多轮汇报，把何镜堂团队方案与清华方案资源整合为定稿。",
+      "architectural_effect": "形成“东方之冠”的强传播主题，并建立跨地区合作设计模式。",
+      "evidence": "sourced + synthesis",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img02",
+        "img03"
+      ],
+      "transferable_lesson": "重大公共项目要把社会共识转译为空间、入口、主题和建造专题。"
+    },
+    {
+      "strategy_name": "南入口礼仪轴线",
+      "design_problem": "西入口连接世博轴有效，但国家馆正面性与礼仪感不足。",
+      "specific_approach": "将主入口改为南入口，设置大台阶和裙房拱卫，并形成与世博轴平行的中轴格局。",
+      "architectural_effect": "增强国家馆的仪式性和公共进入体验。",
+      "evidence": "sourced",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img03"
+      ],
+      "transferable_lesson": "入口策略应同时处理人流效率、文化方位和仪式性。"
+    },
+    {
+      "strategy_name": "展陈需求倒逼剖面重组",
+      "design_problem": "螺旋上升平台和通高中庭概念强，但不利于展陈平层大空间需求。",
+      "specific_approach": "将国家馆调整为三层集中平层大空间，缩减中庭，并设置外围观景坡道。",
+      "architectural_effect": "保留展陈效率，同时把体验重心转向园区观景。",
+      "evidence": "sourced",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img04"
+      ],
+      "transferable_lesson": "功能调整可通过剖面和边界空间重组保留概念体验。"
+    },
+    {
+      "strategy_name": "屋顶平台景观化",
+      "design_problem": "地区馆屋面既承担疏散集散，又被国家馆俯瞰，不能只是技术屋面。",
+      "specific_approach": "以“新九洲清晏”为主题整合地貌、水面、树木、桥径和集散场地。",
+      "architectural_effect": "屋顶平台成为可观看、可行走、可疏散的文化景观。",
+      "evidence": "sourced",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img05"
+      ],
+      "transferable_lesson": "大公共建筑屋顶可作为第二地面，兼容疏散、景观和叙事。"
+    },
+    {
+      "strategy_name": "中国红外墙足尺试板",
+      "design_problem": "红色外墙需在远近、昼夜、灯光和施工尺度下保持经典庄重。",
+      "specific_approach": "组织专家委员会和幕墙企业进行四轮 1:1 挂板实验，最终确定红色铝板及 2.7 米分模数控制。",
+      "architectural_effect": "将颜色符号转化为可建造、可观看、可控制的幕墙系统。",
+      "evidence": "sourced",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img06"
+      ],
+      "transferable_lesson": "决定建筑识别度的表皮应通过样板、模数、灯光和观看距离共同定板。"
+    }
+  ],
+  "spatial_ideas": [
+    {
+      "text": "国家馆由竞标阶段的螺旋平台调整为三层平层大空间，外围观景坡道承担新的身体体验。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img04"
+      ]
+    },
+    {
+      "text": "地区馆屋面被设计为“新九洲清晏”，同时承担疏散、集散、景观和文化叙事。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img05"
+      ]
+    },
+    {
+      "text": "南入口大台阶和中轴格局强化国家馆的公共礼仪入口。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img03"
+      ]
+    }
+  ],
+  "materials_structure": [
+    {
+      "text": "国家馆中国红外墙最终采用纹理宽 4.2 厘米、深约 2.5 厘米的红色铝板，并按 2.7 米分模数控制。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img06"
+      ]
+    },
+    {
+      "text": "地区馆叠篆外墙由浅灰铝合金方管构成，文字调整为二十四节气名称。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img06"
+      ]
+    },
+    {
+      "text": "地铁线下穿要求地铁上部局部建筑体量通过结构转换跨越安全范围落地，并协调地铁公共流线和风井。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img07"
+      ]
+    }
+  ],
+  "site_context": [
+    {
+      "text": "项目位于上海世博园区核心位置，西侧世博轴和南向礼仪入口共同影响入口组织。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img03",
+        "img07"
+      ]
+    },
+    {
+      "text": "地下既有地铁线从地块西北角穿过并设站厅，成为结构和流线的重要制约。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img07"
+      ]
+    }
+  ],
+  "image_metadata": [
+    {
+      "id": "img01",
+      "file_name": "images/01_hero_built_views_pdf_p81.png",
+      "image_type": "01_hero",
+      "source_url": "C:/Users/dell/Desktop/上海世博会中国馆.pdf",
+      "source_site": "User-provided PDF",
+      "caption": "从城市开放空间、新九洲清晏和近观视角看中国馆",
+      "copyright_note": "Research use from user-provided PDF; PDF credits image source as project materials.",
+      "recommended_use": "cover / built atmosphere",
+      "relevance_reason": "支持对中国馆建成城市识别度、屋顶园林与国家馆主体视觉关系的分析。",
+      "related_sections": [
+        "03 一句话判断",
+        "06 建筑语言生成"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img02",
+      "file_name": "images/07_competition_china_qi_pdf_p75.png",
+      "image_type": "07_concept",
+      "source_url": "C:/Users/dell/Desktop/上海世博会中国馆.pdf",
+      "source_site": "User-provided PDF",
+      "caption": "首轮竞赛“中国器”和第二轮竞赛过程",
+      "copyright_note": "Research use from user-provided PDF.",
+      "recommended_use": "competition concept",
+      "relevance_reason": "支持竞赛背景、344 个方案与“中国器”原型的分析。",
+      "related_sections": [
+        "05.1 诊断",
+        "08 方法 1"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img03",
+      "file_name": "images/07_concept_eastern_crown_pdf_p76.png",
+      "image_type": "07_concept",
+      "source_url": "C:/Users/dell/Desktop/上海世博会中国馆.pdf",
+      "source_site": "User-provided PDF",
+      "caption": "联合设计初期阶段探索与定稿方案“东方之冠”",
+      "copyright_note": "Research use from user-provided PDF.",
+      "recommended_use": "concept integration",
+      "relevance_reason": "支持从合二为一、平台烘托斗冠到南入口大台阶的方案整合分析。",
+      "related_sections": [
+        "05.2 定位",
+        "08 方法 2"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img04",
+      "file_name": "images/04_section_exhibition_adjustment_pdf_p77.png",
+      "image_type": "04_section",
+      "source_url": "C:/Users/dell/Desktop/上海世博会中国馆.pdf",
+      "source_site": "User-provided PDF",
+      "caption": "投标方案与定稿方案剖面对比",
+      "copyright_note": "Research use from user-provided PDF.",
+      "recommended_use": "section / exhibition adjustment",
+      "relevance_reason": "支持从螺旋平台到三层平层大空间、从中心体验到外围观景的剖面分析。",
+      "related_sections": [
+        "06.1 功能梳理",
+        "08 方法 3"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img05",
+      "file_name": "images/02_roof_garden_new_jiuzhou_pdf_p78.png",
+      "image_type": "02_site",
+      "source_url": "C:/Users/dell/Desktop/上海世博会中国馆.pdf",
+      "source_site": "User-provided PDF",
+      "caption": "从国家馆看新九洲清晏及园林景观平面",
+      "copyright_note": "Research use from user-provided PDF.",
+      "recommended_use": "roof platform / landscape analysis",
+      "relevance_reason": "支持地区馆屋顶平台作为疏散、集散、观看和文化景观的分析。",
+      "related_sections": [
+        "06.4 场所与氛围",
+        "08 方法 4"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img06",
+      "file_name": "images/06_china_red_facade_mockup_pdf_p79.png",
+      "image_type": "06_detail",
+      "source_url": "C:/Users/dell/Desktop/上海世博会中国馆.pdf",
+      "source_site": "User-provided PDF",
+      "caption": "中国红外墙设计探索和试板过程",
+      "copyright_note": "Research use from user-provided PDF.",
+      "recommended_use": "facade material / mockup",
+      "relevance_reason": "支持中国红外墙、多材料探索、1:1 挂板实验和定板过程分析。",
+      "related_sections": [
+        "07.2 材料与工艺",
+        "08 方法 5"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img07",
+      "file_name": "images/03_site_plan_green_tech_pdf_p80.png",
+      "image_type": "03_plan",
+      "source_url": "C:/Users/dell/Desktop/上海世博会中国馆.pdf",
+      "source_site": "User-provided PDF",
+      "caption": "中国馆总平面、平面图和绿色技术说明",
+      "copyright_note": "Research use from user-provided PDF.",
+      "recommended_use": "site plan / green technology",
+      "relevance_reason": "支持总平面、地铁下穿、功能流线与绿色技术嵌入的分析。",
+      "related_sections": [
+        "06.2 布局逻辑",
+        "07.4 性能与施工控制"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    }
+  ],
+  "download_mode": "completed",
+  "source_quality": {
+    "has_primary_sources": true,
+    "primary_sources_used_for_identity": true,
+    "architecture_media_count": 3,
+    "wechat_valid_result_count": 0,
+    "zhihu_valid_result_count": 0,
+    "source_sufficiency_status": "sufficient",
+    "secondary_source_heavy": false,
+    "manual_review_needed": [
+      "正式引用建筑高度、完整结构体系和施工节点时需补充专项技术资料。",
+      "英文标题存在 China Pavilion / China Pavillion 拼写差异，引用时应按来源原题记录。"
+    ],
+    "identity_confirming_source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "analysis_coverage": [
+      "concept",
+      "context",
+      "program",
+      "circulation",
+      "facade_material",
+      "structure_construction",
+      "user_experience",
+      "urban_relationship"
+    ]
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "上海世博会中国馆.pdf",
+      "url": "C:/Users/dell/Desktop/上海世博会中国馆.pdf",
+      "source_level": "level_a",
+      "publisher": "用户提供 PDF / 博士论文项目实践章节",
+      "accessed_date": "2026-07-02",
+      "notes": "主要项目资料，包含竞赛、整合、剖面、外墙、地铁、绿色技术和建成照片。"
+    },
+    {
+      "id": "s2",
+      "title": "中华艺术宫官方网站",
+      "url": "https://www.artmuseumonline.org/",
+      "source_level": "level_a",
+      "publisher": "中华艺术宫（上海美术馆）",
+      "accessed_date": "2026-07-02",
+      "notes": "用于确认中国馆后续作为中华艺术宫使用。"
+    },
+    {
+      "id": "s3",
+      "title": "China Pavilion",
+      "url": "https://www.area-arch.it/en/china-pavilion/",
+      "source_level": "level_b",
+      "publisher": "Area",
+      "accessed_date": "2026-07-02",
+      "notes": "专业建筑媒体，用于补充建筑面积、摄影信息和项目事实。"
+    },
+    {
+      "id": "s4",
+      "title": "China Pavillion for Shanghai World Expo 2010",
+      "url": "https://www.archdaily.com/34037/china-pavillion-for-shanghai-world-expo-2010",
+      "source_level": "level_b",
+      "publisher": "ArchDaily",
+      "accessed_date": "2026-07-02",
+      "notes": "专业建筑媒体，题名使用 Pavillion 拼写；用于补充项目传播与建造期信息。"
+    },
+    {
+      "id": "s5",
+      "title": "gooood Interview NO.17 – He Jingtang",
+      "url": "https://www.gooood.cn/gooood-interview-hejingtang.htm",
+      "source_level": "level_b",
+      "publisher": "gooood",
+      "accessed_date": "2026-07-02",
+      "notes": "何镜堂访谈页面，含中国馆图片和设计院线索；非完整项目报道。"
+    },
+    {
+      "id": "s6",
+      "title": "上海世博会中国馆变身中华艺术宫",
+      "url": "https://zqb.cyol.com/html/2012-09/25/nw.D110000zgqnb_20120925_7-01.htm",
+      "source_level": "level_c",
+      "publisher": "中国青年报",
+      "accessed_date": "2026-07-02",
+      "notes": "用于补充世博会后改作中华艺术宫的公开报道。"
+    }
+  ],
+  "uncertain_or_conflicting_info": [
+    {
+      "topic": "English title spelling",
+      "description": "ArchDaily 页面题名写作 China Pavillion，更常见英文写作为 China Pavilion；本包标题使用 Pavilion，来源列表保留原题。",
+      "source_ids": [
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "topic": "Height",
+      "description": "公开资料常见 63 米口径，但当前包未找到可直接对应设计图纸或官方技术表的一手高度资料，故不确认为高可信指标。",
+      "source_ids": []
+    },
+    {
+      "topic": "Structure system",
+      "description": "PDF 仅说明地铁下穿处结构转换、风井和大柱结合等问题，未完整披露主体结构系统和节点做法。",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "topic": "Post-Expo adaptation",
+      "description": "中华艺术宫后续使用可确认，但改造阶段的内部空间变更和长期运营评价未在本包中展开。",
+      "source_ids": [
+        "s2",
+        "s6"
+      ]
+    }
+  ],
+  "technical_metrics": {
+    "site_area": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到稳定场地面积口径。"
+    },
+    "building_area": {
+      "value": "160126",
+      "unit": "平方米",
+      "confidence": "reported",
+      "source_ids": [
+        "s3"
+      ],
+      "notes": "Area 页面给出 gross floor area 160,126 m2。"
+    },
+    "height": {
+      "value": null,
+      "unit": "",
+      "confidence": "limited",
+      "source_ids": [],
+      "notes": "公开资料常见 63 米口径，但当前未保留为高可信技术指标。"
+    },
+    "floors": {
+      "value": "",
+      "unit": "",
+      "confidence": "limited",
+      "source_ids": [
+        "s1"
+      ],
+      "notes": "PDF 明确国家馆调整为较集中的三层平层大空间，但未提供完整楼层统计。"
+    },
+    "far": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到可靠资料。"
+    },
+    "building_density": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未检索到可靠资料。"
+    },
+    "structure_system": {
+      "value": "",
+      "unit": "",
+      "confidence": "limited",
+      "source_ids": [
+        "s1"
+      ],
+      "notes": "PDF 提到地铁下穿导致结构转换并跨越安全范围落地，但未完整披露结构体系。"
+    },
+    "main_materials": [
+      {
+        "text": "红色铝板中国红外墙、浅灰铝合金方管叠篆百叶、玻璃、屋面光伏与绿化屋面等。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img06",
+          "img07"
+        ]
+      }
+    ],
+    "client": {
+      "value": "",
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "PDF 提及建设单位，但当前包未稳定记录业主全称。"
+    },
+    "photography_drawing_credits": [
+      {
+        "text": "PDF 图注包含设计文件、项目资料；Area 页面图片注明 Shen Zhong Hai 摄影。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s3"
+        ],
+        "related_image_ids": [
+          "img01"
+        ]
+      }
+    ],
+    "notes": "高精度指标缺失处保持 limited 或 unknown，不作推测。"
+  },
+  "site_information": {
+    "location_role": {
+      "text": "上海世博园区核心国家展馆，承担中国作为东道主国家的象征性展示。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "related_image_ids": [
+        "img01"
+      ]
+    },
+    "natural_environment": {
+      "text": "PDF 主要讨论园区、屋顶园林和绿色技术，未以自然地貌作为主要场地约束。",
+      "evidence_type": "missing",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": []
+    },
+    "cultural_environment": {
+      "text": "项目被要求体现中国元素、时代精神，并在定稿中强化坐北朝南、东方之冠、九洲园林等文化表达。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img03",
+        "img05"
+      ]
+    },
+    "terrain_conditions": {
+      "text": "地块地下有已建成地铁线和站厅下穿，构成关键工程约束。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img07"
+      ]
+    },
+    "roads_and_access": {
+      "text": "主入口由西侧连接世博轴的方案改为南向入口和大台阶，形成礼仪轴线。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img03"
+      ]
+    },
+    "surrounding_buildings": {
+      "text": "PDF 主要讨论世博轴、园区视角和国家馆作为制高点的观景关系，周边建筑细项未展开。",
+      "evidence_type": "missing",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img01"
+      ]
+    },
+    "served_users": {
+      "text": "世博会期间服务大客流参观者、国家馆和地区馆观众；后续服务中华艺术宫观众。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "related_image_ids": [
+        "img04",
+        "img05"
+      ]
+    },
+    "core_site_tension": {
+      "text": "核心矛盾是国家象征、超大客流、展陈灵活性、礼仪入口、地下地铁和永久保留之间的综合协调。",
+      "evidence_type": "synthesis",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img03",
+        "img07"
+      ]
+    }
+  },
+  "conceptual_exploration": {
+    "diagnosis": [
+      {
+        "text": "中国馆从竞赛开始就是受到社会广泛关注的公众事件，设计需组织社会共同愿景。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img02"
+        ]
+      }
+    ],
+    "positioning": [
+      {
+        "text": "从“中国元素、时代精神”到“东方之冠、鼎盛中华”，项目定位从器物原型转向国家礼仪表达。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img03"
+        ]
+      }
+    ],
+    "strategy": [
+      {
+        "text": "以国家馆主体象征形体为核心，地区馆作为基座与公共平台，南入口和屋顶园林补足公共体验。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img03",
+          "img05"
+        ]
+      }
+    ],
+    "imagery_and_expression": [
+      {
+        "text": "建筑意象由冠、鼎、斗拱、中国红、叠篆、九洲园林和南向礼仪入口共同构成。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img01",
+          "img06"
+        ]
+      }
+    ]
+  },
+  "architectural_language_generation": {
+    "function": [
+      {
+        "text": "展陈需求推动国家馆由螺旋平台调整为三层平层大空间，地区馆需为 36 个省市自治区提供均好展位。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img04"
+        ]
+      }
+    ],
+    "layout": [
+      {
+        "text": "布局由南入口礼仪轴线、水平地区馆基座和居中升起的国家馆主体构成。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img03",
+          "img07"
+        ]
+      }
+    ],
+    "composition": [
+      {
+        "text": "国家馆层层出挑、架空升起，地区馆水平展开，形成上部强象征与下部公共平台的组合。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img01",
+          "img03"
+        ]
+      }
+    ],
+    "place_atmosphere": [
+      {
+        "text": "新九洲清晏将地区馆屋顶从疏散平台转化为可观看、可行走的文化景观。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img05"
+        ]
+      }
+    ]
+  },
+  "construction_quality_control": {
+    "construction_language": [
+      {
+        "text": "地铁线下穿使地铁上部局部建筑体量必须通过结构转换跨越安全范围落地。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img07"
+        ]
+      }
+    ],
+    "materials_and_craft": [
+      {
+        "text": "中国红外墙专项历时近 8 个月，经历多材料、多肌理、四轮 1:1 挂板实验。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img06"
+        ]
+      }
+    ],
+    "tectonic_logic": [
+      {
+        "text": "地区馆叠篆百叶和国家馆构架端头将文字、遮蔽、通风、尺度和文化表达整合为外墙构件。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img06"
+        ]
+      }
+    ],
+    "performance_and_construction_control": [
+      {
+        "text": "架空升起和层层出挑形成自遮阳与自然通风架空层，屋面光伏、雨水收集、绿化屋面、透水地面、冰蓄冷和能管系统被整合进建筑。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img07"
+        ]
+      }
+    ]
+  },
+  "design_lessons": {
+    "transferable_methods": [
+      {
+        "text": "重大公共建筑要把社会共同愿景组织为空间、入口、主题和建造专题。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img02",
+          "img03"
+        ]
+      },
+      {
+        "text": "展陈建筑可通过剖面重组同时满足平层展陈和可记忆的参观体验。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img04"
+        ]
+      },
+      {
+        "text": "决定识别度的颜色和表皮应通过 1:1 样板、模数、灯光和观看距离验证。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img06"
+        ]
+      }
+    ],
+    "avoid_copying": [
+      {
+        "text": "东方之冠、中国红、斗冠/斗拱等符号高度绑定世博国家馆语境，不适合在普通文化建筑中直接套用。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img01"
+        ]
+      }
+    ],
+    "analysis_diagram_potential": [
+      "竞赛整合流程图",
+      "南入口礼仪轴线图",
+      "国家馆剖面调整图",
+      "屋顶平台复合功能图",
+      "中国红外墙试板决策图",
+      "地铁下穿与结构跨越关系图"
+    ]
+  }
+}
+

@@ -1,0 +1,810 @@
+{
+  "project_name": "广州市越秀区解放中路旧城改造",
+  "source_mode": "pdf",
+  "architects": [
+    "张振辉及设计团队（PDF未列明事务所全称）"
+  ],
+  "location": "中国广东省广州市越秀区解放中路",
+  "year": "2004启动；竣工年份未在PDF中确认",
+  "program": "旧城改造、回迁住宅、沿街商业、保留建筑修复",
+  "status": "已建成；PDF未列明竣工年份",
+  "case_type": "Renovation / housing / urban renewal",
+  "disambiguation_status": "confirmed",
+  "disambiguation_candidates": [],
+  "information_confidence": "medium",
+  "incomplete_reason": "本案例包采用PDF Source Mode，仅使用用户提供的学位论文PDF，未联网补充官方页面、事务所页面、竣工年份、面积、结构体系或完整施工资料；经济技术指标与施工细节仍需人工复核。",
+  "one_sentence_summary": "解放中路旧城改造把政府主导、居民回迁、保留老建筑、延续街巷肌理等复杂条件，转化为街巷结构、标准户型原型和品相对等的建造语言。",
+  "key_facts": [
+    {
+      "label": "项目名称",
+      "value": "广州市越秀区解放中路旧城改造",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "label": "启动背景",
+      "value": "广州市为迎接2010年亚运会，于2004年启动的旧城改造试点项目。",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "label": "改造模式",
+      "value": "政府主导投资、不强制拆迁、以回迁需要为主要建筑量依据，并保留有价值老建筑。",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "label": "核心设计方向",
+      "value": "延续原有街巷结构，采用多层集合住宅中等密度策略和岭南下商上宅剖面，并以新旧缝合回应老城文脉。",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "design_concept": {
+    "sourced_concept": "项目通过延续街巷结构、中等密度多层集合住宅、下商上宅剖面、保留建筑修复和新旧材料对话来回应旧城改造试点目标。",
+    "ai_synthesis": "该案例的核心不是单一风格，而是以街巷结构作为总体底线，以标准户型单元吸收回迁和规范变化，以细部和材料建立新旧建筑的品质对等。",
+    "source_ids": [
+      "s1"
+    ]
+  },
+  "key_strategies": [
+    {
+      "strategy_name": "以街巷结构作为旧城更新底线",
+      "design_problem": "项目需要在政府试点、居民回迁、保留老建筑和经济补偿之间建立可实施的更新框架。",
+      "specific_approach": "总体布局延续并发展原有街巷结构；后续增加住宅量时仍维护保留建筑的城市道路可见性。",
+      "architectural_effect": "更新不以清空重建为前提，而是在旧城肌理中产生可识别的新旧缝合关系。",
+      "evidence": "来源明确：PDF p.3-p.4。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img01_site",
+        "img02_massing_revision"
+      ],
+      "transferable_lesson": "先建立不可轻易破坏的空间结构底线，再允许局部增量和经济条件在底线内调整。"
+    },
+    {
+      "strategy_name": "用标准户型原型吸收复杂变化",
+      "design_problem": "回迁居民对走廊式住宅接受度不足，同时面积可调、明厨明厕、前后通风和邻里交往都需要兼顾。",
+      "specific_approach": "发展一梯两户标准户型单元，以厨厕和生活阳台组成服务模块，以卧室条带调节面积，并以入户阳台和楼梯组合形成交往空间。",
+      "architectural_effect": "在户型、组团和密度不断调整时，项目仍保持居住品质目标和清晰空间组织。",
+      "evidence": "来源明确：PDF p.5。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img03_unit_gradient"
+      ],
+      "transferable_lesson": "面对不确定需求时，先建立能容纳变化的空间原型，而不是不断累积例外方案。"
+    },
+    {
+      "strategy_name": "在规范、密度和肌理之间做综合调停",
+      "design_problem": "防火和日照规范倾向于拉开间距，而旧城街巷肌理需要新旧建筑保持紧密尺度，同时还要保证住宅量。",
+      "specific_approach": "通过沿边界错动组合、面向保留建筑退台、局部防火墙等措施满足规范，同时维护总体规划结构。",
+      "architectural_effect": "项目产生大量具体变化，但仍保持思路连贯性和结构简单性。",
+      "evidence": "来源明确：PDF p.6。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img04_regulation_massing"
+      ],
+      "transferable_lesson": "规范约束可以转化为体量、户型和新旧关系深化的设计工具。"
+    },
+    {
+      "strategy_name": "以品相对等替代仿古或强对比",
+      "design_problem": "新建筑需要与保留的民国红砖建筑对话，但不能简单仿古，也不能用过度现代的玻璃界面切断旧城气质。",
+      "specific_approach": "住宅采用灰白品相，商业体量使用钢、玻璃、木百叶；立面通过窗洞、阳台、挑台、窗框、栏杆和滴水线等细部组织与生活内容关联。",
+      "architectural_effect": "新建筑以克制、细腻、生活化的立面组织进入旧城，与保留建筑形成品质层面的默契。",
+      "evidence": "来源明确：PDF p.7-p.8。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img05_facade_detail",
+        "img06_life_scene"
+      ],
+      "transferable_lesson": "历史环境中的新建筑可以追求品质对等和尺度默契，而不是只在仿古或强对比之间选择。"
+    }
+  ],
+  "spatial_ideas": [
+    {
+      "text": "以原有街巷结构作为总体布局主线，并在住宅量调整中维持保留建筑的城市可见性。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img01_site",
+        "img02_massing_revision"
+      ]
+    },
+    {
+      "text": "标准户型单元通过服务模块、可调卧室条带、入户阳台与楼梯组合，形成从街道/共享平台到每户入口的公共-私密梯度。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img03_unit_gradient"
+      ]
+    }
+  ],
+  "materials_structure": [
+    {
+      "text": "PDF确认住宅体量采用灰白品相，沿街商业体量采用钢、玻璃和木百叶等新材质与红砖老建筑对话。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img05_facade_detail"
+      ]
+    },
+    {
+      "text": "PDF确认局部细部包括水刷石灰色窗框、剁斧石墙基与平台护栏、深灰色金属栏杆和窗框、趟拢门意象入户铁门、檐口滴水勾边等。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img05_facade_detail"
+      ]
+    }
+  ],
+  "site_context": [
+    {
+      "text": "项目位于广州市越秀区解放中路，是2004年启动的旧城改造试点，目标包括保留有价值老建筑并延续老城文脉和肌理。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img01_site"
+      ]
+    },
+    {
+      "text": "岭南地区气候被纳入户型与楼梯间设计，前后通风被用来改善小气候。",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img03_unit_gradient"
+      ]
+    }
+  ],
+  "image_metadata": [
+    {
+      "id": "img01_site",
+      "file_name": "images/02_site_street_structure_pdf_p03.png",
+      "image_type": "02_site",
+      "source_url": "sources/concept-to-built-zhang-zhenhui.pdf#page=3",
+      "source_site": "用户提供PDF",
+      "caption": "总体布局延续原有街巷结构，PDF p.3",
+      "copyright_note": "研究引用；商业或公开发布需另行清权。",
+      "recommended_use": "场地与街巷结构分析",
+      "relevance_reason": "用于验证项目以原有街巷结构为总体布局线索，并把旧城改造目标与政府试点要求绑定。",
+      "related_sections": [
+        "04 场地信息表",
+        "08 方法1"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img02_massing_revision",
+      "file_name": "images/09_massing_revision_pdf_p04.png",
+      "image_type": "09_analysis",
+      "source_url": "sources/concept-to-built-zhang-zhenhui.pdf#page=4",
+      "source_site": "用户提供PDF",
+      "caption": "从投标方案到定稿方案的体量调整，PDF p.4",
+      "copyright_note": "研究引用；商业或公开发布需另行清权。",
+      "recommended_use": "体量调整与保留建筑可见性分析",
+      "relevance_reason": "用于说明在增加住宅量时，设计仍围绕街巷结构和保留建筑可见性进行取舍。",
+      "related_sections": [
+        "05 概念创意探索",
+        "08 方法1"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img03_unit_gradient",
+      "file_name": "images/03_unit_public_private_gradient_pdf_p05.png",
+      "image_type": "03_plan",
+      "source_url": "sources/concept-to-built-zhang-zhenhui.pdf#page=5",
+      "source_site": "用户提供PDF",
+      "caption": "户型单元、楼梯间通风与公共-私密梯度，PDF p.5",
+      "copyright_note": "研究引用；商业或公开发布需另行清权。",
+      "recommended_use": "户型、通风与邻里交往分析",
+      "relevance_reason": "用于验证标准户型单元、服务模块、前后通风和公共性到私密性的分层渐变。",
+      "related_sections": [
+        "06 建筑语言生成",
+        "08 方法2"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img04_regulation_massing",
+      "file_name": "images/09_regulation_massing_pdf_p06.png",
+      "image_type": "09_analysis",
+      "source_url": "sources/concept-to-built-zhang-zhenhui.pdf#page=6",
+      "source_site": "用户提供PDF",
+      "caption": "规范约束下的体量调整与新旧融合场景，PDF p.6",
+      "copyright_note": "研究引用；商业或公开发布需另行清权。",
+      "recommended_use": "规范约束与体量策略分析",
+      "relevance_reason": "用于验证退台、错动、防火墙等策略如何在规范约束中维护街巷肌理和规划结构。",
+      "related_sections": [
+        "07 建造品质控制",
+        "08 方法3"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img05_facade_detail",
+      "file_name": "images/05_facade_detail_pdf_p07.png",
+      "image_type": "05_elevation",
+      "source_url": "sources/concept-to-built-zhang-zhenhui.pdf#page=7",
+      "source_site": "用户提供PDF",
+      "caption": "立面、户型平面与构造细部，PDF p.7",
+      "copyright_note": "研究引用；商业或公开发布需另行清权。",
+      "recommended_use": "立面、材料与细部建造分析",
+      "relevance_reason": "用于验证品相对等、窗洞与细部建造逻辑。",
+      "related_sections": [
+        "07 建造品质控制",
+        "08 方法4"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img06_life_scene",
+      "file_name": "images/08_life_scene_pdf_p08.png",
+      "image_type": "08_interior",
+      "source_url": "sources/concept-to-built-zhang-zhenhui.pdf#page=8",
+      "source_site": "用户提供PDF",
+      "caption": "新建筑融入传统城市肌理，PDF p.8",
+      "copyright_note": "研究引用；商业或公开发布需另行清权。",
+      "recommended_use": "新旧融合与生活场景分析",
+      "relevance_reason": "用于说明最终建成生活场景中，新住宅、保留建筑和街巷环境的融合效果。",
+      "related_sections": [
+        "08 方法4",
+        "10 对我的设计启发"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    }
+  ],
+  "download_mode": "completed",
+  "source_quality": {
+    "has_primary_sources": true,
+    "primary_sources_used_for_identity": true,
+    "architecture_media_count": 0,
+    "wechat_valid_result_count": 0,
+    "zhihu_valid_result_count": 0,
+    "source_sufficiency_status": "partial",
+    "secondary_source_heavy": false,
+    "manual_review_needed": [
+      "仅使用用户提供PDF，未联网核验官方页面、事务所页面、竣工年份、面积和结构体系。",
+      "如需发表或课程精确图纸分析，应补充官方项目档案、完整设计图纸、竣工资料与现场照片。"
+    ],
+    "identity_confirming_source_ids": [
+      "s1"
+    ],
+    "analysis_coverage": [
+      "concept",
+      "context",
+      "program",
+      "circulation",
+      "facade_material",
+      "structure_construction",
+      "user_experience",
+      "urban_relationship"
+    ]
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "从概念到建成：建筑设计思维的连贯性研究_张振辉",
+      "url": "sources/concept-to-built-zhang-zhenhui.pdf",
+      "source_level": "level_a",
+      "publisher": "用户提供PDF / 华南理工大学博士学位论文",
+      "accessed_date": "2026-07-02",
+      "notes": "该PDF为张振辉博士论文中的实践回顾，作者明确说明相关已建项目为其主持设计或全程参加的项目之一；作为设计过程一手回顾使用，但未替代官方竣工资料。",
+      "source_kind": "user_pdf",
+      "file_path": "sources/concept-to-built-zhang-zhenhui.pdf",
+      "page_count": 88,
+      "bibliographic_note": "用户提供文件；本案例主要使用PDF页序p.3-p.8。"
+    }
+  ],
+  "evidence_spans": [
+    {
+      "id": "ev01_identity",
+      "source_id": "s1",
+      "page_start": 3,
+      "page_end": 3,
+      "evidence_type": "sourced",
+      "quote_or_summary": "PDF p.3标明3.1.1为广州市越秀区解放中路旧城改造，并说明其为2004年启动的旧城改造试点项目。",
+      "supports": [
+        "key_facts.project_name",
+        "key_facts.year",
+        "design_concept.sourced_concept",
+        "site_context.0"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "ev02_source_position",
+      "source_id": "s1",
+      "page_start": 3,
+      "page_end": 4,
+      "evidence_type": "sourced",
+      "quote_or_summary": "PDF p.3-p.4说明政府主导、不强制拆迁、以回迁需要为主、保留有价值老建筑，并列出延续街巷结构、中等密度、下商上宅和新旧缝合等中选原因。",
+      "supports": [
+        "key_facts.2",
+        "key_facts.3",
+        "key_strategies.0",
+        "conceptual_exploration.positioning",
+        "image_metadata.img01_site",
+        "image_metadata.img02_massing_revision"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "ev03_unit",
+      "source_id": "s1",
+      "page_start": 5,
+      "page_end": 5,
+      "evidence_type": "sourced",
+      "quote_or_summary": "PDF p.5说明设计由走廊式研究转向一梯两户标准户型单元，并通过服务模块、可调卧室条带、入户阳台和楼梯组合回应面积、通风、均好性和邻里交往。",
+      "supports": [
+        "key_strategies.1",
+        "spatial_ideas.1",
+        "architectural_language_generation.composition",
+        "image_metadata.img03_unit_gradient"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "ev04_regulation",
+      "source_id": "s1",
+      "page_start": 6,
+      "page_end": 6,
+      "evidence_type": "sourced",
+      "quote_or_summary": "PDF p.6说明防火和日照规范与旧城紧密街巷尺度发生矛盾，设计通过错动组合、退台和局部防火墙等措施满足规范且维护总体结构。",
+      "supports": [
+        "key_strategies.2",
+        "construction_quality_control.performance_and_construction_control",
+        "image_metadata.img04_regulation_massing"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "ev05_facade_detail",
+      "source_id": "s1",
+      "page_start": 7,
+      "page_end": 8,
+      "evidence_type": "sourced",
+      "quote_or_summary": "PDF p.7-p.8说明住宅灰白品相、商业钢玻璃木百叶与红砖老建筑对话，并通过窗洞、阳台、挑台、栏杆、滴水勾边等细部形成素雅品相和新生活场景。",
+      "supports": [
+        "key_strategies.3",
+        "materials_structure.0",
+        "materials_structure.1",
+        "construction_quality_control.materials_and_craft",
+        "image_metadata.img05_facade_detail",
+        "image_metadata.img06_life_scene"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "ev06_theory",
+      "source_id": "s1",
+      "page_start": 40,
+      "page_end": 40,
+      "evidence_type": "synthesis",
+      "quote_or_summary": "PDF p.40从项目知识体系角度说明，项目设计是在构建特定任务解决方案的同时搜索、构造并完善项目知识体系。",
+      "supports": [
+        "design_concept.ai_synthesis",
+        "design_lessons.transferable_methods"
+      ],
+      "notes": "作为方法论补证，不作为项目硬事实。"
+    }
+  ],
+  "uncertain_or_conflicting_info": [
+    {
+      "topic": "竣工年份",
+      "description": "PDF说明项目为2004年启动且属于已建成项目，但未列明竣工年份。",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "topic": "经济技术指标",
+      "description": "PDF未提供用地面积、建筑面积、容积率、建筑密度、建筑高度、层数和结构体系等硬指标。",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "topic": "完整团队与施工资料",
+      "description": "PDF以第一人称回顾设计过程，但未列明完整设计单位、合作方、施工过程、样板或质量控制记录。",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "technical_metrics": {
+    "site_area": {
+      "value": "",
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "PDF未提供可靠资料。"
+    },
+    "building_area": {
+      "value": "",
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "PDF未提供可靠资料。"
+    },
+    "height": {
+      "value": "",
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "PDF未提供可靠资料。"
+    },
+    "floors": {
+      "value": "多层集合住宅",
+      "unit": "",
+      "confidence": "reported",
+      "source_ids": [
+        "s1"
+      ],
+      "notes": "PDF说明采用多层集合住宅中等密度策略，但未提供具体层数。"
+    },
+    "far": {
+      "value": "",
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "PDF未提供可靠资料。"
+    },
+    "building_density": {
+      "value": "",
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "PDF未提供可靠资料。"
+    },
+    "structure_system": {
+      "value": "",
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "PDF未提供可靠资料。"
+    },
+    "main_materials": [
+      {
+        "text": "住宅灰白品相；沿街商业体量使用钢、玻璃和木百叶；细部包含水刷石、剁斧石和深灰色金属构件等。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img05_facade_detail"
+        ]
+      }
+    ],
+    "client": {
+      "value": "广州市政府主导；执行建设单位为区旧城改造办公室",
+      "unit": "",
+      "confidence": "reported",
+      "source_ids": [
+        "s1"
+      ],
+      "notes": "PDF p.3-p.4提供。"
+    },
+    "photography_drawing_credits": [
+      {
+        "text": "PDF图注显示图纸来自设计文件、项目资料或自绘；摄影图注包括司徒。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img01_site",
+          "img03_unit_gradient",
+          "img05_facade_detail"
+        ]
+      }
+    ],
+    "notes": "PDF未提供完整经济技术指标。"
+  },
+  "site_information": {
+    "location_role": {
+      "text": "广州市越秀区解放中路旧城改造试点，服务于2010年亚运会前的旧城更新探索。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img01_site"
+      ]
+    },
+    "natural_environment": {
+      "text": "岭南地区小气候与通风需求被纳入楼梯间和户型组织。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img03_unit_gradient"
+      ]
+    },
+    "cultural_environment": {
+      "text": "基地内保留的民国红砖建筑和老城文脉是新建筑形态与材料策略的重要参照。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img05_facade_detail"
+      ]
+    },
+    "terrain_conditions": {
+      "text": "PDF未提供地形资料。",
+      "evidence_type": "missing",
+      "source_ids": [],
+      "related_image_ids": []
+    },
+    "roads_and_access": {
+      "text": "设计坚持从城市道路可明显看到保留建筑，并以街巷结构作为总体布局线索。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img02_massing_revision"
+      ]
+    },
+    "surrounding_buildings": {
+      "text": "保留民国红砖建筑和旧城街巷环境构成新建筑立面与体量控制的主要背景。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img05_facade_detail",
+        "img06_life_scene"
+      ]
+    },
+    "served_users": {
+      "text": "回迁居民、沿街商业使用者和旧城公共生活使用者。",
+      "evidence_type": "synthesis",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img03_unit_gradient"
+      ]
+    },
+    "core_site_tension": {
+      "text": "回迁住宅量、规范间距、旧城紧密肌理和保留建筑可见性之间的平衡。",
+      "evidence_type": "synthesis",
+      "source_ids": [
+        "s1"
+      ],
+      "related_image_ids": [
+        "img04_regulation_massing"
+      ]
+    }
+  },
+  "conceptual_exploration": {
+    "diagnosis": [
+      {
+        "text": "项目面对政府主导旧改、居民自愿回迁或外迁、建筑量补偿政府投资、保留老建筑和延续肌理等多重约束。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img01_site"
+        ]
+      }
+    ],
+    "positioning": [
+      {
+        "text": "设计定位与项目意图契合：延续街巷结构、中等密度多层集合住宅、下商上宅、保留修复和新旧缝合。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img01_site"
+        ]
+      }
+    ],
+    "strategy": [
+      {
+        "text": "以街巷结构为底线，以标准户型为可变原型，以品相对等组织新旧建筑关系。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img03_unit_gradient",
+          "img05_facade_detail"
+        ]
+      }
+    ],
+    "imagery_and_expression": [
+      {
+        "text": "PDF未给出独立概念口号，但新旧缝合和素雅品相构成主要表达方向。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img06_life_scene"
+        ]
+      }
+    ]
+  },
+  "architectural_language_generation": {
+    "function": [
+      {
+        "text": "项目组织回迁住宅、沿街商业和保留建筑修复，并采用下商上宅剖面分层营造商业与居住环境。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img01_site"
+        ]
+      }
+    ],
+    "layout": [
+      {
+        "text": "总体布局延续原有街巷结构，住宅增量服从保留建筑可见性和街巷结构。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img02_massing_revision"
+        ]
+      }
+    ],
+    "composition": [
+      {
+        "text": "标准户型单元排列成梳状布局条型体量，灵活嵌入基地肌理或组合成新组团。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img03_unit_gradient"
+        ]
+      }
+    ],
+    "place_atmosphere": [
+      {
+        "text": "通过入户阳台、楼梯间交往空间、下商上宅剖面和新旧建筑共同营造街巷，改善居住品质并激发旧城活力。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img03_unit_gradient",
+          "img06_life_scene"
+        ]
+      }
+    ]
+  },
+  "construction_quality_control": {
+    "construction_language": [
+      {
+        "text": "PDF未提供结构体系；建筑语言层面确认住宅灰白品相、商业钢玻璃木百叶与红砖老建筑对话。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img05_facade_detail"
+        ]
+      }
+    ],
+    "materials_and_craft": [
+      {
+        "text": "水刷石灰色窗框、剁斧石墙基与平台护栏、深灰色金属栏杆和窗框、趟拢门意象入户铁门、檐口滴水勾边共同构成素雅品相。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img05_facade_detail"
+        ]
+      }
+    ],
+    "tectonic_logic": [
+      {
+        "text": "构造逻辑从户型生活需求、外墙开洞、空调布置、栏杆和滴水细节中生长出来，而不是独立装饰。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img05_facade_detail"
+        ]
+      }
+    ],
+    "performance_and_construction_control": [
+      {
+        "text": "楼梯间前后通风被用来改善住区小气候；规范层面以退台、错动和局部防火墙回应防火与日照要求。PDF未提供施工控制资料。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img03_unit_gradient",
+          "img04_regulation_massing"
+        ]
+      }
+    ]
+  },
+  "design_lessons": {
+    "transferable_methods": [
+      {
+        "text": "旧城更新先建立空间结构底线，例如街巷、保留建筑视线、公共通道和生活尺度。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img01_site"
+        ]
+      },
+      {
+        "text": "在需求不断变化的项目里，以标准单元原型吸收复杂变化。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img03_unit_gradient"
+        ]
+      },
+      {
+        "text": "历史环境中的当代表达可以通过材料、比例、构造细节和生活内容建立品质对等。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": [
+          "img05_facade_detail",
+          "img06_life_scene"
+        ]
+      }
+    ],
+    "avoid_copying": [
+      {
+        "text": "该项目的政府主导、回迁政策和旧改办协调机制具有特定时代背景，不宜直接套用到市场化城市更新。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "analysis_diagram_potential": [
+      "街巷结构延续图",
+      "体量增减取舍图",
+      "标准户型原型图",
+      "公共到私密梯度图",
+      "新旧立面品相对照图"
+    ]
+  }
+}

@@ -90,8 +90,8 @@
         "s6"
       ],
       "related_image_ids": [
-        "img_hero",
-        "img_master_plan"
+        "img_01",
+        "img_02"
       ],
       "transferable_lesson": "???????????????????????????????????????"
     },
@@ -107,8 +107,8 @@
         "s7"
       ],
       "related_image_ids": [
-        "img_roof_activity",
-        "img_section"
+        "img_01",
+        "img_02"
       ],
       "transferable_lesson": "???????????????????????????????????"
     },
@@ -124,8 +124,8 @@
         "s7"
       ],
       "related_image_ids": [
-        "img_hero",
-        "img_courtyard"
+        "img_01",
+        "img_02"
       ],
       "transferable_lesson": "?????????????????????????????????????"
     },
@@ -141,7 +141,7 @@
         "s7"
       ],
       "related_image_ids": [
-        "img_courtyard"
+        "img_01"
       ],
       "transferable_lesson": "??????????????????????????????????"
     },
@@ -156,7 +156,7 @@
         "s8"
       ],
       "related_image_ids": [
-        "img_detail"
+        "img_01"
       ],
       "transferable_lesson": "???????????????????????????????????????"
     }
@@ -171,9 +171,9 @@
         "s7"
       ],
       "related_image_ids": [
-        "img_master_plan",
-        "img_ground_plan",
-        "img_section"
+        "img_01",
+        "img_02",
+        "img_03"
       ]
     },
     {
@@ -182,8 +182,8 @@
         "s7"
       ],
       "related_image_ids": [
-        "img_ground_plan",
-        "img_master_plan"
+        "img_01",
+        "img_02"
       ]
     }
   ],
@@ -195,7 +195,7 @@
         "s8"
       ],
       "related_image_ids": [
-        "img_detail"
+        "img_01"
       ]
     },
     {
@@ -205,7 +205,7 @@
         "s7"
       ],
       "related_image_ids": [
-        "img_section"
+        "img_01"
       ]
     }
   ],
@@ -217,7 +217,7 @@
         "s6"
       ],
       "related_image_ids": [
-        "img_master_plan"
+        "img_01"
       ]
     },
     {
@@ -228,126 +228,240 @@
         "s7"
       ],
       "related_image_ids": [
-        "img_courtyard"
+        "img_01"
       ]
     }
   ],
   "image_metadata": [
     {
-      "id": "img_hero",
-      "file_name": "",
+      "id": "img_01",
+      "file_name": "images/01_hero.jpg",
       "image_type": "01_hero",
-      "source_url": "https://www.archdaily.cn/cn/880872/xi-cun-star-bei-sen-da-yuan-jia-kun-jian-zhu-she-ji-wu-suo",
-      "source_site": "ArchDaily China",
-      "caption": "??????????????",
-      "copyright_note": "Reference link only; rights not cleared.",
-      "recommended_use": "cover, massing analysis",
+      "source_url": "https://oss.gooood.cn/uploads/2016/03/00-West-Village-Basis-Yard_Jiakun-Architects.jpg",
+      "source_site": "https://www.gooood.cn/west-village-basis-yard-by-jiakun-architects.htm",
+      "caption": "围合大院与环形步道",
+      "copyright_note": "用于建筑案例研究整理；图片权利归原作者/来源机构，未作商业授权判断。",
+      "recommended_use": "支持正文中的形体、空间、结构或场地分析。",
+      "relevance_reason": "用于验证“围合大院与环形步道”这一分析要点。",
       "related_sections": [
-        "03 ?????",
-        "05 ??????",
-        "06 ??????"
+        "项目定位与核心判断",
+        "建筑语言与建成表达"
       ],
-      "download_status": "not_requested",
+      "download_status": "downloaded",
       "failure_reason": ""
     },
     {
-      "id": "img_master_plan",
-      "file_name": "",
+      "id": "img_02",
+      "file_name": "images/02_interior.jpg",
+      "image_type": "08_interior",
+      "source_url": "https://oss.gooood.cn/uploads/2016/03/01-West-Village-Basis-Yard_Jiakun-Architects.jpg",
+      "source_site": "https://www.gooood.cn/west-village-basis-yard-by-jiakun-architects.htm",
+      "caption": "内院绿色盆地与公共生活",
+      "copyright_note": "用于建筑案例研究整理；图片权利归原作者/来源机构，未作商业授权判断。",
+      "recommended_use": "支持正文中的形体、空间、结构或场地分析。",
+      "relevance_reason": "用于验证“内院绿色盆地与公共生活”这一分析要点。",
+      "related_sections": [
+        "项目定位与核心判断",
+        "建筑语言与建成表达"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_03",
+      "file_name": "images/03_analysis.jpg",
+      "image_type": "09_analysis",
+      "source_url": "https://oss.gooood.cn/uploads/2016/03/02-West-Village-Basis-Yard_Jiakun-Architects.jpg",
+      "source_site": "https://www.gooood.cn/west-village-basis-yard-by-jiakun-architects.htm",
+      "caption": "外廊和市井立面",
+      "copyright_note": "用于建筑案例研究整理；图片权利归原作者/来源机构，未作商业授权判断。",
+      "recommended_use": "支持正文中的形体、空间、结构或场地分析。",
+      "relevance_reason": "用于验证“外廊和市井立面”这一分析要点。",
+      "related_sections": [
+        "项目定位与核心判断",
+        "建筑语言与建成表达"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_04",
+      "file_name": "images/04_plan.jpg",
+      "image_type": "03_plan",
+      "source_url": "https://oss.gooood.cn/uploads/2016/03/03-West-Village-Basis-Yard_Jiakun-Architects.jpg",
+      "source_site": "https://www.gooood.cn/west-village-basis-yard-by-jiakun-architects.htm",
+      "caption": "总平面或空间组织图",
+      "copyright_note": "用于建筑案例研究整理；图片权利归原作者/来源机构，未作商业授权判断。",
+      "recommended_use": "支持正文中的形体、空间、结构或场地分析。",
+      "relevance_reason": "用于验证“总平面或空间组织图”这一分析要点。",
+      "related_sections": [
+        "项目定位与核心判断",
+        "建筑语言与建成表达"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_05",
+      "file_name": "images/05_aerial_courtyard.jpg",
+      "image_type": "02_site",
+      "source_url": "https://images.adsttc.com/media/images/59d2/f17a/b22e/38ef/b100/0085/medium_jpg/%E8%A5%BF%E6%9D%91%E5%A4%A7%E9%99%A201_%E7%99%BD%E5%A4%A9%E9%B8%9F%E7%9E%B0_%E4%BF%AF%E7%9E%B0.jpg?1506996596",
+      "source_site": "ArchDaily",
+      "caption": "从高处观察外环建筑、内院与屋顶运动路径",
+      "copyright_note": "Photo by Arch-Exist via ArchDaily; reference link only; rights not cleared.",
+      "recommended_use": "场地关系与外环内院分析",
+      "relevance_reason": "用于说明西村以建筑外环围合超大内院，并把运动与公共生活集中到中心空间。",
+      "related_sections": [
+        "项目定位与核心判断",
+        "场地与城市关系",
+        "布局逻辑"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_06",
+      "file_name": "images/06_running_track.jpg",
+      "image_type": "09_analysis",
+      "source_url": "https://images.adsttc.com/media/images/59d2/ed67/b22e/38ef/b100/007b/medium_jpg/%E8%A5%BF%E6%9D%91%E5%A4%A7%E9%99%A207_%E8%BF%90%E5%8A%A8_%E4%BA%A4%E5%8F%89%E8%B7%91%E9%81%93%E8%B7%91%E6%AD%A53.jpg?1506995554",
+      "source_site": "ArchDaily",
+      "caption": "外环立面之间的交叉跑道与公共活动",
+      "copyright_note": "Photo by Chengdu Beisen Culture / Li Ziqiang via ArchDaily; reference link only; rights not cleared.",
+      "recommended_use": "公共运动设施与城市界面分析",
+      "relevance_reason": "用于验证跑道、外廊和街道界面共同构成开放公共生活，而非封闭商业动线。",
+      "related_sections": [
+        "功能与使用逻辑",
+        "场所与氛围",
+        "方法 2"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_07",
+      "file_name": "images/07_rooftop_bike_track.jpg",
+      "image_type": "08_interior",
+      "source_url": "https://images.adsttc.com/media/images/59d2/f190/b22e/38e5/3e00/0165/medium_jpg/%E8%A5%BF%E6%9D%91%E5%A4%A7%E9%99%A208_%E8%BF%90%E5%8A%A8_%E5%B1%8B%E9%A1%B6%E9%AA%91%E8%A1%8C_%E6%91%84%E5%BD%B1%EF%BC%9A%E6%9D%8E%E8%87%AA%E5%BC%BA.jpg?1506996618",
+      "source_site": "ArchDaily",
+      "caption": "从内院连续上升至屋顶的骑行与跑道系统",
+      "copyright_note": "Photo by Li Ziqiang via ArchDaily; reference link only; rights not cleared.",
+      "recommended_use": "屋顶公共路径与剖面体验分析",
+      "relevance_reason": "用于说明屋顶并非附属设备层，而是连接地面、内院和城市视线的连续公共运动路径。",
+      "related_sections": [
+        "空间流线",
+        "形式构成",
+        "方法 2"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_08",
+      "file_name": "images/08_night_aerial.jpg",
+      "image_type": "01_hero",
+      "source_url": "https://images.adsttc.com/media/images/59d2/f260/b22e/38ef/b100/0090/medium_jpg/%E8%A5%BF%E6%9D%91%E5%A4%A7%E9%99%A210_%E5%A4%9C%E6%99%9A%E9%B8%9F%E7%9E%B0_%E6%AD%A3%E9%9D%A2.jpg?1506996826",
+      "source_site": "ArchDaily",
+      "caption": "夜间外环建筑与内院活动形成的城市光带",
+      "copyright_note": "Photo by Arch-Exist via ArchDaily; reference link only; rights not cleared.",
+      "recommended_use": "封面补充与夜间公共性分析",
+      "relevance_reason": "用于补充白天外观之外的夜间公共生活证据，显示内院活动如何反向激活城市边界。",
+      "related_sections": [
+        "场所与氛围",
+        "城市界面"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_09",
+      "file_name": "images/09_inner_courtyard.jpg",
+      "image_type": "08_interior",
+      "source_url": "https://images.adsttc.com/media/images/59d2/f1cd/b22e/38e5/3e00/0167/medium_jpg/%E8%A5%BF%E6%9D%91%E5%A4%A7%E9%99%A203_%E5%86%85%E9%99%A2.jpg?1506996679",
+      "source_site": "ArchDaily",
+      "caption": "内院、竹林与外廊共同形成的日常活动场景",
+      "copyright_note": "Photo by Chengdu Beisen Culture / Li Ziqiang via ArchDaily; reference link only; rights not cleared.",
+      "recommended_use": "院落公共性与生活场景分析",
+      "relevance_reason": "用于说明大院不是单一中央广场，而是由竹林、外廊、停留和穿行共同组成的复合公共空间。",
+      "related_sections": [
+        "场所与氛围",
+        "地方文化转译"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_10",
+      "file_name": "images/10_master_plan.jpg",
       "image_type": "02_site",
       "source_url": "https://images.adsttc.com/media/images/59d2/f4d5/b22e/38e5/3e00/017b/medium_jpg/6.1_Yard_Drawing01_Master_Plan.jpg?1506997431",
       "source_site": "ArchDaily China",
-      "caption": "???????????????????",
-      "copyright_note": "Reference link only; rights not cleared.",
-      "recommended_use": "site and courtyard analysis",
+      "caption": "西村大院总平面图",
+      "copyright_note": "Drawing via ArchDaily China; reference link only; rights not cleared.",
+      "recommended_use": "总平面与外环内院组织分析",
+      "relevance_reason": "用于直接验证建筑沿基地边界布置、中心内院留空以及跑道和公共空间的整体关系。",
       "related_sections": [
-        "04 ?????",
-        "06 ??????",
-        "08 ??????"
+        "场地与城市关系",
+        "布局逻辑",
+        "方法 1"
       ],
-      "download_status": "not_requested",
+      "download_status": "downloaded",
       "failure_reason": ""
     },
     {
-      "id": "img_ground_plan",
-      "file_name": "",
+      "id": "img_11",
+      "file_name": "images/11_ground_floor_plan.jpg",
       "image_type": "03_plan",
       "source_url": "https://images.adsttc.com/media/images/59d2/f4b1/b22e/38e5/3e00/017a/medium_jpg/6.1_Yard_Drawing02_Ground_Floor_Plan.jpg?1506997410",
       "source_site": "ArchDaily China",
-      "caption": "?????????????????????",
-      "copyright_note": "Reference link only; rights not cleared.",
-      "recommended_use": "program and circulation analysis",
+      "caption": "西村大院首层平面图",
+      "copyright_note": "Drawing via ArchDaily China; reference link only; rights not cleared.",
+      "recommended_use": "首层功能与公共入口分析",
+      "relevance_reason": "用于补充商业外廊、内院活动和首层开放界面之间的功能组织证据。",
       "related_sections": [
-        "06 ??????"
+        "功能与使用逻辑",
+        "布局逻辑"
       ],
-      "download_status": "not_requested",
+      "download_status": "downloaded",
       "failure_reason": ""
     },
     {
-      "id": "img_section",
-      "file_name": "",
+      "id": "img_12",
+      "file_name": "images/12_section_track.jpg",
       "image_type": "04_section",
       "source_url": "https://images.adsttc.com/media/images/59d2/f562/b22e/38e5/3e00/017e/medium_jpg/6.1_Yard_Drawing08_AA_Section.jpg?1506997587",
       "source_site": "ArchDaily China",
-      "caption": "AA ????????????????????",
-      "copyright_note": "Reference link only; rights not cleared.",
-      "recommended_use": "section and route analysis",
+      "caption": "包含屋顶跑道的 A-A 剖面图",
+      "copyright_note": "Drawing via ArchDaily China; reference link only; rights not cleared.",
+      "recommended_use": "屋顶跑道、外廊和建筑高度关系分析",
+      "relevance_reason": "用于直接验证跑道从地面向屋顶连续上升的剖面逻辑，以及外环体量的垂直层次。",
       "related_sections": [
-        "06 ??????",
-        "08 ??????"
+        "空间流线",
+        "形式构成",
+        "建造语言"
       ],
-      "download_status": "not_requested",
+      "download_status": "downloaded",
       "failure_reason": ""
     },
     {
-      "id": "img_detail",
-      "file_name": "",
+      "id": "img_13",
+      "file_name": "images/13_roof_brick_detail.jpg",
       "image_type": "06_detail",
       "source_url": "https://images.adsttc.com/media/images/59d2/f19d/b22e/38ef/b100/0087/medium_jpg/%E8%A5%BF%E6%9D%91%E5%A4%A7%E9%99%A205_%E6%9D%90%E6%96%99_%E5%B1%8B%E9%9D%A2%E5%A4%A7%E5%AD%94%E7%A0%96%E6%A4%8D%E8%8D%89.jpg?1506996630",
       "source_site": "ArchDaily China",
-      "caption": "????????????",
-      "copyright_note": "Reference link only; rights not cleared.",
-      "recommended_use": "material detail reference",
+      "caption": "屋面大孔砖与植草系统",
+      "copyright_note": "Photo/drawing via ArchDaily China; reference link only; rights not cleared.",
+      "recommended_use": "屋顶材料与绿色基础设施分析",
+      "relevance_reason": "用于补充屋顶绿化并非装饰性覆盖，而是与大孔砖、屋顶使用和公共路径共同构成的建造系统。",
       "related_sections": [
-        "07 ??????"
+        "材料与工艺",
+        "构造逻辑",
+        "方法 5"
       ],
-      "download_status": "not_requested",
-      "failure_reason": ""
-    },
-    {
-      "id": "img_roof_activity",
-      "file_name": "",
-      "image_type": "08_interior",
-      "source_url": "https://images.adsttc.com/media/images/59d2/f190/b22e/38e5/3e00/0165/medium_jpg/%E8%A5%BF%E6%9D%91%E5%A4%A7%E9%99%A208_%E8%BF%90%E5%8A%A8_%E5%B1%8B%E9%A1%B6%E9%AA%91%E8%A1%8C_%E6%91%84%E5%BD%B1%EF%BC%9A%E6%9D%8E%E8%87%AA%E5%BC%BA.jpg?1506996618",
-      "source_site": "ArchDaily China",
-      "caption": "??????????",
-      "copyright_note": "Reference link only; rights not cleared.",
-      "recommended_use": "circulation and user experience reference",
-      "related_sections": [
-        "06 ??????",
-        "08 ??????"
-      ],
-      "download_status": "not_requested",
-      "failure_reason": ""
-    },
-    {
-      "id": "img_courtyard",
-      "file_name": "",
-      "image_type": "08_interior",
-      "source_url": "https://www.gooood.cn/west-village-basis-yard-by-jiakun-architects.htm",
-      "source_site": "gooood",
-      "caption": "?????????????????",
-      "copyright_note": "Reference link only; rights not cleared.",
-      "recommended_use": "courtyard and public life reference",
-      "related_sections": [
-        "04 ?????",
-        "06 ??????",
-        "10 ???????"
-      ],
-      "download_status": "not_requested",
+      "download_status": "downloaded",
       "failure_reason": ""
     }
   ],
-  "download_mode": "not_requested",
+  "download_mode": "completed",
   "source_quality": {
     "has_primary_sources": true,
     "primary_sources_used_for_identity": true,
@@ -384,7 +498,7 @@
       "url": "https://www.jiakun.com/project/detail?id=17",
       "source_level": "level_a",
       "publisher": "????",
-      "accessed_date": "2026-06-16",
+      "accessed_date": "2026-07-11",
       "notes": "Official architect/studio project page; used for identity, location, area, time, design office, lead designer, design intent, and project positioning."
     },
     {
@@ -393,7 +507,7 @@
       "url": "https://www.archdaily.cn/cn/880872/xi-cun-star-bei-sen-da-yuan-jia-kun-jian-zhu-she-ji-wu-suo",
       "source_level": "level_b",
       "publisher": "ArchDaily China",
-      "accessed_date": "2026-06-16",
+      "accessed_date": "2026-07-11",
       "notes": "High-quality architecture media project page with description, photographs, plans, sections, and material images."
     },
     {
@@ -402,7 +516,7 @@
       "url": "https://www.gooood.cn/west-village-basis-yard-by-jiakun-architects.htm",
       "source_level": "level_b",
       "publisher": "gooood",
-      "accessed_date": "2026-06-16",
+      "accessed_date": "2026-07-11",
       "notes": "High-quality architecture media page with extensive image gallery and project text."
     },
     {
@@ -411,7 +525,7 @@
       "url": "https://www.archdaily.com/880868/west-village-basis-yard-jiakun-architects",
       "source_level": "level_b",
       "publisher": "ArchDaily",
-      "accessed_date": "2026-06-16",
+      "accessed_date": "2026-07-11",
       "notes": "International ArchDaily page; useful for English naming and cross-checking project identity."
     },
     {
@@ -420,7 +534,7 @@
       "url": "https://www.archiposition.com/items/20180525101212",
       "source_level": "level_b",
       "publisher": "?? / Archiposition",
-      "accessed_date": "2026-06-16",
+      "accessed_date": "2026-07-11",
       "notes": "Professional architecture criticism; used for urban collective-space interpretation and perimeter-block reading."
     },
     {
@@ -429,7 +543,7 @@
       "url": "https://www.supdri.com/seahi/speaker/54.html",
       "source_level": "level_c",
       "publisher": "SEA-Hi / ?????????????",
-      "accessed_date": "2026-06-16",
+      "accessed_date": "2026-07-11",
       "notes": "Lecture transcript/summary; useful for design process, site problem, program logic, and some reported technical indicators. High-precision metrics should be manually checked."
     },
     {
@@ -438,7 +552,7 @@
       "url": "https://www.ta-mag.net/ta/News.php?id=1240",
       "source_level": "level_b",
       "publisher": "?????????",
-      "accessed_date": "2026-06-16",
+      "accessed_date": "2026-07-11",
       "notes": "Architecture reporting page with rich material, tectonic, landscape, and construction-language notes."
     },
     {
@@ -447,7 +561,7 @@
       "url": "https://www.theguardian.com/artanddesign/2025/mar/04/liu-jiakun-winner-pritzker-prize-chinese",
       "source_level": "level_c",
       "publisher": "The Guardian",
-      "accessed_date": "2026-06-16",
+      "accessed_date": "2026-07-11",
       "notes": "Supplementary contemporary reception source; used for public-life and material-expression context, not core identity facts."
     }
   ],
@@ -557,7 +671,7 @@
           "s8"
         ],
         "related_image_ids": [
-          "img_detail"
+          "img_01"
         ]
       }
     ],
@@ -594,7 +708,7 @@
         "s6"
       ],
       "related_image_ids": [
-        "img_master_plan"
+        "img_01"
       ]
     },
     "natural_environment": {
@@ -606,8 +720,8 @@
         "s7"
       ],
       "related_image_ids": [
-        "img_courtyard",
-        "img_detail"
+        "img_01",
+        "img_02"
       ]
     },
     "cultural_environment": {
@@ -619,7 +733,7 @@
         "s7"
       ],
       "related_image_ids": [
-        "img_courtyard"
+        "img_01"
       ]
     },
     "terrain_conditions": {
@@ -631,7 +745,7 @@
         "s7"
       ],
       "related_image_ids": [
-        "img_section"
+        "img_01"
       ]
     },
     "roads_and_access": {
@@ -641,8 +755,8 @@
         "s7"
       ],
       "related_image_ids": [
-        "img_ground_plan",
-        "img_master_plan"
+        "img_01",
+        "img_02"
       ]
     },
     "surrounding_buildings": {
@@ -653,7 +767,7 @@
         "s6"
       ],
       "related_image_ids": [
-        "img_hero"
+        "img_01"
       ]
     },
     "served_users": {
@@ -665,8 +779,8 @@
         "s8"
       ],
       "related_image_ids": [
-        "img_roof_activity",
-        "img_courtyard"
+        "img_01",
+        "img_02"
       ]
     },
     "core_site_tension": {
@@ -678,7 +792,7 @@
         "s6"
       ],
       "related_image_ids": [
-        "img_master_plan"
+        "img_01"
       ]
     }
   },
@@ -700,7 +814,7 @@
           "s2"
         ],
         "related_image_ids": [
-          "img_master_plan"
+          "img_01"
         ]
       },
       {
@@ -723,7 +837,7 @@
           "s6"
         ],
         "related_image_ids": [
-          "img_courtyard"
+          "img_01"
         ]
       },
       {
@@ -733,7 +847,7 @@
           "s5"
         ],
         "related_image_ids": [
-          "img_hero"
+          "img_01"
         ]
       },
       {
@@ -757,8 +871,8 @@
           "s6"
         ],
         "related_image_ids": [
-          "img_master_plan",
-          "img_section"
+          "img_01",
+          "img_02"
         ]
       },
       {
@@ -769,7 +883,7 @@
           "s6"
         ],
         "related_image_ids": [
-          "img_courtyard"
+          "img_01"
         ]
       }
     ],
@@ -782,7 +896,7 @@
           "s5"
         ],
         "related_image_ids": [
-          "img_courtyard"
+          "img_01"
         ]
       }
     ]
@@ -826,7 +940,7 @@
           "s7"
         ],
         "related_image_ids": [
-          "img_master_plan"
+          "img_01"
         ]
       },
       {
@@ -836,7 +950,7 @@
           "s7"
         ],
         "related_image_ids": [
-          "img_ground_plan"
+          "img_01"
         ]
       },
       {
@@ -848,8 +962,8 @@
           "s7"
         ],
         "related_image_ids": [
-          "img_master_plan",
-          "img_section"
+          "img_01",
+          "img_02"
         ]
       }
     ],
@@ -862,8 +976,8 @@
           "s7"
         ],
         "related_image_ids": [
-          "img_hero",
-          "img_section"
+          "img_01",
+          "img_02"
         ]
       },
       {
@@ -873,7 +987,7 @@
           "s7"
         ],
         "related_image_ids": [
-          "img_courtyard"
+          "img_01"
         ]
       }
     ],
@@ -886,7 +1000,7 @@
           "s8"
         ],
         "related_image_ids": [
-          "img_courtyard"
+          "img_01"
         ]
       },
       {
@@ -896,7 +1010,7 @@
           "s8"
         ],
         "related_image_ids": [
-          "img_roof_activity"
+          "img_01"
         ]
       }
     ]
@@ -911,7 +1025,7 @@
           "s7"
         ],
         "related_image_ids": [
-          "img_section"
+          "img_01"
         ]
       },
       {
@@ -922,7 +1036,7 @@
           "s7"
         ],
         "related_image_ids": [
-          "img_hero"
+          "img_01"
         ]
       },
       {
@@ -932,7 +1046,7 @@
           "s7"
         ],
         "related_image_ids": [
-          "img_courtyard"
+          "img_01"
         ]
       }
     ],
@@ -944,7 +1058,7 @@
           "s7"
         ],
         "related_image_ids": [
-          "img_detail"
+          "img_01"
         ]
       },
       {
@@ -982,7 +1096,7 @@
           "s7"
         ],
         "related_image_ids": [
-          "img_detail"
+          "img_01"
         ]
       },
       {
@@ -1000,7 +1114,7 @@
           "s7"
         ],
         "related_image_ids": [
-          "img_detail"
+          "img_01"
         ]
       },
       {
@@ -1021,7 +1135,7 @@
           "s6"
         ],
         "related_image_ids": [
-          "img_master_plan"
+          "img_01"
         ]
       },
       {
@@ -1033,8 +1147,8 @@
           "s7"
         ],
         "related_image_ids": [
-          "img_section",
-          "img_roof_activity"
+          "img_01",
+          "img_02"
         ]
       },
       {
@@ -1046,7 +1160,7 @@
           "s7"
         ],
         "related_image_ids": [
-          "img_courtyard"
+          "img_01"
         ]
       },
       {
@@ -1058,7 +1172,7 @@
           "s7"
         ],
         "related_image_ids": [
-          "img_hero"
+          "img_01"
         ]
       },
       {
@@ -1069,7 +1183,7 @@
           "s8"
         ],
         "related_image_ids": [
-          "img_detail"
+          "img_01"
         ]
       }
     ],

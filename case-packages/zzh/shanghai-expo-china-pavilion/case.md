@@ -36,7 +36,7 @@
 
 中国馆最值得学习的是：在一个高度公共化、政治文化象征极强的项目中，设计团队没有停留在“东方之冠”的图像，而是通过入口轴线、展陈平层化、观景坡道、屋顶园林、外墙足尺试板和地铁下穿结构应对，把象征、功能、城市、人流和建造逐步桥接成可落地的建筑系统。
 
-![从城市开放空间、新九洲清晏和近观视角看中国馆](images/01_hero_built_views_pdf_p81.png)
+![中国馆的城市远景、屋顶园林与斗冠近景](images/01_hero_built_views_crop.jpg)
 
 图文相关性：用于说明中国馆建成后的城市识别度、屋顶园林与国家馆主体之间的视觉关系。
 
@@ -59,7 +59,7 @@
 
 基于资料的归纳判断：项目的设计问题不是单纯的展馆形象，而是如何在国家形象、世博主题、展陈运营、超大客流与永久保留之间建立可被社会共同接受的建筑解答。设计过程中的“社会意志”直接塑造了方案走向。
 
-![首轮竞赛“中国器”和第二轮竞赛过程](images/07_competition_china_qi_pdf_p75.png)
+![首轮“中国器”原型与竞赛方案演进](images/07_competition_china_qi_crop.jpg)
 
 图文相关性：用于说明项目从全球华人方案征集到“中国器”进入前八、再与其他方案比较的竞赛背景。
 
@@ -69,7 +69,7 @@
 
 基于资料的归纳判断：定位经历了从“器物原型”到“国家礼仪建筑”的转译。形体仍保留层层出挑、架空升起的核心构成，但表达从较抽象的“中国器”转向更具传播力的“东方之冠”。
 
-![联合设计初期阶段探索与定稿方案“东方之冠”](images/07_concept_eastern_crown_pdf_p76.png)
+![联合设计探索、体量生成与“东方之冠”定稿方案](images/07_concept_eastern_crown_crop.jpg)
 
 图文相关性：用于说明合二为一、平台烘托斗冠、园林意向、南入口与大台阶等阶段性整合过程。
 
@@ -95,7 +95,7 @@
 
 基于资料的归纳判断：功能不是被动填充，而是反过来校正形体。中国馆最重要的空间调整正是由展陈需求触发，设计团队用外围观景坡道保留建筑体验和城市眺望，使功能调整不削弱概念。
 
-![投标方案与定稿方案剖面对比](images/04_section_exhibition_adjustment_pdf_p77.png)
+![投标方案与定稿方案的剖面组织对比](images/04_section_exhibition_adjustment_crop.jpg)
 
 图文相关性：用于说明国家馆从螺旋平台到三层平层大空间的剖面调整，以及体验重心从中心转向外围。
 
@@ -105,7 +105,7 @@
 
 基于资料的归纳判断：中国馆的布局是“礼仪轴线 + 水平平台 + 居中升起主体”的组合。南入口强化国家馆的正面性，水平基座处理大客流和地区展馆，国家馆主体则负责远距离识别和垂直体验。
 
-![中国馆总平面、平面图和绿色技术说明](images/03_site_plan_green_tech_pdf_p80.png)
+![中国馆总平面、功能平面与绿色技术关系](images/03_site_plan_green_tech_crop.jpg)
 
 图文相关性：用于说明总平面、地铁下穿影响、功能流线与绿色建筑技术嵌入。
 
@@ -121,7 +121,7 @@
 
 基于资料的归纳判断：“新九洲清晏”不是装饰性景观，而是把水平基座从交通屋面转化为可被观看、可被行走、可承载人流的文化场景，与国家馆的刚性红色主体形成刚柔对仗。
 
-![从国家馆看新九洲清晏及园林景观平面](images/02_roof_garden_new_jiuzhou_pdf_p78.png)
+![地区馆屋顶平台“新九洲清晏”的景观组织](images/02_roof_garden_new_jiuzhou_crop.jpg)
 
 图文相关性：用于说明屋顶平台如何从疏散/集散需求转化为中国地貌与园林叙事。
 
@@ -139,7 +139,7 @@
 
 基于资料的归纳判断：红色不是简单涂装，而是通过材料、肌理、观看距离、白天夜晚效果、灯光和施工样板共同确定的建造结果。
 
-![“中国红”外墙设计探索和试板过程](images/06_china_red_facade_mockup_pdf_p79.png)
+![“中国红”外墙材料比较、挂板试验与定板](images/06_china_red_facade_mockup_crop.jpg)
 
 图文相关性：用于说明中国红外墙从多材料、多肌理探索到 1:1 足尺挂板定板的过程。
 
@@ -201,13 +201,13 @@
 
 | 图片类型 | 推荐用途 | 本地图片 | 来源 | 下载状态 | 图文相关性 |
 | --- | --- | --- | --- | --- | --- |
-| 01_hero | 建成识别 / 城市视角 | `images/01_hero_built_views_pdf_p81.png` | 用户 PDF | downloaded | 城市开放空间、新九洲清晏和近观中国馆 |
-| 07_concept | 竞赛概念 | `images/07_competition_china_qi_pdf_p75.png` | 用户 PDF | downloaded | “中国器”与竞赛阶段 |
-| 07_concept | 方案整合 | `images/07_concept_eastern_crown_pdf_p76.png` | 用户 PDF | downloaded | 从合二为一到“东方之冠” |
-| 04_section | 剖面 / 展陈调整 | `images/04_section_exhibition_adjustment_pdf_p77.png` | 用户 PDF | downloaded | 投标与定稿剖面对比 |
-| 02_site | 屋顶平台 / 景观 | `images/02_roof_garden_new_jiuzhou_pdf_p78.png` | 用户 PDF | downloaded | 新九洲清晏与屋顶平台 |
-| 06_detail | 外墙材料 / 试板 | `images/06_china_red_facade_mockup_pdf_p79.png` | 用户 PDF | downloaded | 中国红外墙探索和试板 |
-| 03_plan | 总平面 / 绿色技术 | `images/03_site_plan_green_tech_pdf_p80.png` | 用户 PDF | downloaded | 总平面、平面、地铁和绿色技术 |
+| 01_hero | 建成识别 / 城市视角 | `images/01_hero_built_views_crop.jpg` | 用户 PDF | downloaded | 城市开放空间、新九洲清晏和近观中国馆 |
+| 07_concept | 竞赛概念 | `images/07_competition_china_qi_crop.jpg` | 用户 PDF | downloaded | “中国器”与竞赛阶段 |
+| 07_concept | 方案整合 | `images/07_concept_eastern_crown_crop.jpg` | 用户 PDF | downloaded | 从合二为一到“东方之冠” |
+| 04_section | 剖面 / 展陈调整 | `images/04_section_exhibition_adjustment_crop.jpg` | 用户 PDF | downloaded | 投标与定稿剖面对比 |
+| 02_site | 屋顶平台 / 景观 | `images/02_roof_garden_new_jiuzhou_crop.jpg` | 用户 PDF | downloaded | 新九洲清晏与屋顶平台 |
+| 06_detail | 外墙材料 / 试板 | `images/06_china_red_facade_mockup_crop.jpg` | 用户 PDF | downloaded | 中国红外墙探索和试板 |
+| 03_plan | 总平面 / 绿色技术 | `images/03_site_plan_green_tech_crop.jpg` | 用户 PDF | downloaded | 总平面、平面、地铁和绿色技术 |
 
 ## 10 对我的设计启发
 

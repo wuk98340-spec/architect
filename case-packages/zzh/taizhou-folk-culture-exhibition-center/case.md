@@ -36,7 +36,7 @@
 
 这个案例最值得学习的不是单个形式，而是设计团队如何把旧城节点、名人旧居、五巷街区、百米高层和新展馆纳入同一条东西向叙事轴，再把“和谐与发展”的概念落实到平面肌理、立面材料、绿色技术和建造控制中。
 
-![从城市看建筑、序厅到长廊、中心水院等建成场景](images/01_hero_views_pdf_p93.png)
+![城市界面、序厅长廊与中心水院的建成场景](images/01_hero_built_views_crop.jpg)
 
 图文相关性：用于说明项目的建成整体氛围、中心水院、长廊和城市视角下的体量关系。
 
@@ -51,7 +51,7 @@
 | 服务人群 | 市民、游客、展馆参观者、历史街区体验者 | PDF p89-p90, p243 |
 | 场地策略 | 从东侧进入，沿东西向轴带到达名人旧居，把高层转化为背景或屏风 | PDF p89, p241 |
 
-![基地位于区域节点部位及场地矛盾说明](images/02_site_context_pdf_p88.png)
+![区域节点、历史环境与周边高层形成的场地关系](images/02_site_context_crop.jpg)
 
 图文相关性：用于验证基地区位、稻河头历史线索、名人旧居与高层建筑的关键矛盾。
 
@@ -79,7 +79,7 @@
 
 证据来源：PDF p88-p90、p241。
 
-![总体设计生成分析](images/07_concept_layout_generation_pdf_p89.png)
+![东西向轴带、三段式布局与水系线索的生成分析](images/07_concept_layout_generation_crop.jpg)
 
 图文相关性：用于说明东西向轴带、三段式总体布局和稻河头水线索进入中心水院的生成关系。
 
@@ -103,7 +103,7 @@
 
 基于资料的归纳判断：水线索、轴线、街巷肌理和参观流线相互叠合，使项目从单体建筑转化为城市空间叙事。
 
-![总平面、首层平面、鸟瞰中心水院、新旧融合视角](images/03_plan_sequence_pdf_p90.png)
+![总平面、首层平面与中心水院空间序列](images/03_plan_sequence_crop.jpg)
 
 图文相关性：用于验证总平面、首层平面、中心水院和从五巷街区看新建筑的衔接关系。
 
@@ -127,7 +127,7 @@
 
 基于资料的归纳判断：这个项目的建造控制不是后期补救，而是用“骨架-围合-地台”的体系把形式语言变成可施工、可校核的构造系统。
 
-![骨架、围合与地台的建造体系说明](images/06_construction_system_pdf_p248.png)
+![骨架、围合与地台的建造体系图解](images/06_construction_system_crop.jpg)
 
 图文相关性：用于说明结构骨架、外墙围合与地台系统如何对应形式控制。
 
@@ -137,11 +137,11 @@
 
 基于资料的归纳判断：材料策略的关键不是“像青砖”，而是把青砖的尺度感、灰调和光影肌理转译到更适合大型公共建筑的幕墙系统中。
 
-![建筑外观、石材百叶幕墙、转角花窗、入口门架、夹院局部](images/06_facade_stone_louver_pdf_p91.png)
+![石材百叶幕墙、转角花窗、入口门架与夹院局部](images/06_facade_stone_louver_crop.jpg)
 
 图文相关性：用于验证石材百叶幕墙、转角花窗、入口门架和灰调外墙的建成效果。
 
-![定制灰砖外墙试版与石材百叶幕墙试版](images/06_mockup_material_pdf_p249.png)
+![定制灰砖与石材百叶的材料试版比较](images/06_mockup_material_crop.jpg)
 
 图文相关性：用于说明材料选择经过足尺试版比较，传统青砖方案被现代石材百叶系统替代。
 
@@ -151,11 +151,11 @@
 
 基于资料的归纳判断：构造逻辑围绕“同一模数下的差异尺度”展开。墙面、百叶、收边、花窗、亮脊不是孤立装饰，而是共同服务于“新泰州建筑”的整体品相。
 
-![石材百叶幕墙与现代建造技术转译传统建筑特质](images/06_stone_louver_detail_pdf_p250.png)
+![石材百叶、花格窗与玻璃长廊的现代构造转译](images/06_stone_louver_detail_crop.jpg)
 
 图文相关性：用于说明石材百叶、花格窗、亮脊与玻璃长廊等系列化外墙工法。
 
-![建筑面材在长宽高三个维度的划分](images/06_material_module_pdf_p251.png)
+![建筑面材的模数划分与转角对缝](images/06_material_module_crop.jpg)
 
 图文相关性：用于说明面材划分、模数、交圈对缝和转角处理对整体品相的影响。
 
@@ -165,11 +165,11 @@
 
 基于资料的归纳判断：本项目的绿色技术不是独立展示的“技术符号”，而是被压入建筑本体和景观水系统，服务于文化氛围与现场体验。
 
-![绿色建筑技术集成与融入建筑本体](images/09_green_technology_pdf_p92.png)
+![绿色技术与建筑、场地系统的一体化组织](images/09_green_technology_crop.jpg)
 
 图文相关性：用于说明绿色技术如何嵌入场地水系统、屋面、外墙、开窗和设备系统。
 
-![不同材料交接与抵御水的构造节点](images/06_waterproof_detail_pdf_p252.png)
+![不同材料交接与防水构造节点](images/06_waterproof_detail_crop.jpg)
 
 图文相关性：用于说明防水、防尘、玻璃长廊维护和复杂材料交接的建造控制。
 
@@ -219,17 +219,17 @@
 
 | 图片类型 | 推荐用途 | 本地图片 | 来源 | 下载状态 | 图文相关性 |
 | --- | --- | --- | --- | --- | --- |
-| 01_hero | 建成整体氛围 | `images/01_hero_views_pdf_p93.png` | 用户 PDF | downloaded | 城市视角、序厅长廊、中心水院 |
-| 02_site | 场地关系 | `images/02_site_context_pdf_p88.png` | 用户 PDF | downloaded | 区域节点、稻河头、名人旧居与高层冲突 |
-| 07_concept | 总体生成 | `images/07_concept_layout_generation_pdf_p89.png` | 用户 PDF | downloaded | 东西向轴带和三段式总体布局 |
-| 03_plan | 平面与序列 | `images/03_plan_sequence_pdf_p90.png` | 用户 PDF | downloaded | 总平面、首层平面、中心水院、新旧融合 |
-| 06_detail | 外墙材料 | `images/06_facade_stone_louver_pdf_p91.png` | 用户 PDF | downloaded | 石材百叶、转角花窗、入口门架 |
-| 09_analysis | 绿色技术 | `images/09_green_technology_pdf_p92.png` | 用户 PDF | downloaded | 绿色技术集成与建筑本体融合 |
-| 06_detail | 建造体系 | `images/06_construction_system_pdf_p248.png` | 用户 PDF | downloaded | 骨架、围合、地台 |
-| 06_detail | 材料试版 | `images/06_mockup_material_pdf_p249.png` | 用户 PDF | downloaded | 灰砖与石材百叶试版比较 |
-| 06_detail | 幕墙细部 | `images/06_stone_louver_detail_pdf_p250.png` | 用户 PDF | downloaded | 石材百叶与传统特质转译 |
-| 06_detail | 模数划分 | `images/06_material_module_pdf_p251.png` | 用户 PDF | downloaded | 面材三维划分与交圈对缝 |
-| 06_detail | 防水节点 | `images/06_waterproof_detail_pdf_p252.png` | 用户 PDF | downloaded | 不同材料交接与抵御水的构造节点 |
+| 01_hero | 建成整体氛围 | `images/01_hero_built_views_crop.jpg` | 用户 PDF | downloaded | 城市视角、序厅长廊、中心水院 |
+| 02_site | 场地关系 | `images/02_site_context_crop.jpg` | 用户 PDF | downloaded | 区域节点、稻河头、名人旧居与高层冲突 |
+| 07_concept | 总体生成 | `images/07_concept_layout_generation_crop.jpg` | 用户 PDF | downloaded | 东西向轴带和三段式总体布局 |
+| 03_plan | 平面与序列 | `images/03_plan_sequence_crop.jpg` | 用户 PDF | downloaded | 总平面、首层平面、中心水院、新旧融合 |
+| 06_detail | 外墙材料 | `images/06_facade_stone_louver_crop.jpg` | 用户 PDF | downloaded | 石材百叶、转角花窗、入口门架 |
+| 09_analysis | 绿色技术 | `images/09_green_technology_crop.jpg` | 用户 PDF | downloaded | 绿色技术集成与建筑本体融合 |
+| 06_detail | 建造体系 | `images/06_construction_system_crop.jpg` | 用户 PDF | downloaded | 骨架、围合、地台 |
+| 06_detail | 材料试版 | `images/06_mockup_material_crop.jpg` | 用户 PDF | downloaded | 灰砖与石材百叶试版比较 |
+| 06_detail | 幕墙细部 | `images/06_stone_louver_detail_crop.jpg` | 用户 PDF | downloaded | 石材百叶与传统特质转译 |
+| 06_detail | 模数划分 | `images/06_material_module_crop.jpg` | 用户 PDF | downloaded | 面材三维划分与交圈对缝 |
+| 06_detail | 防水节点 | `images/06_waterproof_detail_crop.jpg` | 用户 PDF | downloaded | 不同材料交接与抵御水的构造节点 |
 
 ## 10 对我的设计启发
 

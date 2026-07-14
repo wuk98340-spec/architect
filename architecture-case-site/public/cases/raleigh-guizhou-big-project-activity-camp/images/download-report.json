@@ -1,0 +1,187 @@
+{
+  "candidate_images": 18,
+  "downloaded": 18,
+  "failed": 0,
+  "records": [
+    {
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/001-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x617.jpg",
+      "source_page_url": "https://www.gooood.cn/raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut.htm",
+      "source_site": "gooood",
+      "file_name": "case-packages\\zzh\\raleigh-guizhou-big-project-activity-camp\\images\\01_hero_aerial.jpg",
+      "download_status": "downloaded",
+      "attempts": 1,
+      "failure_reason": "",
+      "sha256": "a99a9dbccf78d4aad814116beaec09f821a4f8e11ef263b8960272f1c49c1e79"
+    },
+    {
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/002-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x560.jpg",
+      "source_page_url": "https://www.gooood.cn/raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut.htm",
+      "source_site": "gooood",
+      "file_name": "case-packages\\zzh\\raleigh-guizhou-big-project-activity-camp\\images\\02_camp_axis.jpg",
+      "download_status": "downloaded",
+      "attempts": 1,
+      "failure_reason": "",
+      "sha256": "85ec15194cb67112cda9522ba392d8c5792ae8616762238c43234e7ea9c21b7c"
+    },
+    {
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/003-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x272.jpg",
+      "source_page_url": "https://www.gooood.cn/raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut.htm",
+      "source_site": "gooood",
+      "file_name": "case-packages\\zzh\\raleigh-guizhou-big-project-activity-camp\\images\\03_site_section.jpg",
+      "download_status": "downloaded",
+      "attempts": 1,
+      "failure_reason": "",
+      "sha256": "0acae14e7e212a314eec6d457a826c6d8cc324c3802ba7f5cdb6eba76d3f633a"
+    },
+    {
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/006-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x311.jpg",
+      "source_page_url": "https://www.gooood.cn/raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut.htm",
+      "source_site": "gooood",
+      "file_name": "case-packages\\zzh\\raleigh-guizhou-big-project-activity-camp\\images\\04_multiuse_section.jpg",
+      "download_status": "downloaded",
+      "attempts": 1,
+      "failure_reason": "",
+      "sha256": "86e53c5dbc5509d33d70bd1e8eea3b255341d293152fd9874a8eb8599634a6a8"
+    },
+    {
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/005-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x641.jpg",
+      "source_page_url": "https://www.gooood.cn/raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut.htm",
+      "source_site": "gooood",
+      "file_name": "case-packages\\zzh\\raleigh-guizhou-big-project-activity-camp\\images\\05_multiuse_hall.jpg",
+      "download_status": "downloaded",
+      "attempts": 1,
+      "failure_reason": "",
+      "sha256": "01c5266e01ce5a6086f96e76232a506706f11a62c6a889c1938826880cc9fb89"
+    },
+    {
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/007-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x407.jpg",
+      "source_page_url": "https://www.gooood.cn/raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut.htm",
+      "source_site": "gooood",
+      "file_name": "case-packages\\zzh\\raleigh-guizhou-big-project-activity-camp\\images\\06_shared_platform.jpg",
+      "download_status": "downloaded",
+      "attempts": 1,
+      "failure_reason": "",
+      "sha256": "dc0067766c0dce35968391debe2948a67396c48bb97aa0311d0855cca005fa87"
+    },
+    {
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/013-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x1115.jpg",
+      "source_page_url": "https://www.gooood.cn/raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut.htm",
+      "source_site": "gooood",
+      "file_name": "case-packages\\zzh\\raleigh-guizhou-big-project-activity-camp\\images\\07_bamboo_interface.jpg",
+      "download_status": "downloaded",
+      "attempts": 1,
+      "failure_reason": "",
+      "sha256": "90154f632674696668cdee0ce16ee1f602bbad5613cb2895e106900524daa625"
+    },
+    {
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/017-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x124.jpg",
+      "source_page_url": "https://www.gooood.cn/raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut.htm",
+      "source_site": "gooood",
+      "file_name": "case-packages\\zzh\\raleigh-guizhou-big-project-activity-camp\\images\\08_master_plan.jpg",
+      "download_status": "downloaded",
+      "attempts": 1,
+      "failure_reason": "",
+      "sha256": "f6f78c27f0774b19dba59e6a471060f10d680d4feb6e3abfa72d254551215039"
+    },
+    {
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/019-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x328.jpg",
+      "source_page_url": "https://www.gooood.cn/raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut.htm",
+      "source_site": "gooood",
+      "file_name": "case-packages\\zzh\\raleigh-guizhou-big-project-activity-camp\\images\\09_ground_plan.jpg",
+      "download_status": "downloaded",
+      "attempts": 1,
+      "failure_reason": "",
+      "sha256": "ec0db0484ff48fa76b01c8f7593b8c22071dfc3ff854c245679af7858ace88a2"
+    },
+    {
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/014-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x666.jpg",
+      "source_page_url": "https://www.gooood.cn/raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut.htm",
+      "source_site": "gooood",
+      "file_name": "case-packages\\zzh\\raleigh-guizhou-big-project-activity-camp\\images\\10_rock_theater.jpg",
+      "download_status": "downloaded",
+      "attempts": 1,
+      "failure_reason": "",
+      "sha256": "e7a86324277ead7a874c14842ed67f7bb97439c7ef7a21959546076fc024d74f"
+    },
+    {
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/025-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x831.jpg",
+      "source_page_url": "https://www.gooood.cn/raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut.htm",
+      "source_site": "gooood",
+      "file_name": "case-packages\\zzh\\raleigh-guizhou-big-project-activity-camp\\images\\11_kitchen_detail.jpg",
+      "download_status": "downloaded",
+      "attempts": 1,
+      "failure_reason": "",
+      "sha256": "d087a20704c9795fb8f56b876665c4e68411eb85529b7924c027bca37b0450dc"
+    },
+    {
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/027-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-1.jpg",
+      "source_page_url": "https://www.gooood.cn/raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut.htm",
+      "source_site": "gooood",
+      "file_name": "case-packages\\zzh\\raleigh-guizhou-big-project-activity-camp\\images\\12_material_assembly.jpg",
+      "download_status": "downloaded",
+      "attempts": 1,
+      "failure_reason": "",
+      "sha256": "8c0a7e7c7a6d936024649e9e62aefe0e75b1e21409b8b3e8ee36ca00aa816b60"
+    },
+    {
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/016-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x975.jpg",
+      "source_page_url": "https://www.gooood.cn/raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut.htm",
+      "source_site": "gooood",
+      "file_name": "case-packages\\zzh\\raleigh-guizhou-big-project-activity-camp\\images\\13_library_concept.jpg",
+      "download_status": "downloaded",
+      "attempts": 1,
+      "failure_reason": "",
+      "sha256": "f6397bfdd324cf97ce4beaae615886d6eb976444ad23e44550980f6dd14e8163"
+    },
+    {
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/018-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x937.jpg",
+      "source_page_url": "https://www.gooood.cn/raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut.htm",
+      "source_site": "gooood",
+      "file_name": "case-packages\\zzh\\raleigh-guizhou-big-project-activity-camp\\images\\14_library_entry.jpg",
+      "download_status": "downloaded",
+      "attempts": 1,
+      "failure_reason": "",
+      "sha256": "8044f8cfe3c25edd4bc9fdbf37d1aaba33a56189baecc303ed12b6327521b1d5"
+    },
+    {
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/015-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x1920.jpg",
+      "source_page_url": "https://www.gooood.cn/raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut.htm",
+      "source_site": "gooood",
+      "file_name": "case-packages\\zzh\\raleigh-guizhou-big-project-activity-camp\\images\\15_library_reading.jpg",
+      "download_status": "downloaded",
+      "attempts": 1,
+      "failure_reason": "",
+      "sha256": "a579048e6e1283cef3b7cd45c00f080d74cdc4607286f48948c4d4de655fb5b2"
+    },
+    {
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/028-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x188.jpg",
+      "source_page_url": "https://www.gooood.cn/raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut.htm",
+      "source_site": "gooood",
+      "file_name": "case-packages\\zzh\\raleigh-guizhou-big-project-activity-camp\\images\\16_library_section.jpg",
+      "download_status": "downloaded",
+      "attempts": 1,
+      "failure_reason": "",
+      "sha256": "5d98ee828b370223e5e6400c992f50ba12cf0d5c402cea2d753a70360a98c71b"
+    },
+    {
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/012-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x557.jpg",
+      "source_page_url": "https://www.gooood.cn/raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut.htm",
+      "source_site": "gooood",
+      "file_name": "case-packages\\zzh\\raleigh-guizhou-big-project-activity-camp\\images\\17_sandpit_activity.jpg",
+      "download_status": "downloaded",
+      "attempts": 1,
+      "failure_reason": "",
+      "sha256": "4c6d1a12bf63657e605ecbdce6c66b19fad131466d2a0a66fbd866dcbe7ac7d9"
+    },
+    {
+      "source_url": "https://oss.gooood.cn/uploads/2019/01/011-raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut-960x1045.jpg",
+      "source_page_url": "https://www.gooood.cn/raleigh-campsite-in-guizhou-by-architectural-design-and-research-institute-of-scut.htm",
+      "source_site": "gooood",
+      "file_name": "case-packages\\zzh\\raleigh-guizhou-big-project-activity-camp\\images\\18_mountain_theater.jpg",
+      "download_status": "downloaded",
+      "attempts": 1,
+      "failure_reason": "",
+      "sha256": "be99a24265c41cf49f7bcc5d786000159e66a293178eaa35c99ca62a989b9c14"
+    }
+  ]
+}

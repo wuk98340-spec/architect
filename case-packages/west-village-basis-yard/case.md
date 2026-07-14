@@ -1,5 +1,25 @@
 # 西村大院 / West Village - Basis Yard
 
+
+
+## 案例图像
+
+![围合大院与环形步道](images/01_hero.jpg)
+
+*图像用途：用于验证“围合大院与环形步道”这一分析要点。 来源：[原始页面/图像](https://oss.gooood.cn/uploads/2016/03/00-West-Village-Basis-Yard_Jiakun-Architects.jpg)。*
+
+![内院绿色盆地与公共生活](images/02_interior.jpg)
+
+*图像用途：用于验证“内院绿色盆地与公共生活”这一分析要点。 来源：[原始页面/图像](https://oss.gooood.cn/uploads/2016/03/01-West-Village-Basis-Yard_Jiakun-Architects.jpg)。*
+
+![外廊和市井立面](images/03_analysis.jpg)
+
+*图像用途：用于验证“外廊和市井立面”这一分析要点。 来源：[原始页面/图像](https://oss.gooood.cn/uploads/2016/03/02-West-Village-Basis-Yard_Jiakun-Architects.jpg)。*
+
+![总平面或空间组织图](images/04_plan.jpg)
+
+*图像用途：用于验证“总平面或空间组织图”这一分析要点。 来源：[原始页面/图像](https://oss.gooood.cn/uploads/2016/03/03-West-Village-Basis-Yard_Jiakun-Architects.jpg)。*
+
 ## 01 基本信息与经济技术指标
 
 | 项目 | 内容 |
@@ -235,3 +255,25 @@
 ### Level D：参考源，只能辅助
 
 - Wikipedia / Baidu Baike 等百科资料仅用于线索排查，不用于支撑核心事实。
+
+## 补充图片证据
+
+以下图片补充现有四张基础图片，覆盖场地俯瞰、运动路径、屋顶连续流线、夜间公共性、内院生活、总平面、首层平面、剖面和屋面材料，并与正文的布局、流线、公共性和建造分析对应。
+
+![从高处观察外环建筑、内院与屋顶运动路径](images/05_aerial_courtyard.jpg)
+
+![外环立面之间的交叉跑道与公共活动](images/06_running_track.jpg)
+
+![从内院连续上升至屋顶的骑行与跑道系统](images/07_rooftop_bike_track.jpg)
+
+![夜间外环建筑与内院活动形成的城市光带](images/08_night_aerial.jpg)
+
+![内院、竹林与外廊共同形成的日常活动场景](images/09_inner_courtyard.jpg)
+
+![西村大院总平面图](images/10_master_plan.jpg)
+
+![西村大院首层平面图](images/11_ground_floor_plan.jpg)
+
+![包含屋顶跑道的 A-A 剖面图](images/12_section_track.jpg)
+
+![屋面大孔砖与植草系统](images/13_roof_brick_detail.jpg)
