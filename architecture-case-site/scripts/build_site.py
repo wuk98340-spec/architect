@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """Build a V0 static architecture case research website."""
 
 from __future__ import annotations
@@ -16,7 +16,6 @@ from typing import Any
 PIPELINE_DIR = Path(__file__).resolve().parents[2] / "ARCHITECT_skill" / "scripts"
 if str(PIPELINE_DIR) not in sys.path:
     sys.path.insert(0, str(PIPELINE_DIR))
-from image_pipeline import image_dimensions, phash, select_display_images, sha256_file  # noqa: E402
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -101,9 +100,9 @@ def load_cases() -> list[dict[str, Any]]:
         slug = folder.name
         title = clean(data.get("project_name")) or slug
         architects = normalize_list(data.get("architects"))
-        year_text = clean(data.get("year")) or "未记录"
-        case_type = clean(data.get("case_type") or data.get("program")) or "未分类"
-        location = clean(data.get("location")) or "未记录"
+        year_text = clean(data.get("year")) or "Unknown year"
+        case_type = clean(data.get("case_type") or data.get("program")) or "Uncategorized"
+        location = clean(data.get("location")) or "Unknown location"
         summary = clean(data.get("one_sentence_summary")) or first_markdown_paragraph(md_path)
         gallery = image_items(data, folder)
         cover = pick_cover(gallery)
@@ -118,7 +117,7 @@ def load_cases() -> list[dict[str, Any]]:
                 "data": data,
                 "title": title,
                 "architects": architects,
-                "architects_text": " / ".join(architects) if architects else "未记录",
+                "architects_text": " / ".join(architects) if architects else "Unknown architect",
                 "location": location,
                 "region": infer_region(location),
                 "year_text": year_text,
@@ -160,23 +159,9 @@ def load_cases() -> list[dict[str, Any]]:
             ]
         ).lower()
 
-    candidates = [
-        {**image,
-         "local_path": str(item["folder"] / image["src"]),
-         "case_slug": item["slug"],
-         "sha256": sha256_file(item["folder"] / image["src"]),
-         "phash": phash(item["folder"] / image["src"]),
-         "width": image_dimensions(item["folder"] / image["src"])[0],
-         "height": image_dimensions(item["folder"] / image["src"])[1]}
-        for item in items
-        for image in item["gallery"]
-    ]
-    selected = select_display_images(candidates)
-    for item in items:
-        allowed = {clean(image.get("asset_id")) for image in selected.get(item["slug"], [])}
-        item["gallery"] = [image for image in item["gallery"] if clean(image.get("asset_id")) in allowed]
-        item["cover"] = pick_cover(item["gallery"])
-        item["image_count"] = len(item["gallery"])
+    # The case page is a research reader rather than a thumbnail gallery. Keep
+    # all local evidence assets here; placement and per-page uniqueness are
+    # governed later by their Markdown context and related_sections metadata.
 
     return sorted(items, key=lambda c: (c["sort_year"] or 0, c["title"]), reverse=True)
 
@@ -215,7 +200,10 @@ def build_case_page(case: dict[str, Any]) -> None:
 
 
 def build_case_deck_slides(case: dict[str, Any]) -> list[dict[str, str]]:
-    case["_used_slide_image_ids"] = set()
+    # Images are evidence, not decoration: a non-cover asset can appear once,
+    # while the cover asset may appear once more when it is embedded beside the
+    # chapter it actually supports.
+    case["_slide_image_uses"] = {}
     chunks = markdown_deck_chunks(Path(case["md_path"]))
     slides: list[dict[str, str]] = []
 
@@ -224,6 +212,10 @@ def build_case_deck_slides(case: dict[str, Any]) -> list[dict[str, str]]:
             return
         number = f"{len(slides) + 1:02d}"
         class_name = "deck-slide" + (f" {variant}" if variant else "")
+        primary_title, secondary_title = split_strategy_heading(title)
+        heading_html = f"<h1>{esc(primary_title)}</h1>"
+        if secondary_title:
+            heading_html += f'<h2 class="slide-subtitle">{esc(secondary_title)}</h2>'
         slides.append(
             {
                 "label": label,
@@ -232,7 +224,7 @@ def build_case_deck_slides(case: dict[str, Any]) -> list[dict[str, str]]:
                   <div class="slide-grid">
                     <div class="slide-copy">
                       <p class="section-number">{number}</p>
-                      <h1>{esc(title)}</h1>
+                      {heading_html}
                       {body}
                     </div>
                     {media}
@@ -254,7 +246,15 @@ def build_case_deck_slides(case: dict[str, Any]) -> list[dict[str, str]]:
         if should_skip_markdown_chunk(chunk["title"]):
             continue
         text_only = is_text_only_slide(chunk["title"])
-        body, media, has_table = render_markdown_slide_content(case, chunk["lines"], index, text_only)
+        information_page = is_information_slide(chunk["title"])
+        body, media, has_table = render_markdown_slide_content(
+            case,
+            chunk["lines"],
+            chunk["title"],
+            index,
+            text_only,
+            prefer_table=information_page,
+        )
         variants = []
         content_length = len("".join(chunk["lines"]))
         if has_table or content_length > 420:
@@ -263,6 +263,8 @@ def build_case_deck_slides(case: dict[str, Any]) -> list[dict[str, str]]:
             variants.append("is-compact")
         if text_only:
             variants.append("is-text-only")
+        if information_page:
+            variants.append("is-information-page")
         if is_basic_info_slide(chunk["title"]):
             variants.append("is-basic-info")
         if "is-transposed" in body:
@@ -271,13 +273,13 @@ def build_case_deck_slides(case: dict[str, Any]) -> list[dict[str, str]]:
             chunk["label"],
             display_slide_title(chunk["title"]),
             body,
-            "" if text_only else media or render_slide_media(case, index),
+            media,
             " ".join(variants),
         )
 
     compact_sources = render_compact_sources(case["sources"])
     if compact_sources:
-        add("资料", "参考资料", compact_sources, "", "is-appendix is-text-only")
+        add("Sources", "Reference Sources", compact_sources, "", "is-appendix is-text-only")
 
     return slides
 
@@ -333,26 +335,42 @@ def display_slide_title(title: str) -> str:
     return title
 
 
+def split_strategy_heading(title: str) -> tuple[str, str]:
+    """Split strategy number and description into two readable heading levels."""
+    match = re.match(r"^(策略\s*[0-9一二三四五六七八九十]+)\s*[:：]\s*(.+)$", clean(title), flags=re.IGNORECASE)
+    if not match:
+        return title, ""
+    primary = match.group(1).replace("策略", "策略 ", 1)
+    return re.sub(r"\s+", " ", primary).strip(), match.group(2).strip()
+
+
 def is_basic_info_slide(title: str) -> bool:
-    normalized = re.sub(r"\s+", "", title)
-    return "基本信息" in normalized and ("技术指标" in normalized or "经济技术指标" in normalized or normalized.endswith("基本信息"))
+    normalized = re.sub(r"\s+", "", title).lower()
+    return "基本信息" in normalized or "经济技术指标" in normalized or "basicinfo" in normalized
+
+
+def is_information_slide(title: str) -> bool:
+    normalized = re.sub(r"\s+", "", title).lower()
+    keywords = ["基本信息", "经济技术指标", "技术指标", "场地信息表", "场地信息", "basicinfo", "siteinformation", "metrics"]
+    return any(keyword in normalized for keyword in keywords)
 
 
 def should_skip_markdown_chunk(title: str) -> bool:
     normalized = re.sub(r"\s+", "", title).lower()
     skip_keywords = [
-        "资料质量",
-        "证据密度",
-        "证据",
-        "图纸与图片索引",
-        "图片索引",
-        "信息缺口",
-        "冲突",
-        "来源列表",
+        "sourcequality",
+        "evidence",
+        "imageindex",
+        "informationgap",
+        "conflict",
+        "sourcelist",
         "levela",
         "levelb",
         "levelc",
         "leveld",
+        "图纸与图片索引",
+        "图片索引",
+        "补充图片证据",
     ]
     return any(keyword.lower() in normalized for keyword in skip_keywords)
 
@@ -362,13 +380,23 @@ def is_text_only_slide(title: str) -> bool:
     text_only_keywords = [
         "基本信息",
         "经济技术指标",
+        "技术指标",
         "场地信息表",
-        "对我的设计启发",
-        "设计启发",
+        "场地信息",
+        "basic",
+        "info",
+        "metrics",
+        "site",
         "参考资料",
         "来源",
+        "source",
     ]
     return any(keyword.lower() in normalized for keyword in text_only_keywords)
+
+
+def is_source_note_label(value: str) -> bool:
+    normalized = clean(value).strip(":： ").lower()
+    return normalized in {"source", "sources", "evidence", "reference", "references"}
 
 
 def render_compact_sources(sources: list[dict[str, Any]]) -> str:
@@ -389,39 +417,148 @@ def render_compact_sources(sources: list[dict[str, Any]]) -> str:
     return '<ul class="compact-source-list">' + "".join(items) + "</ul>"
 
 
-def render_markdown_slide_content(case: dict[str, Any], lines: list[str], fallback_index: int, text_only: bool = False) -> tuple[str, str, bool]:
-    image_line, remaining = extract_first_markdown_image(lines)
-    media = "" if text_only else render_markdown_image_media(case, image_line) if image_line else ""
-    body, has_table = render_markdown_fragment(remaining)
+def render_markdown_slide_content(
+    case: dict[str, Any],
+    lines: list[str],
+    title: str,
+    fallback_index: int,
+    text_only: bool = False,
+    prefer_table: bool = False,
+) -> tuple[str, str, bool]:
+    image_lines, remaining = extract_markdown_images(lines)
+    media = "" if text_only else render_markdown_image_media_group(case, image_lines, title)
+    body, has_table = render_markdown_fragment(remaining, prefer_table=prefer_table)
     return body, media, has_table
 
 
-def extract_first_markdown_image(lines: list[str]) -> tuple[str, list[str]]:
-    for index, line in enumerate(lines):
+def is_generic_image_gallery(title: str) -> bool:
+    normalized = normalize_section_name(title)
+    return normalized in {"案例图像", "项目图像", "项目照片", "图像"}
+
+
+def extract_markdown_images(lines: list[str]) -> tuple[list[str], list[str]]:
+    image_lines: list[str] = []
+    remaining: list[str] = []
+    for line in lines:
         if re.match(r"\s*!\[[^\]]*\]\([^)]+\)", line):
-            return line, lines[:index] + lines[index + 1 :]
-    return "", lines
+            image_lines.append(line)
+        else:
+            remaining.append(line)
+    return image_lines, remaining
 
 
-def render_markdown_image_media(case: dict[str, Any], line: str) -> str:
-    match = re.match(r"\s*!\[([^\]]*)\]\(([^)]+)\)", line)
-    if not match:
-        return ""
-    alt = clean(match.group(1)) or "case image"
-    src = clean(match.group(2))
-    file_name = Path(src).name
+def render_markdown_image_media_group(case: dict[str, Any], lines: list[str], title: str) -> str:
+    images: list[dict[str, Any]] = []
+    for line in lines:
+        match = re.match(r"\s*!\[([^\]]*)\]\(([^)]+)\)", line)
+        if not match:
+            continue
+        file_name = Path(clean(match.group(2))).name
+        image = next(
+            (candidate for candidate in case["gallery"] if Path(clean(candidate.get("src"))).name == file_name),
+            None,
+        )
+        if not image or not image_available(case, image):
+            continue
+        # A generic image overview should add evidence, not repeat the cover as
+        # its first tile. The cover remains reusable in analytical sections.
+        if is_generic_image_gallery(title) and image_key(image) == image_key(case.get("cover") or {}):
+            continue
+        images.append(image)
+
+    # Images grouped under a supplemental-evidence heading are not rendered in
+    # that catch-all section. Their JSON related_sections metadata lets us place
+    # them beside the chapter where the claim is made instead.
+    images.extend(related_supplemental_images(case, title))
+    return render_slide_media_group(case, images)
+
+
+def image_key(image: dict[str, Any]) -> str:
+    return clean(image.get("id")) or clean(image.get("src"))
+
+
+def image_use_limit(case: dict[str, Any], image: dict[str, Any]) -> int:
+    cover = case.get("cover") or {}
+    return 2 if image_key(image) and image_key(image) == image_key(cover) else 1
+
+
+def image_available(case: dict[str, Any], image: dict[str, Any]) -> bool:
+    key = image_key(image)
+    return bool(key) and case.setdefault("_slide_image_uses", {}).get(key, 0) < image_use_limit(case, image)
+
+
+def register_image_use(case: dict[str, Any], image: dict[str, Any]) -> None:
+    key = image_key(image)
+    uses = case.setdefault("_slide_image_uses", {})
+    uses[key] = uses.get(key, 0) + 1
+
+
+def normalize_section_name(value: str) -> str:
+    value = re.sub(r"^\d+(?:\.\d+)?\s*", "", clean(value))
+    value = re.sub(r"\s+[A-Za-z][A-Za-z &/,-]*$", "", value)
+    return re.sub(r"[\s：:，,、/（）()\-—]", "", value).lower()
+
+
+def related_section_terms(title: str) -> set[str]:
+    normalized = normalize_section_name(title)
+    terms = {normalized}
+    aliases = {
+        "一句话判断": {"项目定位与核心判断"},
+        "诊断": {"项目定位与核心判断"},
+        "定位": {"项目定位与核心判断"},
+        "场地信息表": {"场地与城市关系"},
+        "功能梳理": {"功能与使用逻辑"},
+        "布局逻辑": {"布局逻辑"},
+        "形式构成": {"形式构成"},
+        "场所与氛围": {"场所与氛围", "城市界面"},
+        "意象与表达": {"地方文化转译"},
+        "建造语言": {"建造语言"},
+        "材料与工艺": {"材料与工艺"},
+        "构造逻辑": {"构造逻辑"},
+    }
+    for key, values in aliases.items():
+        if key in normalized:
+            terms.update(normalize_section_name(value) for value in values)
+    return {term for term in terms if term}
+
+
+def related_supplemental_images(case: dict[str, Any], title: str) -> list[dict[str, Any]]:
+    terms = related_section_terms(title)
+    matches: list[dict[str, Any]] = []
     for image in case["gallery"]:
-        if Path(clean(image.get("src"))).name == file_name:
-            image_key = clean(image.get("id")) or clean(image.get("src"))
-            used = case.setdefault("_used_slide_image_ids", set())
-            if image_key in used:
-                return ""
-            used.add(image_key)
-            return f'<figure class="slide-media">{image_tag(image, "")}</figure>'
-    return f'<figure class="slide-media"><img src="{esc(src)}" alt="{esc(alt)}" loading="lazy" /></figure>'
+        if not image_available(case, image):
+            continue
+        related = {normalize_section_name(value) for value in image.get("related_sections", []) if clean(value)}
+        if not related:
+            continue
+        if any(term in section or section in term for term in terms for section in related):
+            matches.append(image)
+    return matches
 
 
-def render_markdown_fragment(lines: list[str]) -> tuple[str, bool]:
+def render_slide_media_group(case: dict[str, Any], images: list[dict[str, Any]]) -> str:
+    unique_images: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for image in images:
+        key = image_key(image)
+        if key and key not in seen and image_available(case, image):
+            seen.add(key)
+            unique_images.append(image)
+    if not unique_images:
+        return ""
+    figures = []
+    for image in unique_images:
+        register_image_use(case, image)
+        caption = clean(image.get("caption"))
+        caption_html = f'<figcaption>{esc(caption)}</figcaption>' if caption else ""
+        figures.append(f'<figure class="slide-media">{image_tag(image, "")}{caption_html}</figure>')
+    class_name = "slide-media-group media-count-" + str(len(figures))
+    if len(figures) > 1:
+        class_name += " has-multiple-media"
+    return f'<div class="{class_name}">' + "".join(figures) + "</div>"
+
+
+def render_markdown_fragment(lines: list[str], prefer_table: bool = False) -> tuple[str, bool]:
     html_parts: list[str] = []
     paragraph: list[str] = []
     list_items: list[str] = []
@@ -468,9 +605,25 @@ def render_markdown_fragment(lines: list[str]) -> tuple[str, bool]:
             paragraph = []
 
     def flush_list() -> None:
-        nonlocal list_items
+        nonlocal list_items, has_table
         if list_items:
-            html_parts.append('<ul class="slide-list">' + "".join(f"<li>{esc(item)}</li>" for item in list_items) + "</ul>")
+            fact_rows = []
+            if prefer_table:
+                for item in list_items:
+                    match = re.match(r"^([^:：]{1,28})[:：]\s*(.+)$", item)
+                    if not match:
+                        fact_rows = []
+                        break
+                    fact_rows.append((match.group(1).strip(), match.group(2).strip()))
+            if fact_rows:
+                tbody = "".join(
+                    f"<tr><th>{esc(display_text(label))}</th><td>{esc(display_text(value))}</td></tr>"
+                    for label, value in fact_rows
+                )
+                html_parts.append(f'<div class="table-wrap markdown-table"><table class="data-table info-table"><tbody>{tbody}</tbody></table></div>')
+                has_table = True
+            else:
+                html_parts.append('<ul class="slide-list">' + "".join(f"<li>{esc(item)}</li>" for item in list_items) + "</ul>")
             list_items = []
 
     def flush_table() -> None:
@@ -487,7 +640,7 @@ def render_markdown_fragment(lines: list[str]) -> tuple[str, bool]:
         body_rows = [
             row
             for row in body_rows
-            if not row or not re.search(r"^(证据|证据来源|主要依据来源)[:：]?$", row[0])
+            if not row or not is_source_note_label(row[0])
         ]
         if head:
             evidence_indexes = {index for index, cell in enumerate(head) if "证据" in cell}
@@ -497,35 +650,16 @@ def render_markdown_fragment(lines: list[str]) -> tuple[str, bool]:
                     [cell for index, cell in enumerate(row) if index not in evidence_indexes]
                     for row in body_rows
                 ]
-        should_transpose_site_table = (
-            len(head) == 2
-            and len(body_rows) <= 8
-            and any("场地" in cell for cell in head)
-            and all(len(row) >= 2 for row in body_rows)
-        )
-        should_transpose_basic_table = (
-            len(head) == 2
-            and [clean(cell) for cell in head] == ["项目", "内容"]
-            and all(len(row) >= 2 for row in body_rows)
-        )
-        if should_transpose_basic_table:
-            items = normalize_basic_info_rows(body_rows)
-            html_parts.append(render_fact_list(items))
-        elif should_transpose_site_table:
-            labels = [row[0] for row in body_rows if clean(row[0]) or clean(row[1])]
-            values = [row[1] for row in body_rows if clean(row[0]) or clean(row[1])]
-            html_parts.append(render_transposed_table(labels, values))
-        else:
-            thead = "<thead><tr>" + "".join(f"<th>{esc(display_text(cell))}</th>" for cell in head) + "</tr></thead>" if head else ""
-            tbody = "<tbody>" + "".join("<tr>" + "".join(f"<td>{esc(display_text(cell))}</td>" for cell in row) + "</tr>" for row in body_rows) + "</tbody>"
-            html_parts.append(f'<div class="table-wrap markdown-table"><table class="data-table">{thead}{tbody}</table></div>')
+        thead = "<thead><tr>" + "".join(f"<th>{esc(display_text(cell))}</th>" for cell in head) + "</tr></thead>" if head else ""
+        tbody = "<tbody>" + "".join("<tr>" + "".join(f"<td>{esc(display_text(cell))}</td>" for cell in row) + "</tr>" for row in body_rows) + "</tbody>"
+        html_parts.append(f'<div class="table-wrap markdown-table"><table class="data-table">{thead}{tbody}</table></div>')
         has_table = True
         table_rows = []
 
     for raw in lines:
         line = raw.rstrip()
         presentation_note = line.strip().strip("*_ ")
-        if re.match(r"^(图像用途|图文相关性|图片说明|配图说明)[:：]", presentation_note):
+        if presentation_note.lower().startswith(("image note:", "caption:", "media note:", "图像用途：", "图文相关性：", "图片说明：", "配图说明：")):
             flush_paragraph()
             flush_list()
             continue
@@ -547,7 +681,7 @@ def render_markdown_fragment(lines: list[str]) -> tuple[str, bool]:
         elif line.startswith("- "):
             flush_paragraph()
             item = line[2:].strip()
-            if not re.match(r"^(证据来源|证据|主要依据来源|相关图片\s*/\s*图纸)[:：]", item):
+            if not re.match(r"^(证据来源|证据|主要依据来源|相关图片\s*/\s*图纸链接?)[:：]", item):
                 list_items.append(display_text(item))
         elif line.startswith("#### "):
             flush_paragraph()
@@ -570,23 +704,16 @@ def render_markdown_fragment(lines: list[str]) -> tuple[str, bool]:
 
 
 def render_slide_media(case: dict[str, Any], fallback_index: int, item: dict[str, Any] | None = None, hero: bool = False) -> str:
-    image = related_slide_image(case, item) if item else None
-    local_gallery = [img for img in case["gallery"] if img.get("status") == "local" and img.get("src")]
-    used = case.setdefault("_used_slide_image_ids", set())
-    if image is not None:
-        image_key = clean(image.get("id")) or clean(image.get("src"))
-        if image_key in used:
-            image = None
-    if image is None and local_gallery:
-        available = [candidate for candidate in local_gallery
-                     if (clean(candidate.get("id")) or clean(candidate.get("src"))) not in used]
-        if available:
-            image = available[min(fallback_index, len(available) - 1)]
-    if image is None:
-        return '<figure class="slide-media text-media"><span>图片资料待补充</span></figure>'
-    used.add(clean(image.get("id")) or clean(image.get("src")))
+    # The only automatic placement is the cover image. Chapter imagery must be
+    # explicitly embedded in Markdown or matched through related_sections.
+    image = case.get("cover") if hero else related_slide_image(case, item)
+    if image is None or not image_available(case, image):
+        return ""
+    register_image_use(case, image)
     classes = "slide-media" + (" hero-media" if hero else "")
-    return f'<figure class="{classes}">{image_tag(image, "")}</figure>'
+    caption = clean(image.get("caption"))
+    caption_html = f'<figcaption>{esc(caption)}</figcaption>' if caption else ""
+    return f'<figure class="{classes}">{image_tag(image, "")}{caption_html}</figure>'
 
 
 
@@ -598,9 +725,8 @@ def related_slide_image(case: dict[str, Any], item: dict[str, Any] | None) -> di
         return None
     wanted = {clean(image_id) for image_id in ids if clean(image_id)}
     for image in case["gallery"]:
-        image_key = clean(image.get("id")) or clean(image.get("src"))
         if (clean(image.get("id")) in wanted
-                and image_key not in case.setdefault("_used_slide_image_ids", set())
+                and image_available(case, image)
                 and image.get("status") == "local" and image.get("src")):
             return image
     return None
@@ -611,7 +737,15 @@ def write_index(cases: list[dict[str, Any]]) -> None:
     featured = [cases_by_slug[slug] for slug in FEATURED_SLUGS if slug in cases_by_slug]
     if not featured:
         featured = [c for c in cases if c["cover"]][:4] or cases[:4]
-    featured_html = "".join(render_case_card(c, "featured") for c in featured)
+    hero_case = next((c for c in featured if c.get("cover")), None)
+    if hero_case:
+        hero_source = hero_case["folder"] / clean(hero_case["cover"].get("src"))
+        if hero_source.exists():
+            shutil.copy2(hero_source, ASSET_DIR / "hero-case.jpg")
+    featured_html = "".join(
+        render_case_card(c, "featured", index=index)
+        for index, c in enumerate(featured)
+    )
     case_cards = "".join(render_case_card(c) for c in cases)
     type_buttons = ["<button class=\"chip is-active\" data-filter=\"type\" data-value=\"all\">全部类型</button>"]
     type_buttons += [
@@ -623,83 +757,59 @@ def write_index(cases: list[dict[str, Any]]) -> None:
         f"<button class=\"map-pin\" data-filter=\"region\" data-value=\"{esc(r)}\">{esc(r)}</button>"
         for r in sorted({c["region"] for c in cases})
     ]
+    status_buttons = ["<button class=\"chip is-active\" data-filter=\"status\" data-value=\"all\">全部状态</button>"]
+    status_buttons += [f"<button class=\"chip\" data-filter=\"status\" data-value=\"{esc(s)}\">{esc(short(s, 18))}</button>" for s in sorted({c["status"] for c in cases if c["status"]})]
     year_values = [c["sort_year"] for c in cases if c["sort_year"]]
-    year_span = f"{min(year_values)}-{max(year_values)}" if year_values else "待整理"
+    year_span = f"{min(year_values)}-{max(year_values)}" if year_values else "Pending"
 
     body = f"""
     <header class="site-header home-header">
-      <a class="brand" href="#"><span>ARCHIVE</span><strong>ARCHITECTURE CASE RESEARCH</strong></a>
-      <button class="menu-toggle" type="button" data-library-menu-toggle aria-expanded="false" aria-controls="libraryPanel" aria-label="打开搜索与案例筛选"><span></span><span></span><span></span></button>
+      <a class="brand" href="#"><span>ARCHITECT</span><strong>建筑案例研究库</strong></a>
+      <nav class="home-nav" aria-label="首页导航"><a href="#cases">案例库</a><a href="#featured">精选研究</a></nav>
     </header>
-    <main>
-      <section class="hero hero--cover">
-        <div class="hero-backdrop" aria-hidden="true"></div>
-        <div class="hero-copy hero-cover-copy">
-          <h1><span>案例分析研究库</span></h1>
+    <main class="home-main">
+      <section class="hero hero--archive" aria-labelledby="home-title">
+        <div class="hero-copy">
+          <p class="eyebrow">ARCHITECT / CASE STUDY ARCHIVE</p><h1 id="home-title">建筑案例研究库</h1><p class="hero-lead">面向建筑学研究与教学的案例档案。收录可追溯、可验证的建成环境案例，提供图纸、影像、文献与现场记录。</p>
+          <a class="primary-action" href="#cases">浏览案例库 <span aria-hidden="true">→</span></a>
         </div>
-        <div class="hero-panel" aria-label="资料概览">
-          <div><strong>{len(cases)}</strong><span>案例包</span></div>
-          <div><strong>{sum(c["image_count"] for c in cases)}</strong><span>图片 / 图纸记录</span></div>
-          <div><strong>{sum(c["source_count"] for c in cases)}</strong><span>参考来源</span></div>
-          <div><strong>{year_span}</strong><span>年份跨度</span></div>
-        </div>
-      </section>
-
-      <section id="featured" class="section-block">
-        <div class="section-heading">
-          <p class="eyebrow">SELECTED CASES</p>
-          <h2>精选案例</h2>
-        </div>
-        <div class="featured-grid">{featured_html}</div>
+        <figure class="home-hero-media home-hero-poster" role="img" aria-label="由传统屋顶与当代建筑轮廓组成的建筑研究档案海报">
+          <figcaption>ARCHIVE POSTER / 01</figcaption>
+        </figure>
       </section>
 
       <section id="cases" class="section-block case-library">
         <div class="library-head">
-          <div>
-            <p class="eyebrow">CASE LIBRARY</p>
-            <h2>案例列表</h2>
-          </div>
+          <div><p class="eyebrow">ARCHIVE INDEX</p><h2>案例档案</h2></div>
         </div>
-        <div id="libraryPanel" class="library-panel" hidden>
-          <div class="library-panel-head"><p>SEARCH &amp; FILTER</p><button type="button" data-library-menu-close aria-label="关闭搜索与筛选">×</button></div>
-          <div class="library-toolbar">
-          <input id="caseSearch" type="search" aria-label="搜索案例" placeholder="搜索项目、建筑师、地点、年份、类型或设计策略" />
-          <label class="sort-control">排序
-            <select id="sortSelect">
-              <option value="year-desc">年份从新到旧</option>
-              <option value="year-asc">年份从旧到新</option>
-              <option value="title-asc">项目名称 A-Z</option>
-              <option value="architect-asc">建筑师 A-Z</option>
-            </select>
-          </label>
-        </div>
-        <div class="filter-panel">
-          <div class="filter-group"><h3>建筑类型</h3><div class="chip-row">{"".join(type_buttons)}</div></div>
-          <div class="filter-group"><h3>国家 / 地区</h3><div class="chip-row">{"".join(region_buttons)}</div></div>
-        </div>
-        </div>
-        <div id="activeFilters" class="active-filters"></div>
         <div id="caseGrid" class="case-grid">{case_cards}</div>
         <div id="emptyState" class="empty-state" hidden>
           <h3>没有找到匹配案例</h3>
-          <p>请调整搜索词或筛选条件。</p>
+          <p>请调整搜索词或筛选条件，或清除已选条件后重试。</p>
         </div>
+      </section>
+
+      <section id="featured" class="section-block">
+        <div class="section-heading"><p class="eyebrow">FEATURED RESEARCH</p><h2>精选研究</h2><p>从一项案例进入概念、空间、建造与证据之间的完整阅读。</p></div>
+        <div class="featured-grid">{featured_html}</div>
       </section>
     </main>
     """
     (SITE_ROOT / "index.html").write_text(page_shell("建筑案例研究", body, 0), encoding="utf-8")
 
 
-def render_case_card(case: dict[str, Any], variant: str = "standard") -> str:
+def render_case_card(case: dict[str, Any], variant: str = "standard", index: int = 0) -> str:
     cover = case["cover"]
     card_title = clean(case["title"]).split(" / ", 1)[0].strip()
-    media = image_tag(cover, f"cases/{case['slug']}/") if cover else ""
     is_standard = variant == "standard"
     classes = "project-card project-card--standard case-card" if is_standard else "project-card project-card--featured featured-card"
+    if not is_standard and index % 2 == 1:
+        classes += " featured-card--reverse"
     data_attributes = ""
     if is_standard:
         data_attributes = f'''\n      data-type="{esc(case["type"])}"
       data-region="{esc(case["region"])}"
+      data-status="{esc(case["status"])}"
       data-year="{case["sort_year"] or 0}"
       data-title="{esc(case["title"].lower())}"
       data-architect="{esc(case["architects_text"].lower())}"
@@ -707,20 +817,104 @@ def render_case_card(case: dict[str, Any], variant: str = "standard") -> str:
     return f"""
     <article class="{classes}"{data_attributes}>
       <a href="cases/{esc(case["slug"])}/index.html">
-        {media}
+        {render_case_media(case, cover)}
         <div class="project-card-body case-card-body">
-          <div class="card-meta"><span>{esc(case["year_text"])}</span><span>{esc(case["region"])}</span></div>
           <h3 class="project-card-title">{esc(card_title)}</h3>
           <p class="project-card-summary">{esc(case["summary"])}</p>
-          <dl class="project-card-facts">
-            <div class="project-card-fact"><dt>建筑师</dt><dd>{esc(case["architects_text"])}</dd></div>
-            <div class="project-card-fact"><dt>类型</dt><dd>{esc(case["type"])}</dd></div>
-          </dl>
-          <div class="project-card-tags tag-row">{tag_html(case["keywords"][:3])}</div>
+          <p class="case-card-meta">
+            <span>{esc(card_earliest_year(case))}</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>{esc(card_location(case))}</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>{esc(card_primary_type(case))}</span>
+          </p>
         </div>
       </a>
     </article>
     """
+
+
+def card_earliest_year(case: dict[str, Any]) -> str:
+    """Use the earliest documented year for a compact archive-card time marker."""
+    years = [int(item) for item in re.findall(r"(?:19|20)\d{2}", clean(case.get("year_text")))]
+    return f"{min(years)}年" if years else "年代待定"
+
+
+def card_primary_type(case: dict[str, Any]) -> str:
+    """Show one Chinese-facing program label rather than a long taxonomy string."""
+    raw = clean(case.get("program")) or clean(case.get("type")) or "类型待补充"
+    primary = re.split(r"\s*(?:/|／|、|，|,|；|;)\s*", raw, maxsplit=1)[0].strip()
+    translations = {
+        "Cultural": "文化建筑",
+        "Conference center": "会议中心",
+        "Commercial public complex": "公共建筑",
+        "Cultural building": "文化建筑",
+        "Cultural experience center": "文化体验中心",
+        "Cultural / education / brand experience": "文化体验中心",
+        "Commercial complex / community public complex": "社区公共综合体",
+        "Renovation / housing / urban renewal": "旧城改造",
+        "Cultural / civic conference building": "国际会议中心",
+        "Cultural / exposition pavilion / adaptive reuse": "文化展馆",
+        "Cultural / urban regeneration": "文化展示建筑",
+    }
+    if primary and "?" not in primary and re.search(r"[\u4e00-\u9fff]", primary):
+        return primary
+    return translations.get(clean(case.get("type")), translations.get(primary, "公共建筑"))
+
+
+def card_location(case: dict[str, Any]) -> str:
+    """Condense location to the familiar city-and-country form needed by one-line cards."""
+    location = clean(case.get("location"))
+    places = ["深圳", "广州", "杭州", "佛山", "苏州", "成都", "合肥", "济宁", "青岛", "台州", "上海", "泰州", "北京", "秦皇岛", "贵阳", "毕节"]
+    for city in places:
+        if city in location:
+            return f"{city}，中国"
+    if "Billund" in location or "Denmark" in location:
+        return "比隆，丹麦"
+    return case.get("region") or location or "地点待补充"
+
+
+def render_evidence_rail(case: dict[str, Any]) -> str:
+    """Shared archive evidence component for index and editorial case entries."""
+    status = clean(case.get("status")) or "资料待补充"
+    return f"""
+          <dl class="evidence-rail" aria-label="案例档案信息">
+            <div><dt>年份</dt><dd>{esc(case.get("year_text") or "待定")}</dd></div>
+            <div><dt>地点</dt><dd>{esc(case.get("location") or case.get("region") or "待补充")}</dd></div>
+            <div><dt>类型</dt><dd>{esc(case.get("type") or "待补充")}</dd></div>
+            <div><dt>状态</dt><dd>{esc(status)}</dd></div>
+          </dl>
+    """
+
+
+def render_case_media(case: dict[str, Any], cover: dict[str, Any] | None) -> str:
+    """Shared thumbnail figure with explicit loading and missing-media states."""
+    if not cover:
+        return '<figure class="case-card-media is-media-missing" data-media-state aria-label="图片资料待补充"><span class="media-status">图片资料待补充</span></figure>'
+    media_text = " ".join(clean(cover.get(key)) for key in ("src", "image_type", "caption")).lower()
+    kind = " is-drawing" if re.search(r"plan|section|elevation|drawing|diagram|analysis|site|detail|平面|剖面|总平|分析", media_text) else ""
+    return f'''<figure class="case-card-media{kind}" data-media-state>
+          {image_tag(cover, f"cases/{case['slug']}/")}
+          <span class="media-status" aria-live="polite">图片加载中</span>
+        </figure>'''
+
+
+def render_timeline_card(case: dict[str, Any]) -> str:
+    cover = case.get("cover")
+    if not cover:
+        return ""
+    title = clean(case.get("title")).split(" / ", 1)[0].strip()
+    year = str(case.get("sort_year")) if case.get("sort_year") else (clean(case.get("year_text")) or "待定")
+    media = image_tag(cover, f"cases/{case['slug']}/", loading="eager")
+    return f'''
+    <article class="timeline-card">
+      <a href="cases/{esc(case["slug"])}/index.html" aria-label="查看{esc(title)}案例详情">
+        <div class="timeline-card-image">{media}</div>
+        <div class="timeline-card-info">
+          <span class="timeline-card-year">{esc(year)}</span>
+          <h3>{esc(title)}</h3>
+        </div>
+      </a>
+    </article>
+    '''
 
 
 def write_assets() -> None:
@@ -761,6 +955,7 @@ def image_items(data: dict[str, Any], folder: Path) -> list[dict[str, Any]]:
                 "caption": clean(item.get("caption")),
                 "image_type": clean(item.get("image_type")),
                 "recommended_use": clean(item.get("recommended_use")),
+                "related_sections": item.get("related_sections") if isinstance(item.get("related_sections"), list) else [],
                 "status": "local" if copied else "reference",
             }
         )
@@ -777,9 +972,10 @@ def pick_cover(gallery: list[dict[str, Any]]) -> dict[str, Any] | None:
     return local[0]
 
 
-def image_tag(image: dict[str, Any], prefix: str) -> str:
+def image_tag(image: dict[str, Any], prefix: str, loading: str = "lazy") -> str:
     src = prefix + image["src"]
-    return f'<img src="{esc(src)}" alt="{esc(image.get("caption") or "建筑案例图片")}" loading="lazy" />'
+    alt = clean(image.get("caption")) or "architecture case image"
+    return f'<img src="{esc(src)}" alt="{esc(alt)}" loading="{esc(loading)}" />'
 
 
 def tag_html(tags: list[str]) -> str:
@@ -794,7 +990,7 @@ def build_keywords(data: dict[str, Any], case_type: str, strategies: list[dict[s
         raw += [clean(item) for item in lessons.get("analysis_diagram_potential") or []]
     words: list[str] = []
     for item in raw:
-        for chunk in re.split(r"[/,，;；、]", item):
+        for chunk in re.split(r"[/,;|]+", item):
             chunk = chunk.strip()
             if 2 <= len(chunk) <= 20 and chunk not in words:
                 words.append(chunk)

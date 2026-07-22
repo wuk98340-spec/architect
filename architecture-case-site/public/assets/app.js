@@ -4,16 +4,22 @@
   const sortSelect = document.querySelector('#sortSelect');
   const empty = document.querySelector('#emptyState');
   const activeFilters = document.querySelector('#activeFilters');
+  const resultCount = document.querySelector('#resultCount');
   const filterButtons = Array.from(document.querySelectorAll('[data-filter]'));
   const grid = document.querySelector('#caseGrid');
-  const state = { type: 'all', region: 'all', q: '', sort: 'year-desc' };
+  const state = { type: 'all', region: 'all', status: 'all', q: '', sort: 'year-desc' };
+  const validSorts = new Set(['year-desc', 'year-asc', 'title-asc', 'architect-asc']);
+  const validTypes = new Set(filterButtons.filter((button) => button.dataset.filter === 'type').map((button) => button.dataset.value));
+  const validRegions = new Set(filterButtons.filter((button) => button.dataset.filter === 'region').map((button) => button.dataset.value));
+  const validStatuses = new Set(filterButtons.filter((button) => button.dataset.filter === 'status').map((button) => button.dataset.value));
 
   function readParams() {
     const params = new URLSearchParams(window.location.search);
     state.q = params.get('q') || '';
-    state.type = params.get('type') || 'all';
-    state.region = params.get('region') || 'all';
-    state.sort = params.get('sort') || 'year-desc';
+    state.type = validTypes.has(params.get('type')) ? params.get('type') : 'all';
+    state.region = validRegions.has(params.get('region')) ? params.get('region') : 'all';
+    state.status = validStatuses.has(params.get('status')) ? params.get('status') : 'all';
+    state.sort = validSorts.has(params.get('sort')) ? params.get('sort') : 'year-desc';
     if (search) search.value = state.q;
     if (sortSelect) sortSelect.value = state.sort;
   }
@@ -23,6 +29,7 @@
     if (state.q) params.set('q', state.q);
     if (state.type !== 'all') params.set('type', state.type);
     if (state.region !== 'all') params.set('region', state.region);
+    if (state.status !== 'all') params.set('status', state.status);
     if (state.sort !== 'year-desc') params.set('sort', state.sort);
     const next = params.toString() ? '?' + params.toString() : window.location.pathname;
     window.history.replaceState(null, '', next);
@@ -44,14 +51,15 @@
     });
   }
 
-  function paintFilterSummary(count) {
+  function paintFilterSummary() {
     if (!activeFilters) return;
     const chips = [];
     if (state.q) chips.push('搜索：' + state.q);
     if (state.type !== 'all') chips.push('类型：' + state.type);
     if (state.region !== 'all') chips.push('地区：' + state.region);
-    chips.push(count + ' 个结果');
-    activeFilters.innerHTML = chips.map((item) => '<span>' + item + '</span>').join('');
+    if (state.status !== 'all') chips.push('状态：' + state.status);
+    activeFilters.innerHTML = chips.map((item) => '<span>' + item + '</span>').join('')
+      + (chips.length ? '<button type="button" class="clear-filters" data-clear-filters>清除筛选</button>' : '');
   }
 
   function apply() {
@@ -61,14 +69,16 @@
       const matchQuery = !q || (card.dataset.text || '').includes(q);
       const matchType = state.type === 'all' || card.dataset.type === state.type;
       const matchRegion = state.region === 'all' || card.dataset.region === state.region;
-      const show = matchQuery && matchType && matchRegion;
+      const matchStatus = state.status === 'all' || card.dataset.status === state.status;
+      const show = matchQuery && matchType && matchRegion && matchStatus;
       card.hidden = !show;
       if (show) visible.push(card);
     });
     sortCards(visible).forEach((card) => grid && grid.appendChild(card));
     if (empty) empty.hidden = visible.length !== 0;
+    if (resultCount) resultCount.textContent = '显示 ' + visible.length + ' 个案例';
     paintButtons();
-    paintFilterSummary(visible.length);
+    paintFilterSummary();
     writeParams();
   }
 
@@ -81,30 +91,68 @@
   });
   if (search) search.addEventListener('input', () => { state.q = search.value; apply(); });
   if (sortSelect) sortSelect.addEventListener('change', () => { state.sort = sortSelect.value; apply(); });
+  activeFilters?.addEventListener('click', (event) => {
+    if (!event.target.closest('[data-clear-filters]')) return;
+    state.type = 'all';
+    state.region = 'all';
+    state.status = 'all';
+    state.q = '';
+    state.sort = 'year-desc';
+    if (search) search.value = '';
+    if (sortSelect) sortSelect.value = state.sort;
+    apply();
+  });
   if (cards.length) apply();
 
   const libraryPanel = document.querySelector('#libraryPanel');
   const menuToggle = document.querySelector('[data-library-menu-toggle]');
   const menuClose = document.querySelector('[data-library-menu-close]');
+  const libraryBackdrop = document.createElement('button');
+  libraryBackdrop.type = 'button';
+  libraryBackdrop.className = 'library-backdrop';
+  libraryBackdrop.setAttribute('aria-label', '关闭搜索与筛选');
+  libraryBackdrop.hidden = true;
+  document.body.appendChild(libraryBackdrop);
+  const compactLibrary = window.matchMedia('(max-width: 800px)');
   function setLibraryPanel(open) {
     if (!libraryPanel || !menuToggle) return;
+    if (!compactLibrary.matches) {
+      libraryPanel.hidden = false;
+      libraryBackdrop.hidden = true;
+      menuToggle.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('has-library-panel');
+      return;
+    }
     libraryPanel.hidden = !open;
+    libraryBackdrop.hidden = !open;
     menuToggle.classList.toggle('is-open', open);
     menuToggle.setAttribute('aria-expanded', String(open));
     document.body.classList.toggle('has-library-panel', open);
     if (open) window.setTimeout(() => search?.focus(), 0);
   }
+  setLibraryPanel(false);
+  compactLibrary.addEventListener?.('change', () => setLibraryPanel(false));
   menuToggle?.addEventListener('click', () => setLibraryPanel(libraryPanel?.hidden));
   menuClose?.addEventListener('click', () => setLibraryPanel(false));
+  libraryBackdrop.addEventListener('click', () => setLibraryPanel(false));
   window.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') setLibraryPanel(false);
   });
 
   const homeHeader = document.querySelector('.home-header');
   const cover = document.querySelector('.hero--cover');
+  const darkSections = Array.from(document.querySelectorAll('#featured, #timeline'));
   function updateHeaderContrast() {
     if (!homeHeader || !cover) return;
-    homeHeader.classList.toggle('is-on-cover', window.scrollY < cover.offsetHeight - 72);
+    const headerHeight = homeHeader.offsetHeight || 72;
+    const coverIsUnderHeader = window.scrollY < cover.offsetHeight - headerHeight;
+    const darkSectionIsUnderHeader = darkSections.some((section) => {
+      const rect = section.getBoundingClientRect();
+      return rect.top < headerHeight && rect.bottom > 0;
+    });
+    homeHeader.classList.toggle('is-on-cover', coverIsUnderHeader);
+    homeHeader.classList.toggle('is-on-dark', darkSectionIsUnderHeader);
   }
   updateHeaderContrast();
   window.addEventListener('scroll', updateHeaderContrast, { passive: true });
@@ -115,45 +163,157 @@
   if (!deck) return;
 
   const slides = Array.from(deck.querySelectorAll('[data-slide]'));
-  const prev = deck.querySelector('[data-slide-prev]');
-  const next = deck.querySelector('[data-slide-next]');
-  const currentLabel = deck.querySelector('[data-slide-label-current]');
-  const currentIndex = deck.querySelector('[data-slide-index]');
-  const storageKey = 'caseDeck:' + window.location.pathname;
-  let index = Number(window.localStorage.getItem(storageKey) || 0);
+  const stage = deck.querySelector('.deck-stage');
+  const controls = deck.querySelector('.deck-controls');
+  if (!stage || !slides.length) return;
 
-  function clamp(value) {
-    return Math.max(0, Math.min(slides.length - 1, value));
-  }
+  const containsBrokenText = (value) => /[?？]{3,}/.test(value || '');
 
-  function show(nextIndex) {
-    index = clamp(nextIndex);
-    slides.forEach((slide, slideIndex) => {
-      slide.classList.toggle('is-active', slideIndex === index);
-      slide.setAttribute('aria-hidden', slideIndex === index ? 'false' : 'true');
+  document.body.classList.add('case-reader-page');
+  deck.classList.add('case-reader');
+  if (controls) controls.hidden = true;
+
+  const tocItems = [];
+  slides.forEach((slide, index) => {
+    const label = index === 0 ? '项目概览' : (slide.dataset.slideLabel || `章节 ${index + 1}`);
+    const id = `case-section-${index + 1}`;
+    const heading = slide.querySelector('h1');
+    const media = slide.querySelector('.slide-media');
+    slide.id = id;
+    slide.classList.remove('is-active');
+    slide.classList.add('case-section');
+    slide.setAttribute('aria-hidden', 'false');
+    slide.setAttribute('tabindex', '-1');
+    if (heading) heading.id = `${id}-title`;
+    if (media) slide.classList.add('case-section--with-media');
+    if (index === 0) slide.classList.add('case-reader-cover');
+    const image = media?.querySelector('img');
+    if (image && /(?:plan|section|elevation|drawing|diagram|analysis|site|detail)/i.test(image.currentSrc || image.src || '')) {
+      media.classList.add('is-drawing');
+    }
+    slide.querySelectorAll('.slide-media').forEach((figure) => {
+      const figureImage = figure.querySelector('img');
+      if (figureImage && /(?:plan|section|elevation|drawing|diagram|analysis|site|detail)/i.test(figureImage.currentSrc || figureImage.src || '')) {
+        figure.classList.add('is-drawing');
+      }
     });
-    if (currentLabel) currentLabel.textContent = slides[index]?.dataset.slideLabel || '';
-    if (currentIndex) currentIndex.textContent = String(index + 1).padStart(2, '0');
-    if (prev) prev.disabled = index === 0;
-    if (next) next.disabled = index === slides.length - 1;
-    window.localStorage.setItem(storageKey, String(index));
-  }
-
-  if (prev) prev.addEventListener('click', () => show(index - 1));
-  if (next) next.addEventListener('click', () => show(index + 1));
-  window.addEventListener('keydown', (event) => {
-    if (event.target instanceof HTMLElement && event.target.closest('a, button, input, select, textarea')) return;
-    if (event.key === 'ArrowRight') {
-      event.preventDefault();
-      show(index + 1);
-    }
-    if (event.key === 'ArrowLeft') {
-      event.preventDefault();
-      show(index - 1);
-    }
+    tocItems.push(`<li><a href="#${id}"><span>${String(index + 1).padStart(2, '0')}</span>${label}</a></li>`);
   });
 
-  show(index);
+  const toc = document.createElement('aside');
+  toc.className = 'case-reader-toc';
+  toc.setAttribute('aria-label', '案例章节目录');
+  toc.innerHTML = `<p>CASE RECORD</p><h2>阅读目录</h2><nav><ol>${tocItems.join('')}</ol></nav>`;
+  deck.insertBefore(toc, stage);
+
+  const tocLinks = Array.from(toc.querySelectorAll('a'));
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        tocLinks.forEach((link) => link.classList.toggle('is-current', link.getAttribute('href') === `#${entry.target.id}`));
+      });
+    }, { rootMargin: '-18% 0px -68% 0px', threshold: 0.01 });
+    slides.forEach((slide) => observer.observe(slide));
+  }
+
+  function setMediaState(figure, state, message) {
+    figure.classList.remove('is-loading', 'is-media-missing');
+    if (state) figure.classList.add(state);
+    figure.setAttribute('aria-busy', state === 'is-loading' ? 'true' : 'false');
+    let status = figure.querySelector('.media-status');
+    if (!message) {
+      status?.remove();
+      return;
+    }
+    if (!status) {
+      status = document.createElement('span');
+      status.className = 'media-status';
+      figure.appendChild(status);
+    }
+    status.textContent = message;
+  }
+
+  slides.forEach((slide) => {
+    const lead = slide.querySelector('.slide-lead');
+    if (lead && containsBrokenText(lead.textContent)) lead.hidden = true;
+    const tags = slide.querySelector('.detail-tags');
+    if (tags) {
+      Array.from(tags.children).forEach((tag) => {
+        if (containsBrokenText(tag.textContent)) tag.hidden = true;
+      });
+      if (!Array.from(tags.children).some((tag) => !tag.hidden)) tags.hidden = true;
+    }
+    slide.querySelectorAll('.compact-source-list li').forEach((item) => {
+      if (containsBrokenText(item.textContent)) item.hidden = true;
+    });
+    const figure = slide.querySelector('.slide-media');
+    const image = figure?.querySelector('img');
+    if (!figure) return;
+    if (!image) {
+      figure.classList.add('is-media-missing');
+      figure.setAttribute('aria-label', '图片资料待补充');
+      return;
+    }
+    setMediaState(figure, 'is-loading', '图片加载中');
+    const loaded = () => setMediaState(figure, '', '');
+    const failed = () => {
+      image.hidden = true;
+      setMediaState(figure, 'is-media-missing', '图片暂时无法显示');
+    };
+    image.addEventListener('load', loaded, { once: true });
+    image.addEventListener('error', failed, { once: true });
+    if (image.complete) {
+      if (image.naturalWidth > 0) loaded();
+      else failed();
+    }
+    Array.from(slide.querySelectorAll('.slide-media')).slice(1).forEach((extraFigure) => {
+      const extraImage = extraFigure.querySelector('img');
+      if (!extraImage) return;
+      setMediaState(extraFigure, 'is-loading', '正在加载图片');
+      const extraLoaded = () => setMediaState(extraFigure, '', '');
+      const extraFailed = () => {
+        extraImage.hidden = true;
+        setMediaState(extraFigure, 'is-media-missing', '图片暂时无法显示');
+      };
+      extraImage.addEventListener('load', extraLoaded, { once: true });
+      extraImage.addEventListener('error', extraFailed, { once: true });
+      if (extraImage.complete) {
+        if (extraImage.naturalWidth > 0) extraLoaded();
+        else extraFailed();
+      }
+    });
+  });
+})();
+
+(function () {
+  const media = Array.from(document.querySelectorAll('[data-media-state]'));
+  media.forEach((figure) => {
+    const image = figure.querySelector('img');
+    const status = figure.querySelector('.media-status');
+    const setState = (state, message) => {
+      figure.classList.remove('is-ready', 'is-loading', 'is-media-missing');
+      figure.classList.add(state);
+      if (status && message) status.textContent = message;
+      figure.setAttribute('aria-busy', state === 'is-loading' ? 'true' : 'false');
+    };
+    if (!image) {
+      setState('is-media-missing', '图片资料待补充');
+      return;
+    }
+    setState('is-loading', '图片加载中');
+    const loaded = () => setState('is-ready', '');
+    const failed = () => {
+      image.hidden = true;
+      setState('is-media-missing', '图片暂时无法显示');
+    };
+    image.addEventListener('load', loaded, { once: true });
+    image.addEventListener('error', failed, { once: true });
+    if (image.complete) {
+      if (image.naturalWidth > 0) loaded();
+      else failed();
+    }
+  });
 })();
 
 (function () {

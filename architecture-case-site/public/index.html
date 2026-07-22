@@ -4,145 +4,52 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>建筑案例研究</title>
-  <link rel="stylesheet" href="./assets/styles.css?v=b5a24fa73b" />
+  <link rel="icon" type="image/png" href="./assets/images/hero-knowledge-system.png" />
+  <link rel="stylesheet" href="./assets/styles.css?v=57286f8826" />
 </head>
 <body>
 
     <header class="site-header home-header">
-      <a class="brand" href="#"><span>ARCHIVE</span><strong>ARCHITECTURE CASE RESEARCH</strong></a>
-      <button class="menu-toggle" type="button" data-library-menu-toggle aria-expanded="false" aria-controls="libraryPanel" aria-label="打开搜索与案例筛选"><span></span><span></span><span></span></button>
+      <a class="brand" href="#"><span>ARCHITECT</span><strong>建筑案例研究库</strong></a>
+      <nav class="home-nav" aria-label="首页导航"><a href="#cases">案例库</a><a href="#featured">精选研究</a></nav>
     </header>
-    <main>
-      <section class="hero hero--cover">
-        <div class="hero-backdrop" aria-hidden="true"></div>
-        <div class="hero-copy hero-cover-copy">
-          <h1><span>案例分析研究库</span></h1>
+    <main class="home-main">
+      <section class="hero hero--archive" aria-labelledby="home-title">
+        <div class="hero-copy">
+          <p class="eyebrow">ARCHITECT / CASE STUDY ARCHIVE</p><h1 id="home-title">建筑案例研究库</h1><p class="hero-lead">面向建筑学研究与教学的案例档案。收录可追溯、可验证的建成环境案例，提供图纸、影像、文献与现场记录。</p>
+          <a class="primary-action" href="#cases">浏览案例库 <span aria-hidden="true">→</span></a>
         </div>
-        <div class="hero-panel" aria-label="资料概览">
-          <div><strong>17</strong><span>案例包</span></div>
-          <div><strong>83</strong><span>图片 / 图纸记录</span></div>
-          <div><strong>103</strong><span>参考来源</span></div>
-          <div><strong>2004-2026</strong><span>年份跨度</span></div>
-        </div>
-      </section>
-
-      <section id="featured" class="section-block">
-        <div class="section-heading">
-          <p class="eyebrow">SELECTED CASES</p>
-          <h2>精选案例</h2>
-        </div>
-        <div class="featured-grid">
-    <article class="project-card project-card--featured featured-card">
-      <a href="cases/guangzhou-jiefang-middle-road-old-city-renewal/index.html">
-        <img src="cases/guangzhou-jiefang-middle-road-old-city-renewal/images/01_hero_old_new_city_context.jpg" alt="新住宅、保留建筑与传统街巷共同形成的生活场景" loading="lazy" />
-        <div class="project-card-body case-card-body">
-          <div class="card-meta"><span>2004启动；竣工年份未在PDF中确认</span><span>中国</span></div>
-          <h3 class="project-card-title">广州市越秀区解放中路旧城改造</h3>
-          <p class="project-card-summary">解放中路旧城改造把政府主导、居民回迁、保留老建筑、延续街巷肌理等复杂条件，转化为街巷结构、标准户型原型和品相对等的建造语言。</p>
-          <dl class="project-card-facts">
-            <div class="project-card-fact"><dt>建筑师</dt><dd>张振辉及设计团队（PDF未列明事务所全称）</dd></div>
-            <div class="project-card-fact"><dt>类型</dt><dd>Renovation / housing / urban renewal</dd></div>
-          </dl>
-          <div class="project-card-tags tag-row"><span>Renovation</span><span>housing</span><span>urban renewal</span></div>
-        </div>
-      </a>
-    </article>
-    
-    <article class="project-card project-card--featured featured-card">
-      <a href="cases/shanghai-expo-china-pavilion/index.html">
-        <img src="cases/shanghai-expo-china-pavilion/images/01_hero_built_views_crop.jpg" alt="从城市开放空间、新九洲清晏和近观视角看中国馆" loading="lazy" />
-        <div class="project-card-body case-card-body">
-          <div class="card-meta"><span>2007 竞赛与开工；2010 世博会使用；2012 改作中华艺术宫开放</span><span>中国</span></div>
-          <h3 class="project-card-title">上海世博会中国馆</h3>
-          <p class="project-card-summary">中国馆把国家象征、世博大客流、展陈平层需求、屋顶园林、红色幕墙试板和地铁下穿约束组织成从概念到建造连续桥接的文化展示建筑。</p>
-          <dl class="project-card-facts">
-            <div class="project-card-fact"><dt>建筑师</dt><dd>何镜堂团队 / 清华大学团队 / 上海民用建筑设计院 / 联合设计团队</dd></div>
-            <div class="project-card-fact"><dt>类型</dt><dd>Cultural / exposition pavilion / adaptive reuse</dd></div>
-          </dl>
-          <div class="project-card-tags tag-row"><span>Cultural</span><span>exposition pavilion</span><span>adaptive reuse</span></div>
-        </div>
-      </a>
-    </article>
-    
-    <article class="project-card project-card--featured featured-card">
-      <a href="cases/taizhou-folk-culture-exhibition-center/index.html">
-        <img src="cases/taizhou-folk-culture-exhibition-center/images/01_hero_built_views_crop.jpg" alt="从城市看建筑、序厅到长廊、中心水院等建成场景" loading="lazy" />
-        <div class="project-card-body case-card-body">
-          <div class="card-meta"><span>2009 设计启动；2014 建成</span><span>中国</span></div>
-          <h3 class="project-card-title">泰州民俗文化展示中心</h3>
-          <p class="project-card-summary">项目通过东西向轴带重新组织稻河头、五巷街区、名人旧居、高层背景和新展馆，并以石材百叶幕墙、灰调模数和消隐化绿色技术形成当代泰州建筑品相。</p>
-          <dl class="project-card-facts">
-            <div class="project-card-fact"><dt>建筑师</dt><dd>何镜堂 / 郭卫宏 / 张振辉 / 黄瑜 / 何炽立 / 华南理工大学建筑设计研究院</dd></div>
-            <div class="project-card-fact"><dt>类型</dt><dd>Cultural / urban regeneration</dd></div>
-          </dl>
-          <div class="project-card-tags tag-row"><span>Cultural</span><span>urban regeneration</span><span>东西向叙事轴重组城市节点</span></div>
-        </div>
-      </a>
-    </article>
-    
-    <article class="project-card project-card--featured featured-card">
-      <a href="cases/suzhou-museum-new/index.html">
-        <img src="cases/suzhou-museum-new/images/01_hero_courtyard_and_materials.jpg" alt="庭院、采光、屋面与石材构造的组合表达" loading="lazy" />
-        <div class="project-card-body case-card-body">
-          <div class="card-meta"><span>2006</span><span>中国</span></div>
-          <h3 class="project-card-title">苏州博物馆新馆</h3>
-          <p class="project-card-summary">苏州博物馆新馆以低矮院落化布局、黑白灰材料转译、几何屋面和自然光，把苏州传统园林与民居语汇转化为现代公共文化建筑语言。</p>
-          <dl class="project-card-facts">
-            <div class="project-card-fact"><dt>建筑师</dt><dd>I. M. Pei Architect / Pei Partnership Architects</dd></div>
-            <div class="project-card-fact"><dt>类型</dt><dd>Cultural</dd></div>
-          </dl>
-          <div class="project-card-tags tag-row"><span>Cultural</span><span>历史街区中的低矮分块尺度</span><span>传统符号的现代材料转译</span></div>
-        </div>
-      </a>
-    </article>
-    </div>
+        <figure class="home-hero-media home-hero-poster" role="img" aria-label="由传统屋顶与当代建筑轮廓组成的建筑研究档案海报">
+          <figcaption>ARCHIVE POSTER / 01</figcaption>
+        </figure>
       </section>
 
       <section id="cases" class="section-block case-library">
         <div class="library-head">
-          <div>
-            <p class="eyebrow">CASE LIBRARY</p>
-            <h2>案例列表</h2>
-          </div>
+          <div><p class="eyebrow">ARCHIVE INDEX</p><h2>案例档案</h2></div>
         </div>
-        <div id="libraryPanel" class="library-panel" hidden>
-          <div class="library-panel-head"><p>SEARCH &amp; FILTER</p><button type="button" data-library-menu-close aria-label="关闭搜索与筛选">×</button></div>
-          <div class="library-toolbar">
-          <input id="caseSearch" type="search" aria-label="搜索案例" placeholder="搜索项目、建筑师、地点、年份、类型或设计策略" />
-          <label class="sort-control">排序
-            <select id="sortSelect">
-              <option value="year-desc">年份从新到旧</option>
-              <option value="year-asc">年份从旧到新</option>
-              <option value="title-asc">项目名称 A-Z</option>
-              <option value="architect-asc">建筑师 A-Z</option>
-            </select>
-          </label>
-        </div>
-        <div class="filter-panel">
-          <div class="filter-group"><h3>建筑类型</h3><div class="chip-row"><button class="chip is-active" data-filter="type" data-value="all">全部类型</button><button class="chip" data-filter="type" data-value="Commercial complex / community public complex">Commercial complex...</button><button class="chip" data-filter="type" data-value="Conference center / Commercial public complex">Conference center ...</button><button class="chip" data-filter="type" data-value="Cultural">Cultural</button><button class="chip" data-filter="type" data-value="Cultural / civic conference building">Cultural / civic c...</button><button class="chip" data-filter="type" data-value="Cultural / education / brand experience">Cultural / educati...</button><button class="chip" data-filter="type" data-value="Cultural / exposition pavilion / adaptive reuse">Cultural / exposit...</button><button class="chip" data-filter="type" data-value="Cultural / urban regeneration">Cultural / urban r...</button><button class="chip" data-filter="type" data-value="Cultural building">Cultural building</button><button class="chip" data-filter="type" data-value="Renovation / housing / urban renewal">Renovation / housi...</button><button class="chip" data-filter="type" data-value="乡建 / 青少年活动营地 / 公益公共建筑">乡建 / 青少年活动营地 / 公益公...</button><button class="chip" data-filter="type" data-value="文化会展建筑 / 大型会议中心">文化会展建筑 / 大型会议中心</button></div></div>
-          <div class="filter-group"><h3>国家 / 地区</h3><div class="chip-row"><button class="map-pin is-active" data-filter="region" data-value="all">全部地区</button><button class="map-pin" data-filter="region" data-value="中国">中国</button><button class="map-pin" data-filter="region" data-value="丹麦">丹麦</button></div></div>
-        </div>
-        </div>
-        <div id="activeFilters" class="active-filters"></div>
         <div id="caseGrid" class="case-grid">
     <article class="project-card project-card--standard case-card"
       data-type="Conference center / Commercial public complex"
       data-region="中国"
+      data-status="under construction / phased development"
       data-year="2026"
       data-title="深圳国际交流中心 / shenzhen international communication center"
       data-architect="华南理工大学建筑设计研究院有限公司（深圳国际交流中心一期项目设计/施工相关单位之一；一期配套酒店设计单位） / 深圳市建筑设计研究总院有限公司（深圳国际交流中心一期项目设计/施工相关单位之一） / 何镜堂及团队（华南理工大学建筑学院页面将深圳国际交流中心列入其团队主持设计的标志性建筑序列；主创身份仍需正式项目页或图纸签章复核）"
       data-text="深圳国际交流中心 / shenzhen international communication center 华南理工大学建筑设计研究院有限公司（深圳国际交流中心一期项目设计/施工相关单位之一；一期配套酒店设计单位） / 深圳市建筑设计研究总院有限公司（深圳国际交流中心一期项目设计/施工相关单位之一） / 何镜堂及团队（华南理工大学建筑学院页面将深圳国际交流中心列入其团队主持设计的标志性建筑序列；主创身份仍需正式项目页或图纸签章复核） 中国广东省深圳市福田区香蜜湖北区 / 香蜜湖西岸 中国 2019 年项目公司成立；2023-03-21 一期会议中心钢结构首吊；2025 年中一期会议中心预计建成；2026 年底配套酒店预计建成 conference center / commercial public complex 国际会议中心、配套酒店、花园会议区；服务元首峰会、国际会议、大型企业活动、精品展览、餐饮、住宿与休闲 深圳国际交流中心以华工院等单位参与的会议中心与配套酒店为核心，把深圳“城市会客厅”的外交、会议、酒店、花园与运营需求，转译为大跨度会议综合体、岭南庭院体验、低能耗酒店方向和数字化钢结构建造协同。 conference center 城市会客厅定位驱动功能组织 岭南庭院作为地域与气候媒介 城市角色图 事件生命周期图 岭南庭院体验图 城市会客厅定位驱动功能组织 以“城市会客厅 / 城市名片”为定位，将峰会、国际会议、企业活动、精品展览、餐饮、住宿和休闲纳入复合功能体系。 会议中心 + 酒店 + 花园会议区的复合配套 项目包含国际会议中心、配套酒店和花园会议区，并分期建设。 岭南庭院作为地域与气候媒介 景观设计咨询围绕“岭南庭院”展开，强调山水交融、内外渗透、移步换景、高低错落和 360 度可看可游的景观中庭。 大跨度结构与数字建造支撑公共事件空间 采用钢管混凝土柱 - 钢梁框架 - 钢筋混凝土剪力墙结构体系，并用 bim 构件身份、5g、物联网和云计算进行全过程可视化管控。">
       <a href="cases/shenzhen-international-communication-center/index.html">
-        <img src="cases/shenzhen-international-communication-center/images/01_project_site_2024.jpg" alt="深圳国际交流中心与深圳金融文化中心建设现场，来源为深圳政府在线图片新闻。" loading="lazy" />
+        <figure class="case-card-media is-drawing" data-media-state>
+          <img src="cases/shenzhen-international-communication-center/images/01_project_site_2024.jpg" alt="深圳国际交流中心与深圳金融文化中心建设现场，来源为深圳政府在线图片新闻。" loading="lazy" />
+          <span class="media-status" aria-live="polite">图片加载中</span>
+        </figure>
         <div class="project-card-body case-card-body">
-          <div class="card-meta"><span>2019 年项目公司成立；2023-03-21 一期会议中心钢结构首吊；2025 年中一期会议中心预计建成；2026 年底配套酒店预计建成</span><span>中国</span></div>
           <h3 class="project-card-title">深圳国际交流中心</h3>
           <p class="project-card-summary">深圳国际交流中心以华工院等单位参与的会议中心与配套酒店为核心，把深圳“城市会客厅”的外交、会议、酒店、花园与运营需求，转译为大跨度会议综合体、岭南庭院体验、低能耗酒店方向和数字化钢结构建造协同。</p>
-          <dl class="project-card-facts">
-            <div class="project-card-fact"><dt>建筑师</dt><dd>华南理工大学建筑设计研究院有限公司（深圳国际交流中心一期项目设计/施工相关单位之一；一期配套酒店设计单位） / 深圳市建筑设计研究总院有限公司（深圳国际交流中心一期项目设计/施工相关单位之一） / 何镜堂及团队（华南理工大学建筑学院页面将深圳国际交流中心列入其团队主持设计的标志性建筑序列；主创身份仍需正式项目页或图纸签章复核）</dd></div>
-            <div class="project-card-fact"><dt>类型</dt><dd>Conference center / Commercial public complex</dd></div>
-          </dl>
-          <div class="project-card-tags tag-row"><span>Conference center</span><span>城市会客厅定位驱动功能组织</span><span>岭南庭院作为地域与气候媒介</span></div>
+          <p class="case-card-meta">
+            <span>2019年</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>深圳，中国</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>国际会议中心</span>
+          </p>
         </div>
       </a>
     </article>
@@ -150,21 +57,24 @@
     <article class="project-card project-card--standard case-card"
       data-type="Cultural"
       data-region="中国"
+      data-status="在建"
       data-year="2026"
       data-title="前海博物馆 / qianhai museum"
       data-architect="何镜堂 / 华南理工大学建筑设计研究院 / 何镜堂创作院"
-      data-text="前海博物馆 / qianhai museum 何镜堂 / 华南理工大学建筑设计研究院 / 何镜堂创作院 中国广东省深圳市前海合作区前湾片区 中国 主体结构2024年12月封顶；预计2026年竣工 / 2026年10月开馆试运行 cultural 博物馆 / 复合型公共文化建筑 前海博物馆以“文明之树、时代明灯”为理念，将前海山海城格局、国家级文化设施的纪念性和开放型公共文化空间整合为一个高强度博物馆综合体。 cultural 文明之树 时代明灯的纪念性形象 城市会客厅作为开放型公共文化中庭 无柱山海剧场连接观景与文化活动 文明之树、时代明灯的纪念性形象 通过五层重檐、逐层出挑和灯笼式展开的形象塑造高识别度。 城市会客厅作为开放型公共文化中庭 设置约40米净高、贯通四层的城市会客厅，以负形手法重构传统楼阁意象。 无柱山海剧场连接观景与文化活动 在五层平台设置近百米跨度无柱山海剧场，南北两侧分别面向山、海景观。 大跨度结构支撑高位开放空间 使用倾斜巨柱、核心筒和桥梁工程拱结构，支撑高位大跨度无柱空间。">
+      data-text="前海博物馆 / qianhai museum 何镜堂 / 华南理工大学建筑设计研究院 / 何镜堂创作院 中国广东省深圳市前海合作区前湾片区 中国 主体结构2024年12月封顶；预计2026年竣工 / 2026年10月开馆试运行 cultural 博物馆 / 复合型公共文化建筑 前海博物馆以“文明之树、时代明灯”为理念，将前海山海城格局、国家级文化设施的纪念性和开放型公共文化空间整合为一个高强度博物馆综合体。 cultural 文明之树、时代明灯的纪念性形象 城市会客厅作为开放型公共文化中庭 无柱山海剧场连接观景与文化活动 文明之树、时代明灯的纪念性形象 通过五层重檐、逐层出挑和灯笼式展开的形象塑造高识别度。 城市会客厅作为开放型公共文化中庭 设置约40米净高、贯通四层的城市会客厅，以负形手法重构传统楼阁意象。 无柱山海剧场连接观景与文化活动 在五层平台设置近百米跨度无柱山海剧场，南北两侧分别面向山、海景观。 大跨度结构支撑高位开放空间 使用倾斜巨柱、核心筒和桥梁工程拱结构，支撑高位大跨度无柱空间。">
       <a href="cases/qianhai-museum/index.html">
-        <img src="cases/qianhai-museum/images/01_hero.jpg" alt="建筑外观与五层重檐" loading="lazy" />
+        <figure class="case-card-media" data-media-state>
+          <img src="cases/qianhai-museum/images/01_hero.jpg" alt="建筑外观与五层重檐" loading="lazy" />
+          <span class="media-status" aria-live="polite">图片加载中</span>
+        </figure>
         <div class="project-card-body case-card-body">
-          <div class="card-meta"><span>主体结构2024年12月封顶；预计2026年竣工 / 2026年10月开馆试运行</span><span>中国</span></div>
           <h3 class="project-card-title">前海博物馆</h3>
           <p class="project-card-summary">前海博物馆以“文明之树、时代明灯”为理念，将前海山海城格局、国家级文化设施的纪念性和开放型公共文化空间整合为一个高强度博物馆综合体。</p>
-          <dl class="project-card-facts">
-            <div class="project-card-fact"><dt>建筑师</dt><dd>何镜堂 / 华南理工大学建筑设计研究院 / 何镜堂创作院</dd></div>
-            <div class="project-card-fact"><dt>类型</dt><dd>Cultural</dd></div>
-          </dl>
-          <div class="project-card-tags tag-row"><span>Cultural</span><span>文明之树</span><span>时代明灯的纪念性形象</span></div>
+          <p class="case-card-meta">
+            <span>2024年</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>深圳，中国</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>博物馆</span>
+          </p>
         </div>
       </a>
     </article>
@@ -172,21 +82,24 @@
     <article class="project-card project-card--standard case-card"
       data-type="文化会展建筑 / 大型会议中心"
       data-region="中国"
+      data-status="已投入运营"
       data-year="2023"
       data-title="白云国际会议中心国际会堂 / baiyun international convention center international hall"
       data-architect="何镜堂院士及华南理工大学建筑设计研究院团队"
       data-text="白云国际会议中心国际会堂 / baiyun international convention center international hall 何镜堂院士及华南理工大学建筑设计研究院团队 中国广东省广州市白云区白云大道南 1039-1045 号 中国 2023 ?????????/????? 2023 ? 1 ?????????????? 文化会展建筑 / 大型会议中心 ????????????????????? ??????????????????????????????????????????????????????????????? 文化会展建筑 大型会议中心 以白云山水组织大型会堂的地域形象 以中厅和廊院建立会议建筑的空间序列 用可变设备系统支持超级多功能厅 以白云山水组织大型会堂的地域形象 以“白云山水，云山叠翠，时代国风”为主题，使用圆形屋顶、玻璃方盒、青花瓷顶、水体、水晶吊坠和琉璃墙等空间与材料线索。 以中厅和廊院建立会议建筑的空间序列 以中厅、会展厅、多功能厅及配套构成功能骨架，并通过流水花园、移动廊院等组织公共空间体验。 用可变设备系统支持超级多功能厅 使用可调可变的天花、隔声间隔、灯光、音响和 450 个升降台，配合大跨度厅堂空间。 以大跨度结构服务无柱化公共活动 超级多功能厅采用超大跨度钢桁架承重体系，并通过白色倒圆锥形点支撑等元素强化结构视觉。 ????????????????????????? ?????????????????????????????????????????????????????????????????????">
       <a href="cases/baiyun-international-convention-center-phase-ii/index.html">
-        <img src="cases/baiyun-international-convention-center-phase-ii/images/01_hero.jpg" alt="国际会堂整体外观" loading="lazy" />
+        <figure class="case-card-media" data-media-state>
+          <img src="cases/baiyun-international-convention-center-phase-ii/images/01_hero.jpg" alt="国际会堂整体外观" loading="lazy" />
+          <span class="media-status" aria-live="polite">图片加载中</span>
+        </figure>
         <div class="project-card-body case-card-body">
-          <div class="card-meta"><span>2023 ?????????/????? 2023 ? 1 ??????????????</span><span>中国</span></div>
           <h3 class="project-card-title">白云国际会议中心国际会堂</h3>
           <p class="project-card-summary">???????????????????????????????????????????????????????????????</p>
-          <dl class="project-card-facts">
-            <div class="project-card-fact"><dt>建筑师</dt><dd>何镜堂院士及华南理工大学建筑设计研究院团队</dd></div>
-            <div class="project-card-fact"><dt>类型</dt><dd>文化会展建筑 / 大型会议中心</dd></div>
-          </dl>
-          <div class="project-card-tags tag-row"><span>文化会展建筑</span><span>大型会议中心</span><span>以白云山水组织大型会堂的地域形象</span></div>
+          <p class="case-card-meta">
+            <span>2023年</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>广州，中国</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>公共建筑</span>
+          </p>
         </div>
       </a>
     </article>
@@ -194,21 +107,24 @@
     <article class="project-card project-card--standard case-card"
       data-type="Cultural building"
       data-region="中国"
+      data-status="建成"
       data-year="2022"
       data-title="杭州国家版本馆（文润阁） / hangzhou national archives of publications and culture"
       data-architect="王澍 / 陆文宇 / 业余建筑工作室"
       data-text="杭州国家版本馆（文润阁） / hangzhou national archives of publications and culture 王澍 / 陆文宇 / 业余建筑工作室 中国浙江杭州良渚一带 中国 2022年7月23日正式落成 cultural building 版本收藏、保护、展示、研究与交流综合文化建筑 杭州国家版本馆把废弃矿坑、良渚遗址限高、国家藏书楼功能和龙泉青瓷工艺整合成一套现代宋韵的当代山水建筑语言。 cultural building 限高条件下的平远展开 南园北馆的开放 封闭分区 非正轴入口与掩映之美 南园北馆疏密关系图 限高条件下的平远展开 采用低矮、横向展开的建筑群和南园北馆疏密布局，以层层递进的体量、廊道和山水关系替代高耸纪念性。 南园北馆的开放/封闭分区 将南侧处理为疏朗园林和公共游览空间，将北侧处理为较密集的藏书与展陈馆区，并以桥、廊和漂浮系统联系。 非正轴入口与掩映之美 南大门不居中，通过山体、门洞和路径遮挡形成局部显露的进入经验。 青瓷屏扇的工艺系统化 以多釉色青瓷片、铜扣件、统一钢骨架和可开启系统组织屏扇，并通过样板和颜色控制处理手工不均质。 双廊作为山体保护与游观装置 用混凝土挡土墙和带顶游廊隔开山体，让公众近距离游观，同时保护山体原真性和游人安全。">
       <a href="cases/hangzhou-national-version-museum-wenrun-ge/index.html">
-        <img src="cases/hangzhou-national-version-museum-wenrun-ge/images/01_hero_exterior.jpg" alt="杭州国家版本馆整体外观，山体、水面与北馆体量形成山水互文。" loading="lazy" />
+        <figure class="case-card-media" data-media-state>
+          <img src="cases/hangzhou-national-version-museum-wenrun-ge/images/01_hero_exterior.jpg" alt="杭州国家版本馆整体外观，山体、水面与北馆体量形成山水互文。" loading="lazy" />
+          <span class="media-status" aria-live="polite">图片加载中</span>
+        </figure>
         <div class="project-card-body case-card-body">
-          <div class="card-meta"><span>2022年7月23日正式落成</span><span>中国</span></div>
           <h3 class="project-card-title">杭州国家版本馆（文润阁）</h3>
           <p class="project-card-summary">杭州国家版本馆把废弃矿坑、良渚遗址限高、国家藏书楼功能和龙泉青瓷工艺整合成一套现代宋韵的当代山水建筑语言。</p>
-          <dl class="project-card-facts">
-            <div class="project-card-fact"><dt>建筑师</dt><dd>王澍 / 陆文宇 / 业余建筑工作室</dd></div>
-            <div class="project-card-fact"><dt>类型</dt><dd>Cultural building</dd></div>
-          </dl>
-          <div class="project-card-tags tag-row"><span>Cultural building</span><span>限高条件下的平远展开</span><span>南园北馆的开放</span></div>
+          <p class="case-card-meta">
+            <span>2022年</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>杭州，中国</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>版本收藏</span>
+          </p>
         </div>
       </a>
     </article>
@@ -216,21 +132,24 @@
     <article class="project-card project-card--standard case-card"
       data-type="Cultural"
       data-region="中国"
+      data-status="建成；2020 年 10 月 1 日对公众开放"
       data-year="2020"
       data-title="和美术馆 / he art museum"
       data-architect="tadao ando architect &amp; associates / 安藤忠雄建筑研究所"
       data-text="和美术馆 / he art museum tadao ando architect &amp; associates / 安藤忠雄建筑研究所 中国广东佛山顺德 中国 2020 cultural 文化建筑 / 美术馆 / 当代艺术与岭南文化展示空间 和美术馆将“和”的语义、岭南水庭与南越圆形观念，转译为圆形叠层、中央天井、双螺旋楼梯、水面和遮阳界面共同组织的美术馆空间系统。 cultural 把“和”转译为空间秩序 以中央天井和双螺旋楼梯建立方向感 用圆与方平衡象征性和展陈效率 方体量关系图 入口缓冲序列图 把“和”转译为空间秩序 以圆形叠层、中央天井、双螺旋楼梯、水面和景观墙共同组织建筑的平面、剖面和入口秩序。 以中央天井和双螺旋楼梯建立方向感 设置贯通楼层的 skylit atrium，并用现浇混凝土双螺旋楼梯组织垂直交通。 用圆与方平衡象征性和展陈效率 主楼采用圆形叠层，东北侧附加方形高展厅，用于现代艺术和大尺度作品展示。 把入口序列作为城市缓冲器 通过水面、放射路径、景观与独立混凝土墙组织抵达，形成渐进式入馆体验。 让气候控制参与形式表达 以上层圆柱外挑形成深檐，外围设置固定竖向百叶，并用地面反射水池改善微气候。">
       <a href="cases/he-art-museum/index.html">
-        <img src="cases/he-art-museum/images/01_hero_exterior.jpg" alt="和美术馆外部圆形体量与水景" loading="lazy" />
+        <figure class="case-card-media" data-media-state>
+          <img src="cases/he-art-museum/images/01_hero_exterior.jpg" alt="和美术馆外部圆形体量与水景" loading="lazy" />
+          <span class="media-status" aria-live="polite">图片加载中</span>
+        </figure>
         <div class="project-card-body case-card-body">
-          <div class="card-meta"><span>2020</span><span>中国</span></div>
           <h3 class="project-card-title">和美术馆</h3>
           <p class="project-card-summary">和美术馆将“和”的语义、岭南水庭与南越圆形观念，转译为圆形叠层、中央天井、双螺旋楼梯、水面和遮阳界面共同组织的美术馆空间系统。</p>
-          <dl class="project-card-facts">
-            <div class="project-card-fact"><dt>建筑师</dt><dd>Tadao Ando Architect &amp; Associates / 安藤忠雄建筑研究所</dd></div>
-            <div class="project-card-fact"><dt>类型</dt><dd>Cultural</dd></div>
-          </dl>
-          <div class="project-card-tags tag-row"><span>Cultural</span><span>把“和”转译为空间秩序</span><span>以中央天井和双螺旋楼梯建立方向感</span></div>
+          <p class="case-card-meta">
+            <span>2020年</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>佛山，中国</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>文化建筑</span>
+          </p>
         </div>
       </a>
     </article>
@@ -238,21 +157,24 @@
     <article class="project-card project-card--standard case-card"
       data-type="Cultural"
       data-region="中国"
+      data-status="built / open"
       data-year="2019"
       data-title="济宁市图书馆 / jining library"
       data-architect="何镜堂 / 华南理工大学建筑设计研究院有限公司"
       data-text="济宁市图书馆 / jining library 何镜堂 / 华南理工大学建筑设计研究院有限公司 中国山东省济宁市太白湖新区，济宁市文化中心内 中国 设计时间2014-2017；竣工2018年12月；试运行2019-02-01；正式开放2019-05-01 cultural 市级综合图书馆；借阅、展示、研究、教育、休闲、文化服务、公共活动与数字阅读 济宁市图书馆把孔孟文化中的学宫、辟雍、明堂与杏坛意象，转译为九宫格结构秩序、剧场化中庭和半透陶棍界面，形成兼具城市客厅与知识圣地属性的当代公共图书馆。 cultural 文化原型转译为结构秩序 双首层连接高台与湖区地景 剧场化中庭组织公共阅读 文化原型转译为结构秩序 以明堂辟雍和九宫格图式组织核心筒、剪力墙、正交立柱与斜向立柱，形成承托阅览大厅的空间骨架。 双首层连接高台与湖区地景 设置东侧二层主入口与西侧首层次入口，首层容纳文化中心共享公共服务功能。 剧场化中庭组织公共阅读 三至五层设置退台式中庭阅览大厅，西侧台阶阅览空间朝太白湖打开，二层平台承载学术、展览、交流活动。 陶棍百叶作为性能与文化界面 玻璃幕墙外覆暖灰色陶棍百叶，通过旋转渐变形成像素化半透界面，以7:2:1微差间色隐喻竹简。">
       <a href="cases/jining-library/index.html">
-        <img src="cases/jining-library/images/01_gov_library_1.jpg" alt="济宁市图书馆政府页照片" loading="lazy" />
+        <figure class="case-card-media" data-media-state>
+          <img src="cases/jining-library/images/01_gov_library_1.jpg" alt="济宁市图书馆政府页照片" loading="lazy" />
+          <span class="media-status" aria-live="polite">图片加载中</span>
+        </figure>
         <div class="project-card-body case-card-body">
-          <div class="card-meta"><span>设计时间2014-2017；竣工2018年12月；试运行2019-02-01；正式开放2019-05-01</span><span>中国</span></div>
           <h3 class="project-card-title">济宁市图书馆</h3>
           <p class="project-card-summary">济宁市图书馆把孔孟文化中的学宫、辟雍、明堂与杏坛意象，转译为九宫格结构秩序、剧场化中庭和半透陶棍界面，形成兼具城市客厅与知识圣地属性的当代公共图书馆。</p>
-          <dl class="project-card-facts">
-            <div class="project-card-fact"><dt>建筑师</dt><dd>何镜堂 / 华南理工大学建筑设计研究院有限公司</dd></div>
-            <div class="project-card-fact"><dt>类型</dt><dd>Cultural</dd></div>
-          </dl>
-          <div class="project-card-tags tag-row"><span>Cultural</span><span>文化原型转译为结构秩序</span><span>双首层连接高台与湖区地景</span></div>
+          <p class="case-card-meta">
+            <span>2014年</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>济宁，中国</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>市级综合图书馆</span>
+          </p>
         </div>
       </a>
     </article>
@@ -260,21 +182,24 @@
     <article class="project-card project-card--standard case-card"
       data-type="Cultural / civic conference building"
       data-region="中国"
+      data-status="建成并投入使用"
       data-year="2018"
       data-title="青岛国际会议中心（2018 上合组织青岛峰会主会场）"
       data-architect="华南理工大学建筑设计研究院 / 何镜堂院士团队"
       data-text="青岛国际会议中心（2018 上合组织青岛峰会主会场） 华南理工大学建筑设计研究院 / 何镜堂院士团队 中国山东青岛奥帆广场 / 奥帆中心核心区 中国 2018 cultural / civic conference building 国际会议中心 / 主场外交会议建筑 该案例把国家级会议功能、青岛山海港城格局、快速建造压力和后续城市公共使用，整合为一个兼具主场外交仪式性与海滨城市公共性的会议中心。 cultural 用场地大关系生成外交建筑的整体形象 把宏大叙事压缩到可建造的构件语言 为一次性峰会预设长期运营身份 山海轴线图 水平三段体量图 用场地大关系生成外交建筑的整体形象 强化山海轴线和港湾界面，以水平展开体量、起翘屋面和帆影柱廊回应海港环境。 把宏大叙事压缩到可建造的构件语言 通过中轴门廊、柱廊、屋面边缘和金属表皮，把文化与礼仪定位转化为少量高控制度构件。 为一次性峰会预设长期运营身份 将国事活动、旅游景点、会展会议、市民客厅等目标并置，并将建筑面向港湾展开。 在快速建造中保留材料现场校准 对“青岛金”金属板进行现场多角度比选，控制颜色与反射效果。">
       <a href="cases/qingdao-international-conference-center/index.html">
-        <img src="cases/qingdao-international-conference-center/images/01_hero_exterior.jpg" alt="青岛国际会议中心海港夜景" loading="lazy" />
+        <figure class="case-card-media" data-media-state>
+          <img src="cases/qingdao-international-conference-center/images/01_hero_exterior.jpg" alt="青岛国际会议中心海港夜景" loading="lazy" />
+          <span class="media-status" aria-live="polite">图片加载中</span>
+        </figure>
         <div class="project-card-body case-card-body">
-          <div class="card-meta"><span>2018</span><span>中国</span></div>
           <h3 class="project-card-title">青岛国际会议中心（2018 上合组织青岛峰会主会场）</h3>
           <p class="project-card-summary">该案例把国家级会议功能、青岛山海港城格局、快速建造压力和后续城市公共使用，整合为一个兼具主场外交仪式性与海滨城市公共性的会议中心。</p>
-          <dl class="project-card-facts">
-            <div class="project-card-fact"><dt>建筑师</dt><dd>华南理工大学建筑设计研究院 / 何镜堂院士团队</dd></div>
-            <div class="project-card-fact"><dt>类型</dt><dd>Cultural / civic conference building</dd></div>
-          </dl>
-          <div class="project-card-tags tag-row"><span>Cultural</span><span>用场地大关系生成外交建筑的整体形象</span><span>把宏大叙事压缩到可建造的构件语言</span></div>
+          <p class="case-card-meta">
+            <span>2018年</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>青岛，中国</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>国际会议中心</span>
+          </p>
         </div>
       </a>
     </article>
@@ -282,21 +207,24 @@
     <article class="project-card project-card--standard case-card"
       data-type="乡建 / 青少年活动营地 / 公益公共建筑"
       data-region="中国"
+      data-status="已建成并投入使用"
       data-year="2018"
       data-title="雷励贵州大项目活动营地 / raleigh campsite in guizhou"
       data-architect="华南理工大学建筑设计研究院 / 主创：张振辉、陈玮璐"
-      data-text="雷励贵州大项目活动营地 / raleigh campsite in guizhou 华南理工大学建筑设计研究院 / 主创：张振辉、陈玮璐 贵州省黔西南布依族苗族自治州贞丰县者相镇平桥村 中国 设计 2013.11；一期 2016.08；二期 2018.05 乡建 / 青少年活动营地 / 公益公共建筑 青少年公益营地、乡村活动营地、乡村图书馆、活动场地、服务设施 雷励贵州大项目活动营地把废弃乡村小学改造、轻量加建、本地材料工艺和青少年公益运营整合成一个持续服务乡村的营地系统。 乡建 青少年活动营地 公益公共建筑 以废弃乡村小学作为场地锚点 用轻量海帕膜屋面构建连续共享空间 以毛石 以废弃乡村小学作为场地锚点 保留并改造原教学楼，以其作为场地锚固点，在南侧加建多功能通用空间、户外活动场地和服务设施。 用轻量海帕膜屋面构建连续共享空间 核心多功能通用空间采用连续起伏的半透明海帕膜屋面；平面非正交划分，开间向山和村庄打开，二层平台形成微高差错动。 以毛石、竹界面和竹模板混凝土建立地方建构关系 场地以小碎石铺底利于排水；活动区采用当地毛石砌筑；多功能空间使用像素化竹界面；图书馆、厨房、盥洗区等服务体采用竹模板现浇混凝土和本地砌石工艺。 将乡村图书馆作为营地与村庄的公共接口 在营地入口与村路交接处设置乡村图书馆，由接待区和面向村庄道路的阅览室组成；两个错落半层的三角形开放框体通过小楼梯连接村道和营地两个标高。 用山坡剧场和砂砾场地支持分组与集体活动 南侧设置圆形砂砾集中活动场地；西侧山体设置毛石砌筑的半圆形台阶小剧场，收住延伸入场地的山坡。">
+      data-text="雷励贵州大项目活动营地 / raleigh campsite in guizhou 华南理工大学建筑设计研究院 / 主创：张振辉、陈玮璐 贵州省黔西南布依族苗族自治州贞丰县者相镇平桥村 中国 设计 2013.11；一期 2016.08；二期 2018.05 乡建 / 青少年活动营地 / 公益公共建筑 青少年公益营地、乡村活动营地、乡村图书馆、活动场地、服务设施 雷励贵州大项目活动营地把废弃乡村小学改造、轻量加建、本地材料工艺和青少年公益运营整合成一个持续服务乡村的营地系统。 乡建 青少年活动营地 公益公共建筑 以废弃乡村小学作为场地锚点 用轻量海帕膜屋面构建连续共享空间 以废弃乡村小学作为场地锚点 保留并改造原教学楼，以其作为场地锚固点，在南侧加建多功能通用空间、户外活动场地和服务设施。 用轻量海帕膜屋面构建连续共享空间 核心多功能通用空间采用连续起伏的半透明海帕膜屋面；平面非正交划分，开间向山和村庄打开，二层平台形成微高差错动。 以毛石、竹界面和竹模板混凝土建立地方建构关系 场地以小碎石铺底利于排水；活动区采用当地毛石砌筑；多功能空间使用像素化竹界面；图书馆、厨房、盥洗区等服务体采用竹模板现浇混凝土和本地砌石工艺。 将乡村图书馆作为营地与村庄的公共接口 在营地入口与村路交接处设置乡村图书馆，由接待区和面向村庄道路的阅览室组成；两个错落半层的三角形开放框体通过小楼梯连接村道和营地两个标高。 用山坡剧场和砂砾场地支持分组与集体活动 南侧设置圆形砂砾集中活动场地；西侧山体设置毛石砌筑的半圆形台阶小剧场，收住延伸入场地的山坡。">
       <a href="cases/raleigh-guizhou-big-project-activity-camp/index.html">
-        <img src="cases/raleigh-guizhou-big-project-activity-camp/images/01_hero_aerial.jpg" alt="项目鸟瞰图。" loading="lazy" />
+        <figure class="case-card-media" data-media-state>
+          <img src="cases/raleigh-guizhou-big-project-activity-camp/images/01_hero_aerial.jpg" alt="项目鸟瞰图。" loading="lazy" />
+          <span class="media-status" aria-live="polite">图片加载中</span>
+        </figure>
         <div class="project-card-body case-card-body">
-          <div class="card-meta"><span>设计 2013.11；一期 2016.08；二期 2018.05</span><span>中国</span></div>
           <h3 class="project-card-title">雷励贵州大项目活动营地</h3>
           <p class="project-card-summary">雷励贵州大项目活动营地把废弃乡村小学改造、轻量加建、本地材料工艺和青少年公益运营整合成一个持续服务乡村的营地系统。</p>
-          <dl class="project-card-facts">
-            <div class="project-card-fact"><dt>建筑师</dt><dd>华南理工大学建筑设计研究院 / 主创：张振辉、陈玮璐</dd></div>
-            <div class="project-card-fact"><dt>类型</dt><dd>乡建 / 青少年活动营地 / 公益公共建筑</dd></div>
-          </dl>
-          <div class="project-card-tags tag-row"><span>乡建</span><span>青少年活动营地</span><span>公益公共建筑</span></div>
+          <p class="case-card-meta">
+            <span>2013年</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>中国</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>青少年公益营地</span>
+          </p>
         </div>
       </a>
     </article>
@@ -304,21 +232,24 @@
     <article class="project-card project-card--standard case-card"
       data-type="Cultural / education / brand experience"
       data-region="丹麦"
+      data-status="Completed / open to public"
       data-year="2017"
       data-title="lego house / lego brand house"
       data-architect="big - bjarke ingels group"
       data-text="lego house / lego brand house big - bjarke ingels group billund, denmark 丹麦 2017 cultural / education / brand experience cultural experience center / brand house / family learning and play space lego house translates the logic of lego bricks into stacked public volumes, playable roof terraces, and color-coded interior learning experiences. cultural education brand experience translate brand logic into spatial rules use lego brick ratio, stacking, color, and combinatory logic to organize massing, facade order, roof terraces, and interior zones. turn the roof into a playable public terrain stack volumes to create accessible roof terraces and outdoor play surfaces. organize learning through color-coded experiential zones arrange different experience areas through themed zones, color, and paths inside the stacked building. use section to connect interior experience and exterior public space connect stacked volumes, floor heights, interior zones, and roof terraces through a continuous sectional organization.">
       <a href="cases/lego-house/index.html">
-        <img src="cases/lego-house/images/01_hero_exterior.jpg" alt="Exterior view showing stacked white LEGO-like volumes and colored roof surfaces." loading="lazy" />
+        <figure class="case-card-media" data-media-state>
+          <img src="cases/lego-house/images/01_hero_exterior.jpg" alt="Exterior view showing stacked white LEGO-like volumes and colored roof surfaces." loading="lazy" />
+          <span class="media-status" aria-live="polite">图片加载中</span>
+        </figure>
         <div class="project-card-body case-card-body">
-          <div class="card-meta"><span>2017</span><span>丹麦</span></div>
           <h3 class="project-card-title">LEGO House</h3>
           <p class="project-card-summary">LEGO House translates the logic of LEGO bricks into stacked public volumes, playable roof terraces, and color-coded interior learning experiences.</p>
-          <dl class="project-card-facts">
-            <div class="project-card-fact"><dt>建筑师</dt><dd>BIG - Bjarke Ingels Group</dd></div>
-            <div class="project-card-fact"><dt>类型</dt><dd>Cultural / education / brand experience</dd></div>
-          </dl>
-          <div class="project-card-tags tag-row"><span>Cultural</span><span>education</span><span>brand experience</span></div>
+          <p class="case-card-meta">
+            <span>2017年</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>比隆，丹麦</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>文化体验中心</span>
+          </p>
         </div>
       </a>
     </article>
@@ -326,21 +257,24 @@
     <article class="project-card project-card--standard case-card"
       data-type="Commercial complex / community public complex"
       data-region="中国"
+      data-status="建成"
       data-year="2015"
       data-title="西村大院 / west village - basis yard"
       data-architect="刘家琨 / 家琨建筑设计事务所 / jiakun architects"
       data-text="西村大院 / west village - basis yard 刘家琨 / 家琨建筑设计事务所 / jiakun architects 中国四川省成都市青羊区贝森北路1号 中国 2010.04-2015.01; media year commonly listed as 2015 commercial complex / community public complex ????? / ?????? / ?????????? ???????????????????????????????????????????????????????????????????? commercial complex ???? + ???? ???????????? ????????????? ??????? ???????? ???? + ???? ?????????????????????????????????? ???????????? ????????????????????????? ????????????? ????????????????????????????????????? ??????????? ????????????????????????????? ??????????????? ????????????????????????????????????????????????????????">
       <a href="cases/west-village-basis-yard/index.html">
-        <img src="cases/west-village-basis-yard/images/01_hero.jpg" alt="围合大院与环形步道" loading="lazy" />
+        <figure class="case-card-media" data-media-state>
+          <img src="cases/west-village-basis-yard/images/01_hero.jpg" alt="围合大院与环形步道" loading="lazy" />
+          <span class="media-status" aria-live="polite">图片加载中</span>
+        </figure>
         <div class="project-card-body case-card-body">
-          <div class="card-meta"><span>2010.04-2015.01; media year commonly listed as 2015</span><span>中国</span></div>
           <h3 class="project-card-title">西村大院</h3>
           <p class="project-card-summary">????????????????????????????????????????????????????????????????????</p>
-          <dl class="project-card-facts">
-            <div class="project-card-fact"><dt>建筑师</dt><dd>刘家琨 / 家琨建筑设计事务所 / Jiakun Architects</dd></div>
-            <div class="project-card-fact"><dt>类型</dt><dd>Commercial complex / community public complex</dd></div>
-          </dl>
-          <div class="project-card-tags tag-row"><span>Commercial complex</span><span>???? + ????</span><span>????????????</span></div>
+          <p class="case-card-meta">
+            <span>2010年</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>成都，中国</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>社区公共综合体</span>
+          </p>
         </div>
       </a>
     </article>
@@ -348,21 +282,24 @@
     <article class="project-card project-card--standard case-card"
       data-type="Cultural"
       data-region="中国"
+      data-status="建成"
       data-year="2015"
       data-title="孤独图书馆 / 海边图书馆 / seashore library"
       data-architect="vector architects / 直向建筑 / gong dong / 董功"
       data-text="孤独图书馆 / 海边图书馆 / seashore library vector architects / 直向建筑 / gong dong / 董功 中国河北秦皇岛，南戴河 / 北戴河新区阿那亚海岸社区一带 中国 2015 cultural 文化建筑；图书馆；社区公共文化设施 这个案例最值得学习的不是海边建筑如何取景，而是如何把剖面、身体移动、光、风和材料共同组织成一种可被公众持续使用的精神性空间。 cultural 以剖面生成空间关系 阅读大厅作为面海看台 用光和风细分空间性格 以剖面生成空间关系 从剖面组织阅读、冥想、活动、水吧和休息空间，用屋面弧线、看台平台和高差定义人与海的不同关系。 阅读大厅作为面海看台 设置逐级升起的平台、可开启玻璃旋转门和横向海景窗，让不同位置的人都能看到海。 用光和风细分空间性格 阅读空间使用横向窗、可开启玻璃墙、玻璃砖和屋面通风井；冥想空间使用水平与垂直窄缝；活动室使用天窗和高侧窗。 材料把场地时间转译为建构表情 使用木纹清水混凝土回应沙地上的风痕、脚印和车辙；用手工玻璃砖弱化钢桁架和墙体的硬度。 从图书馆演变为社区 freespace 在季节性开放基础上，空间被公众持续重新使用，除读书外容纳音乐、剧场、舞蹈、会议和拍摄等活动。">
       <a href="cases/seashore-library/index.html">
-        <img src="cases/seashore-library/images/01_hero_exterior.jpg" alt="面向海岸的图书馆外观" loading="lazy" />
+        <figure class="case-card-media" data-media-state>
+          <img src="cases/seashore-library/images/01_hero_exterior.jpg" alt="面向海岸的图书馆外观" loading="lazy" />
+          <span class="media-status" aria-live="polite">图片加载中</span>
+        </figure>
         <div class="project-card-body case-card-body">
-          <div class="card-meta"><span>2015</span><span>中国</span></div>
           <h3 class="project-card-title">孤独图书馆</h3>
           <p class="project-card-summary">这个案例最值得学习的不是海边建筑如何取景，而是如何把剖面、身体移动、光、风和材料共同组织成一种可被公众持续使用的精神性空间。</p>
-          <dl class="project-card-facts">
-            <div class="project-card-fact"><dt>建筑师</dt><dd>Vector Architects / 直向建筑 / Gong Dong / 董功</dd></div>
-            <div class="project-card-fact"><dt>类型</dt><dd>Cultural</dd></div>
-          </dl>
-          <div class="project-card-tags tag-row"><span>Cultural</span><span>以剖面生成空间关系</span><span>阅读大厅作为面海看台</span></div>
+          <p class="case-card-meta">
+            <span>2015年</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>秦皇岛，中国</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>文化建筑</span>
+          </p>
         </div>
       </a>
     </article>
@@ -370,21 +307,24 @@
     <article class="project-card project-card--standard case-card"
       data-type="Cultural / urban regeneration"
       data-region="中国"
+      data-status="建成"
       data-year="2014"
       data-title="泰州民俗文化展示中心 / 泰州科学发展观展示馆"
       data-architect="何镜堂 / 郭卫宏 / 张振辉 / 黄瑜 / 何炽立 / 华南理工大学建筑设计研究院"
       data-text="泰州民俗文化展示中心 / 泰州科学发展观展示馆 何镜堂 / 郭卫宏 / 张振辉 / 黄瑜 / 何炽立 / 华南理工大学建筑设计研究院 江苏省泰州市，坡子街、稻河头、五巷传统街区相关城市节点 中国 2009 设计启动；2014 建成 cultural / urban regeneration 文化展示建筑、民俗文化展示、城市更新体验区、公共活动空间 项目通过东西向轴带重新组织稻河头、五巷街区、名人旧居、高层背景和新展馆，并以石材百叶幕墙、灰调模数和消隐化绿色技术形成当代泰州建筑品相。 cultural urban regeneration 东西向叙事轴重组城市节点 南北体量差异缝合大小肌理 传统气质的当代构造转译 东西向叙事轴图 东西向叙事轴重组城市节点 从东侧进入场地，沿东西向轴带组织稻河头广场、展示馆、名人旧居和高层背景。 南北体量差异缝合大小肌理 中央水院分割南北体量，北侧小体量衔接街区，南侧较大体量回应城市界面。 传统气质的当代构造转译 将灰砖、花窗、屋脊、转角转译为石材百叶、金属花格窗、亮脊、玻璃长廊和 75mm 模数肌理。 足尺试版驱动材料决策 比较定制灰砖外墙试版和石材百叶幕墙试版，并通过多轮看样控制材料组合。 绿色技术消隐进建筑本体 把雨水、风廊庭院、地下采光通风、坡顶、外墙、开窗、光伏和地源热泵整合为非炫示系统。">
       <a href="cases/taizhou-folk-culture-exhibition-center/index.html">
-        <img src="cases/taizhou-folk-culture-exhibition-center/images/01_hero_built_views_crop.jpg" alt="从城市看建筑、序厅到长廊、中心水院等建成场景" loading="lazy" />
+        <figure class="case-card-media" data-media-state>
+          <img src="cases/taizhou-folk-culture-exhibition-center/images/01_hero_built_views_crop.jpg" alt="从城市看建筑、序厅到长廊、中心水院等建成场景" loading="lazy" />
+          <span class="media-status" aria-live="polite">图片加载中</span>
+        </figure>
         <div class="project-card-body case-card-body">
-          <div class="card-meta"><span>2009 设计启动；2014 建成</span><span>中国</span></div>
           <h3 class="project-card-title">泰州民俗文化展示中心</h3>
           <p class="project-card-summary">项目通过东西向轴带重新组织稻河头、五巷街区、名人旧居、高层背景和新展馆，并以石材百叶幕墙、灰调模数和消隐化绿色技术形成当代泰州建筑品相。</p>
-          <dl class="project-card-facts">
-            <div class="project-card-fact"><dt>建筑师</dt><dd>何镜堂 / 郭卫宏 / 张振辉 / 黄瑜 / 何炽立 / 华南理工大学建筑设计研究院</dd></div>
-            <div class="project-card-fact"><dt>类型</dt><dd>Cultural / urban regeneration</dd></div>
-          </dl>
-          <div class="project-card-tags tag-row"><span>Cultural</span><span>urban regeneration</span><span>东西向叙事轴重组城市节点</span></div>
+          <p class="case-card-meta">
+            <span>2009年</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>泰州，中国</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>文化展示建筑</span>
+          </p>
         </div>
       </a>
     </article>
@@ -392,21 +332,24 @@
     <article class="project-card project-card--standard case-card"
       data-type="Cultural / exposition pavilion / adaptive reuse"
       data-region="中国"
+      data-status="建成；世博会后保留并改作中华艺术宫"
       data-year="2012"
       data-title="上海世博会中国馆 / 中国2010年上海世博会中国国家馆"
       data-architect="何镜堂团队 / 清华大学团队 / 上海民用建筑设计院 / 联合设计团队"
       data-text="上海世博会中国馆 / 中国2010年上海世博会中国国家馆 何镜堂团队 / 清华大学团队 / 上海民用建筑设计院 / 联合设计团队 中国上海，上海世博园区，浦东上南路 205 号一带 中国 2007 竞赛与开工；2010 世博会使用；2012 改作中华艺术宫开放 cultural / exposition pavilion / adaptive reuse 国家展馆、地区馆、文化展示、世博后再利用美术馆 中国馆把国家象征、世博大客流、展陈平层需求、屋顶园林、红色幕墙试板和地铁下穿约束组织成从概念到建造连续桥接的文化展示建筑。 cultural exposition pavilion adaptive reuse 公众事件中的方案整合 南入口礼仪轴线 展陈需求倒逼剖面重组 公众事件中的方案整合 通过竞赛、并列第一、联合设计和多轮汇报，把何镜堂团队方案与清华方案资源整合为定稿。 南入口礼仪轴线 将主入口改为南入口，设置大台阶和裙房拱卫，并形成与世博轴平行的中轴格局。 展陈需求倒逼剖面重组 将国家馆调整为三层集中平层大空间，缩减中庭，并设置外围观景坡道。 屋顶平台景观化 以“新九洲清晏”为主题整合地貌、水面、树木、桥径和集散场地。 中国红外墙足尺试板 组织专家委员会和幕墙企业进行四轮 1:1 挂板实验，最终确定红色铝板及 2.7 米分模数控制。">
       <a href="cases/shanghai-expo-china-pavilion/index.html">
-        <img src="cases/shanghai-expo-china-pavilion/images/01_hero_built_views_crop.jpg" alt="从城市开放空间、新九洲清晏和近观视角看中国馆" loading="lazy" />
+        <figure class="case-card-media" data-media-state>
+          <img src="cases/shanghai-expo-china-pavilion/images/01_hero_built_views_crop.jpg" alt="从城市开放空间、新九洲清晏和近观视角看中国馆" loading="lazy" />
+          <span class="media-status" aria-live="polite">图片加载中</span>
+        </figure>
         <div class="project-card-body case-card-body">
-          <div class="card-meta"><span>2007 竞赛与开工；2010 世博会使用；2012 改作中华艺术宫开放</span><span>中国</span></div>
           <h3 class="project-card-title">上海世博会中国馆</h3>
           <p class="project-card-summary">中国馆把国家象征、世博大客流、展陈平层需求、屋顶园林、红色幕墙试板和地铁下穿约束组织成从概念到建造连续桥接的文化展示建筑。</p>
-          <dl class="project-card-facts">
-            <div class="project-card-fact"><dt>建筑师</dt><dd>何镜堂团队 / 清华大学团队 / 上海民用建筑设计院 / 联合设计团队</dd></div>
-            <div class="project-card-fact"><dt>类型</dt><dd>Cultural / exposition pavilion / adaptive reuse</dd></div>
-          </dl>
-          <div class="project-card-tags tag-row"><span>Cultural</span><span>exposition pavilion</span><span>adaptive reuse</span></div>
+          <p class="case-card-meta">
+            <span>2007年</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>上海，中国</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>国家展馆</span>
+          </p>
         </div>
       </a>
     </article>
@@ -414,21 +357,24 @@
     <article class="project-card project-card--standard case-card"
       data-type="Cultural"
       data-region="中国"
+      data-status="已建成并开馆"
       data-year="2011"
       data-title="泰州科学发展观展示馆 / 泰州（中国）科学发展观展示中心"
       data-architect="何镜堂 / 华南理工大学建筑设计研究院"
       data-text="泰州科学发展观展示馆 / 泰州（中国）科学发展观展示中心 何镜堂 / 华南理工大学建筑设计研究院 中国江苏省泰州市，稻河历史文化街区南面，西到青年路，东到稻河，南到东进西路 中国 2010 年 3 月投资建设；2011 年 8 月 12 日竣工开馆 cultural 科学发展观主题展示馆 / 纪念展示建筑 / 绿色公共建筑 泰州科学发展观展示馆把主题展示、稻河历史街区、多儿巷一号故居、中央水庭和绿色技术整合成一条有起承转合的参观叙事。 cultural 用参观序列整合主题展示与历史节点 中央水庭作为尺度转换和空间锚点 民居构件的现代建筑语法转译 旧城边界关系图 参观序列图 用参观序列整合主题展示与历史节点 以序厅、水庭、滨水玻璃长廊、室外展示区、多儿巷一号和民居群组织逐层递进的参观路径。 中央水庭作为尺度转换和空间锚点 以南北两组宅院交融的展厅建筑凸显长达百米的中央水庭，并通过滨水玻璃长廊导引参观。 民居构件的现代建筑语法转译 将黛瓦灰墙青砖色调、左右逢源、灰砖尺度、堆瓦窗花和淮脊空隙分别转译为色彩、钢构架、7.5 公分横向肌理、几何钢架和屋脊长条空隙。 绿色技术嵌入主题表达 采用自然采光、下沉绿化庭院、雨水收集、太阳能利用、屋面遮阳板与光伏结合、双层中空玻璃等策略；补充资料还提到地源热泵、绿色照明和透水地面。">
       <a href="cases/taizhou-scientific-outlook-exhibition-hall/index.html">
-        <img src="cases/taizhou-scientific-outlook-exhibition-hall/images/01_hero_exterior.jpg" alt="中央水庭与滨水玻璃长廊参观照片" loading="lazy" />
+        <figure class="case-card-media" data-media-state>
+          <img src="cases/taizhou-scientific-outlook-exhibition-hall/images/01_hero_exterior.jpg" alt="中央水庭与滨水玻璃长廊参观照片" loading="lazy" />
+          <span class="media-status" aria-live="polite">图片加载中</span>
+        </figure>
         <div class="project-card-body case-card-body">
-          <div class="card-meta"><span>2010 年 3 月投资建设；2011 年 8 月 12 日竣工开馆</span><span>中国</span></div>
           <h3 class="project-card-title">泰州科学发展观展示馆</h3>
           <p class="project-card-summary">泰州科学发展观展示馆把主题展示、稻河历史街区、多儿巷一号故居、中央水庭和绿色技术整合成一条有起承转合的参观叙事。</p>
-          <dl class="project-card-facts">
-            <div class="project-card-fact"><dt>建筑师</dt><dd>何镜堂 / 华南理工大学建筑设计研究院</dd></div>
-            <div class="project-card-fact"><dt>类型</dt><dd>Cultural</dd></div>
-          </dl>
-          <div class="project-card-tags tag-row"><span>Cultural</span><span>用参观序列整合主题展示与历史节点</span><span>中央水庭作为尺度转换和空间锚点</span></div>
+          <p class="case-card-meta">
+            <span>2010年</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>泰州，中国</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>科学发展观主题展示馆</span>
+          </p>
         </div>
       </a>
     </article>
@@ -436,21 +382,24 @@
     <article class="project-card project-card--standard case-card"
       data-type="Cultural"
       data-region="中国"
+      data-status="建成"
       data-year="2011"
       data-title="安徽省博物院新馆 / 安徽省博物馆新馆"
       data-architect="华南理工大学建筑设计研究院 / 何镜堂 / 刘宇波 / 张振辉 / 梁玮健"
       data-text="安徽省博物院新馆 / 安徽省博物馆新馆 华南理工大学建筑设计研究院 / 何镜堂 / 刘宇波 / 张振辉 / 梁玮健 中国安徽省合肥市政务文化新区，省文化博物园区 中国 设计 2006-2009；竣工 2011（需以《建筑学报》原文复核） cultural 省级博物馆 / 文化建筑 该项目把“四水归堂”的院落原型转译为开放中庭、片墙和垂直游线系统，以回应省级博物馆的公共性与安徽地域文化表达。 cultural 地域文化扩容 四水归堂转译为公共中庭 片墙夹持的垂直游线 地域文化扩容图 文化园区品字形布局图 地域文化扩容 从安徽承东启西、连南接北的区位和多元文化构成出发，提炼雄浑敦厚与温文秀雅并存的建筑气质。 四水归堂转译为公共中庭 在建筑核心形成向天开敞的公共大厅，并以转折、勾连、错动、交叠的通高片墙限定空间。 片墙夹持的垂直游线 自动扶梯布置在片墙夹持、天光引导的“窄巷”中，环绕盘旋抵达各层。 内外材料分层表达 外表面采用青铜纹理，内表面采用木质衬里。">
       <a href="cases/anhui-museum-new-building-hgad/index.html">
-        <img src="cases/anhui-museum-new-building-hgad/images/01_hero_exterior.jpg" alt="安徽省博物院新馆外观识别图" loading="lazy" />
+        <figure class="case-card-media" data-media-state>
+          <img src="cases/anhui-museum-new-building-hgad/images/01_hero_exterior.jpg" alt="安徽省博物院新馆外观识别图" loading="lazy" />
+          <span class="media-status" aria-live="polite">图片加载中</span>
+        </figure>
         <div class="project-card-body case-card-body">
-          <div class="card-meta"><span>设计 2006-2009；竣工 2011（需以《建筑学报》原文复核）</span><span>中国</span></div>
           <h3 class="project-card-title">安徽省博物院新馆</h3>
           <p class="project-card-summary">该项目把“四水归堂”的院落原型转译为开放中庭、片墙和垂直游线系统，以回应省级博物馆的公共性与安徽地域文化表达。</p>
-          <dl class="project-card-facts">
-            <div class="project-card-fact"><dt>建筑师</dt><dd>华南理工大学建筑设计研究院 / 何镜堂 / 刘宇波 / 张振辉 / 梁玮健</dd></div>
-            <div class="project-card-fact"><dt>类型</dt><dd>Cultural</dd></div>
-          </dl>
-          <div class="project-card-tags tag-row"><span>Cultural</span><span>地域文化扩容</span><span>四水归堂转译为公共中庭</span></div>
+          <p class="case-card-meta">
+            <span>2006年</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>合肥，中国</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>省级博物馆</span>
+          </p>
         </div>
       </a>
     </article>
@@ -458,21 +407,24 @@
     <article class="project-card project-card--standard case-card"
       data-type="Cultural"
       data-region="中国"
+      data-status="completed; opened to the public in October 2006"
       data-year="2006"
       data-title="苏州博物馆新馆 / suzhou museum"
       data-architect="i. m. pei architect / pei partnership architects"
       data-text="苏州博物馆新馆 / suzhou museum i. m. pei architect / pei partnership architects 江苏省苏州市姑苏区东北街与齐门路交汇处，邻近忠王府、拙政园与狮子林 中国 2006 cultural 文化建筑 / 博物馆 苏州博物馆新馆以低矮院落化布局、黑白灰材料转译、几何屋面和自然光，把苏州传统园林与民居语汇转化为现代公共文化建筑语言。 cultural 历史街区中的低矮分块尺度 传统符号的现代材料转译 院落与水景作为建筑和园林的中介 场地敏感性图 三路布局图 历史街区中的低矮分块尺度 主体以地下一层、地面一层为主，局部二层；建筑群分为中、西、东三路并组织庭院。 传统符号的现代材料转译 延续粉墙黛瓦的黑白灰关系，用“中国黑”花岗石、玻璃天窗和开放式钢结构重构屋面与立面。 院落与水景作为建筑和园林的中介 以主庭院和若干小内庭院组织建筑，使用池塘、片石假山、桥、亭和竹林形成现代山水园。 自然光作为空间组织材料 通过玻璃天窗、几何屋顶、遮光条和斜角窗导入并调节自然光。 从街道到门庭的公共性过渡 入口采用玻璃重檐和金属梁架，并建议将临馆东北街改为步行街、以金山石铺地。">
       <a href="cases/suzhou-museum-new/index.html">
-        <img src="cases/suzhou-museum-new/images/01_hero_courtyard_and_materials.jpg" alt="庭院、采光、屋面与石材构造的组合表达" loading="lazy" />
+        <figure class="case-card-media" data-media-state>
+          <img src="cases/suzhou-museum-new/images/01_hero_courtyard_and_materials.jpg" alt="庭院、采光、屋面与石材构造的组合表达" loading="lazy" />
+          <span class="media-status" aria-live="polite">图片加载中</span>
+        </figure>
         <div class="project-card-body case-card-body">
-          <div class="card-meta"><span>2006</span><span>中国</span></div>
           <h3 class="project-card-title">苏州博物馆新馆</h3>
           <p class="project-card-summary">苏州博物馆新馆以低矮院落化布局、黑白灰材料转译、几何屋面和自然光，把苏州传统园林与民居语汇转化为现代公共文化建筑语言。</p>
-          <dl class="project-card-facts">
-            <div class="project-card-fact"><dt>建筑师</dt><dd>I. M. Pei Architect / Pei Partnership Architects</dd></div>
-            <div class="project-card-fact"><dt>类型</dt><dd>Cultural</dd></div>
-          </dl>
-          <div class="project-card-tags tag-row"><span>Cultural</span><span>历史街区中的低矮分块尺度</span><span>传统符号的现代材料转译</span></div>
+          <p class="case-card-meta">
+            <span>2006年</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>苏州，中国</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>文化建筑</span>
+          </p>
         </div>
       </a>
     </article>
@@ -480,32 +432,112 @@
     <article class="project-card project-card--standard case-card"
       data-type="Renovation / housing / urban renewal"
       data-region="中国"
+      data-status="已建成；PDF未列明竣工年份"
       data-year="2004"
       data-title="广州市越秀区解放中路旧城改造"
       data-architect="张振辉及设计团队（pdf未列明事务所全称）"
-      data-text="广州市越秀区解放中路旧城改造 张振辉及设计团队（pdf未列明事务所全称） 中国广东省广州市越秀区解放中路 中国 2004启动；竣工年份未在pdf中确认 renovation / housing / urban renewal 旧城改造、回迁住宅、沿街商业、保留建筑修复 解放中路旧城改造把政府主导、居民回迁、保留老建筑、延续街巷肌理等复杂条件，转化为街巷结构、标准户型原型和品相对等的建造语言。 renovation housing urban renewal 以街巷结构作为旧城更新底线 用标准户型原型吸收复杂变化 在规范 以街巷结构作为旧城更新底线 总体布局延续并发展原有街巷结构；后续增加住宅量时仍维护保留建筑的城市道路可见性。 用标准户型原型吸收复杂变化 发展一梯两户标准户型单元，以厨厕和生活阳台组成服务模块，以卧室条带调节面积，并以入户阳台和楼梯组合形成交往空间。 在规范、密度和肌理之间做综合调停 通过沿边界错动组合、面向保留建筑退台、局部防火墙等措施满足规范，同时维护总体规划结构。 以品相对等替代仿古或强对比 住宅采用灰白品相，商业体量使用钢、玻璃、木百叶；立面通过窗洞、阳台、挑台、窗框、栏杆和滴水线等细部组织与生活内容关联。">
+      data-text="广州市越秀区解放中路旧城改造 张振辉及设计团队（pdf未列明事务所全称） 中国广东省广州市越秀区解放中路 中国 2004启动；竣工年份未在pdf中确认 renovation / housing / urban renewal 旧城改造、回迁住宅、沿街商业、保留建筑修复 解放中路旧城改造把政府主导、居民回迁、保留老建筑、延续街巷肌理等复杂条件，转化为街巷结构、标准户型原型和品相对等的建造语言。 renovation housing urban renewal 以街巷结构作为旧城更新底线 用标准户型原型吸收复杂变化 在规范、密度和肌理之间做综合调停 以街巷结构作为旧城更新底线 总体布局延续并发展原有街巷结构；后续增加住宅量时仍维护保留建筑的城市道路可见性。 用标准户型原型吸收复杂变化 发展一梯两户标准户型单元，以厨厕和生活阳台组成服务模块，以卧室条带调节面积，并以入户阳台和楼梯组合形成交往空间。 在规范、密度和肌理之间做综合调停 通过沿边界错动组合、面向保留建筑退台、局部防火墙等措施满足规范，同时维护总体规划结构。 以品相对等替代仿古或强对比 住宅采用灰白品相，商业体量使用钢、玻璃、木百叶；立面通过窗洞、阳台、挑台、窗框、栏杆和滴水线等细部组织与生活内容关联。">
       <a href="cases/guangzhou-jiefang-middle-road-old-city-renewal/index.html">
-        <img src="cases/guangzhou-jiefang-middle-road-old-city-renewal/images/01_hero_old_new_city_context.jpg" alt="新住宅、保留建筑与传统街巷共同形成的生活场景" loading="lazy" />
+        <figure class="case-card-media" data-media-state>
+          <img src="cases/guangzhou-jiefang-middle-road-old-city-renewal/images/01_hero_old_new_city_context.jpg" alt="新住宅、保留建筑与传统街巷共同形成的生活场景" loading="lazy" />
+          <span class="media-status" aria-live="polite">图片加载中</span>
+        </figure>
         <div class="project-card-body case-card-body">
-          <div class="card-meta"><span>2004启动；竣工年份未在PDF中确认</span><span>中国</span></div>
           <h3 class="project-card-title">广州市越秀区解放中路旧城改造</h3>
           <p class="project-card-summary">解放中路旧城改造把政府主导、居民回迁、保留老建筑、延续街巷肌理等复杂条件，转化为街巷结构、标准户型原型和品相对等的建造语言。</p>
-          <dl class="project-card-facts">
-            <div class="project-card-fact"><dt>建筑师</dt><dd>张振辉及设计团队（PDF未列明事务所全称）</dd></div>
-            <div class="project-card-fact"><dt>类型</dt><dd>Renovation / housing / urban renewal</dd></div>
-          </dl>
-          <div class="project-card-tags tag-row"><span>Renovation</span><span>housing</span><span>urban renewal</span></div>
+          <p class="case-card-meta">
+            <span>2004年</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>广州，中国</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>旧城改造</span>
+          </p>
         </div>
       </a>
     </article>
     </div>
         <div id="emptyState" class="empty-state" hidden>
           <h3>没有找到匹配案例</h3>
-          <p>请调整搜索词或筛选条件。</p>
+          <p>请调整搜索词或筛选条件，或清除已选条件后重试。</p>
         </div>
+      </section>
+
+      <section id="featured" class="section-block">
+        <div class="section-heading"><p class="eyebrow">FEATURED RESEARCH</p><h2>精选研究</h2><p>从一项案例进入概念、空间、建造与证据之间的完整阅读。</p></div>
+        <div class="featured-grid">
+    <article class="project-card project-card--featured featured-card">
+      <a href="cases/guangzhou-jiefang-middle-road-old-city-renewal/index.html">
+        <figure class="case-card-media" data-media-state>
+          <img src="cases/guangzhou-jiefang-middle-road-old-city-renewal/images/01_hero_old_new_city_context.jpg" alt="新住宅、保留建筑与传统街巷共同形成的生活场景" loading="lazy" />
+          <span class="media-status" aria-live="polite">图片加载中</span>
+        </figure>
+        <div class="project-card-body case-card-body">
+          <h3 class="project-card-title">广州市越秀区解放中路旧城改造</h3>
+          <p class="project-card-summary">解放中路旧城改造把政府主导、居民回迁、保留老建筑、延续街巷肌理等复杂条件，转化为街巷结构、标准户型原型和品相对等的建造语言。</p>
+          <p class="case-card-meta">
+            <span>2004年</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>广州，中国</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>旧城改造</span>
+          </p>
+        </div>
+      </a>
+    </article>
+    
+    <article class="project-card project-card--featured featured-card featured-card--reverse">
+      <a href="cases/shanghai-expo-china-pavilion/index.html">
+        <figure class="case-card-media" data-media-state>
+          <img src="cases/shanghai-expo-china-pavilion/images/01_hero_built_views_crop.jpg" alt="从城市开放空间、新九洲清晏和近观视角看中国馆" loading="lazy" />
+          <span class="media-status" aria-live="polite">图片加载中</span>
+        </figure>
+        <div class="project-card-body case-card-body">
+          <h3 class="project-card-title">上海世博会中国馆</h3>
+          <p class="project-card-summary">中国馆把国家象征、世博大客流、展陈平层需求、屋顶园林、红色幕墙试板和地铁下穿约束组织成从概念到建造连续桥接的文化展示建筑。</p>
+          <p class="case-card-meta">
+            <span>2007年</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>上海，中国</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>国家展馆</span>
+          </p>
+        </div>
+      </a>
+    </article>
+    
+    <article class="project-card project-card--featured featured-card">
+      <a href="cases/taizhou-folk-culture-exhibition-center/index.html">
+        <figure class="case-card-media" data-media-state>
+          <img src="cases/taizhou-folk-culture-exhibition-center/images/01_hero_built_views_crop.jpg" alt="从城市看建筑、序厅到长廊、中心水院等建成场景" loading="lazy" />
+          <span class="media-status" aria-live="polite">图片加载中</span>
+        </figure>
+        <div class="project-card-body case-card-body">
+          <h3 class="project-card-title">泰州民俗文化展示中心</h3>
+          <p class="project-card-summary">项目通过东西向轴带重新组织稻河头、五巷街区、名人旧居、高层背景和新展馆，并以石材百叶幕墙、灰调模数和消隐化绿色技术形成当代泰州建筑品相。</p>
+          <p class="case-card-meta">
+            <span>2009年</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>泰州，中国</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>文化展示建筑</span>
+          </p>
+        </div>
+      </a>
+    </article>
+    
+    <article class="project-card project-card--featured featured-card featured-card--reverse">
+      <a href="cases/suzhou-museum-new/index.html">
+        <figure class="case-card-media" data-media-state>
+          <img src="cases/suzhou-museum-new/images/01_hero_courtyard_and_materials.jpg" alt="庭院、采光、屋面与石材构造的组合表达" loading="lazy" />
+          <span class="media-status" aria-live="polite">图片加载中</span>
+        </figure>
+        <div class="project-card-body case-card-body">
+          <h3 class="project-card-title">苏州博物馆新馆</h3>
+          <p class="project-card-summary">苏州博物馆新馆以低矮院落化布局、黑白灰材料转译、几何屋面和自然光，把苏州传统园林与民居语汇转化为现代公共文化建筑语言。</p>
+          <p class="case-card-meta">
+            <span>2006年</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>苏州，中国</span><i class="case-card-meta-separator" aria-hidden="true"></i>
+            <span>文化建筑</span>
+          </p>
+        </div>
+      </a>
+    </article>
+    </div>
       </section>
     </main>
     
-<script src="./assets/app.js?v=b5a24fa73b"></script>
+<script src="./assets/app.js?v=57286f8826"></script>
 </body>
 </html>
