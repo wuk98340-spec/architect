@@ -1,0 +1,48 @@
+{
+  "version": "2.0",
+  "$schema": "https://framework-1258016615.tcloudbaseapp.com/schema/latest.json",
+  "envId": "{{env.ENV_ID}}",
+  "framework": {
+    "name": "architect-case-library",
+    "plugins": {
+      "cloudrun": {
+        "use": "@cloudbase/framework-plugin-container",
+        "inputs": {
+          "serviceName": "architect-case-library",
+          "servicePath": "/",
+          "localPath": "./",
+          "uploadType": "package",
+          "dockerfilePath": "./Dockerfile",
+          "containerPort": 8080,
+          "isPublic": true,
+          "mode": "low-cost",
+          "cpu": 1,
+          "mem": 2,
+          "maxNum": 1,
+          "envVariables": {
+            "ARCHITECT_API_HOST": "0.0.0.0",
+            "ARCHITECT_DATA_ROOT": "/var/data",
+            "ARCHITECT_JOBS_ROOT": "/var/data/worker-jobs",
+            "ARCHITECT_CASE_PACKAGES_ROOT": "/var/data/case-packages",
+            "ARCHITECT_LLM_PROVIDER": "deepseek",
+            "ARCHITECT_LLM_MODEL": "deepseek-v4-flash",
+            "DEEPSEEK_BASE_URL": "https://api.deepseek.com",
+            "ARCHITECT_LLM_TIMEOUT_SECONDS": "90",
+            "ARCHITECT_LLM_MAX_TOKENS": "16000"
+          },
+          "volumeMounts": {
+            "/var/data": "architect-case-library-cfs"
+          }
+        }
+      }
+    },
+    "requirement": {
+      "addons": [
+        {
+          "type": "CFS",
+          "name": "architect-case-library-cfs"
+        }
+      ]
+    }
+  }
+}

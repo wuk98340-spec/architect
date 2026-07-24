@@ -1,0 +1,16 @@
+.git
+.github
+.vscode
+.idea
+__pycache__
+*.py[cod]
+.pytest_cache
+.env
+.env.*
+!ARCHITECT_skill/worker_runtime/.env.example
+tmp
+temp
+recovery-backups
+architecture-case-site-v2
+architecture-case-site/design-qa-*.png
+case-packages/**/revisions
