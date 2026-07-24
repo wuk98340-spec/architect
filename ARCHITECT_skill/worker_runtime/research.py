@@ -719,7 +719,8 @@ def ensure_selected_images_embedded(markdown: str, case_json: dict[str, Any]) ->
     additions = ["## 图像证据补充", "以下图片由研究链路自动补入，以保持结构化图片记录与正文同步。"]
     for image in missing:
         caption = str(image.get("caption") or image.get("recommended_use") or "研究图片").strip()
-        additions.append(f"![{caption}]({str(image['file_name']).replace('\\\\', '/')})")
+        file_name = str(image["file_name"]).replace("\\", "/").strip()
+        additions.append(f"![{caption}]({file_name})")
     return markdown.strip() + "\n\n" + "\n\n".join(additions) + "\n"
 
 
