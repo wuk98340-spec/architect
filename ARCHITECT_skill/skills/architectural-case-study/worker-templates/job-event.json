@@ -1,0 +1,12 @@
+{
+  "event_id": "evt_01j6n6h7n9q5b8u2d7m4p1a6c3",
+  "job_id": "job_01j6n6g5v1f7n3q0zz0b3y8g8x",
+  "attempt": 1,
+  "state": "disambiguating",
+  "type": "stage_started",
+  "message": "正在核验项目身份与候选来源。",
+  "details": {
+    "artifact_path": "artifacts/disambiguation.json"
+  },
+  "occurred_at": "2026-07-23T10:02:00Z"
+}

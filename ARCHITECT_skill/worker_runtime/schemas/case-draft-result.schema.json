@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Architecture Case Draft Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["case_json", "case_md"],
+  "properties": {
+    "case_json": {
+      "type": "object",
+      "description": "The candidate case.json object. It is validated again against the canonical case-package schema."
+    },
+    "case_md": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The matching case.md document."
+    }
+  }
+}

@@ -1,0 +1,33 @@
+services:
+  - type: web
+    name: architect-case-library
+    runtime: python
+    plan: starter
+    buildCommand: pip install -r ARCHITECT_skill/worker_runtime/requirements.txt
+    startCommand: cd ARCHITECT_skill && python -m backend_api.render_start
+    healthCheckPath: /healthz
+    envVars:
+      - key: ARCHITECT_API_HOST
+        value: 0.0.0.0
+      - key: ARCHITECT_DATA_ROOT
+        value: /var/data
+      - key: ARCHITECT_JOBS_ROOT
+        value: /var/data/worker-jobs
+      - key: ARCHITECT_CASE_PACKAGES_ROOT
+        value: /var/data/case-packages
+      - key: ARCHITECT_LLM_PROVIDER
+        value: deepseek
+      - key: ARCHITECT_LLM_MODEL
+        value: deepseek-v4-flash
+      - key: DEEPSEEK_BASE_URL
+        value: https://api.deepseek.com
+      - key: ARCHITECT_LLM_TIMEOUT_SECONDS
+        value: "90"
+      - key: ARCHITECT_LLM_MAX_TOKENS
+        value: "16000"
+      - key: DEEPSEEK_API_KEY
+        sync: false
+    disk:
+      name: architect-library-data
+      mountPath: /var/data
+      sizeGB: 10

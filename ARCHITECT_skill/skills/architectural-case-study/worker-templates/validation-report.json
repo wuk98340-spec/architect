@@ -1,0 +1,19 @@
+{
+  "job_id": "job_01j6n6g5v1f7n3q0zz0b3y8g8x",
+  "package_slug": "suzhou-museum-new",
+  "validator": {
+    "command": "python ARCHITECT_skill/skills/architectural-case-study/scripts/validate_case_package.py <package-path>",
+    "exit_code": 0,
+    "warnings": [],
+    "errors": []
+  },
+  "quality_review": {
+    "command": "python ARCHITECT_skill/skills/architectural-case-study/scripts/check_case_package.py <package-path> --output <report-path>",
+    "exit_code": 0,
+    "score": 84.0,
+    "grade": "B publishable with minor review",
+    "report_path": "artifacts/quality-report.md"
+  },
+  "passed_for_review": true,
+  "completed_at": "2026-07-23T10:15:00Z"
+}

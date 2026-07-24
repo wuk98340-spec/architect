@@ -7,6 +7,7 @@ import html
 import argparse
 import hashlib
 import json
+import os
 import re
 import shutil
 import sys
@@ -48,6 +49,7 @@ def main() -> int:
     for case in cases:
         build_case_page(case)
     write_index(cases)
+    write_preview()
     return 0
 
 
@@ -72,8 +74,8 @@ def load_config() -> dict[str, Any]:
 def configure_paths(config: dict[str, Any]) -> None:
     global CASE_ROOT, SITE_ROOT, ASSET_DIR, CASE_SITE_DIR, FEATURED_SLUGS
     config_dir = Path(str(config["_config_path"])).parent
-    case_packages_dir = Path(str(config.get("casePackagesDir") or ""))
-    output_dir = Path(str(config.get("outputDir") or "public"))
+    case_packages_dir = Path(os.environ.get("ARCHITECT_CASE_PACKAGES_ROOT", str(config.get("casePackagesDir") or "")))
+    output_dir = Path(os.environ.get("ARCHITECT_STATIC_ROOT", str(config.get("outputDir") or "public")))
     CASE_ROOT = case_packages_dir if case_packages_dir.is_absolute() else config_dir / case_packages_dir
     SITE_ROOT = output_dir if output_dir.is_absolute() else config_dir / output_dir
     ASSET_DIR = SITE_ROOT / "assets"
@@ -765,8 +767,15 @@ def write_index(cases: list[dict[str, Any]]) -> None:
     body = f"""
     <header class="site-header home-header">
       <a class="brand" href="#"><span>ARCHITECT</span><strong>建筑案例研究库</strong></a>
+      <form class="header-search" id="headerSearchForm" role="search">
+        <label class="sr-only" for="caseSearch">搜索案例</label>
+        <span class="header-search-icon" aria-hidden="true">⌕</span>
+        <input id="caseSearch" name="q" type="search" autocomplete="off" placeholder="搜索项目、建筑师、地点或年份" />
+        <button type="submit">搜索</button>
+      </form>
       <nav class="home-nav" aria-label="首页导航"><a href="#cases">案例库</a><a href="#featured">精选研究</a></nav>
     </header>
+    <div id="researchStatus" class="research-status" aria-live="polite" hidden></div>
     <main class="home-main">
       <section class="hero hero--archive" aria-labelledby="home-title">
         <div class="hero-copy">
@@ -796,6 +805,20 @@ def write_index(cases: list[dict[str, Any]]) -> None:
     </main>
     """
     (SITE_ROOT / "index.html").write_text(page_shell("建筑案例研究", body, 0), encoding="utf-8")
+
+
+def write_preview() -> None:
+    body = """
+    <header class="site-header detail-header preview-header">
+      <a class="brand" href="index.html"><span>ARCHITECT</span><strong>建筑案例研究库</strong></a>
+      <nav aria-label="预览导航"><a href="index.html">返回案例库</a></nav>
+    </header>
+    <main id="casePreview" class="preview-main" aria-live="polite">
+      <p class="preview-loading">正在读取案例预览。</p>
+    </main>
+    <script src="./assets/preview.js"></script>
+    """
+    (SITE_ROOT / "preview.html").write_text(page_shell("案例预览", body, 0), encoding="utf-8")
 
 
 def render_case_card(case: dict[str, Any], variant: str = "standard", index: int = 0) -> str:
@@ -920,6 +943,7 @@ def render_timeline_card(case: dict[str, Any]) -> str:
 def write_assets() -> None:
     shutil.copy2(SOURCE_DIR / "styles.css", ASSET_DIR / "styles.css")
     shutil.copy2(SOURCE_DIR / "app.js", ASSET_DIR / "app.js")
+    shutil.copy2(SOURCE_DIR / "preview.js", ASSET_DIR / "preview.js")
     source_images = SOURCE_DIR / "assets"
     if source_images.exists():
         shutil.copytree(source_images, ASSET_DIR / "images", dirs_exist_ok=True)
@@ -928,7 +952,7 @@ def write_assets() -> None:
 def page_shell(title: str, body: str, depth: int) -> str:
     prefix = "./" if depth == 0 else "../" * depth
     asset_hash = hashlib.sha256(
-        (SOURCE_DIR / "styles.css").read_bytes() + (SOURCE_DIR / "app.js").read_bytes()
+        (SOURCE_DIR / "styles.css").read_bytes() + (SOURCE_DIR / "app.js").read_bytes() + (SOURCE_DIR / "preview.js").read_bytes()
     ).hexdigest()[:10]
     template = (TEMPLATE_DIR / "page.html").read_text(encoding="utf-8")
     return (
@@ -975,7 +999,11 @@ def pick_cover(gallery: list[dict[str, Any]]) -> dict[str, Any] | None:
 def image_tag(image: dict[str, Any], prefix: str, loading: str = "lazy") -> str:
     src = prefix + image["src"]
     alt = clean(image.get("caption")) or "architecture case image"
-    return f'<img src="{esc(src)}" alt="{esc(alt)}" loading="{esc(loading)}" />'
+    file_name = Path(clean(image.get("src"))).name
+    return (
+        f'<img src="{esc(src)}" alt="{esc(alt)}" loading="{esc(loading)}" '
+        f'data-image-file="{esc(file_name)}" />'
+    )
 
 
 def tag_html(tags: list[str]) -> str:

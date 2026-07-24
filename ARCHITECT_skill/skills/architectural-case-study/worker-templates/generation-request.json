@@ -1,0 +1,25 @@
+{
+  "job_id": "job_01j6n6g5v1f7n3q0zz0b3y8g8x",
+  "idempotency_key": "editor_42_2026-07-23_suzhou-museum",
+  "mode": "generate",
+  "requested_by": {
+    "user_id": "editor_42",
+    "role": "editor"
+  },
+  "project": {
+    "query": "苏州博物馆新馆，贝聿铭，苏州",
+    "architect_or_studio": "贝聿铭建筑师事务所",
+    "location_hint": "中国江苏省苏州市",
+    "year_hint": "2006",
+    "case_type_hint": "cultural"
+  },
+  "research_options": {
+    "language": "zh-CN",
+    "source_mode": "web",
+    "allow_web_supplementation": true,
+    "image_mode": "research_download",
+    "public_image_default": "review_required"
+  },
+  "input_files": [],
+  "requested_at": "2026-07-23T10:00:00Z"
+}

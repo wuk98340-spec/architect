@@ -1,0 +1,20 @@
+{
+  "job_id": "job_01j6n6g5v1f7n3q0zz0b3y8g8x",
+  "status": "confirmation_required",
+  "candidates": [
+    {
+      "candidate_id": "suzhou-museum-new-2006",
+      "project_name": "苏州博物馆新馆 / Suzhou Museum New",
+      "location": "中国江苏省苏州市",
+      "architect_or_studio": "I. M. Pei Architect",
+      "year": "2006",
+      "case_type": "cultural",
+      "source_urls": [
+        "https://example.org/official-project"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "confirmation_question": "请确认是否研究苏州博物馆新馆（2006 年建成）。",
+  "created_at": "2026-07-23T10:03:00Z"
+}
