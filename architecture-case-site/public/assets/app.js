@@ -1,5 +1,7 @@
 (function () {
   const search = document.querySelector('#caseSearch');
+  const headerSearchForm = document.querySelector('#headerSearchForm');
+  const researchStatus = document.querySelector('#researchStatus');
   const cards = Array.from(document.querySelectorAll('.case-card'));
   const sortSelect = document.querySelector('#sortSelect');
   const empty = document.querySelector('#emptyState');
@@ -90,6 +92,98 @@
     });
   });
   if (search) search.addEventListener('input', () => { state.q = search.value; apply(); });
+  const apiBase = (window.ARCHITECT_API_BASE || (window.location.port === '8765' ? 'http://127.0.0.1:8000' : window.location.origin)).replace(/\/$/, '');
+
+  function setResearchStatus(message, tone = 'neutral') {
+    if (!researchStatus) return;
+    researchStatus.hidden = !message;
+    researchStatus.className = `research-status is-${tone}`;
+    researchStatus.replaceChildren();
+    if (typeof message === 'string') researchStatus.textContent = message;
+    else researchStatus.append(message);
+  }
+
+  function requestApi(path, options = {}) {
+    return fetch(`${apiBase}${path}`, {
+      headers: { 'Content-Type': 'application/json', ...(options.headers || {}) },
+      ...options,
+    }).then(async (response) => {
+      const payload = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(payload?.error?.message || '本地研究服务暂时不可用。');
+      return payload;
+    });
+  }
+
+  function showCandidates(job) {
+    const panel = document.createElement('div');
+    const heading = document.createElement('p');
+    heading.textContent = '未在当前案例库中找到匹配项。请选择要继续研究的项目：';
+    panel.append(heading);
+    const candidates = document.createElement('div');
+    candidates.className = 'research-candidates';
+    (job.disambiguation?.candidates || []).forEach((candidate) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'research-candidate';
+      button.textContent = `${candidate.project_name} · ${candidate.location} · ${candidate.year}`;
+      button.addEventListener('click', async () => {
+        candidates.querySelectorAll('button').forEach((item) => { item.disabled = true; });
+        setResearchStatus('正在研究、生成案例并校验来源，请稍候。', 'working');
+        try {
+          const confirmed = await requestApi(`/api/jobs/${job.job_id}/confirm`, {
+            method: 'POST', body: JSON.stringify({ candidate_id: candidate.candidate_id }),
+          });
+          const result = await requestApi(`/api/jobs/${job.job_id}/result`);
+          if (confirmed.status === 'awaiting_review' && result.case_json) {
+            window.location.assign(`preview.html?job_id=${encodeURIComponent(job.job_id)}`);
+            return;
+          }
+          setResearchStatus('案例已生成，可在稍后打开预览。', 'neutral');
+        } catch (error) {
+          // Recover when the HTTP response loses a race with a completed worker.
+          try {
+            const recovered = await requestApi(`/api/jobs/${job.job_id}/result`);
+            if (recovered.validation?.passed_for_review && recovered.case_json) {
+              window.location.assign(`preview.html?job_id=${encodeURIComponent(job.job_id)}`);
+              return;
+            }
+          } catch (_) {
+            // There is no completed result to recover.
+          }
+          setResearchStatus(error.message || '研究任务未完成，请稍后在 Job 状态中查看。', 'error');
+        }
+      });
+      candidates.append(button);
+    });
+    panel.append(candidates);
+    setResearchStatus(panel, 'neutral');
+  }
+
+  headerSearchForm?.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const query = search?.value.trim() || '';
+    if (!query) {
+      setResearchStatus('请输入项目、建筑师、地点或年份。', 'error');
+      search?.focus();
+      return;
+    }
+    state.q = query;
+    apply();
+    const matchingCards = cards.filter((card) => !card.hidden);
+    if (matchingCards.length) {
+      setResearchStatus(`已在案例库中找到 ${matchingCards.length} 个匹配案例。`, 'success');
+      const library = document.querySelector('#cases');
+      if (library) window.scrollTo({ top: library.getBoundingClientRect().top + window.scrollY - 88, behavior: 'smooth' });
+      return;
+    }
+    setResearchStatus('案例库中暂无匹配项，正在进行项目消歧。', 'working');
+    try {
+      const job = await requestApi('/api/jobs', { method: 'POST', body: JSON.stringify({ query }) });
+      showCandidates(job);
+    } catch (error) {
+      setResearchStatus(error.message || '无法创建研究任务。请确认本地后端已启动。', 'error');
+    }
+  });
   if (sortSelect) sortSelect.addEventListener('change', () => { state.sort = sortSelect.value; apply(); });
   activeFilters?.addEventListener('click', (event) => {
     if (!event.target.closest('[data-clear-filters]')) return;
@@ -112,7 +206,7 @@
   libraryBackdrop.className = 'library-backdrop';
   libraryBackdrop.setAttribute('aria-label', '关闭搜索与筛选');
   libraryBackdrop.hidden = true;
-  document.body.appendChild(libraryBackdrop);
+  if (libraryPanel) document.body.appendChild(libraryBackdrop);
   const compactLibrary = window.matchMedia('(max-width: 800px)');
   function setLibraryPanel(open) {
     if (!libraryPanel || !menuToggle) return;
@@ -187,13 +281,18 @@
     if (heading) heading.id = `${id}-title`;
     if (media) slide.classList.add('case-section--with-media');
     if (index === 0) slide.classList.add('case-reader-cover');
+    const isDrawingFile = (image) => {
+      const source = image?.currentSrc || image?.src || '';
+      const fileName = source.split('?')[0].split('/').pop() || '';
+      return /(?:plan|section|elevation|drawing|diagram|analysis)/i.test(fileName);
+    };
     const image = media?.querySelector('img');
-    if (image && /(?:plan|section|elevation|drawing|diagram|analysis|site|detail)/i.test(image.currentSrc || image.src || '')) {
+    if (isDrawingFile(image)) {
       media.classList.add('is-drawing');
     }
     slide.querySelectorAll('.slide-media').forEach((figure) => {
       const figureImage = figure.querySelector('img');
-      if (figureImage && /(?:plan|section|elevation|drawing|diagram|analysis|site|detail)/i.test(figureImage.currentSrc || figureImage.src || '')) {
+      if (isDrawingFile(figureImage)) {
         figure.classList.add('is-drawing');
       }
     });
