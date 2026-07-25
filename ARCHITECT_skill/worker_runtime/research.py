@@ -335,6 +335,33 @@ def run_confirmed_research(
         raise
 
 
+def confirm_research_job(
+    *, request: dict[str, Any], jobs_root: Path, confirmation: dict[str, Any]
+) -> None:
+    """Persist a valid confirmation and make the job visible to a queue worker.
+
+    This boundary deliberately performs no retrieval, download, or model call.
+    The queue worker invokes ``run_confirmed_research`` after the API has
+    returned to the browser.
+    """
+    validate_generation_request(request)
+    job_id = str(request["job_id"])
+    workspace = jobs_root / job_id
+    disambiguation_path = workspace / "artifacts" / "disambiguation.json"
+    if not disambiguation_path.exists():
+        raise OutputValidationError("cannot confirm a job without artifacts/disambiguation.json.")
+    stored_request = read_json(workspace / "request.json")
+    if stored_request.get("job_id") != job_id:
+        raise OutputValidationError("stored request job_id does not match the confirmed job.")
+    validate_confirmation(
+        confirmation=confirmation,
+        job_id=job_id,
+        disambiguation=read_json(disambiguation_path),
+    )
+    write_json(workspace / "confirmation.json", confirmation)
+    append_event(workspace, job_id, "generating", "candidate_confirmed", "Candidate confirmed and queued for research.")
+
+
 def revalidate_private_draft(*, jobs_root: Path, job_id: str) -> Path:
     """Re-run validation for an existing private draft without another LLM call."""
     workspace = jobs_root / job_id

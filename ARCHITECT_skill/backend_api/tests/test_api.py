@@ -1,12 +1,14 @@
 import json
 import tempfile
 import threading
+import time
 import unittest
 from http.client import HTTPConnection
 from pathlib import Path
 from unittest.mock import patch
 
 from backend_api.app import cors_origins, create_server
+from backend_api.research_queue import ResearchQueue
 from worker_runtime.providers import FixtureProvider
 
 
@@ -15,6 +17,7 @@ class BackendApiTests(unittest.TestCase):
         self.directory = tempfile.TemporaryDirectory()
         self.root = Path(self.directory.name)
         self.library = self.root / "case-packages"
+        self.queue = ResearchQueue(jobs_root=self.root)
         self.rebuild_calls = 0
         def rebuild_site():
             self.rebuild_calls += 1
@@ -23,6 +26,7 @@ class BackendApiTests(unittest.TestCase):
             case_packages_root=self.library,
             provider_factory=FixtureProvider,
             rebuild_site=rebuild_site,
+            research_queue=self.queue,
             port=0,
         )
         self.thread = threading.Thread(target=self.server.serve_forever, daemon=True)
@@ -121,37 +125,60 @@ class BackendApiTests(unittest.TestCase):
         response.read()
         connection.close()
 
-    def test_confirm_delegates_to_worker_and_result_reads_private_artifacts(self):
+    def test_confirm_queues_research_and_result_reports_processing_then_completion(self):
         created = self.create_job()
         job_id = created["job_id"]
-        package = self.root / job_id / "artifacts" / "package" / "villa-savoye"
-        package.mkdir(parents=True)
-        (package / "case.json").write_text('{"project_name": "Villa Savoye"}', encoding="utf-8")
-        (package / "case.md").write_text("# Villa Savoye\n", encoding="utf-8")
-        (self.root / job_id / "artifacts" / "validation.json").write_text('{"passed_for_review": true}', encoding="utf-8")
+        started = time.monotonic()
+        status, confirmed = self.request("POST", f"/api/jobs/{job_id}/confirm", {"candidate_id": "villa-savoye-1931"})
+        self.assertLess(time.monotonic() - started, 1)
+        self.assertEqual(status, 202)
+        self.assertEqual(confirmed["status"], "researching")
+        self.assertEqual(confirmed["worker_state"], "generating")
+        self.assertEqual(confirmed["queue"]["state"], "queued")
 
-        # Replace the costly research stage only in this HTTP-boundary test;
-        # worker_runtime has its own end-to-end confirmation coverage.
-        import backend_api.app as app
-        original = app.run_confirmed_research
-        try:
-            def complete_worker(**kwargs):
-                workspace = self.root / kwargs["confirmation"]["job_id"]
-                (workspace / "confirmation.json").write_text(json.dumps(kwargs["confirmation"]), encoding="utf-8")
-                with (workspace / "events.jsonl").open("a", encoding="utf-8") as events:
-                    events.write(json.dumps({"state": "awaiting_review", "type": "stage_completed"}) + "\n")
-                return package
-
-            app.run_confirmed_research = complete_worker
-            status, confirmed = self.request("POST", f"/api/jobs/{job_id}/confirm", {"candidate_id": "villa-savoye-1931"})
-        finally:
-            app.run_confirmed_research = original
+        status, processing = self.request("GET", f"/api/jobs/{job_id}/result")
         self.assertEqual(status, 200)
-        self.assertEqual(confirmed["status"], "awaiting_review")
+        self.assertTrue(processing["processing"])
+        self.assertEqual(processing["status"], "researching")
+
+        def complete_task(task):
+            package = self.root / task["job_id"] / "artifacts" / "package" / "villa-savoye"
+            package.mkdir(parents=True)
+            (package / "case.json").write_text('{"project_name": "Villa Savoye"}', encoding="utf-8")
+            (package / "case.md").write_text("# Villa Savoye\n", encoding="utf-8")
+            (self.root / task["job_id"] / "artifacts" / "validation.json").write_text('{"passed_for_review": true}', encoding="utf-8")
+            with (self.root / task["job_id"] / "events.jsonl").open("a", encoding="utf-8") as events:
+                events.write(json.dumps({"state": "awaiting_review", "type": "stage_completed"}) + "\n")
+
+        self.assertTrue(self.queue.process_one(complete_task))
         status, result = self.request("GET", f"/api/jobs/{job_id}/result")
         self.assertEqual(status, 200)
         self.assertEqual(result["case_json"]["project_name"], "Villa Savoye")
         self.assertTrue(result["validation"]["passed_for_review"])
+
+    def test_failed_background_task_is_explicit_in_result_view(self):
+        created = self.create_job()
+        job_id = created["job_id"]
+        status, _ = self.request("POST", f"/api/jobs/{job_id}/confirm", {"candidate_id": "villa-savoye-1931"})
+        self.assertEqual(status, 202)
+
+        self.assertTrue(self.queue.process_one(lambda task: (_ for _ in ()).throw(RuntimeError("provider unavailable"))))
+        status, result = self.request("GET", f"/api/jobs/{job_id}/result")
+        self.assertEqual(status, 200)
+        self.assertFalse(result["processing"])
+        self.assertEqual(result["status"], "failed")
+        self.assertIn("provider unavailable", result["error"]["message"])
+
+    def test_queue_recovers_a_task_interrupted_by_worker_restart(self):
+        job_id = "job_interrupted"
+        (self.root / job_id).mkdir()
+        self.queue.enqueue(job_id=job_id, confirmation={"job_id": job_id, "candidate_id": "candidate-1"})
+        self.assertIsNotNone(self.queue.claim_next())
+        restarted_queue = ResearchQueue(jobs_root=self.root)
+        restarted_queue.recover_interrupted_tasks()
+        task = json.loads((self.root / job_id / "research-task.json").read_text(encoding="utf-8"))
+        self.assertEqual(task["state"], "queued")
+        self.assertFalse((self.root / job_id / "research-task.running.json").exists())
 
     def test_user_can_save_a_validated_private_result_to_the_case_library(self):
         created = self.create_job()

@@ -22,8 +22,8 @@ do not add it to the repository. To switch providers, change
 `DEEPSEEK_API_KEY`. The other worker settings in `render.yaml` have the same
 meaning as `ARCHITECT_skill/worker_runtime/.env.example`.
 
-The current worker is intentionally started in the API request that confirms a
-candidate; it is not an independent Render background worker. This preserves
-the present job state machine, but a very long generation occupies one API
-request thread. Moving it to a queue-backed Render Worker is a later
-architecture change, not a deployment-config toggle.
+`/confirm` writes a durable research task and returns `202 Accepted`; it does
+not run the full generation in the browser request. Production deployments
+must run a separate worker process against the same persistent disk with
+`ARCHITECT_SERVICE_ROLE=worker`. The worker consumes one task at a time and
+recovers a task left in progress after a process restart.

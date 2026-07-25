@@ -14,4 +14,4 @@ COPY . .
 
 EXPOSE 8080
 
-CMD ["sh", "-c", "cd /app/ARCHITECT_skill && python -m backend_api.render_start"]
+CMD ["sh", "-c", "cd /app/ARCHITECT_skill && if [ \"$ARCHITECT_SERVICE_ROLE\" = worker ]; then python -m backend_api.research_worker; else python -m backend_api.render_start; fi"]

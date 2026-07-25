@@ -16,7 +16,7 @@ from typing import Any, Callable
 from worker_runtime.disambiguation import run_disambiguation
 from worker_runtime.errors import WorkerRuntimeError
 from worker_runtime.providers import LLMProvider, create_provider
-from worker_runtime.research import run_confirmed_research
+from worker_runtime.research import confirm_research_job
 
 from .service import (
     build_request,
@@ -27,6 +27,7 @@ from .service import (
     result_view,
     save_result_to_library,
 )
+from .research_queue import ResearchQueue
 
 
 ProviderFactory = Callable[[], LLMProvider]
@@ -81,6 +82,7 @@ def create_server(
     static_root: Path | None = None,
     provider_factory: ProviderFactory | None = None,
     rebuild_site: Callable[[], None] | None = None,
+    research_queue: ResearchQueue | None = None,
     port: int | None = None,
 ) -> ThreadingHTTPServer:
     root = (jobs_root or default_jobs_root()).resolve()
@@ -89,6 +91,7 @@ def create_server(
     make_provider = provider_factory or create_provider
     build_site = rebuild_site or rebuild_static_site
     allowed_cors_origins = cors_origins()
+    queue = research_queue or ResearchQueue(jobs_root=root)
 
     class Handler(BaseHTTPRequestHandler):
         server_version = "ARCHITECTBackend/0.1"
@@ -120,9 +123,10 @@ def create_server(
             self.end_headers()
 
         def _dispatch(self) -> None:
+            self._response_status = HTTPStatus.OK
             try:
                 payload = self._route()
-                self._json(HTTPStatus.OK, payload)
+                self._json(self._response_status, payload)
             except FileNotFoundError as error:
                 self._error(HTTPStatus.NOT_FOUND, str(error))
             except LookupError as error:
@@ -206,14 +210,17 @@ def create_server(
             confirmed_by = payload.get("confirmed_by") or {}
             if not isinstance(confirmed_by, dict):
                 raise ValueError("confirmed_by must be an object.")
-            run_confirmed_research(
-                request=request, jobs_root=root, provider=make_provider(),
-                confirmation={
-                    "job_id": job_id, "candidate_id": candidate_id,
-                    "confirmed_by": {"user_id": str(confirmed_by.get("user_id", "api")).strip() or "api", "role": str(confirmed_by.get("role", "editor"))},
-                    "confirmed_at": datetime.now(UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
-                },
+            confirmation = {
+                "job_id": job_id, "candidate_id": candidate_id,
+                "confirmed_by": {"user_id": str(confirmed_by.get("user_id", "api")).strip() or "api", "role": str(confirmed_by.get("role", "editor"))},
+                "confirmed_at": datetime.now(UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
+            }
+            confirm_research_job(
+                request=request, jobs_root=root,
+                confirmation=confirmation,
             )
+            queue.enqueue(job_id=job_id, confirmation=confirmation)
+            self._response_status = HTTPStatus.ACCEPTED
             return job_view(jobs_root=root, job_id=job_id)
 
         def _body_object(self) -> dict[str, Any]:

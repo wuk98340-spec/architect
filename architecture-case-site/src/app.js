@@ -114,6 +114,23 @@
     });
   }
 
+  async function pollResearchResult(jobId) {
+    const result = await requestApi(`/api/jobs/${jobId}/result`);
+    if (result.case_json && result.validation?.passed_for_review) {
+      window.location.assign(`preview.html?job_id=${encodeURIComponent(jobId)}`);
+      return;
+    }
+    if (result.status === 'failed') {
+      throw new Error(result.error?.message || 'Research task failed.');
+    }
+    setResearchStatus('正在研究并生成案例，请稍候…', 'working');
+    window.setTimeout(() => {
+      pollResearchResult(jobId).catch((error) => {
+        setResearchStatus(error.message || '无法读取研究任务状态。', 'error');
+      });
+    }, 2500);
+  }
+
   function showCandidates(job) {
     const panel = document.createElement('div');
     const heading = document.createElement('p');
@@ -133,6 +150,12 @@
           const confirmed = await requestApi(`/api/jobs/${job.job_id}/confirm`, {
             method: 'POST', body: JSON.stringify({ candidate_id: candidate.candidate_id }),
           });
+          if (confirmed.status === 'failed') {
+            throw new Error(confirmed.error?.message || 'Research task was not queued.');
+          }
+          setResearchStatus('正在研究并生成案例，请稍候…', 'working');
+          await pollResearchResult(job.job_id);
+          return;
           const result = await requestApi(`/api/jobs/${job.job_id}/result`);
           if (confirmed.status === 'awaiting_review' && result.case_json) {
             window.location.assign(`preview.html?job_id=${encodeURIComponent(job.job_id)}`);

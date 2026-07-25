@@ -64,6 +64,14 @@ def public_status(worker_state: str | None) -> str:
     )
 
 
+def queue_view(workspace: Path) -> dict[str, Any] | None:
+    for name in ("research-task.running.json", "research-task.json"):
+        path = workspace / name
+        if path.exists():
+            return read_object(path, label="research task")
+    return None
+
+
 def job_view(*, jobs_root: Path, job_id: str) -> dict[str, Any]:
     require_job_id(job_id)
     workspace = jobs_root / job_id
@@ -90,6 +98,13 @@ def job_view(*, jobs_root: Path, job_id: str) -> dict[str, Any]:
     if saved.exists():
         view["saved"] = read_object(saved, label="saved result")
         view["status"] = "saved"
+    task = queue_view(workspace)
+    if task:
+        view["queue"] = {key: value for key, value in task.items() if key != "confirmation"}
+        if task.get("state") == "failed" and view["status"] != "saved":
+            view["status"] = "failed"
+            view["worker_state"] = "failed"
+            view["error"] = {"message": str(task.get("error", "research worker failed"))}
     return view
 
 
@@ -129,7 +144,14 @@ def result_view(*, jobs_root: Path, job_id: str) -> dict[str, Any]:
     package_root = jobs_root / job_id / "artifacts" / "package"
     packages = [path for path in package_root.iterdir() if path.is_dir()] if package_root.exists() else []
     if len(packages) != 1:
-        raise LookupError("job result is not available yet.")
+        return {
+            "job_id": job_id,
+            "status": view["status"],
+            "worker_state": view["worker_state"],
+            "processing": view["status"] == "researching",
+            "last_event": view.get("last_event"),
+            "error": view.get("error"),
+        }
     package = packages[0]
     case_md = package / "case.md"
     return {
