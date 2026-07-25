@@ -29,6 +29,7 @@ SITE_ROOT = Path()
 ASSET_DIR = Path()
 CASE_SITE_DIR = Path()
 FEATURED_SLUGS: list[str] = []
+API_BASE = ""
 
 
 def main() -> int:
@@ -72,7 +73,7 @@ def load_config() -> dict[str, Any]:
 
 
 def configure_paths(config: dict[str, Any]) -> None:
-    global CASE_ROOT, SITE_ROOT, ASSET_DIR, CASE_SITE_DIR, FEATURED_SLUGS
+    global CASE_ROOT, SITE_ROOT, ASSET_DIR, CASE_SITE_DIR, FEATURED_SLUGS, API_BASE
     config_dir = Path(str(config["_config_path"])).parent
     case_packages_dir = Path(os.environ.get("ARCHITECT_CASE_PACKAGES_ROOT", str(config.get("casePackagesDir") or "")))
     output_dir = Path(os.environ.get("ARCHITECT_STATIC_ROOT", str(config.get("outputDir") or "public")))
@@ -81,6 +82,7 @@ def configure_paths(config: dict[str, Any]) -> None:
     ASSET_DIR = SITE_ROOT / "assets"
     CASE_SITE_DIR = SITE_ROOT / "cases"
     FEATURED_SLUGS = [str(slug) for slug in config.get("featuredSlugs", []) if str(slug).strip()]
+    API_BASE = str(os.environ.get("ARCHITECT_API_BASE", config.get("apiBase") or "")).strip().rstrip("/")
     if not CASE_ROOT.exists():
         raise SystemExit(f"casePackagesDir does not exist: {CASE_ROOT}")
 
@@ -944,6 +946,10 @@ def write_assets() -> None:
     shutil.copy2(SOURCE_DIR / "styles.css", ASSET_DIR / "styles.css")
     shutil.copy2(SOURCE_DIR / "app.js", ASSET_DIR / "app.js")
     shutil.copy2(SOURCE_DIR / "preview.js", ASSET_DIR / "preview.js")
+    (ASSET_DIR / "runtime-config.js").write_text(
+        f"window.ARCHITECT_API_BASE = {json.dumps(API_BASE)};\n",
+        encoding="utf-8",
+    )
     source_images = SOURCE_DIR / "assets"
     if source_images.exists():
         shutil.copytree(source_images, ASSET_DIR / "images", dirs_exist_ok=True)

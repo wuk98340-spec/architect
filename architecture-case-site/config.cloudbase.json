@@ -1,0 +1,11 @@
+{
+  "casePackagesDir": "../case-packages",
+  "outputDir": "public",
+  "apiBase": "https://architect-api-286661-10-1457963611.sh.run.tcloudbase.com",
+  "featuredSlugs": [
+    "guangzhou-jiefang-middle-road-old-city-renewal",
+    "shanghai-expo-china-pavilion",
+    "taizhou-folk-culture-exhibition-center",
+    "suzhou-museum-new"
+  ]
+}
