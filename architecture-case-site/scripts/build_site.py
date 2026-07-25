@@ -946,7 +946,7 @@ def write_assets() -> None:
     shutil.copy2(SOURCE_DIR / "styles.css", ASSET_DIR / "styles.css")
     shutil.copy2(SOURCE_DIR / "app.js", ASSET_DIR / "app.js")
     shutil.copy2(SOURCE_DIR / "preview.js", ASSET_DIR / "preview.js")
-    (ASSET_DIR / "runtime-config.js").write_text(
+    (SITE_ROOT / "runtime-config.js").write_text(
         f"window.ARCHITECT_API_BASE = {json.dumps(API_BASE)};\n",
         encoding="utf-8",
     )
@@ -958,7 +958,10 @@ def write_assets() -> None:
 def page_shell(title: str, body: str, depth: int) -> str:
     prefix = "./" if depth == 0 else "../" * depth
     asset_hash = hashlib.sha256(
-        (SOURCE_DIR / "styles.css").read_bytes() + (SOURCE_DIR / "app.js").read_bytes() + (SOURCE_DIR / "preview.js").read_bytes()
+        (SOURCE_DIR / "styles.css").read_bytes()
+        + (SOURCE_DIR / "app.js").read_bytes()
+        + (SOURCE_DIR / "preview.js").read_bytes()
+        + API_BASE.encode("utf-8")
     ).hexdigest()[:10]
     template = (TEMPLATE_DIR / "page.html").read_text(encoding="utf-8")
     return (
