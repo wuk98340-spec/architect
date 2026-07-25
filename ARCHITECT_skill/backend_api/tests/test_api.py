@@ -4,8 +4,9 @@ import threading
 import unittest
 from http.client import HTTPConnection
 from pathlib import Path
+from unittest.mock import patch
 
-from backend_api.app import create_server
+from backend_api.app import cors_origins, create_server
 from worker_runtime.providers import FixtureProvider
 
 
@@ -33,10 +34,12 @@ class BackendApiTests(unittest.TestCase):
         self.thread.join()
         self.directory.cleanup()
 
-    def request(self, method, path, body=None):
+    def request(self, method, path, body=None, headers=None):
         connection = HTTPConnection(*self.server.server_address)
-        headers = {"Content-Type": "application/json"} if body is not None else {}
-        connection.request(method, path, body=json.dumps(body) if body is not None else None, headers=headers)
+        request_headers = dict(headers or {})
+        if body is not None:
+            request_headers.setdefault("Content-Type", "application/json")
+        connection.request(method, path, body=json.dumps(body) if body is not None else None, headers=request_headers)
         response = connection.getresponse()
         payload = json.loads(response.read().decode("utf-8"))
         connection.close()
@@ -67,7 +70,54 @@ class BackendApiTests(unittest.TestCase):
         connection.request("OPTIONS", "/api/jobs", headers={"Origin": "http://127.0.0.1:8765"})
         response = connection.getresponse()
         self.assertEqual(response.status, 204)
-        self.assertEqual(response.getheader("Access-Control-Allow-Origin"), "*")
+        self.assertEqual(response.getheader("Access-Control-Allow-Origin"), "http://127.0.0.1:8765")
+        response.read()
+        connection.close()
+
+    def test_cors_origins_reads_the_cloudbase_setting_and_rejects_other_sites(self):
+        cloudbase_site = "https://architect-dev-d3g2rg2jfcda0906a-1457963611.tcloudbaseapp.com"
+        with patch.dict("os.environ", {"ARCHITECT_CORS_ORIGINS": f" http://localhost:8765, {cloudbase_site}, "}):
+            self.assertEqual(cors_origins(), frozenset({"http://localhost:8765", cloudbase_site}))
+            server = create_server(
+                jobs_root=self.root,
+                case_packages_root=self.library,
+                provider_factory=FixtureProvider,
+                rebuild_site=lambda: None,
+                port=0,
+            )
+        thread = threading.Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+        try:
+            connection = HTTPConnection(*server.server_address)
+            connection.request("OPTIONS", "/api/jobs", headers={"Origin": cloudbase_site})
+            response = connection.getresponse()
+            self.assertEqual(response.status, 204)
+            self.assertEqual(response.getheader("Access-Control-Allow-Origin"), cloudbase_site)
+            response.read()
+            connection.close()
+
+            connection = HTTPConnection(*server.server_address)
+            connection.request(
+                "POST",
+                "/api/jobs",
+                body=json.dumps({"query": "Villa Savoye"}),
+                headers={"Content-Type": "application/json", "Origin": cloudbase_site},
+            )
+            response = connection.getresponse()
+            self.assertEqual(response.status, 200)
+            self.assertEqual(response.getheader("Access-Control-Allow-Origin"), cloudbase_site)
+            response.read()
+            connection.close()
+        finally:
+            server.shutdown()
+            server.server_close()
+            thread.join()
+
+        connection = HTTPConnection(*self.server.server_address)
+        connection.request("OPTIONS", "/api/jobs", headers={"Origin": "https://untrusted.example"})
+        response = connection.getresponse()
+        self.assertEqual(response.status, 204)
+        self.assertIsNone(response.getheader("Access-Control-Allow-Origin"))
         response.read()
         connection.close()
 

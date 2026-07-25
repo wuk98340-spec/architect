@@ -31,6 +31,23 @@ from .service import (
 
 ProviderFactory = Callable[[], LLMProvider]
 
+DEFAULT_CORS_ORIGINS = (
+    "http://127.0.0.1:8765",
+    "http://localhost:8765",
+)
+
+
+def cors_origins() -> frozenset[str]:
+    """Read the browser origins allowed to call the public API.
+
+    CloudBase Run injects environment variables at deploy time, which keeps
+    the production static-hosting domain out of source code.  Empty entries
+    are ignored so a trailing comma is harmless.
+    """
+    configured = os.environ.get("ARCHITECT_CORS_ORIGINS", "")
+    values = configured.split(",") if configured else DEFAULT_CORS_ORIGINS
+    return frozenset(value.strip() for value in values if value.strip())
+
 
 def default_jobs_root() -> Path:
     return Path(os.environ.get("ARCHITECT_JOBS_ROOT", "tmp/worker-jobs"))
@@ -71,6 +88,7 @@ def create_server(
     site_root = (static_root or default_static_root()).resolve()
     make_provider = provider_factory or create_provider
     build_site = rebuild_site or rebuild_static_site
+    allowed_cors_origins = cors_origins()
 
     class Handler(BaseHTTPRequestHandler):
         server_version = "ARCHITECTBackend/0.1"
@@ -217,12 +235,13 @@ def create_server(
             self.wfile.write(body)
 
         def _cors_headers(self) -> None:
-            # The static local preview normally runs on port 8765 while this
-            # API uses port 8000. This API has no cookies or credentials, so a
-            # permissive development CORS policy is sufficient for Phase 2.
-            self.send_header("Access-Control-Allow-Origin", "*")
+            origin = self.headers.get("Origin", "").strip()
+            if origin not in allowed_cors_origins:
+                return
+            self.send_header("Access-Control-Allow-Origin", origin)
             self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
             self.send_header("Access-Control-Allow-Headers", "Content-Type")
+            self.send_header("Vary", "Origin")
 
         def _error(self, status: HTTPStatus, message: str) -> None:
             self._json(status, {"error": {"code": status.name.lower(), "message": message}})
