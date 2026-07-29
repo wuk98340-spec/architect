@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 
 from .app import serve
-from .cos_storage import current_cos_mirror
+from .cos_storage import cos_failure_message, current_cos_mirror
 
 
 def workspace_root() -> Path:
@@ -45,12 +45,16 @@ def main() -> None:
     os.environ.setdefault("ARCHITECT_STATIC_ROOT", str(root / "architecture-case-site" / "public"))
     try:
         cos_mirror = current_cos_mirror()
+        if cos_mirror:
+            print(cos_mirror.diagnostic_log(), file=sys.stderr)
         library_exists = cos_mirror.hydrate_library(case_packages_root=cases_root) if cos_mirror else cases_root.exists()
     except Exception as error:
         # Storage must not make the public API unavailable.  A failed optional
         # mirror (bad credentials, a transient COS error, etc.) falls back to
         # the case library baked into the deployed image.
-        print(f"COS mirror unavailable; starting with bundled case library: {error}", file=sys.stderr)
+        message = cos_failure_message(error)
+        print(f"{message} Starting with bundled case library.", file=sys.stderr)
+        os.environ["ARCHITECT_COS_STORAGE_UNAVAILABLE"] = message
         cos_mirror = None
         library_exists = cases_root.exists()
     if not library_exists:

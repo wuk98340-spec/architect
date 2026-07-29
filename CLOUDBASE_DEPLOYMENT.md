@@ -7,13 +7,18 @@
 
 ## 当前安全部署配置
 
-默认部署使用容器本地运行时目录，不启用 COS，也不向服务注入腾讯云长期密钥：
+两个服务使用完全相同的 COS 环境变量名称：
 
 ```text
-ARCHITECT_STORAGE_BACKEND=local
+ARCHITECT_STORAGE_BACKEND=cos
+ARCHITECT_COS_BUCKET=<BucketName-APPID>
+ARCHITECT_COS_REGION=<region，例如 ap-shanghai>
+ARCHITECT_COS_PREFIX=architect
+ARCHITECT_COS_SECRET_ID=<SecretId>
+ARCHITECT_COS_SECRET_KEY=<SecretKey>
 ```
 
-`cloudbaserc.json` 已为 API 与 Worker 设置该值。两项服务密钥只需在 CloudBase 控制台的受保护配置中提供，绝不写入 Git 或 `.env`：
+`cloudbaserc.json` 已为 API 与 Worker 使用这些相同名称。密钥只应在 CloudBase 控制台的受保护配置中提供，绝不写入 Git 或 `.env`；不要加首尾引号。
 
 ```text
 DEEPSEEK_API_KEY=<DeepSeek API key>
@@ -22,7 +27,7 @@ ARCHITECT_LLM_MODEL=deepseek-v4-flash
 DEEPSEEK_BASE_URL=https://api.deepseek.com
 ```
 
-容器重启后，未发布的研究任务不会保留；已随镜像发布的案例库会自动恢复。服务启动时即使存在错误的旧 COS 配置，也会记录诊断并回退到镜像内置案例库，不会因 COS 错误重启。
+服务启动时即使 COS 鉴权或网络失败，也会记录不泄密的诊断并回退到镜像内置案例库，不会因 COS 错误重启；后续需要 COS 的读取或保存会返回明确的 storage unavailable 错误。
 
 ## 部署
 
@@ -36,7 +41,7 @@ API 应配置 `ARCHITECT_SERVICE_ROLE=api` 和 `ARCHITECT_API_HOST=0.0.0.0`；Wo
 
 ## 将来启用持久存储
 
-只有在改用工作负载身份或短期凭据，并完成读写、权限与重启恢复测试后，才可将 `ARCHITECT_STORAGE_BACKEND` 改为 `cos`。不要给运行中的容器配置长期 `SecretId` 或 `SecretKey`。
+Bucket 必须填写完整的 `BucketName-APPID`。如需更高安全性，可在后续改用工作负载身份或短期凭据；当前实现会兼容旧的 `TENCENTCLOUD_SECRET_ID` / `TENCENTCLOUD_SECRET_KEY`，但新配置统一使用 `ARCHITECT_COS_SECRET_ID` / `ARCHITECT_COS_SECRET_KEY`。
 
 ## 本地开发
 

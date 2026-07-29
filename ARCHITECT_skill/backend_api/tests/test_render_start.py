@@ -22,7 +22,11 @@ class RenderStartupTests(unittest.TestCase):
             output = io.StringIO()
             with (
                 patch.object(render_start, "workspace_root", return_value=root),
-                patch.object(render_start, "current_cos_mirror", side_effect=RuntimeError("bad COS credentials")),
+                patch.object(
+                    render_start,
+                    "current_cos_mirror",
+                    side_effect=RuntimeError("SignatureDoesNotMatch secret-value"),
+                ),
                 patch.object(render_start, "rebuild_site"),
                 patch.object(render_start, "serve"),
                 patch.dict(os.environ, {"ARCHITECT_DATA_ROOT": str(data_root)}, clear=True),
@@ -31,7 +35,8 @@ class RenderStartupTests(unittest.TestCase):
                 render_start.main()
 
             self.assertEqual((data_root / "case-packages" / "example.txt").read_text(encoding="utf-8"), "case")
-            self.assertIn("COS mirror unavailable", output.getvalue())
+            self.assertIn("COS authentication failed: SignatureDoesNotMatch", output.getvalue())
+            self.assertNotIn("secret-value", output.getvalue())
 
 
 if __name__ == "__main__":

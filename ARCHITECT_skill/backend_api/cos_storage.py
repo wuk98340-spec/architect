@@ -8,6 +8,7 @@ library to private COS objects so the API and worker do not depend on CFS.
 from __future__ import annotations
 
 import os
+import re
 import shutil
 from dataclasses import dataclass
 from pathlib import Path, PurePosixPath
@@ -15,6 +16,21 @@ from pathlib import Path, PurePosixPath
 
 class StorageConfigurationError(RuntimeError):
     """Raised when a COS production deployment has incomplete configuration."""
+
+
+class StorageUnavailableError(RuntimeError):
+    """Raised when configured COS storage cannot be reached safely."""
+
+
+def _clean_environment_value(name: str, *legacy_names: str) -> str:
+    """Read a CloudBase value without preserving accidental outer quotes."""
+    raw = os.environ.get(name)
+    if raw is None:
+        raw = next((os.environ.get(legacy) for legacy in legacy_names if os.environ.get(legacy) is not None), "")
+    value = raw.strip()
+    if len(value) >= 2 and value[0] == value[-1] and value[0] in {"'", '"'}:
+        value = value[1:-1].strip()
+    return value
 
 
 def cos_enabled() -> bool:
@@ -39,15 +55,23 @@ class CosStorageConfig:
     @classmethod
     def from_environment(cls) -> "CosStorageConfig":
         values = {
-            "ARCHITECT_COS_BUCKET": os.environ.get("ARCHITECT_COS_BUCKET", "").strip(),
-            "ARCHITECT_COS_REGION": os.environ.get("ARCHITECT_COS_REGION", "").strip(),
-            "TENCENTCLOUD_SECRET_ID": os.environ.get("TENCENTCLOUD_SECRET_ID", "").strip(),
-            "TENCENTCLOUD_SECRET_KEY": os.environ.get("TENCENTCLOUD_SECRET_KEY", "").strip(),
+            "ARCHITECT_COS_BUCKET": _clean_environment_value("ARCHITECT_COS_BUCKET"),
+            "ARCHITECT_COS_REGION": _clean_environment_value("ARCHITECT_COS_REGION"),
+            "ARCHITECT_COS_SECRET_ID": _clean_environment_value(
+                "ARCHITECT_COS_SECRET_ID", "TENCENTCLOUD_SECRET_ID"
+            ),
+            "ARCHITECT_COS_SECRET_KEY": _clean_environment_value(
+                "ARCHITECT_COS_SECRET_KEY", "TENCENTCLOUD_SECRET_KEY"
+            ),
         }
         missing = [name for name, value in values.items() if not value]
         if missing:
             raise StorageConfigurationError("COS storage is enabled but missing: " + ", ".join(missing))
-        prefix = os.environ.get("ARCHITECT_COS_PREFIX", "architect").strip().strip("/")
+        if not re.fullmatch(r".+-\d+", values["ARCHITECT_COS_BUCKET"]):
+            raise StorageConfigurationError(
+                "ARCHITECT_COS_BUCKET must use the full BucketName-APPID format."
+            )
+        prefix = _clean_environment_value("ARCHITECT_COS_PREFIX").strip("/") or "architect"
         if not prefix:
             raise StorageConfigurationError("ARCHITECT_COS_PREFIX must not be empty.")
         if any(part in {"", ".", ".."} for part in PurePosixPath(prefix).parts):
@@ -56,9 +80,36 @@ class CosStorageConfig:
             bucket=values["ARCHITECT_COS_BUCKET"],
             region=values["ARCHITECT_COS_REGION"],
             prefix=prefix,
-            secret_id=values["TENCENTCLOUD_SECRET_ID"],
-            secret_key=values["TENCENTCLOUD_SECRET_KEY"],
+            secret_id=values["ARCHITECT_COS_SECRET_ID"],
+            secret_key=values["ARCHITECT_COS_SECRET_KEY"],
         )
+
+    def diagnostic_log(self) -> str:
+        secret_id_preview = f"{self.secret_id[:4]}..." if self.secret_id else "not configured"
+        return " | ".join(
+            (
+                "COS enabled: true",
+                f"bucket: {self.bucket}",
+                f"region: {self.region}",
+                f"prefix: {self.prefix}",
+                f"SecretId: {secret_id_preview}",
+                f"SecretKey: {'configured' if self.secret_key else 'not configured'}",
+            )
+        )
+
+
+def cos_failure_message(error: BaseException) -> str:
+    """Return a useful, secret-safe message for startup and request logs."""
+    detail = str(error)
+    if "SignatureDoesNotMatch" in detail:
+        return (
+            "COS authentication failed: SignatureDoesNotMatch. Check "
+            "ARCHITECT_COS_SECRET_ID, ARCHITECT_COS_SECRET_KEY, "
+            "ARCHITECT_COS_REGION and ARCHITECT_COS_BUCKET."
+        )
+    if error.__class__.__name__ in {"CosServiceError", "CosClientError", "ConnectionError", "Timeout"}:
+        return f"COS storage unavailable: {error.__class__.__name__}."
+    return f"COS storage unavailable: {error.__class__.__name__}."
 
 
 class CosStorageMirror:
@@ -79,6 +130,9 @@ class CosStorageMirror:
     @classmethod
     def from_environment(cls) -> "CosStorageMirror":
         return cls(CosStorageConfig.from_environment())
+
+    def diagnostic_log(self) -> str:
+        return self.config.diagnostic_log()
 
     def _key(self, *parts: str) -> str:
         normalized = [self.config.prefix, *[part.strip("/") for part in parts if part.strip("/")]]

@@ -28,7 +28,7 @@ from .service import (
     save_result_to_library,
 )
 from .research_queue import ResearchQueue
-from .cos_storage import current_cos_mirror
+from .cos_storage import StorageUnavailableError, cos_failure_message, current_cos_mirror
 
 
 ProviderFactory = Callable[[], LLMProvider]
@@ -93,7 +93,12 @@ def create_server(
     build_site = rebuild_site or rebuild_static_site
     allowed_cors_origins = cors_origins()
     queue = research_queue or ResearchQueue(jobs_root=root)
-    cos_mirror = current_cos_mirror()
+    storage_unavailable = os.environ.get("ARCHITECT_COS_STORAGE_UNAVAILABLE", "")
+    try:
+        cos_mirror = current_cos_mirror()
+    except Exception as error:
+        storage_unavailable = cos_failure_message(error)
+        cos_mirror = None
 
     class Handler(BaseHTTPRequestHandler):
         server_version = "ARCHITECTBackend/0.1"
@@ -135,6 +140,8 @@ def create_server(
                 self._error(HTTPStatus.CONFLICT, str(error))
             except FileExistsError as error:
                 self._error(HTTPStatus.CONFLICT, str(error))
+            except StorageUnavailableError as error:
+                self._error(HTTPStatus.SERVICE_UNAVAILABLE, str(error))
             except (WorkerRuntimeError, ValueError, json.JSONDecodeError) as error:
                 self._error(HTTPStatus.UNPROCESSABLE_ENTITY, str(error))
             except Exception:
@@ -149,8 +156,7 @@ def create_server(
                 try:
                     run_disambiguation(request=request, jobs_root=root, provider=make_provider())
                 finally:
-                    if cos_mirror:
-                        cos_mirror.persist_job(jobs_root=root, job_id=request["job_id"])
+                    self._persist_job(str(request["job_id"]))
                 return job_view(jobs_root=root, job_id=request["job_id"])
             if parts[:2] != ["api", "jobs"] or len(parts) not in {3, 4}:
                 raise FileNotFoundError("route was not found.")
@@ -231,24 +237,42 @@ def create_server(
                 )
                 queue.enqueue(job_id=job_id, confirmation=confirmation)
             finally:
-                if cos_mirror:
-                    cos_mirror.persist_job(jobs_root=root, job_id=job_id)
+                self._persist_job(job_id)
             self._response_status = HTTPStatus.ACCEPTED
             return job_view(jobs_root=root, job_id=job_id)
 
         def _hydrate_job(self, job_id: str) -> None:
+            if storage_unavailable:
+                raise StorageUnavailableError(storage_unavailable)
             if cos_mirror:
-                cos_mirror.hydrate_job(jobs_root=root, job_id=job_id)
+                try:
+                    cos_mirror.hydrate_job(jobs_root=root, job_id=job_id)
+                except Exception as error:
+                    raise StorageUnavailableError(cos_failure_message(error)) from error
+
+        def _persist_job(self, job_id: str) -> None:
+            if storage_unavailable:
+                raise StorageUnavailableError(storage_unavailable)
+            if cos_mirror:
+                try:
+                    cos_mirror.persist_job(jobs_root=root, job_id=job_id)
+                except Exception as error:
+                    raise StorageUnavailableError(cos_failure_message(error)) from error
 
         def _save(self, job_id: str) -> dict[str, Any]:
+            if storage_unavailable:
+                raise StorageUnavailableError(storage_unavailable)
             saved = save_result_to_library(
                 jobs_root=root, case_packages_root=library_root, job_id=job_id, rebuild_site=build_site
             )
             if cos_mirror:
-                cos_mirror.persist_case_package(
-                    case_packages_root=library_root, package_slug=str(saved["package_slug"])
-                )
-                cos_mirror.persist_job(jobs_root=root, job_id=job_id)
+                try:
+                    cos_mirror.persist_case_package(
+                        case_packages_root=library_root, package_slug=str(saved["package_slug"])
+                    )
+                    cos_mirror.persist_job(jobs_root=root, job_id=job_id)
+                except Exception as error:
+                    raise StorageUnavailableError(cos_failure_message(error)) from error
             return {"job_id": job_id, "saved": saved}
 
         def _body_object(self) -> dict[str, Any]:
