@@ -2,3 +2,4 @@ jsonschema>=4.23,<5
 pypdf>=5.0,<6
 Pillow>=10.0,<12
 cryptography>=42,<47
+cos-python-sdk-v5>=1.9.37,<2

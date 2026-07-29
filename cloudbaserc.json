@@ -18,21 +18,25 @@
           "mode": "low-cost",
           "cpu": 1,
           "mem": 2,
-          "maxNum": 5,
+          "minNum": 1,
+          "maxNum": 1,
           "envVariables": {
             "ARCHITECT_SERVICE_ROLE": "api",
             "ARCHITECT_API_HOST": "0.0.0.0",
-            "ARCHITECT_DATA_ROOT": "/var/data",
-            "ARCHITECT_JOBS_ROOT": "/var/data/worker-jobs",
-            "ARCHITECT_CASE_PACKAGES_ROOT": "/var/data/case-packages",
+            "ARCHITECT_DATA_ROOT": "/tmp/architect",
+            "ARCHITECT_JOBS_ROOT": "/tmp/architect/worker-jobs",
+            "ARCHITECT_CASE_PACKAGES_ROOT": "/tmp/architect/case-packages",
+            "ARCHITECT_STORAGE_BACKEND": "cos",
+            "ARCHITECT_COS_PREFIX": "architect",
+            "ARCHITECT_COS_BUCKET": "{{env.ARCHITECT_COS_BUCKET}}",
+            "ARCHITECT_COS_REGION": "{{env.ARCHITECT_COS_REGION}}",
+            "TENCENTCLOUD_SECRET_ID": "{{env.TENCENTCLOUD_SECRET_ID}}",
+            "TENCENTCLOUD_SECRET_KEY": "{{env.TENCENTCLOUD_SECRET_KEY}}",
             "ARCHITECT_LLM_PROVIDER": "deepseek",
             "ARCHITECT_LLM_MODEL": "deepseek-v4-flash",
             "DEEPSEEK_BASE_URL": "https://api.deepseek.com",
             "ARCHITECT_LLM_TIMEOUT_SECONDS": "90",
             "ARCHITECT_LLM_MAX_TOKENS": "16000"
-          },
-          "volumeMounts": {
-            "/var/data": "architect-shared-cfs"
           }
         }
       },
@@ -53,28 +57,23 @@
           "maxNum": 1,
           "envVariables": {
             "ARCHITECT_SERVICE_ROLE": "worker",
-            "ARCHITECT_DATA_ROOT": "/var/data",
-            "ARCHITECT_JOBS_ROOT": "/var/data/worker-jobs",
-            "ARCHITECT_CASE_PACKAGES_ROOT": "/var/data/case-packages",
+            "ARCHITECT_DATA_ROOT": "/tmp/architect",
+            "ARCHITECT_JOBS_ROOT": "/tmp/architect/worker-jobs",
+            "ARCHITECT_CASE_PACKAGES_ROOT": "/tmp/architect/case-packages",
+            "ARCHITECT_STORAGE_BACKEND": "cos",
+            "ARCHITECT_COS_PREFIX": "architect",
+            "ARCHITECT_COS_BUCKET": "{{env.ARCHITECT_COS_BUCKET}}",
+            "ARCHITECT_COS_REGION": "{{env.ARCHITECT_COS_REGION}}",
+            "TENCENTCLOUD_SECRET_ID": "{{env.TENCENTCLOUD_SECRET_ID}}",
+            "TENCENTCLOUD_SECRET_KEY": "{{env.TENCENTCLOUD_SECRET_KEY}}",
             "ARCHITECT_LLM_PROVIDER": "deepseek",
             "ARCHITECT_LLM_MODEL": "deepseek-v4-flash",
             "DEEPSEEK_BASE_URL": "https://api.deepseek.com",
             "ARCHITECT_LLM_TIMEOUT_SECONDS": "90",
             "ARCHITECT_LLM_MAX_TOKENS": "16000"
-          },
-          "volumeMounts": {
-            "/var/data": "architect-shared-cfs"
           }
         }
       }
-    },
-    "requirement": {
-      "addons": [
-        {
-          "type": "CFS",
-          "name": "architect-shared-cfs"
-        }
-      ]
     }
   }
 }

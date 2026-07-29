@@ -11,6 +11,7 @@ from worker_runtime.research import run_confirmed_research
 from .app import default_jobs_root, serve
 from .research_queue import ResearchQueue
 from .service import read_object, require_job_id
+from .cos_storage import current_cos_mirror
 
 
 def run_task(queue: ResearchQueue, task: dict[str, Any]) -> None:
@@ -29,7 +30,25 @@ def run_task(queue: ResearchQueue, task: dict[str, Any]) -> None:
 
 def main() -> None:
     queue = ResearchQueue(jobs_root=default_jobs_root())
-    worker = Thread(target=queue.run_forever, args=(lambda task: run_task(queue, task),), daemon=False)
+    cos_mirror = current_cos_mirror()
+
+    def consume() -> None:
+        queue.recover_interrupted_tasks()
+        while not queue.stop_event.is_set():
+            if cos_mirror:
+                cos_mirror.hydrate_all_jobs(jobs_root=queue.jobs_root)
+            processed = queue.process_one(
+                lambda task: run_task(queue, task),
+                on_settled=(
+                    (lambda workspace: cos_mirror.persist_job(jobs_root=queue.jobs_root, job_id=workspace.name))
+                    if cos_mirror
+                    else None
+                ),
+            )
+            if not processed:
+                queue.stop_event.wait(queue.poll_seconds)
+
+    worker = Thread(target=consume, daemon=False)
     worker.start()
     try:
         # Cloud Run requires a listener on PORT. This internal-only service uses

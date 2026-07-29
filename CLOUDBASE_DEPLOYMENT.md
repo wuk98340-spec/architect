@@ -1,53 +1,86 @@
-# 腾讯云 CloudBase Run 部署
+# CloudBase Run 部署与 COS 存储
 
-本项目现在可作为一个 CloudBase Run 容器服务部署：`Dockerfile` 启动同源的
-静态网站和 API，`cloudbaserc.json` 声明 CloudBase Framework 的云托管服务及
-CFS 挂载。
+本项目包含两个 CloudBase Run 容器服务：
 
-## 首次部署
+- `architect-api`：创建、查询、确认和保存案例研究任务。
+- `architect-research-worker`：消费已确认的研究任务。
 
-1. 在腾讯云云开发控制台创建或选择一个环境，并记下环境 ID。
-2. 在本机安装 CloudBase CLI，登录后执行：
+项目不再依赖 CFS、VPC 或 volume mount。容器内的 `/tmp/architect` 仅作为临时工作区；持久 job 和案例包由私有 COS 保存。
 
-   ```powershell
-   $env:ENV_ID = "你的云开发环境 ID"
-   cloudbase framework deploy
-   ```
+## 服务配置
 
-   也可以在云托管控制台选择“本地代码”，上传包含 `Dockerfile` 的仓库根目录。
-   端口填 `8080`，公开访问选择 `WEB`。
-3. 部署完成后，在云托管服务的环境变量中添加 `DEEPSEEK_API_KEY`。密钥绝不
-   写入 `cloudbaserc.json` 或提交到 Git。
-4. 在服务的“存储挂载”中确认 CFS `architect-case-library-cfs` 已挂载到
-   `/var/data`。这个目录保存 jobs 和用户确认保存的案例库。
+| 服务 | 端口映射 | 网络 | 实例 |
+| --- | --- | --- | --- |
+| `architect-api` | `80 → 8080` | 开启公网访问 | `min=1`，`max=1` |
+| `architect-research-worker` | `80 → 8080` | 仅内网访问 | `min=1`，`max=1` |
 
-## 运行模型
+不要扩大 API 或 Worker 的实例数。当前 COS mirror 实现为单 API、单 Worker 设计；水平扩容前必须将任务 claim、幂等键和事件索引迁至支持租约/条件更新的数据库或队列。
 
-- 对外入口：`/` 提供生成后的 `public/`，`/api/*` 提供后端，`/healthz` 为健康检查。
-- 服务启动时会仅在 CFS 案例库为空时从镜像种子化案例，再由该持久库重建 `public/`。
-- 已保存案例位于 `/var/data/case-packages`，任务位于 `/var/data/worker-jobs`。
-- API 服务可继续使用 `low-cost` 模式、单实例并缩至 0；研究任务由下述独立队列
-  Worker 执行。
+## 运行时环境变量
 
-## 异步研究 Worker
+两个服务均应配置：
 
-`POST /api/jobs/{job_id}/confirm` 只会把经过确认的任务写入
-`/var/data/worker-jobs/<job_id>/research-task.json`，并返回 `202 Accepted`。
-完整研究由独立的 CloudBase Run 服务执行，避免浏览器请求等待模型和网页检索。
+```text
+ARCHITECT_STORAGE_BACKEND=cos
+ARCHITECT_COS_BUCKET=6172-architect-dev-d3g2rg2jfcda0906a-1457963611
+ARCHITECT_COS_REGION=ap-shanghai
+ARCHITECT_COS_PREFIX=architect
+TENCENTCLOUD_SECRET_ID=<CAM 子用户 SecretId>
+TENCENTCLOUD_SECRET_KEY=<CAM 子用户 SecretKey>
+DEEPSEEK_API_KEY=<DeepSeek API key>
+ARCHITECT_LLM_PROVIDER=deepseek
+ARCHITECT_LLM_MODEL=deepseek-v4-flash
+DEEPSEEK_BASE_URL=https://api.deepseek.com
+ARCHITECT_LLM_TIMEOUT_SECONDS=90
+ARCHITECT_LLM_MAX_TOKENS=16000
+```
 
-创建一个名为 `architect-research-worker` 的第二个**容器型**服务，使用与
-`architect-api` 相同的 Git 仓库、分支、Dockerfile、构建目录和所有 LLM 环境变量，
-并额外配置：
+`architect-api` 额外配置：
+
+```text
+ARCHITECT_SERVICE_ROLE=api
+ARCHITECT_API_HOST=0.0.0.0
+ARCHITECT_CORS_ORIGINS=https://architect-dev-d3g2rg2jfcda0906a-1457963611.tcloudbaseapp.com
+```
+
+`architect-research-worker` 额外配置：
 
 ```text
 ARCHITECT_SERVICE_ROLE=worker
-ARCHITECT_DATA_ROOT=/var/data
-ARCHITECT_JOBS_ROOT=/var/data/worker-jobs
-ARCHITECT_CASE_PACKAGES_ROOT=/var/data/case-packages
 ```
 
-- 将与 API 完全相同的 CFS 文件系统挂载到两个服务的 `/var/data`。
-- Worker 设置为仅内部访问，`MinNum=1`、`MaxNum=1`。单消费者避免重复研究；最小
-  实例保证它能持续轮询 CFS 队列，而 API 仍可保持 `MinNum=0`。
-- Worker 进程重启时会将 CFS 中遗留的 `research-task.running.json` 重新标记为
-  `queued`；因此部署、扩缩容或实例故障不会丢失已确认的研究任务。
+两个服务可显式使用以下临时缓存目录：
+
+```text
+ARCHITECT_DATA_ROOT=/tmp/architect
+ARCHITECT_JOBS_ROOT=/tmp/architect/worker-jobs
+ARCHITECT_CASE_PACKAGES_ROOT=/tmp/architect/case-packages
+```
+
+不要配置 `PORT`；CloudBase Run 会提供该变量。COS bucket 必须保持私有。使用无控制台登录权限的 CAM 子用户，仅授予该 bucket 的 `architect/*` 前缀读、写、列举和删除权限。
+
+## COS 对象布局
+
+| 数据 | COS key 前缀 |
+| --- | --- |
+| 请求、任务状态、草稿、PDF、图片、校验报告 | `architect/jobs/<job_id>/...` |
+| 已发布案例包 | `architect/cases/<slug>/...` |
+
+私有研究资产仅通过受控 API 路由读取；公开站点只应发布通过审核的案例与图片。
+
+## Git 部署
+
+选择包含 COS 提交的 Git 分支后再部署。自动部署应只绑定经过验证的专用分支；不要把它绑定到临时修复分支。首次发布后，在 CloudBase 控制台为两个服务设置上述环境变量和密钥。
+
+## 本地开发
+
+绕过 COS 时设置：
+
+```powershell
+$env:ARCHITECT_STORAGE_BACKEND = "local"
+$env:ARCHITECT_DATA_ROOT = "$PWD\tmp\runtime-data"
+$env:ARCHITECT_JOBS_ROOT = "$PWD\tmp\runtime-data\worker-jobs"
+$env:ARCHITECT_CASE_PACKAGES_ROOT = "$PWD\tmp\runtime-data\case-packages"
+cd ARCHITECT_skill
+python -m backend_api.render_start
+```

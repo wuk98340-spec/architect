@@ -28,6 +28,7 @@ from .service import (
     save_result_to_library,
 )
 from .research_queue import ResearchQueue
+from .cos_storage import current_cos_mirror
 
 
 ProviderFactory = Callable[[], LLMProvider]
@@ -92,6 +93,7 @@ def create_server(
     build_site = rebuild_site or rebuild_static_site
     allowed_cors_origins = cors_origins()
     queue = research_queue or ResearchQueue(jobs_root=root)
+    cos_mirror = current_cos_mirror()
 
     class Handler(BaseHTTPRequestHandler):
         server_version = "ARCHITECTBackend/0.1"
@@ -144,20 +146,26 @@ def create_server(
                 return {"status": "ok"}
             if self.command == "POST" and parts == ["api", "jobs"]:
                 request = build_request(self._body_object())
-                run_disambiguation(request=request, jobs_root=root, provider=make_provider())
+                try:
+                    run_disambiguation(request=request, jobs_root=root, provider=make_provider())
+                finally:
+                    if cos_mirror:
+                        cos_mirror.persist_job(jobs_root=root, job_id=request["job_id"])
                 return job_view(jobs_root=root, job_id=request["job_id"])
             if parts[:2] != ["api", "jobs"] or len(parts) not in {3, 4}:
                 raise FileNotFoundError("route was not found.")
             job_id = require_job_id(parts[2])
             if self.command == "GET" and len(parts) == 3:
+                self._hydrate_job(job_id)
                 return job_view(jobs_root=root, job_id=job_id)
             if self.command == "POST" and len(parts) == 4 and parts[3] == "confirm":
+                self._hydrate_job(job_id)
                 return self._confirm(job_id)
             if self.command == "POST" and len(parts) == 4 and parts[3] == "save":
-                return {"job_id": job_id, "saved": save_result_to_library(
-                    jobs_root=root, case_packages_root=library_root, job_id=job_id, rebuild_site=build_site
-                )}
+                self._hydrate_job(job_id)
+                return self._save(job_id)
             if self.command == "GET" and len(parts) == 4 and parts[3] == "result":
+                self._hydrate_job(job_id)
                 return result_view(jobs_root=root, job_id=job_id)
             raise FileNotFoundError("route was not found.")
 
@@ -182,6 +190,7 @@ def create_server(
             if len(parts) < 6 or parts[:2] != ["api", "jobs"] or parts[3] != "assets":
                 return False
             job_id = require_job_id(parts[2])
+            self._hydrate_job(job_id)
             relative = Path(*parts[4:])
             if relative.is_absolute() or ".." in relative.parts:
                 raise FileNotFoundError("asset was not found.")
@@ -215,13 +224,32 @@ def create_server(
                 "confirmed_by": {"user_id": str(confirmed_by.get("user_id", "api")).strip() or "api", "role": str(confirmed_by.get("role", "editor"))},
                 "confirmed_at": datetime.now(UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
             }
-            confirm_research_job(
-                request=request, jobs_root=root,
-                confirmation=confirmation,
-            )
-            queue.enqueue(job_id=job_id, confirmation=confirmation)
+            try:
+                confirm_research_job(
+                    request=request, jobs_root=root,
+                    confirmation=confirmation,
+                )
+                queue.enqueue(job_id=job_id, confirmation=confirmation)
+            finally:
+                if cos_mirror:
+                    cos_mirror.persist_job(jobs_root=root, job_id=job_id)
             self._response_status = HTTPStatus.ACCEPTED
             return job_view(jobs_root=root, job_id=job_id)
+
+        def _hydrate_job(self, job_id: str) -> None:
+            if cos_mirror:
+                cos_mirror.hydrate_job(jobs_root=root, job_id=job_id)
+
+        def _save(self, job_id: str) -> dict[str, Any]:
+            saved = save_result_to_library(
+                jobs_root=root, case_packages_root=library_root, job_id=job_id, rebuild_site=build_site
+            )
+            if cos_mirror:
+                cos_mirror.persist_case_package(
+                    case_packages_root=library_root, package_slug=str(saved["package_slug"])
+                )
+                cos_mirror.persist_job(jobs_root=root, job_id=job_id)
+            return {"job_id": job_id, "saved": saved}
 
         def _body_object(self) -> dict[str, Any]:
             length = int(self.headers.get("Content-Length", "0"))

@@ -100,7 +100,7 @@ class ResearchQueue:
         _write_json(workspace / "research-task.json", task)
         (workspace / "research-task.running.json").unlink(missing_ok=True)
 
-    def process_one(self, runner: TaskRunner) -> bool:
+    def process_one(self, runner: TaskRunner, *, on_settled: Callable[[Path], None] | None = None) -> bool:
         claimed = self.claim_next()
         if claimed is None:
             return False
@@ -111,6 +111,8 @@ class ResearchQueue:
             self.finish(workspace=workspace, task=task, error=error)
         else:
             self.finish(workspace=workspace, task=task)
+        if on_settled:
+            on_settled(workspace)
         return True
 
     def run_forever(self, runner: TaskRunner) -> None:
