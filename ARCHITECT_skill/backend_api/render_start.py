@@ -43,8 +43,16 @@ def main() -> None:
     cases_root = Path(os.environ.setdefault("ARCHITECT_CASE_PACKAGES_ROOT", str(data_root / "case-packages")))
     os.environ.setdefault("ARCHITECT_JOBS_ROOT", str(data_root / "worker-jobs"))
     os.environ.setdefault("ARCHITECT_STATIC_ROOT", str(root / "architecture-case-site" / "public"))
-    cos_mirror = current_cos_mirror()
-    library_exists = cos_mirror.hydrate_library(case_packages_root=cases_root) if cos_mirror else cases_root.exists()
+    try:
+        cos_mirror = current_cos_mirror()
+        library_exists = cos_mirror.hydrate_library(case_packages_root=cases_root) if cos_mirror else cases_root.exists()
+    except Exception as error:
+        # Storage must not make the public API unavailable.  A failed optional
+        # mirror (bad credentials, a transient COS error, etc.) falls back to
+        # the case library baked into the deployed image.
+        print(f"COS mirror unavailable; starting with bundled case library: {error}", file=sys.stderr)
+        cos_mirror = None
+        library_exists = cases_root.exists()
     if not library_exists:
         seed_case_library(root / "case-packages", cases_root)
     if cos_mirror and not library_exists:
