@@ -17,10 +17,16 @@ def workspace_root() -> Path:
 
 
 def seed_case_library(source: Path, destination: Path) -> None:
-    """Seed an empty Render disk without overwriting cases saved by editors."""
+    """Seed when COS did not provide an actual case package."""
     destination.parent.mkdir(parents=True, exist_ok=True)
-    if not destination.exists():
-        shutil.copytree(source, destination)
+    if destination.exists():
+        shutil.rmtree(destination)
+    shutil.copytree(source, destination)
+
+
+def has_case_library(root: Path) -> bool:
+    """An empty directory created by a failed COS sync is not a library."""
+    return root.is_dir() and any(root.rglob("case.json"))
 
 
 def rebuild_site(root: Path) -> None:
@@ -47,7 +53,7 @@ def main() -> None:
         cos_mirror = current_cos_mirror()
         if cos_mirror:
             print(cos_mirror.diagnostic_log(), file=sys.stderr)
-        library_exists = cos_mirror.hydrate_library(case_packages_root=cases_root) if cos_mirror else cases_root.exists()
+        library_exists = cos_mirror.hydrate_library(case_packages_root=cases_root) if cos_mirror else has_case_library(cases_root)
     except Exception as error:
         # Storage must not make the public API unavailable.  A failed optional
         # mirror (bad credentials, a transient COS error, etc.) falls back to
@@ -56,7 +62,7 @@ def main() -> None:
         print(f"{message} Starting with bundled case library.", file=sys.stderr)
         os.environ["ARCHITECT_COS_STORAGE_UNAVAILABLE"] = message
         cos_mirror = None
-        library_exists = cases_root.exists()
+        library_exists = has_case_library(cases_root)
     if not library_exists:
         seed_case_library(root / "case-packages", cases_root)
     if cos_mirror and not library_exists:
