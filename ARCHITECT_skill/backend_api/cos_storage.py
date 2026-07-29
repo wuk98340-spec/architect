@@ -124,7 +124,15 @@ class CosStorageMirror:
             ) from error
         self.config = config
         self.client = CosS3Client(
-            CosConfig(Region=config.region, SecretId=config.secret_id, SecretKey=config.secret_key, Scheme="https")
+            CosConfig(
+                Region=config.region,
+                SecretId=config.secret_id,
+                SecretKey=config.secret_key,
+                Scheme="https",
+                # Cloud Run's egress path can rewrite Host. Excluding it from
+                # the COS signature keeps the request valid after that proxying.
+                SignHost=False,
+            )
         )
 
     @classmethod

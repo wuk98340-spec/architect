@@ -82,7 +82,11 @@ class CosStorageConfigurationTests(unittest.TestCase):
         with patch.dict(sys.modules, {"qcloud_cos": module}):
             mirror = CosStorageMirror(configuration)
         config_factory.assert_called_once_with(
-            Region="ap-shanghai", SecretId="AKIDtest", SecretKey="test-secret", Scheme="https"
+            Region="ap-shanghai",
+            SecretId="AKIDtest",
+            SecretKey="test-secret",
+            Scheme="https",
+            SignHost=False,
         )
         self.assertEqual(mirror.client, "client")
 
