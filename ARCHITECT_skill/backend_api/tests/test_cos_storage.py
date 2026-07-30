@@ -36,6 +36,39 @@ class CosStorageConfigurationTests(unittest.TestCase):
         self.assertEqual(configuration.bucket, "architect-prod-1250000000")
         self.assertEqual(configuration.secret_key, "test-secret")
 
+    def test_platform_credentials_take_precedence_when_the_complete_temporary_triplet_is_present(self) -> None:
+        with patch.dict(
+            os.environ,
+            {
+                "ARCHITECT_COS_BUCKET": "architect-prod-1250000000",
+                "ARCHITECT_COS_REGION": "ap-shanghai",
+                "ARCHITECT_COS_SECRET_ID": "static-id",
+                "ARCHITECT_COS_SECRET_KEY": "static-key",
+                "TENCENTCLOUD_SECRETID": "temporary-id",
+                "TENCENTCLOUD_SECRETKEY": "temporary-key",
+                "TENCENTCLOUD_SESSIONTOKEN": "temporary-token",
+            },
+            clear=True,
+        ):
+            configuration = CosStorageConfig.from_environment()
+        self.assertEqual(configuration.credential_source, "platform")
+        self.assertEqual(configuration.secret_id, "temporary-id")
+        self.assertEqual(configuration.session_token, "temporary-token")
+
+    def test_platform_mode_requires_complete_temporary_credentials(self) -> None:
+        with patch.dict(
+            os.environ,
+            {
+                "ARCHITECT_COS_CREDENTIAL_MODE": "platform",
+                "ARCHITECT_COS_BUCKET": "architect-prod-1250000000",
+                "ARCHITECT_COS_REGION": "ap-shanghai",
+                "TENCENTCLOUD_SECRETID": "temporary-id",
+            },
+            clear=True,
+        ):
+            with self.assertRaisesRegex(StorageConfigurationError, "ARCHITECT_COS_SECRET_KEY"):
+                CosStorageConfig.from_environment()
+
     def test_cos_configuration_rejects_an_unsafe_prefix(self) -> None:
         with patch.dict(
             os.environ,
@@ -73,6 +106,8 @@ class CosStorageConfigurationTests(unittest.TestCase):
             prefix="architect",
             secret_id="AKIDtest",
             secret_key="test-secret",
+            session_token="temporary-token",
+            credential_source="platform",
         )
         config_factory = MagicMock(return_value="config")
         client_factory = MagicMock(return_value="client")
@@ -86,7 +121,7 @@ class CosStorageConfigurationTests(unittest.TestCase):
             SecretId="AKIDtest",
             SecretKey="test-secret",
             Scheme="https",
-            SignHost=False,
+            Token="temporary-token",
         )
         self.assertEqual(mirror.client, "client")
 

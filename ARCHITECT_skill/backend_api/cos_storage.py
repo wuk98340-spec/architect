@@ -51,17 +51,44 @@ class CosStorageConfig:
     prefix: str
     secret_id: str
     secret_key: str
+    session_token: str = ""
+    credential_source: str = "static"
 
     @classmethod
     def from_environment(cls) -> "CosStorageConfig":
+        platform_credentials = {
+            "TENCENTCLOUD_SECRETID": _clean_environment_value(
+                "TENCENTCLOUD_SECRETID", "TENCENTCLOUD_SECRET_ID"
+            ),
+            "TENCENTCLOUD_SECRETKEY": _clean_environment_value(
+                "TENCENTCLOUD_SECRETKEY", "TENCENTCLOUD_SECRET_KEY"
+            ),
+            "TENCENTCLOUD_SESSIONTOKEN": _clean_environment_value(
+                "TENCENTCLOUD_SESSIONTOKEN", "TENCENTCLOUD_SESSION_TOKEN"
+            ),
+        }
+        credential_mode = _clean_environment_value("ARCHITECT_COS_CREDENTIAL_MODE").lower()
+        use_platform_credentials = credential_mode == "platform" or all(platform_credentials.values())
+        if credential_mode and credential_mode not in {"platform", "static"}:
+            raise StorageConfigurationError(
+                "ARCHITECT_COS_CREDENTIAL_MODE must be either 'platform' or 'static'."
+            )
         values = {
             "ARCHITECT_COS_BUCKET": _clean_environment_value("ARCHITECT_COS_BUCKET"),
             "ARCHITECT_COS_REGION": _clean_environment_value("ARCHITECT_COS_REGION"),
-            "ARCHITECT_COS_SECRET_ID": _clean_environment_value(
-                "ARCHITECT_COS_SECRET_ID", "TENCENTCLOUD_SECRET_ID"
+            "ARCHITECT_COS_SECRET_ID": (
+                platform_credentials["TENCENTCLOUD_SECRETID"]
+                if use_platform_credentials
+                else _clean_environment_value(
+                    "ARCHITECT_COS_SECRET_ID", "TENCENTCLOUD_SECRETID", "TENCENTCLOUD_SECRET_ID"
+                )
             ),
-            "ARCHITECT_COS_SECRET_KEY": _clean_environment_value(
-                "ARCHITECT_COS_SECRET_KEY", "TENCENTCLOUD_SECRET_KEY"
+            "ARCHITECT_COS_SECRET_KEY": (
+                platform_credentials["TENCENTCLOUD_SECRETKEY"]
+                if use_platform_credentials
+                else _clean_environment_value(
+                    "ARCHITECT_COS_SECRET_KEY", "TENCENTCLOUD_SECRETKEY", "TENCENTCLOUD_SECRET_KEY"
+                )
             ),
         }
         missing = [name for name, value in values.items() if not value]
@@ -82,6 +109,10 @@ class CosStorageConfig:
             prefix=prefix,
             secret_id=values["ARCHITECT_COS_SECRET_ID"],
             secret_key=values["ARCHITECT_COS_SECRET_KEY"],
+            session_token=(
+                platform_credentials["TENCENTCLOUD_SESSIONTOKEN"] if use_platform_credentials else ""
+            ),
+            credential_source="platform" if use_platform_credentials else "static",
         )
 
     def diagnostic_log(self) -> str:
@@ -92,8 +123,10 @@ class CosStorageConfig:
                 f"bucket: {self.bucket}",
                 f"region: {self.region}",
                 f"prefix: {self.prefix}",
+                f"credential source: {self.credential_source}",
                 f"SecretId: {secret_id_preview}",
                 f"SecretKey: {'configured' if self.secret_key else 'not configured'}",
+                f"SessionToken: {'configured' if self.session_token else 'not configured'}",
             )
         )
 
@@ -123,17 +156,15 @@ class CosStorageMirror:
                 "COS storage requires cos-python-sdk-v5; install worker_runtime requirements."
             ) from error
         self.config = config
-        self.client = CosS3Client(
-            CosConfig(
-                Region=config.region,
-                SecretId=config.secret_id,
-                SecretKey=config.secret_key,
-                Scheme="https",
-                # Cloud Run's egress path can rewrite Host. Excluding it from
-                # the COS signature keeps the request valid after that proxying.
-                SignHost=False,
-            )
-        )
+        options = {
+            "Region": config.region,
+            "SecretId": config.secret_id,
+            "SecretKey": config.secret_key,
+            "Scheme": "https",
+        }
+        if config.session_token:
+            options["Token"] = config.session_token
+        self.client = CosS3Client(CosConfig(**options))
 
     @classmethod
     def from_environment(cls) -> "CosStorageMirror":
