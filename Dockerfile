@@ -18,7 +18,9 @@ COPY ARCHITECT_skill/backend_api /app/ARCHITECT_skill/backend_api
 COPY ARCHITECT_skill/worker_runtime /app/ARCHITECT_skill/worker_runtime
 COPY ARCHITECT_skill/skills /app/ARCHITECT_skill/skills
 COPY case-packages /app/case-packages
-COPY architecture-case-site/public /app/architecture-case-site/public
+# Startup rebuilds the static site, which needs its config, source templates,
+# and build script in addition to the currently served public assets.
+COPY architecture-case-site /app/architecture-case-site
 
 EXPOSE 8080
 
