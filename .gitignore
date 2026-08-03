@@ -22,6 +22,10 @@ build/
 .cache/
 tmp/
 temp/
+recovery-backups/
+architecture-case-site-v2/
+architecture-case-site/design-qa-*.png
+case-packages/**/revisions/
 
 # Logs
 *.log

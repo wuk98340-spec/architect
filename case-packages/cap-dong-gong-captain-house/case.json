@@ -1,0 +1,927 @@
+{
+  "project_name": "船长之家改造",
+  "source_mode": "web",
+  "architects": [
+    "董功",
+    "直向建筑（Vector Architects）"
+  ],
+  "location": "福建省福州市连江县苔菉镇北茭村，中国",
+  "year": "2017",
+  "program": "独立住宅改造",
+  "status": "建成",
+  "case_type": "renovation",
+  "disambiguation_status": "confirmed",
+  "disambiguation_candidates": [
+    {
+      "candidate_project": "船长之家改造 / 直向建筑",
+      "location": "福建省福州市连江县苔菉镇北茭村",
+      "architects": "直向建筑（董功）",
+      "year": "2017",
+      "type": "住宅改造",
+      "main_sources": [
+        "https://www.vectorarchitects.com/cn/projects/30",
+        "https://www.archdaily.cn/zh/871456/chuan-chang-zhi-jia-gai-zao-zhi-xiang-jian-zhu"
+      ],
+      "confidence": "confirmed",
+      "question_for_user": ""
+    }
+  ],
+  "information_confidence": "high",
+  "incomplete_reason": "用地面积、建筑高度、容积率、建筑密度、层数精确数据未从公开资料获得；结构体系由官网明确说明。",
+  "one_sentence_summary": "通过新增12cm混凝土墙加固原有砖混结构，并以拱顶加建形成具有精神意义的家庭空间，使改造后的住宅在抵御海边恶劣气候的同时，赋予居住者新的生活尊严。",
+  "key_facts": [
+    {
+      "label": "项目名称",
+      "value": "船长之家改造（Renovation of the Captain's House）",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "label": "建筑师",
+      "value": "直向建筑（主持建筑师：董功）",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "label": "地点",
+      "value": "福建省福州市连江县苔菉镇北茭村",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "label": "建成年份",
+      "value": "2017年1月",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "label": "建筑面积",
+      "value": "470㎡",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "label": "结构加固方式",
+      "value": "在保留原有砖墙结构基础上添加一层12cm混凝土墙",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "label": "主要材料",
+      "value": "混凝土、樱桃木、竹钢、玻璃砖、肌理涂料",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "design_concept": {
+    "sourced_concept": "设计从结构加固方式出发，通过新增混凝土墙实现加固、加建和空间品质提升；将窗设计为‘窗系统家具’，作为自然与室内之间的媒介；三层采用拱形结构，兼具排水效率、方向性景观和宗教空间隐喻。",
+    "ai_synthesis": "拱顶的形态既回应了结构逻辑和气候防御，又赋予了空间超越日常的精神性，使建筑在村落中‘既融入又跳出’。",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s6"
+    ]
+  },
+  "key_strategies": [
+    {
+      "strategy_name": "结构加固与空间重构一体化",
+      "design_problem": "原有砖混结构单薄、存在安全隐患，且室内漏水严重；同时需要加建三层以适应新需求。",
+      "specific_approach": "在保留原有砖墙基础上，内侧添加一层12cm混凝土墙，形成复合结构。新结构允许局部拆除或移位原有砖墙，重新调整空间格局。",
+      "architectural_effect": "既满足了结构加固和加建的需求，又提供了重新组织空间的可能性，使卫生间移到北侧，主要房间获得更好的海景视线和通风采光。",
+      "evidence": "sourced",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "related_image_ids": [
+        "img_01",
+        "img_05"
+      ],
+      "transferable_lesson": "在改造项目中，结构加固策略可以同时作为空间重塑的工具，而非仅作为工程手段。"
+    },
+    {
+      "strategy_name": "窗系统家具（window-furniture）",
+      "design_problem": "海边风雨侵蚀严重，普通窗洞易漏水；同时希望增强窗与人的互动。",
+      "specific_approach": "窗套突出墙面，为开启扇提供遮蔽，隔绝沿墙雨水；洞口厚度被设计成家具（如坐凳、桌面），与人的行为结合。",
+      "architectural_effect": "窗不再是单纯的洞口，而成为介于室内与自然之间的‘媒介’空间，增强了观景的仪式感与使用功能。",
+      "evidence": "sourced",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "related_image_ids": [
+        "img_05"
+      ],
+      "transferable_lesson": "窗的深度和边缘可以转化为可使用的空间，应对气候的同时丰富生活和体验。"
+    },
+    {
+      "strategy_name": "拱顶加建作为精神空间",
+      "design_problem": "需要加建三层，同时希望赋予空间超越日常的意义；排水和防水是关键。",
+      "specific_approach": "采用混凝土拱顶结构，由两侧承重墙汇聚而成；拱形利于快速排水，方向性连接两侧海景；内部设置夹层阁楼。",
+      "architectural_effect": "拱顶空间具有宗教隐喻（家庭祈祷室），成为家庭情感的载体；在村落中谦卑而独特，如同‘海边灯塔’。",
+      "evidence": "sourced",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s6"
+      ],
+      "related_image_ids": [
+        "img_01"
+      ],
+      "transferable_lesson": "结构形态可以同时解决排水、景观、精神和标志性多重问题，是低成本高效益的设计手法。"
+    },
+    {
+      "strategy_name": "平面功能置换与视线优化",
+      "design_problem": "原有卫生间占据最佳海景位置，主要生活空间景观视线受阻。",
+      "specific_approach": "将一、二层临海卫生间移到靠近邻居一侧，释放出南向和东向面宽给客厅、餐厅和主卧室。",
+      "architectural_effect": "主要生活空间获得更好的海景视野，同时改善了卫生间的通风采光条件。",
+      "evidence": "sourced",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "related_image_ids": [
+        "img_05"
+      ],
+      "transferable_lesson": "在有限的面积内，通过功能置换可以大幅提升空间品质，无需增加面积。"
+    }
+  ],
+  "spatial_ideas": [
+    {
+      "text": "三层拱顶空间具有强烈的方向性和精神性，连接喧嚣港口与宁静大海，暗示宗教意义。",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s6"
+      ],
+      "related_image_ids": [
+        "img_01"
+      ]
+    },
+    {
+      "text": "窗系统家具将窗洞转化为可坐、可倚的空间，模糊了室内外界限。",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "related_image_ids": [
+        "img_05"
+      ]
+    },
+    {
+      "text": "混凝土墙与原有砖墙的复合形成新旧叠加的材质表情。",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "related_image_ids": []
+    }
+  ],
+  "materials_structure": [
+    {
+      "text": "结构：混凝土承重墙 + 旧有砖混结构（复合墙，新增12cm混凝土）。",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "related_image_ids": []
+    },
+    {
+      "text": "材料：混凝土、樱桃木、竹钢、玻璃砖、肌理涂料。",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "related_image_ids": []
+    }
+  ],
+  "site_context": [
+    {
+      "text": "位于福建连江县黄岐半岛东北端，与马祖列岛隔海相望，场地为礁石海岸，建筑嵌入密集村落中。",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "related_image_ids": [
+        "img_05"
+      ]
+    },
+    {
+      "text": "建筑沿礁石脉络东西向延伸，垂直海岸线，两端分别面对渔港和开放海面。",
+      "source_ids": [
+        "s6"
+      ],
+      "related_image_ids": []
+    }
+  ],
+  "image_metadata": [
+    {
+      "id": "img_01",
+      "file_name": "images/research-01.jpg",
+      "image_type": "01_hero",
+      "source_url": "https://www.vectorarchitects.com/uploads/img/2019/01/15482531122064_min.jpg",
+      "source_site": "www.vectorarchitects.com",
+      "caption": "船长之家改造后外观（推测为西立面）",
+      "copyright_note": "参考链接，版权未清除。",
+      "recommended_use": "封面/外观识别",
+      "relevance_reason": "用于说明改造后建筑的整体外观、体量关系和拱顶形态。",
+      "related_sections": [
+        "key_facts",
+        "key_strategies.3",
+        "site_context"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_05",
+      "file_name": "images/research-05.jpg",
+      "image_type": "02_site",
+      "source_url": "https://images.adsttc.com/media/images/591b/43b6/e58e/ce3e/3e00/0589/newsletter/1_(9).jpg?1494959021=",
+      "source_site": "www.archdaily.com",
+      "caption": "船长之家黄昏外景，可见拱顶与村落关系",
+      "copyright_note": "摄影：夏至；版权归摄影师。",
+      "recommended_use": "场地关系分析",
+      "relevance_reason": "用于说明建筑在村落中的位置、与周围民居的对比及拱顶标志性。",
+      "related_sections": [
+        "site_context",
+        "key_strategies.3"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    },
+    {
+      "id": "img_06",
+      "file_name": "images/research-06.jpg",
+      "image_type": "09_analysis",
+      "source_url": "https://images.adsttc.com/media/images/591b/4457/e58e/ce3e/3e00/058d/thumb_jpg/1_(8).jpg?1494959182=",
+      "source_site": "www.archdaily.com",
+      "caption": "改造前立面（ArchDaily缩略图）",
+      "copyright_note": "版权归ArchDaily或摄影师。",
+      "recommended_use": "改造前后对比分析",
+      "relevance_reason": "用于展示改造前建筑立面状态，辅助理解结构加固的必要性。",
+      "related_sections": [
+        "key_strategies.0"
+      ],
+      "download_status": "downloaded",
+      "failure_reason": ""
+    }
+  ],
+  "download_mode": "completed",
+  "source_quality": {
+    "has_primary_sources": true,
+    "primary_sources_used_for_identity": true,
+    "architecture_media_count": 4,
+    "wechat_valid_result_count": 0,
+    "zhihu_valid_result_count": 0,
+    "source_sufficiency_status": "sufficient",
+    "secondary_source_heavy": false,
+    "manual_review_needed": [
+      "经济技术指标（用地面积、高度、容积率）未检索到"
+    ],
+    "identity_confirming_source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "analysis_coverage": [
+      "concept",
+      "context",
+      "program",
+      "circulation",
+      "facade_material",
+      "structure_construction",
+      "user_experience",
+      "urban_relationship"
+    ]
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "船长之家改造 - 直向建筑官网",
+      "url": "https://www.vectorarchitects.com/cn/projects/30",
+      "source_level": "level_a",
+      "publisher": "直向建筑 / Vector Architects",
+      "accessed_date": "2026-07-24",
+      "notes": "官方项目页面，包含详细设计说明、项目团队、图纸、照片等，内容全面。"
+    },
+    {
+      "id": "s2",
+      "title": "船长之家改造 / 直向建筑 | ArchDaily 中文版",
+      "url": "https://www.archdaily.com/zh/871456/chuan-chang-zhi-jia-gai-zao-zhi-xiang-jian-zhu",
+      "source_level": "level_b",
+      "publisher": "ArchDaily 中文版",
+      "accessed_date": "2026-07-24",
+      "notes": "高质量建筑媒体，内容与官网基本一致，包含照片和图库。"
+    },
+    {
+      "id": "s3",
+      "title": "船长之家改造 / 直向建筑 | 谷德设计网",
+      "url": "https://www.gooood.cn/renovation-of-captains-house-vector-architects.htm",
+      "source_level": "level_b",
+      "publisher": "gooood / 谷德设计网",
+      "accessed_date": "2026-07-24",
+      "notes": "内容丰富，包含中英双语描述、多张照片、视频、平面图、剖面图等。"
+    },
+    {
+      "id": "s4",
+      "title": "视频首发 | 改造后的“船长之家”什么样？ – 有方",
+      "url": "https://www.archiposition.com/items/20180525110306",
+      "source_level": "level_b",
+      "publisher": "有方 / Archiposition",
+      "accessed_date": "2026-07-24",
+      "notes": "包含视频和文字介绍，信息与官网一致，补充了建造前后对比。"
+    },
+    {
+      "id": "s5",
+      "title": "风语 船长之家 / 直向建筑 – 有方",
+      "url": "https://www.archiposition.com/items/20211022033616",
+      "source_level": "level_b",
+      "publisher": "有方 / Archiposition",
+      "accessed_date": "2026-07-24",
+      "notes": "短视频记录建筑与风、海的关系，补充氛围信息。"
+    },
+    {
+      "id": "s6",
+      "title": "【船长之家】 By 直向建筑 - 豆瓣（青锋：船长之家的隐喻与内涵）",
+      "url": "https://www.douban.com/group/topic/234867746?_dtcc=1",
+      "source_level": "level_c",
+      "publisher": "豆瓣 / 青锋",
+      "accessed_date": "2026-07-24",
+      "notes": "学术性分析文章，包含对基础、窗、拱顶的深入解读及与海边图书馆等项目的比较，提供了专业视点。"
+    }
+  ],
+  "evidence_spans": [],
+  "uncertain_or_conflicting_info": [
+    {
+      "topic": "用地面积",
+      "description": "公开资料未提供用地面积数据。",
+      "source_ids": []
+    },
+    {
+      "topic": "建筑高度",
+      "description": "公开资料未提供建筑高度，无法确认。",
+      "source_ids": []
+    },
+    {
+      "topic": "容积率、建筑密度",
+      "description": "未检索到相关数据。",
+      "source_ids": []
+    },
+    {
+      "topic": "精确层数",
+      "description": "原两层加建三层，但拱顶内设有阁楼夹层，资料未明确总层数；从平面图可见三层和夹层。",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    }
+  ],
+  "technical_metrics": {
+    "site_area": {
+      "value": null,
+      "unit": "㎡",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未公开"
+    },
+    "building_area": {
+      "value": 470,
+      "unit": "㎡",
+      "confidence": "confirmed",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "notes": ""
+    },
+    "height": {
+      "value": null,
+      "unit": "m",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未公开"
+    },
+    "floors": {
+      "value": 3,
+      "unit": "层",
+      "confidence": "limited",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "notes": "平面显示三层加夹层，但官方未说明确层数"
+    },
+    "far": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未公开"
+    },
+    "building_density": {
+      "value": null,
+      "unit": "",
+      "confidence": "unknown",
+      "source_ids": [],
+      "notes": "未公开"
+    },
+    "structure_system": {
+      "value": "混凝土承重墙 + 旧有砖混结构",
+      "unit": "",
+      "confidence": "confirmed",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "notes": "新增12cm混凝土墙复合原砖墙"
+    },
+    "main_materials": [
+      {
+        "text": "混凝土、樱桃木、竹钢、玻璃砖、肌理涂料",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "client": {
+      "value": "私人业主，上海广播电视台东方卫星频道",
+      "unit": "",
+      "confidence": "confirmed",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "notes": ""
+    },
+    "photography_drawing_credits": [
+      {
+        "text": "摄影：夏至（zhiimage@163.com）、陈颢（howardchan@outlook.com）、陈振强",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "related_image_ids": []
+      },
+      {
+        "text": "图纸来源：直向建筑",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s3"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "notes": "场地指标大部分缺失，仅建筑面积明确。"
+  },
+  "site_information": {
+    "location_role": {
+      "text": "位于连江县黄岐半岛东北端，与台湾马祖列岛隔海相望，属于沿海渔村中的一户住宅。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "related_image_ids": [
+        "img_05"
+      ]
+    },
+    "natural_environment": {
+      "text": "海边礁石地貌，常年遭受海风和雨水侵蚀，潮湿易腐，气候条件恶劣。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "related_image_ids": []
+    },
+    "cultural_environment": {
+      "text": "村落为传统渔村，建筑密集，以当地民居为主；业主家庭信仰基督教。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1",
+        "s6"
+      ],
+      "related_image_ids": []
+    },
+    "terrain_conditions": {
+      "text": "建筑建于礁石之上，岩石脉络近似东西向垂直海岸线。",
+      "evidence_type": "synthesis",
+      "source_ids": [
+        "s6"
+      ],
+      "related_image_ids": []
+    },
+    "roads_and_access": {
+      "text": "位于村内密集街巷中，仅有一条窄路连接；建筑主入口朝北，次入口朝东。",
+      "evidence_type": "synthesis",
+      "source_ids": [
+        "s3"
+      ],
+      "related_image_ids": []
+    },
+    "surrounding_buildings": {
+      "text": "周围为2-3层传统民居，体量和风格各异；船长之家改造后通过拱顶在村落中突出但依然谦逊。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "related_image_ids": [
+        "img_05"
+      ]
+    },
+    "served_users": {
+      "text": "船长一家四口（夫妇与子女），另需接纳节日来访亲友。",
+      "evidence_type": "sourced",
+      "source_ids": [
+        "s1",
+        "s6"
+      ],
+      "related_image_ids": []
+    },
+    "core_site_tension": {
+      "text": "如何在高密度村落中、恶劣海边气候下，既提供安全坚固的庇护，又能开放并享受海景。",
+      "evidence_type": "synthesis",
+      "source_ids": [
+        "s1",
+        "s6"
+      ],
+      "related_image_ids": []
+    }
+  },
+  "conceptual_exploration": {
+    "diagnosis": [
+      {
+        "text": "原有建筑砖混结构薄弱，漏水严重，无法满足现代生活需求；业主希望加建三层。（来源明确）",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "related_image_ids": []
+      },
+      {
+        "text": "业主对大海抱有既依赖又恐惧的矛盾心理。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s6"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "positioning": [
+      {
+        "text": "项目定位为改造+加建，在有限预算和现有结构条件下最大化空间品质与生活尊严。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s6"
+        ],
+        "related_image_ids": []
+      },
+      {
+        "text": "为普通家庭提供具有精神意义的居住空间，不追求张扬的形式。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "strategy": [
+      {
+        "text": "结构加固作为设计起点：新增混凝土墙既满足安全又创造空间重组可能。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "related_image_ids": []
+      },
+      {
+        "text": "窗作为‘媒介’：将窗洞转化为家具，建立自然与生活的联系。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "related_image_ids": []
+      },
+      {
+        "text": "拱顶：结构、排水、景观、精神性的综合解决方案。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ],
+        "related_image_ids": [
+          "img_01"
+        ]
+      }
+    ],
+    "imagery_and_expression": [
+      {
+        "text": "草图：董功草图显示拱顶作为加建核心（来源：有方专访提及）。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s6"
+        ],
+        "related_image_ids": []
+      },
+      {
+        "text": "象征：灯塔、船、庇护所、宗教空间、家庭情感载体。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s6"
+        ],
+        "related_image_ids": []
+      }
+    ]
+  },
+  "architectural_language_generation": {
+    "function": [
+      {
+        "text": "一层：入口门厅、厨房、餐厅、起居室；二层：主卧室、女儿卧室、书房；三层：多功能活动室（兼家庭礼拜）、阁楼。卫生间集中布置于北侧。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s3"
+        ],
+        "related_image_ids": []
+      },
+      {
+        "text": "空间层级：楼下日常起居，楼上精神性空间，形成由动到静、由实到虚的过渡。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s6"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "layout": [
+      {
+        "text": "总平面：建筑沿东西向延伸，垂直海岸线，两端分别面对渔港和东海。南立面完整封闭，东、西、北立面相对通透。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s3",
+          "s6"
+        ],
+        "related_image_ids": [
+          "img_05"
+        ]
+      },
+      {
+        "text": "平面组织：卫生间从南侧移至北侧，释放最佳海景给主要房间。东西向流线贯穿，楼梯位于中部偏北。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s3"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "composition": [
+      {
+        "text": "体量：原有L形平面通过南墙补齐和西墙延伸，形成规整的长方体；上层拱顶以曲线结束。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s6"
+        ],
+        "related_image_ids": [
+          "img_01"
+        ]
+      },
+      {
+        "text": "窗的厚度被设计为家具，外凸窗套强化了立面阴影和防护性。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "related_image_ids": []
+      },
+      {
+        "text": "拱顶为混凝土现浇，两侧混凝土墙承重，内部形成高耸的弧形空间，阁楼插入其中。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s3"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "place_atmosphere": [
+      {
+        "text": "室内大量使用樱桃木、竹钢和暖色涂料，与混凝土的冷灰形成对比，营造温暖家庭氛围。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s3"
+        ],
+        "related_image_ids": []
+      },
+      {
+        "text": "三层拱顶空间：自然光从侧窗和天窗进入，光线随天空变化；面向港口和大海的两端视野截然不同，产生强烈场所感。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s6"
+        ],
+        "related_image_ids": [
+          "img_01"
+        ]
+      },
+      {
+        "text": "玻璃砖在傍晚透出柔光，使建筑成为村落中的‘灯塔’。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s3"
+        ],
+        "related_image_ids": []
+      }
+    ]
+  },
+  "construction_quality_control": {
+    "construction_language": [
+      {
+        "text": "骨架：原有砖混结构 + 新增12cm钢筋混凝土墙，共同承重；三层拱顶为混凝土现浇。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "related_image_ids": []
+      },
+      {
+        "text": "围合：南立面实墙为主，减少开窗以抵御风雨；东西立面落地窗或大窗，通透。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s3"
+        ],
+        "related_image_ids": []
+      },
+      {
+        "text": "地台：建筑坐落在礁石基础上，首层地面处理不详。",
+        "evidence_type": "missing",
+        "source_ids": [],
+        "related_image_ids": []
+      }
+    ],
+    "materials_and_craft": [
+      {
+        "text": "樱桃木用于室内门窗、家具和部分饰面，质感温暖；竹钢用于窗框和栏杆，耐候性强。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "related_image_ids": []
+      },
+      {
+        "text": "混凝土窗套外凸，表面涂肌理涂料，增强防水和视觉效果。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s3"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "tectonic_logic": [
+      {
+        "text": "窗系统家具：窗套深度约300-400mm，内嵌坐凳或桌板，与室内地面齐平。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s3",
+          "s6"
+        ],
+        "related_image_ids": []
+      },
+      {
+        "text": "拱顶的模板和钢筋配置无详细资料，推测为普通混凝土工艺。",
+        "evidence_type": "missing",
+        "source_ids": [],
+        "related_image_ids": []
+      }
+    ],
+    "performance_and_construction_control": [
+      {
+        "text": "拱顶有利于快速排水，降低渗漏风险；混凝土墙加强气密性。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "related_image_ids": []
+      },
+      {
+        "text": "施工周期05/2016-01/2017，驻场建筑师监督，但具体施工控制细节未公开。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": []
+      }
+    ]
+  },
+  "design_lessons": {
+    "transferable_methods": [
+      {
+        "text": "结构加固与空间改造同步设计，一石二鸟。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1",
+          "s6"
+        ],
+        "related_image_ids": []
+      },
+      {
+        "text": "利用窗的深度创造可用的‘窗家具’，提升使用体验。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s3"
+        ],
+        "related_image_ids": []
+      },
+      {
+        "text": "拱顶作为结构、排水、空间、精神的综合载体。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s6"
+        ],
+        "related_image_ids": []
+      },
+      {
+        "text": "在有限面积内通过功能置换优化视线和生活品质。",
+        "evidence_type": "sourced",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "avoid_copying": [
+      {
+        "text": "拱顶形式需与结构逻辑和当地气候结合，不宜生搬硬套。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s1"
+        ],
+        "related_image_ids": []
+      },
+      {
+        "text": "窗家具的深度和材料选择应根据具体气候和住户习惯调整。",
+        "evidence_type": "synthesis",
+        "source_ids": [
+          "s6"
+        ],
+        "related_image_ids": []
+      }
+    ],
+    "analysis_diagram_potential": [
+      "结构加固与空间重组关系图",
+      "窗家具类型与使用分析图",
+      "拱顶排水、视线、精神语义图解",
+      "改造前后平面功能对比图"
+    ]
+  }
+}

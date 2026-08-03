@@ -121,6 +121,7 @@ class CosStorageConfigurationTests(unittest.TestCase):
             SecretId="AKIDtest",
             SecretKey="test-secret",
             Scheme="https",
+            SignHost=False,
             Token="temporary-token",
         )
         self.assertEqual(mirror.client, "client")

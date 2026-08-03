@@ -38,6 +38,15 @@ Generated or derived outputs:
 
 Derived outputs must not become the canonical case source.
 
+## Cloud Worker Contract
+
+The cloud version keeps the same case-package contract and adds a separate job workspace contract under `skills/architectural-case-study/`:
+
+- `references/cloud-worker-execution.md` defines the asynchronous state machine, promotion gates, retries, and publication boundary.
+- `worker-templates/` provides serializable generation request, disambiguation, candidate confirmation, minimal-draft, event, validation, publication-manifest, and worker-prompt templates.
+- A worker writes drafts only to `jobs/<job_id>/artifacts/package/<slug>/`; canonical promotion happens only after validation, scoring, and administrator review.
+- Worker states and review metadata must stay outside `case.json`; the existing schema remains unchanged.
+
 ## Recommended MVP Stack
 
 Use a conservative local-first stack:
@@ -120,4 +129,3 @@ API responses may normalize data for the UI, but must keep original `case.json` 
 - Do not commit `case-packages/`; it is intentionally ignored by `.gitignore`.
 - Preserve existing scripts and Skill files unless a later implementation task explicitly targets them.
 - Handle historical encoding issues defensively; new documents and new UI text should be normal UTF-8.
-

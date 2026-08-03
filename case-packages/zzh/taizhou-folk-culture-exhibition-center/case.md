@@ -36,9 +36,9 @@
 
 这个案例最值得学习的不是单个形式，而是设计团队如何把旧城节点、名人旧居、五巷街区、百米高层和新展馆纳入同一条东西向叙事轴，再把“和谐与发展”的概念落实到平面肌理、立面材料、绿色技术和建造控制中。
 
-![城市界面、序厅长廊与中心水院的建成场景](images/01_hero_built_views_crop.jpg)
+![泰州民俗文化展示中心与高层背景的城市全景（gooood）](images/01_hero_built_views_crop.jpg)
 
-图文相关性：用于说明项目的建成整体氛围、中心水院、长廊和城市视角下的体量关系。
+图文相关性：用于说明低矮展馆、历史街区与高层背景之间的城市尺度关系。
 
 ## 04 场地信息表
 
@@ -51,9 +51,9 @@
 | 服务人群 | 市民、游客、展馆参观者、历史街区体验者 | PDF p89-p90, p243 |
 | 场地策略 | 从东侧进入，沿东西向轴带到达名人旧居，把高层转化为背景或屏风 | PDF p89, p241 |
 
-![区域节点、历史环境与周边高层形成的场地关系](images/02_site_context_crop.jpg)
+![传统街区、中心水院与新建展馆的鸟瞰关系（gooood）](images/02_site_context_crop.jpg)
 
-图文相关性：用于验证基地区位、稻河头历史线索、名人旧居与高层建筑的关键矛盾。
+图文相关性：用于验证传统街区、水院与新建展馆之间的场地缝合关系。
 
 ## 05 概念创意探索 Conceptual Exploration
 
@@ -79,9 +79,9 @@
 
 证据来源：PDF p88-p90、p241。
 
-![东西向轴带、三段式布局与水系线索的生成分析](images/07_concept_layout_generation_crop.jpg)
+![传统街区、中心水院与新建展馆的鸟瞰关系](images/02_site_context_crop.jpg)
 
-图文相关性：用于说明东西向轴带、三段式总体布局和稻河头水线索进入中心水院的生成关系。
+图文相关性：以鸟瞰关系验证东西向轴带如何把传统街区、中心水院和新建展馆组织为连续的空间序列。
 
 ### 5.4 意象与表达 Imagery, Naming & Expression
 
@@ -127,23 +127,15 @@
 
 基于资料的归纳判断：这个项目的建造控制不是后期补救，而是用“骨架-围合-地台”的体系把形式语言变成可施工、可校核的构造系统。
 
-![骨架、围合与地台的建造体系图解](images/06_construction_system_crop.jpg)
-
-图文相关性：用于说明结构骨架、外墙围合与地台系统如何对应形式控制。
-
 ### 7.2 材料与工艺 Materials & Craft
 
 来源明确：团队曾尝试改良传统青砖砌法并做足尺试版，但因新建筑体量和外墙品质要求转向石材百叶幕墙。基面石材采用锯齿状表面，按 75mm 模数形成细密肌理；浅灰色石材呼应传统青砖色调；长廊使用超白玻璃双银 LOW-E 玻璃。
 
 基于资料的归纳判断：材料策略的关键不是“像青砖”，而是把青砖的尺度感、灰调和光影肌理转译到更适合大型公共建筑的幕墙系统中。
 
-![石材百叶幕墙、转角花窗、入口门架与夹院局部](images/06_facade_stone_louver_crop.jpg)
+![水院、玻璃长廊与灰调石材外墙（gooood）](images/06_facade_stone_louver_crop.jpg)
 
-图文相关性：用于验证石材百叶幕墙、转角花窗、入口门架和灰调外墙的建成效果。
-
-![定制灰砖与石材百叶的材料试版比较](images/06_mockup_material_crop.jpg)
-
-图文相关性：用于说明材料选择经过足尺试版比较，传统青砖方案被现代石材百叶系统替代。
+图文相关性：用于验证玻璃长廊、灰调石材外墙与水院共同构成的材料表达。
 
 ### 7.3 构造逻辑 Tectonic Logic
 
@@ -164,14 +156,6 @@
 来源明确：PDF 提到“顶面做排水、边沿沟滴水、交接设防水、地台阻潮气”的防水策略；玻璃长廊顶部设置自动喷水系统；绿色技术通过坡顶、外墙、开窗等本体元素消隐化整合。住建局页面补充了光伏、地源热泵、光导照明、自然通风、能耗监测等绿色技术。
 
 基于资料的归纳判断：本项目的绿色技术不是独立展示的“技术符号”，而是被压入建筑本体和景观水系统，服务于文化氛围与现场体验。
-
-![绿色技术与建筑、场地系统的一体化组织](images/09_green_technology_crop.jpg)
-
-图文相关性：用于说明绿色技术如何嵌入场地水系统、屋面、外墙、开窗和设备系统。
-
-![不同材料交接与防水构造节点](images/06_waterproof_detail_crop.jpg)
-
-图文相关性：用于说明防水、防尘、玻璃长廊维护和复杂材料交接的建造控制。
 
 ## 08 核心方法提炼
 
@@ -219,17 +203,13 @@
 
 | 图片类型 | 推荐用途 | 本地图片 | 来源 | 下载状态 | 图文相关性 |
 | --- | --- | --- | --- | --- | --- |
-| 01_hero | 建成整体氛围 | `images/01_hero_built_views_crop.jpg` | 用户 PDF | downloaded | 城市视角、序厅长廊、中心水院 |
-| 02_site | 场地关系 | `images/02_site_context_crop.jpg` | 用户 PDF | downloaded | 区域节点、稻河头、名人旧居与高层冲突 |
-| 07_concept | 总体生成 | `images/07_concept_layout_generation_crop.jpg` | 用户 PDF | downloaded | 东西向轴带和三段式总体布局 |
+| 01_hero | 建成整体氛围 | `images/01_hero_built_views_crop.jpg` | gooood | downloaded | 低矮展馆、历史街区与高层背景 |
+| 02_site | 场地关系 | `images/02_site_context_crop.jpg` | gooood | downloaded | 传统街区、水院与新建展馆 |
+| 02_site | 策略鸟瞰 | `images/02_site_context_crop.jpg` | gooood | downloaded | 传统街区、中心水院与新建展馆的连续关系 |
 | 03_plan | 平面与序列 | `images/03_plan_sequence_crop.jpg` | 用户 PDF | downloaded | 总平面、首层平面、中心水院、新旧融合 |
-| 06_detail | 外墙材料 | `images/06_facade_stone_louver_crop.jpg` | 用户 PDF | downloaded | 石材百叶、转角花窗、入口门架 |
-| 09_analysis | 绿色技术 | `images/09_green_technology_crop.jpg` | 用户 PDF | downloaded | 绿色技术集成与建筑本体融合 |
-| 06_detail | 建造体系 | `images/06_construction_system_crop.jpg` | 用户 PDF | downloaded | 骨架、围合、地台 |
-| 06_detail | 材料试版 | `images/06_mockup_material_crop.jpg` | 用户 PDF | downloaded | 灰砖与石材百叶试版比较 |
+| 06_detail | 外墙材料 | `images/06_facade_stone_louver_crop.jpg` | gooood | downloaded | 玻璃长廊、灰调石材外墙与水院 |
 | 06_detail | 幕墙细部 | `images/06_stone_louver_detail_crop.jpg` | 用户 PDF | downloaded | 石材百叶与传统特质转译 |
 | 06_detail | 模数划分 | `images/06_material_module_crop.jpg` | 用户 PDF | downloaded | 面材三维划分与交圈对缝 |
-| 06_detail | 防水节点 | `images/06_waterproof_detail_crop.jpg` | 用户 PDF | downloaded | 不同材料交接与抵御水的构造节点 |
 
 ## 10 对我的设计启发
 

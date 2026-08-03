@@ -36,9 +36,9 @@
 
 中国馆最值得学习的是：在一个高度公共化、政治文化象征极强的项目中，设计团队没有停留在“东方之冠”的图像，而是通过入口轴线、展陈平层化、观景坡道、屋顶园林、外墙足尺试板和地铁下穿结构应对，把象征、功能、城市、人流和建造逐步桥接成可落地的建筑系统。
 
-![中国馆的城市远景、屋顶园林与斗冠近景](images/01_hero_built_views_crop.jpg)
+![世博园城市尺度中的中国馆全景（gooood）](images/01_hero_built_views_crop.jpg)
 
-图文相关性：用于说明中国馆建成后的城市识别度、屋顶园林与国家馆主体之间的视觉关系。
+图文相关性：用于说明中国馆在世博园城市尺度中的识别度与主体视觉关系。
 
 ## 04 场地信息表
 
@@ -69,9 +69,9 @@
 
 基于资料的归纳判断：定位经历了从“器物原型”到“国家礼仪建筑”的转译。形体仍保留层层出挑、架空升起的核心构成，但表达从较抽象的“中国器”转向更具传播力的“东方之冠”。
 
-![联合设计探索、体量生成与“东方之冠”定稿方案](images/07_concept_eastern_crown_crop.jpg)
+![中国馆近景：层叠斗冠体量与城市天际线（gooood）](images/07_concept_eastern_crown_crop.jpg)
 
-图文相关性：用于说明合二为一、平台烘托斗冠、园林意向、南入口与大台阶等阶段性整合过程。
+图文相关性：用于说明层叠斗冠体量、平台与城市背景的建成整合关系。
 
 ### 5.3 策略 Strategy
 
@@ -121,9 +121,9 @@
 
 基于资料的归纳判断：“新九洲清晏”不是装饰性景观，而是把水平基座从交通屋面转化为可被观看、可被行走、可承载人流的文化场景，与国家馆的刚性红色主体形成刚柔对仗。
 
-![地区馆屋顶平台“新九洲清晏”的景观组织](images/02_roof_garden_new_jiuzhou_crop.jpg)
+![夜景中的中国馆与世博轴（gooood）](images/02_roof_garden_new_jiuzhou_crop.jpg)
 
-图文相关性：用于说明屋顶平台如何从疏散/集散需求转化为中国地貌与园林叙事。
+图文相关性：用于说明中国馆、地区馆平台与世博轴构成的整体场地关系。
 
 ## 07 建造品质控制 Construction Quality Control
 
@@ -139,9 +139,9 @@
 
 基于资料的归纳判断：红色不是简单涂装，而是通过材料、肌理、观看距离、白天夜晚效果、灯光和施工样板共同确定的建造结果。
 
-![“中国红”外墙材料比较、挂板试验与定板](images/06_china_red_facade_mockup_crop.jpg)
+![中国馆正立面中的层叠梁架与红色外表皮（gooood）](images/06_china_red_facade_mockup_crop.jpg)
 
-图文相关性：用于说明中国红外墙从多材料、多肌理探索到 1:1 足尺挂板定板的过程。
+图文相关性：用于说明红色表皮、层叠梁架与斗拱意象的建成表达。
 
 ### 7.3 构造逻辑 Tectonic Logic
 
@@ -201,12 +201,12 @@
 
 | 图片类型 | 推荐用途 | 本地图片 | 来源 | 下载状态 | 图文相关性 |
 | --- | --- | --- | --- | --- | --- |
-| 01_hero | 建成识别 / 城市视角 | `images/01_hero_built_views_crop.jpg` | 用户 PDF | downloaded | 城市开放空间、新九洲清晏和近观中国馆 |
+| 01_hero | 建成识别 / 城市视角 | `images/01_hero_built_views_crop.jpg` | gooood | downloaded | 世博园城市尺度中的中国馆全景 |
 | 07_concept | 竞赛概念 | `images/07_competition_china_qi_crop.jpg` | 用户 PDF | downloaded | “中国器”与竞赛阶段 |
-| 07_concept | 方案整合 | `images/07_concept_eastern_crown_crop.jpg` | 用户 PDF | downloaded | 从合二为一到“东方之冠” |
+| 07_concept | 方案整合 | `images/07_concept_eastern_crown_crop.jpg` | gooood | downloaded | 层叠斗冠体量与城市天际线 |
 | 04_section | 剖面 / 展陈调整 | `images/04_section_exhibition_adjustment_crop.jpg` | 用户 PDF | downloaded | 投标与定稿剖面对比 |
-| 02_site | 屋顶平台 / 景观 | `images/02_roof_garden_new_jiuzhou_crop.jpg` | 用户 PDF | downloaded | 新九洲清晏与屋顶平台 |
-| 06_detail | 外墙材料 / 试板 | `images/06_china_red_facade_mockup_crop.jpg` | 用户 PDF | downloaded | 中国红外墙探索和试板 |
+| 02_site | 场地关系 / 夜景 | `images/02_roof_garden_new_jiuzhou_crop.jpg` | gooood | downloaded | 中国馆、地区馆平台与世博轴 |
+| 06_detail | 外墙表达 | `images/06_china_red_facade_mockup_crop.jpg` | gooood | downloaded | 红色表皮与层叠梁架 |
 | 03_plan | 总平面 / 绿色技术 | `images/03_site_plan_green_tech_crop.jpg` | 用户 PDF | downloaded | 总平面、平面、地铁和绿色技术 |
 
 ## 10 对我的设计启发

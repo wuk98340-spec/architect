@@ -9,8 +9,15 @@ __pycache__
 .env.*
 !ARCHITECT_skill/worker_runtime/.env.example
 tmp
+tmp/**
 temp
+temp/**
 recovery-backups
+recovery-backups/**
 architecture-case-site-v2
+architecture-case-site-v2/**
 architecture-case-site/design-qa-*.png
+# `render_start` rebuilds this generated directory from `case-packages` on
+# every container start, so including it only doubles the image upload size.
+architecture-case-site/public
 case-packages/**/revisions

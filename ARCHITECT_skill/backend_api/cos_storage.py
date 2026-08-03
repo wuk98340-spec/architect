@@ -161,6 +161,10 @@ class CosStorageMirror:
             "SecretId": config.secret_id,
             "SecretKey": config.secret_key,
             "Scheme": "https",
+            # CloudBase Run's egress path can rewrite Host.  COS signs the
+            # request before that proxying occurs, so signing Host makes a
+            # correct credential pair fail with SignatureDoesNotMatch.
+            "SignHost": False,
         }
         if config.session_token:
             options["Token"] = config.session_token

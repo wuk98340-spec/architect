@@ -241,12 +241,12 @@
       "id": "img01",
       "file_name": "images/01_hero_built_views_crop.jpg",
       "image_type": "01_hero",
-      "source_url": "C:/Users/dell/Desktop/泰州民俗文化展示中心.pdf",
-      "source_site": "User-provided PDF",
-      "caption": "从城市看建筑、序厅到长廊、中心水院等建成场景",
-      "copyright_note": "Research use from user-provided PDF; credits in PDF include 姚力 photography.",
+      "source_url": "https://www.gooood.cn/gooood-interview-hejingtang.htm",
+      "source_site": "gooood",
+      "caption": "泰州民俗文化展示中心与高层背景的城市全景",
+      "copyright_note": "Image via gooood interview; research use only, rights remain with the original photographer.",
       "recommended_use": "cover / built atmosphere",
-      "relevance_reason": "支持对建成整体氛围、中心水院和长廊体验的分析。",
+      "relevance_reason": "以清晰城市全景支撑低矮展馆、历史街区与高层背景之间的尺度关系分析。",
       "related_sections": [
         "03 一句话判断",
         "06 建筑语言生成"
@@ -258,12 +258,12 @@
       "id": "img02",
       "file_name": "images/02_site_context_crop.jpg",
       "image_type": "02_site",
-      "source_url": "C:/Users/dell/Desktop/泰州民俗文化展示中心.pdf",
-      "source_site": "User-provided PDF",
-      "caption": "基地位于区域节点部位及场地矛盾说明",
-      "copyright_note": "Research use from user-provided PDF.",
+      "source_url": "https://www.gooood.cn/gooood-interview-hejingtang.htm",
+      "source_site": "gooood",
+      "caption": "传统街区、中心水院与新建展馆的鸟瞰关系",
+      "copyright_note": "Image via gooood interview; research use only, rights remain with the original photographer.",
       "recommended_use": "site analysis",
-      "relevance_reason": "支持基地区位、稻河头历史线索、名人旧居与高层冲突的分析。",
+      "relevance_reason": "以鸟瞰摄影支撑传统街区、水院与新建展馆之间的场地缝合关系分析。",
       "related_sections": [
         "04 场地信息表",
         "08 方法 1"
@@ -273,14 +273,14 @@
     },
     {
       "id": "img03",
-      "file_name": "images/07_concept_layout_generation_crop.jpg",
-      "image_type": "07_concept",
-      "source_url": "C:/Users/dell/Desktop/泰州民俗文化展示中心.pdf",
-      "source_site": "User-provided PDF",
-      "caption": "总体设计生成分析",
-      "copyright_note": "Research use from user-provided PDF.",
-      "recommended_use": "concept generation",
-      "relevance_reason": "支持东西向轴带、三段式总体布局和水线索延展的分析。",
+      "file_name": "images/02_site_context_crop.jpg",
+      "image_type": "02_site",
+      "source_url": "https://www.gooood.cn/gooood-interview-hejingtang.htm",
+      "source_site": "gooood",
+      "caption": "传统街区、中心水院与新建展馆的鸟瞰关系",
+      "copyright_note": "Image via gooood interview; research use only, rights remain with the original photographer.",
+      "recommended_use": "strategy / site relationship",
+      "relevance_reason": "以鸟瞰摄影验证东西向轴带如何串联传统街区、中心水院与新建展馆。",
       "related_sections": [
         "05 概念创意探索",
         "08 方法 1"
@@ -309,12 +309,12 @@
       "id": "img05",
       "file_name": "images/06_facade_stone_louver_crop.jpg",
       "image_type": "06_detail",
-      "source_url": "C:/Users/dell/Desktop/泰州民俗文化展示中心.pdf",
-      "source_site": "User-provided PDF",
-      "caption": "建筑外观、石材百叶幕墙、转角花窗、入口门架、夹院局部",
-      "copyright_note": "Research use from user-provided PDF; credits in PDF include 姚力 photography.",
+      "source_url": "https://www.gooood.cn/gooood-interview-hejingtang.htm",
+      "source_site": "gooood",
+      "caption": "水院、玻璃长廊与灰调石材外墙",
+      "copyright_note": "Image via gooood interview; research use only, rights remain with the original photographer.",
       "recommended_use": "facade / material analysis",
-      "relevance_reason": "支持石材百叶、转角花窗、入口门架和灰调外墙的材料表达分析。",
+      "relevance_reason": "以高分辨率建成摄影支撑玻璃长廊、灰调石材外墙与水院共同构成的材料表达分析。",
       "related_sections": [
         "07.2 材料与工艺",
         "08 方法 3"
@@ -332,12 +332,9 @@
       "copyright_note": "Research use from user-provided PDF.",
       "recommended_use": "green technology analysis",
       "relevance_reason": "支持绿色技术消隐进建筑本体和场地系统的分析。",
-      "related_sections": [
-        "07.4 性能与施工控制",
-        "08 方法 5"
-      ],
-      "download_status": "downloaded",
-      "failure_reason": ""
+      "related_sections": [],
+      "download_status": "skipped",
+      "failure_reason": "Removed from the website at the user's request; the source image is retained only in the local archive."
     },
     {
       "id": "img07",
@@ -349,11 +346,9 @@
       "copyright_note": "Research use from user-provided PDF.",
       "recommended_use": "construction system analysis",
       "relevance_reason": "支持骨架、围合与地台体系如何对应形式控制的分析。",
-      "related_sections": [
-        "07.1 建造语言"
-      ],
-      "download_status": "downloaded",
-      "failure_reason": ""
+      "related_sections": [],
+      "download_status": "skipped",
+      "failure_reason": "Removed from the website at the user's request; the source image is retained only in the local archive."
     },
     {
       "id": "img08",
@@ -365,12 +360,9 @@
       "copyright_note": "Research use from user-provided PDF.",
       "recommended_use": "mockup / material decision",
       "relevance_reason": "支持材料选择经过足尺试版比较的分析。",
-      "related_sections": [
-        "07.2 材料与工艺",
-        "08 方法 4"
-      ],
-      "download_status": "downloaded",
-      "failure_reason": ""
+      "related_sections": [],
+      "download_status": "skipped",
+      "failure_reason": "Removed from the website at the user's request; the source image is retained only in the local archive."
     },
     {
       "id": "img09",
@@ -415,14 +407,12 @@
       "copyright_note": "Research use from user-provided PDF.",
       "recommended_use": "waterproof / detail analysis",
       "relevance_reason": "支持防水、防尘、玻璃长廊维护和复杂材料交接的建造控制分析。",
-      "related_sections": [
-        "07.4 性能与施工控制"
-      ],
-      "download_status": "downloaded",
-      "failure_reason": ""
+      "related_sections": [],
+      "download_status": "skipped",
+      "failure_reason": "Removed from the website at the user's request; the source image is retained only in the local archive."
     }
   ],
-  "download_mode": "completed",
+  "download_mode": "partial",
   "source_quality": {
     "has_primary_sources": true,
     "primary_sources_used_for_identity": true,

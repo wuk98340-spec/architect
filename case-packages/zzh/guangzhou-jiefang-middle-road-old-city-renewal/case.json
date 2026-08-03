@@ -183,12 +183,9 @@
       "copyright_note": "研究引用；商业或公开发布需另行清权。",
       "recommended_use": "场地与街巷结构分析",
       "relevance_reason": "用于验证项目以原有街巷结构为总体布局线索，并把旧城改造目标与政府试点要求绑定。",
-      "related_sections": [
-        "04 场地信息表",
-        "08 方法1"
-      ],
-      "download_status": "downloaded",
-      "failure_reason": ""
+      "related_sections": [],
+      "download_status": "skipped",
+      "failure_reason": "Removed from the website at the user's request; the source image is retained only in the local archive."
     },
     {
       "id": "img02_massing_revision",
@@ -217,12 +214,9 @@
       "copyright_note": "研究引用；商业或公开发布需另行清权。",
       "recommended_use": "户型、通风与邻里交往分析",
       "relevance_reason": "用于验证标准户型单元、服务模块、前后通风和公共性到私密性的分层渐变。",
-      "related_sections": [
-        "06 建筑语言生成",
-        "08 方法2"
-      ],
-      "download_status": "downloaded",
-      "failure_reason": ""
+      "related_sections": [],
+      "download_status": "skipped",
+      "failure_reason": "Removed from the website at the user's request; the source image is retained only in the local archive."
     },
     {
       "id": "img04_regulation_massing",
@@ -276,7 +270,7 @@
       "failure_reason": ""
     }
   ],
-  "download_mode": "completed",
+  "download_mode": "partial",
   "source_quality": {
     "has_primary_sources": true,
     "primary_sources_used_for_identity": true,

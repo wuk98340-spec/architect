@@ -110,7 +110,7 @@ def create_server(
             try:
                 if self._try_serve_private_asset():
                     return
-                if self.path.split("?", 1)[0] != "/healthz" and not self.path.split("?", 1)[0].startswith("/api/"):
+                if self.path.split("?", 1)[0] not in {"/healthz", "/readyz"} and not self.path.split("?", 1)[0].startswith("/api/"):
                     self._serve_static_asset()
                     return
             except FileNotFoundError as error:
@@ -151,6 +151,11 @@ def create_server(
             parts = [part for part in self.path.split("?", 1)[0].split("/") if part]
             if self.command == "GET" and parts == ["healthz"]:
                 return {"status": "ok"}
+            if self.command == "GET" and parts == ["readyz"]:
+                if storage_unavailable:
+                    self._response_status = HTTPStatus.SERVICE_UNAVAILABLE
+                    return {"status": "not_ready", "storage": "unavailable"}
+                return {"status": "ready", "storage": "ready"}
             if self.command == "POST" and parts == ["api", "jobs"]:
                 request = build_request(self._body_object())
                 try:

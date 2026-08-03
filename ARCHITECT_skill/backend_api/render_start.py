@@ -45,6 +45,9 @@ def rebuild_site(root: Path) -> None:
 
 def main() -> None:
     root = workspace_root()
+    # A restarted container must not inherit a stale failure marker from a
+    # previous initialization attempt.
+    os.environ.pop("ARCHITECT_COS_STORAGE_UNAVAILABLE", None)
     data_root = Path(os.environ.get("ARCHITECT_DATA_ROOT", root / "tmp" / "runtime-data"))
     cases_root = Path(os.environ.setdefault("ARCHITECT_CASE_PACKAGES_ROOT", str(data_root / "case-packages")))
     os.environ.setdefault("ARCHITECT_JOBS_ROOT", str(data_root / "worker-jobs"))

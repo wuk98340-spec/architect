@@ -29,6 +29,7 @@ Load only the references needed for the active mode:
 - Read `references/case-package-template.md` before writing or substantially rewriting `case.md`.
 - Read `references/case-package-schema.json` before writing or substantially changing `case.json`. Follow field names exactly and do not invent schema fields unless the user explicitly asks for schema evolution.
 - In Local Repair Mode, read `references/local-repair-workflow.md` before editing.
+- When running this skill through a cloud job worker, read `references/cloud-worker-execution.md` and use the matching files in `worker-templates/`. Treat those files as the worker/API contract; they do not replace the case-package contract.
 
 ## Full Generation Workflow
 

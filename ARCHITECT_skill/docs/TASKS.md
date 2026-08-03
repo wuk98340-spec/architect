@@ -29,6 +29,16 @@ Acceptance:
 - Backend can return one case's markdown, structured JSON, source summary, image metadata, and validation state.
 - Backend does not modify case package files during read-only operations.
 
+## Cloud Worker Foundation
+
+- [x] Define the generation-job workspace, state machine, failure gates, and canonical-promotion rule.
+- [x] Add JSON templates for request, candidate confirmation, disambiguation, events, validation, and publication review.
+- [x] Add the provider-neutral worker prompt template and reference it from the case-study skill.
+- [x] Implement a local, provider-neutral AI runtime for disambiguation, editor confirmation, bounded web retrieval, private draft creation, and existing package validation.
+- [x] Add OpenAI Responses and DeepSeek Chat Completions provider adapters with structured-output validation; neither adapter can write canonical packages.
+- [ ] Implement the FastAPI job API and persistence layer against these templates.
+- [ ] Implement the production job API, persistence layer, retries, and quality-scoring runner; it must not write directly to canonical packages.
+
 ## Phase 2: Frontend Scaffold
 
 - Create a frontend app directory.
@@ -91,4 +101,3 @@ Acceptance:
 - Do not commit local images unless a future policy explicitly changes this.
 - Do not overwrite user or generated work outside the requested scope.
 - Use existing validation before presenting generated packages as complete.
-

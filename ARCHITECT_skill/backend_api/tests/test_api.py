@@ -69,6 +69,47 @@ class BackendApiTests(unittest.TestCase):
         status, _ = self.request("GET", "/api/jobs/job_does_not_exist")
         self.assertEqual(status, 404)
 
+    def test_liveness_and_storage_readiness_are_separate(self):
+        status, payload = self.request("GET", "/healthz")
+        self.assertEqual(status, 200)
+        self.assertEqual(payload, {"status": "ok"})
+        status, payload = self.request("GET", "/readyz")
+        self.assertEqual(status, 200)
+        self.assertEqual(payload, {"status": "ready", "storage": "ready"})
+
+    def test_readiness_is_safely_degraded_when_cos_is_unavailable(self):
+        with patch.dict("os.environ", {"ARCHITECT_COS_STORAGE_UNAVAILABLE": "COS authentication failed"}):
+            server = create_server(
+                jobs_root=self.root,
+                case_packages_root=self.library,
+                provider_factory=FixtureProvider,
+                rebuild_site=lambda: None,
+                port=0,
+            )
+        thread = threading.Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+        try:
+            connection = HTTPConnection(*server.server_address)
+            connection.request("GET", "/healthz")
+            health = connection.getresponse()
+            self.assertEqual(health.status, 200)
+            health.read()
+            connection.close()
+
+            connection = HTTPConnection(*server.server_address)
+            connection.request("GET", "/readyz")
+            readiness = connection.getresponse()
+            self.assertEqual(readiness.status, 503)
+            self.assertEqual(
+                json.loads(readiness.read().decode("utf-8")),
+                {"status": "not_ready", "storage": "unavailable"},
+            )
+            connection.close()
+        finally:
+            server.shutdown()
+            server.server_close()
+            thread.join()
+
     def test_local_frontend_cors_preflight_is_allowed(self):
         connection = HTTPConnection(*self.server.server_address)
         connection.request("OPTIONS", "/api/jobs", headers={"Origin": "http://127.0.0.1:8765"})

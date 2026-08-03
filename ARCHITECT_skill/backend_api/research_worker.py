@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 from threading import Thread
 from typing import Any
 
@@ -11,7 +12,7 @@ from worker_runtime.research import run_confirmed_research
 from .app import default_jobs_root, serve
 from .research_queue import ResearchQueue
 from .service import read_object, require_job_id
-from .cos_storage import current_cos_mirror
+from .cos_storage import cos_failure_message, current_cos_mirror
 
 
 def run_task(queue: ResearchQueue, task: dict[str, Any]) -> None:
@@ -30,7 +31,14 @@ def run_task(queue: ResearchQueue, task: dict[str, Any]) -> None:
 
 def main() -> None:
     queue = ResearchQueue(jobs_root=default_jobs_root())
-    cos_mirror = current_cos_mirror()
+    try:
+        cos_mirror = current_cos_mirror()
+    except Exception as error:
+        # Keep the process observable and make readiness report the durable
+        # storage failure. A crash loop hides a bad credential rotation and
+        # makes recovery harder once the credentials have been corrected.
+        os.environ["ARCHITECT_COS_STORAGE_UNAVAILABLE"] = cos_failure_message(error)
+        cos_mirror = None
 
     def consume() -> None:
         queue.recover_interrupted_tasks()

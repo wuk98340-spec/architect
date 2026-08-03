@@ -30,6 +30,15 @@ architecture-case-site/
 python .\scripts\build_site.py --config .\config.local.json
 ```
 
+For the CloudBase hosted site, build with the checked-in production endpoint
+configuration before publishing. This writes the Cloud Run API endpoint into
+`public/runtime-config.js`; publishing a build with an empty runtime value
+makes the hosted site call its own static domain instead of the API.
+
+```powershell
+python .\scripts\build_site.py --config .\config.cloudbase.json
+```
+
 Edit source assets under `src/`. Do not hand-edit matching files under `public/`; the next build replaces them.
 
 If `config.local.json` is missing, the build falls back to `config.example.json`.

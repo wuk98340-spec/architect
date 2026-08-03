@@ -20,6 +20,19 @@
           "mem": 2,
           "minNum": 1,
           "maxNum": 1,
+          "ignore": [
+            ".git/**",
+            ".github/**",
+            ".vscode/**",
+            ".idea/**",
+            "tmp/**",
+            "temp/**",
+            "recovery-backups/**",
+            "architecture-case-site-v2/**",
+            "architecture-case-site/design-qa-*.png",
+            "architecture-case-site/public/**",
+            "case-packages/**/revisions/**"
+          ],
           "envVariables": {
             "ARCHITECT_SERVICE_ROLE": "api",
             "ARCHITECT_API_HOST": "0.0.0.0",
@@ -55,6 +68,19 @@
           "mem": 2,
           "minNum": 1,
           "maxNum": 1,
+          "ignore": [
+            ".git/**",
+            ".github/**",
+            ".vscode/**",
+            ".idea/**",
+            "tmp/**",
+            "temp/**",
+            "recovery-backups/**",
+            "architecture-case-site-v2/**",
+            "architecture-case-site/design-qa-*.png",
+            "architecture-case-site/public/**",
+            "case-packages/**/revisions/**"
+          ],
           "envVariables": {
             "ARCHITECT_SERVICE_ROLE": "worker",
             "ARCHITECT_DATA_ROOT": "/tmp/architect",

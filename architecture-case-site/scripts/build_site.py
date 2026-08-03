@@ -51,6 +51,7 @@ def main() -> int:
         build_case_page(case)
     write_index(cases)
     write_preview()
+    strip_generated_trailing_whitespace()
     return 0
 
 
@@ -218,6 +219,7 @@ def build_case_deck_slides(case: dict[str, Any]) -> list[dict[str, str]]:
         class_name = "deck-slide" + (f" {variant}" if variant else "")
         primary_title, secondary_title = split_strategy_heading(title)
         heading_html = f"<h1>{esc(primary_title)}</h1>"
+        media_block = f"\n                    {media}" if media else ""
         if secondary_title:
             heading_html += f'<h2 class="slide-subtitle">{esc(secondary_title)}</h2>'
         slides.append(
@@ -230,8 +232,7 @@ def build_case_deck_slides(case: dict[str, Any]) -> list[dict[str, str]]:
                       <p class="section-number">{number}</p>
                       {heading_html}
                       {body}
-                    </div>
-                    {media}
+                    </div>{media_block}
                   </div>
                 </article>
                 """,
@@ -953,6 +954,13 @@ def write_assets() -> None:
     source_images = SOURCE_DIR / "assets"
     if source_images.exists():
         shutil.copytree(source_images, ASSET_DIR / "images", dirs_exist_ok=True)
+
+
+def strip_generated_trailing_whitespace() -> None:
+    """Keep checked-in generated HTML clean and reviewable."""
+    for path in SITE_ROOT.rglob("*.html"):
+        lines = path.read_text(encoding="utf-8").splitlines()
+        path.write_text("\n".join(line.rstrip() for line in lines) + "\n", encoding="utf-8")
 
 
 def page_shell(title: str, body: str, depth: int) -> str:

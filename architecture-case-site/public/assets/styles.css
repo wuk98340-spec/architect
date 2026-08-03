@@ -1939,8 +1939,107 @@ body { background:#111212; color:var(--ink); font-family:"Arial","Microsoft YaHe
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   filter: saturate(.94) contrast(1.01);
   transition: transform 180ms ease, filter 180ms ease;
+}
+
+/* Keep the pavilion, rather than a generic central crop, as the focal point
+   of the exceptionally wide night panorama. */
+.case-reader .slide-media img[data-image-file="02_roof_garden_new_jiuzhou_crop.jpg"] {
+  object-position: 64% center;
+}
+
+/* Focus the two composite research scans on the evidence called out in the
+   accompanying text instead of asking readers to decipher a full PDF page. */
+.case-reader .slide-media.is-drawing:has(img[data-image-file="03_plan_sequence_crop.jpg"]),
+.case-reader .slide-media.is-drawing:has(img[data-image-file="06_construction_system_crop.jpg"]) {
+  min-height: 0;
+  padding: 0;
+  aspect-ratio: 3 / 2;
+}
+
+.case-reader .slide-media.is-drawing:has(img[data-image-file="03_plan_sequence_crop.jpg"]) img {
+  object-fit: cover;
+  object-position: center top;
+}
+
+.case-reader .slide-media.is-drawing:has(img[data-image-file="06_construction_system_crop.jpg"]) img {
+  object-fit: cover;
+  object-position: left center;
+}
+
+/* Material evidence reads better as two full-width studies than as small tiles. */
+.case-reader .slide-media-group:has(img[data-image-file="06_facade_stone_louver_crop.jpg"]) {
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.case-reader .slide-media-group:has(img[data-image-file="06_facade_stone_louver_crop.jpg"]) .slide-media {
+  aspect-ratio: 3 / 2;
+}
+
+/* Featured case scans: present one legible drawing or photo, never a PDF page
+   with surrounding prose and duplicated figure titles. */
+.case-reader .slide-media:has(img[data-image-file="07_competition_china_qi_crop.jpg"]),
+.case-reader .slide-media:has(img[data-image-file="04_section_exhibition_adjustment_crop.jpg"]),
+.case-reader .slide-media:has(img[data-image-file="03_site_plan_green_tech_crop.jpg"]),
+.case-reader .slide-media:has(img[data-image-file="03_plan_sequence_crop.jpg"]),
+.case-reader .slide-media:has(img[data-image-file="09_green_technology_crop.jpg"]),
+.case-reader .slide-media:has(img[data-image-file="06_construction_system_crop.jpg"]),
+.case-reader .slide-media:has(img[data-image-file="06_mockup_material_crop.jpg"]),
+.case-reader .slide-media:has(img[data-image-file="06_material_module_crop.jpg"]),
+.case-reader .slide-media:has(img[data-image-file="06_waterproof_detail_crop.jpg"]) {
+  min-height: 0;
+  padding: 0;
+  aspect-ratio: 3 / 2;
+}
+
+.case-reader .slide-media:has(img[data-image-file="07_competition_china_qi_crop.jpg"]) figcaption,
+.case-reader .slide-media:has(img[data-image-file="04_section_exhibition_adjustment_crop.jpg"]) figcaption,
+.case-reader .slide-media:has(img[data-image-file="03_site_plan_green_tech_crop.jpg"]) figcaption,
+.case-reader .slide-media:has(img[data-image-file="03_plan_sequence_crop.jpg"]) figcaption,
+.case-reader .slide-media:has(img[data-image-file="09_green_technology_crop.jpg"]) figcaption,
+.case-reader .slide-media:has(img[data-image-file="06_construction_system_crop.jpg"]) figcaption,
+.case-reader .slide-media:has(img[data-image-file="06_mockup_material_crop.jpg"]) figcaption,
+.case-reader .slide-media:has(img[data-image-file="06_stone_louver_detail_crop.jpg"]) figcaption,
+.case-reader .slide-media:has(img[data-image-file="06_material_module_crop.jpg"]) figcaption,
+.case-reader .slide-media:has(img[data-image-file="06_waterproof_detail_crop.jpg"]) figcaption {
+  display: none;
+}
+
+.case-reader .case-section--with-media:hover .slide-media img[data-image-file="07_competition_china_qi_crop.jpg"],
+.case-reader .slide-media img[data-image-file="07_competition_china_qi_crop.jpg"] { object-fit: cover; object-position: center 48%; transform: scale(1.1); }
+.case-reader .case-section--with-media:hover .slide-media img[data-image-file="04_section_exhibition_adjustment_crop.jpg"],
+.case-reader .slide-media img[data-image-file="04_section_exhibition_adjustment_crop.jpg"] { object-fit: cover; object-position: center 65%; transform: scale(1.3); }
+.case-reader .case-section--with-media:hover .slide-media img[data-image-file="03_site_plan_green_tech_crop.jpg"],
+.case-reader .slide-media img[data-image-file="03_site_plan_green_tech_crop.jpg"] { object-fit: cover; object-position: left top; transform: scale(2); transform-origin: 24% 14%; }
+.case-reader .case-section--with-media:hover .slide-media img[data-image-file="03_plan_sequence_crop.jpg"],
+.case-reader .slide-media img[data-image-file="03_plan_sequence_crop.jpg"] { object-fit: cover; object-position: center top; transform: scale(1.2); transform-origin: center top; }
+.case-reader .case-section--with-media:hover .slide-media img[data-image-file="09_green_technology_crop.jpg"],
+.case-reader .slide-media img[data-image-file="09_green_technology_crop.jpg"] { object-fit: cover; object-position: left top; transform: scale(1.85); transform-origin: 24% 28%; }
+.case-reader .case-section--with-media:hover .slide-media img[data-image-file="06_construction_system_crop.jpg"],
+.case-reader .slide-media img[data-image-file="06_construction_system_crop.jpg"] { object-fit: cover; object-position: left center; transform: scale(1.55); transform-origin: 18% center; }
+.case-reader .case-section--with-media:hover .slide-media img[data-image-file="06_mockup_material_crop.jpg"],
+.case-reader .slide-media img[data-image-file="06_mockup_material_crop.jpg"] { object-fit: cover; object-position: right top; transform: scale(2.2); transform-origin: 76% 14%; }
+.case-reader .case-section--with-media:hover .slide-media img[data-image-file="06_material_module_crop.jpg"],
+.case-reader .slide-media img[data-image-file="06_material_module_crop.jpg"] { object-fit: cover; object-position: center top; transform: scale(1.18); transform-origin: center top; }
+.case-reader .case-section--with-media:hover .slide-media img[data-image-file="06_waterproof_detail_crop.jpg"],
+.case-reader .slide-media img[data-image-file="06_waterproof_detail_crop.jpg"] { object-fit: cover; object-position: left center; transform: scale(1.8); transform-origin: 18% center; }
+
+/* This PDF crop contains prose only; retain the adjacent, complete facade study. */
+.case-reader .slide-media:has(img[data-image-file="06_stone_louver_detail_crop.jpg"]) { display: none; }
+.case-reader .slide-media-group:has(img[data-image-file="06_stone_louver_detail_crop.jpg"]) { grid-template-columns: 1fr; }
+
+/* Guangzhou renewal: keep the left, final-massing aerial only. */
+.case-reader .slide-media:has(img[data-image-file="09_massing_revision_crop.jpg"]) { min-height: 0; padding: 0; aspect-ratio: 3 / 2; }
+.case-reader .slide-media:has(img[data-image-file="09_massing_revision_crop.jpg"]) figcaption { display: none; }
+.case-reader .case-section--with-media:hover .slide-media img[data-image-file="09_massing_revision_crop.jpg"],
+.case-reader .slide-media img[data-image-file="09_massing_revision_crop.jpg"] {
+  object-fit: cover;
+  object-position: left center;
+  transform: scale(2.1);
+  transform-origin: 24% 42%;
 }
 
 .case-reader .slide-media-group {
@@ -2285,6 +2384,92 @@ select:focus-visible {
   background: transparent;
   color: var(--color-ink);
 }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.home-header .header-search {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  width: min(58vw, 760px);
+  min-width: 260px;
+  margin-inline: auto;
+  border: 1px solid var(--color-line);
+  background: transparent;
+  color: var(--color-ink);
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+
+.home-header .header-search:focus-within {
+  border-color: var(--color-ink);
+  background: rgba(255, 255, 255, .34);
+}
+
+.header-search-icon { padding: 0 0 0 var(--space-3); font-size: 21px; line-height: 42px; }
+.home-header .header-search input {
+  width: 100%;
+  min-width: 0;
+  height: 42px;
+  border: 0;
+  padding: 0 var(--space-3);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 13px;
+  outline: 0;
+}
+.home-header .header-search input::placeholder { color: var(--color-muted); opacity: 1; }
+.home-header .header-search button {
+  border: 0;
+  border-left: 1px solid var(--color-line);
+  padding: 0 var(--space-3);
+  background: transparent;
+  color: var(--color-ink);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+.home-header .header-search button:hover { background: var(--color-ink); color: var(--color-canvas); }
+.home-header .home-nav { margin-left: 0; }
+
+.research-status {
+  position: fixed;
+  z-index: 39;
+  top: 72px;
+  left: 50%;
+  width: min(58vw, 760px);
+  transform: translateX(-50%);
+  border: 1px solid var(--color-line);
+  padding: var(--space-3) var(--space-4);
+  background: rgba(243, 241, 235, .98);
+  color: var(--color-ink);
+  box-shadow: 0 12px 28px rgba(32, 35, 31, .1);
+  font-size: 13px;
+  line-height: 1.55;
+}
+.research-status > p { margin: 0; }
+.research-status.is-working { border-color: var(--color-accent); }
+.research-status.is-success { border-color: #718269; }
+.research-status.is-error { border-color: #a34531; color: #7b2c1e; }
+.research-candidates { display: grid; gap: var(--space-2); margin-top: var(--space-3); }
+.research-candidate { border: 1px solid var(--color-line); padding: var(--space-2) var(--space-3); background: transparent; color: inherit; text-align: left; font: inherit; font-size: 13px; cursor: pointer; }
+.research-candidate:hover:not(:disabled) { border-color: var(--color-ink); background: rgba(255, 255, 255, .55); }
+.research-candidate:disabled { cursor: wait; opacity: .6; }
+
+.preview-main { width: min(var(--container-reading), calc(100% - 40px)); margin: 0 auto; padding: clamp(48px, 8vw, 104px) 0; }
+.preview-hero { padding-bottom: var(--space-7); border-bottom: 1px solid var(--color-line); }
+.preview-hero h1 { max-width: 16ch; margin: 0; color: var(--color-ink); font-family: var(--font-reading); font-size: clamp(42px, 6vw, 72px); font-weight: 600; letter-spacing: -.035em; line-height: 1.08; }
+.preview-lead { max-width: 42em; margin: var(--space-5) 0 0; color: var(--color-muted); font-family: var(--font-reading); font-size: 18px; line-height: 1.65; }
+.preview-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3) var(--space-6); margin: var(--space-7) 0 0; border-top: 1px solid var(--color-line); border-bottom: 1px solid var(--color-line); padding: var(--space-4) 0; }
+.preview-facts dt { color: var(--color-muted); font-family: var(--font-data); font-size: 11px; letter-spacing: .06em; }.preview-facts dd { margin: var(--space-1) 0 0; color: var(--color-ink); font-size: 14px; }
+.preview-document { padding: var(--space-8) 0; color: var(--color-ink); font-family: var(--font-reading); font-size: 17px; line-height: 1.8; }.preview-document h2 { margin: var(--space-8) 0 var(--space-4); font-family: var(--font-reading); font-size: clamp(27px, 3vw, 38px); line-height: 1.2; }.preview-document h3 { margin: var(--space-6) 0 var(--space-3); font-family: var(--font-interface); font-size: 19px; }.preview-document p { margin: 0 0 var(--space-4); }.preview-document ul { margin: 0 0 var(--space-5); padding-left: 1.2em; }.preview-document li + li { margin-top: var(--space-2); }.preview-document strong { font-family: var(--font-interface); font-weight: 600; }.preview-document a { color: inherit; text-decoration-color: var(--color-accent); text-underline-offset: 3px; }.preview-document figure { margin: var(--space-6) 0; }.preview-document figure img { height: auto; max-height: 70vh; object-fit: contain; }.preview-document figcaption { margin-top: var(--space-2); color: var(--color-muted); font-family: var(--font-data); font-size: 11px; }.preview-document table { width: 100%; margin: var(--space-5) 0; border-collapse: collapse; font-family: var(--font-interface); font-size: 13px; }.preview-document th, .preview-document td { border-bottom: 1px solid var(--color-line); padding: var(--space-2); text-align: left; vertical-align: top; }.preview-document th { color: var(--color-muted); font-weight: 500; }
+.preview-save { display: grid; gap: var(--space-4); border-top: 1px solid var(--color-ink); padding: var(--space-6) 0; }.preview-save p { max-width: 42em; margin: 0; color: var(--color-muted); font-family: var(--font-reading); font-size: 16px; }.preview-save button, .preview-save a { justify-self: start; min-height: 44px; border: 1px solid var(--color-ink); padding: 0 var(--space-4); background: var(--color-ink); color: var(--color-canvas); font: inherit; font-size: 14px; text-decoration: none; cursor: pointer; }.preview-save button:hover, .preview-save a:hover { background: transparent; color: var(--color-ink); }.preview-save button:disabled { cursor: wait; opacity: .6; }.preview-saved { color: #465f40 !important; }.preview-error { color: #7b2c1e !important; }
 
 .home-main {
   width: min(var(--container-site), 100%);
@@ -2844,6 +3029,10 @@ select:focus-visible {
   .home-header { padding-inline: 20px; }
   .home-header .home-nav { display: none; }
   .home-header .menu-toggle { display: inline-flex; gap: var(--space-2); align-items: center; margin-left: auto; }
+  .home-header { flex-wrap: wrap; align-content: center; gap: 0 var(--space-3); padding-top: var(--space-2); padding-bottom: var(--space-2); }
+  .home-header .header-search { order: 3; width: 100%; min-width: 0; margin-top: var(--space-2); }
+  .research-status { top: 116px; width: calc(100% - 40px); }
+  .preview-facts { grid-template-columns: 1fr; gap: var(--space-3); }
   .home-header .menu-toggle i,
   .home-header .menu-toggle b { font-style: normal; font-weight: 500; }
   .home-header .menu-toggle span { width: 14px; height: 1px; background: currentColor; }
