@@ -28,7 +28,7 @@ from .service import (
     save_result_to_library,
 )
 from .research_queue import ResearchQueue
-from .cos_storage import StorageUnavailableError, cos_failure_message, current_cos_mirror
+from .cos_storage import StorageUnavailableError, current_storage_mirror, storage_failure_message
 
 
 ProviderFactory = Callable[[], LLMProvider]
@@ -93,11 +93,13 @@ def create_server(
     build_site = rebuild_site or rebuild_static_site
     allowed_cors_origins = cors_origins()
     queue = research_queue or ResearchQueue(jobs_root=root)
-    storage_unavailable = os.environ.get("ARCHITECT_COS_STORAGE_UNAVAILABLE", "")
+    storage_unavailable = os.environ.get(
+        "ARCHITECT_STORAGE_UNAVAILABLE", os.environ.get("ARCHITECT_COS_STORAGE_UNAVAILABLE", "")
+    )
     try:
-        cos_mirror = current_cos_mirror()
+        cos_mirror = current_storage_mirror()
     except Exception as error:
-        storage_unavailable = cos_failure_message(error)
+        storage_unavailable = storage_failure_message(error)
         cos_mirror = None
 
     class Handler(BaseHTTPRequestHandler):
@@ -253,7 +255,7 @@ def create_server(
                 try:
                     cos_mirror.hydrate_job(jobs_root=root, job_id=job_id)
                 except Exception as error:
-                    raise StorageUnavailableError(cos_failure_message(error)) from error
+                    raise StorageUnavailableError(storage_failure_message(error)) from error
 
         def _persist_job(self, job_id: str) -> None:
             if storage_unavailable:
@@ -262,7 +264,7 @@ def create_server(
                 try:
                     cos_mirror.persist_job(jobs_root=root, job_id=job_id)
                 except Exception as error:
-                    raise StorageUnavailableError(cos_failure_message(error)) from error
+                    raise StorageUnavailableError(storage_failure_message(error)) from error
 
         def _save(self, job_id: str) -> dict[str, Any]:
             if storage_unavailable:
@@ -277,7 +279,7 @@ def create_server(
                     )
                     cos_mirror.persist_job(jobs_root=root, job_id=job_id)
                 except Exception as error:
-                    raise StorageUnavailableError(cos_failure_message(error)) from error
+                    raise StorageUnavailableError(storage_failure_message(error)) from error
             return {"job_id": job_id, "saved": saved}
 
         def _body_object(self) -> dict[str, Any]:

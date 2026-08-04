@@ -24,12 +24,16 @@ class RenderStartupTests(unittest.TestCase):
                 patch.object(render_start, "workspace_root", return_value=root),
                 patch.object(
                     render_start,
-                    "current_cos_mirror",
+                    "current_storage_mirror",
                     side_effect=RuntimeError("SignatureDoesNotMatch secret-value"),
                 ),
                 patch.object(render_start, "rebuild_site"),
                 patch.object(render_start, "serve"),
-                patch.dict(os.environ, {"ARCHITECT_DATA_ROOT": str(data_root)}, clear=True),
+                patch.dict(
+                    os.environ,
+                    {"ARCHITECT_DATA_ROOT": str(data_root), "ARCHITECT_STORAGE_BACKEND": "cos"},
+                    clear=True,
+                ),
                 redirect_stderr(output),
             ):
                 render_start.main()
@@ -56,10 +60,14 @@ class RenderStartupTests(unittest.TestCase):
 
             with (
                 patch.object(render_start, "workspace_root", return_value=root),
-                patch.object(render_start, "current_cos_mirror", return_value=FailingMirror()),
+                patch.object(render_start, "current_storage_mirror", return_value=FailingMirror()),
                 patch.object(render_start, "rebuild_site"),
                 patch.object(render_start, "serve"),
-                patch.dict(os.environ, {"ARCHITECT_DATA_ROOT": str(data_root)}, clear=True),
+                patch.dict(
+                    os.environ,
+                    {"ARCHITECT_DATA_ROOT": str(data_root), "ARCHITECT_STORAGE_BACKEND": "cos"},
+                    clear=True,
+                ),
             ):
                 render_start.main()
 

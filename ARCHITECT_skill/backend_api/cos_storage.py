@@ -1,8 +1,10 @@
-"""COS-backed durable storage for Cloud Run API and worker processes.
+"""Object-storage-backed durable storage for the API and worker processes.
 
 The application keeps its existing Path-based research pipeline in a temporary
-workspace.  This module mirrors *one job at a time* and the published case
-library to private COS objects so the API and worker do not depend on CFS.
+workspace. This module mirrors *one job at a time* and the published case
+library to private object storage so the API and worker do not depend on a
+shared filesystem. COS remains supported; S3-compatible providers such as
+DigitalOcean Spaces are supported for platform-independent deployments.
 """
 
 from __future__ import annotations
@@ -35,6 +37,14 @@ def _clean_environment_value(name: str, *legacy_names: str) -> str:
 
 def cos_enabled() -> bool:
     return os.environ.get("ARCHITECT_STORAGE_BACKEND", "local").strip().lower() == "cos"
+
+
+def s3_enabled() -> bool:
+    return os.environ.get("ARCHITECT_STORAGE_BACKEND", "local").strip().lower() == "s3"
+
+
+def storage_enabled() -> bool:
+    return cos_enabled() or s3_enabled()
 
 
 def _safe_segment(value: str, *, label: str) -> str:
@@ -131,6 +141,63 @@ class CosStorageConfig:
         )
 
 
+@dataclass(frozen=True)
+class S3StorageConfig:
+    """Configuration for DigitalOcean Spaces and other S3-compatible stores."""
+
+    bucket: str
+    region: str
+    endpoint: str
+    prefix: str
+    access_key_id: str
+    secret_access_key: str
+
+    @classmethod
+    def from_environment(cls) -> "S3StorageConfig":
+        values = {
+            "ARCHITECT_S3_BUCKET": _clean_environment_value("ARCHITECT_S3_BUCKET"),
+            "ARCHITECT_S3_REGION": _clean_environment_value("ARCHITECT_S3_REGION"),
+            "ARCHITECT_S3_ENDPOINT": _clean_environment_value("ARCHITECT_S3_ENDPOINT"),
+            "ARCHITECT_S3_ACCESS_KEY_ID": _clean_environment_value("ARCHITECT_S3_ACCESS_KEY_ID"),
+            "ARCHITECT_S3_SECRET_ACCESS_KEY": _clean_environment_value(
+                "ARCHITECT_S3_SECRET_ACCESS_KEY"
+            ),
+        }
+        missing = [name for name, value in values.items() if not value]
+        if missing:
+            raise StorageConfigurationError("S3 storage is enabled but missing: " + ", ".join(missing))
+        endpoint = values["ARCHITECT_S3_ENDPOINT"].rstrip("/")
+        if not endpoint.startswith("https://"):
+            raise StorageConfigurationError("ARCHITECT_S3_ENDPOINT must use HTTPS.")
+        prefix = _clean_environment_value("ARCHITECT_S3_PREFIX", "ARCHITECT_COS_PREFIX").strip("/")
+        if not prefix:
+            prefix = "architect"
+        if any(part in {"", ".", ".."} for part in PurePosixPath(prefix).parts):
+            raise StorageConfigurationError("ARCHITECT_S3_PREFIX contains an unsafe path.")
+        return cls(
+            bucket=values["ARCHITECT_S3_BUCKET"],
+            region=values["ARCHITECT_S3_REGION"],
+            endpoint=endpoint,
+            prefix=prefix,
+            access_key_id=values["ARCHITECT_S3_ACCESS_KEY_ID"],
+            secret_access_key=values["ARCHITECT_S3_SECRET_ACCESS_KEY"],
+        )
+
+    def diagnostic_log(self) -> str:
+        access_key_preview = f"{self.access_key_id[:4]}..." if self.access_key_id else "not configured"
+        return " | ".join(
+            (
+                "S3 enabled: true",
+                f"bucket: {self.bucket}",
+                f"region: {self.region}",
+                f"endpoint: {self.endpoint}",
+                f"prefix: {self.prefix}",
+                f"AccessKeyId: {access_key_preview}",
+                f"SecretAccessKey: {'configured' if self.secret_access_key else 'not configured'}",
+            )
+        )
+
+
 def cos_failure_message(error: BaseException) -> str:
     """Return a useful, secret-safe message for startup and request logs."""
     detail = str(error)
@@ -143,6 +210,18 @@ def cos_failure_message(error: BaseException) -> str:
     if error.__class__.__name__ in {"CosServiceError", "CosClientError", "ConnectionError", "Timeout"}:
         return f"COS storage unavailable: {error.__class__.__name__}."
     return f"COS storage unavailable: {error.__class__.__name__}."
+
+
+def storage_failure_message(error: BaseException) -> str:
+    """Return a provider-neutral, secret-safe storage diagnostic."""
+    if cos_enabled():
+        return cos_failure_message(error)
+    detail = str(error)
+    if "SignatureDoesNotMatch" in detail or "InvalidAccessKeyId" in detail:
+        return "S3 storage authentication failed. Check the S3 access key, secret, endpoint, region and bucket."
+    if error.__class__.__name__ in {"ClientError", "BotoCoreError", "EndpointConnectionError", "ConnectionError", "Timeout"}:
+        return f"S3 storage unavailable: {error.__class__.__name__}."
+    return f"S3 storage unavailable: {error.__class__.__name__}."
 
 
 class CosStorageMirror:
@@ -267,5 +346,79 @@ class CosStorageMirror:
         )
 
 
+class S3StorageMirror(CosStorageMirror):
+    """S3-compatible mirror with the same durable queue and library semantics."""
+
+    def __init__(self, config: S3StorageConfig) -> None:
+        try:
+            import boto3
+        except ImportError as error:  # pragma: no cover - dependency installation failure
+            raise StorageConfigurationError("S3 storage requires boto3.") from error
+        self.config = config
+        self.client = boto3.client(
+            "s3",
+            endpoint_url=config.endpoint,
+            region_name=config.region,
+            aws_access_key_id=config.access_key_id,
+            aws_secret_access_key=config.secret_access_key,
+        )
+
+    @classmethod
+    def from_environment(cls) -> "S3StorageMirror":
+        return cls(S3StorageConfig.from_environment())
+
+    def _list_keys(self, prefix: str) -> set[str]:
+        keys: set[str] = set()
+        continuation_token: str | None = None
+        while True:
+            request: dict[str, object] = {"Bucket": self.config.bucket, "Prefix": prefix}
+            if continuation_token:
+                request["ContinuationToken"] = continuation_token
+            response = self.client.list_objects_v2(**request)
+            for item in response.get("Contents", []):
+                key = str(item.get("Key", ""))
+                if key and not key.endswith("/"):
+                    keys.add(key)
+            if not response.get("IsTruncated"):
+                return keys
+            continuation_token = str(response.get("NextContinuationToken", ""))
+            if not continuation_token:
+                return keys
+
+    def _mirror_from_cos(self, *, remote_prefix: str, destination: Path) -> bool:
+        if destination.exists():
+            shutil.rmtree(destination)
+        destination.mkdir(parents=True, exist_ok=True)
+        keys = self._list_keys(remote_prefix)
+        for key in keys:
+            relative = PurePosixPath(key).relative_to(PurePosixPath(remote_prefix))
+            if not relative.parts or any(part in {"", ".", ".."} for part in relative.parts):
+                raise StorageConfigurationError(f"unsafe S3 object key: {key}")
+            target = destination.joinpath(*relative.parts)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            self.client.download_file(self.config.bucket, key, str(target))
+        return bool(keys)
+
+    def _mirror_to_cos(self, *, source: Path, remote_prefix: str) -> None:
+        source.mkdir(parents=True, exist_ok=True)
+        local_keys: set[str] = set()
+        for path in source.rglob("*"):
+            if not path.is_file():
+                continue
+            key = remote_prefix + path.relative_to(source).as_posix()
+            local_keys.add(key)
+            self.client.upload_file(str(path), self.config.bucket, key)
+        for key in self._list_keys(remote_prefix) - local_keys:
+            self.client.delete_object(Bucket=self.config.bucket, Key=key)
+
+
 def current_cos_mirror() -> CosStorageMirror | None:
     return CosStorageMirror.from_environment() if cos_enabled() else None
+
+
+def current_storage_mirror() -> CosStorageMirror | S3StorageMirror | None:
+    if cos_enabled():
+        return CosStorageMirror.from_environment()
+    if s3_enabled():
+        return S3StorageMirror.from_environment()
+    return None

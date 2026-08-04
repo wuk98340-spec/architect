@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 
 from .app import serve
-from .cos_storage import cos_failure_message, current_cos_mirror
+from .cos_storage import current_storage_mirror, storage_failure_message
 
 
 def workspace_root() -> Path:
@@ -47,13 +47,13 @@ def main() -> None:
     root = workspace_root()
     # A restarted container must not inherit a stale failure marker from a
     # previous initialization attempt.
-    os.environ.pop("ARCHITECT_COS_STORAGE_UNAVAILABLE", None)
+    os.environ.pop("ARCHITECT_STORAGE_UNAVAILABLE", None)
     data_root = Path(os.environ.get("ARCHITECT_DATA_ROOT", root / "tmp" / "runtime-data"))
     cases_root = Path(os.environ.setdefault("ARCHITECT_CASE_PACKAGES_ROOT", str(data_root / "case-packages")))
     os.environ.setdefault("ARCHITECT_JOBS_ROOT", str(data_root / "worker-jobs"))
     os.environ.setdefault("ARCHITECT_STATIC_ROOT", str(root / "architecture-case-site" / "public"))
     try:
-        cos_mirror = current_cos_mirror()
+        cos_mirror = current_storage_mirror()
         if cos_mirror:
             print(cos_mirror.diagnostic_log(), file=sys.stderr)
         library_exists = cos_mirror.hydrate_library(case_packages_root=cases_root) if cos_mirror else has_case_library(cases_root)
@@ -61,9 +61,9 @@ def main() -> None:
         # Storage must not make the public API unavailable.  A failed optional
         # mirror (bad credentials, a transient COS error, etc.) falls back to
         # the case library baked into the deployed image.
-        message = cos_failure_message(error)
+        message = storage_failure_message(error)
         print(f"{message} Starting with bundled case library.", file=sys.stderr)
-        os.environ["ARCHITECT_COS_STORAGE_UNAVAILABLE"] = message
+        os.environ["ARCHITECT_STORAGE_UNAVAILABLE"] = message
         cos_mirror = None
         library_exists = has_case_library(cases_root)
     if not library_exists:
